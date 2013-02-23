@@ -1,0 +1,11 @@
+This directory contains a library to access the records of a Plucker
+document, as well as some of the metadata about the document such as
+the title.
+
+To build this, you will need
+
+ * the zlib library, from www.gzip.org/zlib/, version 1.1.4 or later.
+
+The key file here is unpluck.c, which provides access to the records
+and data of a Plucker document.  The exported functions are documented
+in unpluck.h.

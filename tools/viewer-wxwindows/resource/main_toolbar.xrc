@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+  <object class="wxToolBar" name="main_toolbar">
+    <object class="tool" name="file_menu_open">
+      <bitmap>open.bmp</bitmap>
+    </object>
+    <object class="separator"/>
+    <object class="tool" name="navigate_back">
+      <bitmap>undo.bmp</bitmap>
+    </object>
+    <object class="tool" name="navigate_home">
+      <bitmap>home.bmp</bitmap>
+    </object>
+    <object class="tool" name="navigate_foward">
+      <bitmap>redo.bmp</bitmap>
+    </object>
+  </object>
+</resource>

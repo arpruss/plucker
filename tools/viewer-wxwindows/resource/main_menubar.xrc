@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+
+<object class="wxMenuBar" name="main_menubar">
+    <style>wxMB_DOCKABLE</style>
+    <object class="wxMenu">
+        <label>_File</label>
+        <style>wxMENU_TEAROFF</style>
+        <object class="wxMenuItem" name="file_menu_open">
+            <label>_Open...</label>
+            <help>_Open a page</help>
+        </object>
+        <object class="separator"/>
+        <object class="wxMenuItem" name="file_menu_exit">
+            <label>_Exit</label>
+            <help>_Exit Viewer</help>
+        </object>        
+    </object> 
+    <object class="wxMenu">
+        <label>_Navigate</label>
+        <style>wxMENU_TEAROFF</style>
+        <object class="wxMenuItem" name="navigate_back">
+            <label>_Back</label>
+            <help>_Go Back</help>
+        </object>
+        <object class="wxMenuItem" name="navigate_foward">
+            <label>_Forward</label>
+            <help>_Go Forward</help>
+        </object>        
+        <object class="wxMenuItem" name="navigate_home">
+            <label>_Home</label>
+            <help>_Go Home</help>
+        </object>        
+    </object> 
+    <object class="wxMenu">
+        <label>_Help</label>
+        <style>wxMENU_TEAROFF</style>
+        <object class="wxMenuItem" name="help_about">
+            <label>_About</label>
+        </object>
+    </object> 
+</object>  
+
+</resource>

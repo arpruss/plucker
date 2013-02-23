@@ -1,0 +1,9 @@
+0.1.2 February 3, 2003
+    Changed wait from multi object to single object
+
+0.1.1 January 31, 2003
+    Changed Hotsync log messages to indicate success or failure
+    Added command line run to Hotsync log ouput
+
+0.1.0 January 31, 2003
+    Initial release

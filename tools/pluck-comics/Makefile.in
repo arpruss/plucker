@@ -1,0 +1,54 @@
+#
+# $id$
+#
+
+SHELL           = @SHELL@
+
+top_builddir    = ../..
+subdir          = tools/pluck-comics
+srcdir          =   @srcdir@
+VPATH           =   @srcdir@
+
+VERSION         = @VERSION@
+
+DESTDIR         =
+
+BINDIR          = $(DESTDIR)@bindir@
+COMICSLIST_DIR  = $(DESTDIR)@PLUCKERDIR@/comics
+MODULE_DIR      = $(DESTDIR)@MODULE_DIR@
+PYTHONDIR       = @PYTHON_LIBDIR@
+
+PYTHON          = @PYTHON@
+MKINSTALLDIRS   = $(top_builddir)/mkinstalldirs
+
+
+all:
+	@echo "all done"
+
+Makefile: Makefile.in $(top_builddir)/config.status
+	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ $(SHELL) ./config.status
+
+install:
+	$(MKINSTALLDIRS) $(MODULE_DIR)
+	$(MKINSTALLDIRS) $(COMICSLIST_DIR)
+	cp pluck-comics.py $(MODULE_DIR)
+	chmod 755 $(MODULE_DIR)/pluck-comics.py
+	cp *.list $(COMICSLIST_DIR)
+
+	$(PYTHON) $(PYTHONDIR)/compileall.py $(MODULE_DIR)
+	$(PYTHON) -O $(PYTHONDIR)/compileall.py $(MODULE_DIR)
+
+clean:
+	find . -name '*~' -exec rm -f {} \;
+	find . -name '*.pyc' -exec rm -f {} \;
+	find . -name '*.pyo' -exec rm -f {} \;
+
+distclean: clean
+	rm -f Makefile pluck-comics.py
+
+maintainer-clean: distclean
+	@echo "------------------------------------------------------------"
+	@echo "This command is intended for maintainers to use..."
+	@echo "it deletes files that may require special tools to rebuild."
+	@echo "------------------------------------------------------------"
+

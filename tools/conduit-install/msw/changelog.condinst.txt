@@ -1,0 +1,10 @@
+0.1.2 -
+	added one letter shortforms, to maximize the info that can be 
+		used with the limited length of the win32 commandline
+
+0.1.1 - 
+    added -restarthotsync option
+    added -silentifnoerror option
+
+0.1.0 - January 31, 2003
+    Initial Release

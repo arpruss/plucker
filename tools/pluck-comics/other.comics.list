@@ -1,0 +1,173 @@
+#
+# $Id: other.comics.list,v 1.5 2006/05/20 13:18:25 desrod Exp $
+# urls updated on 2006/01/17 by Ducem Barr
+#
+
+comic_list.append({
+	'name': 'goats',
+	'page': 'http://www.goats.com/',
+	'expr': "\d+/goats\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://www.goats.com/comix/',
+	'title': 'Goats'})
+
+comic_list.append({
+	'name': 'gpf',
+	'page': 'http://www.gpf-comics.com/',
+	'expr': "gpf\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://www.gpf-comics.com/comics/',
+	'title': 'General Protection Fault'})
+
+comic_list.append({
+	'name': 'pennyarcade',
+	'page': 'http://www.penny-arcade.com/view.php3',
+	'expr': "images/\d+/\d+\w\.gif",
+	'suff': '.gif',
+	'base': 'http://www.penny-arcade.com/',
+	'title': 'Penny Arcade'})
+
+
+comic_list.append({
+	'name': 'user_friendly',
+	'page': 'http://www.userfriendly.org/static/',
+	'expr': "\d\d\w\w\w/xuf\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://www.userfriendly.org/cartoons/archives/',
+	'title': 'User Friendly'})
+
+comic_list.append({
+	'name': 'moeandron',
+	'page': 'http://www.jeffpaige.com',
+	'expr': "newstrip.gif",
+	'suff': '.gif',
+	'base': 'http://www.jeffpaige.com/comics/',
+	'title': 'The Backyard Adventures of Moe and Ron'})
+
+comic_list.append({
+	'name': 'mostlybusiness',
+	'page': 'http://www.tedgoff.com/today/',
+	'expr': "today.gif",
+	'suff': '.gif',
+	'base': 'http://www.tedgoff.com/today/',
+	'title': 'Mostly Business'})
+
+comic_list.append({
+	'name': 'planetearth',
+	'page': 'http://www.thesnakefarm.com/strips/planetearth.php',
+	'expr': "\d+.jpg",
+	'suff': '.jpg',
+	'base': 'http://www.thesnakefarm.com/images/planetearth/',
+	'title': 'Planet Earth (and other tourist traps)'})
+
+comic_list.append({
+	'name': 'mudpie',
+	'page': 'http://www.gilchriststudios.com/mudpie/mudpiecomics.asp',
+	'expr': "mudpie\d+.jpg",
+	'suff': '.jpg',
+	'base': 'http://www.gilchriststudios.com/FTP-mudpie/',
+	'title': 'Mudpie'})
+
+comic_list.append({
+	'name': 'inniesandoutties',
+	'page': 'http://www.inniesandoutties.com/',
+	'expr': "front.jpg",
+	'suff': '.jpg',
+	'base': 'http://www.inniesandoutties.com/images/',
+	'title': 'Mudpie'})
+
+comic_list.append({
+	'name': 'curtoons',
+	'page': 'http://www.curtoons.com/Todays%20Toon.htm',
+	'expr': "toon\d+.gif",
+	'suff': '.gif',
+	'base': 'http://www.curtoons.com/cartoons/',
+	'title': 'Curtoons'})
+
+comic_list.append({
+	'name': 'offthemark',
+	'page': 'http://www.offthemark.com/daily.asp',
+	'expr': "\d+.gif",
+	'suff': '.gif',
+	'base': 'http://www.offthemark.com/rotate/',
+	'title': 'Off the Mark'})
+
+comic_list.append({
+	'name': 'notquiteright',
+	'page': 'http://www.notquiteright.com/',
+	'expr': "todaystoon.gif",
+	'suff': '.gif',
+	'base': 'http://www.notquiteright.com/wow/',
+	'title': 'Not Quite Right'})
+
+comic_list.append({
+	'name': 'squinkers',
+	'page': 'http://www.squinkers.com/sqkrs/Squinker.html',
+	'expr': "today.gif",
+	'suff': '.gif',
+	'base': 'http://www.squinkers.com/sqkrs/Images/',
+	'title': 'Squinkers'})
+
+comic_list.append({
+	'name': 'freneticwanderings',
+	'page': 'http://www.swensonfunnies.com/html/dailygag.html',
+	'expr': "dailygag.gif",
+	'suff': '.gif',
+	'base': 'http://www.swensonfunnies.com/dailies/',
+	'title': 'Frenetic Wanderings'})
+
+comic_list.append({
+	'name': 'scragends',
+	'page': 'http://www.btinternet.com/~scragends/',
+	'expr': "scragend.jpg",
+	'suff': '.jpg',
+	'base': 'http://www.btinternet.com/~scragends/',
+	'title': 'Scrags Ends'})
+
+comic_list.append({
+	'name': 'snapshots',
+	'page': 'http://www.jasonlove.com/',
+	'expr': "color\w+\d+.gif",
+	'suff': '.gif',
+	'base': 'http://www.jasonlove.com/snaps-tr/',
+	'title': 'Snapshots'})
+
+comic_list.append({
+	'name': 'deepend',
+	'page': 'http://www.deep-end.com/',
+	'expr': "daily.gif",
+	'suff': '.gif',
+	'base': 'http://www.deep-end.com/daily/',
+	'title': 'The Deep End'})
+
+comic_list.append({
+	'name': 'stannisaac',
+	'page': 'http://www.stan-isaac.com/newstrip.html',
+	'expr': "dailystan.gif",
+	'suff': '.gif',
+	'base': 'http://www.swensonfunnies.com/dailies/',
+	'title': 'Stan \'N\' Isaac'})
+
+comic_list.append({
+	'name': 'pcweenies',
+	'page': 'http://www.pcweenies.com/',
+	'expr': "\w+_\d+.jpg",
+	'suff': '.jpg',
+	'base': 'http://www.pcweenies.com/new_strips/',
+	'title': 'The PC Weenies'})
+
+comic_list.append({
+	'name': 'dadndorothy',
+	'page': 'http://www.dadanddorothy.com/',
+	'expr': "\d+\w+.gif",
+	'suff': '.gif',
+	'base': 'http://www.dadanddorothy.com/',
+	'title': 'Dad & Dorothy'})
+
+comic_list.append({
+	'name': 'covereddish',
+	'page': 'http://www.botcw.com/thom/',
+	'expr': "today.gif",
+	'suff': '.gif',
+	'base': 'http://www.botcw.com/thom/images/',
+	'title': 'Church of the Covered Dish'})
