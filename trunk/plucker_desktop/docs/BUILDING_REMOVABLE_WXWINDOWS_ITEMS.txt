@@ -1,0 +1,49 @@
+// Last Updated: wxWidgets 2.4.
+// there may be new features from wx2.6, wx2.8, or later that can also go.
+// It is less important on wxGTK, since most distros will distribute with 
+// a shared wx Library with everything in it.
+// On MSW, you are only linking with the libraries that are used anyways,
+// so if no ODBC, then don't link to that library so these don't matter.
+
+// When building wxWindows library, these things can be compiled out,
+// and Plucker Desktop will still work:
+// ------------------------------------------------------------------
+
+// ------------------------------      -------------------
+// wxWindows setup.h entry:            ./configure switch:
+// ------------------------------      -------------------
+
+wxUSE_TIFF=0                        --without-libtiff
+wxUSE_LIBPNG=0                      --without-libpng
+wxUSE_REGEX=0                       --without-regex 
+wxUSE_JOYSTICK=0                    --disable-joystick
+wxUSE_DOC_VIEW_ARCHITECTURE=0       --disable-docview
+wxUSE_MDI_ARCHITECTURE=0            --disable-mdi
+wxUSE_TREE_LAYOUT=0                 --disable-treelayout
+wxUSE_PRINTING_ARCHITECTURE=0       --disable-printarch
+wxUSE_PCX=0                         --disable-pcx
+wxUSE_PNM=0                         --disable-pnm     
+wxUSE_GRID=0                        --disable-grid
+wxUSE_NEW_GRID=0                    --disable-newgrid
+wxUSE_PROPSHEET=0                   --disable-propsheet
+
+// New ones on most recent build:
+wxUSE_FINDREPLDLG=0
+wxUSE_METAFILE=0                    --disable-metafile(Windows only anyways)
+wxUSE_ENH_METAFILE=0                --disable-metafile(Windows only anyways)
+wxUSE_WIN_METAFILES_ALWAYS=0        --disable-metafile(Windows only anyways)
+// wxUSE_RESOURCES is the old type of resources, not the new XML resource system:
+wxUSE_RESOURCES=0                   --disable-resources
+wxUSE_SPLINES=0                     --disable-splines
+
+// These are off already by default:
+wxUSE_GLCANVAS=0
+wxUSE_ODBC=0
+
+// Also probably can remove (though not tested):
+-wxMiniFrame                        --disable-miniframe
+-GIFs (if don't care about using GIFs in HTML editor)
+
+// These things that need to stay in (they are in by default):
+-------------------------------------------------------------
+wxUSE_DRAGIMAGE (required by PNG)

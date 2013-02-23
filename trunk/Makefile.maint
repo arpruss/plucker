@@ -1,0 +1,390 @@
+#
+# $Id: Makefile.maint,v 1.27 2004/05/19 13:37:31 nordstrom Exp $
+#
+# Makefile used to build releases
+#
+
+.PRECIOUS: plucker_viewer-%.tar.bz2 plucker_viewer_nonhires-%.tar.bz2 plucker_viewer_extras-%.tar.bz2 plucker_viewer_nonhires_translations-%.tar.bz2 plucker_viewer_translations-%.tar.bz2 plucker_parser-%.tar.bz2 plucker_docs-%.tar.bz2 plucker-%.zip plucker-%.tar.bz2 plucker_desktop-%.tar.bz2
+
+SHELL           =   /bin/sh
+
+RPM_ROOT        =   /usr/src/packages
+
+SDK_DIR         =   $(HOME)/plucker/SDK
+ZLIB_DIR        =   $(HOME)/plucker/ZLib
+
+
+all: viewer_app pyplucker userguide pluck_comics plucker-desktop
+
+Makefile: Makefile.in config.status
+	CONFIG_FILES=$@ $(SHELL) ./config.status
+
+config.status: configure $(CONFIG_STATUS_DEPENDENCIES)
+	$(SHELL) ./config.status --recheck
+
+configure: configure.in $(CONFIGURE_DEPENDENCIES)
+	autoreconf
+
+nonhires:
+	@if test -f viewer/Makefile ; then \
+	    cd viewer ; $(MAKE) distclean ; \
+	fi
+	$(SHELL) ./configure --disable-scroll-to-bottom --enable-wait-icon=thought-bubble --disable-hires --disable-anti-alias --disable-rotate --disable-vfs-fonts --enable-word-lookup --enable-imode --disable-palm-dia
+	cd viewer ; $(MAKE)
+
+viewer_app:
+	@if test -f viewer/Makefile ; then \
+	    cd viewer ; $(MAKE) distclean ; \
+	fi
+	$(SHELL) ./configure --disable-scroll-to-bottom --enable-wait-icon=thought-bubble --enable-armlets --with-fiveway=$(SDK_DIR)/FiveWaySDK --with-handera=$(SDK_DIR)/Handera/include --with-handspring=$(SDK_DIR)/Handspring --with-sony=$(SDK_DIR)/Sony/Incs --with-sonysilk=$(SDKDIR)/SilkPlugIn/Incs/ --enable-imode --enable-word-lookup 
+	cd viewer ; $(MAKE)
+
+pyplucker:
+	cd parser ; $(MAKE) $@
+
+userguide: pyplucker
+	cd docs ; $(MAKE)
+
+doc: 
+	cd docs ; $(MAKE) Plucker_Doc
+
+pluck_comics:
+	cd tools ; $(MAKE) $@
+
+plucker-desktop:
+	cd plucker_desktop ; $(MAKE) $@
+
+clean-recursive:
+	cd docs ; $(MAKE) clean
+	cd parser ; $(MAKE) clean
+	cd viewer ; $(MAKE) clean
+	cd tools ; $(MAKE) clean
+	cd plucker_desktop ; $(MAKE) clean
+
+distclean-recursive:
+	cd docs ; $(MAKE) distclean
+	cd parser ; $(MAKE) distclean
+	cd viewer ; $(MAKE) distclean
+	cd unix ; rm -f setup.py
+	cd tools ; $(MAKE) distclean
+	cd plucker_desktop ; $(MAKE) distclean
+
+maintainer-clean-recursive:
+	cd docs ; $(MAKE) maintainer-clean
+	cd parser ; $(MAKE) maintainer-clean
+	cd viewer ; $(MAKE) maintainer-clean
+	cd unix ; rm -f setup.py
+	cd tools ; $(MAKE) maintainer-clean
+	cd plucker_desktop ; $(MAKE) maintainer-clean
+
+clean: clean-recursive
+
+distclean: clean distclean-recursive
+	rm -f Makefile config.*
+
+maintainer-clean: distclean maintainer-clean-recursive
+	@echo "------------------------------------------------------------"
+	@echo "This command is intended for maintainers to use..."
+	@echo "it deletes files that may require special tools to rebuild."
+	@echo "------------------------------------------------------------"
+	rm -fr *.bz2 *.rpm
+
+changelog-branch-%:
+	cvs2cl.pl -S --utc --no-wrap -b -F $*
+
+changelog:
+	cvs2cl.pl -S --utc --no-wrap -b
+
+changelog-%: changelog
+	cvs ci -m "New release `echo $*`" ChangeLog
+	-rm -f ChangeLog.bak
+
+cvs-tag-%:
+	@cvs tag -c -F plucker-`echo $* | sed 's/\./_/g'`
+
+status:
+	@cvs -n -q update
+
+plucker_parser-%.tar.bz2: pyplucker
+	rm -fr plucker-$*
+	mkdir -p plucker-$*/PyPlucker
+	cp -r parser/python/PyPlucker/ plucker-$*
+	rm -f plucker-$*PyPlucker/Makefile*
+	rm -f plucker-$*PyPlucker/*.pyc
+	rm -f plucker-$*PyPlucker/helper/*.pyc
+	rm -fr plucker-$*PyPlucker/CVS
+	rm -fr plucker-$*PyPlucker/helper/CVS
+	cp parser/defaults/exclusionlist.txt plucker-$*
+	cp parser/defaults/home.html plucker-$*
+	cp parser/defaults/pluckerrc.sample plucker-$*
+	cp docs/plucker-build.1 plucker-$*
+	cp docs/plucker-decode.1 plucker-$*
+	cp docs/plucker-dump.1 plucker-$*
+	ln -s ../AUTHORS ../COPYING ../CREDITS plucker-$*
+	tar chjf $@ plucker-$*
+
+
+plucker_docs-%.tar.bz2: doc
+	rm -fr plucker-$*
+	mkdir -p plucker-$*/manual
+	cp docs/Plucker_Doc/Plucker_Doc.css plucker-$*/manual
+	cp docs/Plucker_Doc/*.html plucker-$*/manual
+	cp docs/Plucker_Doc/*.gif plucker-$*/manual
+	ln -s ../AUTHORS ../BUGREPORT ../COPYING ../CREDITS ../ChangeLog ../FAQ plucker-$*
+	ln -s ../NEWS ../README ../REQUIREMENTS plucker-$*
+	tar chjf $@ plucker-$*
+
+
+plucker_viewer_nonhires-%.tar.bz2: nonhires pyplucker userguide
+	rm -fr plucker-$*
+	mkdir -p plucker-$*
+	@echo "Installation" > plucker-$*/README
+	@echo "------------" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Load the viewer application, the ZLib library and the User's Guide" >> plucker-$*/README
+	@echo "onto your Palm device. Translations to other languages can be found" >> plucker-$*/README
+	@echo "in the plucker_viewer_nonhires_translations package [1]." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "To be able to use the following features you have to install the" >> plucker-$*/README
+	@echo "optional programs and databases that can be found in the" >> plucker-$*/README
+	@echo "plucker_viewer_extras package [1]:" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo " - The imode support requires the imodeicons.pdb database." >> plucker-$*/README
+	@echo " - The Plucker Plugin Interface (PPI) requires the ppi.prc." >> plucker-$*/README
+	@echo " - The transliteration support requires a database with the" >> plucker-$*/README
+	@echo "   transliteration table." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "More information about the PPI and transliteration support" >> plucker-$*/README
+	@echo "can be found in the User's Guide." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Note: To create your own Plucker documents you have to install" >> plucker-$*/README
+	@echo "the plucker_parser package [1]." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "[1] http://www.plkr.org/" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "System Requirements" >> plucker-$*/README
+	@echo "-------------------" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Models: Palm OS devices running OS 2.0.3 or later" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	cp viewer/viewer_en.prc plucker-$*
+	ln -s ../AUTHORS ../COPYING ../CREDITS plucker-$*
+	ln -s $(ZLIB_DIR)/SysZLib_m68k.prc plucker-$*/SysZLib.prc
+	ln -s ../docs/PluckerUserGuide.pdb plucker-$*
+	tar chjf $@ plucker-$*
+
+
+viewer_pkg-%: viewer_app pyplucker userguide
+	rm -fr plucker-$*
+	mkdir -p plucker-$*
+	@echo "Installation" > plucker-$*/README
+	@echo "------------" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Load the viewer application, the ZLib library and the User's Guide" >> plucker-$*/README
+	@echo "onto your Palm device. Translations to other languages can be found" >> plucker-$*/README
+	@echo "in the plucker_viewer_translations package [1]." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "To be able to use the following features you have to install the" >> plucker-$*/README
+	@echo "optional programs and databases that can be found in the" >> plucker-$*/README
+	@echo "plucker_viewer_extras package [1]:" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo " - The imode support requires the imodeicons.pdb database." >> plucker-$*/README
+	@echo " - The Plucker Plugin Interface (PPI) requires the ppi.prc." >> plucker-$*/README
+	@echo " - The transliteration support requires a database with the" >> plucker-$*/README
+	@echo "   transliteration table." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "More information about the PPI and transliteration support" >> plucker-$*/README
+	@echo "can be found in the User's Guide." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Note: To create your own Plucker documents you have to install" >> plucker-$*/README
+	@echo "the plucker_parser package [1]." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "[1] http://www.plkr.org/" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "System Requirements" >> plucker-$*/README
+	@echo "-------------------" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Models: Palm OS devices running OS 2.0.3 or later" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	ln -s ../AUTHORS ../COPYING ../CREDITS plucker-$*
+	ln -s ../viewer/viewer_en.prc plucker-$*
+	ln -s $(ZLIB_DIR)/SysZLib_armlet.prc plucker-$*/SysZLib.prc
+	ln -s ../docs/PluckerUserGuide.pdb plucker-$*
+
+
+plucker_viewer-%.tar.bz2: viewer_pkg-%
+	tar chjf $@ plucker-$*
+
+
+plucker-%.zip: viewer_pkg-%
+	( cd plucker-$*; zip -r ../$@ * )
+
+
+plucker_viewer_extras-%.tar.bz2: viewer_app
+	rm -fr plucker-$*
+	mkdir -p plucker-$*
+	mkdir -p plucker-$*/ppi
+	mkdir -p plucker-$*/imode
+	mkdir -p plucker-$*/xlit
+	mkdir -p plucker-$*/fonts
+	@echo "Installation" > plucker-$*/README
+	@echo "------------" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Load the wanted application, databases, or both onto your Palm device." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "The Plucker Plugin Interface (PPI) is the interface to Plucker" >> plucker-$*/README
+	@echo "Plugins. 8^)" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "So far, its only function is to interface with dictionary programs." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "In Plucker's menu set Options->Preferences->Lookup to 'Lookup in PPI'." >> plucker-$*/README
+	@echo "(Plucker must have been built with '--enable-word-lookup' for this" >> plucker-$*/README
+	@echo "preference to appear.)" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Install PPI on your handheld, and run it. You can select which" >> plucker-$*/README
+	@echo "dictionary program PPI will lookup the selected (in Plucker) word in." >> plucker-$*/README
+	@echo "Select 'Word lookup always active' and you won't have to make a" >> plucker-$*/README
+	@echo "command gesture and enter a 'q' to activate lookup." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Your choices are:" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo " - None        - Not looked up." >> plucker-$*/README
+	@echo " - RoadLingua  - http://www.absoluteword.com/plucker/" >> plucker-$*/README
+	@echo " - Kdic        - http://www002.upp.so-net.ne.jp/kei-k/" >> plucker-$*/README
+	@echo " - Custom      - You supply the program name and information about how" >> plucker-$*/README
+	@echo "                 to use it." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "While viewing a Plucker document select a word on the screen." >> plucker-$*/README
+	@echo "Plucker will call PPI to lookup the selected word in the dictionary" >> plucker-$*/README
+	@echo "program you selected." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "The imodeicons.pdb database includes icons used for imode content." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Several different transliteration tables are available in the" >> plucker-$*/README
+	@echo "plucker-xlit.pdb database." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Different font remap packages can be found in the fonts directory." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	cp viewer/ppi/*.prc plucker-$*/ppi
+	cp viewer/fonts/*.prc plucker-$*/fonts
+	ln -s ../AUTHORS ../COPYING ../CREDITS plucker-$*
+	ln -s ../../viewer/imodeicons.pdb plucker-$*/imode
+	ln -s ../../viewer/xlit/plucker-xlit.pdb plucker-$*/xlit
+	tar chjf $@ plucker-$*
+
+
+plucker_viewer_nonhires_translations-%.tar.bz2: nonhires
+	rm -fr plucker-$*
+	mkdir -p plucker-$*
+	@echo "Installation" > plucker-$*/README
+	@echo "------------" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Load the viewer application onto your Palm device." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Available translations:" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo " - German (de)" >> plucker-$*/README
+	@echo " - Czech (cs)" >> plucker-$*/README
+	@echo " - Italian (it)" >> plucker-$*/README
+	@echo " - French (fr)" >> plucker-$*/README
+	@echo " - Japanese (ja)" >> plucker-$*/README
+	@echo " - Faeroese (fo)" >> plucker-$*/README
+	@echo " - Danish (da)" >> plucker-$*/README
+	@echo " - Chinese (simplified) (zh_CN)" >> plucker-$*/README
+	@echo " - Polish (pl)" >> plucker-$*/README
+	@echo " - Russian (ru)" >> plucker-$*/README
+	@echo " - Spanish (es)" >> plucker-$*/README
+	@echo " - Turkish (tr)" >> plucker-$*/README
+	@echo " - Thai (th)" >> plucker-$*/README
+	@echo " - Catalan (ca)" >> plucker-$*/README
+	@echo " - Norwegian (no)" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	cp viewer/*.prc plucker-$*
+	rm plucker-$*/viewer_en.prc
+	ln -s ../AUTHORS ../COPYING ../CREDITS plucker-$*
+	tar chjf $@ plucker-$*
+
+
+plucker_viewer_translations-%.tar.bz2: viewer_app
+	rm -fr plucker-$*
+	mkdir -p plucker-$*/viewer
+	@echo "Installation" > plucker-$*/README
+	@echo "------------" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Load the viewer application onto your Palm device." >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo "Available translations:" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	@echo " - German (de)" >> plucker-$*/README
+	@echo " - Czech (cs)" >> plucker-$*/README
+	@echo " - Italian (it)" >> plucker-$*/README
+	@echo " - French (fr)" >> plucker-$*/README
+	@echo " - Japanese (ja)" >> plucker-$*/README
+	@echo " - Faeroese (fo)" >> plucker-$*/README
+	@echo " - Danish (da)" >> plucker-$*/README
+	@echo " - Chinese (simplified) (zh_CN)" >> plucker-$*/README
+	@echo " - Polish (pl)" >> plucker-$*/README
+	@echo " - Russian (ru)" >> plucker-$*/README
+	@echo " - Spanish (es)" >> plucker-$*/README
+	@echo " - Turkish (tr)" >> plucker-$*/README
+	@echo " - Thai (th)" >> plucker-$*/README
+	@echo " - Catalan (ca)" >> plucker-$*/README
+	@echo " - Norwegian (no)" >> plucker-$*/README
+	@echo >> plucker-$*/README
+	cp viewer/*.prc plucker-$*
+	rm plucker-$*/viewer_en.prc
+	ln -s ../AUTHORS ../COPYING ../CREDITS plucker-$*
+	tar chjf $@ plucker-$*
+
+
+plucker_src-%.tar.bz2: 
+	$(SHELL) ./configure
+	cd docs ; $(MAKE) clean
+	cd parser ; $(MAKE) clean
+	cd plucker_desktop ; $(MAKE) clean
+	cd viewer ; $(MAKE) clean
+	cd tools ; $(MAKE) clean
+	cd docs ; $(MAKE) distclean
+	cd parser ; $(MAKE) distclean
+	cd plucker_desktop ; $(MAKE) distclean
+	cd viewer ; $(MAKE) distclean
+	cd unix ; rm -f setup.py
+	cd tools ; $(MAKE) distclean
+	rm -f Makefile config.*
+
+	rm -fr plucker-$*
+	mkdir -p plucker-$*/unix
+	ln -s ../../unix/setup.py.in ../../unix/install-plucker plucker-$*/unix
+	ln -s ../../unix/plucker.spec plucker-$*/unix
+	ln -s ../docs ../parser ../viewer ../tools ../plucker_desktop plucker-$*
+	ln -s ../conduit ../os2 ../viewer-GTK+2-POSIX plucker-$*
+	ln -s ../configure.in ../Makefile.maint ../Makefile.in ../autogen.sh plucker-$*
+	ln -s ../mkinstalldirs ../install-sh plucker-$*
+	ln -s ../AUTHORS ../BUGREPORT ../COPYING ../CREDITS plucker-$*
+	ln -s ../REQUIREMENTS ../ChangeLog ../FAQ plucker-$*
+	ln -s ../README ../README.OS2 ../NEWS plucker-$*
+	ln -s ../INSTALL plucker-$*
+	( cd plucker-$*; autoreconf; chmod 755 configure )
+	( cd plucker-$*; chmod 755 unix/install-plucker )
+	( cd plucker-$*; chmod 755 mkinstalldirs )
+	( cd plucker-$*; chmod 755 install-sh )
+	tar -chjf $@ --exclude=autom4te.cache --exclude=CVS plucker-$* 
+
+
+plucker_desktop-%.tar.bz2: plucker-desktop
+	rm -fr plucker-$*
+	mkdir -p plucker-$*/resource
+	cp plucker_desktop/plucker-desktop plucker-$*
+	tar chjf $@ plucker-$*
+
+
+rpm-%: plucker_viewer-%.tar.bz2 plucker_viewer_extras-%.tar.bz2 plucker_viewer_translations-%.tar.bz2 plucker_parser-%.tar.bz2 plucker_docs-%.tar.bz2 unix/setup.py.in unix/plucker.spec
+	@cp -p plucker_viewer-$*.tar.bz2 plucker_viewer_extras-$*.tar.bz2 plucker_viewer_translations-$*.tar.bz2 plucker_parser-$*.tar.bz2 plucker_docs-$*.tar.bz2 unix/setup.py.in $(RPM_ROOT)/SOURCES/
+	@cp -p unix/plucker.spec $(RPM_ROOT)/SPECS/plucker-$*.spec
+	( cd $(RPM_ROOT)/SPECS; rpm -ba --clean plucker-$*.spec )
+
+
+cleanrelease-%:
+	rm -fr plucker_src-$*.tar.bz2 plucker_viewer-$*.tar.bz2 plucker_viewer_nonhires-$*.tar.bz2 plucker_viewer_extras-$*.tar.bz2 plucker_viewer_translations-$*.tar.bz2 plucker_viewer_nonhires_translations-$*.tar.bz2 plucker_parser-$*.tar.bz2 plucker_docs-$*.tar.bz2 plucker-$*.zip plucker_desktop-$*.tar.bz2
+	rm -fr plucker-$*
+

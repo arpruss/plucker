@@ -1,0 +1,606 @@
+//----------------------------------------------------------------------------------------
+// Name:        TODO.txt
+// Purpose:     A listing of what there is to be done for Plucker Desktop.
+//              [X]: has been addressed, awaits testing before going off the TODO list.
+//              [-]: on hold, or removed from queue.
+// Author:      Robert O'Connor
+// Modified by:
+// Created:     2001/10/20
+// Copyright:   (c) Robert O'Connor ( rob@medicalmnemonics.com )
+// Licence:     GPL
+// RCS-ID:      $Id: TODO.txt,v 1.35 2007/06/30 14:55:44 robertoconnor Exp $
+//----------------------------------------------------------------------------------------
+07/06/19 16:05:25 robertoconnor Exp $
+//----------------------------------------------------------------------------------------
+
+PRERELEASE:
+[ ] Set correct version on splash
+
+[ ] Mac and Win have correct versions of parsers/viewers, etc.
+
+[ ] Check that sys zlib is the correct ones for hires and not.
+
+[ ] Add new Reg settings for Palm Installer on MSW.
+
+[ ] Windows is multiuser compatible.
+
+[ ] Update credits and authors
+
+[ ] Make a better Plucker usersguide.
+
+[X] Upload a XCode project file.
+
+[X] Upload a MSVC++ project file.
+
+//----------------------------------------------------------------------------------------
+// Priority 1
+//----------------------------------------------------------------------------------------
+
+[X] Update version of XRC from 2.3 to 2.5... in XRC files.
+
+[X] Fix name of Add toolbar button in XRC.
+
+[ ] Redo the update code to multiply the update jump, not loop. If update_base is 1940,
+    then will appear to hang while looping all the way up to 2003.
+
+[ ] OSX handle a "Quit" command from Dock if there is modal dialogs (this goes along
+    with MSW computer shutdown request when modals are visible). 
+
+[X] Expunge before/after command from Plucker Desktop.
+
+[ ] Unix makefile installs message catalogs.
+
+[ ] wxCollapsiblePanel on progress dialog expands [to a saved height preferrably].
+
+[ ] Update help of removed features of Plucker Desktop.
+
+[X] Ensure unicode/non-ASCII filenames work on palm-The file will get onto the palm safely.
+    (plucker.ini section names are cleaned (and thus doc_file also) ). doc_name seems to 
+	have swapped characters on the palm, perhaps they work via the encoding metadata?
+
+[X] Support for timeout added to desktop.
+
+//----------------------------------------------------------------------------------------
+// Priority 2
+//----------------------------------------------------------------------------------------
+
+[ ] The OK buttons on dialogs should be the defaults (pulsate blue on OSX).
+
+[X] Consider adding the other stock art to the menuitems.
+
+[X] The global exclusionist.txt and home.html should be created in the users home dir
+    if not exist (can copy over the main one from the bundle) 
+
+[ ] Consider updating title of progress dialog as to how its going.
+
+[ ] The progress dialog scrollback is now limited to 500 lines. Consider having it become
+    an option instead. This is so that the desktop won't bog things down by updating 
+    giant numbers of lines in a listbox (ie 32000).
+
+[ ] Consider making the progress dialog minimizable (it is modal dialog though)
+
+[X] Find out why CenterOnScreen() doesn't work on Mac/GTK anymore, and if it is gone, then
+    just slice it from source and use centeronparent.
+
+[ ] Consider adding new parser parameters:
+	--filter=<filter name>
+	--bookmarks=<bookmark type>
+	--author=<string>
+	--title=<string>
+	--status-file=<filename> (probably wont happen)
+	--fragments=<fragment type>
+
+[ ] Replace wxMkDir() with wxFileName::Mkdir() with the wxPATH_MKDIR_FULL flag set,
+    so that will recursively make all the needed subdirs, and not error out if 
+    the dir already exists. So its like this:
+	bool successfully_created_directory = wxFileName::Mkdir(0777, wxPATH_MKDIR_FULL);
+
+[ ] Copy/Paste on GTK: any change if take out the stock_ids?: seems to not be able to 
+    tell difference between file/text on clipboard?->Look into it.
+
+[ ] The default config object should always be the wxwindows config file, as it will
+    read/write unwelcomely some settings. One thing is the generic wxFileDialog on GTK,
+    (which is currently hacked around), but another is the wxFontEncoder, which gets
+    called up on a on a MSW ME in Thai, but would happen on GTK and MAC too, most
+    likely. The stuff that wxwindows is writing to plucker.ini will cause the
+    parser to crash. When fixed, drop a note to
+    Witit Sajjapong <witits@ttt.co.th>
+    for testing.
+
+[ ] Pasting a URL must strip out any line returns from the url, or channel_dialog
+    write configuration must strip out any returns or file_configuration should strip
+    out any carriage returns so that won't write a line break in the middle of the
+    key which would screw up the configure file, etc.
+
+[ ] Do a popup to ask where the plucker, resource and langs dirs are if cant find them?
+    Channels too? A temp dir also?
+    A tab on the preferences dialog to specify where these locations are (perhaps a
+    warning icon on the page telling the dangers of modifying them).
+    Or add as an options menu item.
+
+[ ] Consider a "Tools" tab on the Preferences dialog, where can choose ones parser, etc.
+
+[ ] Rename configuration.cpp's copy_section2 to copy_section, replacing the existing
+    copy_section code wherever it is used.
+
+[ ] Expunge before/after command from parser and docs (this is an os/cron/script's handler, not a parser issue)
+
+//----------------------------------------------------------------------------------------
+// Priority 3
+//----------------------------------------------------------------------------------------
+
+[ ] Fix http authorization in parser.
+
+[ ] Throw out db_file and db_name config key handling (it is currently given a stderr warning 
+    in the parser. I think in 1.10 or higher, it should be removed entirely from desktop, and probably
+    the parser too [but would definately need a changelog note about that one].
+
+[ ] The HTML on the about dialog doesn't load if have international characters in it on GTK.
+    On WXMAC, it loads with wrongly subbed characters.
+    It is fixed by subbing out to pure ASCII chars only. 
+    Must have been the unicode characters. Perhaps having a charset in the header would 
+    make it display properly (see wx/samples/html/test) and look at the il8n samples.
+    Note that properly resolving this would likley cause the translated strings from about_dialog
+    to also work properly
+
+[ ] Adjust the read string function in about_dialog.cpp so that can handle unicode/non-ASCII
+    characters. Currently on GTK, if have one, then not load that file into HTML, and on
+    MAC, it gets misplaced. It seems that likely need an ISO in the HTML header (see the 
+    html sample's internationalization testpage in wxWidgets. 
+
+[ ] Review whether setupUSE_PROCESS_PROGRESS_IDLE_TIMER is still needed.
+
+[ ] Do something with the showcase_field_names when rewrite that dialog. Currently, they
+    are reproduced in the showcase_listctrl, and the preferences_dialog. Can't be a
+    global or else they won't get translated.
+
+[ ] Handheld software install directories to their final resting places. (esp usermanual
+    where is that in a default install? 
+        --->Michael: Use a plucker.ini key to tell what directory to look for it.
+    
+[ ] Array Memory clearing
+        [ ] Ones not using a & (hence a copy constructor). There is a good few in configuration.cpp
+        [ ] Ones returning a wxArrayString instead of taking it as a reference parameter
+
+[ ] Proper character-sets to use for po files.
+
+[ ] Commandline additions:
+	channels     list all the channels one per line
+	sections     list all sections one per line
+	chandue      list all channels due one per line
+	secdue       list all sections due one per line
+	version      return version info of this desktop
+        options to set the progress display method (so can use a different method than
+        the GUI version)
+
+[ ] Add none to progress display options, and perhaps a checkbox/editbox to allow turning
+    on of logging to a specified file.
+
+[ ] Better exit status on commandline mode: Example
+       1 = failed channel
+       2 = more than one failed channel
+       10 = no channels to process (none due)
+       11 = can't write log file(s)
+
+[ ] Find out why need the -1 hack as id for main_listctrl in main_frame [similarly in 
+    exclusion_dialog/exclusion_listctrl]. Is it an event.Skip() issue (unlikely, since
+	-1 catches it) 
+
+//----------------------------------------------------------------------------------------
+// Priority 4
+//----------------------------------------------------------------------------------------
+
+[ ] Review if plkrOS_DIR_SEPARATOR should be further replaced with '/' since ':' not used by commandline Mac OS. 
+    It seems that wxWidgets is moving towards moving away from it (PalmOS?).
+    [ ] Remove MSW ones too if okay, and remove the define. 
+    [X] Removed common ones.
+
+[ ] Finish channel_listctrl base and then main_listctrl, showcase_listctrl and 
+	the existing channel check[mark] listctrl for import/export.
+
+[ ] Will have to do something with close progress dialog if no errors, as now it
+    doesn't know if an error occurred, since stdout changed.
+
+[ ] Hide dialog items if compiled out. These should go into a similar function
+        yes a function for each to remove items for code order.
+
+[ ] viewer_wizardpage.cpp should have a read_configuration and write_configuration
+    of its controlls to all better VAR customization and also in case run again, don't
+    accidently put in the wrong ones.
+
+[/] Add note in online help that can't use spaces on MSW in before_command and after_command
+    (the 2 parser ones) if they aren't fixed in the CVS parser (before_group_commmand and the
+    rest of the pure Desktop ones can use spaces OK).
+        --->Bill wants it out of the parser. Excise it and add to Desktop.
+
+[ ] "Compact", other properties into parser.
+
+[ ] "Popup" into parser, viewer.
+
+[ ] Image dialog: checkbox 'Relative to page location' works (do after editor loads up
+    any page).
+        --->There is a function specifically for this purpose. wxFileName::MakeRelativeTo()
+[ ] Should set CWD to the html file so that html window can find these images now, once relative.
+[ ] Make relative the default.
+
+[ ] Drag and drop files/text into main frame listctrl.
+        [X] Basic classes added to main listctrl
+        [-] Drop a string URL as the home_url
+        [X] Drop a set of filenames as the home_url
+        [-] Drop XML text as a channel
+        [ ] Drop XML files as channels.
+        [X] Finish the longs and the datetimes (should probably change config
+            path to the section first, since so many)
+
+[ ] Paste:
+        [X] Paste URL as new channel.
+        [-] Paste XML string as new channel [should check string on clip board first
+	    to see if starts with <xml...].
+	[ ] Menu creates and enables the entries depending what is on clipboard.
+        [ ] Paste files as a single channel (makes a home.html, with links to all files).
+        [X] Paste each file as an individual channel
+		[ ] Could either:
+			- prompt to create one channel for all/or channel for each
+			- popup menu items for these 2 cases
+			- pref to decide
+		[ ] Don't allow the "a single file pointing to all the subfiles" option,
+                    unless it there is more than one filename
+	[ ] Paste XML file as channel (need an extension, like .plkr?)
+
+[ ] Add the parser's "filename_extension" value to the UI?
+
+[ ] Extra menuitem separators get stripped after moving or compiling out certain
+    features.
+	
+[ ] Config setting to only show certain viewers (or viewers that are installed)
+
+[ ] wxFileName::MakeRelativeTo() for the image dialog's checkbox for relative path.
+
+[ ] The setup wizard should have a checkbox wizard page asking if they want to change
+    all the destinations/bpp etc in their list to what they have in the wizard, before
+    doing it. (Default for first run is checked, for after first run is not checked).
+
+[ ] Default dialog sizes fit on a 640x480 screen by default for remaining dialogs
+        [ ] Hyperlink dialog->probably needs tabs
+        [ ] Configure dialog--difficult
+
+[ ] Investigate wxFileConfig::SetUmask about whether would be helpful for the ini file 
+    so couldn't be read by others.
+
+[ ] Consider adding wxTopLevelWindow::GetUserAttention() as a preference, for error, completion, etc.
+    What it does: on MSW and GTK: flashes toolbar. On OSX, it bounces.
+
+//----------------------------------------------------------------------------------------
+// OS Specific Issues: Mac
+//----------------------------------------------------------------------------------------
+
+[ ]  We should be obeying PLUCKERHOME environment variable instead of forcing a file.
+     See configuration::init_configuration() function for details.
+	 
+[ ] OSX update Card install location for MemoryStick.
+
+[X] Investigate how the dialog ...EX_METAL looks on OSX.
+
+[ ] When set progress to console, a console window won't appear, only a stopwatch busycurser
+    (I think it runs though).
+	
+[ ] Consider carefully fixing the xcode compile warnings in palm_installer_mac.cpp (about
+	comparing signed/unsigned integers, etc)
+	
+[ ] OSX Showcase sash doesn't maintain state.
+
+[X] On the 'Add Channel' wizard, one of the radiobuttons should be selected by default.
+
+//----------------------------------------------------------------------------------------
+// OS Specific Issues: GTK
+//----------------------------------------------------------------------------------------
+
+[ ] Consier throwing an error if can't find plucker-build (or other tool).
+
+[ ] Throw a hideable warning if localized and there is no .mo files in /usr/share/locale
+
+
+[ ] When run from a commandline, the "logo" doesn't seem to appear (ie the --usage type of --help).
+    However, rest of commandline works well. The --help works on Mac.
+	
+[ ] Smaller font on GTK in html editor (use whatever is in HTML help)
+
+//----------------------------------------------------------------------------------------
+// OS Specific Issues: MSW 
+//----------------------------------------------------------------------------------------
+
+[ ] Update the palm_installer_msw to use the new HotSync registry keys (Quick Installer),
+    add it as the initial check, then default to the other ones.
+
+[ ] MSW console progress won't work...
+
+[X] Editor dialog, and exclusionlistctrl unknown controls inside listctrl also need a 
+    hack on MSW.
+
+[ ] New unicode installation overtop an old installation gives a first start error of "Unable
+to convert [the wxFileConfig] to unicode": check to see if it can still import the old settings.
+
+[ ] InnoSetup writes value of PLUCKERHOME to the convert batch file (else just put 
+    whole thing in registry. (Only bad part about DOS/full registry is that the black
+    DOS box doesn't close on own (is there a command to close the DOS box?)
+    DOS box has DOS-like filename also, though this does address the 31 character limit.
+
+[X] Configure channel>Starting page tab: "Edit file" button flickers if box is empty or file://.
+        ---> Need a check to see if already disabled before disabling again or vice versa.
+        ---> Added the code, but still flickers.
+		---> Aha! Logic corrected. The button was tied to two things the radio button which would
+			 cause enabled, and if only file:// in textbox, then would disable. Remove radio button,
+			 and only look at textbox.    
+
+[ ] My MSW test machine on wx2.3.3 no longer seems to connect automatically to the 
+    Internet if starting a parse. Machine specific, or need a wxDialUpManager? Does this
+	still happen in wx 2.8?
+	
+[/] wxWindows MSW bug (in CVS but not 2.4.0) in which selecting a channel
+    (mouse down the channel name or date in main_listctrl) and dragging it would cause
+    crash. Only happens on older versions, like Win95, (not 2000, etc). Related to
+    comctrl.dll versions.->Cancelled since not supporting win95/98 anymore anyways.
+ 
+ [/] MSW: shortcut icons don't install to correct place in start menu? Why is that?
+    The install script appears correct to me. Must be something XP specific in
+    InnoSetup.
+ 
+//----------------------------------------------------------------------------------------
+// Non-essentials
+//----------------------------------------------------------------------------------------
+
+[-] Freeze on preferences dialog > autoupdate tab in use time control. To reproduce:
+    - Have one of the radio-buttons other than the offpeak radiobutton (3rd one) selected
+    - Select the off peak radiobutton
+    - Select one of the other radiobuttons.
+    - Program is now frozen, processing away at some calculation somewhere. Infinite 
+      recursion of an update event? A duplicate ID? Other?
+
+[ ] Ability to cycle through all tips. (Perhaps move to checklistbox of 
+    basic/advanced/trivia).
+
+[ ] Add depth-first to showcase entries, that can be parsed depth-first.
+
+[ ] Add .hhp cached file to installers (WIN and maybe Linux)
+
+[ ] A dialog for setting the desired directories. Has to be non-XML so that can run it 
+    at startup before try to load the XML resources (which would segfault the program)
+    Perhaps a layout of:
+    Name of directory (and description): [Verify button] [status]
+    [Edit box] [Choose directory button] 
+    ---Make each as a component so that can put 6 of the suckers on the same page.
+    ---Read/write to the config file.
+    ---Perhaps lead in with a checkbox dialog specifying that one or more directories
+       were not found. Do you wish to locate them? (Don't show this again).
+
+[ ] Checks for pilot-xfer before attempting a handheld install of channel/software: 
+   Here is the python code from plucker-setup:
+if  not os.system('pilot-xfer > /dev/null 2>&1'):
+	install_viewer()
+else:
+	print "\nThe program 'pilot-xfer' is missing so the Palm applications cannot be installed. You'll find them in %s." % PALMDIR
+
+[ ] Include the DOC converter into channel dialog start page tab.
+
+[ ] Hyperlink dialog: add a POST="" parameter field. Doesn't work? (See mail archive)
+
+[ ] When popping up dialog asking for a Channel name, have the function take an extra 
+    argument to override the default plkr_UNNAMED_CHANNEL_NAME with something better for the 
+    default text (and send that argument). Get the orginal argument by looking at the 
+    filename, or the URL and making something useful and compliant from that.
+
+[ ] A commandline parameter for uninstalling, to launch a dialog asking if want to 
+    clear out the channels dir. More efficent that maintaining a separate uninstall run
+    program.
+
+[ ] Add support to parse the timezone and/or convert from GMT (perhaps add a wxDateTime::FromGMT()
+    function).
+
+[ ] Capacity to build a channel of channel homepages (either a wizard or a note in the docs).
+
+[ ] Option to ask "For what user?" when updating channel(s).
+
+[ ] DOS-like-syntax ( ? and * ) wizard for regular expressions (with a checkbox for only
+    if at the end). Stick them as a "Wizard.." button at the end of the url-pattern and 
+    blocked dialog buttons.
+
+[ ] Make external editor a combo box containing some strings to popular editors.
+[ ] Make the utils_controls::file_control have a final parameter of whether should quote the file returned,
+    and turn it on for the external editor one, if under MSW. Else just quote the returned 
+    file.
+
+[ ] HR dialog width values >100% inserts as 100% (validate?).
+
+[ ] HR dialog spinner upper limit of width is 150 pixels, or a warning, or just a note
+    in Docs.
+        --->Just a note in docs will do fine, as plucker documents aren't just for
+            handhelds anymore.
+
+[ ] Hyperlink "color" property (may need to split into basic and advanced tabs).
+
+[ ] Span "color" property.
+   
+[ ] Bookmark dialog prevents non-kosher letters in the "name" field (use a Validator).
+
+[-] Exclusion list dialog currently inverts list order if edit an entry (probably due
+    to insert putting it in the first position). Marked non-essential since probably
+    more sense to specify an alpha or priorty sort before loading anyways. Is one of 
+    the load or saves in reverse lines though. Could it be?
+
+[ ] Delete plkr* (or plk* since truncates) files from system's temp directory on program 
+    exit. wx* also? Or use a different temp directory and delete everything?
+    --->There is no temp files unless downloading something.
+    
+[ ] Set calendar to have a beveled appearance. Tried it, doesn't seem to work.
+[ ] Option to set calendar to start with Mondays first, not Sundays.
+
+[ ] A getmultiplesections for choosing which global exclusion list to edit (in the 
+    exclusionlist dialog constructor. Currently always opens/creates it in the expected 
+    places.
+
+[ ] Use a custom listctrl checklistbox instead of a normal checklistbox for multiple
+    selections, such as the showcase fields. See cpp code in /unused_source.
+
+
+//----------------------------------------------------------------------------------------
+// Source code formatting
+//----------------------------------------------------------------------------------------
+
+[ ] The install_file_by_username (convenience function to install_files_by_username) 
+    should be moved out of the derived classes and into the base class.
+
+[ ] Consider a listctrl instead of a listbox for the progress dialog, so that don't
+    have the 2000 lines barrrier.
+        ---->Ask if this limitation is still in GtK 2.0.
+        ---->Use a virtual listctrl. With that there is an infinite upper limit since the
+             data isn't actually in the control, the application just serves on demand.
+             You can have a million rows.
+        ---->While there, implement "IRC-like" scrolling, where it will autoscroll if 
+             you are at the bottom, if you scroll up a bit, though, it stays at where
+             you put it. There is a wxListCtrl::ScrollList() function.
+
+[ ] Progress dialog Try an onshow again instead of an on paint. 
+        -->Onhold, since GTK doesn't have an OnShow() yet.
+
+[ ] Doxygenate.
+    [X] Publics
+    [ ] Anything else useful.
+
+[ ] To save space, use "event." used in events instead of another XRCID (see main_frame.cpp).
+
+[ ] Add DECLARE_DYNAMIC_CLASS macros to rest of classes where possible.
+
+[ ] Save a bit of space too by a utils_controls:: to read a config key into the hhictrl,
+    and write it out, as it is repeated in both the channel_dialog.cpp and the 
+    destinations_wizardpage.cpp
+
+[ ] Change rest of true and false to TRUE and FALSE, for older compilers that don't have a 
+    built-in bool type.
+
+[ ] Better makefile to generate/merge the po files.
+
+[ ] Makefile should copy over the authors and GPL files (and PluckerDesktop.tex) from
+    the main CVS tree locations.
+
+[ ] Add #error messages to setup.h to send a message for things that don't make sense
+    such as turning on setupUSE_MSW_DIALOG_TASKBAR_ICON on Linux.
+
+[ ] Put a -v switch on the mo file's msgfmt command so can monitor any abnormalities in 
+    the input file that would cause failure to generate a mo file (such as invalid header).
+
+[ ] Standardize variable names involving parts of a filename / path:
+
+|<-------------------------------------fullname----------------------------------------->|
+|<----------------------path--------------------------------->|<--------filename---------|
+|<-volume->|<----------------nondrivepath------------------->|<-basename->|<-extension->|
+|<-------------rootpath----------------->|<---subdirectory--->|
+
+Example: C:\projects\plucker\readme.txt
+
+Fullname        =  C:\projects\plucker\readme.txt
+Path            =  C:\projects\plucker            (note no trailing slash)
+Filename        =  readme.txt
+Basename        =  readme
+Extension       =  txt
+Rootpath        =  C:\projects                    (note no trailing slash)
+Subdirectory    =  plucker
+Volume          =  C: (or C:\)?
+
+Use term subdirectory when talking about a group of known directories inside another
+for example, the channel subdirectories inside the /channels folder.
+Drive and nondrivepath shouldn't ever be needed.
+
+[ ] channel_type.cpp and plucker_controller::add_channel(): perhaps have the initial 
+    illegal value for the strings to be "-1" in quotes?
+
+[ ] Move external functions into static classes:
+        [ ] configuration.cpp (query first how that will fit in with whole ).
+
+[-] Strip out the icons_dnd from CVS and source if never making Plucker a drop 
+    _Source_ (not just a drop target).
+        [X] drop source 
+        [ ] icons (will probably leave in for later).
+    Perhaps put the code in utils_clipboard that takes an argument of a window and 
+    exportable string, so can recycle the code among different windows/apps.
+
+[X] read_user_dat() function in palm_installer.cpp could be prettier.
+
+[ ] Reserved sections: to a wxString[] instead? Should be a member variable of
+    configuration class anyways. Beware though of wxString as a member: easy to memory
+    trash, since goes out of scope easy.
+
+[ ] In configuration/pluckercontroller, check that the_configuration->HasGroup[] before 
+    try to copy or delete a section.
+        --->Think these are done. But double check.
+    
+[ ] & and const where appropriate in argument lists.
+
+[ ] Consider use of tokenizer functions in utils_string::string_to_array_int() and 
+    related..
+
+[ ] Better handling of translation selection, autogeneration of a selection list from
+    the /langs directory.
+
+//----------------------------------------------------------------------------------------
+// wxWindows patches TODO:
+//----------------------------------------------------------------------------------------
+
+[ ] wxMac wxShell:
+    - Does this work?
+
+[ ] wxMac wxTreeCtrl:
+    - A single click on the side arrow should expand a root, not just a double click.
+
+[ ] Tooltips are in incorrect character set in translation (on MSW anyways).
+
+[ ] MSW on a wxShell() the app's window doesn't return the focus after the console
+    application has finished.
+
+[ ] Addition of accessor to set the color of a wxSplitterWindow sash from black to 
+    something else.
+
+[ ] Tex2RTF: should obey sections for the names of anchors, so that can have a
+    multiple language support mechanism for same program calls to help, but different
+    translated help files.
+
+[ ] wxDateTime::FromGMT() (the opposite of wxDateTime::ToGMT).
+
+[ ] wxDateTime Parse W3C Date (and addition of Read to the wxFileConfig() ).
+
+[ ] wxMSW: wxMultipleChoiceDialog erroneously selects the first item always, when loaded.
+    (Note: this is likely a Win95 bug, not wx, works correctly on Win2000).
+        -->Not relevant if go to a wxListCtrl based one anyways.
+
+[ ] Generic: Color dialog: the "add to custom colors" doesn't work as expected.
+
+[ ] Busy info dialog less flat.
+
+//----------------------------------------------------------------------------------------
+// wxWindows known limitations, that are there because trivial (All Platforms):
+//----------------------------------------------------------------------------------------
+
+[-] Non 16-color images will be drawn in incorrect palettes on 256 color systems. Shown 
+    fine once pump up the color-depth.
+   
+//----------------------------------------------------------------------------------------
+// Plucker Desktop known limitations
+//----------------------------------------------------------------------------------------
+
+[-] Unknown whether mixed case protocols are found, such as fIlE:// or plUckER:/.
+    configuration.cpp: the conversion of a protocol filename to a regular one.
+
+[-] In .ini file, only 1 and 0 are supported booleans, not TRUE or FALSE strings.
+
+[-] If update period is monthly, and set to update on the 29/30/31 of the month, then will
+    move to last day of month and then stay there to the shortest day of month hit.
+    For example, if Update monthly, with base date of Jan31, then next month will be Feb28,
+    Then next month will be Mar28. Reason is that only increasing month from last due date,
+    and can't store a feb31.
+
+[-] Can't use a ; (semicolon) in a Sync username, since that is what is used to separate 
+    entries. This is also true in other things like category, etc.
+    
+[-] Exclusion dialog: if on the extensions tab, and you insert a http:// exclusion, it
+    will appear in the file blocks, until the dialog is closed and you reopen it, and
+    it will have moved to URLs tab. This is because everything is in one file. They
+    are just sorted into one tab 

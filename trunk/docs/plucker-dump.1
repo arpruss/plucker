@@ -1,0 +1,26 @@
+.\" plucker-dump.1
+.TH PLUCKER-DUMP 1 "Plucker 1.1 - http://plkr.org/"
+.SH NAME
+plucker-dump \- dumps a Plucker document
+.SH SYNOPSIS
+\fBplucker-dump\fR
+[-h] [-v] [-c \fIcachedir\fR] dbfile
+.SH DESCRIPTION
+.B plucker-dump
+dumps a Plucker document back into the \fIcachedir\fR directory. \fBWARNING: THE CACHE DIRECTORY GETS ERASED !!!\fR You have been warned.
+.SH OPTIONS
+.TP
+\fB-h\fR
+display usage information and exit
+.TP
+\fB-v\fR
+output version information and exit
+.TP
+\fB-c\fR \fIcachedir\fR
+use the specified \fIcachedir\fR instead of the default ($PLUCKERDIR/cache)
+.SH "SEE ALSO"
+plucker-decode(1)
+.SH "AUTHOR"
+Holger Duerer <holly@starship.python.net> (man page by Michael Nordstrom, <micke@sslug.dk>)
+
+Report bugs to http://bugs.plkr.org or <plucker-bugs@rubberchicken.org>

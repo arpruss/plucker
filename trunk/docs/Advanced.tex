@@ -1,0 +1,218 @@
+%
+% $Id: Advanced.tex,v 1.8 2003/07/31 15:12:05 desrod Exp $
+%
+\chapter{Advanced Topics}
+
+\section{POST Requests}
+
+Plucker can send \longcode{description file}{POST} requests to a host, 
+just like an HTML form does. It will store the resulting page in the 
+document. Until a parser can be written to create the requests from 
+an HTML form they must be built by hand. \emph{If you have written or 
+would be able to write such a parser, contact \devaddress}\\
+
+\code{POST} requests take this form:
+
+\begin{verbatim}
+"http://harvest.weather.com/cgi-bin/3com/avantgo/palmpilot_city_search.pl" POST="city_destination=46552&action=Go"
+\end{verbatim}
+
+This URL will get the weather forecast for New Carlisle, In. (zip code 46552).  
+The entry in \name{home.html} would be:
+
+\begin{verbatim}
+<A HREF="http://harvest.weather.com/cgi-bin/3com/avantgo/palmpilot_city_search.pl" POST="city_destination=46552&action=Go">Weather</A><P>
+\end{verbatim}
+
+Substitute your zip code to get your local forecast.
+
+To obtain a palm friendly map from mapquest.com takes a little doing. 
+First point your browser to \htmladdnormallink{www.mapquest.com}
+{http://www.mapquest.com} and follow the directions to get a map of 
+the area of interest. Then click on the \option{Printer-Friendly Map} 
+link in the left column.\\
+
+\note{} \emph{These instructions are for Netscape, IE should be similar}\\
+When the full page map appears, right click on the map and select 
+\option{View Image} from the menu. After the image (by itself) has 
+loaded add the current link to your bookmarks and exit your browser. 
+Open the bookmark file (\name{~/.netscape/bookmarks.html}) in a text 
+editor and find the entry. Mine looked like this:
+
+\begin{verbatim}
+<A HREF="http://sitemap.mapquest.com/mqmapgend?MQMapGenRequest=FDR2dmwjDE%3bf72g%26FDT7w%7cqut2hr%24.5y8n9u%24%3a%26%40%24%3a%26z%240u6%240u6%24PK%18%19%3dTPWIK,rn061g%26%3dy0du2n%26%40%24%3a%26%40%24%3a1%40" ADD_DATE="965829347" LAST_VISIT="965829337" LAST_MODIFIED="965829337">GIF image 600x600 pixels</A>
+\end{verbatim}
+
+\begin{latexonly}
+This is actually a \code{GET} request. Even though Plucker understands
+\code{GET} requests, we will change it to \code{POST}.
+Copy the line to another file for editing and open that file.
+Remove everything from \code{ADD\_DATE} to the quote(") before 
+\code{>GIF}. You can insert plucker options here like 
+\code{MAXWIDTH=300 MAXHEIGHT=300} (to increase the map size on 
+your palm). You may also change the next part (between the 
+\textgreater and \textless). This will be the link that appears 
+on your \name{Plucker Home Page}. Mine now looks like this:
+\end{latexonly}
+\begin{htmlonly}
+This is actually a \code{GET} request. Even though Plucker understands
+\code{GET} requests, we will change it to \code{POST}.
+Copy the line to another file for editing and open that file.
+Remove everything from \code{ADD\_DATE} to the quote(") before 
+\code{>GIF}. You can insert plucker options here like 
+\code{MAXWIDTH=300 MAXHEIGHT=300} (to increase the map size on 
+your palm). You may also change the next part (between the > 
+and <). This will be the link that appears on your 
+\name{Plucker Home Page}.  Mine now looks like this:
+\end{htmlonly}
+
+\begin{verbatim}
+<A HREF="http://sitemap.mapquest.com/mqmapgend" POST="MQMapGenRequest=FDR2dmwjDE%3bf72g%26FDT7w%7cqut2hr%24.5y8n9u%24%3a%26%40%24%3a%26z%240u6%240u6%24PK%18%19%3dTPWIK,rn061g%26%3dy0du2n%26%40%24%3a%26%40%24%3a1%40" MAXWIDTH=300 MAXHEIGHT=300>New Carlisle Map</A>
+\end{verbatim}
+
+Finally, copy the line into your \name{home.html} and pluck your map!\\
+
+\note{} In the example above the \code{HREF=} part 
+is actually the name of a program the server will run for you.
+The \code{POST=} part contains the parameters for the program. 
+
+
+\section{Perl-based Conduit}
+
+The Perl-based Conduit is listed in the advanced topics as you
+actually would hardly need it anymore and it is only referenced for
+your convenience as it still exists (for historical reasons) and of
+course still works. You can use it to transfer your document to your
+Palm OS handheld device. It is useful in several scenarios:
+
+\begin{itemize}
+  \item You want to sync Plucker as well as several other data to
+  your Palm OS handheld device using some other conduit written using 
+  pilot-links famous Perl interface. In this case it is possible to 
+  move several different data with only pressing hotsync once. This is 
+  not possible using the output to a pdb as you would need to transfer 
+  your data with e.g.\ pilot-link (press hotsync for the first time) and 
+  then this program ends the connection to your PDA and after that you 
+  can fire up your other conduits.
+
+  \item As it is Perl based you might want to use it to build your own
+  conduit for Pilot-Manager e.g.
+
+  \item It can serve you as a sample on how to create, delete and
+  write documents on your handheld
+
+  \item In case of very limited RAM\. This sounds somewhat strange, but
+  the Perl conduit works completely different than the pdb output. The
+  Perl conduit assembles the document on the device itself while it 
+  syncs the records to it, that is you sync on a per record basis. Now if
+  you have several documents to sync but low free RAM on your
+  device the Perl conduit will not refuse to sync in a document even
+  if it does not fit to your device completely. It will simply sync in
+  the data till you are out of memory and any remaining records are left 
+  out. This will lead to a effective use of \emph{every byte}. But you 
+  should be aware of two points here:
+  \begin{enumerate}
+    \item If some records are missing you will get an \emph{external
+    reference}-error even if the documents where plucked originally.
+
+    \item Since you already have low free space on your device it might 
+    happen that the conduit syncs in as many datasets that you are unable 
+    to open even your home document. In this case you need to free up RAM
+    by removing documents from Document Library.
+  \end{enumerate}
+  That is why we consider the use of the Perl conduit in low RAM conditions 
+  as an hazardous task better left to advanced users. The Perl
+  conduit has absolutely no problem with syncing in data till you even
+  can not add a new appointment or phone number. You should be aware
+  of how to handle this.
+\end{itemize}
+
+
+\subsubsection{Usage}
+
+OK, enough for the introductory stuff now about the usage of the
+Perl based conduit. The synopsis:\\
+
+\begin{latexonly}
+\option{sync.pl} \textbf{[-{}-name=\emph{names} -{}-cache=\emph{cachedirs} [-{}-database]
+     [-{}-port=\emph{comport}]]}\\
+\end{latexonly}
+\begin{htmlonly}
+\textbf{sync.pl} \textbf{[---name=\emph{names} ---cache=\emph{cachedirs} [---database]
+     [---port=\emph{comport}]]}
+\index{sync.pl}
+\end{htmlonly}\\
+
+
+\note{} On OS/2 and Windows there exists (by default) no mechanism for 
+the shell to determine that this script should be invoked through the
+Perl interpreter. (On Unix this is specified in the first line of the 
+script, but OS/2 and Windows do not evaluate this information.) For that 
+reason you must specify the call to your Perl interpreter before the call 
+to sync.pl. So it will look like this: \code{perl sync.pl\ldots}\\
+
+The parameters
+
+\begin{itemize}
+
+  \item \option{None}: This will work as it did in earlier versions
+  of Plucker since this conduit came up for the first time. It will
+  sync one document called \name{PluckerDB} created from files in
+  \code{\$PLUCKERDIR}. This call is really a leftover compatibility to 
+  early versions of Plucker so people who used that setup were not 
+  required to change there setup on changing the version of Plucker.
+
+\begin{latexonly}
+  \item \longoption{sync.pl}{-{}-names=\emph{names}}: Here you specify 
+  the name(s) of the document(s) that should be created on your Palm OS 
+  handheld device. In case of several names they are separated by spaces.
+
+  \item \longoption{sync.pl}{-{}-cache=\emph{cachedirs}}: Use it to specify 
+  the \name{cache} directory used by the document(s).
+\end{latexonly}
+\begin{htmlonly}
+  \item \longoption{sync.pl}{---names=\emph{names}}: Here you specify 
+  the name(s) of the document(s) that should be created on your Palm OS 
+  handheld device. In case of several names they are separated by spaces.
+
+  \item \longoption{sync.pl}{---cache=\emph{cachedirs}}: Use it to specify 
+  the \name{cache} directory used by the document(s).
+\end{htmlonly}
+
+  \note{} If you use several documents there is a 1:1 correspondence
+  between the names and cachedirs, that is the first document will be
+  named using the first name in the names list form the first cache dir
+  in the cache-list. If this is not provided it will stop.
+
+  For your convenience the conduit writes the names and the
+  corresponding directories to the screen. Unlike the other programs
+  and scripts used with Plucker the conduit does not follow the
+  Unix convention of \emph{no news is good news} but will tell you
+  all its actions in detail. 
+
+  \note{} The conduit checks if there are equal numbers of parameters
+  for names and cache dirs.
+
+\begin{latexonly}
+  \item \longoption{sync.pl}{-{}-database}: Will not sync to the Palm but
+  create documents instead.
+\end{latexonly}
+\begin{htmlonly}
+  \item \longoption{sync.pl}{---database}: Will not sync to the Palm but
+  create documents instead.
+\end{htmlonly}
+
+  \note{} This routine is implemented through pilot-links Perl-interface
+  which seems to have some bugs in this routine. At least running on
+  OS/2 you do not get a usable document all the time.
+
+\begin{latexonly}
+  \item \longoption{sync.pl}{-{}-port=\emph{port}}: You might specify the COM port
+  used for synchronization.
+\end{latexonly}
+\begin{htmlonly}
+  \item \longoption{sync.pl}{---port=\emph{port}}: You might specify the COM port
+  used for synchronization.
+\end{htmlonly}
+
+\end{itemize}

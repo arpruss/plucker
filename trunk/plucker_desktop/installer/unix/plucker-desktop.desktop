@@ -1,0 +1,24 @@
+#------------------------------------------------------------------------------
+# Name:        plucker-desktop.desktop
+# Purpose:     A deskto file to integrate into a desktop.
+# Author:      Robert O'Connor
+# Modified by:
+# Created:     2002/07/07
+# Copyright:   (c) Robert O'Connor ( rob@medicalmnemonics.com )
+# Licence:     GPL
+# RCS-ID:      $Id: plucker-desktop.desktop,v 1.1 2002/07/16 20:45:24 robertoconnor Exp $
+#------------------------------------------------------------------------------
+[Desktop Entry]
+# A name to appear under the link
+Name=Plucker Desktop
+# A description of what it does
+Comment=Visual content management for Plucker
+# What to execute
+Exec=plucker-desktop
+# What icon to use. Absolute path in some distros
+# Icon=plucker-desktop.xpm
+Icon=/usr/share/icons/plucker-desktop.xpm
+# Execute in a terminal window?
+Terminal=0
+# What type is it (probably Application)
+Type=Application

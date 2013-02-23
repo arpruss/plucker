@@ -1,0 +1,3887 @@
+<!DOCTYPE book PUBLIC "-//Davenport//DTD DocBook V3.0//EN" []>
+
+<!-- Last modified: $Date: 2004/09/25 04:01:04 $: by $Author: desrod $ -->
+<!-- To convert this with DocBook, use the following syntax:
+
+$ cd sgml
+$ jade -t sgml -i html -d plucker.dsl\#html ../Plucker_Manual.sgml
+
+You may substitute 'onehtml' to create one long HTML file instead of
+chapters, i.e. for website display. Make sure the images and the .sgml are
+in the same directory if you want one large HTML file.
+
+$ sgmltools -b onehtml plucker.dsl Plucker_Manual.sgml
+
+--> 
+
+<book>
+   <bookinfo>
+      <title>
+         Plucker User Guide
+      </title>
+
+      <author>
+         <firstname>
+            The Plucker
+         </firstname>
+         <surname>
+            Team
+         </surname>
+         <affiliation>
+            <address>
+               <email>plucker-team&#064;rubberchicken&#46;org</email>
+            </address>
+         </affiliation>
+      </author>
+   
+      <revhistory>
+         <revision>
+            <revnumber>
+               0.01
+            </revnumber> 
+            <date>
+               2004-09-21   
+            </date>
+            <authorinitials>
+               dd 
+            </authorinitials>
+            <revremark>
+               Initial revision
+            </revremark>
+         </revision>
+
+      </revhistory>
+
+      <abstract>
+         <para>
+            Plucker is a free multiplatform tool for reading text files, ebooks and Web content on Palm OS
+            handheld device.
+         </para>
+
+         <para>
+            If your question is not answered in this HOWTO, please check the <ulink
+            url="http://lists.rubberchicken.org/"> Plucker mailing lists </ulink> which may have more recent
+            information.
+         </para>
+
+	 <para>
+	    The following are trademarks or registered trademarks of Palm Inc: Graffiti, Palm Computing, Palm,
+	    PalmPilot, Palm III, Palm V, Palm Vx, Palm OSAll other product names used in this document are trademarks
+	    or registered trademarks of their respective owners.
+	 </para>
+   
+         <para>
+            There is also an irc channel available for real-time help if you should need it. Point your irc client to
+            irc.plkr.org and join the channel #plucker.  Please be patient after asking your question(s), as many
+            people may be idle or away from the keyboard.
+         </para>
+   
+         <para>
+            If you are interested in supporting the ongoing maintenance and creation of these Plucker HOWTO documents
+            please feel free to <ulink url="mailto:desrod&#064;gnu-designs&#46;com">contact me</ulink> directly.
+         </para>
+   
+      </abstract>
+   </bookinfo>
+
+
+<!-- ##################################################################### -->
+<!--                            Chapter 1: Preface                         -->     
+<!-- ##################################################################### -->
+<chapter id="a">  
+   <title>Preface</title>  
+
+   <para>
+      This manual describes Plucker, an off-line HTML viewer for your Palm OS handheld device. Plucker increase the
+      utility of your handheld device by letting you view web pages and any document that can be converted to HTML or
+      text. Plucker has many advanced features including the ability to read web pages with embedded images, an
+      advanced find function, the ability to open an e-mail form when tapping on mail-links in web documents, an
+      impressive compression ratio for the documents and an open, documented DB format. It can also be customized for
+      your specific needs.  And not to be forgotten the source code is available for your perusal.
+   </para>
+                                                                                                                                         
+   <para>
+      The general layout of this document is as follows. First we will list the necessary components you need to run
+      Plucker and give you a short introduction on how Plucker works. Then we will give detailed instructions about the
+      installation on your system if there are any specific parts for the operating system you use. After the setup
+      routine of Plucker we will show you how to customize Plucker to get the contents.
+   </para>
+                                                                                                                                         
+   <para>
+      As a general guideline we strongly encourage you to read at least the first three chapters of this handbook. When
+      you understand how Plucker works it is easy to set up the advanced features using the reference part of this
+      book.
+   </para>
+
+   <!-- ################################################################## -->
+   <!--                  Chapter 1.1: System Requirements                  -->     
+   <!-- ################################################################## -->
+   <sect1 id="aa">
+     <title>System Requirements</title>
+   
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="aaa">
+      <title>Device</title>
+   
+         <para>
+            Plucker will run on Palm Pro, Palm III, Palm IIIx/IIIe, Palm V, PalmVx, Handspring Visor, TRGPro and other
+            Palm OS handheld devices utilizing PalmOS 2.0 and higher.
+         </para>
+   
+         <para>
+            Plucker requires 98 kB of free space for the viewer application and an additional 30 kB for the shared
+            library if the ZLib compression should be used (only PalmOS 3.0 and higher can use the zlib compression).
+         </para>
+
+         <para>
+            Additional free space is required for your data and at run-time for decompression. An alert will display if
+            there is not enough free space on your device. Note that Plucker can use documents stored in Flash memory
+            and on read-only expansion cards.
+         </para>
+
+         <para>
+            NOTE: The higher bit depth (more colors) you use for the images the more memory they will require, so it is
+            recommended not to use higher bit depth than necessary. See below on how to influence the bit depth Plucker
+            uses.
+         </para>
+
+      </sect2>
+
+      <!-- ############################################################### -->
+      <!--                  Chapter 1.1.2: How Plucker Works               -->
+      <!-- ############################################################### -->
+      <sect2 id="aab">
+         <title>How Plucker Works</title>
+         <para>
+            Let us start with a short description on how Plucker works. This
+            will help you to understand certain procedures necessary to use
+            Plucker to its best.
+         </para>
+
+         <para>First of all let us mention that there are three parts:</para>
+
+         <orderedlist>
+            <listitem>
+               <para>
+                  The Viewer: this is the actual application you run on your handheld. It is used to display your
+                  documents as the name suggests.
+               </para>
+            </listitem>
+
+            <listitem>
+               <para> 
+                  The Parser: more or less the brain of Plucker. The parser gathers contents from the Internet and
+                  converts it to a suitable format for the viewer. This part is installed on your workstation, not on
+                  your handheld, so unlike other products Plucker uses your powerful desktop for the hard work.
+               </para>
+            </listitem>
+
+            <listitem>
+               <para>
+                  Some transfer tool which sends the pages you gathered using the parser to your handheld. Actually,
+                  this is not part of Plucker itself and how this is done depends on the platform you are using. For
+                  example, on Unix or OS/2 you might want to use Pilot-Link whereas on Windows you might prefer to use
+                  the HotSync Manager. It is only necessary that you understand that you must, in some way, transfer
+                  the data in any way to your handheld. We stress this here as many users who converted from some other
+                  application to Plucker missed this point.
+               </para>
+            </listitem>
+         </orderedlist>
+
+         <para>Consequences of this are immediate:</para>
+                                                                                                                                         
+         <itemizedlist>
+            <listitem>
+               <para>
+                  Before you are able to view any page from the Web on your handheld you have to run the parser
+                  (sometime also called HotSync in this document). Normally you will invoke it via some script, which
+                  we will explain later on. Plucker does not start the gathering process automatically when you press
+                  the HotSync button on your cradle as some other off-line web readers do (not even on Windows). We
+                  want to stress that you must start the parser manually (or by some tool that does this automatically
+                  for you), and after running the parser you must sync your device to get the documents onto your
+                  handheld. What sounds a bit difficult offers you in fact many advantages.
+               </para>
+            </listitem>                                                                                                                          
+
+            <listitem>
+               <para>
+                  Since the parser is separated from the viewer and the transfer tool you will not have any problems if
+                  your HotSync-cradle shares the COM-port with your modem.
+               </para>
+            </listitem>
+
+            <listitem>
+               <para>
+                  It is possible to run the parser automatically at some specified time. That is you can have Plucker
+                  to collect your newspaper each morning at six o'clock without requiring your attention and then
+                  HotSync the retrieved data to your handheld before you leave home. In fact the whole process can be
+                  automated through a shareware tool such as AutoSync from <ulink
+                  url="http://www.rgps.com">http://www.rgps.com</ulink>, cron jobs, or other similar tools.
+               </para>
+            </listitem>
+         </itemizedlist>                                  
+      </sect2>
+
+      <!-- ############################################################### -->
+      <!--                    Chapter 1.1.3: Converters                    -->
+      <!-- ############################################################### -->
+      <sect2 id="aac">
+         <title>Converters</title>
+         <para>
+            Before you can read a document (HTML/text file) it has to be converted to a Plucker format. For this we
+            need some converters.  The provided parser tool is the most essential, but to get support for images as
+            well you might want to read on as we need some 3rd party applications for that as well. That is, if you
+            lack images in your gathered web pages most likely you are missing some of the necessary tools.
+         </para>
+
+         <para>
+            The provided parser tool currently runs on Linux, OS/2, Windows, Solaris, AIX and FreeBSDIt should be
+            possible to get it running on any platform with Python support.
+         </para>                  
+                                                                                                                                         
+         <para>
+            NOTE: On OS/2 you must install Plucker on a HPFS-partition.  Plucker will not run on OS/2 if you are using
+            the FAT file system as Plucker requires long filenames and OS/2 implements the traditional way of FAT
+            without the extensions known from Windows.
+         </para>                                                                                                               
+                                                                                                                                         
+         <para>                                                                                                                
+            If you know of other platforms where Plucker can be used successfully we would appreciate if you send a
+            message to <email>plucker-team&#064;rubberchicken.org&#46;com</email> informing us about it and if possible
+            also include information about additional requirements to get it running.
+         </para>
+
+         <!-- ############################################################ -->
+         <!--            Chapter 1.1.3.1: Additional Software              -->
+         <!-- ############################################################ -->
+         <sect3 id="aaca">
+            <title>Additional Software</title>
+            <para>
+               The following tools are not included within the distribution of Plucker. You will find a list where to
+               obtain these tools below.
+            </para>
+
+            <itemizedlist>
+               <listitem>
+                  <para>
+                     Python: a scripting language. Uses in the parser to retrieve contents from the web and put it into
+                     Plucker format for the Palm OS handheld device. Compression of the documents is also handled by
+                     the Python parser.
+                  </para>
+                  <para>
+                     Python is required on all supported platforms.
+                  </para>
+               </listitem>
+                                                                                                       
+               <listitem>
+                  <para>
+                     At least one of the following: Python Image Library (PIL), ImageMagick or NetPBM. These tools are
+                     used for the image handling, but are not needed if you pluck all your data without images.
+                  </para>
+               </listitem>
+
+               <listitem> 
+                  <para>  
+                     Some transfer tool to transport the retrieved data to your handheld. Most likely you have this
+                     already installed.
+                  </para>
+               </listitem>
+            </itemizedlist>                                    
+         </sect3>
+
+         <!-- ############################################################ -->
+         <!--    Chapter 1.1.3.2: Where to find the required software      -->  
+         <!-- ############################################################ -->
+         <sect3 id="aacb">
+            <title>Where to find the required software</title>
+            <para>Where you find the tools:</para>
+
+            <itemizedlist>
+               <listitem>
+                  <para>Python: <ulink url="http://www.python.org">http://www.python.org</ulink></para>
+               </listitem>
+
+               <listitem> 
+                   <para>PIL: <ulink url="http://www.pythonware.com/library.htm">http://www.pythonware.com/library.htm</ulink></para>
+               </listitem>
+
+               <listitem> 
+                  <para>ImageMagick: <ulink url="http://www.wizards.dupont.com/cristy/ImageMagick.html">http://www.wizards.dupont.com/cristy/ImageMagick.html</ulink></para>
+               </listitem>
+
+               <listitem>
+                  <para>NetPBM: <ulink url="ftp://ftp.x.org/contrib/utilities/">ftp://ftp.x.org/contrib/utilities/</ulink></para>
+               </listitem>
+
+               <listitem>
+                  <para>
+                     OS/2 versions: Current ports can be found at: <ulink url="http://www.stellarcom.org/plucker/os2_bins">http://www.stellarcom.org/plucker/os2_bins</ulink>
+                  </para>
+               </listitem>
+            </itemizedlist>
+         </sect3>
+      </sect2>
+   </sect1>
+
+   <!-- ################################################################## -->
+   <!--                       Chapter 1.2: Conventions                     -->
+   <!-- ################################################################## -->
+   <sect1 id="ab">
+     <title>Conventions</title>
+     <para>For this document we use some common conventions.</para>
+
+     <para>
+        <emphasis role="strong">Bold</emphasis> is used for options to commands.
+     </para>
+
+     <para>
+        <emphasis>Italic</emphasis> is used to indicate files, directories, commands and program names when they appear
+        in the body of a paragraph.
+     </para>
+                                                                                                                                         
+     <para>
+        <literal remap="tt">Constant Width</literal> is used in examples to show the contents of files or the output
+        from commands, and to indicate environment variables and keywords in the body of a paragraph.
+     </para>
+                                                                                                                                         
+     <para>
+        <emphasis role="strong">Constant Bold</emphasis> is used in examples to show input that is typed literally by
+        the user.
+     </para>
+                                                                                                                                         
+     <para> 
+         [ ] surrounds optional elements in a description of program syntax.  (The brackets themselves should never be
+         typed)
+     </para>
+   </sect1>
+
+   <!-- ################################################################## -->
+   <!--                  Chapter 1.3: We'd like some Feedback              -->
+   <!-- ################################################################## -->
+   <sect1 id="ac">
+      <title>We'd like some Feedback</title>
+
+      <para>
+         We have verified all information in this User's Guide, but you might find that features have changed. Please
+         let us know about any errors you find, as well as any suggestions for improvements, by sending an e-mail to
+         <email>plucker-team&#064;rubberchicken.org&#46;com</email>.
+      </para>
+   </sect1>
+</chapter> 
+
+
+<!-- ##################################################################### -->
+<!--            Chapter 2: Installation and Quickstart Manual              -->
+<!-- ##################################################################### -->
+<chapter id="b">
+   <title>Installation and Quickstart Manual</title>
+
+   <para>
+      This chapter describes how to set up Plucker on your system and how to configure it to gather contents for
+      you. It does not cover all features of Plucker for which you might refer to later chapters of this handbook,
+      but it will give you an introduction on how to use Plucker's basic features. Many of the advanced topics are
+      not covered here to make this introduction readable even for beginners and as simple as possible. Once you got
+      the generals procedures of Plucker it will be easy for you to understand the later parts of this handbook
+      which are meant mainly as reference guide.
+   </para>
+
+   <!-- ################################################################## -->
+   <!--            Chapter 2.1: OS specific instructions                   -->
+   <!-- ################################################################## -->
+   <sect1 id="ba">
+   <title>OS specific instructions</title>
+      <para>
+         First of all we will list some of the OS specific installation procedures as well as OS specific things you
+         should know to run Plucker.
+      </para>
+
+      <!-- ############################################################### -->
+      <!--            Chapter 2.1.1: OS/2                                  -->
+      <!-- ############################################################### -->
+      <sect2 id="baa">
+      <title>OS/2</title>
+
+         <para>
+            Basically there are two ways to install Plucker on OS/2:
+         </para>
+
+         <itemizedlist>
+            <listitem>
+               <para>  
+                  The Expert: You may obtain all packages you need to run Plucker separately and set them up by
+                  hand. This would be the preferred way if you have already several packages installed on your
+                  system (unless you work a lot with Unix-style tools on OS/2 this is not very likely the case) and
+                  if you have some experiences setting up such stuff.
+               </para>
+            </listitem>
+
+            <listitem>
+               <para>
+                  The Beginner: Just get the WarpIn-Installation packages and run install. This is the preferred way
+                  for new and/or inexperienced users and if you do not have the main parts to run Plucker installed
+                  on your system.  Unless specific circumstances or environments we encourage you to use this way! 
+                  The OS/2-installer will do no harm to your system and it will make it quite easy to de-install
+                  Plucker.
+               </para>
+            </listitem>
+         </itemizedlist>
+
+         <para>
+            In any case you will need to get all of the files needed from
+            the OS/2 page at <ulink url="http://www.stellarcom.org/plucker/os2_bins/index.html">http://www.stellarcom.org/plucker/os2_bins/index.html</ulink>
+         </para>
+
+         <para>
+            On this page you will find all tools necessary to set up
+            Plucker either way you choose.
+         </para>
+
+         <para>
+            NOTE: You need to install Plucker on a HPFS-partition. It
+            will not work on FAT file systems.
+         </para>
+
+         <para>
+            NOTE: Currently there persist still some problems with image conversion on OS/2 so you might not be able
+            to use images in your documents.  We work on a solution to that issue.
+         </para>
+
+         <para>
+            After setting up Plucker please refer to chapter refsec:Parser on how to set up the necessary
+            configuration files for Plucker.
+         </para>
+
+         <!-- #############################################################-->
+         <!--            Chapter 2.1.1.1: Using the Installer              -->
+         <!-- #############################################################-->
+         <sect3 id="baaa">
+            <title>Using the Installer</title>
+
+            <para>As stated above this is very easy indeed. Follow these steps:</para>
+
+            <orderedlist>
+               <listitem>
+                  <para>
+                     After downloading PluckerInstaller.zip just unzip it
+                     using your favorite tool to handle ZIP-files. (e.g. 
+                     just type unzip PluckerInstaller.zip from your
+                     shell)
+                  </para>
+               </listitem>
+
+               <listitem>
+                  <para>
+                     Copy the WarpIn folder to whatever location you want to store WarpIn at. If you have WarpIn
+                     already installed you may skip this step. (But ensure that you have the same or a newer version
+                     of WarpIn.) After this open that folder and double-click on WarpIn.exe. This will create the
+                     necessary program objects and associations to use WarpIn. Note that WarpIn is not written
+                     explicitly for Plucker and that we only use it. For details about WarpIn refer to its README
+                     files and documentation. WarpIn is Freeware.
+                  </para>
+
+                  <para>
+                     NOTE: Once you have installed WarpIn on your system you can use it to install any other product
+                     that is delivered in WPI format. An increasing number of tools use this for there installation.
+                  </para>
+               </listitem>
+
+               <listitem>
+                  <para>
+                     Now you are ready to install Plucker itself. This is quite easy. Open the folder where you
+                     unziped Plucker on the WPS and just double-click on the several WPI-packages (you may note that
+                     they are now associated with WarpIn.) This fires up WarpIn which asks you some basic questions
+                     on where you want to store the files and stuff like that. Simply follow the
+                     on-screen-instructions.
+                  </para>
+               </listitem>
+
+               <listitem>
+                  <para>
+                     The installer will create a folder on your Desktop called Plucker for OS/2 which will contain
+                     all necessary objects for using Plucker. Additionally it will set up Python and Pilot-Link as
+                     well as ImageMagick for image conversion.
+                  </para>
+               </listitem>
+            </orderedlist>
+
+            <para>
+               That's it! Now you are ready to run Plucker on OS/2.
+            </para>
+
+            <para>
+               But before you start your first plucking we want to remind you to read section refsec:basic to set up
+               Plucker to gather the right contents. You need to follow the steps there to get useful results.
+            </para>
+
+            <para>
+               For detailed instructions how to use Plucker refer to the other chapters in this documentation. You
+               may find some hints on how to make most out of Plucker in the appropriate locations within normal
+               documentation, just in case there is anything different on OS/2 than on all the other platforms. You
+               may note that this is very rarely the case at all.
+            </para>
+
+            <para>
+               NOTE: If you have any of the packages already installed that are delivered by the installer (most
+               likely this will be the case with Pilot-Link) then simply skip it in the installation process for
+               Plucker.
+            </para>
+         </sect3>
+
+         <!-- #############################################################-->
+         <!--            Chapter 2.1.1.2: Setting up by hand               -->
+         <!-- #############################################################-->
+         <sect3 id="baab">
+         <title>Setting up by hand</title>
+
+            <para>
+               This section will be quite short as we assume that you
+               know what you are doing. You will find all of the necessary tools
+               at: <ulink url="http://www.stellarcom.org/plucker/os2_bins">http://www.stellarcom.org/plucker/os2_bins</ulink>
+            </para>
+
+            <para>The basic steps:</para>
+
+            <orderedlist>
+               <listitem>
+                  <para>Set up Python for OS/2</para>
+               </listitem>
+
+               <listitem>
+                  <para>
+                     In case you want to use zLIB-compression (see below)
+                     you need to install the additional zLIB.DLL for
+                     Python. (See our web site)
+                  </para>
+               </listitem>
+
+               <listitem>
+                  <para>
+                     Install ImageMagick or NetPBM (whatever you prefer) for image conversion. Note that Plucker
+                     needs two additional converters for creating usual TBMP-format used on your handheld. So we
+                     suggest that you get either of this packages from our web site. The necessary converters in
+                     current versions are included in the packages provided there.
+                  </para>
+               </listitem>
+
+               <listitem>
+                  <para>Install Pilot-Link for OS/2</para>
+               </listitem>
+
+               <listitem>
+                  <para>
+                     Unzip Plucker to the directory where you want to
+                     store the program
+                  </para>
+               </listitem>
+
+               <listitem>
+                  <para>
+                     Make sure that the environment variable $HOME is set
+                  </para>
+               </listitem>
+
+               <listitem>
+                  <para>
+                     Create a directory called .plucker within your $HOME
+                  </para>
+               </listitem>
+            </orderedlist>
+
+             <para>
+                If all packages are properly set up (this includes necessary changes to CONFIG.SYS, path/libpath
+                entries and some environment variables, refer to the docs of each package for this) you are ready to
+                run Plucker. Simply continue with the usual configuration.
+             </para>
+
+             <para>
+                Again: If you do not know what we where talking about here we suggest that you use the installer. It
+                will take care about all the necessary settings. If you have any of the packages already installed
+                that are delivered by the installer then simply skip it in the installation process for Plucker.
+             </para>
+          </sect3>
+      </sect2>
+
+      <!-- ############################################################### -->
+      <!--               Chapter 2.1.2: Unix/Linux                         -->
+      <!-- ############################################################### -->
+      <sect2 id="bab">
+      <title>Unix/Linux</title>
+
+         <para>There are several ways to get Plucker installed</para>
+
+         <itemizedlist>
+            <listitem>
+               <para>RPM package</para>
+            </listitem>
+
+            <listitem>
+               <para>DEB package</para>
+            </listitem>
+
+            <listitem>
+               <para>TAR package with binaries</para>
+            </listitem>
+
+            <listitem>
+               <para>TAR package with source code</para>
+            </listitem>
+         </itemizedlist>
+
+         <para>
+            If you install the RPM package, you only have to run plucker-setup to set up the Plucker environment in
+            you home directory (see chapter refsec:Parser for more info about changing the description,
+            configuration and exclusion list files)
+         </para>
+
+         <para>
+            If you have downloaded the binary TAR package, then do the
+            following:
+          </para>
+
+          <orderedlist>
+             <listitem>
+                <para>Unpack the file</para>
+             </listitem>
+
+             <listitem>
+                <para>Go to the unix directory</para>
+             </listitem>
+
+             <listitem>
+                <para>Run ./install-plucker</para>
+             </listitem>
+
+             <listitem>
+                <para>Answer the questions about where the files should
+                be installed.</para>
+             </listitem>
+          </orderedlist>
+
+          <para>
+             If you have downloaded the source package, you will do the same thing as explained above, but this time
+             you must have all development tools installed to be able to build all parts of Plucker.
+          </para>
+      </sect2>
+
+      <!-- ############################################################### -->
+      <!--               Chapter 2.1.3: Windows                            -->
+      <!-- ############################################################### -->
+      <sect2 id="bac">
+      <title>Windows</title>
+         <para>
+            On Windows we encurage you to use the graphical installer we provide. It will take care about all steps
+            necessary to set up Plucker correctly. The follwoing steps are necessary to get Plucker running on
+            Windows using this installer:
+         </para>
+
+         <orderedlist>
+            <listitem>
+               <para>
+                  Download the Installerpackage for Windows from our web
+                  page and run it
+               </para>
+            </listitem>
+
+            <listitem>
+               <para>Follow the on-screen instructions</para>
+            </listitem>
+         </orderedlist>
+
+      </sect2>
+   </sect1>
+
+   <!-- ################################################################## -->
+   <!--        Chapter 2.2: Basic Customization, Before you begin          -->
+   <!-- ################################################################## -->
+   <sect1 id="bb">
+   <title>Basic Customization, Before you begin</title>
+
+   <para>
+      Now you have set up Plucker on your workstation. What is left to do?
+   </para>
+
+      <itemizedlist>
+         <listitem>
+            <para>
+               Tell Plucker what pages to gather
+            </para>
+         </listitem> 
+
+         <listitem> 
+            <para>
+               Customize the hotsync-script (only OS/2 and Windows)
+            </para>
+         </listitem> 
+
+         <listitem>
+            <para>
+               Start your first plucking and check that everything work as expected
+            </para>
+         </listitem> 
+      </itemizedlist>
+
+      <para>
+         The first goal is achived by creating a document called description file or home document. The second is
+         only necessary if you are running OS/2 or Windows and is normally done by editing a script called HotSync
+         (although you can name it whatever you like). And the last step is to run this script or to run
+         plucker-build if you are using Linux/Unix.
+      </para>
+
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="bba">
+      <title>Specifying the pages you want to view - The Home Document</title>
+      <para>
+
+      <para>
+         The home page is the first page you see when you start Plucker on your PDA, and is also the page you see
+         when you tap on the home icon (the little house) in the viewer on the Palm OS handheld device. The home
+         page is by default created using the description file at $HOME/.plucker/home.html.
+      </para>
+
+      <para>
+         When you installed Plucker, a default description file was put in $HOME/.plucker. You can change this file
+         in any text editor and it doesn't require deep knowlege of HTML to create it. We will explain how to do
+         this step by step in a minute.
+      </para>
+
+      <para>
+         Except for the MAXDEPTH and similar attributes the description file is like any other HTML file. This also
+         means that you can view home.html in your normal web browser (e.g. Netscape). In fact you can even use a
+         normal web page at some web server as your home document. See chapter refsec:Parser for details on how to
+         do this.
+      </para>
+
+      <para>
+         Prior to performing a HotSync, you have to tell Plucker about where to grab the pages that you want to
+         view. Plucker starts by scanning the description file (also refered to as home document) that you have
+         defined. As stated above if you did not define otherwise this will be $HOME/.plucker/home.html.
+      </para>
+
+      <para>
+         The parser finds any links in that file, and follows them. Each link (e.g. something like <![CDATA[<a href="...">]]>)
+         is read from the Internet, stored and parsed on your hard disk and included in the document that you will
+         later sync to your Palm. Let us explore the description file in more detail.
+      </para>
+
+      <para>
+         A simple, typical home document will look like this (without the line numbers, they are only added for
+         easier reference later on):
+      </para>
+
+<programlisting><![CDATA[
+[01] <h1>Plucker Home</h1>
+[02]
+[03] <h2>Plucker Information</h2>
+[04]   <p><A HREF="http://www.plkr.org"> Plucker home page</a></p>
+[05]
+[06] <h2>Linux links</h2>
+[07]   <p><a href="http://slashdot.org/index.pl?light=1&noboxes=1" NOIMAGES MAXDEPTH=1>Slashdot.org</a></p>
+[08]
+[09] <h2>News</h2>
+[10]   <p><a href="http://channel.nytimes.com/partners/palm-pilot/summ.html" MAXDEPTH=2>New York Times</a></p>
+[11]   <p><a href="http://www.news.com/Newsfeed/Avantgo/index.html" MAXDEPTH=2>C-Net NEWS.COM</a></p>
+]]></programlisting>
+
+      <para>
+         Here you see several typical examples. First of all you may note that this document follows the general
+         outlines of normal HTML as stated above. If you do not know HTML already, do not worry. What you need here
+         is really very easy. Let us look it trough line by line. (If you already know HTML this will be somewhat
+         boring to you).
+      </para>
+
+      <para>
+         First you note that commands in HTML are enclosed in angle brackets. Each command has a begin and an end
+         always using the same tag, the end tag is marked by an additional slash in front of the tag's name. Lines 1,
+         3, 6, and 9 line create Headlines.  The numbers simply specify different heights of the lettering.
+      </para>
+
+      <para>
+         More interesting is the 4th line. First it starts a new paragraph (<![CDATA[<p>]]>) and then you see the
+         most important tag in HTML: a "link". Links have the following form:
+      </para>
+
+<programlisting><![CDATA[
+<a href="http://www.plkr.org">Plucker home page</a>
+]]></programlisting>
+
+      <para>
+         Enclosed in quotes you find the page they refer to (the URL) then after an closing angle bracket you see
+         the title of the link that should be displayed to the user. You will see exactly this text within Plucker
+         on your home document.
+      </para>
+
+      <para>
+         Now you have the basic procedure how to tell Plucker to get a specific web page for you. What does Plucker
+         do if it finds a tag like this in home.html? It will simply follow the URL you specified and get this page.
+         Note that as this page is plain HTML you can also view it within your normal web browser and use the links
+         the same way as Plucker does it. That way you can easily check if all links are working as you expected
+         without the need to run the parser each time and sync.
+      </para>
+
+      <para>
+         Well, it is nice to grab a web page, but what to do with a newsticker that lists only the headlines? You
+         want to retrieve the articles as well. Let's have a look at line 7. You will note that this time the link
+         is enhanced by an additional tag: MAXDPTH=2. This is the way to instruct Plucker to retrieve deeper levels
+         from a web server. You can give MAXDEPTH any number as parameter. MAXDEPTH=2 means to load the target
+         (linked-to) page, and any targets within that page. This will just do the job. It will first grab the
+         headlines and then follow all linked pages to get the articles as well.
+      </para>
+
+      <para>
+         MAXDEPTH=3 will load the target page, its linked pages, and any pages linked within there and so on. You
+         really do not want to set MAXDEPTH too high. That could be very bad. A MAXDEPTH of well under 50 would
+         probably load the entire Internet, so you may run into some storage problems...
+      </para>
+
+      <para>
+         MAXDEPTH is one of the most important tags used to customize the information to download. Another important
+         tag is NOIMAGES. A sample on how to use it can be found in line 7. If you do not want to download any
+         images you should specify this tag. Simply add it after the URL to pluck. As you see in line 7 you can
+         combine the various tags. That is line 7 instructs Plucker to download only the title pages without images.
+         You see you can even explicitly specify a value of 1 to the MAXDEPTH argument. This does not make much
+         sense at the first glance as our first example showed that leaving out the MAXDEPTH statement will give the
+         same result. But stop. The reason to give a explicit MAXDEPTH is that you can define which depth is the
+         default for Plucker within Pluckers configuration file we will talk about later on. So if you set the
+         default depth to 2 e.g. but this page should definitely be plucked only to a depth of 1 you can specify it
+         explicitly here instead of defining a depth of 2 for all other pages. (It is not a bad idea to define the
+         depth explicitly for all pages as one can see at first glance how deep Plucker will work.)
+      </para>
+
+      <para>
+         Now in line 7 you see another possibility of Plucker. You might have wondered about these funny chars that
+         appear in the url. Well with that definition you instruct Plucker to request the result of a so called CGI
+         and to pass some paraeters as well. A CGI is basically a script run by a web provider to gather explicit
+         informations e.g. from a database. You do not need to worry about the details, the easiest way to get the
+         correct URL is always to point your web browser to the page where the information is located and copy the
+         URL from its URL-field into the home-document of Plucker. Here we just wanted to show that Plucker can even
+         handle such funny URLs.
+      </para>
+
+      <para>
+         Hint: If you specify a CGI for a newsticker and you always get the same news it is most likely that the
+         date of the issue is passed to the script via the URL.
+      </para>
+
+      <para>
+         NOTE: MAXDEPTH will most likely be sufficient for web pages that where written for PDAs. If you are
+         plucking normal web pages be careful with MAXDEPTH, as many pages contain a menu to navigate the site and
+         Plucker will follow these links as well. That is Plucker does not distinguish between a menu or a normal
+         link. That way a MAXDEPTH=2 which is meant to download an overview page and the articles (e.g. of your
+         newspaper) could easily result in Plucker trying to retrieve the news archive of your favourite newspaper
+         as well (since it is linked from within the menu). So it is wise to attend the first runs of Plucker if you
+         add new pages to your description file, especially if you do not use PDA-optimized pages.  There are very
+         effective ways to prevent Plucker from running into this kind of problems. Besides the MAXDEPTH and
+         NOIMAGES tags there are various other tags that influlence the gathering process. E.g. you can have Plucker
+         to exclude specific links etc. See below in chapter refsec:Parser for details about. We will not go into to
+         much details here.
+      </para>
+
+      <para>
+         Hint: Web pages created for handhelds have some advantages over normal web pages. Plucker can retrieve
+         normal web pages, no matter, but specially designed pages are normally smaller, contain less graphics etc.
+      </para>
+
+      <para>
+         Hint: Plucker can not handle frames. Usually, pages designed for handhelds do not contain frames...
+      </para>
+
+      <para>
+         Hint: A good collection of links to handheld friendly sites are included with Plucker.
+      </para>
+
+      <para>
+         Our German speaking users can find sites with mostly German content at <ulink url="http://www.palmtop-portal.de">http://www.palmtop-portal.de</ulink>.
+      </para>
+
+   </sect1>
+
+   <!-- ################################################################## -->
+   <!--            Chapter 2.3: Running the Parser                         -->
+   <!-- ################################################################## -->
+   <sect1 id="bc">
+   <title>Running the Parser</title>
+
+      <para>
+         Now that you have created your description file you are ready to run the parser to get the pages. For our
+         simple case here this does not require much. Simply open a command line window, change to the directory
+         where you installed the python parser and run the following (% is the shell prompt)
+      </para>
+
+      <programlisting>% python PyPlucker/Spider.py -f PluckerDB</programlisting>
+
+      <para>
+         (This call will work on any system, on Unix you can leave out the explicit call to Python of course.) Make
+         sure you have established a connection to the Internet before you issue this call.
+      </para>
+
+      <para>
+         Now the parser will read your freshly created home.html follow the links the way you defined them and
+         finally write a file to your harddisk called PluckerDB.pdb. In case of problems you might want to add the
+         additional parameter -V2 to see where the error occurs.
+      </para>
+
+      <para>
+         NOTE: The spider has plenty of parameters. You will find a detailed description of all of them in chapter
+         refsec:Parser. Additionally to the parameters specified to the parser call you can set default values in a
+         file called <emphasis>plucker.ini</emphasis> (on OS/2 and Windows) or .pluckerrc (on Unix). So if something
+         happens that you did not expect it is a good idea to check this file. A detailed description of the
+         parameters for this file and its format can also be found in chapter refsec:Parser and within the file
+         itself.
+      </para>
+   </sect1>
+
+   <!-- ################################################################## -->
+   <!--            Chapter 2.4: Transfer to your Palm                      -->
+   <!-- ################################################################## -->
+   <sect1 id="bd">
+   <title>Transfer to your Palm</title>
+      <para>
+         After you ran the parser on your system it will generate a document for you, that is a file suitable for
+         the viewer. Of course you need to transfer this document to your handheld. By default we suggest the usage
+         of pilot-xfer. pilot-xfer is one of the tools (more or less the central tool) of the famous pilot-link
+         package which is available for numerous platforms.  For Unix and OS/2 you might find both the binary and
+         the source distribution at:
+      </para>
+
+      <para><ulink url="http://www.stellarcom.org/palmstuff/">http://www.stellarcom.org/palmstuff/</ulink></para>
+
+      <para>For Windows please have a look at Thilo Christ's port at:</para>
+
+      <para><ulink url="http://www.guralp.net/software/PDA/pilot-link/downloads/">http://www.guralp.net/software/PDA/pilot-link/downloads/</ulink></para>
+
+      <para>
+         Besides that Plucker offers its own conduit for Windows which cooperates directly with the usual HotSync,
+         and there is as well a perl-based conduit available which you can still use to transfer the data (though
+         you might only want to use it in very special circumstances, and in fact we discourage its usage).
+      </para>
+
+      <!-- ############################################################### -->
+      <!--            Chapter 2.4.1: pilot-link                            -->
+      <!-- ############################################################### -->
+      <sect2 id="bda">
+         <title>pilot-link</title>
+
+         <para>
+            Though the general usage of Pilot-Link package is beyond the scope of this manual we will tell you
+            enough to transfer your documents on the Palm using Pilot-Link. On Unix and OS/2 you have mainly two
+            choices:
+         </para>
+
+         <orderedlist>
+            <listitem>
+               <para>
+                  Create a document with the parser and
+                  transfer that one
+               </para>
+            </listitem>
+
+            <listitem>
+               <para>
+                  Create a cache-directory and use the
+                  perl-based conduit.
+               </para>
+            </listitem>
+         </orderedlist>
+
+         <para>
+            We encourage you to use the first method as it is easier and does not require working perl and
+            pilot-link's perl-interface on your system. The perl based conduit may offer you some advantages though,
+            so its covered in the advanced topics.  Please have a look there.
+         </para>
+
+         <para>
+            The usage of pilot-xfer is quite simple. Provided you set up the package correctly (on OS/2 this is done
+            by the installer) all you need to do is
+         </para>
+
+         <programlisting>% pilot-xfer -i FILE ...</programlisting>
+
+         <para>
+            This will prompt you to press the HotSync button and then transfer the document to your handheld. On
+            OS/2 you can of course use the WPS to do this.  Simply open the folder where you stored your documents
+            and double-click on the one you want to install. (The GUI-installer has set up he appropriate
+            connections for you already.)
+         </para>
+
+         <para>
+            Hint: In case you have more than one document to
+            transfer you can also use the -r switch and invoke
+            pilot-link the following way to transfer all documents
+            within a directory at once
+         </para>
+
+         <programlisting>% pilot-xfer -r DIR</programlisting>
+
+         <para>
+            Hint: For OS/2 users. If you need to do this very often you might want to enhance the context menu of
+            your document folder by this function. Actually this is quite easy. Just create a program object that
+            contains the necessary call with all parameters needed (in the program field just enter pilot-xfer.exe,
+            in the parameters field you might want to enter -r ..  Note the full-stop in the argument), then open
+            your folder settings and go to the Menu page. Now simply drop the newly created program object in the
+            lower list box and name it appropriately using the Settings.. button. Now the context menu of your
+            folder will have an additional entry to transfer the whole folder to your handheld. You might want to
+            generate a shadow of that folder on your desktop for easy access.
+         </para>
+      </sect2>
+
+      <!-- ############################################################ -->
+      <!--            Chapter 2.4.2: The Windows Conduit                -->   
+      <!-- ############################################################ -->
+      <sect2 id="bdb">
+         <title>The Windows Conduit</title>
+
+         <para>
+            The Windows conduit is, unlike pilot-link, entirely
+            written for Plucker. For that it offers some
+            parameters quite specific which we will elaborate a
+            bit about here. Additionally it transfers the data not
+            directly to the Palm but notifies the Hotsync Manager
+            about a document waiting for transfer, that is the
+            document is sent to your handheld on your next
+            HotSync-operation, not like on Unix when you call the
+            conduit.
+         </para>
+
+         <para>
+            The first difference in the usage is that it is
+            thought to be used with cache-directories. That is it
+            assumes that you run the parser using -c. The new
+            version supports the transfer of a complete document
+            as well though.
+         </para>
+
+         <para>
+
+            All parameters are in the form <emphasis role="strong">-parameter=value</emphasis>. Note that
+            they do not follow POSIX conventions nor the normal
+            DOS-conventions. Use one minus sign to separate all
+            parameters. If you specify no parameter at all you
+            will get a short help message.
+         </para>
+
+         <para>
+            The possible parameters are:
+         </para>
+
+         <para>
+            <emphasis role="strong">-dir</emphasis>: The path to $PLUCKERDIR
+         </para>
+
+         <para>
+            <emphasis role="strong">-user</emphasis>: Hotsync manager needs to know for which user
+            the document in question should be installed. (As you
+            know the Hotsync Manager allows for multiuser
+            environments.) Use this switch to set the username.
+         </para>
+
+         <para>
+            NOTE: You must set this parameter. Without it no data
+            will be transfered.
+         </para>
+
+         <para>
+            <emphasis role="strong">-cache</emphasis>: The name of the cache-directory if you use the
+            parser with the -c switch. The default value is Cache
+            if you do not provide that parameter. This path is
+            given relative to the path you provided with -dir.
+         </para>
+
+         <para>
+            <emphasis role="strong">-id</emphasis>: Creator ID for the document. Default is Plkr. You
+            may not want to change this value.
+         </para>
+
+         <para>
+            <emphasis role="strong">-dbversion</emphasis>: Versions number for the document. Default
+            is 7. You may not want to change this value.
+         </para>
+
+         <para>
+            <emphasis role="strong">-dbname</emphasis>: Name of the document, that is the name with
+            which the document will show up on the Palm. Default
+            is PluckerDB.  You will want to change this, and you
+            have to change it if you want multiple documents.
+         </para>
+
+         <para>
+            <emphasis role="strong">-fname</emphasis>: Filename for the document on your local
+            harddisk. Default PluckerDB.pdb. You need to change
+            this for multiple documents.
+         </para>
+
+         <para>
+            <emphasis role="strong">-fix</emphasis>: 0x0D0A Sequences are converted to 0x0A. Normally
+            you should not need this parameter anymore.
+         </para>
+
+         <para>
+            <emphasis role="strong">-install</emphasis>: Install a document. This parameter is needed
+            instead of -cache if you run the parser with the -f
+            switch. -user must be set, -dir must not
+         </para>
+
+         <para>
+            <emphasis role="strong">-verbose</emphasis>: Set the verbosity Level. Default are
+         </para>
+
+         <blockquote>
+            <para>
+               0 = Verbosity level 0 is silent except for errors (No news is good news)
+            </para>
+
+            <para>
+               1 = Verbosity level 1 gives progress status
+            </para>
+
+            <para>
+               2 = Verbosity level 2 is used for debugging
+            <para>
+         </blockquote>
+
+         <para>
+            <emphasis role="strong">-copyprev</emphasis>: Set the CopyPrevention flag for the document. You may not
+            be able to copy such documents from one Palm to another (easily). Useful for confidential data (but do
+            not consider it to be a sufficient security lock.)
+         </para>
+
+         <para>
+            <emphasis role="strong">-backup</emphasis>: Set the backup flag for the document, documents without this
+            flag will not be backed up by HotSync.
+         </para>
+
+         <para>
+            <emphasis role="strong">-launchable</emphasis>: Set the launchable flag for the document Set this to see
+            your document like a program in the Palm's launcher.
+         </para>
+
+         <para>
+            NOTE: The last three parameters are only useful if you run the parser with the -c parameter that is you
+            let it write cache directories instead of whole documents.  Otherwise the parser will add this flags if
+            you tell it to do so.
+         </para>
+      </sect2>
+   </sect1>
+
+   <!-- ################################################################## -->
+   <!--                Chapter 2.5: Finally..                              -->
+   <!-- ################################################################## -->
+   <sect1 id="be">
+   <title>Finally..</title>
+      <para>
+         After you successully retrieved your documents and enjoyed reading them on your PDA you might want to do
+         this every day. To ease things up consider putting these calls into a short script file. On OS/2 and
+         Windows simly create a file called hotsync.cmd (OS/2) or hotsync.bat (Windows) and place the calls just
+         like you would have entered them on the command prompt. In case you use dial up conections to the internet
+         you can even include the calls to build up that connection before the gathering process starts.
+      </para>
+
+      <para>
+         Now you should be ready to start using Plucker. The next chapter will describe the client application on
+         your handheld, the Viewer.
+      </para>
+   </sect1>
+</chapter>
+
+<!-- ##################################################################### -->
+<!--                   Chapter 3: Viewer                                   -->
+<!-- ##################################################################### -->
+<chapter id="c">
+   <title>Viewer</title>
+
+   <para>
+      Using Plucker's client application (in this chapter refered to as the viewer) is in many ways just like using a
+      normal web browser (except for the fact that you are not connected to the Internet).
+   </para>
+
+   <!-- ################################################################## -->
+   <!--               Chapter 3.1: Basic Operations                        -->
+   <!-- ################################################################## -->
+   <sect1 id="ca">
+      <title>Basic Operations</title>
+      <para>
+         This section describes how to start the viewer and navigate between different pages. If you are new to
+         Plucker, read this section to get used to its basic operations. Later sections will describe how to customize
+         the viewer in many ways, handling of multiple documents, the find function, and how to add bookmarks.
+      </para>
+
+      <!-- ############################################################### -->
+      <!--            Chapter 3.1.1: Starting The Viewer                   -->
+      <!-- ############################################################### -->
+      <sect2 id="caa">
+         <title>Starting The Viewer</title>
+         <para>
+            Tap on the Plucker icon in the Applications screen to start the viewer. The first time the viewer is
+            started it will open the document library and display the available document in RAM and, if the device is
+            equipped with external card(s), any documents on the card(s). Subsequent launches of the viewer will start
+            where you left off.
+         </para>
+
+         <para>
+            If ZLib compression has been used when creating the document (see refsec:ParserOutput) then the ZLib shared
+            library must be installed or the records in the document cannot be uncompressed. DOC compressed documents
+            don't require any additional library.
+         </para>
+      </sect2> 
+
+      <!-- ############################################################### -->
+      <!--               Chapter 3.1.2: The Main Screen                    -->
+      <!-- ############################################################### -->
+      <sect2 id="cab">
+         <title>The Main Screen</title>
+
+         <para>
+            The viewer will render the pages as close to the original as possible, using everything from italic and
+            bold fonts to embedded images. It also support horizontal rules, ordered and unordered lists, headers
+            (using different font sizes), left, right, and center text alignment, and justified text.
+         </para>
+
+           <blockquote>
+              <figure>   
+                <title>The Main Screen</title>  
+                 <graphic fileref="MainScreen.gif" width="380"></graphic>
+              </figure>
+           </blockquote>
+
+         <para>
+            The toolbar can be moved from the top to the bottom of the screen or removed completely using preference
+            settings (see refsec:Prefs).
+         </para>
+
+         <para>
+            The viewer has a 32 page history, so you can easily move backward and forward through recent visited pages
+            just as you would with your desktop browser.
+         </para>
+
+         <para>
+            There are several different ways to move within the current page and perform different actions. You can
+            move using the scrollbar, the scroll buttons and if the tap action (see refsec:TapAction), gesture action
+            (see refsec:Gestures), and button action (see refsec:HWButtons) are activated also by pen taps on the
+            screen, gestures in the graffiti area and by pressing the hardware buttons, respectively. The fastest way
+            to move within the page is to use the location selector, though. Tap on the location (the percentage in the
+            toolbar) and a dropdown menu will appear with 11 different values, Top, 10%, 20%,...90%, and Bottom, so
+            that you can choose the location you want to jump to. Tapping the autoscroll buttons will cause the text to
+            scroll by at the specified rate (see refsec:Autoscroll.
+         </para>
+
+         <para>
+            Just like a web browser the viewer underlines links, a solid line for not visited pages and a dotted line
+            for already visited pages. Tap on an underlined link to open the page it refers to (the link will be
+            highlighted when you tap on it).  Image links are not underlined but it should be obvious when an embedded
+            image is a link and when it is not. When in doubt just tap on the image, if it highlights it is an image
+            link...
+         </para>
+
+         <para>
+            Embedded images will be scaled down if they are too big to fit within the available width of the screen. If
+            the alternative image options are activated (see refsec:Parser), then the embedded images will be a link to
+            a larger version of itself. Tap on the image and the larger version will be shown. The viewer will try to
+            change the screen depth to the depth required by the Tbmp document and if that depth is not supported it
+            will display an alert. To see all parts of the larger-than-screen image, tap on it and drag the pen in all
+            directions.
+         </para>
+
+         <para>
+            When you tap on an e-mail tag the viewer will open a form so that you can compose and send a message. The
+            form will show as much as possible of the To: Cc: and Subj: lines. If they don't fit on one line a little
+            arrow will appear next to the line to allow you to see the rest of the line. The message will be sent
+            through the built-in Mail application (i.e. you have to enable the mail synchronization using the Hotsync
+            options (Windows) or some external tool (other platforms) to send the mail).
+         </para>
+
+           <blockquote>
+              <figure>
+                <title>Mail Form</title>                       
+                 <graphic fileref="Mail.gif" width="162"></graphic>
+              </figure>
+           </blockquote>
+
+         <para>
+            Some pages may have external references (i.e. links to pages that were not included because they were
+            either filtered out using the exclusionlist.txt file, excluded by STAYONHOST/ STAYBELOW or was exceeding
+            the maximum link depth).
+         </para>
+
+           <blockquote>
+              <figure>
+                <title>Copy URL</title>                       
+                 <graphic fileref="CopyURL.gif" width="340"></graphic>
+              </figure>
+           </blockquote>
+
+         <para>
+            When such a link is followed the viewer will display a page with the URL for the external reference. You
+            can tap Copy URL and the URL will be added to a Memo in the Memo database.
+         </para>
+
+         <para>
+            The Memo will be titled Plucker URLs <![CDATA[<date> <time>]]>. All URLs added during a single Plucker
+            session will be in the same Memo. If you have a Plucker category in your Memo database, the Memos will be
+            placed there.  Otherwise they will be in the Unfiled category.
+         </para>
+
+         <para>
+            Read section refsec:Depth if you want to learn more about link depths and section refsec:Exclusionlist for
+            more info about the filtering feature.
+         </para>
+
+         <para>
+            To get the URL for an existing page choose Options|Details from the menu bar (or use the Graffiti shortcut
+            /D). In the Details dialog you can also choose to not show images in a page and to reset its status (i.e.
+            the link to this page will once again be a solid link indicating it as unread).
+         </para>
+      </sect2>
+   </sect1>
+
+   <!-- ################################################################## -->   
+   <!--               Chapter 3.2: Customization                           -->   
+   <!-- ################################################################## -->   
+   <sect1 id="cb">
+      <title>Customization</title>
+      <para>The viewer allows many different customizations to maximize the utility of your reader.</para>
+
+      <!-- ############################################################### -->
+      <!--               Chapter 3.2.1: Font and layout                    -->
+      <!-- ############################################################### -->
+      <sect2 id="cba">
+         <title>Font and layout</title>
+
+         <para>
+            In the Font and Layout dialog you can set various layout options. Depending on your device, you may have up
+            to five built-in font packages, and on most devices if you install an appropriate custom font package, you
+            will be able to load it in by choosing it from the User-loaded font drop down list. You can also set
+            line-spacing, paragraph-spacing and rotation options.
+         </para>
+
+         <para>
+            User loaded Plucker font packages may be placed either in your device's RAM, or in VFS storage, if
+            available. Font packages put in VFS storage must go in one of the following directories:
+         </para>
+
+<programlisting>
+  /Palm/Programs/Plucker/Fonts
+  /Palm/Ebooks/Fonts
+  /Palm/Launcher/
+</programlisting>
+
+         <para>
+            Note that if you are using anti-aliased fonts, only those rotations selected when generating the font will
+            be supported.
+         </para>
+
+         <para>
+            You can download some pre-built Plucker font packages and tools to generate your own from
+            <ulink url="http://palmfontconv.sf.net">http://palmfontconv.sf.net</ulink>.
+         </para>
+
+         <para>
+            Finally, you can choose whether the font and layout settings are allowed to vary between documents. If you
+            do not choose this, then the choices you make will apply to all documents.
+         </para>
+
+      </sect2>
+
+      <!-- ############################################################### -->
+      <!--               Chapter 3.2.2: Keyboard and graffiti              -->
+      <!-- ############################################################### -->
+      <sect2 id="cbb"> 
+         <title>Keyboard and graffiti</title>
+
+         <para>
+            The Set keyboard/graffiti dialog lets you assign keyboard actions or graffiti entries to various actions
+            such as:
+         </para>
+
+         <table>
+            <title>Keyboard/Graffiti Actions</title>
+            <tgroup cols="2">
+   
+               <thead>
+                  <row valign="middle">
+                     <entry>Action</entry>
+                     <entry>Description</entry>
+                  </row>
+               </thead>
+      
+               <tbody>
+                  <row>
+                     <entry>None</entry>
+                     <entry>Do nothing</entry>
+                  </row>
+      
+                  <row>
+                     <entry>Full Page Up</entry>
+                     <entry>Scroll one page up</entry>
+                  </row>
+      
+                  <row>
+                     <entry>Full Page Down</entry>
+                     <entry>Scroll one page down</entry>
+                  </row>
+      
+                  <row>
+                     <entry>Half Page Up</entry>
+                     <entry>Scroll half a page up</entry>
+                  </row>
+      
+                  <row>
+                     <entry>Half Page Down</entry>
+                     <entry>Scroll one half page down</entry>
+                  </row>
+      
+                  <row>
+                     <entry>Go Back</entry>
+                     <entry>Go backward in page history</entry>
+                  </row>
+      
+                  <row>
+                     <entry>Go Forward</entry>
+                     <entry>Go forward in page history</entry>
+                  </row>
+      
+                  <row>
+                     <entry>Go Home</entry>
+                     <entry>Go to home page</entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+
+         <para>
+            You can just type in or draw a graffiti entry and then select the action from the drop-down list. There is
+            also a second drop-down list for special keys like Tab. Note that all the actions assigned work in the
+            document view.
+         </para>
+
+         <para>
+            Only some actions work in the library, and only when assigned to one of the `Special keys''.
+         </para>
+
+         <para>
+            You should turn off Graffiti gestures (see refsec:Gestures) if you are using this feature. If you are using
+            Graffiti 2, actions assigned to multi-stroke characters will likely not work.
+         </para>
+
+      </sect2>
+
+      <!-- ############################################################### -->
+      <!--               Chapter 3.2.3: Preferences                        -->
+      <!-- ############################################################### -->
+      <sect2 id="cbc"> 
+         <title>Preferences</title>
+
+         <blockquote>
+            <figure>
+              <title>The Preferences</title>                       
+               <graphic fileref="Prefs.gif" width="160"></graphic>
+            </figure>
+         </blockquote>
+
+         <para>
+            In the Preference dialog you can set several different options to change the way the viewer works.
+         </para>
+
+         <variablelist>
+            <varlistentry>
+               <term><emphasis role="strong">Enable strike-through</emphasis></term>
+               <listitem>
+                  <para>
+                     By enabling this option an strike-through will be added to all visited links making it easier to
+                     see what links you have already visited.
+                  </para>
+               </listitem>
+            </varlistentry>
+
+            <varlistentry>
+               <term><emphasis role="strong">Enable underline tags</emphasis></term>
+               <listitem>
+                  <para>
+                     By enabling this option all links will be indicated with a dotted line and the solid line will
+                     instead be used for the HTML underline tag.
+                  </para>
+               </listitem>
+            </varlistentry>
+
+            <varlistentry>
+               <term><emphasis role="strong">Manual update of document list</emphasis></term>
+               <listitem>
+                  <para>
+                     On some devices it can be a very slow process to update the document list and this option makes it
+                     possible to turn off the automatically update of the list and instead you have to update the list
+                     manually using a menu option in the Document Library refsec:DBMgr.
+                  </para>
+
+                  <para>
+                     NOTE: This will give the result that new documents will not turn up in the list and that documents
+                     removed using an external tool still will be included in the list. A manual update of the list
+                     will fix that, though.
+                   </para>
+               </listitem>   
+            </varlistentry>   
+
+           <varlistentry>
+               <term><emphasis role="strong">Command Toolbar Button</emphasis></term>
+               <listitem>
+                  <para> 
+                     On a device running Palm OS 3.5 or later you can set one of the buttons for the command toolbar.
+                     Has no effect for other versions of Palm OS.
+                  </para>
+               </listitem> 
+            </varlistentry>
+
+           <varlistentry>
+               <term><emphasis role="strong">Screen depth</emphasis></term>
+               <listitem>
+                  <para> 
+                     Depending on the Palm model you can set different default screen depths.
+                  </para> 
+
+                  <para> 
+                     When the screen depth is lower than the bit depth of images in a page the viewer will display [img
+                     Nbpp], where N is the depth of the image. If the device can support that bit depth, you can change
+                     the screen depth to see the image.
+                  </para> 
+
+                  <para> 
+                     Hint: The pages scroll faster when the device is using its default bit depth, so it is recommended
+                     to only use a different bit depth when necessary.
+                  </para>
+               </listitem>
+            </varlistentry>
+
+           <varlistentry>
+               <term><emphasis role="strong">Scrollbar</emphasis></term>
+               <listitem>
+                  <para> 
+                     You can have either a left scrollbar, a right scrollbar or no scrollbar.
+                  </para>
+               </listitem>
+            </varlistentry>
+
+           <varlistentry>
+               <term><emphasis role="strong">Toolbar</emphasis></term>
+               <listitem>
+                  <para>
+                     You can have the toolbar at the top or bottom of the page, or no toolbar at all.
+                  </para> 
+               </listitem> 
+            </varlistentry>
+
+         </variablelist>
+
+      </sect2>
+
+      <!-- ############################################################### -->
+      <!--               Chapter 3.2.4: Tap Actions                        -->
+      <!-- ############################################################### -->
+      <sect2 id="cbd"> 
+         <title>Tap Actions</title>
+
+         <blockquote>
+            <figure>
+              <title>Tap Action Configuration</title>
+               <graphic fileref="TapAction.gif" width="500"></graphic>
+            </figure>
+         </blockquote> 
+
+         <para>
+            The Tap Action dialog enables you to define different actions for pen taps on the screen. The first two
+            modes divide the screen into 4 sections and and each section can be given an action, e.g. one of the
+            following,
+         </para>
+
+         <table>
+            <title>Tap Actions</title>
+            <tgroup cols="2">
+
+               <thead>
+                  <row valign="middle">   
+                     <entry>Action</entry>
+                     <entry>Description</entry>
+                  </row>
+               </thead>
+      
+               <tbody> 
+                  <row>
+                     <entry>None</entry>
+                     <entry>Do nothing</entry>
+                  </row>
+
+                  <row>
+                     <entry>Full Page Up</entry>
+                     <entry>Scroll one page up</entry>
+                  </row>
+
+                  <row>
+                     <entry>Full Page Down</entry>
+                     <entry>Scroll one page down</entry>
+                  </row>
+
+                  <row>
+                     <entry>Half Page Up</entry>
+                     <entry>Scroll half a page up</entry>
+                  </row>
+
+                  <row>
+                     <entry>Half Page Down</entry>
+                     <entry>Scroll one half page down</entry>
+                  </row>
+
+                  <row>
+                     <entry>Go Back</entry>
+                     <entry>Go backward in page history</entry>
+                  </row>
+
+                  <row>
+                     <entry>Go Forward</entry>
+                     <entry>Go forward in page history</entry>
+                  </row>
+
+                  <row>
+                     <entry>Go Home</entry>
+                     <entry>Go to home page</entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+
+         <para>
+            The third mode enables you to tap on the screen and drag the pen up or down to scroll the page.
+         </para>
+
+      </sect2>
+
+      <!-- ############################################################### -->
+      <!--               Chapter 3.2.5: Gesture Actions                    -->
+      <!-- ############################################################### -->
+      <sect2 id="cbe"> 
+         <title>Gesture Actions</title>
+
+         <blockquote>  
+            <figure>
+              <title>Gesture Action Configuration</title>
+               <graphic fileref="Gestures.gif" width="160"></graphic>
+            </figure>
+         </blockquote> 
+
+         <para>
+            The Gesture Action dialog enables you to define different actions for gestures in the graffiti area. There
+            are five different gestures, stroke right, stroke left, stroke up, stroke down, and a graffiti tap. Each
+            gesture can be given an action, e.g. one of the following:
+         </para>
+
+         <table>
+            <title>Gesture Action</title>
+            <tgroup cols="2">
+               <thead>
+                  <row valign="middle">   
+                     <entry>Action</entry>
+                     <entry>Description</entry>
+                  </row>
+               </thead>
+
+               <tbody> 
+                  <row>
+                     <entry>None</entry>
+                     <entry>Do nothing</entry>
+                  </row>
+
+                  <row>
+                     <entry>Full Page Up</entry>
+                     <entry>Scroll one page up</entry>
+                  </row>
+
+                  <row>
+                     <entry>Full Page Down</entry>
+                     <entry>Scroll one page down</entry>
+                  </row>
+
+                  <row>
+                     <entry>Half Page Up</entry>
+                     <entry>Scroll half a page up</entry>
+                  </row>
+
+                  <row>
+                     <entry>Half Page Down</entry>
+                     <entry>Scroll one half page down</entry>
+                  </row>
+
+                  <row>
+                     <entry>Go Back</entry>
+                     <entry>Go backward in page history</entry>
+                  </row>
+
+                  <row>
+                     <entry>Go Forward</entry>
+                     <entry>Go forward in page history</entry>
+                  </row>
+
+                  <row>
+                     <entry>Go Home</entry>
+                     <entry>Go to home page</entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+
+      </sect2>
+
+      <!-- ############################################################### -->
+      <!--               Chapter 3.2.6: Button Actions                     -->
+      <!-- ############################################################### -->
+      <sect2 id="cbf"> 
+         <title>Button Actions</title>
+
+         <blockquote>  
+            <figure>
+              <title>Button Actions</title>
+               <graphic fileref="HWButtons.gif" width="160"></graphic>
+            </figure>  
+         </blockquote> 
+
+         <para>
+            The Button Action dialog enables you to define different actions for the four hardware buttons, e.g. one of
+            the following
+         </para>
+
+         <table>
+            <title>Gesture Action</title>
+            <tgroup cols="2">
+               <thead>
+                  <row valign="middle">   
+                     <entry>Action</entry>
+                     <entry>Description</entry>
+                  </row>
+               </thead>
+
+               <tbody> 
+                  <row>
+                     <entry>None</entry>
+                     <entry>Do nothing</entry>
+                  </row>
+
+                  <row>
+                     <entry>Full Page Up</entry>
+                     <entry>Scroll one page up</entry>
+                  </row>
+
+                  <row>
+                     <entry>Full Page Down</entry>
+                     <entry>Scroll one page down</entry>
+                  </row>
+
+                  <row>
+                     <entry>Half Page Up</entry>
+                     <entry>Scroll half a page up</entry>
+                  </row>
+
+                  <row>
+                     <entry>Half Page Down</entry>
+                     <entry>Scroll one half page down</entry>
+                  </row>
+
+                  <row>
+                     <entry>Go Back</entry>
+                     <entry>Go backward in page history</entry>
+                  </row>
+
+                  <row>
+                     <entry>Go Forward</entry>
+                     <entry>Go forward in page history</entry>
+                  </row>
+
+                  <row>
+                     <entry>Go Home</entry>
+                     <entry>Go to home page</entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </sect2>
+
+      <!-- ############################################################### -->
+      <!--               Chapter 3.2.7: Autoscroll Options                 -->
+      <!-- ############################################################### -->
+      <sect2 id="cbg"> 
+         <title>Autoscroll Options</title>
+
+         <blockquote>
+            <figure> 
+              <title>Autoscroll Options</title>
+               <graphic fileref="Autoscroll.gif" width="160"></graphic>
+            </figure>  
+         </blockquote> 
+
+         <para>
+            The Autoscroll and Scroll Options enables you to define the amount that scroll during each jump (in either
+            pixels or pages). Autoscroll direction can be specified as either up or down. The delay interval between
+            each jump can also be configured. You can prevent the device from automatically shutting off during an
+            autoscroll; autoscroll will then continue until the end of the page is reached, the screen is tapped, or
+            the power button is clicked.
+         </para>
+      </sect2>
+
+      <!-- ############################################################### -->
+      <!--               Chapter 3.2.8: Lookup Options                     -->
+      <!-- ############################################################### -->
+      <sect2 id="cbh"> 
+         <title>Lookup Options</title>
+         <para>
+            You can set a special word-tap action accessed by tapping on a word. You can have this feature active all
+            the time, so that whenever you tap on a word other than one in a hyperlink the action is activated, or you
+            can activate it on demand for the next tap via View|Lookup word or by binding the Lookup word action to a
+            key, graffiti gesture, etc. To use the Lookup in PPI option, you need to have the Plucker Plugin Interface
+            (PPI) and a compatible dictionary installed and configured (see refsec:PPI).
+         </para>
+      </sect2>
+   </sect1>
+
+   <!-- ################################################################## -->
+   <!--               Chapter 3.3: Find Function                           -->
+   <!-- ################################################################## -->
+   <sect1 id="cc">
+      <title>Find Function</title>
+
+      <para>
+         The viewer uses its own find function to search through the records in a document. Tap on the left lens in the
+         toolbar, choose Go|Find... or use the Graffiti shortcut /F to start a new search. The last search pattern will
+         be shown in the find field and by using the search history you can recall any of the last 10 search patterns.
+      </para>
+
+      <blockquote>
+         <figure> 
+           <title>The Find Function</title>
+            <graphic fileref="Find.gif" width="450"></graphic>
+         </figure>  
+      </blockquote> 
+
+      <para>
+         It is possible to make a case-insensitive or case-sensitive search and also to choose between only searching
+         in the current record, in all records in the document, in all records starting with the present point, or
+         recursively in sub- pages, i.e., pages linked from this one and so on. Moreover, you can choose to search for
+         a phrase (all the characters entered must be in the document as entered) or for a number of words in a
+         paragraph in which case each space separated sequence of characters in the search string must occur in the
+         same paragraph (but need not appear as a complete word).
+      </para>
+
+      <para>
+         More sophisticated than case-insensitive searches are transliteration searches. These transliterate the text
+         in the document according to a a fixed transliteration table before searching. This can be used to search for
+         accented characters without knowing what the accentuation is or to search for characters in the document's
+         encoding that are difficult to enter via Graffiti or that your Palm localization does not support, but that
+         are supported via a custom font. You can make your own transliteration tables via the tools in the source code
+         viewer/xlit directory. Each transliteration table is a separate .pdb database. Here are some common ones.
+      </para>
+
+      <variablelist>  
+         <varlistentry>
+            <term><emphasis role="strong">Latin1.pdb</emphasis></term>
+            <listitem>
+               <para>
+                  Drop Latin 1 accents before searching. Also, change Drop Latin 1 accentsall extended characters to ASCII
+                  characters. Searching for e will find é, è, ë and ê, etc. If case the search is case insensitive, it
+                  will also find É, È, Ë and Ê.
+               </para> 
+            </listitem> 
+         </varlistentry>
+   
+         <varlistentry>
+            <term><emphasis role="strong">Latin2.pdb</emphasis></term>
+            <listitem>   
+               <para>    
+                  Drop Latin 2 accents before searching. This is the same as Latin1.pdb but for the ISO-8859-2 (Eastern
+                  European) encoding.
+               </para>   
+            </listitem>  
+         </varlistentry> 
+   
+         <varlistentry>
+            <term><emphasis role="strong">CP1250.pdb</emphasis></term>
+            <listitem>   
+               <para>    
+                  Drop CP-1250 accents. This is the same as Latin2.pdb but for the Windows Eastern European character encoding.
+               </para>   
+            </listitem> 
+         </varlistentry>
+   
+         <varlistentry>
+            <term><emphasis role="strong">NonASCIIToPeriod.pdb</emphasis></term>
+            <listitem>   
+               <para>    
+                  Non-ASCII to period. All characters not in the ASCII printable range 32-126 are transliterated to a
+                  period (.).  Thus, you can search for èglise by entering .glise and for "goat" including the curly
+                  quotes by entering .goat..
+               </para>   
+            </listitem>  
+         </varlistentry> 
+   
+         <varlistentry>
+            <term><emphasis role="strong">PBGreekKeys.pdb</emphasis></term>
+            <listitem>   
+               <para>    
+                  PB+GreekKeys to ASCII. This transliterates GreekKeys encoded text (including PalmBible+ extensions) to
+                  ASCII using the same Greek transliteration as in the Online Bible and PalmBible+ programs.
+               </para>   
+            </listitem>  
+         </varlistentry> 
+      </variablelist>  
+
+      <para>
+         Except for PBGreekKeys.pdb, all the transliterations are symmetric, i.e. the transliteration is applied not just to the
+         document before searching but also to the entered search text. So if you use the `Drop Latin 1 accents before searching''
+         option and search for ábâ, you will also find àbä, aba, abá, etc.
+      </para>
+
+      <blockquote>       
+         <figure> 
+           <title>The Result Page</title>
+            <graphic fileref="Result.gif" width="455"></graphic>
+         </figure>  
+      </blockquote>
+
+      <para>
+         When searching in the current record the viewer will jump to the location of a match and highlight it. If the
+         search is for all records in the document a result page will be shown with matches. If you tap on one of the
+         matches in the list the viewer will open that record and just as when you search in the current record it will
+         jump to the location of the match and highlight it.
+      </para>
+
+      <para>
+         The right lens (and Go|Find Again... or Graffiti shortcut /A) will search for the next occurrence of a found word or phrase
+         with a single tap.
+      </para>
+
+   </sect1>
+
+   <!-- ################################################################## -->
+   <!--               Chapter 3.4: Document Library                        -->
+   <!-- ################################################################## -->
+   <sect1 id="cd">
+      <title>Document Library</title>
+
+      <para>
+         To store all data in only one PalmOS database wouldn't be very flexible, so the viewer has support for
+         multiple documents.  By using the viewer's Document Library you can switch between all the documents you have
+         loaded on your device. To the right of each document are the creation date and the size (can be turned off
+         using menu options or preference settings). If there are more documents than can fit in the list a scrollbar
+         will appear.
+      </para>
+
+      <blockquote>
+         <figure> 
+           <title>The Document Library</title>
+            <graphic fileref="DBMgr.gif" width="340"></graphic>
+         </figure>  
+      </blockquote> 
+
+      <para>
+         When you tap on the document icon in front of each document a pop-up list will appear providing you with
+         different operations for the selected document:
+      </para>
+
+      <itemizedlist>
+         <listitem><para>Open document</para></listitem>
+         <listitem><para>Categorize document</para></listitem>
+         <listitem><para>Delete document</para></listitem>
+         <listitem><para>Rename document</para></listitem>
+         <listitem><para>Beam document</para></listitem>
+      </itemizedlist>
+
+      <para>
+         Also, a tap on a document in the list will open it right away.
+      </para>
+
+      <para>
+         You can also select documents with jog-dial, five-way navigator, or, if the list is sorted by document name,
+         by entering the first couple letters of the document name.
+      </para>
+
+      <para>
+         If the document is in flash (or read-only for some other reason) it is not possible to delete or rename it.
+         The viewer will show an alert if you still try to perform such an action on the document.
+      </para>
+
+      <para>
+         The documents can be compressed either using the DOC method or ZLib. Support for the DOC method is included by
+         default in the viewer so documents compressed with that method can always be viewed. ZLib compressed documents
+         requires the ZLib shared library and if this library is not installed the viewer will alert the user about
+         this. Palm OS 2.x devices can only handle DOC compressed documents.
+      </para>
+
+      <para>
+         Each document can be in one or several categories and it is possible to filter the list of documents by
+         selecting what categories that should be shown.
+      </para>
+
+      <para>
+         The viewer will check the following directories on external cards for Plucker documents,
+      </para>
+
+<programlisting>
+/Palm/Programs/Plucker/
+/Palm/Ebooks/
+/Palm/Launcher/
+</programlisting>
+
+      <para>
+         On devices that can use more than one card the cards must be given unique names.
+      </para>
+
+      <blockquote>
+         <figure>
+           <title>The Category Screen</title>
+            <graphic fileref="Category.gif" width="340"></graphic>
+         </figure>  
+      </blockquote>
+
+      <para>
+         In the category screen you can add, remove and rename categories. Tap on the pushbutton with the category name
+         to toggle between hiding and showing the category. Check the box MULTIPLE SELECT to allow more than one
+         category to be displayed at a time. To add a new category, tap on an empty pushbutton. The document icon next
+         to each category provides you with the options to delete and rename a category. If you delete a category name,
+         the documents filed under that name will become unfiled documents. To merge documents in different categories,
+         rename one category to the other category name.
+      </para>
+
+   </sect1>
+
+   <!-- ################################################################## -->
+   <!--               Chapter 3.5: Bookmarks                               -->
+   <!-- ################################################################## -->
+   <sect1 id="ce">
+      <title>Bookmarks</title>
+      <para>
+         Bookmarks are a fast way to move to user-defined positions in the documents.
+      </para>
+
+      <blockquote>
+         <figure>        
+           <title>Bookmarks</title> 
+            <graphic fileref="Bookmarks.gif" width="350"></graphic>
+         </figure>    
+      </blockquote>  
+
+      <para>
+         Edit Bookmark will display a list of all defined bookmarks and allow you to delete bookmarks. To use a
+         bookmark, just tap on the Bookmark icon and choose the bookmark you want to jump to.
+      </para>
+   </sect1>
+
+</chapter>
+
+<!-- ##################################################################### -->
+<!--               Chapter 4: Plucker Plugin Interface                     -->
+<!-- ##################################################################### -->
+<chapter id="d">
+   <title>Plucker Plugin Interface</title>
+
+   <para>
+      The Plucker Plugin Interface (PPI) is a separate program (e.g., ppi_en.prc) used to interface Plucker with
+      external programs like dictionaries. To use PPI to look up words, configure the Viewer as described in
+      refsec:Lookup.
+   </para>   
+
+   <para>   
+      PPI has hard-coded settings for the popular dictionary programs RoadLingua, KDic DA, and BDicty. To use with
+      other dictionaries or encyclopedias, ask their customer support for appropriate data to enter into the Custom
+      setting.
+   </para>   
+
+   <para>   
+      The RoadLingua dictionary viewer is commercial, but the developer has made the free (as in beer) unregistered
+      version act like the registered version (at least with non-commercial dictionary texts) when it is invoked via
+      PPI. You may need the latest version of RoadLingua for this from <ulink url="http://www.absoluteword.com">http://www.absoluteword.com</ulink>.
+   </para>   
+
+   <para>   
+      Note that when using the free version of BDicty, the word will be put into the clipboard and will need to be
+      pasted into BDicty.
+   </para>   
+
+   <para>   
+      PPI is available for use with other programs than Plucker. For instance, currently PalmBible+ uses it for its
+      dictionary lookup; see: <ulink url="http://palmbibleplus.sf.net">http://palmbibleplus.sf.net</ulink>.
+   </para>   
+
+</chapter>
+
+<!-- ##################################################################### -->
+<!--                        Chapter 5: The Parser                          -->
+<!-- ##################################################################### -->
+<chapter id="e">
+   <title>The Parser</title>
+
+   <para>
+      As pointed out in the previous chapter the parser is more or less the workhorse of Plucker. This implies that
+      most customizations are done to the parser and that the parser covers a rather big part of this manual.
+   </para>
+
+   <!-- ##################################################################### -->
+   <!-- ##################################################################### -->
+   <!-- ##################################################################### -->
+   <sect1 id="ea">
+      <title>Description file</title>
+
+      <para>
+         Before we take a closer look at the parser itself, we will describe the format of the description file also
+         known as the Home Page document (default home.html, but that can be changed). On a Unix/Linux system this file
+         will be stored by default in $HOME/.plucker.
+      </para>
+
+      <para>
+         OS/2 will use the environment-variable HOME to find the location of your home-directory (you can also use
+         drive letters).  The installer should set the necessary environment variable for you and also add the
+         necessary directories to your system.  You may check the location by simply typing set home at a command
+         prompt.
+      </para>
+
+      <para>
+         The description file is a valid HTML document with extra optional tags added for the link references.
+      </para>
+
+      <itemizedlist>
+         <listitem>
+            <para>
+               MAXDEPTH=n: This specifies how deep the parser should follow the links embedded in a web page. If
+               MAXDEPTH is not given the parser will default to a depth of 1, that is only download the page itself but
+               do not follow any links in it. To follow links in the current page you would use MAXDEPTH=2 and to
+               follow links also in those pages you would use MAXDEPTH=3 and so on. Too high values without using any
+               of the available filtering mechanisms could result in an excessive amount of data.
+            </para>
+
+            <para>
+               Hint: MAXDEPTH=2 can be very useful if you have a page that contains only the headlines that are links
+               to the full text version of the articles. Many newstickers use this format.
+            </para>
+         </listitem> 
+
+         <listitem> 
+            <para>
+               NOIMAGES: If you are not interested in downloading images then you use this tag. If specified all images
+               will be replaced with the ALT-tag for the image if available, otherwise [img].
+            </para>
+
+            <para>
+               Hint: NOIMAGES is an effective way to decrease the size of documents.
+            <para>
+         </listitem> 
+
+         <listitem> 
+            <para>
+               STAYONHOST: Most web sites contains references to both locally stored articles and to articles stored on
+               other hosts.  Using a MAXDEPTH of 2 or higher could result in a lot of unwanted data. To prevent this
+               you may specify the STAYONHOST tag for your link. The parser will now only download content that resides
+               on the same server as the one that contained the top page. Together with exclusionlist.txt this is a
+               quite handy way to prevent the download of links referred to by banners.
+            <para>
+         </listitem> 
+
+         <listitem> 
+            <para>
+               STAYBELOW=text: Similar to STAYONHOST this tag tells the parser to only fetch pages that start with text. For example,
+               it could be used if the articles on a page are listed on another server in which case STAYONHOST would not work
+               properly. Or you can grab certain articles out of a large listing so you would get all headlines but only articles
+               referring to specific subjects (provided the web server offering the information is set up correctly).
+            </para>
+
+            <para>
+               NOTE: If =text is not given, it will default to the content of the href-attribute (the URL you are pointing to).
+            </para>
+         </listitem> 
+
+         <listitem> 
+            <para>
+               BPP=n: This option is used to specify the bit depth that should be used for images. Valid values are 0 (i.e. no images), 1, 2, 4, and 8.
+            </para>
+
+            <para>
+               NOTE: BPP=8 is currently only supported when the parser is used on a Windows system.
+            </para>
+         </listitem> 
+
+         <listitem> 
+            <para>
+               MAXWIDTH=width: Used to set the maximum width of images.
+            </para>
+         </listitem> 
+
+         <listitem> 
+            <para>
+               MAXHEIGHT=height: Used to set the maximum height of images.
+            </para>
+         </listitem> 
+      </itemizedlist>
+
+      <para>
+         An simple example of a description file is:
+      </para>
+
+<programlisting><![CDATA[
+<html>
+<head>
+  <title>Plucker Home Page</title>
+</head>
+<body>
+  <a href="http://www.plkr.org" MAXDEPTH=2 STAYONHOST NOIMAGES>Plucker home page</a>
+</body>
+</html>
+]]></programlisting>
+
+      <para>
+         This would download the front page of our web site and also follow any links on the page if they are local to
+         the host. No images would be downloaded.
+      </para>
+
+      <para>
+         The description file (home.html) that is installed when your Plucker directory is set up, also contains a few examples.
+      </para>
+
+   </sect1>
+
+   <!-- ##################################################################### -->
+   <!-- ##################################################################### -->
+   <!-- ##################################################################### -->
+   <sect1 id="eb">
+      <title>Invoking the parser</title>
+
+      <para>
+         As the previous section showed, you can specify several options specific for each reference in the description
+         file and many times this is enough. But additionally, the parser provides some global control through powerful
+         command-line options and also a possibility to use different configurations that have been set up in the
+         config file.
+      </para>
+
+      <para>
+         In all the examples below we will call Spider.py directly. This could be stored in a script or we could create
+         a symbolic link to it, e.g. if you have installed the Linux package you would use plucker-build instead of
+         Spider.py in the examples.  A note for OS/2 and Windows users: running Spider.py as an executable program is a
+         Unix trick and may not work on your platform. But do not worry, just list the Spider.py on an explicit python
+         command line, that is use python Spider.py...  instead.
+      </para>
+
+      <para>
+         The synopsis of the parser look like this:
+      </para>
+
+<programlisting><![CDATA[
+   Spider.py -c | --update-cache | -f FILE | --doc-file=FILE [-N NAME | --doc-name=NAME]
+             [-h | --help] [--compression=TYPE | --zlib-compression | --doc-compression]
+             [-P DIR | --pluckerhome=DIR] [-v | -V NUM | --verbosity=NUM] [-q | --quiet]
+             [--bpp=NUM] [--noimages] [-p DIR | --pluckerdir=DIR] [-H URL | --home-url=URL]
+             [-M DEPTH | --maxdepth=DEPTH] [-E FILE | --exclusion-list=FILE]
+             [-s SECTION | --extra-section=SECTION] [--no-urlinfo] [--stayonhost]
+             [--staybelow=URLPREFIX] [--category=CATEGORY]
+]]></programlisting>
+
+      <para>
+         Do not run away in fear of all these options, you don't have to use all of them...actually, you only have to
+         use one of them (and that can be reduced to none if you set the file name of the document in the configuration
+         file -- more about that later).
+      </para>
+
+      <para>
+         You can always get the list of the parameters by using the -h or --help option.
+      </para>
+
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="eba">
+          <title>Control Over the Result</title>
+
+          <para>
+             The -c, --update-cache, -f, and --doc-file options allows you to specify if the parser should dump all
+             records in a cache directory or if it shall create a document. For example, the command,
+          </para>
+
+<programlisting>
+   % Spider.py -c
+</programlisting>
+ 
+          <para>
+             tells the parser to dump all records in the cache directory in $PLUCKERDIR using the default description
+             file (as you will see below it is possible to change the default description file in Plucker's config
+             file). The --update-cache option works the same way as -c.
+          </para>
+
+          <para>
+             If we instead used the following command,
+          </para>
+
+<programlisting>
+   % Spider.py -f PluckerDB
+</programlisting>
+
+          <para>
+             the parser would create a document called PluckerDB.pdb and store it in $PLUCKERDIR. The --doc-file option
+             works the same way as -f. Either -c or -f must be given unless the document has been specified in the
+             configuration file (see refsec:ConfigFile). The name of the document will default to the same as the name
+             given to -f. If you want to give the document a different name, you can use the -N or --doc-name option,
+          </para>
+
+<programlisting>
+   % Spider.py -f PluckerDB -N "Home Page"
+</programlisting>
+
+          <para>
+             This will still create a document called PluckerDB.pdb in $PLUCKERDIR, but the name of the document (i.e.
+             the name you would see on your Palm) would now be Home Page.
+          </para>
+
+          <para>
+             The file name given to the -f option can contain an absolute or relative path, so if we run,
+          </para>
+
+<programlisting>
+   % Spider.py -f /home/pilot/.plucker/DB/PluckerDB
+</programlisting>
+
+          <para>
+             a document called PluckerDB.pdb will be stored in /home/pilot/.plucker/DB and if we run,
+          </para>
+
+<programlisting>
+   % Spider.py -f DB/PluckerDB
+</programlisting>
+
+          <para>
+             a document called PluckerDB.pdb will be stored in $PLUCKERDIR/DB (the same as above since $PLUCKERDIR in
+             this case defaults to /home/pilot/.plucker/)
+          </para>
+
+          <para>
+             To save space on the device all records are compressed and the parser provides two different types of
+             compression, DOC compression and ZLib compression. The ZLib compression gives the best compression, but is
+             only available for Palm OS 3.0 and later devices and also requires a shared library.
+          </para>
+
+          <para>
+             You control the compression type by using the --compression=TYPE option. Allowable options are 'doc', for
+             Palm DOC compression, or 'zlib', for zlib compression. You can also use the --zlib-compression or the
+             --doc-compression option. If neither is given the parser defaults to DOC compression.
+          </para>
+
+          <para>
+             To put the document in a specific category by default you can use the --category option. It is possible to
+             give several default categories separated by ";".
+          </para>
+
+      </sect2>
+
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="ebb">
+          <title>Status Information and Debugging</title>
+
+          <para>
+             The parser normally outputs errors and progress status to your terminal, but by using the -q, --quiet, -v,
+             ---V or verbosity option you can change this. The -V (and --verbosity) takes an argument,
+          </para>
+
+
+         <table>
+            <title>Levels of Verbosity</title>
+            <tgroup cols="2">
+
+               <thead>
+                  <row valign="middle">
+                     <entry>Verbosity Level</entry>
+                     <entry>Description</entry>
+                  </row>
+               </thead>
+
+               <tbody>
+                  <row>
+                     <entry>0</entry>
+                     <entry>Silent, except for errors</entry>
+                  </row>
+
+                  <row>
+                     <entry>1</entry>
+                     <entry>Progress status (default), will list the page currently being plucked as well as some
+                     output from the image converters.</entry>
+                  </row>
+
+                  <row>
+                     <entry>2</entry>
+                     <entry>Produces a lot of output about the gathering and parsing process, used for debugging</entry>
+                  </row>
+
+               </tbody>
+            </tgroup>
+         </table>
+
+      </sect2>
+
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="ebc">
+          <title>Description filenames</title>
+
+             <para>
+                The -H or --home-url option allows you to specify a different description file than the default one.
+                For example, the command,
+             </para>
+
+<programlisting>
+   % Spider.py -H plucker:/test.html -f TestDB
+</programlisting>
+
+             <para>
+                tells the parser to build a document called TestDB.pdb using the description file test.html that can be
+                found in PLUCKERDIR (plucker: is relative to $PLUCKERDIR). You can also use an absolute path,
+             </para>
+
+<programlisting>
+   % Spider.py -H file:/home/pilot/.plucker/test.html -f TestDB
+</programlisting>
+
+             <para>
+                would produce the same result as the first example.
+             </para>
+
+             <para>
+                Instead of using a local file we can use a file at a remote location,
+             </para>
+
+<programlisting>
+   % Spider.py -H http://www.plkr.org/ -f PluckerDB
+</programlisting>
+
+             <para>
+                and the parser would use the index page for Plucker's home page as the description file.
+             </para>
+
+             <para>
+                NOTE: The -H option needs a valid URL, so don't use,
+             </para>
+
+<programlisting>
+   % Spider.py -H file:test.html -f TestDB
+</programlisting>
+
+             <para>
+                even if you are running the spider in the same directory as the file is located in.
+             </para>
+
+      </sect2>
+
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="ebd">
+          <title>How deep should we go?</title>
+
+             <para>
+                The default operation of the parser is to parse the description file and any links in it, but this can
+                be changed using the M or --maxdepth option. To make sure that we don't bite off more than we can chew,
+                we can add the --stayonhost option to avoid following any external links,
+             <para>
+
+<programlisting>
+   % Spider.py -H http://www.plkr.org/ -M3 --stayonhost -f PluckerDB
+</programlisting>
+
+             <para>
+                This would download the index page for Plucker's web site, any links within this page and also any
+                links within those pages, but it would disregard any links outside the plkr.org host.
+             </para>
+
+             <para>
+                These options are useful when you specify a specific host using -H. If you use a description file it is
+                better to use the MAXDEPTH/STAYONHOST flags for each link instead.
+             </para>
+
+      </sect2>
+
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="ebe">
+          <title>Plucker Home and the Plucker Directory</title>
+
+             <para>
+                The Plucker directory ($PLUCKERDIR) is the current working directory, while Plucker Home is like your
+                home directory. They can be the same directory and the default behavior is that the Plucker directory
+                is set to the same as Plucker Home (default for Plucker Home is $HOME/.plucker, but you can change this
+                by using the environment variable $PLUCKERHOME).  plucker:/XXX files are first searched in $PLUCKERDIR
+                then Plucker Home and any configuration files in the $PLUCKERDIR take precedence over those in the
+                Plucker Home.
+             </para>
+
+             <para>
+                The location of Plucker Home can be changed using the -P or --pluckerhome option and the location of
+                the Plucker directory can be changed using the -p or --pluckerdir option,
+             </para>
+
+<programlisting>
+   % Spider.py -P -H plucker:/test.html -f TestDB
+</programlisting>
+
+             <para>
+                would use the current directory as Plucker Home and the file test.html should also be in this directory.
+             </para>
+
+      </sect2>
+
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="ebf">
+          <title>Image handling</title>
+
+             <para>
+                The --bpp and --noimages options can be used to globally set the image handling. The --bpp option takes
+                an argument for the bits per pixels that should be used, 0, 1 (default), 2, 4, or 8. The --noimages
+                option sets the bit depth to 0. To include images in 16 colors (grayscale) you would use,
+             </para>
+
+<programlisting>
+   % Spider.py --bpp=4 -H plucker:/images.html -f Gray16DB
+</programlisting>
+
+      </sect2>
+
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="ebg">
+          <title>URL handling</title>
+
+             <para>
+                To save space on you device you can choose to not include information about the URLs. This will mean
+                that you cannot get access to the actual URL for documents in the document or for any external
+                reference. Use the --no-urlinfo option if you don't want to include this information.
+             </para>
+
+      </sect2>
+
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="ebh">
+          <title>Excluding Things</title>
+
+             <para>   
+                To add more exclusion lists than the default ones you can use the -E or --exclusion-list option. The
+                exclusionlist.txt files should be in a specific format, that is explained in section
+                refsec:Exclusionlist. You can add more than one -E,
+             </para>   
+
+<programlisting>
+   % Spider.py -H plucker:/exclude.html -E Exclude/default.excl -E Exclude/extra.excl -f ExcludeDB
+</programlisting>
+
+             <para>   
+                would use default.excl and extra.excl found in $PLUCKERDIR/Exclude as extra exclusion lists.
+             </para>   
+
+      </sect2>
+
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="ebi">
+          <title>Sections</title>
+
+             <para>
+                The -s or --extra-section option is used to add sections to the list of searched sections in the config
+                file(s). You can read more about sections in refsec:ConfigFile and refsec:Examples.
+             </para>
+
+      </sect2>
+
+   </sect1>
+
+   <!-- ##################################################################### -->
+   <!-- ##################################################################### -->
+   <!-- ##################################################################### -->
+   <sect1 id="ec">
+      <title>The Configuration File</title>
+
+      <para>
+         The configuration file allows you to specify default values for global options. Under OS/2 and Windows this
+         file should be called plucker.ini. For Windows, put this in Plucker Home or in the Plucker directory
+         ($PLUCKERDIR). Under Unix/Linux, this file should be called pluckerrc if it is the system wide config file and
+         .pluckerrc if it is a user config file. It should have been installed in the correct place (e.g. .pluckerrc
+         should be in your home directory.)
+      </para>   
+
+      <para>   
+         Entries are key = value pairs ordered into sections. A section is named and begins with a line in square
+         bracket, where the brackets contain the section's name. Lines starting with a ;; are considered comments.
+      </para>   
+
+      <para>   
+         All systems search the [DEFAULT] section. Under Windows, the [WINDOWS] section is also searched, OS/2 will
+         search both the [OS2] and [POSIX] section and all other systems will search the [POSIX] section. Using the -s
+         on the command line you can add other sections to search. The parser starts with the [DEFAULT] section, then
+         the system dependent section(s) and last any sections defined on the command line. If a key is repeated the
+         value for the last one will be used.
+      </para>   
+
+      <para>   
+         The following keys are defined (check the config file that came with your version of Plucker, new keys might
+         have been added after this version of the document was released):
+      </para>   
+
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="eca">
+          <title>[DEFAULT]</title>
+
+         <table> 
+            <title>[DEFAULT] Configuration File Parameters</title>
+            <tgroup cols="3">
+
+               <thead>
+                  <row valign="middle">
+                     <entry>Configuration Option</entry>
+                     <entry>Description</entry>
+                     <entry>Default</entry>
+                  </row>
+               </thead>
+
+               <tbody>
+                  <row>
+                     <entry>verbosity</entry>
+                     <entry>verbosity level</entry>
+                     <entry>integer, default: 1</entry>
+                  </row>
+
+                  <row>
+                     <entry>bpp</entry>
+                     <entry>default bits per pixel</entry>
+                     <entry>integer, default: 1</entry>
+                  </row>
+
+                  <row>
+                     <entry>db_name</entry>
+                     <entry>filename for the db relative to the plucker dir</entry>
+                     <entry>string, no default</entry>
+                  </row>
+
+                  <row>
+                     <entry>db_file</entry>
+                     <entry>filename for the db relative to the plucker dir</entry>
+                     <entry>string, no default</entry>
+                  </row>
+
+                  <row>
+                     <entry>cache_dir_name</entry>
+                     <entry>name of the directory where cache files will be stored</entry>
+                     <entry>string, default: cache</entry>
+                  </row>
+
+                  <row>
+                     <entry>home_url</entry>
+                     <entry>the URL to home document</entry>
+                     <entry>string, default: plucker:/home.html</entry>
+                  </row>
+
+                  <row>
+                     <entry>home_maxdepth</entry>
+                     <entry>max depth to spider the home document</entry>
+                     <entry>integer, default: 2</entry>
+                  </row>
+
+                  <row>
+                     <entry>home_stayonhost</entry>
+                     <entry>use STAYONHOST for home_url</entry>
+                     <entry>boolean, default: false</entry>
+                  </row>
+
+                  <row>
+                     <entry>home_staybelow</entry>
+                     <entry>use STAYONHOST for home_url</entry>
+                     <entry>boolean, default: false</entry>
+                  </row>
+
+                  <row>
+                     <entry>maxwidth</entry>
+                     <entry>max width for the images</entry>
+                     <entry>string, default: 150</entry>
+                  </row>
+
+                  <row>
+                     <entry>maxheight</entry>
+                     <entry>max height for the images</entry>
+                     <entry>string, default: 250</entry>
+                  </row>
+
+                  <row>
+                     <entry>pluckerdir</entry>
+                     <entry>path to the plucker dir</entry>
+                     <entry>string, default: $HOME/.plucker/</entry>
+                  </row>
+
+                  <row>
+                     <entry>image_parser</entry>
+                     <entry>specify which parser to use for converting images, possible values are windows, netpbm2, and imagemagick.</entry>
+                     <entry>defaults to whatever the system determines to be the default parser</entry>
+                  </row>
+
+                  <row>
+                     <entry>before_command</entry>
+                     <entry>specify commands to be executed before spidering</entry>
+                     <entry>string, no default</entry>
+                  </row>
+
+
+                  <row>
+                     <entry>after_command</entry>
+                     <entry>specify commands to be executed after spidering</entry>
+                     <entry>string, no default</entry>
+                  </row>
+
+                  <row>
+                     <entry>user</entry>
+                     <entry>HotSync user name</entry>
+                     <entry>string, no default) (Only used on Windows</entry>
+                  </row>
+
+                  <row>
+                     <entry>copyprevention_bit</entry>
+                     <entry>set the copy prevention bit in the DB.</entry>
+                     <entry>boolean, default: false</entry>
+                  </row>
+
+                  <row>
+                     <entry>backup_bit</entry>
+                     <entry>set the backup bit in the DB.</entry>
+                     <entry>boolean, default: false</entry>
+                  </row>
+
+                  <row>
+                     <entry>launchable_bit</entry>
+                     <entry>set the launchable bit in the DB.</entry>
+                     <entry>boolean, default: false</entry>
+                  </row>
+
+                  <row>
+                     <entry>icon</entry>
+                     <entry>store an icon in the DBs appinfo block.</entry>
+                     <entry>boolean, default: false</entry>
+                  </row>
+
+                  <row>
+                     <entry>small_icon</entry>
+                     <entry>path to Tbmp (15x9), if the icon key is set, use this bitmap for the small icon.</entry>
+                     <entry>string, default: standard PluckerDB icon</entry>
+                  </row>
+
+                  <row>
+                     <entry>big_icon</entry>
+                     <entry>path to Tbmp (32x32), if the icon key is set, use this bitmap for the large icon.</entry>
+                     <entry>string, default: standard PluckerDB icon</entry>
+                  </row>
+
+                  <row>
+                     <entry>zlib_compression</entry>
+                     <entry>a flag indicating whether to use new zlib compression instead of the doc compression.</entry>
+                     <entry>boolean, default: false</entry>
+                  </row>
+
+                  <row>
+                     <entry>no_image_compression_limit</entry>
+                     <entry>if a Tbmp is smaller than the given size then it will not be compressed</entry>
+                     <entry>integer, default 0</entry>
+                  </row>
+
+                  <row>
+                     <entry>category</entry>
+                     <entry>default category for the created document, if several categories should be used then separate them with ";"</entry>
+                     <entry>string, default: Unfiled</entry> 
+                  </row>
+
+               </tbody>
+            </tgroup> 
+         </table>
+
+      </sect2>
+
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="ecb">
+          <title>[POSIX]</title>
+
+
+         <table> 
+            <title>[POSIX] Configuration File Parameters</title>
+            <tgroup cols="3">
+
+               <thead>  
+                  <row valign="middle">
+                     <entry>Configuration Option</entry>
+                     <entry>Description</entry>
+                  </row>
+               </thead>
+
+               <tbody>
+
+                  <row> 
+                     <entry>ppmquant_program</entry>
+                     <entry>name (and maybe path) to the ppmquant program</entry>
+                     <entry>string, default: 'ppmquant'</entry>
+                  </row>
+
+                  <row> 
+                     <entry>ppmtoTbmp_program</entry>    
+                     <entry>name (and maybe path) to the ppmtoTbmp program</entry>
+                     <entry>string, default: 'ppmtoTbmp'</entry>
+                  </row>
+
+                  <row> 
+                     <entry>pnmscale_program</entry>    
+                     <entry>name (and maybe path) to the pnmscale program</entry>
+                     <entry>string, default: 'pnmscale'</entry>
+                  </row>
+
+                  <row>
+                     <entry>pnmfile_program</entry>
+                     <entry>name (and maybe path) to the pnmfile program</entry>
+                     <entry>string, default: 'pnmfile'</entry>
+                  </row>
+
+                  <row>
+                     <entry>giftopnm_program</entry>
+                     <entry>name (and maybe path) to the giftopnm program</entry>
+                     <entry>string, default: 'giftopnm'</entry>
+                  </row>
+
+                  <row>
+                     <entry>djpeg_program</entry>
+                     <entry>name (and maybe path) to the djpeg program</entry>
+                     <entry>string, default: 'djpeg'</entry>
+                  </row>
+
+                  <row>
+                     <entry>pngtopnm_program</entry>
+                     <entry>name (and maybe path) to the pngtopnm program</entry>
+                     <entry>string, default: 'pngtopnm'</entry>
+                  </row>
+
+                  <row>
+                     <entry>convert_program</entry>
+                     <entry>name (and maybe path) to the convert program</entry>
+                     <entry>string, default: 'convert'</entry>
+                  </row>
+
+                  <row>
+                     <entry>convert_program</entry>
+                     <entry>name (and maybe path) to the convert program</entry>
+                     <entry>string, default: 'convert'</entry>
+                  </row>
+
+                  <row>
+                     <entry>exclusion_lists</entry>
+                     <entry>a list of filenames specifying exclusion lists to be inspected. Names are separated by colons.</entry>
+                     <entry>default: nothing</entry>
+                  </row>
+
+               </tbody>
+            </tgroup>   
+         </table>
+
+      </sect2>
+
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="ecc">
+          <title>[OS2]</title>
+
+         <table> 
+            <title>[OS2] Configuration File Parameters</title>
+            <tgroup cols="2">
+
+               <thead>  
+                  <row valign="middle">
+                     <entry>Configuration Option</entry>
+                     <entry>Description</entry>
+                  </row>
+               </thead>
+
+               <tbody>
+
+                  <row> 
+                     <entry>exclusion_lists</entry>
+                     <entry>A list of filenames specifying exclusion lists to be inspected. Names are separated by semicolons. (default: nothing)
+                     NOTE: OS/2 will also evaluate the [POSIX]. Do not add any exclusion lists there or you may run into trouble.
+                     </entry>
+                  </row>
+
+               </tbody>
+            </tgroup>   
+         </table>
+
+      </sect2>
+
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <!-- ##################################################################### -->
+      <sect2 id="ecd">
+          <title>[WINDOWS]</title>
+
+
+         <table>
+            <title>[OS2] Configuration File Parameters</title>
+            <tgroup cols="3">
+
+               <thead>
+                  <row valign="middle">
+                     <entry>Configuration Option</entry>
+                     <entry>Description</entry>
+                     <entry>Default Option</entry>
+                  </row>
+               </thead>
+
+               <tbody>
+
+                  <row>
+                     <entry>exclusion_lists</entry>
+                     <entry>a list of filenames specifying exclusion lists to be inspected. Names are separated by semicolons.</entry>
+                     <entry>default: nothing</entry>
+                  </row>
+
+                  <row>
+                     <entry>convert_program</entry>
+                     <entry>path and name for the ImageMagick convert tool with arguments</entry> 
+                     <entry>default: convert.exe %type%:%input% bmp:%output%</entry> 
+                  </row>  
+
+                  <row>
+                     <entry>bmp_to_tbmp</entry>
+                     <entry>path and name for the Bmp2Tbmp tool</entry> 
+                     <entry>default: Bmp2Tbmp.exe -i=%input% -o=%output% -maxwidth=%maxwidth% -maxheight=%maxheight% -compress=%compress% -color=%colors%</entry> 
+                  </row>  
+
+                  <row>
+                     <entry>tbmp_compression_type</entry>
+                     <entry>use compression</entry>
+                     <entry>string, default: yes</entry> 
+                  </row>
+
+                  <row>
+                     <entry>python_program</entry>
+                     <entry>path and name for the Python executable</entry>
+                     <entry>string, no default</entry>
+                  </row> 
+
+                  <row>
+                     <entry>http_proxy</entry>
+                     <entry>proxy settings of the form, http_proxy=http://proxy:port</entry>
+                     <entry>string, no default</entry>
+                  </row>
+
+                  <row>
+                     <entry>use_conduit</entry>
+                     <entry>use conduit.exe to build PDB</entry>
+                     <entry>boolean, default: true (only for debugging)</entry>
+                  </row>
+
+                  <row>
+                     <entry>close_on_exit</entry>
+                     <entry>close the terminal window when PyPlucker is finished.</entry>
+                     <entry>boolean, default: false</entry>
+                  </row>  
+
+               </tbody>
+            </tgroup>   
+         </table>
+
+	 <para>The convert_program and bmp_to_tbmp options can be given the following arguments:</para>
+
+	<itemizedlist>
+	   <listitem>
+	      <para>%compress% = if compression is used it is replaced with the string given by the 'tbmp_compression_type' key, otherwise 'no'</para>
+	   </listitem>
+
+	   <listitem>
+	      <para>%colors% = 'm', 'g4', 'g16' or 'c256'</para>
+	   </listitem>
+
+           <listitem>
+              <para>%maxwidth% = maxwidth value</para>
+           </listitem>
+
+           <listitem>
+              <para>%maxheight% = maxheight value</para>
+           </listitem>
+
+           <listitem>
+              <para>%input% = the input filename</para>
+           </listitem>
+
+           <listitem>
+              <para>%output% = the output filename</para>
+           </listitem>
+
+           <listitem>
+              <para>%type% = 'JPG', 'GIF' or 'PNG'</para>
+           </listitem>
+	</itemizedlist>
+
+      </sect2>
+
+   </sect1>
+
+   <!-- ##################################################################### -->
+   <!-- ##################################################################### -->
+   <!-- ##################################################################### -->
+   <sect1 id="ed">
+      <title>The Exclusion List</title>
+
+      <para>
+         Sometimes, the STAYONHOST and STAYBELOW attributes do not give enough selection ability to include only those
+         things that you want included. The parser looks for so called exclusion lists in form of text files. It first
+         loads the file $HOME/.plucker/exclusionlist.txt (if it exists), then it loads exclusionlist.txt in the
+         directory you specified with the -p flag (again, only if it exists) and finally it loads any files specified
+         on the command line using the -E option and/or found in the configuration file. A default exclusionlist.txt
+         file is included with Plucker.
+      </para>
+
+      <para>The filter options in the exclusion list has a very flexible format:</para>
+
+      <para><![CDATA[<prio>:<action>:<regexp>]]></para>
+
+      <para>where:</para>
+
+         <table>
+            <title>Exclusion List Parameters</title>
+            <tgroup cols="2">
+
+               <thead>
+                  <row valign="middle">
+                     <entry>Parameter</entry>
+                     <entry>Description</entry>   
+                  </row>
+               </thead>
+
+               <tbody>
+
+                  <row>
+                     <entry><![CDATA[<prio>]]></entry>
+                     <entry>Is an integer (negative numbers are also valid) specifying the priority. Rules with higher priorities are
+                     considered before rules with lower priorities. Rules of equal priority are considered in the sequence that they
+                     appear in the file.</entry>
+                  </row>
+
+                  <row>
+                     <entry><![CDATA[<action>]]></entry>
+                     <entry>is either a plus or a minus sign. Plus means 'include this document' while minus means 'do not include this document'.</entry>
+                  </row>
+
+                  <row>
+                     <entry><![CDATA[<regexp>]]></entry>
+                     <entry>a valid regular expression (as known, e.g. from perl).</entry>
+                  </row>
+
+               </tbody>
+            </tgroup>
+         </table>
+
+         <para>Leading and trailing white space is ignored and empty lines or lines starting with a '#' are considered comments.</para>
+
+<programlisting><![CDATA[
+Examples:
+
+0:-:.*\.mp3$
+0:-:.*\.wav$
+
+## Ignore known advertisement sites:
+0:-:http://.*ad\.de\.doubleclick\.net/.*
+0:-:http://.*ad\.linkexchange\.com/.*
+]]></programlisting>
+
+   </sect1>
+
+   <!-- ################################################################## -->      
+   <!-- ################################################################## -->      
+   <!-- ################################################################## -->      
+   <sect1 id="ee">
+      <title>Use Cases</title>
+
+      <para>To give you a few examples on how to use the parser in real life situations we will describe a number of
+      different use cases. We start with showing how you pluck files located on your own system and then continues with
+      examples for how to pluck files on remote hosts.</para>
+
+      <para>In all the examples we will use /home/pilot/.plucker/ as our Plucker Home (and Plucker Directory). In this
+      directory we have two subdirectories, one called HTML where we store all our different description files and one
+      called DB used for storing the resulting documents.</para>
+
+
+      <!-- ############################################################### -->
+      <!-- ############################################################### -->
+      <!-- ############################################################### -->
+      <sect2 id="eea">
+         <title>Pluck local targets</title>
+
+         <para>The parser can handle any HTML or text document you have on your desktop system, whether it is simple
+         text files or documents from a local web server you run on your desktop.</para>
+
+         <sect3 id="eeaa">
+            <title>Creating an E-book</title>
+
+            <para>Handling E-books on your Palm is one of the things that Plucker does well. To create such E-books you
+            first have to get the book in either text or (preferable) in HTML format -- Project Gutenberg: <ulink url="http://www.promo.net/pg/">http://www.promo.net/pg/</ulink> 
+            is a good place to find several old classics and other free books. Some books can be found in the Open
+            E-book (OEB) format. That format is close enough to HTML to be usable by the parser.</para>
+
+            <para>In this example we will convert Lewis Carroll's Alice's Adventures in Wonderland using a copy in OEB
+            format that we got from <ulink url="http://www.jeffkirvin.com/writingonyourpalm/recommends.htm">http://www.jeffkirvin.com/writingonyourpalm/recommends.htm</ulink>.
+            After unpacking the file in the HTML subdirectory we have one large OEB file called
+            alices_adventures_in_wonderland.htm and the procedure to convert this file into a Plucker document is very
+            simple:</para>
+
+<programlisting><![CDATA[
+% Spider.py -v --no-urlinfo -H plucker:/HTML/alices_adventures_in_wonderland.htm \
+  -N "Alice in Wonderland" -f DB/Wonderland 
+
+Working for pluckerdir /home/pilot/.plucker
+Processing plucker:/HTML/alices_adventures_in_wonderland.htm.
+           0 collected, 0 still to do
+  Retrieved ok
+
+Writing out collected data...
+Writing db 'Alice in Wonderland' to file /home/pilot/.plucker/DB/Wonderland.pdb
+Converted plucker:/HTML/alices_adventures_in_wonderland.htm
+Converted plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/1
+Converted plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/2
+Converted plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/3
+Converted plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/4
+Wrote 1 <= plucker:/~special~/index
+Wrote 2 <= plucker:/HTML/alices_adventures_in_wonderland.htm
+Wrote 11 <= plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/1
+Wrote 12 <= plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/2
+Wrote 13 <= plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/3
+Wrote 14 <= plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/4
+Done!
+]]></programlisting>
+
+            <para>We give it a different name than the document itself and also exclude the URL info (we don't need
+            that in an E-book). From the output above you can also see that the document is split into several parts,
+            since we for internal reasons must keep the text documents below 32 kB in size.</para>
+
+            <para>The document can be found in the DB directory.</para>
+
+         </sect3>
+
+         <sect3 id="eeab">
+            <title>An Admin Guide</title>
+
+            <para>The previous example was only using one single file and this example will show you that it is just as
+            simple when the book is divided up into several documents. We will use The Linux System Administrators'
+            Guide by Lars Wirzenius and Joanna Oja as our test object.</para>
+
+            <para>Unpacking the files in a separate directory (we will use /tmp/sag/ for this example) we will find
+            several HTML documents and also a bunch of GIF images. We are interested in the images to find out what bit
+            depth we have to use and also their size so we know if they will be scaled down. In this case all images
+            are black and white, so we can use the default bit depth of 1. A few of the images are quite large, so they
+            will be scaled down to 150x250 by the parser. If we really want these images in full size we can either
+            change the HTML document so that instead of including the image in the document it will link to the image,
+            i.e. instead of:</para>
+
+            <para><![CDATA[<img src="overview-kernel.gif">]]></para>
+
+            <para>we would use:</para>
+
+            <para><![CDATA[<a href="overview-kernel.gif" BPP=1 MAXWIDTH=700 MAXHEIGHT=700>overview-kernel.gif</a>]]></para>
+
+            <para>Then we can tap on the link to the image when we want to view it. This is something we can only do
+            when we have access to the document and to support this in a more transparent way the parser should be able
+            to do this automatically for you in the future.</para>
+
+            <para>Since we are not interested in any external documents we will use the --stayonhost option and a high
+            maximum depth. Then we don't have to worry about exactly how deep we should follow links and what external
+            links we should filter out using exclusion lists. Now we are ready to build the document:</para>
+
+<programlisting><![CDATA[
+% Spider.py -v --stayonhost -M5 -H file:/tmp/sag/index.html -N "Linux Admin Guide" -f DB/SAG
+
+Working for pluckerdir /home/pilot/.plucker
+Processing file:/tmp/sag/index.html.
+           0 collected, 0 still to do
+  Retrieved ok
+
+Processing file:/tmp/sag/backup-timeline.gif.
+           73 collected, 0 still to do
+  Retrieved ok
+
+Writing out collected data...
+Writing db 'Linux Admin Guide' to file /home/pilot/.plucker/SAG.pdb
+Converted file:/tmp/sag/book1.html
+
+Converted file:/tmp/sag/x89.html
+Wrote 1 <= plucker:/~special~/index
+Wrote 2 <= file:/tmp/sag/index.html
+Wrote 3 <= plucker:/~special~/pluckerlinks
+Wrote 11 <= file:/tmp/sag/backup-timeline.gif
+
+Wrote 83 <= mailto:gregh@sunsite.unc.edu
+Wrote 87 <= plucker:/~special~/links1
+Done!
+]]></programlisting>
+
+            <para>Install the document you find in /home/pilot/.plucker/DB and you have instant access to The Linux
+            System Administrators' Guide.</para>
+
+         </sect3>
+
+      </sect2>
+
+      <!-- ############################################################### -->      
+      <!-- ############################################################### -->      
+      <!-- ############################################################### -->      
+      <sect2 id="eeb">
+         <title>Pluck remote targets</title>
+
+         <para>E-books and manuals in all glory, but many times we want to get fresh articles that updates every day.
+         Well, Plucker can handle that, too.</para>
+
+          <sect3 id="eeba">
+            <title>Daily News</title>
+
+            <para>To be able to get the latest news from Wired we will set up a special section in the configuration
+            file, so that we only have to run:</para>
+
+<programlisting><![CDATA[
+% Spider.py -s wired
+]]></programlisting>
+
+            <para>..every morning to get the latest version of Wired for later perusal.</para>
+
+            <para>The handheld friendly version of Wired is located at <ulink url="http://www.wired.com/news_drop/palmpilot/">http://www.wired.com/news_drop/palmpilot/</ulink>
+            and we want to pluck it to a depth of 3 levels. We also know that it only uses black and white images. This
+            give us the following section in the configuration file (/home/pilot/.pluckerrc):</para>
+
+<programlisting><![CDATA[
+[wired]
+bpp = 1
+home_maxdepth = 3
+home_url = http://www.wired.com/news_drop/palmpilot/
+db_file = DB/Wired
+]]></programlisting>
+
+          </sect3>
+
+          <sect3 id="eebb">
+            <title>Comics</title>
+
+            <para>We need some fun, too, so let's download a few strips for some well known comics. To simplify things
+            we will use a tool called netcomics to get the comics and then use a local description file to build the
+            document. How to install netcomics is beyond this tutorial, but it is a Perl script and might work on any
+            platform that have Perl support (for Linux users there exists pre-built packages). After you have installed
+            netcomics, you should create a small shellscript called netcomics.sh to be used by the parser:</para>
+
+<programlisting><![CDATA[
+#!/bin/sh
+
+netcomics -D -d /tmp/Comics/ -c "ch dilbert dilbertcl uf"
+
+( cd /tmp/Comics ; \
+mv Dilbert-*.gif Dilbert.gif ; \
+mv Dilbert_Classics-*.gif Dilbert_Classics.gif ; \
+mv Calvin_and_Hobbes-*.gif Calvin_and_Hobbes.gif ; \
+mv User_Friendly-*.gif User_Friendly.gif )
+]]></programlisting>
+
+            <para>On OS/2 and Windows this will look like the follwing. On OS/2 it should be named netcomics.cmd
+            whereas on Windows it should be named netcomics.bat:</para>
+
+<programlisting><![CDATA[
+perl netcomics.pl -D -d \temp\Comics\ -c "ch dilbert dilbertcl uf"
+
+cd \temp\Comics
+move Dilbert-*.gif Dilbert.gif
+move Dilbert_Classics-*.gif Dilbert_Classics.gif
+move Calvin_and_Hobbes-*.gif Calvin_and_Hobbes.gif
+move User_Friendly-*.gif User_Friendly.gif
+]]></programlisting>
+
+            <para>This script will download Calvin & Hobbes, Dilbert, Dilbert Classic and UserFriendly to a separate
+            directory (/tmp/Comics/) and rename the date specific files into a general format that can be used in the
+            local description file:</para>
+
+<programlisting><![CDATA[
+<html>
+<body>
+
+<h1>Comics Home Page</h1>
+
+<p><a href="file:/tmp/Comics/Dilbert.gif">Dilbert</a></p>
+<p><a href="file:/tmp/Comics/Dilbert_Classics.gif">Dilbert Classic</a></p>
+<p><a href="file:/tmp/Comics/Calvin_and_Hobbes.gif">Calvin &amp; Hobbes</a></p>
+<p><a href="file:/tmp/Comics/User_Friendly.gif">UserFriendly</a></p>
+
+</body>
+</html>
+]]></programlisting>
+
+
+            <para>To simplify things even further we will also add a new section for the comics:</para>
+
+<programlisting><![CDATA[
+[comics]
+bpp = 4
+home_url = plucker:/HTML/comics.html
+maxwidth = 600
+maxheight = 200
+db_file = DB/Comics
+before_command = "netcomics.sh"
+]]></programlisting>
+
+            <para>NOTE: On OS/2 or Windows you can use the before_command to the set the name of your batch
+            file.</para>
+
+            <para>As you can see we have added the shellscript as a command that should be run before the description
+            file is parsed. Everyday (except on Sunday when the strips are too large for these options -- we will show
+            a solution to that later in the section) we now only have to run:</para>
+
+<programlisting><![CDATA[
+% Spider.py -v -s comics
+
+Executing 'before_command': "netcomics.sh"
+Working for pluckerdir /home/pilot/.plucker
+Processing file:/home/pilot/.plucker/HTML/comics.html.
+           0 collected, 0 still to do
+  Retrieved ok
+Processing file:/tmp/Comics/Dilbert.gif.
+           1 collected, 3 still to do
+  Retrieved ok
+Processing file:/tmp/Comics/Dilbert_Classics.gif.
+           2 collected, 2 still to do
+  Retrieved ok
+Processing file:/tmp/Comics/Calvin_and_Hobbes.gif.
+           3 collected, 1 still to do
+  Retrieved ok
+Processing file:/tmp/Comics/User_Friendly.gif.
+           4 collected, 0 still to do
+  Retrieved ok
+
+Writing out collected data...
+Writing db 'Comics' to file /home/pilot/.plucker/DB/Comics.pdb
+Converted file:/home/pilot/.plucker/HTML/comics.html
+Wrote 1 <= plucker:/~special~/index
+Wrote 2 <= file:/home/pilot/.plucker/HTML/comics.html
+Wrote 3 <= plucker:/~special~/pluckerlinks
+Wrote 11 <= file:/tmp/Comics/Calvin_and_Hobbes.gif
+Wrote 12 <= file:/tmp/Comics/Dilbert.gif
+Wrote 13 <= file:/tmp/Comics/Dilbert_Classics.gif
+Wrote 14 <= file:/tmp/Comics/User_Friendly.gif
+Wrote 15 <= plucker:/~special~/links1
+Done!
+]]></programlisting>
+
+            <para>To be able to use it also on Sundays we add yet another section to the configuration file.</para>
+
+<programlisting><![CDATA[
+[sunday]
+bpp = 2
+maxwidth = 550
+maxheight = 400
+db_file = DB/SundayComics
+]]></programlisting>
+
+            <para>Using a lower bit depth for the images we are now able to include larger versions of the comics. Each Sunday we would run:</para>
+
+<programlisting><![CDATA[
+% Spider.py -s comics -s sunday
+]]></programlisting>
+
+            <para>..and since the parser applies the sections in the given order the changed values in sunday will override the ones in comics.</para>
+
+          </sect3>
+
+      </sect2>
+
+   </sect1>
+
+</chapter>
+
+
+<!-- ################################################################## -->
+<!--                        GFDL/License Blurb                          -->
+<!-- ################################################################## -->
+<appendix id="gfdl">
+  <title>
+    GNU Free Documentation License 
+  </title>
+  <!-- - GNU Project - Free Software Foundation (FSF) -->
+  <!-- LINK REV="made" HREF="mailto:webmasters@gnu.org" -->
+  <!-- sect1>
+  <title>
+    GNU Free Documentation License 
+  </title -->
+  <para>
+
+    Version 1.1, March 2000 
+  
+</para>
+  <blockquote>
+    <para>
+      Copyright (C) 2000 Free Software Foundation, Inc. 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA Everyone
+      is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+    </para>
+  </blockquote>
+  <sect1 label="0">
+    <title>
+      Preamble 
+    </title>
+    <para>
+      The purpose of this License is to make a manual, textbook, or other written document "free" in the sense of
+      freedom: to assure everyone the effective freedom to copy and redistribute it, with or without modifying it,
+      either commercially or noncommercially. Secondarily, this License preserves for the author and publisher a way to
+      get credit for their work, while not being considered responsible for modifications made by others.
+    </para>
+
+    <para>
+      This License is a kind of "copyleft", which means that derivative works of the document must themselves be free
+      in the same sense. It complements the GNU General Public License, which is a copyleft license designed for free
+      software.
+    </para>
+
+    <para>
+      We have designed this License in order to use it for manuals for free software, because free software needs free
+      documentation: a free program should come with manuals providing the same freedoms that the software does. But
+      this License is not limited to software manuals; it can be used for any textual work, regardless of subject
+      matter or whether it is published as a printed book. We recommend this License principally for works whose
+      purpose is instruction or reference.
+    </para>
+  </sect1>
+
+  <sect1 label="1">
+    <title>
+      Applicability and Definitions 
+    </title>
+    <para>
+      This License applies to any manual or other work that contains a notice placed by the copyright holder saying it
+      can be distributed under the terms of this License.  The "Document", below, refers to any such manual or work.
+      Any member of the public is a licensee, and is addressed as "you".
+    </para>
+
+    <para>
+      A "Modified Version" of the Document means any work containing the Document or a portion of it, either copied
+      verbatim, or with modifications and/or translated into another language.
+    </para>
+
+    <para>
+      A "Secondary Section" is a named appendix or a front-matter section of the Document that deals exclusively with
+      the relationship of the publishers or authors of the Document to the Document's overall subject (or to related
+      matters) and contains nothing that could fall directly within that overall subject.  (For example, if the
+      Document is in part a textbook of mathematics, a Secondary Section may not explain any mathematics.) The
+      relationship could be a matter of historical connection with the subject or with related matters, or of legal,
+      commercial, philosophical, ethical or political position regarding them.
+    </para>
+
+    <para>
+      The "Invariant Sections" are certain Secondary Sections whose titles are designated, as being those of Invariant
+      Sections, in the notice that says that the Document is released under this License.
+    </para>
+
+    <para>
+      The "Cover Texts" are certain short passages of text that are listed, as Front-Cover Texts or Back-Cover Texts,
+      in the notice that says that the Document is released under this License.
+    </para>
+
+    <para>
+      A "Transparent" copy of the Document means a machine-readable copy, represented in a format whose specification
+      is available to the general public, whose contents can be viewed and edited directly and straightforwardly with
+      generic text editors or (for images composed of pixels) generic paint programs or (for drawings) some widely
+      available drawing editor, and that is suitable for input to text formatters or for automatic translation to a
+      variety of formats suitable for input to text formatters. A copy made in an otherwise Transparent file format
+      whose markup has been designed to thwart or discourage subsequent modification by readers is not Transparent. A
+      copy that is not "Transparent" is called "Opaque".
+    </para>
+
+    <para>
+      Examples of suitable formats for Transparent copies include plain ASCII without markup, Texinfo input format,
+      LaTeX input format, SGML or XML using a publicly available DTD, and standard-conforming simple HTML designed for
+      human modification. Opaque formats include PostScript, PDF, proprietary formats that can be read and edited only
+      by proprietary word processors, SGML or XML for which the DTD and/or processing tools are not generally
+      available, and the machine-generated HTML produced by some word processors for output purposes only.
+    </para>
+
+    <para>
+      The "Title Page" means, for a printed book, the title page itself, plus such following pages as are needed to
+      hold, legibly, the material this License requires to appear in the title page. For works in formats which do not
+      have any title page as such, "Title Page" means the text near the most prominent appearance of the work's title,
+      preceding the beginning of the body of the text.
+    </para>
+  </sect1>
+
+  <sect1 label="2">
+    <title>
+      Verbatim Copying 
+    </title>
+    <para>
+      You may copy and distribute the Document in any medium, either commercially or noncommercially, provided that
+      this License, the copyright notices, and the license notice saying this License applies to the Document are
+      reproduced in all copies, and that you add no other conditions whatsoever to those of this License. You may not
+      use technical measures to obstruct or control the reading or further copying of the copies you make or
+      distribute. However, you may accept compensation in exchange for copies. If you distribute a large enough number
+      of copies you must also follow the conditions in section 3.
+    </para>
+
+    <para>
+      You may also lend copies, under the same conditions stated above, and you may publicly display copies.
+    </para>
+  </sect1>
+
+  <sect1 label="3">
+    <title>
+      Copying in Quantity 
+    </title>
+    <para>
+      If you publish printed copies of the Document numbering more than 100, and the Document's license notice requires
+      Cover Texts, you must enclose the copies in covers that carry, clearly and legibly, all these Cover Texts:
+      Front-Cover Texts on the front cover, and Back-Cover Texts on the back cover. Both covers must also clearly and
+      legibly identify you as the publisher of these copies. The front cover must present the full title with all words
+      of the title equally prominent and visible. You may add other material on the covers in addition. Copying with
+      changes limited to the covers, as long as they preserve the title of the Document and satisfy these conditions,
+      can be treated as verbatim copying in other respects.
+    </para>
+
+    <para>
+      If the required texts for either cover are too voluminous to fit legibly, you should put the first ones listed
+      (as many as fit reasonably) on the actual cover, and continue the rest onto adjacent pages.
+    </para>
+
+    <para>
+      If you publish or distribute Opaque copies of the Document numbering more than 100, you must either include a
+      machine-readable Transparent copy along with each Opaque copy, or state in or with each Opaque copy a
+      publicly-accessible computer-network location containing a complete Transparent copy of the Document, free of
+      added material, which the general network-using public has access to download anonymously at no charge using
+      public-standard network protocols. If you use the latter option, you must take reasonably prudent steps, when you
+      begin distribution of Opaque copies in quantity, to ensure that this Transparent copy will remain thus accessible
+      at the stated location until at least one year after the last time you distribute an Opaque copy (directly or
+      through your agents or retailers) of that edition to the public.
+    </para>
+
+    <para>
+      It is requested, but not required, that you contact the authors of the Document well before redistributing any
+      large number of copies, to give them a chance to provide you with an updated version of the Document.
+    </para>
+  </sect1>
+
+  <sect1 label="4">
+    <title>
+      Modifications 
+    </title>
+    <para>
+      You may copy and distribute a Modified Version of the Document under the conditions of sections 2 and 3 above,
+      provided that you release the Modified Version under precisely this License, with the Modified Version filling
+      the role of the Document, thus licensing distribution and modification of the Modified Version to whoever
+      possesses a copy of it. In addition, you must do these things in the Modified Version:
+    </para>
+
+    <orderedlist numeration="upperalpha">
+      <listitem>
+   <para>
+     Use in the Title Page (and on the covers, if any) a title distinct from that of the Document, and from those of
+     previous versions (which should, if there were any, be listed in the History section of the Document). You may use
+     the same title as a previous version if the original publisher of that version gives permission.
+   </para>
+      </listitem>
+      <listitem>
+
+   <para>
+     List on the Title Page, as authors, one or more persons or entities responsible for authorship of the
+     modifications in the Modified Version, together with at least five of the principal authors of the Document (all
+     of its principal authors, if it has less than five).
+   </para>
+      </listitem>
+      <listitem>
+   <para>
+
+     State on the Title page the name of the publisher of the Modified
+     Version, as the publisher.
+   
+</para>
+      </listitem>
+      <listitem>
+   <para>
+
+     Preserve all the copyright notices of the Document. 
+   
+</para>
+      </listitem>
+      <listitem>
+   <para>
+
+     Add an appropriate copyright notice for your 
+     modifications adjacent to the other copyright 
+     notices. 
+   
+</para>
+      </listitem>
+      <listitem>
+   <para>
+     Include, immediately after the copyright notices, a license notice giving the public permission to use the
+     Modified Version under the terms of this License, in the form shown in the Addendum below.
+   </para>
+      </listitem>
+      <listitem>
+   <para>
+     Preserve in that license notice the full lists of Invariant Sections and required Cover Texts given in the
+     Document's license notice.
+   </para>
+      </listitem>
+      <listitem>
+   <para>
+
+     Include an unaltered copy of this License. 
+   
+</para>
+      </listitem>
+      <listitem>
+
+   <para>
+     Preserve the section entitled "History", and its title, and add to it an item stating at least the title, year,
+     new authors, and publisher of the Modified Version as given on the Title Page. If there is no section entitled
+     "History" in the Document, create one stating the title, year, authors, and publisher of the Document as given on
+     its Title Page, then add an item describing the Modified Version as stated in the previous sentence.
+   </para>
+      </listitem>
+      <listitem>
+
+   <para>
+     Preserve the network location, if any, given in the Document for public access to a Transparent copy of the
+     Document, and likewise the network locations given in the Document for previous versions it was based on. These
+     may be placed in the "History" section. You may omit a network location for a work that was published at least
+     four years before the Document itself, or if the original publisher of the version it refers to gives permission.
+   </para>
+      </listitem>
+      <listitem>
+
+   <para>
+     In any section entitled "Acknowledgements" or "Dedications", preserve the section's title, and preserve in the
+     section all the substance and tone of each of the contributor acknowledgements and/or dedications given therein.
+   </para>
+      </listitem>
+      <listitem>
+
+   <para>
+     Preserve all the Invariant Sections of the Document, unaltered in their text and in their titles. Section numbers
+     or the equivalent are not considered part of the section titles.
+   </para>
+      </listitem>
+      <listitem>
+
+   <para>
+     Delete any section entitled "Endorsements". Such a section may not be included in the Modified Version.
+   </para>
+
+      </listitem>
+      <listitem>
+
+   <para>
+     Do not retitle any existing section as "Endorsements" or to conflict in title with any Invariant Section.
+   </para>
+      </listitem>
+    </orderedlist>
+
+    <para>
+      If the Modified Version includes new front-matter sections or appendices that qualify as Secondary Sections and
+      contain no material copied from the Document, you may at your option designate some or all of these sections as
+      invariant. To do this, add their titles to the list of Invariant Sections in the Modified Version's license
+      notice. These titles must be distinct from any other section titles.
+    </para>
+
+    <para>
+      You may add a section entitled "Endorsements", provided it contains nothing but endorsements of your Modified
+      Version by various parties--for example, statements of peer review or that the text has been approved by an
+      organization as the authoritative definition of a standard.
+    </para>
+
+    <para>
+      You may add a passage of up to five words as a Front-Cover Text, and a passage of up to 25 words as a Back-Cover
+      Text, to the end of the list of Cover Texts in the Modified Version. Only one passage of Front-Cover Text and one
+      of Back-Cover Text may be added by (or through arrangements made by) any one entity. If the Document already
+      includes a cover text for the same cover, previously added by you or by arrangement made by the same entity you
+      are acting on behalf of, you may not add another; but you may replace the old one, on explicit permission from
+      the previous publisher that added the old one.
+    </para>
+
+    <para>
+      The author(s) and publisher(s) of the Document do not by this License give permission to use their names for
+      publicity for or to assert or imply endorsement of any Modified Version.
+    </para>
+
+  </sect1>
+  <sect1 label="5">
+    <title>
+      Combining Documents 
+    </title>
+    <para>
+
+      You may combine the Document with other documents released under this License, under the terms defined in section
+      4 above for modified versions, provided that you include in the combination all of the Invariant Sections of all
+      of the original documents, unmodified, and list them all as Invariant Sections of your combined work in its
+      license notice.
+    
+</para>
+    <para>
+
+      The combined work need only contain one copy of this License, and multiple identical Invariant Sections may be
+      replaced with a single copy. If there are multiple Invariant Sections with the same name but different contents,
+      make the title of each such section unique by adding at the end of it, in parentheses, the name of the original
+      author or publisher of that section if known, or else a unique number. Make the same adjustment to the section
+      titles in the list of Invariant Sections in the license notice of the combined work.
+    
+</para>
+    <para>
+
+      In the combination, you must combine any sections entitled "History" in the various original documents, forming
+      one section entitled "History"; likewise combine any sections entitled "Acknowledgements", and any sections
+      entitled "Dedications". You must delete all sections entitled "Endorsements."
+    
+</para>
+  </sect1>
+  <sect1 label="6">
+    <title>
+      Collections of Documents 
+    </title>
+    <para>
+
+      You may make a collection consisting of the Document and other documents released under this License, and replace
+      the individual copies of this License in the various documents with a single copy that is included in the
+      collection, provided that you follow the rules of this License for verbatim copying of each of the documents in
+      all other respects.
+    
+</para>
+    <para>
+
+      You may extract a single document from such a collection, and distribute it individually under this License,
+      provided you insert a copy of this License into the extracted document, and follow this License in all other
+      respects regarding verbatim copying of that document.
+    
+</para>
+  </sect1>
+  <sect1 label="7">
+    <title>
+      Aggregation with Independent Works 
+    </title>
+    <para>
+
+      A compilation of the Document or its derivatives with other separate and independent documents or works, in or on
+      a volume of a storage or distribution medium, does not as a whole count as a Modified Version of the Document,
+      provided no compilation copyright is claimed for the compilation. Such a compilation is called an "aggregate",
+      and this License does not apply to the other self-contained works thus compiled with the Document, on account of
+      their being thus compiled, if they are not themselves derivative works of the Document.
+    
+</para>
+    <para>
+
+      If the Cover Text requirement of section 3 is applicable to these copies of the Document, then if the Document is
+      less than one quarter of the entire aggregate, the Document's Cover Texts may be placed on covers that surround
+      only the Document within the aggregate.  Otherwise they must appear on covers around the whole aggregate.
+    
+</para>
+  </sect1>
+  <sect1 label="8">
+    <title>
+      Translation 
+    </title>
+    <para>
+
+      Translation is considered a kind of modification, so you may distribute translations of the Document under the
+      terms of section 4. Replacing Invariant Sections with translations requires special permission from their
+      copyright holders, but you may include translations of some or all Invariant Sections in addition to the original
+      versions of these Invariant Sections. You may include a translation of this License provided that you also
+      include the original English version of this License. In case of a disagreement between the translation and the
+      original English version of this License, the original English version will prevail.
+    
+</para>
+  </sect1>
+  <sect1 label="9">
+    <title>
+      Termination 
+    </title>
+    <para>
+      You may not copy, modify, sublicense, or distribute the Document except as expressly provided for under this
+      License. Any other attempt to copy, modify, sublicense or distribute the Document is void, and will automatically
+      terminate your rights under this License.  However, parties who have received copies, or rights, from you under
+      this License will not have their licenses terminated so long as such parties remain in full compliance.
+    </para>
+
+  </sect1>
+  <sect1 label="10">
+    <title>
+      Future Revisions of this License 
+    </title>
+
+    <para>
+      The Free Software Foundation may publish new, revised versions of the GNU Free Documentation License from time to
+      time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new
+      problems or concerns. See <ulink url="http://www.gnu.org/copyleft/">http://www.gnu.org/copyleft/</ulink>.
+    </para>
+
+    <para>
+      Each version of the License is given a distinguishing version number. If the Document specifies that a particular
+      numbered version of this License "or any later version" applies to it, you have the option of following the terms
+      and conditions either of that specified version or of any later version that has been published (not as a draft)
+      by the Free Software Foundation. If the Document does not specify a version number of this License, you may
+      choose any version ever published (not as a draft) by the Free Software Foundation.
+    </para>
+
+  </sect1>
+
+  <sect1 label="">
+    <title>
+      How to use this License for your documents 
+    </title>
+    <para>
+      To use this License in a document you have written, include a copy of the License in the document and put the
+      following copyright and license notices just after the title page:
+    </para>
+
+    <blockquote>
+      <para>
+   Copyright (c) YEAR YOUR NAME. Permission is granted to copy, distribute and/or modify this document under the terms
+   of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation;
+   with the Invariant Sections being LIST THEIR TITLES, with the Front-Cover Texts being LIST, and with the Back-Cover
+   Texts being LIST. A copy of the license is included in the section entitled "GNU Free Documentation License".
+      </para>
+    </blockquote>
+
+    <para>
+      If you have no Invariant Sections, write "with no Invariant Sections" instead of saying which ones are invariant.
+      If you have no Front-Cover Texts, write "no Front-Cover Texts" instead of "Front-Cover Texts being LIST";
+      likewise for Back-Cover Texts.
+    </para>
+
+    <para>
+      If your document contains nontrivial examples of program code, we recommend releasing these examples in parallel
+      under your choice of free software license, such as the GNU General Public License, to permit their use in free
+      software.
+    </para>
+
+  </sect1>
+</appendix>
+
+</book>   
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:nil
+sgml-parent-document:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

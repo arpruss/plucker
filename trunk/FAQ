@@ -1,0 +1,502 @@
+
+==============================================================================
+              Frequently Asked Questions about Plucker
+==============================================================================
+Last modified: $Date: 2005/02/11 16:07:18 $
+
+If your question is not there, please check the Plucker home page
+http://www.plkr.org which may have more recent information.
+
+1 - Introduction
+        1.1  What is Plucker?
+        1.2  In what way is Plucker different from AvantGo?
+        1.3  Where can I get Plucker?
+        1.4  Is there a mailing list for Plucker?
+        1.5  Is there an anonymous cvs server?
+        1.6  What is the status of Plucker?
+        1.7  Where can I send bug reports?
+        1.8  How can I contact the Plucker team?
+
+2 - Installation
+        2.1  What platforms does Plucker run on?
+
+3 - Usage
+        3.1  How does Plucker work?
+        3.2  Why can't I see any pictures on my Palm device?
+        3.3  I have all the necessary tools, but I still can't see any pictures?
+        3.4  Why do pages with images show [img 4bpp] instead of images?
+        3.5  The protocol is missing when the parser attempts to download a page?
+        3.6  How do I pluck a password-protected site?
+
+4 - Configuration
+        4.1  How do I configure the parser to create ZLib compressed databases?
+
+5 - Development
+        5.1  Why does make only build the viewer application but never the ZLib library?
+        5.2  Where can I get zlib?
+        5.3  Where can I get prc-tools?
+        5.4  Why is the <module X> so messy?
+
+6 - Miscellaneous Questions
+        6.1  Can you suggest some good web pages for Plucker?
+        6.2  What are some of the features of Plucker?
+        6.3  What features does Plucker not implement?
+        6.4  What other features can we expect?
+        6.5  Where can I find Plucker eBooks?
+
+==============================================================================
+
+*-*-*-*-*-*-*
+Introduction:
+*-*-*-*-*-*-*
+
+1.1 What is Plucker?
+--------------------
+
+  Plucker is a suite of programs which provide an off-line web browser for
+  Palm OS systems (see below for compatibility). It's free software under
+  the conditions of the Free Software Foundation's General Public License,
+  so you can copy, change, or even sell this program without giving anyone
+  any money, as long as you make the source code (and your changes, if any)
+  publicly available.
+
+  We would, of course, be interested to see any changes you might make and
+  possibly include them in a future release of Plucker. There's lots of
+  things that could be done better!
+
+  In many ways, the ideas of Plucker are similar to the proprietary AvantGo
+  software, though we believe that the implementation of Plucker is utterly
+  different from AvantGo. According to their web page, AvantGo implements an
+  HTML parser on the Palm device; Plucker implements the majority of the
+  parser on the PC/server/desktop machine. There are probably situations
+  where AvantGo would be far more appropriate than Plucker (online browsing,
+  for example), however, you need an SDK to work with AvantGo.
+
+
+1.2 In what way is Plucker different from AvantGo?
+--------------------------------------------------
+
+  The programs differ in many ways.
+
+  Most importantly (to us, at least), Plucker is Free software, distributed
+  under the FSF's General Public License. This means that if you are using
+  Plucker, you are entitled to the source code, and you can change it to
+  make it do whatever you want (as long as you make the changes publicly
+  available).
+  
+  Other differences that we know of include:
+
+   o AvantGo parses compressed (read: "encrypted") HTML on the Palm device
+     itself; Plucker parses uncompressed HTML on the server, and sends an
+     interpreted version to the Palm.
+
+   o Plucker appears to render documents faster (though it hasn't been
+     optimized for speed, really)
+
+   o The "home" Plucker page is a user-defined HTML document, and is treated
+     just like any other. The "home" AvantGo page does not appear to be
+     HTML; it's determined by the AvantGo configuration software. So, the
+     history buttons don't work from the Home page in AvantGo.
+
+   o Plucker will support DND HTML files. AFAIK, AvantGo does not.
+
+
+1.3 Where can I get Plucker?
+----------------------------
+ 
+  Visit the Plucker home page at http://www.plkr.org/
+   
+  The development versions ("the latest snapshot") are usually very stable
+  themselves, so if you want access to all the latest features (and have the
+  development tools installed) you can safely go with these versions.  As
+  always, remember to backup any unsaved data before you start playing with
+  the development version.
+
+
+1.4 Is there a mailing list for Plucker?
+----------------------------------------
+
+  Yes.
+  
+  The list for Plucker users, plucker-list, is a fairly low
+  traffic list. The developers list, plucker-dev, is intended for
+  focused development discussion amongst the core Plucker development
+  team. Of course, anyone is welcome to read.
+
+  The Plucker Announce list is where new releases are announced. If
+  you are only concerned with releases, this is the list for you.
+
+  To join: visit http://lists.rubberchicken.org/ and select the list(s)
+  you want to subscribe to.
+
+  Archives for plucker-list and plucker-dev can be found at,
+
+    http://www.mail-archive.com/plucker-list%40rubberchicken.org/
+    http://www.mail-archive.com/plucker-dev%40rubberchicken.org/
+    http://lists.rubberchicken.org/
+
+
+1.5 Is there an anonymous cvs server?
+-------------------------------------
+
+  Yes there is. To check out the code from cvs you first have to login,
+
+  cvs -d :pserver:anonymous@cvs.plkr.org:/cvs/plucker -z3 login
+
+  and then just hit ENTER at the password prompt. Check out the code with:
+
+  cvs -d :pserver:anonymous@cvs.plkr.org:/cvs/plucker -z3 co plucker
+
+
+1.6 What is the status of Plucker?
+----------------------------------
+
+  Plucker is in a beta state. While you're more than welcome to take Plucker
+  for a spin, it might not work for you. It works for us, but we don't know
+  what you've got installed on your machines that may be different from that
+  installed on ours. You might lose all the data on your PalmPilot, you
+  might need to reboot your machine, it might never be the same again.
+
+  Beware!
+
+
+1.7 Where can I send bug reports?
+---------------------------------
+
+  Fill out the file BUGREPORT in the Plucker distribution and send it to
+  plucker-bugs@rubberchicken.org (really), or fill out the forms located at
+  http://bugs.plkr.org/ and we'll do our best to fix them as
+  soon as we can!
+
+
+1.8  How can I contact the Plucker team?
+----------------------------------------
+
+  Send a message to plucker-team@rubberchicken.org . Unlike the mailing
+  list you don't have to be a subscriber to post to this address. However,
+  general questions about Plucker should still be sent to the mailing lists.
+
+
+*-*-*-*-*-*-*
+Installation:
+*-*-*-*-*-*-*
+
+2.1 What platforms does Plucker run on?
+-----------------------------------------
+
+  The viewer should run on any Palm OS device utilizing version 2.0.4 or
+  higher of Palm OS, while the desktop tools are supported on Linux, Windows,
+  Mac OS X, and OS/2.
+
+  The desktop tools will probably work on any Unix system with Python
+  installed, but your mileage may vary, so don't get angry if they don't
+  work. If you are able to get it running on a system not listed in
+  REQUIREMENTS then please let us know so that it can be added to the list
+  of supported systems.
+
+
+
+*-*-*-*
+Usage:
+*-*-*-*
+
+3.1 How does Plucker work?
+--------------------------
+
+  Plucker consists of three parts: the parser, the conduit, and the viewer. 
+  The parser and the conduit have been merged into one complete Python
+  version and eventually there will also be a Perl versions of the parser. 
+  The standalone conduit is written in Perl and there is also a conduit
+  written in Delphi for the Windows users.
+
+  The parser runs on your main computer (the one with the HotSync cradle or
+  IR port physically attached to it, or on a networked machine which allows
+  you to connect to it via Network Hotsync). It gathers the web pages you
+  specify and follows the links on those pages to a certain depth (specified
+  by you).  You specify the web pages you want to gather by creating a
+  "home.html" file, which also becomes your home page. The links on
+  "home.html" are followed to a depth specified by the optional "MAXDEPTH"
+  attribute which you can include in the <A HREF="..."> tag in the home.html
+  file.  The parser finds new links to retrieve and also converts the pages
+  to a format that the viewer can read.
+
+  The conduit takes the converted HTML files from a directory or from your
+  computer's system memory (RAM; using the python parser) and places them in
+  a database on your Palm device, or directs them to a file (which is the
+  same as the database) on your desktop, which you can sync to your emulator
+  or your "real" Palm device at a later time.
+
+  The viewer displays the converted HTML files on your Palm device's screen. 
+  It allows you to use the stylus to tap on links which will then display
+  the target page. It has a 32-page history, so you can move backwards and
+  forwards through the pages just as you would with your desktop browser.
+
+  Rendering is done in part by the parser (which works out things like which
+  styles to use) and in part by the viewer (which works out line and
+  document lengths, and renders <A>nchors).
+
+
+3.2 Why can't I see any pictures on my Palm device?
+---------------------------------------------------
+
+  Either you have an old version of Plucker (image support was added in
+  version 0.03) or you haven't installed all necessary tools. The Palm
+  device uses a format called Tbmp (Tiny Bitmap) for its images, and the
+  parser in Plucker needs (among others) a special tool called ppmtoTbmp to
+  be able to convert images to the Palm OS bitmap format (depending on your
+  version of Plucker, you may no longer need to use the ppmtoTbmp tool. It
+  has recently been replaced by the netpbm2 package). Check out the
+  REQUIREMENTS file in the main source archive for a list of necessary tools
+  and where to find them.
+
+
+3.3 I have all the necessary tools, but I still can't see any pictures?
+-------------------------------------------------------------------------
+
+  Make sure that you don't set a too high value for MAXWIDTH. Anything above
+  150 pixels (default value) for embedded images will give the result that
+  no images are shown.
+  
+
+3.4 Why do pages with images show [img 4bpp] instead of images?
+-------------------------------------------------------------------------
+
+  When you generate 2 or 4 bpp images you have to change the bit depth of
+  the screen to view them. The default depth is 1 (Black/White), so when the
+  viewer finds images of a higher bit depth it will display [img Nbpp]
+  instead (N = bit depth for the image). You change the bit depth in the
+  Preference dialog.
+
+
+3.5 The protocol is missing when the parser attempts to download a page?
+-------------------------------------------------------------------------
+
+  Even if you don't tell us what OS you are running we would be very
+  surprised if it's not Red Hat 7.0, 7.1, or 7.2.
+  
+  There is a bug in the python version (1.5.2) include with Red Hat 7.0,
+  7.1, and 7.2.
+
+  A solution provided by Joe A. can be found at 
+  
+    http://home.earthlink.net/~joefefifo/plucker/fix.html
+ 
+  A more detailed discussion of the problem can be found at
+
+    http://home.earthlink.net/~joefefifo/plucker/fix_detailed.html
+  
+
+3.6  How do I pluck a password-protected site?
+----------------------------------------------------------------------
+
+  We suggest using Sitescooper together with Plucker to pluck various
+  hard-to-get-at sites.  Sitescooper has many features for pulling over
+  pages that will be slow to appear in Plucker.
+
+  For more information on Sitescooper, see www.sitescooper.org.
+
+
+3.7  I'd like to use Plucker for (books, reports, etc.) which I sell.
+     Is there any way to protect a Plucker document from theft?
+----------------------------------------------------------------------
+
+  Plucker documents can be built with an 'owner-id', which must
+  correspond to the HotSync ID on a Palm for the document to be opened
+  on that Palm.  This is similar to the document-locking schemes used
+  by many commercial sites.  Use the --owner-id switch on the parser
+  to do this.
+
+
+
+*-*-*-*-*-*-*-*
+Configuration:
+*-*-*-*-*-*-*-*
+
+4.1 How do I configure the parser to create ZLib compressed databases?
+----------------------------------------------------------------------
+
+  By setting the compression key in the configuration file (.pluckerrc
+  for Unix/Linux, plucker.ini for Windows and OS/2) to zlib the parser will
+  use ZLib instead of DOC compression for the databases. You can always
+  change this behavior at run-time by using the --zlib-compression or the
+  --doc-compression options.
+
+
+
+*-*-*-*-*-*-*
+Development:
+*-*-*-*-*-*-*
+
+5.1 Why does make only build the viewer application but never the ZLib library?
+-------------------------------------------------------------------------------
+
+  You didn't read the README in the viewer dir, did you? The zlib package
+  must be downloaded separately and put in viewer/ZLIb *before* attempting
+  to configure Plucker.
+
+
+5.2 Where can I get zlib?
+-------------------------
+
+  You can download zlib from its home page at 
+
+    http://www.gzip.org/zlib/
+
+  Put the package in viewer/ZLib before you run configure.
+
+
+5.3 Where can I get prc-tools?
+------------------------------
+
+  prc-tools 2.x can be downloaded at:
+
+    http://prc-tools.sourceforge.net/
+
+
+
+5.4 Why is the <module X> so messy?
+-----------------------------------
+
+  Well, the old legacy parser (a bunch of awk scripts) was only a temporary
+  solution and have been replaced with a Python-based parser. That should
+  make it easier to comprehend what it actually does! We believe that the
+  rendering of documents for the Palm device should be specialized, so we
+  intend to continue to render the documents in the parser/viewer.
+
+  If you haven't looked at the viewer since 0.02 then you would probably be
+  surprised. The single source file of version 0.02 has been split up in
+  several files and the viewer is approaching being optimal, but there are
+  some issues, particularly with implied structure coupling, and lack of
+  documentation, both of which we wish to address.
+
+  The conduit is not clever. It will upload pages to the database even if
+  they already exist and have not changed. This should obviously be fixed so
+  that a full 360 degree synchronization process can be achieved.
+
+
+
+*-*-*-*-*-*-*-*-*-*-*-*
+Miscellaneous Questions:
+*-*-*-*-*-*-*-*-*-*-*-*
+
+6.1 Can you suggest some good web pages for Plucker?
+----------------------------------------------------
+
+  In the appendix of the User's Guide you'll find a collection of links to
+  some good web pages for Plucker.
+
+
+6.2 What are some of the features of Plucker?
+---------------------------------------------
+
+   o Plucker is designed for off-line browsing on a small screen. It doesn't
+     attempt to make HTML pages look like they appear on a monitor; instead,
+     it tries to make them readable and useful.
+
+   o The history buttons always work, even from the home page.
+ 
+   o You can scroll nicely with the scroll buttons or the pen.
+
+   o On-screen indication of visited links.
+
+   o Image support
+
+   o Named anchors (such as <A HREF="#here">)
+
+   o Very impressive compression of records to save space on the device.
+
+   o Support for multiple databases and multiple versions of the same
+     content.
+
+   o Search function for current page and all pages in a database
+
+   o Bookmarks
+
+   o Possible to copy URLs to a memo
+
+   o E-mail support
+
+   o There are dozens more features not listed here, go ahead and give
+     Plucker a go, and try them all out for yourself.
+
+6.3 What features does Plucker not implement?
+---------------------------------------------
+
+  The following is a (non-exhaustive) list of unimplemented features. Apart
+  from frames, we intend to include this functionality in the future:
+
+   o Frames (it might be possible to implement this in a links kind of way
+     by rendering and converting the frames to tables, much like the links
+     browser).
+
+   o Document titles are not currently uploaded to the Palm device.
+
+   o Various HTML tags (e.g. <FONT>, <SUP>, etc) are not supported
+
+   o Javascript, DHTML, Java, CSS
+
+6.4 What other features can we expect?
+--------------------------------------
+
+  Here is a list of other ideas for Plucker. No promises! A TODO list sorted
+  both by category and by date can be found on the Plucker developer's page.
+
+   o We intend to integrate Plucker with the popular free desktop managers
+     (namely, KDE and the Gnome). In these environments it would be great if
+     you could Drag-'n'-Drop a URL into the Palm device for off-line
+     viewing.
+
+   o The ability to modify parameters, such as the maximum link depth, from
+     the Palm device, so that the next HotSync will retrieve more/less data.
+ 
+   o The ability to "send" a web page from the Palm device to an internet
+     mail address.
+
+   o Cron-based gathering of HTML pages, prior to a HotSync (to
+     significantly reduce HotSync time).
+
+   o Parallel gathering/parsing/conduit (to reduce HotSync time).
+
+   o Smart gathering/conduit; only update a document if it's actually
+     changed.  (Reduce hotsync time).
+
+   o Compatibility with AvantGo's .subs files, and the .site files that a
+     similar product SiteScooper reads.
+
+  Of course, if you want to help add these (or other) features, feel free to
+  implement them.
+
+
+6.5 Where can I find Plucker eBooks?
+------------------------------------
+
+  Apart from the samples you can find at the Plucker web site, there are
+  other sites that have eBooks as well.
+
+	Memoware has a growing collection of Plucker eBooks submitted by
+	contributors and users of Plucker.
+
+		http://www.memoware.com/
+
+	You can also find several Plucker eBooks at Byron Collins' site
+
+		http://home.clarksville.com/~bcollins/index.htm
+
+	Curt 'n' Dave's Plucker-book Repository
+
+		http://www.pluckerbooks.com/
+
+	Nick Vargish's Bandersnatch Unpress 
+
+		http://unpress.bandersnatch.org/
+
+	The "Linux Documentation Project" (LDP) now releases all its HOWTOs
+	and mini-HOWTOs in Plucker format. They are located under the
+	'Additional HOWTO-related items' at the following url::
+
+		http://www.tldp.org/docs.html#howto
+
+		or
+
+		http://ibiblio.org/pub/Linux/docs/LDP/pluckerdb
+

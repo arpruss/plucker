@@ -1,0 +1,156 @@
+#!/usr/bin/env python
+
+"""
+$Id: install-plucker,v 1.75 2004/05/19 14:30:42 nordstrom Exp $
+
+Install Plucker on a Unix/Linux system
+
+Copyright 2000 Michael Nordström <micke@sslug.dk>
+
+Distributable under the GNU General Public License Version 2 or newer.
+"""
+
+import string, sys, os, shutil
+
+VERSION="1.9"
+
+# are we using the binary package or the source package?
+BINPKG='@@BINPKG@@'
+
+# default install targets
+TARGET="install-prc-files install-manual install-data"
+
+# set up the Python environment
+PYTHON_LIBVER = string.split(sys.version)[0]
+while '.' in PYTHON_LIBVER:
+    trim = PYTHON_LIBVER[:string.rfind(PYTHON_LIBVER, '.')]
+    if '.' not in trim:
+        break
+    PYTHON_LIBVER = trim
+PYTHON_LIBDIR=os.path.join(os.path.join(sys.prefix, 'lib'),'python%s' % PYTHON_LIBVER)
+MODULE_DIR=os.path.join(PYTHON_LIBDIR, "site-packages")
+
+def get_answer(question, default = 'n'):
+    while 1:
+        answer = raw_input (question + "? <y/n> [" + default + "] ")
+        if answer:
+            if answer == 'y' or answer == 'Y':
+                ret = 1
+                break
+            elif answer == 'n' or answer == 'N':
+                ret = 0
+                break
+            else:
+                print "Please answer y or n"
+        else:
+            if default == 'y' or default == 'Y':
+                ret = 1
+            else:
+                ret = 0
+            break
+    return ret
+
+#
+# Main
+#
+
+print "\nThis script will guide you through the installation of Plucker %s" % VERSION
+print "If you run this script as root the default values should be OK, if you"
+print "want to install Plucker as a normal user you have to change the paths."
+
+MAKE = "gmake"
+if os.system('gmake --version | grep GNU > /dev/null 2>&1'):
+    MAKE = "make"
+    if os.system('make --version | grep GNU >/dev/null 2>&1'):
+        print "\nGNU Make is required to run this script\n"
+        sys.exit(1)
+
+CONFIGOPT=""
+PREFIX="/usr/local"
+answer = raw_input("\nInstallation path prefix [" + PREFIX + "]: ")
+if answer:
+    PREFIX=answer
+    CONFIGOPT = CONFIGOPT + " --prefix=%s" % PREFIX
+
+BIN_DIR=os.path.join(PREFIX, "bin")
+answer = raw_input("In which directory do you want to install the binary files [" + BIN_DIR + "]: ")
+if answer:
+    BIN_DIR=answer
+    CONFIGOPT = CONFIGOPT + " --bindir=%s" % BIN_DIR
+
+MOD_DIR=""
+init_py = os.path.join(MODULE_DIR, "PyPlucker", "__init__.py")
+if not (os.path.exists(init_py) and get_answer("Use existing Python parser in %s" % MODULE_DIR)):
+    TARGET = TARGET + " install-pyplucker"
+    if get_answer("Install Python parser in default location for site packages, %s" % MODULE_DIR):
+        MOD_DIR=MODULE_DIR
+    else:
+        MOD_DIR=PREFIX
+        answer = raw_input("In which directory do you want to install the Python parser [" + MOD_DIR + "]: ")
+        if answer:
+            MOD_DIR=answer
+    CONFIGOPT = CONFIGOPT + " --with-pypluckerdir=%s" % os.path.join(MOD_DIR, "PyPlucker")
+
+PLUCKERDIR=os.path.join(PREFIX, "share", "plucker")
+answer = raw_input("In which directory do you want to install the Plucker data [" + PLUCKERDIR + "]: ")
+if answer:
+    PLUCKERDIR=answer
+    CONFIGOPT = CONFIGOPT + " --with-pluckerdir=%s" % PLUCKERDIR
+
+answer = raw_input("In which directory do you want to install the documentation [" + os.path.join(PLUCKERDIR, "doc") + "]: ")
+if answer:
+    CONFIGOPT = CONFIGOPT + " --with-docdir=%s" % answer
+
+PLUCK_COMICS='no'
+if get_answer("Do you want to install pluck-comics (used to gather comics from selected websites)", 'y'):
+    TARGET = TARGET + " install-pluck_comics"
+    PLUCK_COMICS='yes'
+    answer = raw_input("  In which directory do you want to put the downloaded comics [/var/spool/netcomics]: ")
+    if answer:
+        CONFIGOPT = CONFIGOPT + " --with-comicsdir=%s" % answer
+
+if BINPKG == 'yes' or not get_answer("Do you want to build the documentation", 'y'):
+    CONFIGOPT = CONFIGOPT + " --disable-docbuild"
+
+if BINPKG == 'yes' or not get_answer("Do you want to build the viewer and ZLib binaries", 'y'):
+    CONFIGOPT = CONFIGOPT + " --disable-palmosbuild"
+
+#if BINPKG == 'yes':
+#CONFIGOPT = CONFIGOPT + " --disable-desktopbuild"
+#if get_answer("Do you want to install the GUI desktop tool", 'y'):
+#TARGET = TARGET + " install-desktop"
+#elif not get_answer("Do you want to build the GUI desktop tool", 'y'):
+CONFIGOPT = CONFIGOPT + " --disable-desktopbuild"
+
+print "\nRunning ./configure%s\n" % CONFIGOPT
+os.system("cd .. && ./configure%s" % CONFIGOPT)
+
+if not get_answer("Continue", 'y'):
+    sys.exit(1)
+
+print "\nRunning GNU make...\n"
+os.system("cd .. && %s && %s %s" % (MAKE,MAKE,TARGET))
+
+if BIN_DIR:
+    if not MOD_DIR:
+        MOD_DIR=MODULE_DIR
+
+    if os.path.exists(os.path.join(BIN_DIR, "plucker-build")):
+        os.remove(os.path.join(BIN_DIR, "plucker-build"))
+    os.symlink(os.path.join(MOD_DIR, "PyPlucker", "Spider.py"), os.path.join(BIN_DIR, "plucker-build"))
+
+    if os.path.exists(os.path.join(BIN_DIR, "plucker-decode")):
+        os.remove(os.path.join(BIN_DIR, "plucker-decode"))
+    os.symlink(os.path.join(MOD_DIR, "PyPlucker", "PluckerDocs.py"), os.path.join(BIN_DIR, "plucker-decode"))
+
+    if os.path.exists(os.path.join(BIN_DIR, "plucker-dump")):
+        os.remove(os.path.join(BIN_DIR, "plucker-dump"))
+    os.symlink(os.path.join(MOD_DIR, "PyPlucker", "Decode.py"), os.path.join(BIN_DIR, "plucker-dump"))
+
+    if PLUCK_COMICS == 'yes':
+        if os.path.exists(os.path.join(BIN_DIR, "pluck-comics")):
+            os.remove(os.path.join(BIN_DIR, "pluck-comics"))
+        os.symlink(os.path.join(MOD_DIR, "PyPlucker", "pluck-comics.py"), os.path.join(BIN_DIR, "pluck-comics"))
+
+if os.getuid() != 0 and os.path.exists(os.path.join(BIN_DIR, "plucker-setup")) and get_answer("\nDo you want to run plucker-setup now", 'y'): 
+    os.system(os.path.join(BIN_DIR, "plucker-setup"))

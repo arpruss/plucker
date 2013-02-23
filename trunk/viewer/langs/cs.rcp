@@ -1,0 +1,998 @@
+/* $Id: cs.rcp,v 1.154 2006/11/12 16:23:45 prussar Exp $ */
+
+/**********************************************************
+ * Czech resources - Ondrej Palkovsky <ondrap@penguin.cz> *
+ **********************************************************/
+
+TRANSLATION "cs"
+BEGIN
+
+
+"$$LANG"                    =   "cs"
+
+
+/*************************************************************
+ *                      MENU OPTIONS                         *
+ *************************************************************/
+
+"$$ABOUT PLUCKER"           =   "O Pluckeru"
+"$$ADD BOOKMARK..."         =   "P¯idat z·loûku..."
+"$$BACK"                    =   "ZpÏt"
+"$$BOOKMARKS..."            =   "Z·loûky..."
+"$$BOTTOM"                  =   "Konec"
+"$$CONTACT DEVELOPERS"      =   "Kontaktujte v˝voj·¯e"
+"$$DELETE ALL..."           =   "Smazat vöe..."
+/*************************************************************/
+"$$DELETE READ..."          =   "Delete read documents..."
+/*************************************************************/
+"$$DETAILS..."              =   "Detaily..."
+"$$FIND AGAIN"              =   "Hledat znovu"
+"$$FIND..."                 =   "NajÌt..."
+"$$FORWARD"                 =   "Vp¯ed"
+"$$GO"                      =   "Jdi"
+"$$HOME"                    =   "Dom˘"
+"$$OPTIONS"                 =   "Volby"
+"$$PREFERENCES..."          =   "NastavenÌ..."
+"$$TOP"                     =   "ZaË·tek"
+"$$VIEW"                    =   "ZobrazenÌ"
+"$$AUTOSCROLL FASTER"       =   "RychlejöÌ autoposun"
+"$$AUTOSCROLL SLOWER"       =   "PomalejöÌ autoposun"
+"$$DELETE DOC..."           =   "Smazat dokument..."
+"$$LIBRARY..."              =   "DB ManaûÈr..."
+"$$START AUTOSCROLL"        =   "Spustit autposun"
+"$$STOP AUTOSCROLL"         =   "Zastavit autoposun"
+"$$SYNC LIST"               =   "Obnovit seznam dokument˘"
+/************************************************************/
+"$$SELECT FONT..."          =   "Font and layout..."
+"$$COPY TO MEMO"            =   "Export to Memo"
+"$$SHOWHIDE"                =   "Show/Hide"
+"$$SORT"                    =   "Sort"
+"$$NAME"                    =   "Name"
+"$$TYPE"                    =   "Type"
+"$$DATE"                    =   "Date"
+"$$SIZE"                    =   "Size"
+"$$CATEGORY"                =   "Category"
+"$$TOGGLE FULLSCREEN"       =   "Toggle fullscreen"
+"$$LOOKUP WORD"             =   "Lookup word"
+"$$SET KEYBOARD/GRAFFITI..."   =   "Set keyboard/graffiti..."
+/************************************************************/
+
+
+/*************************************************************
+ *                        SHORTCUTS                          *
+ *************************************************************/
+
+"$$SC ADD BOOKMARK"         =   "+"
+"$$SC FIND AGAIN"           =   "A"
+"$$SC BOTTOM"               =   "B"
+"$$SC COPY TO MEMO"         =   "C"
+"$$SC DELETE ALL"           =   "D"
+"$$SC DELETE DOC"           =   "D"
+"$$SC BOOKMARKS"            =   "E"
+"$$SC FIND"                 =   "F"
+"$$SC LOOKUP WORD"          =   "G"
+"$$SC START AUTOSCROLL"     =   "H"
+"$$SC DETAILS"              =   "I"
+"$$SC STOP AUTOSCROLL"      =   "J"
+"$$SC AUTOSCROLL FASTER"    =   "K"
+"$$SC LIBRARY"              =   "M"
+"$$SC PREFERENCES"          =   "N"
+"$$SC HOME"                 =   "O"
+"$$SC AUTOSCROLL SLOWER"    =   "Q"
+"$$SC SELECT FONT"          =   "S"
+"$$SC TOGGLE FULLSCREEN"    =   "T"
+"$$SC SYNC LIST"            =   "U"
+"$$SC FORWARD"              =   "V"
+"$$SC SET KEYBOARD/GRAFFITI"   =   "W"
+"$$SC TOP"                  =   "Y"
+"$$SC BACK"                 =   "Z"
+
+
+/*************************************************************
+ *                         FORMS                             *
+ *************************************************************/
+
+/*** MAIN ***/
+
+"$$MAIN: ADD BOOKMARK"              =   "P¯idat z·loûku"
+"$$MAIN: BOTTOM"                    =   "Konec"
+"$$MAIN: FOLLOW LINK"               =   "N·sleduj odkaz"
+"$$MAIN: OPEN IMAGE"                =   "Otev¯i obr·zek"
+"$$MAIN: TOP"                       =   "ZaË·tek"
+"$$MAIN: VIEW BOOKMARKS"            =   "Zobrazit z·loûky"
+"$$MAIN: 10%"                       =   "10%"
+"$$MAIN: 20%"                       =   "20%"
+"$$MAIN: 30%"                       =   "30%"
+"$$MAIN: 40%"                       =   "40%"
+"$$MAIN: 50%"                       =   "50%"
+"$$MAIN: 60%"                       =   "60%"
+"$$MAIN: 70%"                       =   "70%"
+"$$MAIN: 80%"                       =   "80%"
+"$$MAIN: 90%"                       =   "90%"
+/************************************************************/
+"$$MAIN: ADD ANNOTATION"            =   "Add annotation"
+/************************************************************/
+
+/*** ABOUT ***/
+
+"$$ABOUT: BODY1"                    =   "Plucker je balÌk program˘, kterÈ"
+"$$ABOUT: BODY2"                    =   "poskytujÌ offline browser pro systÈm"
+"$$ABOUT: BODY3"                    =   "PalmOS. Je to to tzv. Free"
+"$$ABOUT: BODY4"                    =   "Software. M˘ûete ho distribu-"
+"$$ABOUT: BODY5"                    =   "ovat pod podmÌnkami General Public"
+"$$ABOUT: BODY6"                    =   "License od Free Software Foundation."
+"$$ABOUT: WEBSITE"                  =   "www.plkr.org"
+"$$ABOUT: OK"                       =   "OK"
+"$$ABOUT: TITLE"                    =   "O Pluckeru"
+
+
+/*** DOCUMENT LIBRARY ***/
+
+"$$LIBRARY: BEAM"                   =   "Beam"
+"$$LIBRARY: CATEGORIZE"             =   "Kategorie"
+"$$LIBRARY: CATEGORY"               =   "Kateg."
+"$$LIBRARY: DATE"                   =   "Datum"
+"$$LIBRARY: DELETE"                 =   "Smazat"
+"$$LIBRARY: NAME"                   =   "JmÈno"
+"$$LIBRARY: OPEN"                   =   "Otev¯Ìt"
+"$$LIBRARY: RENAME"                 =   "P¯ejmenovat"
+"$$LIBRARY: SHOW:"                  =   "Zobraz:"
+"$$LIBRARY: SIZE"                   =   "KB"
+"$$LIBRARY: TITLE"                  =   "DB ManaûÈr"
+"$$LIBRARY: NO DOCUMENTS"           =   "Nenalezeny û·dnÈ dokumenty"
+/*************************************************************/
+"$$LIBRARY: UNREAD"                 =   "Unread"
+/*************************************************************/
+"$$LIBRARY: HELP"                   =
+    "o Z tohoto mÌsta je moûnÈ spravovat nainstalovanÈ datab·ze.  "\
+    "Jestliûe chcete zmÏnit datab·zi, vyberte novou v nabÌdce a stisknÏte "\
+    "tlaËÌtko Otev¯Ìt."\
+    "\n\n"\
+    "o Jestliûe se dotknete ikonky vedle jmÈna datab·ze, objevÌ se v·m nabÌdka, "\
+    "ve kterÈ m˘ûete prov·dÏt r˘znÈ operace s databazÌ (otev¯Ìt, kategorizovat, "\
+    "smazat a p¯ejmenovat)."\
+    "\n\n"\
+    "o Datab8ze se mohou t¯Ìdit podle jmÈna i data, vzestupnÏ i sestupnÏ. "
+
+
+/*** RENAME DOCUMENT ***/
+
+"$$RENAME: CANCEL"                  =   "Storno"
+"$$RENAME: NAME:"                   =   "Zadejte novÈ jmÈno:"
+"$$RENAME: RENAME"                  =   "P¯ejmenovat"
+"$$RENAME: TITLE"                   =   "P¯ejmenovat"
+
+
+/*** PREFERENCES ***/
+
+"$$PREFS: TITLE"                    =   "NastavenÌ"
+"$$PREFS: OK"                       =   "OK"
+"$$PREFS: CANCEL"                   =   "Storno"
+"$$PREFS: LIBRARY"                  =   "DB ManaûÈr"
+"$$PREFS: AUTOSCROLL"               =   "Autoposun"
+"$$PREFS: BUTTON"                   =   "TlaËÌtka"
+"$$PREFS: CONTROL"                  =   "Dotyku"
+"$$PREFS: GESTURE"                  =   "Gest"
+/****************************************************************************/
+"$$PREFS: GENERAL"                  =   "General"
+"$$PREFS: LAYOUT"                   =   "Layout"
+"$$PREFS: HARDCOPY"                 =   "Export"
+"$$PREFS: JOGDIAL"                  =   "JogDial"
+"$$PREFS: LOOKUP"                   =   "Lookup"
+"$$PREFS: COLOR"                    =   "Color"
+"$$PREFS: FONT"                     =   "Font"
+/****************************************************************************/
+
+
+/*** GENERAL PREFERENCES ***/
+
+"$$PREFSGENERAL: ADD BOOKMARK..."          =   "P¯idat z·loûku..."
+"$$PREFSGENERAL: BOTTOM TOOLBAR"           =   "Dole"
+"$$PREFSGENERAL: BOTTOM"                   =   "Konec"
+"$$PREFSGENERAL: BUTTON ACTION..."         =   "Akce tlaËÌtka..."
+"$$PREFSGENERAL: COMMAND BUTTON:"          =   "TlaËÌtko na p¯ÌkazovÈ liötÏ:"
+"$$PREFSGENERAL: DELETE DOC..."            =   "Smazat dokument..."
+"$$PREFSGENERAL: DETAILS..."               =   "Detaily..."
+"$$PREFSGENERAL: LEFT"                     =   "Vlevo"
+"$$PREFSGENERAL: NO TOOLBAR"               =   "é·dn·"
+"$$PREFSGENERAL: NONE"                     =   "Nic"
+"$$PREFSGENERAL: NONE"                     =   "Nic"
+"$$PREFSGENERAL: PREFERENCES..."           =   "NastavenÌ..."
+"$$PREFSGENERAL: RIGHT"                    =   "Vpravo"
+"$$PREFSGENERAL: SCREEN DEPTH:"            =   "Barevn· hlubka:"
+"$$PREFSGENERAL: TAP ACTION..."            =   "Akce dotyku..."
+"$$PREFSGENERAL: TOOLBAR:"                 =   "Liöta:"
+"$$PREFSGENERAL: TOP TOOLBAR"              =   "Naho¯e"
+"$$PREFSGENERAL: TOP"                      =   "ZaË·tek"
+/****************************************************************/
+"$$PREFSGENERAL: ALWAYS DELETE ANNOTATIONS"    = "Delete notes/marks with doc"
+"$$PREFSGENERAL: ANNOTATIONS IN BOOKMARK LIST" = "List annotations with bookmarks"
+"$$PREFSGENERAL: COPY TO MEMO"             =   "Export to Memo"
+"$$PREFSGENERAL: SCROLLBAR:"               =   "Scrollbar:"
+"$$PREFSGENERAL: SILK TOOLBAR"             =   "In silk"
+/****************************************************************************/
+"$$PREFSGENERAL: HELP"                     =
+    "o Na za¯ÌzenÌ s PalmOS 3.5 m˘ûete vybrat jedno z tlaËÌtek pro "\
+    "n·strojovou liötu. "\
+    "Tato volba nem· û·dn˝ efekt na ostatnÌch verzÌch Palm OSu."\
+    "\n\n"\
+    "o M˘ûete nastavit poËet barev, s kter˝mi bude vaöe za¯ÌzenÌ pracovat."\
+    "\n\n"\
+    "o N·strojovou liötu m˘ûete mÌt naho¯e, dole, p¯ÌpadnÏ ji ˙plnÏ vypnout."\
+    "\n\n"\
+    "o M˘ûete mÌt lev˝ scrollbar, prav˝ scrollbar nebo û·dn˝ scrollbar."
+
+
+/*** LAYOUT PREFERENCES ***/
+
+"$$PREFSLAYOUT: UNDERLINE"               =   "Povol podtrûenÌ textu"
+/****************************************************************************/
+"$$PREFSLAYOUT: ALIGNMENT:"              =   "Alignment"
+"$$PREFSLAYOUT: AS IN DOC"               =   "As in document"
+"$$PREFSLAYOUT: FORCE LEFT"              =   "Force left"
+"$$PREFSLAYOUT: FORCE RIGHT"             =   "Force right"
+"$$PREFSLAYOUT: FORCE CENTER"            =   "Force center"
+"$$PREFSLAYOUT: FORCE JUSTIFY"           =   "Force justify"
+"$$PREFSLAYOUT: ENABLE SOFT-HYPHENS"     =   "Enable soft-hyphens"
+"$$PREFSLAYOUT: ENABLE MARGINS"          =   "Enable margins"
+"$$PREFSLAYOUT: CONNECT PARTS WITH PAGING"
+                                           =   "Connect parts with paging"
+/***************************************************************************/
+"$$PREFSLAYOUT: HELP"                    =
+    "o Jestliûe povolÌte tuto volbu, vöechny odkazy budou oznaËeny "\
+    "teËkovanou Ëarou a pln· Ë·ra bude pouûita pro <U> tag. "\
+    "P¯eËtenÈ/nep¯eËtenÈ odkazy je moûnÈ odliöit povolenÌm p¯eökrtnutÌ odkaz˘."\
+    "\n\n"\
+/***************************************************************************/
+    "o You can connect multipart documents with the paging "\
+    "controls so that using a page-down (or half-page-down) "\
+    "control on the last screen of a page will take you to "\
+    "the last displayed link, and similarly for using a page-up or "\
+    "half-page-up control on the first screen."\
+    "\n\n"\
+    "o You can override the document's alignment settings."
+/***************************************************************************/
+
+
+/*** FONT PREFERENCES ***/
+/*************************************************************/
+"$$PREFSFONT: LIBRARY"      =   "Library"
+"$$PREFSFONT: MAIN"         =   "Main"
+/*************************************************************/
+
+
+/*** COLOR PREFERENCES ***/
+
+"$$PREFSCOLOR: STRIKE-THROUGH"          =   "Povolit p¯eökrtnutÌ"
+/***************************************************************************/
+"$$PREFSCOLOR: FORCE DEFAULT TEXT COLORS" =  "Force default text colors"
+/***************************************************************************/
+"$$PREFSCOLOR: HELP"                    =
+    "o Jestliûe m·te pocit, ûe nerozliöÌte dob¯e, jestli byl odkaz "\
+    "navötÌven nebo ne, m˘ûete zkusit povolit p¯eökrtnutÌ. Vöechny "\
+    "navötÌvenÈ odkazy budou potÈ p¯eökrtnuty."\
+    "\n\n"\
+/***************************************************************************/
+    "o You can force text to be black and links to be blue."
+/***************************************************************************/
+
+
+/*** LIBRARY PREFERENCES ***/
+
+/****************************************************************************/
+"$$PREFSLIBRARY: UPDATE DOCLIST"           =   "Update list:"
+"$$PREFSLIBRARY: AUTOMATIC"                =   "Automatic"
+"$$PREFSLIBRARY: MANUAL"                   =   "Manual"
+"$$PREFSLIBRARY: IGNORE CARD"              =   "Ignore card"
+"$$PREFSLIBRARY: ADVANCED"                 =   "Advanced"
+"$$PREFSLIBRARY: ASCENDING"                =   "Ascending"
+"$$PREFSLIBRARY: CATEGORY STYLE:"          =   "Category Style:"
+"$$PREFSLIBRARY: CLASSIC"                  =   "Classic"
+"$$PREFSLIBRARY: DATE"                     =   "Date"
+"$$PREFSLIBRARY: DATE/TIME"                =   "Use date/time for sort by date"
+"$$PREFSLIBRARY: DESCENDING"               =   "Descending"
+"$$PREFSLIBRARY: NAME"                     =   "Name"
+"$$PREFSLIBRARY: SHOW DATE COLUMN"         =   "Show Date Column"
+"$$PREFSLIBRARY: SHOW SIZE COLUMN"         =   "Show Size Column"
+"$$PREFSLIBRARY: SHOW TYPE COLUMN"         =   "Show Type Column"
+"$$PREFSLIBRARY: SIZE"                     =   "Size"
+"$$PREFSLIBRARY: SORT BY:"                 =   "Sort Documents By:"
+"$$PREFSLIBRARY: SORT ORDER:"              =   "Sort Order:"
+"$$PREFSLIBRARY: TYPE"                     =   "Type"
+"$$PREFSLIBRARY: CATEGORY"                 =   "Category"
+"$$PREFSLIBRARY: INDICATE OPENED"          =   "Enable Strike-through"
+"$$PREFSLIBRARY: HELP"                     =
+    "o Because it can be a slow process to update the list of documents on "\
+    "some devices there is an option to select whether the list should be "\
+    "automatically updated (both RAM and external cards), automatically "\
+    "updated (only RAM), or manually updated."\
+    "\n\n"\
+/****************************************************************************/
+    "o Datab8ze se mohou t¯Ìdit podle jmÈna i data, vzestupnÏ i sestupnÏ. "\
+/*************************************************************/
+    "\n\n"\
+    "o It is possible to select whether the sort by date should use only the "\
+    "date or if it should use both date and time (faster, but could make the "\
+    "list look 'unsorted')."
+/*************************************************************/
+
+
+/*** AUTOSCROLL PREFERENCES ***/
+
+"$$PREFSAUTOSCROLL: AUTOSCROLL DELAY:"       =   "Prodleva autoposunu:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL DIRECTION:"   =   "SmÏr autoposunu:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL JUMP:"        =   "Skok autoposunu:"
+"$$PREFSAUTOSCROLL: DOWN"                    =   "Dol˘"
+"$$PREFSAUTOSCROLL: MILLISECONDS"            =   "msec"
+"$$PREFSAUTOSCROLL: PAGE(S)"                 =   "Strana(y)"
+"$$PREFSAUTOSCROLL: PIXEL(S)"                =   "Pixel(y)"
+"$$PREFSAUTOSCROLL: STAY ON"                 =   "NeusÌnat p¯i autoposunu"
+"$$PREFSAUTOSCROLL: UP"                      =   "Nahor˘"
+"$$PREFSAUTOSCROLL: HELP"                    =
+    "o Tento formul·¯ umoûÚuje zmÏnit chov·nÌ autoposunu."\
+    "\n\n"\
+    "o Je moûnÈ nastavit automatick˝ posun o urËit˝ poËet bod˘ nebo str·nek."\
+    "\n\n"\
+    "o Je moûnÈ nastavit smÏr automatickÈho posunu nahoru i dol˘." \
+    "\n\n"\
+    "o Je moûnÈ nastavit prodlevu mezi kaûd˝m posuny. Prodleva se mÏ¯Ì "\
+    "v milisekund·ch."\
+    "\n\n"\
+    "o Je moûnÈ zabr·nit, aby se za¯ÌzenÌ samo vyplo v pr˘bÏho autoposunu. "\
+    "Plucker bude posouvat str·nky, dokud nenarazÌ na konec dokumentu, "\
+    "vybije se baterie, ùuknete na obrazovku nebo vypnete za¯ÌzenÌ."\
+    "\n\n"\
+/******************************************************************/
+    "o Note that while autoscrolling is happening, you can control "\
+    "the speed with buttons on the toolbar as well as with all the controls "\
+    "(such as Page Up/Down keys) that normally are used to scroll by "\
+    "a screen or half a screen."
+/******************************************************************/
+
+
+/*** HARDCOPY PREFERENCES ***/
+
+/****************************************************************************/
+"$$PREFSHARDCOPY: TITLE"            =   "Hardcopy Actions"
+"$$PREFSHARDCOPY: ACTION:"          =   "Action:"
+"$$PREFSHARDCOPY: DIALOG"           =   "Dialog"
+"$$PREFSHARDCOPY: IMMEDIATE"        =   "Immediate"
+"$$PREFSHARDCOPY: RANGE:"           =   "Range:"
+"$$PREFSHARDCOPY: IN VIEW AREA"     =   "In view area"
+"$$PREFSHARDCOPY: VISIBLE PARAGRAPHS" = "Visible paragraphs"
+"$$PREFSHARDCOPY: LINK:"            =   "Link:"
+"$$PREFSHARDCOPY: BOTTOM"           =   "Bottom"
+"$$PREFSHARDCOPY: INLINE"           =   "Inline"
+"$$PREFSHARDCOPY: NONE"             =   "None"
+"$$PREFSHARDCOPY: HELP"  =  
+    "o You can choose the action of 'export to memo' feature in this form. This feature enables you to clip, edit, and export text in the current view area to Palm's standard memopad."\
+    "\n\n"\
+    "o Clipped text can be edited in dialog, or be copied immediately to memopad."\
+    "\n\n"\
+    "o Text in the current viewarea or in the visible paragraphs is clipped."\
+    "\n\n"\
+    "o URLs of the links are listed at the bottom, indicated inline, or simply ignored."
+/****************************************************************************/
+
+
+/*** EXTERNALLINK PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSEXTERNALLINK: TITLE"            =   "External Link Handling"
+"$$PREFSEXTERNALLINK: ACTION:"          =   "Action:"
+"$$PREFSEXTERNALLINK: DIALOG"           =   "Dialog"
+"$$PREFSEXTERNALLINK: TO MEMO"          =   "Directly to memopad"
+"$$PREFSEXTERNALLINK: BROWSE"           =   "Browse"
+/*************************************************************/
+
+
+/*** BUTTON PREFERENCES ***/
+
+"$$PREFSBUTTONS: HARD KEYS"              =   "Kl·vesy pro navigaci"
+/****************************************************************************/
+"$$PREFSBUTTONS: ARROW KEYS"             =   "Activate custom arrow keys"
+/****************************************************************************/
+"$$PREFSBUTTONS: HELP"                   =
+    "o Jestliûe povolÌte Navigaci kl·vesami, m˘ûete p¯i¯adit kaûdÈmu tlaËÌtku "\
+    "specifick˝ ˙kol."
+
+
+/*** CONTROL PREFERENCES ***/
+
+"$$PREFSTAP: MODE 1"                     =   "MÛd 1"
+"$$PREFSTAP: MODE 2"                     =   "MÛd 2"
+"$$PREFSTAP: MODE 3"                     =   "MÛd 3"
+"$$PREFSTAP: PEN SCROLL MSG1"            =   "Pro posouv·nÌ obrazu"
+"$$PREFSTAP: PEN SCROLL MSG2"            =   "sotknÏte se obrazovky"
+"$$PREFSTAP: PEN SCROLL MSG3"            =   "tahejte pero dol˘"
+"$$PREFSTAP: PEN SCROLL MSG4"            =   "a nahoru"
+"$$PREFSTAP: REGION ACTION:"             =   "Akce oblasti:"
+"$$PREFSTAP: HELP"                       =
+    "o Toto nastavenÌ v·m umoûnÌ nastavit chov·nÌ dotyk˘ pera. "\
+    "M˘ûete pouûÌt 3 r˘znÈ mÛdy."\
+    "\n\n"\
+    "o PrvnÌ dva mÛdy v·m umo¯nÌ rozdÏlit obrazovku na 4 Ë·sti a "\
+    "nastavit r˘znÈ ˙koly pro kaûdou z nich (nap¯. str·nku nahoru, dol˘, "\
+    "zpÏt, atd.)."\
+    "\n\n"\
+    "o T¯etÌ mÛd v·m umoûnÌ pohybovat textem posuvem pera po obrazovce."
+
+
+/*** GESTURE PREFERENCES ***/
+
+"$$PREFSGESTURES: USE GESTURES"          =   "Graffiti gesta pro navigaci"
+"$$PREFSGESTURES: HELP"                  =
+    "o Jestliûe povolÌte Ovl·d·nÌ gesty, m˘ûete p¯i¯adit r˘zn˝m gest˘m na "\
+    "graffiti ploöe r˘znÈ ˙koly."\
+    "\n\n"\
+    "o Existoje pÏt pouûiteln˝ch gest: tah doleva, tah doprava, tah nahoru, tah "\
+    "dol˘, a ùuknutÌ."\
+    "\n\n"\
+    "o KaûdÈmu z tÏchto gest m˘ûete p¯i¯adit r˘znÈ ˙koly."
+
+
+/*** JOGDIAL PREFERENCES ***/
+
+/****************************************************************************/
+"$$PREFSJOGDIAL: USE JOGDIALS"  =     "Enable JogDial for navigation"
+"$$PREFSJOGDIAL: HELP"  =
+    "o If you own a palm that has a JogDial, you can assign different " \
+    "actions to perform specific funtions in Plucker."\
+    "\n\n"\
+    "o There are six actions: scroll up, scroll down, push in, push in and " \
+    "up, push in and down and back. Not all actions may be available, "\
+    "depending on your device."\
+    "\n\n"\
+    "o You can select different events for each of the five JogDial actions."
+/****************************************************************************/
+
+
+/*** WORD LOOKUP PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSLOOKUP: ALWAYS ACTIVE"         = "Word lookup always active"
+"$$PREFSLOOKUP: ACTION:"               = "Action:"
+"$$PREFSLOOKUP: SEARCH FORM"           = "Insert into search form"
+"$$PREFSLOOKUP: PPI"                   = "Look up in PPI"
+"$$PREFSLOOKUP: TO CLIPBOARD"          = "Copy to the clipboard"
+"$$PREFSLOOKUP: ANNOTATE"              = "Annotate"
+"$$PREFSLOOKUP: HELP"                  =
+    "o Plucker has a word-lookup function.  When the function is active, "\
+    "tapping on a word selects that word and performs an action. "\
+    "\n\n"\
+    "o If word lookup is set to be always active, then tapping on a word "\
+    "not inside a link always selects a word."\
+    "\n\n"\
+    "o Otherwise, you can use the 'Lookup word' function in the 'Go' menu "\
+    "to turn on a temporary tap-selection mode for the next tap.  That "\
+    "function can also be assigned to a hard key or any other "\
+    "configurable control."\
+    "\n\n"\
+    "o Hint: To select a word that contains a non-alphanumeric character such "\
+    "as an apostrophe or a dash, tap on that character when selecting and all "\
+    "instances of that character will be treated as letters."
+/*************************************************************/
+
+
+/*** FONT SELECT ***/
+
+"$$FONTS: FONT:"                    =   "Font:"
+"$$FONTS: OK"                       =   "OK"
+"$$FONTS: CANCEL"                   =   "Storno"
+/****************************************************************************/
+"$$FONTS: SELECT FONT"              =   "Select font and layout"
+"$$FONTS: ROTATE:"                  =   "Rotation: "
+"$$FONTS: NONE"                     =   "None"
+"$$FONTS: COUNTERCLOCKWISE"         =   "Counterclockwise"
+"$$FONTS: CLOCKWISE"                =   "Clockwise"
+"$$FONTS: LINE SPACING:"            =   "Line spacing:"
+"$$FONTS: PARAGRAPH SPACING:"       =   "Paragraph spacing:"
+"$$FONTS: RTL"                      =   "RTL"
+"$$FONTS: BUILT-IN FONTS:"          =   "Built-in fonts:"
+"$$FONTS: USER-LOADED FONT:"        =   "User-loaded font:"
+"$$FONTS: VARY WITH DOCUMENT"       =   "Vary with document"
+"$$FONTS: ALSO SET AS DEFAULT"      =   "Also set as default"
+"$$FONTS: HELP"                     =
+    "ï You can select one of the standard Palm fonts or one "\
+    "of the built-in Plucker fonts."\
+    "\n\n"\
+    "ï If you have a Plucker font package loaded, you can select "\
+    "that, instead, if this is supported on your device."\
+    "\n\n"\
+    "ï You can vary line- and paragraph-spacing in the document. "\
+    "Setting the line-spacing to a negative value may cause some "\
+    "minor visual defects such as lines not showing up."\
+    "\n\n"\
+    "ï You can rotate the display by 90 degrees.  On OS 3.5, images"\
+    "will be omitted."\
+    "\n\n"\
+    "ï You can allow the font settings to vary between documents "\
+    "and if you do that, you will also have the option to make the "\
+    "current settings be the default ones for new documents."
+/****************************************************************************/
+
+
+/*** KEYBOARD CUSTOMIZATION ***/
+
+/****************************************************************************/
+"$$KEYBOARD: SET KEYBOARD / GRAFFITI"        =   "Set keyboard / graffiti"
+"$$KEYBOARD: KEYBOARD OR GRAFFITI"         =   "Keyboard or graffiti"
+"$$KEYBOARD: SPECIAL KEYS"          =   "Special keys"
+"$$KEYBOARD: OK"                    =   "OK"
+"$$KEYBOARD: CANCEL"                =   "Cancel"
+"$$KEYBOARD: DEFAULT"               =   "Default"
+"$$KEYBOARD: CLEAR"                 =   "Clear"
+"$$KEYBOARD: INTERFERENCE MSG1"     =   "Some settings can be incompatible"
+"$$KEYBOARD: INTERFERENCE MSG2"     =   "with gestures and/or Graffiti 2."
+"$$KEYBOARD: HELP"                  =
+    "ï If you have a keyboard, you can control Plucker with it. "\
+    "You can also control Plucker by using Graffiti to write "\
+    "down certain characters."\
+    "\n\n"\
+    "ï Printable characters such as 'a' or '$' can be typed in or "\
+    "drawn with Graffiti strokes directly into the customization form "\
+    "and then you can select the appropriate behavior."\
+    "\n\n"\
+    "ï Special keys like 'Return' or arrow keys need to be "\
+    "selected from the drop down list, and then you can select the "\
+    "appropriate actions."\
+    "\n\n"\
+    "ï Some characters/keys will not work if you have Graffiti "\
+    "gestures activated in the Plucker preferences.  In particular, "\
+    "the i, I, 1, l, L, period and backspace keys/characters and "\
+    "some shifted Graffiti characters "\
+    "will not be available unless you have gestures disabled."\
+    "\n\n"\
+    "ï Some characters are incompatible with Graffiti 2 input.  If "\
+    "you wish to control Plucker with Graffiti 2 input through this "\
+    "customization option, do not assign "\
+    "actions to multistroke characters.  Also, entering a Graffiti 2 "\
+    "multistroke character into Plucker while an action is assigned "\
+    "to the l, space, single quote, minus or backspace characters "\
+    "will lead to unexpected results."
+
+"$$KEY: RETURN"                     =   "Return"
+"$$KEY: TAB"                        =   "Tab"
+"$$KEY: UP"                         =   "Up"
+"$$KEY: DOWN"                       =   "Down"
+"$$KEY: LEFT"                       =   "Left"
+"$$KEY: RIGHT"                      =   "Right"
+"$$KEY: BACKSPACE"                  =   "Backspace"
+/****************************************************************************/
+
+
+/*** SELECTION ***/
+
+"$$SELECT: ADD BOOKMARK..."        =   "P¯idat z·loûku..."
+"$$SELECT: BOOKMARKS..."           =   "Z·loûky..."
+"$$SELECT: BUTTON ACTION..."       =   "Akce tlaËÌtka..."
+"$$SELECT: DETAILS..."             =   "Detaily..."
+"$$SELECT: FIND AGAIN"             =   "Hledat znovu"
+"$$SELECT: FIND..."                =   "NajÌt..."
+"$$SELECT: FULL PAGE DOWN"         =   "Str·nka dol˘" 
+"$$SELECT: FULL PAGE UP"           =   "Str·nka vzh˘ru"
+"$$SELECT: GESTURE ACTION..."      =   "NastavenÌ gest..."
+"$$SELECT: GO BACK"                =   "Jdi zpÏt" 
+"$$SELECT: GO FORWARD"             =   "Jdi vp¯ed"
+"$$SELECT: GO HOME"                =   "Jdi dom˘"
+"$$SELECT: GO TO BOTTOM"           =   "JÌt na konec"
+"$$SELECT: GO TO TOP"              =   "JÌt na zaË·tek"
+"$$SELECT: HALF PAGE DOWN"         =   "P˘lstr·nky dol˘"
+"$$SELECT: HALF PAGE UP"           =   "P˘lstr·nky vzh˘ru"
+"$$SELECT: NONE"                   =   "Nic"
+"$$SELECT: PREFERENCES..."         =   "NastavenÌ..."
+"$$SELECT: TAP ACTION..."          =   "Akce dotyku..."
+"$$SELECT: AUTOSCROLL FASTER"      =   "RychlejöÌ autoposun"
+"$$SELECT: AUTOSCROLL SLOWER"      =   "PomalejöÌ autoposun"
+"$$SELECT: LIBRARY..."             =   "DB ManaûÈr..."
+"$$SELECT: TOGGLE AUTOSCROLL"      =   "P¯epnout autoposun"
+"$$SELECT: DELETE DOC..."          =   "Smazat dokument..."
+/****************************************************/
+"$$SELECT: COPY TO MEMO"           =   "Export to Memo"
+"$$SELECT: GO TO LINK"             =   "Go to link"
+"$$SELECT: NEXT ANCHOR"            =   "Next anchor"
+"$$SELECT: PREV ANCHOR"            =   "Prev anchor"
+"$$SELECT: SELECT FONT..."         =   "Font and layout..."
+"$$SELECT: COMMAND STROKE"         =   "Command stroke"
+"$$SELECT: MENU..."                =   "Menu..."
+"$$SELECT: TOGGLE TOOLBAR"         =   "Toggle toolbar"
+"$$SELECT: TOGGLE FULLSCREEN"      =   "Toggle fullscreen"
+"$$SELECT: ONE LINE UP"            =   "One line up"
+"$$SELECT: ONE LINE DOWN"          =   "One line down"
+"$$SELECT: ADJUST BRIGHTNESS"      =   "Brightness..."
+"$$SELECT: ADJUST CONTRAST"        =   "Contrast..."
+"$$SELECT: TOGGLE BACKLIGHT"       =   "Toggle backlight"
+"$$SELECT: ROTATE RIGHT"           =   "Rotate right"
+"$$SELECT: ROTATE LEFT"            =   "Rotate left"
+"$$SELECT: SAVE POSITION"          =   "Save position"
+"$$SELECT: LOOKUP WORD IN PPI"     =   "PPI select word"
+"$$SELECT: LOOKUP TO SEARCH FORM"  =   "Search select word"
+"$$SELECT: LOOKUP TO CLIPBOARD"    =   "Clipboard select word"
+"$$SELECT: LOOKUP TO ANNOTATE"     =   "Annotate select word"
+"$$UNSUPPORTED"                    =   "Unsupported action"
+/****************************************************/
+
+
+/*** DETAILS ***/
+
+"$$DETAILS: CANCEL"                 =   "Storno"
+"$$DETAILS: COPY URL"               =   "KopÌruj URL"
+"$$DETAILS: OK"                     =   "OK"
+"$$DETAILS: READ"                   =   "P¯eËteno"
+"$$DETAILS: SHOW IMAGES"            =   "Zobraz obr·zky"
+"$$DETAILS: STATUS:"                =   "Stav:"
+"$$DETAILS: TITLE"                  =   "Detaily"
+"$$DETAILS: UNREAD"                 =   "Nep¯eËteno"
+"$$DETAILS: URL:"                   =   "URL:"
+"$$DETAILS: HELP"                   =
+    "o M˘ûete zmÏnit stav dokumentu, takûe bude zobrazen jako "\
+    "nep¯eËten˝ (tzn. s pln˝m podtrûenÌm)."\
+    "\n\n"\
+    "o Po vypnutÌ obr·zk˘ budou z vybranÈ str·nky odstranÏny vöechny obr·zky."
+
+
+/*** SEARCH ***/
+
+"$$FIND: CANCEL"                    =   "Storno"
+"$$FIND: CASE SENSITIVE"            =   "Rozliöuj mal·/velk· pÌsmena" 
+"$$FIND: FIND:"                     =   "NajÌt:"
+"$$FIND: IN ALL PAGES"              =   "V datab·zi"
+"$$FIND: IN PAGE"                   =   "Na str·nce"
+"$$FIND: OK"                        =   "OK"
+"$$FIND: TITLE"                     =   "Plucker Hled·nÌ"
+/****************************************************/
+"$$FIND: DOWN IN DOC"               =   "Down in doc"
+"$$FIND: SUB PAGES"                 =   "Sub pages"
+"$$FIND: PHRASE"                    =   "Phrase"
+"$$FIND: NO TRANSLITERATION"        =   "No transliteration"
+"$$FIND: NON-ASCII TO PERIOD"       =   "Non-ASCII to period"
+"$$FIND: DROP LATIN 1 ACCENTS"      =   "Drop Latin 1 accents"
+"$$FIND: HELP"                      =
+    "ï Tapping on the icon to the right of the search field "\
+    "gives you a list of recent search strings to choose from."\
+    "\n\n"\
+    "ï You can search the current page, the whole document, the whole "\
+    "document down from the current position, or subpages (breadth-first "\
+    "spidering)."\
+    "\n\n"\
+    "ï You can make your search case insensitive if applicable to your language."\
+    "\n\n"\
+    "ï In a phrase search you must have an "\
+    "exact match for everything in the search string, including spaces."\
+    "\n\n"\
+    "ï If you turn off phrase search, each space-separated string "\
+    "must be found within the same paragraph.  Thus if you "\
+    "put in the search string 'Big bad wolf' (without the quotation marks), "\
+    "then you will find all paragraphs that contain the strings 'Big', 'bad' "\
+    "and 'wolf' somewhere in them, "\
+    "though not necessarily as whole words and not necessarily in this order. "\
+    "\n\n"\
+    "ï Only the first term will be highlighted in the text when you view the "\
+    "results."\
+    "\n\n"\
+    "ï With phrase search disabled, if you have more than ten search terms, "\
+    "the extra ones will be ignored."\
+    "\n\n"\
+    "ï For fastest searching, put the least common term as the first one "\
+    "if phrase search is disabled."\
+    "\n\n"\
+    "ï You can choose to transliterate the text and search string before "\
+    "searching.  For instance, you can choose to change all non-ASCII "\
+    "characters (such as '¸') to periods.  Or you can choose to drop "\
+    "accents on all Latin 1 characters, so that, for instance, a 'u-umlaut' "\
+    "gets changed to a 'u'.  This also changes other non-ASCII characters "\
+    "such as fancy quotation marks to their closest ASCII equivalent.  Since "\
+    "your search string is also transliterated before searching, this is basically "\
+    "an accent-insensitive search."
+/****************************************************/
+
+
+/*** SEARCH RESULT ***/
+
+"$$RESULT: CANCEL"                  =   "Storno"
+"$$RESULT: FINDMORE"                =   "Hledat vÌce"
+"$$RESULT: MATCHES"                 =   "Shody pro"
+"$$RESULT: NOMATCHES"               =   "é·dn· shoda pro"
+"$$RESULT: SEARCHING..."            =   "Prohled·v· se..."
+"$$RESULT: STOP"                    =   "Stop"
+"$$RESULT: TITLE"                   =   "Plucker Hled·nÌ"
+
+
+/*** EMAIL ***/
+
+"$$EMAIL: CANCEL"                   =   "Storno"
+"$$EMAIL: CC:"                      =   "Cc:"
+"$$EMAIL: SEND"                     =   "Poslat"
+"$$EMAIL: SUBJECT:"                 =   "VÏc:"
+"$$EMAIL: TITLE"                    =   "Plucker Email"
+"$$EMAIL: TO:"                      =   "Pro:"
+
+
+/*** ADD BOOKMARK ***/
+
+"$$ADD BOOKMARK: ADD"               =   "P¯idat"
+"$$ADD BOOKMARK: CANCEL"            =   "Storno"
+"$$ADD BOOKMARK: NAME:"             =   "JmÈno:"
+"$$ADD BOOKMARK: TITLE"             =   "P¯idat z·loûku"
+
+
+/*** BOOKMARK ***/
+
+"$$BOOKMARKS: DELETE"               =   "Smazat"
+"$$BOOKMARKS: DONE"                 =   "Hotovo"
+"$$BOOKMARKS: GO TO"                =   "JÌt na"
+"$$BOOKMARKS: TITLE"                =   "Z·loûky"
+
+
+/*** EXTERNAL LINKS ***/
+
+"$$EXTERN: BACK"                    =   "ZpÏt"
+"$$EXTERN: COPY URL"                =   "KopÌruj URL"
+"$$EXTERN: LABEL1"                  =   "Lituji, ale v·mi vybran˝ odkaz"
+"$$EXTERN: LABEL2"                  =   "nebyl Pluckerem nahr·n."
+"$$EXTERN: LABEL3"                  =   "Je patrnÏ na externÌ sÌti,"
+"$$EXTERN: LABEL4"                  =   "nebo p¯ev˝öil maxim·lnÌ povolenou"
+"$$EXTERN: LABEL5"                  =   "hloubku, kter· byla poûadov·na."
+"$$EXTERN: LABEL6"                  =   ""
+"$$EXTERN: NO URL"                  =   "Informace o URL nenÌ k dispozici."
+"$$EXTERN: TITLE"                   =   "ExternÌ odkaz"
+"$$EXTERN: URL:"                    =   "URL:"
+/********************************************************************/
+"$$EXTERN: BROWSE ONLINE"           =   "Go online"
+/********************************************************************/
+
+
+/*** CATEGORY ***/
+
+"$$CATEGORY: ALL"                   =   "Vöechno"
+"$$CATEGORY: AND"                   =   "A"
+"$$CATEGORY: CANCEL"                =   "Storno"
+"$$CATEGORY: DELETE"                =   "Smazat"
+"$$CATEGORY: MULTIPLE SELECT"       =   "VÌcen·sobn˝ v˝bÏr"
+"$$CATEGORY: NONE"                  =   "Nic"
+"$$CATEGORY: OK"                    =   "OK"
+"$$CATEGORY: OR"                    =   "NEBO"
+"$$CATEGORY: RENAME"                =   "P¯ejmenovat"
+"$$CATEGORY: TITLE"                 =   "Kategorie"
+"$$CATEGORY: UNFILED"               =   "Neza¯azeno"
+"$$CATEGORY: HELP"                  =
+    "o çuknÏte na tlaËÌtko se jmÈnem pro zobrazenÌ/skrytÌ kategorie."\
+    "\n\n"\
+    "o ZaökrtnÏte VÌcen·sobn˝ v˝bÏr, abyste mohli zobrazit vÌce kategoriÌ najednou."\
+    "\n\n"\
+    "o Jestliûe chcete p¯idat novou kategorii, kliknÏte na pr·zdnÈ tlaËÌtko. "\
+    "Ikona dokumentu v·m umoûnÌ p¯ejmenovat a smazat kategorii."\
+    "\n\n"\
+    "o Jestliûe smaûete jmÈno kategorie, datab·ze, kterÈ do nÌ pat¯ily, se "\
+    "p¯esounou mezi Neza¯azenÈ."\
+    "\n\n"\
+    "o Pro slouËenÌ kategoriÌ p¯ejmenujte jednu kategorii na jmÈno jinÈ kategorie."
+
+
+/*** NEW CATEGORY ***/
+
+"$$EDIT CATEGORIES: CANCEL"         =   "Storno"
+"$$EDIT CATEGORIES: NAME:"          =   "Zadejte jmÈno novÈ kategorie:"
+"$$EDIT CATEGORIES: OK"             =   "OK"
+"$$EDIT CATEGORIES: TITLE"          =   "Upravit Kategorie"
+
+
+/*** INITIALIZING CATEGORY ***/
+
+"$$INITDOC: SYNCHRONIZING"          =   "Synchronizuji datab·ze"
+"$$INITDOC: OPEN DOC LIST"          =   "Otev¯Ìt seznam dokument˘"
+
+
+/*** SORT DOCUMENTS ***/
+
+"$$SORTDOC: SORTING..."             =   "T¯ÌdÏnÌ..."
+
+
+/*** HARDCOPY ***/
+
+/****************************************************************************/
+"$$HARDCOPY: TITLE"                 =   "Export to Memo"
+"$$HARDCOPY: CANCEL"                =   "Cancel"
+"$$HARDCOPY: EXPORT"                =   "Export"
+"$$HARDCOPY: ROT13"                 =   "Rot13"
+/****************************************************************************/
+
+
+/*** ANNOTATION ***/
+
+/*************************************************************/
+"$$ANNOTATION: TITLE"                 =   "Annotate"
+"$$ANNOTATION: OK"                    =   "OK"
+"$$ANNOTATION: CANCEL"                =   "Cancel"
+"$$ANNOTATION: DELETE"                =   "Delete"
+/*************************************************************/
+
+
+/*** EXPORT LINK TO MEMO ***/
+
+/*************************************************************/
+"$$EXPORT: EXPORTING LINK..."       =   "Exporting link..."
+/*************************************************************/
+
+
+/*************************************************************
+ *                         ALERTS                            *
+ *************************************************************/
+
+/*** COMMON STRINGS ***/
+
+"$$CANCEL"                  =   "Storno"
+"$$DELETE"                  =   "Smazat"
+/*************************************************************/
+"$$LEAVE"                   =   "Leave"
+/*************************************************************/
+"$$NO"                      =   "Ne"
+"$$OK"                      =   "OK"
+"$$YES"                     =   "Ano"
+"$$EXIT"                    =   "Konec"
+/*************************************************************/
+"$$NEXT"                    =   "Next page"
+"$$RESTART"                 =   "Restart"
+/*************************************************************/
+
+
+/*** INFORMATION ***/
+
+"$$SYSTEM INCOMPATIBLE"     =   "SystÈm nekompatibilnÌ"
+"$$SYSTEM MSG"              =   "Plucker vyûaduje systÈm verze 2.0 a vyööÌ."
+
+"$$HIGH BITDEPTH"           =   "Obr·zek nelze zobrazit"
+"$$HIGH BITDEPTH MSG"       =   "Nastaven˝ poËet barev je p¯Ìliö vysok˝ pro toto "\
+                                "za¯ÌzenÌ."
+
+"$$EMPTY PATTERNS"          =   "é·dn˝ vyhled·vacÌ ¯etÏzec"
+"$$EMPTY PATTERNS MSG"      =   "P¯edchozÌ vyhled·vacÌ ¯etÏzec nenÌ k dispozici."
+
+"$$NO BEAM SUPPORT"         =   "ChybÌ podpora pro beam"
+"$$NO BEAM SUPPORT MSG"     =   "Toto za¯ÌzenÌ nepodpruje posÌl·nÌ po IR portu"
+
+"$$COPY PROTECTED"          =   "Nelze poslat"
+"$$COPY PROTECTED MSG"      =   "Datab·ze chr·nÏnÈ proti kopÌrov·nÌ nelze posat."
+
+
+/*** CONFIRMATION ***/
+
+/*******************************************************************************/
+"$$DELETE OLD ANNOTATIONS"  =   "Out of date annotations"
+"$$DELETE OLD ANNOTATIONS MSG" =  "The annotations / bookmarks are older than "\
+                                  "the document.  Do you want to delete them now to "\
+                                  "prevent possible problems?"
+"$$DO NOT ASK"                 =  "Never"
+"$$DELETE ANNOTATIONS"         = "Delete annotations"
+"$$DELETE ANNOTATIONS MSG"     = "Do you want to delete the annotations and bookmarks for ^1?"
+"$$ALWAYS"                     = "Always delete"
+/*******************************************************************************/
+
+"$$CONFIRM DELETE"          =   "PotvrÔte smaz·nÌ"
+"$$DELETE MSG"              =   "Navûdy smazat ^1?"
+
+/*************************************************************/
+"$$CONFIRM DELETE METADOC"  =   "Confirm delete metadoc"
+"$$DELETE METADOC MSG"      =   "Delete meta document of ^1 as well?"
+
+"$$CONFIRM DELETE READ"     =   "Confirm delete read"
+"$$DELETE READ MSG"         =   "Delete read documents for selected "\
+                                "category/categories?"
+/*************************************************************/
+
+"$$MERGE CATEGORY"          =   "SlouËit kategorie"
+"$$MERGE CATEGORY MSG"      =   "P¯ejmenovali kste kategorii na takovou, kter· "\
+                                "jiû existuje. Chcete tyto kategorie slouËit?"
+
+/*************************************************************/
+"$$END OF PAGE MSG"          =  "End of page reached.  Search next page or restart from "\
+                                "beginning of search?"
+
+"$$END OF DOC MSG"          =   "End of document reached.  Restart from beginning of search?"
+/*************************************************************/
+
+"$$CONFIRM DELETE ALL"      =   "PotvrÔte smaz·nÌ vöeho"
+"$$DELETE ALL MSG"          =   "Navödy smazat datab·ze z vybran˝ch kategoriÌ?"
+
+
+/*** WARNING ***/
+
+"$$BROKEN DOCUMENT"         =   "Vadn· datab·ze!"
+"$$BROKEN MSG"              =   "V ^1 chybÌ d˘leûitÈ z·znamy.\nNahrajte prosÌm "\
+                                "novou datab·zi."
+
+"$$INSUFFICIENT MEMORY"     =   "Nedostatek pamÏti"
+"$$INSUFFICIENT MSG"        =   "Nem·te dostatek pamÏti pro zobrazenÌ str·nky. "\
+                                "UvolnÏte nÏjakou a zkuste znovu."
+
+"$$LOW MEMORY"              =   "M·lo pamÏti"
+"$$EMAIL MEMORY MSG"        =   "M·te velmi m·lo pamÏti pro vytvo¯enÌ zpr·vy, "\
+                                "uvolnÏte RAM pamÏù nebo napiöte pouze velmi "\
+                                "kr·tkou zpr·vu."
+"$$IMAGE MEMORY MSG"        =   "Pro zobrazenÌ obr·zku nenÌ dostatek dynamickÈ pamÏti."
+
+"$$NO TOADDR"               =   "NevyplnÏn· adresa p¯Ìjmece"
+"$$NO TOADDR MSG"           =   "MusÌte zadat adresu p¯Ìjemco (pole Pro:)."
+
+"$$ZLIB NOT SUPPORTED"      =   "ZLib nenÌ podporov·n"
+"$$ZLIB MSG"                =   "Toto za¯ÌzenÌ nepodporuje datab·ze komprimovanÈ "\
+                                "pomocÌ ZLib"
+
+"$$IMAGE COMPRESSION"       =   "Komprese nenÌ podporovan·"
+"$$COMPRESSION MSG"         =   "Toto za¯ÌzenÌ nepodporuje PalmOS kompresi "\
+                                "obr·zk˘. Jejich zobrazovn·nÌ bude vypnuto."
+
+"$$AUTOSCROLL STAY ON"     =   "NevusÌnat p¯i autoposunu"
+"$$STAY ON MSG"            =   "Tato volba zabr·nÌ, aby se za¯ÌzenÌ "\
+                               "automaticky vypÌnalu p¯i automatickÈm "\
+                               "posunu. AutomatickÈ vypnutÌ z˘stane zak·y·no,"\
+                               "dokud se nedotknete obrazovky, nestisknete "\
+                               "tlaËÌtko vzpnutÌ, nebo nedos·hnete konce dokumentu."
+
+"$$INVALID OWNER"           =   "Neplatn˝ vlastnÌk dokumentu!"
+"$$INVALID OWNER MSG"       =   "JmÈno vaöeho za¯ÌzenÌ nesouhlasÌ s vlastnÌkem "\
+                                "dokumentu '^1'. Dokument m˘ûe b˝t "\
+                                "otev¯en pouze pod tÌmto jmÈnem. "
+
+"$$MANUAL SYNC"             =   "Obnovit seznam dokument˘"
+"$$MANUAL SYNC MSG"         =   "Tato volba vypÌn· automatickou obnovu "\
+                                "seznamu dokument˘. "\
+                                "Pouûijte volbu menu 'Obnovit seznam dokument˘' "\
+                                "obnovenÌ seznamu."
+
+
+/*** ERROR ***/
+
+"$$NO CATEGORY"             =   "é·dn· kategorie nenÌ vybr·na"
+"$$NO CATEGORY MSG"         =   "ProsÌm, vyberte alespoÚ jednu kategorii."
+
+"$$CATEGORY NAME"           =   "JmÈno kategorie"
+"$$CATEGORY NAME MSG"       =   "Kategorie ^1 jiû existuje. ProsÌm, pouûijte "\
+                                "jinÈ jmÈno."
+
+"$$CANNOT DELETE"           =   "Nelze smazat"
+"$$CANNOT DELETE MSG"       =   "Nelze smazat datab·zi!"
+
+/*************************************************************/
+"$$CANNOT DELETE READ"      =   "Cannot delete read"
+"$$CANNOT DELETE READ MSG"  =   "Cannot delete read documents!"
+/*************************************************************/
+
+"$$BAD MAILTO"              =   "Chyba Mailto"
+"$$BAD MAILTO MSG"          =   "Z·znam mailto je poökoze. PoötovnÌ "\
+                                "adresa nem˘ûe b·t nalezena!\n\nProsÌm "\
+                                "informujte v˝vojov˝ t˝m Pluckeru."
+
+"$$ALREADY EXISTS"          =   "Datab·ze ^1 jiû existuje."
+
+"$$READ ONLY"               =   "Datab·ze pouze pro ËtenÌ"
+"$$READ ONLY MSG"           =   "Datab·ze je pouze pro ËtenÌ a nm˘ûe b˝t "\
+                                "p¯ejmenov·na."
+
+"$$UNKNOWN TYPE"            =   "Nezn·m˝ typ"
+"$$UNKNOWN TYPE MSG"        =   "Nezn·m˝ typ datab·ze"
+
+"$$CANNOT DELETE ALL"       =   "Nelze smazat vöechno"
+"$$CANNOT DELETE ALL MSG"   =   "Nelze smazat vöechny datab·ze!"
+
+"$$CANNOT RENAME DOC"       =   "Nelze p¯ejmenovat dokument!"
+
+"$$CANNOT FIND DOC"         =   "Nelze nalÈzt dokument"
+"$$CANNOT FIND DOC MSG"     =   "Nelze nalÈzt dokument v pamÏti ani na externÌch kart·ch!"
+
+"$$UNHANDLED EXCEPTION"     =   "Neoöet¯en· v˝jimka"
+"$$UNHANDLED EXCEPTION MSG" =   "Neoöet¯en· v˝jimka, chybov˝ kÛd = ^1"
+
+"$$CANNOT ADD BOOKMARK"     =   "Nelze p¯idat z·loûku"
+"$$CANNOT ADD BOOKMARK MSG" =   "Nelze p¯idat '^1'"
+
+"$$CANNOT DELETE BOOKMARK"     =   "Nelze smazat z·loûku"
+"$$CANNOT DELETE BOOKMARK MSG" =   "Nelze smazat '^1'"
+
+/*************************************************************/
+"$$IMAGE ERROR"             =   "Image error"
+"$$IMAGE ERROR MSG"         =   "There is a problem displaying the image. "\
+                                "Perhaps Plucker is running out of memory."
+/*************************************************************/
+END
+

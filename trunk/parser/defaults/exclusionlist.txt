@@ -1,0 +1,112 @@
+##
+## An example exclusion list.
+##
+## Leading and trailing white space is ignored.
+## emty lines or lines starting with a '#' are considered comments
+## everything else should be of the form:
+##  <prio>:<action>:<regexp>
+## where:
+##  <prio>: is an integer (negative numbers are also valid) specifing
+##          the priority.  Rules with higher priorities are considered
+##          before rules with lower priorities.  Rules of equal priority
+##          are considered in the sequence that they appear in the file.
+##  <action>: is either a plus or a minus sign.  Plus means 'include this 
+##            document' while minus means 'do not include this document'.
+##  <regexp>: a valid regular expression (as known, e.g. from perl).
+##            Normally, the regexp is not case-sensitive, but
+##            neither is it Locale or unicode-aware.
+##
+
+# most rules in this file have priority 0, so you can use easily
+# override things by using higher priorities.
+
+## ----------------------------------------------------------------------
+## Ignore files that we know we cannot handle:
+##
+
+0:-:.*\.aiff$
+# audio a problem, but email to Australia is OK.
+1:+:.*@.*\.au$
+1:+:.*%40.*\.au$
+0:-:.*\.au$
+0:-:.*\.avi$
+0:-:.*\.bin$
+0:-:.*\.bz2$
+0:-:.*\.class$
+# windows executables are a problem but email is OK
+1:+:.*@.*\.com$
+1:+:.*%40.*\.com$
+0:-:.*\.com$
+0:-:.*\.exe$
+0:-:.*\.gz$
+0:-:.*\.hqx$
+0:-:.*\.map$
+0:-:.*\.mov$
+0:-:.*\.mpe?g$
+0:-:.*\.mp3$
+0:-:.*\.pac$
+0:-:.*\.pdf$
+0:-:.*\.ram$
+0:-:.*\.rar$
+0:-:.*\.rpm$
+0:-:.*\.sit$
+0:-:.*\.snd$
+0:-:.*\.tar$
+0:-:.*\.tgz$
+0:-:.*\.wav$
+0:-:.*\.wmv$
+0:-:.*\.z$
+0:-:.*\.zip$
+## ----------------------------------------------------------------------
+
+
+
+## ----------------------------------------------------------------------
+## Ignore known advertisement sites:
+##
+0:-:http://.*ad\.de\.doubleclick\.net/.*
+0:-:http://.*ad\.linkexchange\.com/.*
+0:-:http://.*ad\.uk\.doubleclick\.net/.*
+0:-:http://.*adcontent\.gamespy\.com/.*
+0:-:http://.*adfu\.slashdot\.org/.*
+0:-:http://.*adimages\.go\.com/.*
+0:-:http://.*ads\.admaximize\.com//.*
+0:-:http://.*ads\.gamespy\.com/.*
+0:-:http://.*ads\.web\.aol\.com/.*
+0:-:http://.*adserv\.quality-channel\.de/.*
+0:-:http://.*webads\.bizservers\.com/.*
+0:-:http://.*adforce\.imgis\.com/.*
+0:-:http://.*www\.iadventure\.com/.*
+0:-:http://.*button\.hitbox\.com/.*
+0:-:http://.*ads\.tucows\.com/.*
+0:-:http://.*iadventure\.com/.*
+0:-:http://www\.pilotmail\.net/.*/ads.*
+0:-:http://.*delta-a2\.tucows\.com/.*
+0:-:http://.*ad\.doppelklick\.de/.*
+0:-:http://.*ad\.doubleclick\.net/.*
+0:-:http://.*ad\.adsmart\.net/.*
+0:-:http://.*ads\.softbank\.net/.*
+0:-:http://.*www\.apacheweek\.com/ads.*
+0:-:http://.*www\.pagecount\.com/.*
+0:-:http://.*www\.geocities\.com/cgi-bin-local/.*
+0:-:http://.*advert\.heise\.de/.*
+0:-:http://.*adclient\.whowhere\.com/.*
+0:-:http://.*adimage\.whowhere\.com/.*
+0:-:http://.*adfu\.blockstackers\.com/.*
+0:-:http://.*www\.heise\.de/RealMedia/ads.*
+0:-:http://.*adserv\.spiegel\.de/.*
+0:-:http://.*images\.zdnet\.com/adverts.*
+0:-:http://.*ads\.zdnet\.com/.*
+0:-:http://.*ads2\.zdnet\.com/.*
+0:-:http://.*ads24\.zdnet\.com/.*
+0:-:http://.*ads\.x10\.com/.*
+0:-:http://.*ads02\.focalink\.com/.*
+0:-:http://.*ads\.devx\.com/.*
+0:-:http://.*adforce\.ads\.imgis\.com/.*
+0:-:http://.*ads\.linuxsecurity\.com/.*
+0:-:http://.*195.198.111.26:8080/click.ng/.*
+0:-:http://.*195.198.111.26:8080/image.ng/.*
+0:-:http://www\.linuxinsider\.com/images/ads/.*
+0:-:http://www\.theregister\.co\.uk/images/adverts/.*
+## ----------------------------------------------------------------------
+

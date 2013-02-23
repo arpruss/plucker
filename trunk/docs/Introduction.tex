@@ -1,0 +1,204 @@
+%
+% $Id: Introduction.tex,v 1.9 2003/07/31 15:12:06 desrod Exp $
+%
+\chapter{Preface}
+
+This manual describes Plucker, an off-line HTML viewer for your Palm OS
+hand-held device. Plucker increase the utility of your hand-held device
+by letting you view web pages and any document that can be converted to
+HTML or text. Plucker has many advanced features including the ability
+to read web pages with embedded images, an advanced find function, the
+ability to open an e-mail form when tapping on mail-links in web
+documents, an impressive compression ratio for the documents and an open,
+documented DB format. It can also be customized for your specific needs.
+And not to be forgotten the source code is available for your perusal.
+
+The general layout of this document is as follows. First we will list
+the necessary components you need to run Plucker, and we will give you
+a short introduction on how Plucker works. Then we will give detailed
+instructions about the installation on your system if there are any
+specific parts for the operating system you use. After the setup
+routine of Plucker we will show you how to customize Plucker to get
+the contents.
+
+As a general guideline we strongly encourage you to read at least the
+first three chapters of this handbook. When you understand how Plucker
+works it is easy to set up the advanced features using the reference
+part of this book.
+
+\section{System Requirements}
+
+\subsection{Device}
+
+Plucker will run on Palm Pro, Palm III, Palm IIIx/IIIe,
+Palm V, PalmVx, Handspring Visor, TRGPro and other Palm OS
+hand-held devices utilizing PalmOS 2.0 and higher.\\
+
+Plucker requires \viewerram{} of free space for the viewer application
+and an additional \libram{} for the shared library if the ZLib
+compression should be used (only PalmOS 3.0 and higher can use the
+zlib compression).\\
+
+Additional free space is required for your data and at run-time for
+decompression. An alert will be display if there is not enough free
+space on your device. Note that Plucker can use documents stored in
+Flash memory and on read-only expansion cards.\\
+
+\note{} The higher bit depth (more colors) you use for the images
+the more memory they will require, so it is recommended not to use
+higher bit depth than necessary. See below on how to influence the
+bit depth Plucker uses.
+
+\subsection{How Plucker works}
+
+Let us start with a short description on how Plucker works. This will
+help you to understand certain procedures necessary to use Plucker to
+its best.
+
+First of all let us mention that there are three parts:
+
+\begin{enumerate}
+
+  \item The Viewer: this is the actual application you run on your
+  hand-held. It is used to display your documents as the name suggests.
+
+  \item The Parser: more or less the brain of Plucker. The parser
+  gathers contents from the Internet and converts it to a suitable
+  format for the viewer. This part is installed on your workstation,
+  not on your hand-held, so unlike other products Plucker uses your
+  powerful desktop for the hard work.
+
+  \item Some transfer tool which sends the pages you gathered using the
+  parser to your hand-held. Actually, this is not part of Plucker
+  itself and how this is done depends on the platform you using.
+  For example, on Unix or OS/2 you might want to use Pilot-Link
+  whereas on Windows you might prefer to use the HotSync Manager.
+  It is only necessary that you understand that you must transfer the
+  data in any way to your hand-held. We stress this here as many users
+  who converted from some other application to Plucker missed this
+  point.
+
+\end{enumerate}
+
+Consequences of this are immediate:
+
+\begin{itemize}
+
+  \item \textbf{Before} you are able to view any page from the Net on
+  your hand-held you \textbf{have to} run the parser (sometime also 
+  called \emph{hotsync} in this document). Normally you will invoke 
+  it via some script, which we will explain later on.  Even on Windows 
+  Plucker does \textbf{not} start the gathering process automatically 
+  if you press the HotSync button on your cradle, as some other off-line 
+  web readers do. We want to stress that you \textbf{must} start the 
+  parser manually (or by some tool that does this automatically for you), 
+  and after running the parser you \textbf{must} sync your device to get 
+  the documents onto your hand-held. What sounds a bit difficult offers 
+  you in fact many advantages.
+
+  \item Since the parser is separated from the viewer and the transfer
+  tool you will not have any problems if your HotSync-cradle shares the 
+  COM-port with your modem.
+
+  \item It is possible to run the parser automatically at some
+  specified time.  That is you can have Plucker to collect your
+  newspaper each morning at six o'clock without requiring your 
+  attention and then HotSync the retrieved data to your hand-held
+  before you leave home. In fact the whole process can be automatized
+  using e.g.\ cron jobs,  by a (shareware) tool like \name{AutoSync} 
+  from \textit{\htmladdnormallink{http://www.rgps.com}{http://www.rgps.com}}
+  or some similar package.
+
+\end{itemize}
+
+\subsection{Converters}
+
+Before you can read a document (HTML/text file) it has to be converted
+to a Plucker format. For this we need some \emph{converters}. The
+provided parser tool is the most essential, but to get support for
+images as well you might want to read on as we need some 3rd party
+applications for that as well. That is, if you lack images in your
+gathered web pages most likely you are missing some of the necessary 
+tools.
+
+The provided parser tool currently runs on Linux, OS/2, Windows,
+Solaris, AIX and FreeBSD\. It should be possible to get it running on
+any platform with Python support.\\
+
+\note{} On OS/2 you must install Plucker on a HPFS-partition. Plucker
+will not run on OS/2 if you are using the FAT file system as Plucker
+requires long filenames and OS/2 implements the traditional way of FAT
+without the \emph{extensions} known from Windows.\\
+
+If you know of other platforms where Plucker can be used successfully
+we would appreciate if you send a message to \devaddress{} informing us
+about it and if possible also include information about additional
+requirements to get it running.
+
+\subsubsection{Additional Software}
+
+The following tools are not included within the distribution of
+Plucker. You will find a list where to obtain these tools below.
+
+\begin{itemize}
+  \item \iname{Python}: a scripting language. Uses in the parser
+  to retrieve contents from the web and put it into Plucker format
+  for the Palm OS hand-held device. Compression of the documents is also
+  handled by the Python parser.
+
+  Python is {\bf required} on all supported platforms. 
+
+  \item At least one of the following: \iname{Python Image Library (PIL)},
+  \iname{ImageMagick} or \iname{NetPBM}. These tools are used for the image
+  handling, but are not needed if you pluck all your data without images.
+
+  \item Some transfer tool to transport the retrieved data to your
+  hand-held. Most likely you have this already installed.
+
+\end{itemize}
+
+\subsubsection{Where to find the required software}
+
+Where you find the tools:
+
+  \begin{itemize}
+    \item Python      : \textit{\htmladdnormallink{http://www.python.org}{http://www.python.org}}
+    \item PIL         : \textit{\htmladdnormallink{http://www.pythonware.com/library.htm}{http://www.pythonware.com/library.htm}}
+    \item ImageMagick : \textit{\htmladdnormallink{http://www.wizards.dupont.com/cristy/ImageMagick.html}{http://www.wizards.dupont.com/cristy/ImageMagick.html}}
+    \item NetPBM      : \textit{\htmladdnormallink{ftp://ftp.x.org/contrib/utilities/}{ftp://ftp.x.org/contrib/utilities/}}
+    \item OS/2 versions: Current ports can be found on our web page at
+\textit{\htmladdnormallink{http://www.stellarcom.org/plucker/os2\_bins}{http://www.stellarcom.org/plucker/os2\_bins}}
+  \end{itemize}
+
+\section{Conventions}
+
+For this document we use some common conventions.\\
+
+\begin{tabular}{p{1.5cm}p{10cm}}
+
+ \option{Bold} & is used for options to commands.\\\\
+
+ \name{Italic} & is used to indicate files, directories, commands and
+                 program names when they appear in the body of a paragraph.\\\\
+
+ \code{Constant Width} & is used in examples to show the contents of
+                       files or the output from commands, and to indicate
+                       environment variables and keywords in the body of a
+                       paragraph.\\\\
+
+ \indata{Constant Bold} & is used in examples to show input that is typed
+                      literally by the user.\\\\
+
+ {[ ]} & surrounds optional elements in a description of program syntax.
+           (The brackets themselves should never be typed.)\\\\
+\end{tabular}
+
+
+\section{We'd Like Some Feedback}
+
+We have verified all information in this User's Guide, but you might
+find that features have changed.  Please let us know about any errors
+you find, as well as any suggestions for improvements, by sending an
+e-mail to \devaddress
+
+

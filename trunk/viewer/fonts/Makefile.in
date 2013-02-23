@@ -1,0 +1,110 @@
+#
+# $Id: Makefile.in,v 1.12 2004/04/04 07:19:09 nordstrom Exp $
+#
+
+SHELL           = @SHELL@
+
+top_builddir    = ..
+subdir          = fonts
+srcdir          = @srcdir@
+VPATH           = @srcdir@
+
+HIRES           = @HIRES@
+
+FONTCONV_SRC    = fontconv.c
+FONTCONV_HDR	= palmtypes.h
+FONTCONV        = ./fontconv
+
+TOPRC_SRC	= toprc.c
+TOPRC_HDR	= palmtypes.h
+TOPRC		= ./toprc
+
+BINS            = narrowfont.bin narrowboldfont.bin narrowfixedfont.bin
+ifeq ($(HIRES),yes)
+HIRES_BINS      = tinyfont_palm.bin tinyboldfont_palm.bin \
+                  smallfont_palm.bin smallboldfont_palm.bin \
+                  stdfixedfont_palm.bin stdfixedfont_sony.bin
+endif
+
+REMAP_BINS	= SonyLargeBold.prc SonySmallBold.prc \
+		  AllStandard.prc AllSystem.prc
+
+all: fonts $(REMAP_BINS)
+
+Makefile: Makefile.in $(top_builddir)/config.status
+	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ $(SHELL) ./config.status
+
+clean:
+	rm -f *.bin $(FONTCONV) $(REMAP_BINS)
+
+distclean: clean
+	rm -f Makefile
+
+fonts: $(BINS) $(HIRES_BINS)
+	@touch fontdata.rcp
+
+lores-all-standard.prc: lores-all-standard.rcp
+	$(PILRC) -ro -o lores-all-standard.prc 
+
+narrow%.bin: $(FONTCONV) narrow%.txt
+	$(FONTCONV) narrow$*.txt l narrow$*.bin
+
+%_palm.bin: $(FONTCONV) %_x2.txt
+	$(FONTCONV) $*_x2.txt H $*_palm.bin
+
+%_sony.bin: $(FONTCONV) %_x2.txt
+	$(FONTCONV) $*_x2.txt l $*_sony.bin
+
+$(FONTCONV): palmtypes.h
+
+$(FONTCONV): $(FONTCONV_SRC) $(FONTCONV_HDR)
+	$(CC) -o $(FONTCONV) $(FONTCONV_SRC)
+
+$(TOPRC): palmtypes.h
+
+$(TOPRC): $(TOPRC_SRC) $(TOPRC_HDR)
+	$(CC) -o $(TOPRC) $(TOPRC_SRC)
+
+SonyBold.prc: $(TOPRC)
+	$(TOPRC) SonyBold.prc "Bold" Font Plkr \
+	  -f NFNT0420 hrBoldFont \
+	  -f NFNT0421 hrBoldFont \
+    	  -f NFNT0422 hrLargeBoldFont \
+    	  -f NFNT0423 hrLargeBoldFont \
+	  -f NFNT0424 hrBoldFont \
+    	  -f NFNT0426 stdFixedFont_sony
+
+SonyLargeBold.prc: $(TOPRC)
+	$(TOPRC) SonyLargeBold.prc "Large bold" Font Plkr \
+	  -f NFNT0420 hrLargeBoldFont -f NFNT0421 hrLargeBoldFont \
+    	  -f NFNT0422 hrLargeBoldFont \
+    	  -f NFNT0423 hrLargeBoldFont -f NFNT0424 hrBoldFont \
+    	  -f NFNT0426 stdFixedFont_sony
+
+SonySmallBold.prc: $(TOPRC)
+	$(TOPRC) SonySmallBold.prc "Small bold" Font Plkr \
+	  -f NFNT0420 hrSmallBoldFont -f NFNT0421 hrSmallBoldFont \
+    	  -f NFNT0422 hrBoldFont \
+    	  -f NFNT0423 hrBoldFont -f NFNT0424 hrSmallFont \
+    	  -f NFNT0426 narrowFixedFont
+
+AllStandard.prc: $(TOPRC)
+	$(TOPRC) AllStandard.prc "All standard fonts" Font Plkr \
+  	  -f nfnt0620 stdFont -f nfnt0621 stdFont -f nfnt0622 stdFont \
+  	  -f nfnt0623 stdFont -f nfnt0624 stdFont -f nfnt0626 stdFont \
+  	  -f nfnt0660 stdFont -f nfnt0661 stdFont -f nfnt0662 stdFont \
+  	  -f nfnt0663 stdFont -f nfnt0664 stdFont -f nfnt0666 stdFont \
+  	  -f NFNT0220 stdFont -f NFNT0221 stdFont -f NFNT0222 stdFont \
+  	  -f NFNT0223 stdFont -f NFNT0224 stdFont -f NFNT0226 stdFont \
+  	  -f NFNT0260 stdFont -f NFNT0261 stdFont -f NFNT0262 stdFont \
+  	  -f NFNT0263 stdFont -f NFNT0264 stdFont -f NFNT0266 stdFont \
+  	  -f NFNT0420 hrStdFont -f NFNT0421 hrStdFont -f NFNT0422 hrStdFont \
+ 	  -f NFNT0423 hrStdFont -f NFNT0424 hrStdFont -f NFNT0426 hrStdFont \
+  	  -f NFNT0460 hrStdFont -f NFNT0461 hrStdFont -f NFNT0462 hrStdFont \
+  	  -f NFNT0463 hrStdFont -f NFNT0464 hrStdFont -f NFNT0466 hrStdFont
+
+AllSystem.prc: $(TOPRC)
+	$(TOPRC) AllSystem.prc "All system fonts" Font Plkr \
+	  -f NFNT0224 stdFont -f NFNT0226 stdFont -f NFNT0424 hrStdFont \
+  	  -f NFNT0426 hrStdFont -f nfnt0624 stdFont -f nfnt0626 stdFont
+

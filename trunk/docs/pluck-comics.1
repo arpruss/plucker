@@ -1,0 +1,46 @@
+.\" pluck-comics.1
+.TH PLUCK-COMICS 1 "Plucker 1.1 - http://plkr.org/"
+.SH NAME
+pluck-comics \- gathers selected comics for Plucker
+.SH SYNOPSIS
+\fBpluck-comics\fR
+[-a] [-d] [-h] [-i] [-l \fIlocation\fR] [-n] [-r \fInum\fR] [-s \fIdegrees\fR] [-S] [-v] comic ...
+.SH DESCRIPTION
+.B pluck-comics
+Gathers comics from selected websites for Plucker. Run the tool with no options to get a list of all available comics.
+.SH OPTIONS
+.TP
+\fB-a\fR
+Collect all known comics
+.TP
+\fB-d\fR
+Delete \fBall\fR files in \fIlocation\fR before gathering new ones
+.TP
+\fB-h\fR
+Create a home page in \fIlocation\fR for the comics
+.TP
+\fB-i\fR
+Put icons on home page
+.TP
+\fB-l\fR \fIlocation\fR
+The location to store the comics
+.TP
+\fB-n\fR
+Bypass cache
+.TP
+\fB-r\fR \fInum\fR
+Collect \fInum\fR comics at random
+.TP
+\fB-s\fR \fIdegrees\fR
+Rotate all comics \fIdegrees\fR degrees using ImageMagick
+.TP
+\fB-S\fR
+Show all known comics
+.TP
+\fB-v\fR
+Verbose mode
+.SH "AUTHOR"
+Christopher R. Hawks <chrish@syscon-intl.com>  (man page by Michael Nordstrom, <micke@sslug.dk>)
+
+Report bugs to http://bugs.plkr.org or <plucker-bugs@rubberchicken.org>
+

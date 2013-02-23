@@ -1,0 +1,34 @@
+#-----------------------------------------------------------------------------------------
+# Name:        makefile.g95
+# Purpose:     Makefile for Plucker Desktop for Borland's free 32-bit C++ compiler 
+#              Version 5.5 of the C++ compiler + Service Pack 1
+# Author:      Robert O'Connor
+# Modified by:
+# Created:     2001/10/20
+# Copyright:   (c) Robert O'Connor ( rob@medicalmnemonics.com )
+# Licence:     GPL
+# RCS-ID:      $Id: makefile.b32,v 1.1 2003/06/29 18:01:32 robertoconnor Exp $
+#-----------------------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------------------
+# Plucker Desktop Online Help
+# Make commands for the online help.
+# Requirements: txt2rtf.exe, and a zip utility
+# To compile: make -f makefile.b32 onlinehelp 
+#             make -f makefile.b32 onlinehelp2
+#-----------------------------------------------------------------------------------------
+
+TARGET=plucker-desktop
+
+# Name of the DOS zip utility, somewhere in the path
+ZIP=pkzip
+# Names of all the output as gotten from the TARGET variable way up top.
+HELP_FILENAME=$(TARGET)
+
+onlinehelp:    
+    -erase *.html
+    -tex2rtf PluckerDesktop.tex $(HELP_FILENAME).html -macros Tex2Rtf.ini
+
+onlinehelp2:
+    $(ZIP) $(HELP_FILENAME).htb $(HELP_FILENAME).hh* $(HELP_FILENAME)*.html
+

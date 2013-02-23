@@ -1,0 +1,1017 @@
+/* $Id: ja.rcp,v 1.99 2006/11/12 16:23:45 prussar Exp $ */
+
+/****************************************************************************
+ * Japanese resources - Masakazu MATSUMOTO <matto@aqua.chem.nagoya-u.ac.jp> *
+ ****************************************************************************/
+
+TRANSLATION "ja"
+BEGIN
+
+
+
+"$$LANG"                    =   "ja"
+
+
+/*************************************************************
+ *                 COMMON ACTION MESSAGES                    *
+ *************************************************************/
+
+  "$$ACTION: FULL PAGE DOWN"          =   "1ページ下へ"
+  "$$ACTION: FULL PAGE UP"            =   "1ページ上へ"
+  "$$ACTION: ADD BOOKMARK..."         =   "お気に入りに追加..."
+  "$$ACTION: ADD BOOKMARK"            =   "お気に入りに追加"
+  "$$ACTION: AUTOSCROLL & SCROLL..."  =   "自動スクロール..."
+  "$$ACTION: AUTOSCROLL FASTER"       =   "スクロールを速く"
+  "$$ACTION: AUTOSCROLL SLOWER"       =   "スクロールを遅く"
+  "$$ACTION: AUTOSCROLL STAY ON"      =   "スクロール中は常時ON"
+  "$$ACTION: BOOKMARKS..."            =   "お気に入り..."
+  "$$ACTION: BUTTON ACTION..."        =   "ボタン設定..."
+  "$$ACTION: CANCEL"                  =   "やめる"
+  "$$ACTION: COPY PROTECTED"          =   "ビーム禁止"
+  "$$ACTION: COPY URL"                =   "URLをメモ帳に"
+  "$$ACTION: COPY TO MEMO"            =   "ハードコピー"
+  "$$ACTION: DELETE"                  =   "削除"
+  "$$ACTION: DELETE DOC..."           =   "文書を削除..."
+  "$$ACTION: DETAILS..."              =   "詳細..."
+  "$$ACTION: FIND..."                 =   "検索..."
+  "$$ACTION: FIND AGAIN"              =   "再検索"
+  "$$ACTION: GESTURE ACTION..."       =   "ジェスチャー設定..."
+  "$$ACTION: GO BACK"                 =   "戻る" 
+  "$$ACTION: GO FORWARD"              =   "進む" 
+  "$$ACTION: GO TO"                   =   "Go"
+  "$$ACTION: GO TO BOTTOM"            =   "文末へ"
+  "$$ACTION: GO TO LINK"              =   "リンクへ"
+  "$$ACTION: GO TO TOP"               =   "文頭へ"
+  "$$ACTION: GO HOME"                 =   "ホームへ"
+  "$$ACTION: HALF PAGE DOWN"          =   "半ページ下へ" 
+  "$$ACTION: HALF PAGE UP"            =   "半ページ上へ" 
+  "$$ACTION: LIBRARY..."              =   "文書一覧..."
+  "$$ACTION: NEXT ANCHOR"             =   "次のアンカーへ"
+  "$$ACTION: NO"                      =   "いいえ"
+  "$$ACTION: NONE"                    =   "なし"
+  "$$ACTION: OK"                      =   "OK"
+  "$$ACTION: PREFERENCES..."          =   "一般設定..."
+  "$$ACTION: PREV ANCHOR"             =   "前のアンカーへ"
+  "$$ACTION: RENAME"                  =   "名前の変更"
+  "$$ACTION: START AUTOSCROLL"        =   "スクロール開始"
+  "$$ACTION: STOP AUTOSCROLL"         =   "スクロール停止"
+  "$$ACTION: TAP ACTION..."           =   "タップ設定..."
+  "$$ACTION: TOGGLE AUTOSCROLL"       =   "自動スクロールの入切"
+  "$$ACTION: YES"                     =   "はい"
+  "$$ACTION: SELECT FONT..."          =   "フォントと配置..."
+  "$$ACTION: COMMAND STROKE"          =   "コマンドストローク"
+  "$$ACTION: MENU..."                 =   "メニュー..."
+  "$$ACTION: TOGGLE TOOLBAR"          =   "ツールバーの入切"
+  "$$ACTION: TOGGLE FULLSCREEN"       =   "全画面表示の入切"
+  "$$ACTION: ONE LINE UP"             =   "1行上へ"
+  "$$ACTION: ONE LINE DOWN"           =   "1行下へ"
+  "$$ACTION: BRIGHTNESS..."           =   "明るさの設定..."
+  "$$ACTION: CONTRAST..."             =   "コントラストの設定..."
+  "$$ACTION: TOGGLE BACKLIGHT"        =   "背光の入切"
+
+
+/*************************************************************
+ *                      MENU OPTIONS                         *
+ *************************************************************/
+
+"$$ABOUT PLUCKER"           =   "Pluckerについて"
+"$$ADD BOOKMARK..."         =   "$$ACTION: ADD BOOKMARK..."
+"$$BACK"                    =   "$$ACTION: GO BACK"
+"$$BOOKMARKS..."            =   "$$ACTION: BOOKMARKS..."
+"$$BOTTOM"                  =   "$$ACTION: GO TO BOTTOM"
+"$$CONTACT DEVELOPERS"      =   "開発者に連絡"
+"$$COPY TO MEMO"            =   "$$ACTION: COPY TO MEMO"
+"$$DELETE ALL..."           =   "すべて削除..."
+"$$DELETE READ..."          =   "既読を削除..."
+"$$DETAILS..."              =   "$$ACTION: DETAILS..."
+"$$FIND AGAIN"              =   "$$ACTION: FIND AGAIN"
+"$$FIND..."                 =   "$$ACTION: FIND..."
+"$$FORWARD"                 =   "$$ACTION: GO FORWARD"
+"$$GO"                      =   "$$ACTION: GO TO"
+"$$HOME"                    =   "$$ACTION: GO HOME"
+"$$LIBRARY..."              =   "$$ACTION: LIBRARY..."
+"$$OPTIONS"                 =   "オプション"
+"$$PREFERENCES..."          =   "$$ACTION: PREFERENCES..."
+"$$TOP"                     =   "$$ACTION: GO TO TOP"
+"$$VIEW"                    =   "外観"
+"$$AUTOSCROLL FASTER"       =   "$$ACTION: AUTOSCROLL FASTER"
+"$$AUTOSCROLL SLOWER"       =   "$$ACTION: AUTOSCROLL SLOWER"
+"$$DELETE DOC..."           =   "$$ACTION: DELETE DOC..."
+"$$START AUTOSCROLL"        =   "$$ACTION: START AUTOSCROLL"
+"$$STOP AUTOSCROLL"         =   "$$ACTION: STOP AUTOSCROLL"
+"$$SYNC LIST"               =   "文書一覧を更新"
+"$$SHOWHIDE"                =   "表\示項目"
+"$$TYPE"                    =   "種類"
+"$$DATE"                    =   "日付"
+"$$SIZE"                    =   "容量"
+"$$TOGGLE FULLSCREEN"       =   "全画面切換"
+"$$SET KEYBOARD/GRAFFITI..."   =   "キー/Graffiti..."
+"$$SELECT FONT..."          =   "$$ACTION: SELECT FONT..."
+/******************************************/
+"$$LOOKUP WORD"             =   "Lookup word"
+"$$SORT"                    =   "Sort"
+"$$NAME"                    =   "Name"
+"$$CATEGORY"                =   "Category"
+/******************************************/
+
+
+/*************************************************************
+ *                        SHORTCUTS                          *
+ *************************************************************/
+
+"$$SC ADD BOOKMARK"         =   "+"
+"$$SC FIND AGAIN"           =   "A"
+"$$SC BACK"                 =   "B"
+"$$SC COPY TO MEMO"         =   "C"
+"$$SC DELETE ALL"           =   "D"
+"$$SC DELETE DOC"           =   "D"
+"$$SC BOOKMARKS"            =   "E"
+"$$SC FIND"                 =   "F"
+"$$SC HOME"                 =   "H"
+"$$SC DETAILS"              =   "I"
+"$$SC START AUTOSCROLL"     =   "J"
+"$$SC AUTOSCROLL FASTER"    =   "K"
+"$$SC LOOKUP WORD"          =   "L"
+"$$SC LIBRARY"              =   "M"
+"$$SC SELECT FONT"          =   "O"
+"$$SC STOP AUTOSCROLL"      =   "Q"
+"$$SC PREFERENCES"          =   "R"
+"$$SC SET KEYBOARD/GRAFFITI"   =   "S"
+"$$SC TOGGLE FULLSCREEN"    =   "T"
+"$$SC SYNC LIST"            =   "U"
+"$$SC AUTOSCROLL SLOWER"    =   "V"
+"$$SC FORWARD"              =   "W"
+"$$SC BOTTOM"               =   "Y"
+"$$SC TOP"                  =   "Z"
+
+
+/*************************************************************
+ *                         FORMS                             *
+ *************************************************************/
+
+/*** MAIN ***/
+
+"$$MAIN: ADD BOOKMARK"              =   "$$ACTION: ADD BOOKMARK"
+"$$MAIN: BOTTOM"                    =   "$$ACTION: GO TO BOTTOM"
+"$$MAIN: FOLLOW LINK"               =   "リンクをたどる"
+"$$MAIN: OPEN IMAGE"                =   "画像を表\示"
+"$$MAIN: TOP"                       =   "$$ACTION: GO TO TOP"
+"$$MAIN: VIEW BOOKMARKS"            =   "お気に入りを見る"
+"$$MAIN: 10%"                       =   "10%"
+"$$MAIN: 20%"                       =   "20%"
+"$$MAIN: 30%"                       =   "30%"
+"$$MAIN: 40%"                       =   "40%"
+"$$MAIN: 50%"                       =   "50%"
+"$$MAIN: 60%"                       =   "60%"
+"$$MAIN: 70%"                       =   "70%"
+"$$MAIN: 80%"                       =   "80%"
+"$$MAIN: 90%"                       =   "90%"
+/************************************************************/
+"$$MAIN: ADD ANNOTATION"            =   "Add annotation"
+/************************************************************/
+
+/*** ABOUT ***/
+
+"$$ABOUT: BODY1"                    =   "PluckerはPalmOSシステムで"
+"$$ABOUT: BODY2"                    =   "オフラインブラウジングするための"
+"$$ABOUT: BODY3"                    =   "プログラム群です."
+"$$ABOUT: BODY4"                    =   "Free Software Foundationの"
+"$$ABOUT: BODY5"                    =   "General Public Licenseに基づく"
+"$$ABOUT: BODY6"                    =   "フリーソフトウェアです."
+"$$ABOUT: WEBSITE"                  =   "www.plkr.org"
+"$$ABOUT: OK"                       =   "$$ACTION: OK"
+"$$ABOUT: TITLE"                    =   "Pluckerについて"
+
+
+/*** DOCUMENT LIBRARY ***/
+
+"$$LIBRARY: BEAM"                   =   "赤外線通信"
+"$$LIBRARY: CATEGORIZE"             =   "分類する"
+"$$LIBRARY: CATEGORY"               =   "カテゴリー"
+"$$LIBRARY: DATE"                   =   "日付"
+"$$LIBRARY: DELETE"                 =   "$$ACTION: DELETE"
+"$$LIBRARY: NAME"                   =   "名前"
+"$$LIBRARY: OPEN"                   =   "開く"
+"$$LIBRARY: RENAME"                 =   "$$ACTION: RENAME"
+"$$LIBRARY: SHOW:"                  =   "表\示:"
+"$$LIBRARY: SIZE"                   =   "容量"
+"$$LIBRARY: TITLE"                  =   "文書一覧"
+"$$LIBRARY: UNREAD"                 =   "未読にする"
+"$$LIBRARY: NO DOCUMENTS"           =   "文書がありません"
+"$$LIBRARY: HELP"                   =
+    "* Pluckerの文書を開くには, 文書名をタップしてください."\   
+    "\n\n"\
+    "* 文書名の左側のアイコンをタップすると, その文書を開く, "\
+    "分類する, 削除する, または名前を変更するためのメニューが表\示されます."\
+    "\n\n"\
+    " 名前やサイズ, 日付に応じて, 昇順, 降順にソートできます. "
+
+
+/*** RENAME DOCUMENT ***/
+
+"$$RENAME: CANCEL"                  =   "$$ACTION: CANCEL"
+"$$RENAME: NAME:"                   =   "新しい名前:"
+"$$RENAME: RENAME"                  =   "$$ACTION: RENAME"
+"$$RENAME: TITLE"                   =   "名前の変更"
+
+
+/*** PREFERENCES ***/
+
+"$$PREFS: OK"                       =   "$$ACTION: OK"
+"$$PREFS: TITLE"                    =   "初期設定"
+"$$PREFS: CANCEL"                   =   "$$ACTION: CANCEL"
+"$$PREFS: LIBRARY"                  =   "文書一覧"
+"$$PREFS: AUTOSCROLL"               =   "自動スクロール"
+"$$PREFS: LAYOUT"                   =   "文書閲覧"
+"$$PREFS: BUTTON"                   =   "ボタン"
+"$$PREFS: CONTROL"                  =   "タップ"
+"$$PREFS: GENERAL"                  =   "一般"
+"$$PREFS: GESTURE"                  =   "ジェスチャ"
+"$$PREFS: HARDCOPY"                 =   "書き出し"
+"$$PREFS: JOGDIAL"                  =   "ジョグ"
+"$$PREFS: LOOKUP"                   =   "辞書検索"
+/*************************************************************/
+"$$PREFS: COLOR"                    =   "Color"
+"$$PREFS: FONT"                     =   "Font"
+/*************************************************************/
+
+/*** GENERAL PREFERENCES ***/
+
+"$$PREFSGENERAL: ADD BOOKMARK..."          =   "$$ACTION: ADD BOOKMARK..."
+"$$PREFSGENERAL: BOTTOM TOOLBAR"           =   "下"
+"$$PREFSGENERAL: BOTTOM"                   =   "$$ACTION: GO TO BOTTOM"
+"$$PREFSGENERAL: BUTTON ACTION..."         =   "$$ACTION: BUTTON ACTION..."
+"$$PREFSGENERAL: COMMAND BUTTON:"          =   "コマンドツールバーボタン:"
+"$$PREFSGENERAL: COPY TO MEMO"             =   "$$ACTION: COPY TO MEMO"
+"$$PREFSGENERAL: DELETE DOC..."            =   "$$ACTION: DELETE DOC..."
+"$$PREFSGENERAL: DETAILS..."               =   "$$ACTION: DETAILS..."
+"$$PREFSGENERAL: LEFT"                     =   "左"
+"$$PREFSGENERAL: NO TOOLBAR"               =   "なし"
+"$$PREFSGENERAL: NONE"                     =   "$$ACTION: NONE"
+"$$PREFSGENERAL: NONE"                     =   "$$ACTION: NONE"
+"$$PREFSGENERAL: PREFERENCES..."           =   "$$ACTION: PREFERENCES..."
+"$$PREFSGENERAL: RIGHT"                    =   "右"
+"$$PREFSGENERAL: SCREEN DEPTH:"            =   "画面の深さ:"
+"$$PREFSGENERAL: SCROLLBAR:"               =   "スクロールバー:"
+"$$PREFSGENERAL: SILK TOOLBAR"             =   "In silk"
+"$$PREFSGENERAL: TAP ACTION..."            =   "$$ACTION: TAP ACTION..."
+"$$PREFSGENERAL: TOOLBAR:"                 =   "ツールバー:"
+"$$PREFSGENERAL: TOP TOOLBAR"              =   "上"
+/****************************************************************/
+"$$PREFSGENERAL: ALWAYS DELETE ANNOTATIONS"    = "Delete notes/marks with doc"
+"$$PREFSGENERAL: ANNOTATIONS IN BOOKMARK LIST" = "List annotations with bookmarks"
+/****************************************************************/
+"$$PREFSGENERAL: TOP"                      =   "先頭へ"
+"$$PREFSGENERAL: HELP"                     =
+    "* Palm OS 3.5では, ボタンの一つをコマンドツールバーに割り当てられます. "\
+    "抹消線を表\示させることで, リンクが既に押されたかどうかを判別できます."\
+    "\n\n"\
+    "* デフォルトの画面深さを指定できます. "\
+    "\n\n"\
+    "* ツールバーを画面の上端, 下端, あるいは非表\示にすることができます."\
+    "\n\n"\
+    "* スクロールバーは, 右側, 左側, または非表\示にできます."
+
+
+/*** LAYOUT PREFERENCES ***/
+
+/*********************************************************************/
+"$$PREFSLAYOUT: ENABLE SOFT-HYPHENS"     =   "Enable soft-hyphens"
+"$$PREFSLAYOUT: ENABLE MARGINS"          =   "Enable margins"
+/*********************************************************************/
+"$$PREFSLAYOUT: UNDERLINE"               =   "タグの下線表\示"
+"$$PREFSLAYOUT: CONNECT PARTS WITH PAGING"
+                                           =   "Connect parts with paging"
+"$$PREFSLAYOUT: ALIGNMENT:"              =   "割付け"
+"$$PREFSLAYOUT: AS IN DOC"               =   "もとのまま"
+"$$PREFSLAYOUT: FORCE LEFT"              =   "強制左寄せ"
+"$$PREFSLAYOUT: FORCE RIGHT"             =   "強制右寄せ"
+"$$PREFSLAYOUT: FORCE CENTER"            =   "強制中寄せ"
+"$$PREFSLAYOUT: FORCE JUSTIFY"           =   "強制均等配置"
+"$$PREFSLAYOUT: HELP"                    =
+    "* 「タグの下線表\示」をチェックすると, リンクには点線が引かれ, "\
+    "HTML下線タグ(<U>)には代わりに実線が引かれます. この場合でも, "\
+    "* 「リンクのクリック音」をチェックすると, "\
+    "リンクをタップするたびにシステム音がなります."\
+    "\n\n"\
+    "* 一度表\示した画像の再表\示を速くしたい場合は画像キャッシュをonにして下さい。"\
+    "\n\n"\
+    "* You can connect multipart documents with the paging "\
+    "controls so that using a page-down (or half-page-down) "\
+    "control on the last screen of a page will take you to "\
+    "the last displayed link, and similarly for using a page-up or "\
+    "half-page-up control on the first screen."\
+    "\n\n"\
+    "* You can override the document's alignment settings."
+
+
+/*** FONT PREFERENCES ***/
+/*************************************************************/
+"$$PREFSFONT: LIBRARY"      =   "Library"
+"$$PREFSFONT: MAIN"         =   "Main"
+/*************************************************************/
+
+
+/*** COLOR PREFERENCES ***/
+
+"$$PREFSCOLOR: STRIKE-THROUGH"          =   "抹消線"
+"$$PREFSCOLOR: FORCE DEFAULT TEXT COLORS" =  "文字を標準彩色で表示"
+"$$PREFSCOLOR: HELP"                    =
+    "* リンクを押したかどうかがわかりにくければ, 抹消線を使ってみてください. "\
+    "一度目を通したリンクに抹消線が引かれます."\
+    "\n\n"\
+    "* 文字を標準彩色(テキストを黒で、リンクを青で)させることができます。"
+
+
+/*** LIBRARY PREFERENCES ***/
+
+"$$PREFSLIBRARY: UPDATE DOCLIST"           =   "文書一覧の更新:"
+"$$PREFSLIBRARY: AUTOMATIC"                =   "自動"
+"$$PREFSLIBRARY: MANUAL"                   =   "手動"
+"$$PREFSLIBRARY: IGNORE CARD"              =   "外部メモリーを無視"
+"$$PREFSLIBRARY: ADVANCED"                 =   "拡張"
+"$$PREFSLIBRARY: ASCENDING"                =   "昇順"
+"$$PREFSLIBRARY: CATEGORY STYLE:"          =   "カテゴリ形式:"
+"$$PREFSLIBRARY: CLASSIC"                  =   "通常"
+"$$PREFSLIBRARY: DATE"                     =   "日付"
+"$$PREFSLIBRARY: DESCENDING"               =   "降順"
+"$$PREFSLIBRARY: INDICATE OPENED"          =   "既読に抹消線を表\示"
+"$$PREFSLIBRARY: NAME"                     =   "名前"
+"$$PREFSLIBRARY: SHOW DATE COLUMN"         =   "日付を表\示"
+"$$PREFSLIBRARY: SHOW SIZE COLUMN"         =   "サイズを表\示"
+"$$PREFSLIBRARY: SHOW TYPE COLUMN"         =   "種類を表\示"
+"$$PREFSLIBRARY: SIZE"                     =   "サイズ"
+"$$PREFSLIBRARY: SORT BY:"                 =   "並べ替え基準:"
+"$$PREFSLIBRARY: SORT ORDER:"              =   "順序:"
+"$$PREFSLIBRARY: TYPE"                     =   "種類"
+/****************************************************************************/
+"$$PREFSLIBRARY: DATE/TIME"                =   "Use date/time for sort by date"
+"$$PREFSLIBRARY: CATEGORY"                 =   "Category"
+"$$PREFSLIBRARY: HELP"                     =
+    "* Because it can be a slow process to update the list of documents on "\
+    "some devices there is an option to select whether the list should be "\
+    "automatically updated (both RAM and external cards), automatically "\
+    "updated (only RAM), or manually updated."\
+    "\n\n"\
+/****************************************************************************/
+    "* 名前やサイズ, 日付に応じて, 昇順, 降順にソートできます. "\
+/*************************************************************/
+    "\n\n"\
+    "* It is possible to select whether the sort by date should use only the "\
+    "date or if it should use both date and time (faster, but could make the "\
+    "list look 'unsorted')."
+/*************************************************************/
+
+
+/*** AUTOSCROLL PREFERENCES ***/
+
+"$$PREFSAUTOSCROLL: AUTOSCROLL DELAY:"       =   "遅延:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL DIRECTION:"   =   "方向:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL JUMP:"        =   "単位:"
+"$$PREFSAUTOSCROLL: DOWN"                    =   "下向き"
+"$$PREFSAUTOSCROLL: MILLISECONDS"            =   "msec"
+"$$PREFSAUTOSCROLL: PAGE(S)"                 =   "ページ"
+"$$PREFSAUTOSCROLL: PIXEL(S)"                =   "ドット"
+"$$PREFSAUTOSCROLL: STAY ON"                 =   "$$ACTION: AUTOSCROLL STAY ON"
+"$$PREFSAUTOSCROLL: UP"                      =   "上向き"
+"$$PREFSAUTOSCROLL: HELP"                    =
+    "* ここでは自動スクロールの動作をカスタマイズできます."\
+    "\n\n"\
+    "* ドット単位あるいはページ単位でスクロール量を指定できます."\
+    "\n\n"\
+    "* スクロールする方向を指定できます." \
+    "\n\n"\
+    "* スクロールから次のスクロールまでの間の待ち時間をミリ秒単位で指定できます."\
+    "\n\n"\
+    "* 自動スクロール中は電源が切れないように設定することができます."\
+    "これを設定すると, 文末にいたるか, バッテリが少なくなる(か, "\
+    "どこかをタップするか, 電源ボタンを押す)まで, スクロールしつづけます."\
+    "\n\n"\
+/******************************************************************/
+    "* Note that while autoscrolling is happening, you can control "\
+    "the speed with buttons on the toolbar as well as with all the controls "\
+    "(such as Page Up/Down keys) that normally are used to scroll by "\
+    "a screen or half a screen."
+/******************************************************************/
+
+
+/*** HARDCOPY PREFERENCES ***/
+
+/**********************************************************************/
+"$$PREFSHARDCOPY: TITLE"            =   "ハードコピーの動作"
+"$$PREFSHARDCOPY: ACTION:"          =   "動作:"
+"$$PREFSHARDCOPY: DIALOG"           =   "ダイアログを表示"
+"$$PREFSHARDCOPY: IMMEDIATE"        =   "表示しない"
+"$$PREFSHARDCOPY: RANGE:"           =   "範囲:"
+"$$PREFSHARDCOPY: IN VIEW AREA"     =   "表示されている領域"
+"$$PREFSHARDCOPY: VISIBLE PARAGRAPHS" = "段落単位"
+"$$PREFSHARDCOPY: LINK:"            =   "リンク先:"
+"$$PREFSHARDCOPY: BOTTOM"           =   "末尾に一覧"
+"$$PREFSHARDCOPY: INLINE"           =   "文中に挿入"
+"$$PREFSHARDCOPY: NONE"             =   "なし"
+"$$PREFSHARDCOPY: HELP"             =
+    "* You can choose the action of 'export to memopad' feature in this form. This feature enables you to clip, edit, and export text in the current view area to Palm's standard memopad."\
+    "\n\n"\
+    "* Clipped text can be edited in dialog, or be copied immediately to memopad."\
+    "\n\n"\
+    "* Text in the current viewarea or in the visible paragraphs is clipped."\
+    "\n\n"\
+    "* URLs of the links are listed at the bottom, indicated inline, or simply ignored."
+/**********************************************************************/
+
+
+/*** EXTERNALLINK PREFERENCES ***/
+
+"$$PREFSEXTERNALLINK: TITLE"            =   "外部リンク"
+"$$PREFSEXTERNALLINK: ACTION:"          =   "動作:"
+"$$PREFSEXTERNALLINK: DIALOG"           =   "ダイアログを表示"
+"$$PREFSEXTERNALLINK: TO MEMO"          =   "直接メモ帳へ"
+"$$PREFSEXTERNALLINK: BROWSE"           =   "ブラウズ"
+
+
+/*** BUTTON PREFERENCES ***/
+
+"$$PREFSBUTTONS: HARD KEYS"              =   "ボタンによる操作"
+/**********************************************************************/
+"$$PREFSBUTTONS: ARROW KEYS"             =   "矢印ボタンに機能割りあて"
+/**********************************************************************/
+"$$PREFSBUTTONS: HELP"                   =
+    "* ボタン設定を有効にすると, ボタンに動作を割り当てられます."\
+    "\n\n"\
+    "* 4つのボタンそれぞれに異なる動作を割り当てられます."
+
+
+/*** CONTROL PREFERENCES ***/
+
+"$$PREFSTAP: MODE 1"                     =   "モード1"
+"$$PREFSTAP: MODE 2"                     =   "モード2"
+"$$PREFSTAP: MODE 3"                     =   "モード3"
+"$$PREFSTAP: PEN SCROLL MSG1"            =   "画面をタップし, ペンを"
+"$$PREFSTAP: PEN SCROLL MSG2"            =   "上下にドラッグして画面を"
+"$$PREFSTAP: PEN SCROLL MSG3"            =   "スクロールできます."
+"$$PREFSTAP: PEN SCROLL MSG4"            =   ""
+"$$PREFSTAP: REGION ACTION:"             =   "領域毎の設定:"
+"$$PREFSTAP: HELP"                       =
+    "* タップ設定では, 画面をタップしたときの振る舞いを3通り指定できます."\
+    "\n\n"\
+    "* そのうち2つのモードでは, 画面をいくつかの領域に分割し, "\
+    "それぞれに別の動作(例えば1画面進む, 1画面戻る)を割り当てることができます."\
+    "\n\n"\
+    "* 3つめのモードでは, スタイラスをドラッグすることで画面をスクロールすることができます."
+
+
+/*** GESTURE PREFERENCES ***/
+
+"$$PREFSGESTURES: USE GESTURES"          =   "Graffitiジェスチャーで操作する"
+"$$PREFSGESTURES: HELP"                  =
+    "* Graffiti領域にジェスチャーを書きこむことでさまざまな操作ができます."\
+    "\n\n"\
+    "* タップ, 上向きストローク, 下向きストローク, 左向きストローク, "\
+    "右向きストロークの5種類のジェスチャーにそれぞれ別の機能を割りあてることができます."
+
+
+/*** JOGDIAL PREFERENCES ***/
+
+/**********************************************************************/
+"$$PREFSJOGDIAL: USE JOGDIALS"          =   "Enable JogDial for navigation"
+"$$PREFSJOGDIAL: HELP"                  =
+    "* If you own a palm that has a JogDial, you can assign different " \
+    "actions to perform specific funtions in Plucker."\
+    "\n\n"\
+    "* There are six actions: scroll up, scroll down, push in, push in and " \
+    "up, push in and down and back. Not all actions may be available, "\
+    "depending on your device."\
+    "\n\n"\
+    "* You can select different events for each of the five JogDial actions."
+/**********************************************************************/
+
+/*** WORD LOOKUP PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSLOOKUP: ALWAYS ACTIVE"         = "Word lookup always active"
+"$$PREFSLOOKUP: ACTION:"               = "動作:"
+"$$PREFSLOOKUP: SEARCH FORM"           = "検索画面へ..."
+"$$PREFSLOOKUP: PPI"                   = "PPIで検索"
+"$$PREFSLOOKUP: TO CLIPBOARD"          = "クリップボードへコピー"
+/********************************************************/
+"$$PREFSLOOKUP: ANNOTATE"              = "Annotate"
+/********************************************************/
+"$$PREFSLOOKUP: HELP"                  =
+    "* Plucker has a word-lookup function.  When the function is active, "\
+    "tapping on a word selects that word and performs an action. "\
+    "\n\n"\
+    "* If word lookup is set to be always active, then tapping on a word "\
+    "not inside a link always selects a word."\
+    "\n\n"\
+    "* Otherwise, you can use the 'Lookup word' function in the 'Go' menu "\
+    "to turn on a temporary tap-selection mode for the next tap.  That "\
+    "function can also be assigned to a hard key or any other "\
+    "configurable control."\
+    "\n\n"\
+    "Hint: To select a word that contains a non-alphanumeric character such "\
+    "as an apostrophe or a dash, tap on that character when selecting and all "\
+    "instances of that character will be treated as letters."
+/*************************************************************/
+
+
+
+
+
+/*** FONT SELECT ***/
+
+"$$FONTS: FONT:"                    =   "書体:"
+"$$FONTS: OK"                       =   "$$ACTION: OK"
+"$$FONTS: CANCEL"                   =   "$$ACTION: CANCEL"
+"$$FONTS: LINE SPACING:"            =   "行間:"
+"$$FONTS: PARAGRAPH SPACING:"       =   "段落間:"
+"$$FONTS: SELECT FONT"              =   "書体とレイアウト"
+"$$FONTS: ROTATE:"                  =   "回転: "
+"$$FONTS: NONE"                     =   "なし"
+"$$FONTS: COUNTERCLOCKWISE"         =   "反時計回り"
+"$$FONTS: CLOCKWISE"                =   "時計回り"
+"$$FONTS: BUILT-IN FONTS:"          =   "内蔵書体:"
+"$$FONTS: USER-LOADED FONT:"        =   "ユーザー書体:"
+"$$FONTS: ALSO SET AS DEFAULT"      =   "既定値にする"
+/**********************************************************************/
+"$$FONTS: RTL"                      =   "RTL"
+"$$FONTS: VARY WITH DOCUMENT"       =   "Vary with document"
+"$$FONTS: HELP"                     =
+    "* You can select one of the standard Palm fonts or one "\
+    "of the built-in Plucker fonts."\
+    "\n\n"\
+    "* If you have a Plucker font package loaded, you can select "\
+    "that, instead, if this is supported on your device."\
+    "\n\n"\
+    "* You can vary line- and paragraph-spacing in the document. "\
+    "Setting the line-spacing to a negative value may cause some "\
+    "minor visual defects such as lines not showing up."\
+    "\n\n"\
+    "* You can rotate the display by 90 degrees.  On OS 3.5, images"\
+    "will be omitted."\
+    "\n\n"\
+    "* You can allow the font settings to vary between documents "\
+    "and if you do that, you will also have the option to make the "\
+    "current settings be the default ones for new documents."
+/**********************************************************************/
+
+/*** KEYBOARD CUSTOMIZATION ***/
+
+/****************************************************************************/
+"$$KEYBOARD: SET KEYBOARD / GRAFFITI"        =   "Set keyboard / graffiti"
+"$$KEYBOARD: KEYBOARD OR GRAFFITI"         =   "Keyboard or graffiti"
+"$$KEYBOARD: SPECIAL KEYS"          =   "Special keys"
+"$$KEYBOARD: OK"                    =   "OK"
+"$$KEYBOARD: CANCEL"                =   "Cancel"
+"$$KEYBOARD: DEFAULT"               =   "Default"
+"$$KEYBOARD: CLEAR"                 =   "Clear"
+"$$KEYBOARD: INTERFERENCE MSG1"     =   "Some settings can be incompatible"
+"$$KEYBOARD: INTERFERENCE MSG2"     =   "with gestures and/or Graffiti 2."
+"$$KEYBOARD: HELP"                  =
+    "* If you have a keyboard, you can control Plucker with it. "\
+    "You can also control Plucker by using Graffiti to write "\
+    "down certain characters."\
+    "\n\n"\
+    "* Printable characters such as 'a' or '$' can be typed in or "\
+    "drawn with Graffiti strokes directly into the customization form "\
+    "and then you can select the appropriate behavior."\
+    "\n\n"\
+    "* Special keys like 'Return' or arrow keys need to be "\
+    "selected from the drop down list, and then you can select the "\
+    "appropriate actions."\
+    "\n\n"\
+    "* Some characters/keys will not work if you have Graffiti "\
+    "gestures activated in the Plucker preferences.  In particular, "\
+    "the i, I, 1, l, L, period and backspace keys/characters and "\
+    "some shifted Graffiti characters "\
+    "will not be available unless you have gestures disabled."\
+    "\n\n"\
+    "* Some characters are incompatible with Graffiti 2 input.  If "\
+    "you wish to control Plucker with Graffiti 2 input through this "\
+    "customization option, do not assign "\
+    "actions to multistroke characters.  Also, entering a Graffiti 2 "\
+    "multistroke character into Plucker while an action is assigned "\
+    "to the l, space, single quote, minus or backspace characters "\
+    "will lead to unexpected results."
+
+"$$KEY: RETURN"                     =   "Return"
+"$$KEY: TAB"                        =   "Tab"
+"$$KEY: UP"                         =   "Up"
+"$$KEY: DOWN"                       =   "Down"
+"$$KEY: LEFT"                       =   "Left"
+"$$KEY: RIGHT"                      =   "Right"
+"$$KEY: BACKSPACE"                  =   "Backspace"
+/****************************************************************************/
+
+
+
+/*** SELECTION ***/
+
+"$$SELECT: ADD BOOKMARK..."        =   "$$ACTION: ADD BOOKMARK..."
+"$$SELECT: BOOKMARKS..."           =   "$$ACTION: BOOKMARKS..."
+"$$SELECT: BUTTON ACTION..."       =   "$$ACTION: BUTTON ACTION..."
+"$$SELECT: COPY TO MEMO"           =   "$$ACTION: COPY TO MEMO"
+"$$SELECT: DELETE DOC..."          =   "$$ACTION: DELETE DOC..."
+"$$SELECT: DETAILS..."             =   "$$ACTION: DETAILS..."
+"$$SELECT: FIND AGAIN"             =   "$$ACTION: FIND AGAIN"
+"$$SELECT: FIND..."                =   "$$ACTION: FIND..."
+"$$SELECT: FULL PAGE DOWN"         =   "$$ACTION: FULL PAGE DOWN"
+"$$SELECT: FULL PAGE UP"           =   "$$ACTION: FULL PAGE UP"
+"$$SELECT: GO BACK"                =   "$$ACTION: GO BACK"
+"$$SELECT: GO FORWARD"             =   "$$ACTION: GO FORWARD"
+"$$SELECT: GO HOME"                =   "$$ACTION: GO HOME"
+"$$SELECT: GO TO BOTTOM"           =   "$$ACTION: GO TO BOTTOM"
+"$$SELECT: GO TO TOP"              =   "$$ACTION: GO TO TOP"
+"$$SELECT: HALF PAGE DOWN"         =   "$$ACTION: HALF PAGE DOWN"
+"$$SELECT: HALF PAGE UP"           =   "$$ACTION: HALF PAGE UP"
+"$$SELECT: LIBRARY..."             =   "$$ACTION: LIBRARY..."
+"$$SELECT: NONE"                   =   "$$ACTION: NONE"
+"$$SELECT: PREFERENCES..."         =   "$$ACTION: PREFERENCES..."
+"$$SELECT: SELECT FONT..."         =   "Font and layout..."
+"$$SELECT: TAP ACTION..."          =   "$$ACTION: TAP ACTION..."
+"$$SELECT: AUTOSCROLL FASTER"      =   "$$ACTION: AUTOSCROLL FASTER"
+"$$SELECT: AUTOSCROLL SLOWER"      =   "$$ACTION: AUTOSCROLL SLOWER"
+"$$SELECT: GESTURE ACTION..."      =   "$$ACTION: GESTURE ACTION..."
+"$$SELECT: TOGGLE AUTOSCROLL"      =   "$$ACTION: TOGGLE AUTOSCROLL"
+"$$SELECT: NEXT ANCHOR"            =   "$$ACTION: NEXT ANCHOR"
+"$$SELECT: PREV ANCHOR"            =   "$$ACTION: PREV ANCHOR"
+"$$SELECT: GO TO LINK"             =   "$$ACTION: GO TO LINK"
+"$$SELECT: COMMAND STROKE"         =   "$$ACTION: COMMAND STROKE"
+"$$SELECT: MENU..."                =   "$$ACTION: MENU..."
+"$$SELECT: TOGGLE TOOLBAR"         =   "$$ACTION: TOGGLE TOOLBAR"
+"$$SELECT: TOGGLE FULLSCREEN"      =   "$$ACTION: TOGGLE FULLSCREEN"
+"$$SELECT: ONE LINE UP"            =   "$$ACTION: ONE LINE UP"
+"$$SELECT: ONE LINE DOWN"          =   "$$ACTION: ONE LINE DOWN"
+"$$SELECT: ADJUST BRIGHTNESS"      =   "$$ACTION: BRIGHTNESS..."
+"$$SELECT: ADJUST CONTRAST"        =   "$$ACTION: CONTRAST..."
+"$$SELECT: TOGGLE BACKLIGHT"       =   "$$ACTION: TOGGLE BACKLIGHT"
+"$$SELECT: ROTATE RIGHT"           =   "時計回り"
+"$$SELECT: ROTATE LEFT"            =   "反時計回り"
+"$$SELECT: SAVE POSITION"          =   "現在位置を記憶"
+/****************************************************/
+"$$SELECT: LOOKUP WORD IN PPI"     =   "PPI select word"
+"$$SELECT: LOOKUP TO SEARCH FORM"  =   "Search select word"
+"$$SELECT: LOOKUP TO CLIPBOARD"    =   "Clipboard select word"
+"$$SELECT: LOOKUP TO ANNOTATE"     =   "Annotate select word"
+"$$UNSUPPORTED"                    =   "Unsupported action"
+/****************************************************/
+
+
+/*** DETAILS ***/
+
+"$$DETAILS: CANCEL"                 =   "$$ACTION: CANCEL"
+"$$DETAILS: COPY URL"               =   "$$ACTION: COPY URL"
+"$$DETAILS: OK"                     =   "$$ACTION: OK"
+"$$DETAILS: READ"                   =   "読了"
+"$$DETAILS: SHOW IMAGES"            =   "画像を表\示"
+"$$DETAILS: STATUS:"                =   "状態:"
+"$$DETAILS: TITLE"                  =   "詳細"
+"$$DETAILS: UNREAD"                 =   "未読"
+"$$DETAILS: URL:"                   =   "URL:"
+"$$DETAILS: HELP"                   =
+    "* 文書の状態を「未読」(実下線表\示)に変更できます."\
+    "\n\n"\
+    "* すべての画像を非表\示にすることもできます."
+
+
+/*** SEARCH ***/
+
+"$$FIND: CANCEL"                    =   "$$ACTION: CANCEL"
+"$$FIND: CASE SENSITIVE"            =   "大小文字を区別" 
+"$$FIND: FIND:"                     =   "検索:"
+"$$FIND: IN ALL PAGES"              =   "すべてのページ"
+"$$FIND: IN PAGE"                   =   "現在のページ"
+"$$FIND: OK"                        =   "$$ACTION: OK"
+"$$FIND: TITLE"                     =   "単語検索"
+/********************************************************/
+"$$FIND: DOWN IN DOC"               =   "Down in doc"
+"$$FIND: SUB PAGES"                 =   "Sub pages"
+"$$FIND: PHRASE"                    =   "Phrase"
+"$$FIND: NO TRANSLITERATION"        =   "No transliteration"
+"$$FIND: NON-ASCII TO PERIOD"       =   "Non-ASCII to period"
+"$$FIND: DROP LATIN 1 ACCENTS"      =   "Drop Latin 1 accents"
+"$$FIND: HELP"                      =
+    "* Tapping on the icon to the right of the search field "\
+    "gives you a list of recent search strings to choose from."\
+    "\n\n"\
+    "* You can search the current page, the whole document, the whole "\
+    "document down from the current position, or subpages (breadth-first "\
+    "spidering)."\
+    "\n\n"\
+    "* You can make your search case insensitive if applicable to your language."\
+    "\n\n"\
+    "* In a phrase search you must have an "\
+    "exact match for everything in the search string, including spaces."\
+    "\n\n"\
+    "* If you turn off phrase search, each space-separated string "\
+    "must be found within the same paragraph.  Thus if you "\
+    "put in the search string 'Big bad wolf' (without the quotation marks), "\
+    "then you will find all paragraphs that contain the strings 'Big', 'bad' "\
+    "and 'wolf' somewhere in them, "\
+    "though not necessarily as whole words and not necessarily in this order. "\
+    "\n\n"\
+    "* Only the first term will be highlighted in the text when you view the "\
+    "results."\
+    "\n\n"\
+    "* With phrase search disabled, if you have more than ten search terms, "\
+    "the extra ones will be ignored."\
+    "\n\n"\
+    "* For fastest searching, put the least common term as the first one "\
+    "if phrase search is disabled."\
+    "\n\n"\
+    "* You can choose to transliterate the text and search string before "\
+    "searching.  For instance, you can choose to change all non-ASCII "\
+    "characters (such as '\374') to periods.  Or you can choose to drop "\
+    "accents on all Latin 1 characters, so that, for instance, a 'u-umlaut' "\
+    "gets changed to a 'u'.  This also changes other non-ASCII characters "\
+    "such as fancy quotation marks to their closest ASCII equivalent.  Since "\
+    "your search string is also transliterated before searching, this is basically "\
+    "an accent-insensitive search."
+/********************************************************/
+
+
+/*** SEARCH RESULT ***/
+
+"$$RESULT: CANCEL"                  =   "$$ACTION: CANCEL"
+"$$RESULT: FINDMORE"                =   "$$ACTION: FIND AGAIN"
+"$$RESULT: SEARCHING..."            =   "探しています..."
+"$$RESULT: STOP"                    =   "停止"
+"$$RESULT: TITLE"                   =   "検索結果"
+"$$RESULT: MATCHES"                 =   "見付かりました:"
+"$$RESULT: NOMATCHES"               =   "ありませんでした:"
+
+
+/*** EMAIL ***/
+
+"$$EMAIL: CANCEL"    =   "$$ACTION: CANCEL"
+"$$EMAIL: CC:"                      =   "Cc:"
+"$$EMAIL: SEND"                     =   "メールを送る"
+"$$EMAIL: SUBJECT:"                 =   "Subj:"
+"$$EMAIL: TITLE"                    =   "Plucker Email"
+"$$EMAIL: TO:"                      =   "To:"
+
+
+/*** ADD BOOKMARK ***/
+
+"$$ADD BOOKMARK: ADD"               =   "追加"
+"$$ADD BOOKMARK: CANCEL"            =   "$$ACTION: CANCEL"
+"$$ADD BOOKMARK: NAME:"             =   "名前:"
+"$$ADD BOOKMARK: TITLE"             =   "お気に入りに追加"
+
+
+/*** BOOKMARK ***/
+
+"$$BOOKMARKS: DELETE"               =   "$$ACTION: DELETE"
+"$$BOOKMARKS: DONE"                 =   "完了"
+"$$BOOKMARKS: GO TO"                =   "$$ACTION: GO TO"
+"$$BOOKMARKS: TITLE"                =   "お気に入り"
+
+
+/*** EXTERNAL LINKS ***/
+
+"$$EXTERN: BACK"                    =   "$$ACTION: GO BACK"
+"$$EXTERN: COPY URL"                =   "$$ACTION: COPY URL"
+"$$EXTERN: LABEL1"                  =   "お選びになったリンクはPluckerで"
+"$$EXTERN: LABEL2"                  =   "ダウンロードされていません. "
+"$$EXTERN: LABEL3"                  =   "おそらく, 外部サイトへのリンクか, "
+"$$EXTERN: LABEL4"                  =   "巡回時に指定された深さを"
+"$$EXTERN: LABEL5"                  =   "超えたリンクです. "
+"$$EXTERN: LABEL6"                  =   ""
+"$$EXTERN: NO URL"                  =   "未知のURLです."
+"$$EXTERN: TITLE"                   =   "外部へのリンク"
+"$$EXTERN: URL:"                    =   "URL:"
+/********************************************************************/
+"$$EXTERN: BROWSE ONLINE"           =   "Go online"
+/********************************************************************/
+
+
+/*** CATEGORY ***/
+
+"$$CATEGORY: ALL"                   =   "全選択"
+"$$CATEGORY: AND"                   =   "AND"
+"$$CATEGORY: CANCEL"                =   "$$ACTION: CANCEL"
+"$$CATEGORY: DELETE"                =   "$$ACTION: DELETE"
+"$$CATEGORY: MULTIPLE SELECT"       =   "複数選択"
+"$$CATEGORY: NONE"                  =   "$$ACTION: NONE"
+"$$CATEGORY: OK"                    =   "$$ACTION: OK"
+"$$CATEGORY: OR"                    =   "OR"
+"$$CATEGORY: RENAME"                =   "$$ACTION: RENAME"
+"$$CATEGORY: TITLE"                 =   "カテゴリー"
+"$$CATEGORY: UNFILED"               =   "未分類"
+"$$CATEGORY: HELP"                  =
+    "* カテゴリー名をタップして, そのカテゴリーを表\示したり隠したりできます."\
+    "\n\n"\
+    "* 「複数選択」をチェックすると複数のカテゴリーの文書を同時に一覧できます."\
+    "\n\n"\
+    "* 空欄を押すと新しいカテゴリーを追加できます. アイコンをタップすると, "\
+    "カテゴリーを削除したり名前を変更することができます."\
+    "\n\n"\
+    "* カテゴリー名を削除した場合, そのカテゴリーの文書は「未分類」になります."\
+    "\n\n"\
+    "* 異なるカテゴリーの文書を合併するには, 一方のカテゴリー名をもう一方と同じ名前に変更してください."
+
+
+/*** NEW CATEGORY ***/
+
+"$$EDIT CATEGORIES: CANCEL"         =   "$$ACTION: CANCEL"
+"$$EDIT CATEGORIES: NAME:"          =   "新しいカテゴリー名:"
+"$$EDIT CATEGORIES: OK"             =   "$$ACTION: OK"
+"$$EDIT CATEGORIES: TITLE"          =   "カテゴリーの編集"
+
+
+/*** INITIALIZING CATEGORY ***/
+
+"$$INITDOC: SYNCHRONIZING"          =   "文書を同期しています"
+"$$INITDOC: OPEN DOC LIST"          =   "文書一覧を開いています"
+
+
+/*** SORT DOCUMENTS ***/
+
+"$$SORTDOC: SORTING..."             =   "並べかえ中..."
+
+
+/*** HARDCOPY ***/
+
+"$$HARDCOPY: CANCEL"                =   "$$ACTION: CANCEL"
+/********************************************************/
+"$$HARDCOPY: TITLE"                 =   "Export to Memopad"
+"$$HARDCOPY: EXPORT"                =   "Export"
+"$$HARDCOPY: ROT13"                 =   "Rot13"
+/********************************************************/
+
+
+/*** ANNOTATION ***/
+
+/*************************************************************/
+"$$ANNOTATION: TITLE"                 =   "Annotate"
+"$$ANNOTATION: OK"                    =   "OK"
+"$$ANNOTATION: CANCEL"                =   "Cancel"
+"$$ANNOTATION: DELETE"                =   "Delete"
+/*************************************************************/
+
+/*** EXPORT LINK TO MEMO ***/
+
+"$$EXPORT: EXPORTING LINK..."       =   "Exporting link..."
+
+
+/*************************************************************
+ *                         ALERTS                            *
+ *************************************************************/
+
+/*** COMMON STRINGS ***/
+
+"$$CANCEL"                  =   "$$ACTION: CANCEL"
+"$$DELETE"                  =   "$$ACTION: DELETE"
+"$$NO"                      =   "$$ACTION: NO"
+"$$OK"                      =   "$$ACTION: OK"
+"$$YES"                     =   "$$ACTION: YES"
+"$$EXIT"                    =   "Exit"
+"$$LEAVE"                   =   "残す"
+/*************************************************************/
+"$$NEXT"                    =   "Next page"
+"$$RESTART"                 =   "Restart"
+/*************************************************************/
+
+
+/*** INFORMATION ***/
+
+"$$SYSTEM INCOMPATIBLE"     =   "システム不適合"
+"$$SYSTEM MSG"              =   "このソフトを使うにはバージョン2.0以上のシステムが必要です."
+
+"$$HIGH BITDEPTH"           =   "画像を表\示できません"
+"$$HIGH BITDEPTH MSG"       =   "画像の色数が多すぎます."
+
+"$$EMPTY PATTERNS"          =   "検索パターンなし"
+"$$EMPTY PATTERNS MSG"      =   "検索パターンが指定されていません."
+
+"$$NO BEAM SUPPORT"         =   "赤外線通信できません"
+"$$NO BEAM SUPPORT MSG"     =   "赤外線通信をサポートしていません"
+
+"$$COPY PROTECTED"          =   "赤外線送信できません"
+"$$COPY PROTECTED MSG"      =   "コピープロテクトされた文書を送信することはできません."
+
+
+/*** CONFIRMATION ***/
+
+/*******************************************************************************/
+"$$DELETE OLD ANNOTATIONS"  =   "Out of date annotations"
+"$$DELETE OLD ANNOTATIONS MSG" =  "The annotations / bookmarks are older than "\
+                                  "the document.  Do you want to delete them now to "\
+                                  "prevent possible problems?"
+"$$DO NOT ASK"                 =  "Never"
+"$$DELETE ANNOTATIONS"         = "Delete annotations"
+"$$DELETE ANNOTATIONS MSG"     = "Do you want to delete the annotations and bookmarks for ^1?"
+"$$ALWAYS"                     = "Always delete"
+/*******************************************************************************/
+
+"$$CONFIRM DELETE"          =   "削除の確認"
+"$$DELETE MSG"              =   "^1を削除していいですか?"
+
+"$$CONFIRM DELETE ALL"      =   "全部削除?"
+"$$DELETE ALL MSG"          =   "現在のカテゴリーのすべての文書を消していいですか?"
+
+"$$CONFIRM DELETE METADOC"  =   "付帯情報も削除"
+"$$DELETE METADOC MSG"      =   "^1の付帯情報も消していいですか?"
+
+"$$CONFIRM DELETE READ"     =   "既読文書を削除"
+"$$DELETE READ MSG"         =   "現在のカテゴリーの既読文書を全部消していいですか?"
+
+"$$MERGE CATEGORY"          =   "カテゴリーの合併"
+"$$MERGE CATEGORY MSG"      =   "既存のカテゴリーと同じ名前を指定しました. これらのカテゴリーは合併されます. よろしいですか?"
+
+/*************************************************************/
+"$$END OF PAGE MSG"          =  "End of page reached.  Search next page or restart from "\
+                                "beginning of search?"
+
+"$$END OF DOC MSG"          =   "End of document reached.  Restart from beginning of search?"
+/*************************************************************/
+
+
+/*** WARNING ***/
+
+"$$BROKEN DOCUMENT"         =   "文書が壊れてるよ!"
+"$$BROKEN MSG"              =   "重要なレコードが^1に欠けています.\n"\
+                                "新しい文書をとり込んでください."
+
+"$$INSUFFICIENT MEMORY"     =   "メモリが足りません"
+"$$INSUFFICIENT MSG"        =   "ページを解凍するメモリが足りません. "\
+                                "RAMを開放してください."
+
+"$$LOW MEMORY"              =   "メモリ不足"
+"$$EMAIL MEMORY MSG"        =   "メールを作成するメモリが足りません. RAMメモリを開放するか内容をごく短くしてください."
+"$$IMAGE MEMORY MSG"        =   "画像を表\示するのにメモリが足りません."
+
+"$$NO TOADDR"               =   "To: にアドレスがありません"
+"$$NO TOADDR MSG"           =   "To: にアドレスを入れてください."
+
+"$$ZLIB NOT SUPPORTED"      =   "ZLibに未対応"
+"$$ZLIB MSG"                =   "ZLibで圧縮された文書を扱えません"
+
+"$$IMAGE COMPRESSION"       =   "圧縮に未対応"
+"$$COMPRESSION MSG"         =   "Palm OS画像圧縮に対応していません. この文書の画像は表\示しません."
+
+"$$AUTOSCROLL STAY ON"     =   "$$ACTION: AUTOSCROLL STAY ON"
+"$$STAY ON MSG"            =   "自動スクロール中は電源が切れないように設定することができます."\
+                               "これを設定すると, 文末にいたるか, バッテリが少なくなる(か, どこかをタップするか, "\
+                               "電源ボタンを押す)まで, スクロールしつづけます."
+
+"$$INVALID OWNER"           =   "文書の閲覧禁止"
+"$$INVALID OWNER MSG"       =   "あなたのデバイスに登録されているユーザ名が, 文書に登録されている'^1'と異なるため, "\
+                                "開くことができません."
+
+"$$MANUAL SYNC"             =   "文書一覧の更新"
+"$$MANUAL SYNC MSG"         =   "自動的に文書一覧を更新しないように設定します."\
+                                "メニューで「文書一覧を更新」を選んで更新して下さい."
+
+
+/*** ERROR ***/
+
+"$$NO CATEGORY"             =   "カテゴリが選択されていません"
+"$$NO CATEGORY MSG"         =   "カテゴリーを少なくとも一つ選んでください."
+
+"$$CATEGORY NAME"           =   "カテゴリ名"
+"$$CATEGORY NAME MSG"       =   "カテゴリ^1 は既に存在します. "\
+                                "別の名前にしてください."
+
+"$$CANNOT DELETE"           =   "削除できません"
+"$$CANNOT DELETE MSG"       =   "文書を削除できません!"
+
+"$$CANNOT DELETE ALL"       =   "全文書を消せません"
+"$$CANNOT DELETE ALL MSG"   =   "全文書を消せません!"
+
+"$$CANNOT DELETE READ"      =   "既読文書を消せません"
+"$$CANNOT DELETE READ MSG"  =   "既読文書を消せません!"
+
+"$$BAD MAILTO"              =   "Mailtoエラー"
+"$$BAD MAILTO MSG"          =   "mailtoのアドレスが壊れていて読み取れません!"\
+                                "\n\n"\
+                                "Plucker開発チームにお知らせください."
+
+"$$ALREADY EXISTS"          =   "^1という名前の文書は存在します."
+
+"$$READ ONLY"               =   "変更不可"
+"$$READ ONLY MSG"           =   "読み出し専用の文書なので名前を変えられません."
+
+"$$UNKNOWN TYPE"            =   "未知の種類"
+"$$UNKNOWN TYPE MSG"        =   "未知の種類の書類です."
+
+"$$CANNOT RENAME DOC"       =   "名前を変えられません!"
+
+"$$CANNOT FIND DOC"         =   "文書がみつかりません"
+"$$CANNOT FIND DOC MSG"     =   "内部/外部メモリに文書がみつかりませんでした!"
+
+"$$UNHANDLED EXCEPTION"     =   "Unhandled exception"
+"$$UNHANDLED EXCEPTION MSG" =   "Unhandled exception, error code = ^1"
+
+"$$CANNOT ADD BOOKMARK"     =   "お気に入りに追加できません"
+"$$CANNOT ADD BOOKMARK MSG" =   "'^1'をお気に入りに追加できませんでした."
+
+"$$CANNOT DELETE BOOKMARK"     =   "お気に入りを削除できません"
+"$$CANNOT DELETE BOOKMARK MSG" =   "'^1'をお気に入りから削除できませんでした."
+
+/*************************************************************/
+"$$IMAGE ERROR"             =   "Image error"
+"$$IMAGE ERROR MSG"         =   "There is a problem displaying the image. "\
+                                "Perhaps Plucker is running out of memory."
+/*************************************************************/
+END
+

@@ -1,0 +1,52 @@
+
+
+TRANSLATION "ca"
+BEGIN
+
+
+"$$LANG"                    =   "ca"
+
+
+"$$TITLE"                   = "Plucker Plugins"
+
+"$$LOOKUP"                  = "Lookup word in"
+"$$NONE"                    = "None"
+"$$CUSTOM"                  = "Custom"
+"$$NAME"                    = "Name: "
+"$$CLIPBOARD"               = "Clipboard"
+"$$DESKTOP ACCESSORY"       = "DA"
+"$$COMMAND"                 = "Command: CustomBase + "
+"$$SAVE"                    = "Save"
+"$$CANCEL"                  = "Cancel"
+"$$TIPS"                    = "Tips"
+
+"$$STRTIPS"                 =
+    "This Plucker Plugin Interface is used by Plucker to call "\
+    "external programs (plugins).\n\n" \
+    "'Lookup word in' tells PPI which plugin to call when Plucker "\
+    "makes a request to look up a word. "\
+    "Choose a plugin from the popup list.\n\n" \
+    "If you select 'Custom', enter the name of the program and select "\
+    "whether to copy the word to the Clipboard, and if it is a "\
+    "'Desk Accessory'. Also select the launch command if it is not "\
+    "a Desk Accessory.\n\n" \
+    "Press 'Save' to save your selections, or 'Cancel' to keep the "\
+    "original ones"
+
+"$$HELP"                    = "Help"
+"$$ABOUT"                   = "About"
+
+"$$ABOUTT"  = "About Plucker Plugin Interface"
+
+"$$ABOUT1"  = "PPI is a part of the Plucker"
+"$$ABOUT2"  = "suite of programs. It's Free Software"
+"$$ABOUT3"  = "under the conditions of the Free"
+"$$ABOUT4"  = "Software Foundation's General"
+"$$ABOUT5"  = "Public License."
+
+"$$ABOUTW"  = "www.plkr.org"
+
+"$$OK"      = "OK"
+
+END
+

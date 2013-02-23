@@ -1,0 +1,104 @@
+//----------------------------------------------------------------------------------------
+// Name:        TRANSLATING
+// Purpose:     Instructions for making a new translation of Plucker Desktop.
+// Author:      Robert O'Connor
+// Modified by:
+// Created:     2001/10/20
+// Copyright:   (c) Robert O'Connor ( rob@medicalmnemonics.com )
+// Licence:     GPL
+// RCS-ID:      $Id: HOW_TO_TRANSLATE.txt,v 1.1 2002/06/01 18:31:32 robertoconnor Exp $
+//----------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------
+// Step one: Are the files ready for your translation? (they probably are)
+//----------------------------------------------------------------------------------------
+
+In the "langs" directory you will find the language files for the ready languages. 
+They are in subdirectories named using the ISO language code (see ISO-CODE.txt file in the 
+plucker_desktop/langs/ directory), 
+e.g. German is in langs/de/plucker-desktop.po 
+
+If there already is a subdirectory for your language, skip ahead to either of the 
+step twos.
+
+If there isn't a subfolder for your language yet, to add support for a new language
+you should copy the file 
+"plucker_desktop/langs/sample_po.txt"
+to 
+"plucker_desktop/langs/your_new_language_code/plucker-desktop.po", replacing 
+your_new_language_code with the appropriate ISO-CODE (see the ISO-CODE.txt file in 
+plucker_desktop/langs/ to find the correct code).
+
+Now, have you 2 options, can translate using poedit GUI translator (recommended), or 
+by hand.
+
+//----------------------------------------------------------------------------------------
+// Step two: Way one: Translating with poEdit GUI editor (recommended)
+//----------------------------------------------------------------------------------------
+
+Download the poEdit GUI from poedit.sourceforge.net.
+
+Install poEdit, using its setup utility.
+
+In poEdit, from menu, choose "File > Open" to open up your 
+"plucker_desktop/langs/YOUR_LANGUAGE_CODE/plucker-desktop.po"
+file ready to edit.
+
+There are 3 panes. The top pane is a side-by-side listing of strings and their
+translations. Select a string in the listing and the string to translate appears in pane 2.
+Type your translation into the 3rd pane. 
+   ( Tip: For long strings with parts that don't need a translation (eg the 
+   file filter strings Like "JPEG files|jpeg(*.*)....", you can cut from pane 2 and
+   paste to pane 3, then just change the word 'files' instead of retyping it all.  
+   Even faster: just hit Alt+C to copy to translation field).
+
+Choose File > Save to save changes.
+
+//----------------------------------------------------------------------------------------
+// Step two: Way two: Translating by hand (if didn't want to use the poEdit way, above)
+//----------------------------------------------------------------------------------------
+
+Open up your_new_language_code.po file in your favorite text editor.
+
+There will be a list of entries of the form:
+   #: main_dialog.cpp:426
+   msgid "Never"
+   msgstr ""
+
+All you need to do is to type in the translated string between the quotes of msgstr=""
+For example, the above translated into french would be:
+   #: main_dialog.cpp:426
+   msgid "Never"
+   msgstr "Jamais"
+
+//----------------------------------------------------------------------------------------
+// Step three (optional): Translating wxstd.po, if not done already.
+//----------------------------------------------------------------------------------------
+
+Most likely the file wxstd.po that is in your language directory is already translated.
+Open it up and see. Whereas plucker-desktop.po contains the strings used in the 
+Plucker Desktop, wxstd.po contains a list of all the general strings appearing in any 
+wxWindows program, things like an error message "File Not Found", etc. 
+
+If wxstd.po isn't already translated for your language, repeat the steps you did above
+for plucker-desktop.po.
+ 
+//----------------------------------------------------------------------------------------
+// Step four: Share your language with others
+//----------------------------------------------------------------------------------------
+
+Email the .po file(s) to plucker-dev@rubberchicken.org to have your translation included
+in the main Plucker distribution, to share with others who speak your language.
+
+Include your name and any desired contact email address, and it will be placed with the 
+translation, so others can recognize your gift of the language's translation.
+
+//----------------------------------------------------------------------------------------
+// A developer note on Charset encoding:
+//----------------------------------------------------------------------------------------
+
+According to wxWindows docs, most language po files should be encoded in the either the 
+Unix charset iso8859-1 or iso8859-2 (which is all of the the current plucker-desktop
+languages but Russian) and wxWindows can do encoding switching at runtime. 
+xgettext however coughs on this format unless the string "iso8859-2" it is formatted 
+as "ISO-8859-2". 

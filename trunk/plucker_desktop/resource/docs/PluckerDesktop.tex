@@ -1,0 +1,2038 @@
+%------------------------------------------------------------------------------
+% Name:        PluckerDesktop.tex
+% Purpose:     Manual for Plucker Desktop
+% Author:      Robert O'Connor
+% Modified by:
+% Created:     2001/12/18
+% Copyright:   [c] Robert O'Connor [ rob@medicalmnemonics.com ]
+% Licence:     GPL
+% RCS-ID:      Id: PluckerDesktop.tex,v 1.12.4.1 2001/12/18 17:59:49 robertoconnor Exp $
+%------------------------------------------------------------------------------
+\begin{helpignore}
+\chapter{\brandingapplicationdesktopname}\label{sec:pd-plucker-desktop}
+This document describes \brandingapplicationdesktopname, the visual desktop manager for
+\brandingapplicationsuitename.
+\end{helpignore}
+
+\begin{helponly}
+% This title command is used as the name of the the top level book icon.
+\title{\brandingapplicationdesktopname Help}
+\center{\LARGE{\brandingapplicationdesktopname Help}} \center{Visual content management for \brandingapplicationsuitename}
+
+This document describes \brandingapplicationdesktopname, the visual desktop manager for
+\brandingapplicationsuitename.
+
+\begin{itemize}
+  \item \helplink{Most Common Tasks}{pd-common-tasks}
+  \item \helplink{The Visual Interface}{pd-visual-interface}
+  \item \helplink{Commandline Mode}{pd-commandline-mode}
+  \item \helplink{About}{pd-about}
+  \item \helplink{Appendix}{pd-appendix}
+\end{itemize}
+\end{helponly}
+
+\begin{helponly}
+\chapter{Most Common Tasks}\label{pd-common-tasks}
+This chapter describes the most common \brandingapplicationdesktopname tasks.
+\end{helponly}
+
+\helpignore{\section{Adding a new channel using the Add Channel Wizard}\label{sec:pd-task-add-new-channel-using-wizard}}
+\helponly{\section{Adding a new channel using the Add Channel Wizard}\label{pd-task-add-new-channel-using-wizard}}
+
+This is a step-by-step guide on how to add a new channel using the Add Channel 
+Wizard:
+\begin{enumerate}
+    \item From the menu, choose 
+    \desktopmenuitem{File > Add new channel using wizard...}
+
+    \item Fill in the requested information on each page.
+
+    \item Click \desktopcontrol{Finish} to complete the wizard. Your 
+    new channel will appear in your list.
+\end{enumerate}
+
+\begin{helponly}
+\chapter{The Visual Interface}\label{pd-visual-interface}
+This chapter describes the \brandingapplicationdesktopname visual interface, dialog by dialog.
+\end{helponly}
+
+\helpignore{\section{Main Dialog}\label{sec:pd-main-dialog}}
+\helponly{\section{Main Dialog}\label{pd-main-dialog}}
+
+The Main Dialog is the initial dialog that is seen when \brandingapplicationdesktopname is  
+started. There is a main list, a toolbar, a statusbar at the bottom, and a 
+menu. 
+
+The list displays all your current \brandingapplicationsuitename channels. The first column 
+shows the name of the channel and the second column shows when that channel 
+is due for an update. 
+
+The toolbar butttons are shortcuts to the eight most commonly-used menu items.
+The menu items are described below.
+
+\basictip{Tooltips are available for the toolbar buttons. Hover over a 
+toolbutton to read its description, or read its longer description down in 
+the status bar at the bottom of the dialog.}
+
+The menu items, described in order of their appearance on the menu, are:
+
+\begin{itemize}
+  \item \desktopmenuitem{File > Add new channel...} Adds a new channel. It 
+  will first ask you for a name of the new channel, then pop up a 
+  \helpignore{\ref{sec:pd-channel-dialog}}
+  \helponly{\helplink{Channel Dialog}{pd-channel-dialog}} for your to describe
+  the new channel to be added.
+  
+  \item \desktopmenuitem{File > Add a new channel using wizard...} 
+  Calls up the
+  \helpignore{\ref{sec:pd-add-channel-wizard}}
+  \helponly{\helplink{Add Channel Wizard}{pd-add-channel-wizard}}
+  which will add a new channel, based on your answers to a few questions.
+ 
+  \item \desktopmenuitem{File > Configure selected channel...} Calls up the
+  \helpignore{\ref{sec:pd-channel-dialog}}
+  \helponly{\helplink{Channel Dialog}{pd-channel-dialog}} 
+  to allow setting properties of the channel currently selected in the list.
+  If you have multiple channels selected, it will choose the topmost one as 
+  the one to configure.
+
+  \item \desktopmenuitem{File > Delete selected channels...} Permanently 
+  deletes the selected channels. A prompt will ask to confirm that you wish to 
+  delete them.
+\end{itemize}
+
+\begin{itemize}
+  \item \desktopmenuitem{Import/Export > Paste URL as new channel} Pastes
+  a URL on the clipboard as a new channel. This is handy from copying a URL
+  from your web browser's address bar and pasting it as a \brandingapplicationsuitename channel.
+  
+  \item \desktopmenuitem{Import/Export > Paste files as new separate channels}
+  Pastes a set of files as separate new channels. To use this, select some 
+  text or html files somewhere on your computer and copy the filenames 
+  to the clipboard. Then choose this menu item to paste them into 
+  \brandingapplicationdesktopname. 
+  You will be asked for a name of each channel, and a configuration
+  dialog will be shown for each. 
+  \advancedtip{You can also drag and drop a set of files onto the channel list.}
+\end{itemize}
+
+\begin{itemize}
+  \item \desktopmenuitem{Update > Update selected channels} Updates all the 
+  channels that your have selected in the list.
+
+  \item \desktopmenuitem{Update > Update all due channels} Updates all the 
+  channels that are currently due. A channel is due when the current time is 
+  past the time in that channel's 'Due' column.
+
+  \item \desktopmenuitem{Update > Update all channels} Updates all channels in 
+  the list, regardless of whether or not that channel is currently due.
+\end{itemize}
+
+\begin{itemize}
+  \item \desktopmenuitem{Options > Preferences} Calls up the
+  \helpignore{\ref{sec:pd-preferences-dialog}}
+  \helponly{\helplink{Preferences Dialog}{pd-preferences-dialog}}  
+  to set some shared settings for \brandingapplicationdesktopname such as fine-tuning to the 
+  interface, the HTML editor, channel spidering behaviour, the \brandingapplicationsuitename 
+  showcase, and the proxy used to access the Internet.
+  
+  \item \desktopmenuitem{Options > Set default configuration for new channels} 
+  Calls up the 
+  \helpignore{\ref{sec:pd-channel-dialog}} 
+  \helponly{\helplink{Channel Dialog}{pd-channel-dialog}}.
+  The settings that your set in this dialog will become the initial settings
+  filled in when a new channel is added with the 
+  \desktopcontrol{File > Add new channel} command or the 
+  \desktopmenuitem{File > Add new channel using wizard} command.
+
+  \item \desktopmenuitem{Options > Install handheld viewer software...} Calls up the 
+  \helpignore{\ref{sec:pd-install-wizard}}
+  \helponly{\helplink{Install Handheld Software Wizard}{pd-install-wizard}}
+  which will install the handheld software onto the device, based on the
+  answers to a few questions. 
+  
+  \item \desktopmenuitem{Options > Rerun setup wizard...} Reruns the  
+  \helpignore{\ref{sec:pd-setup-wizard}}
+  \helponly{\helplink{Setup Wizard}{pd-setup-wizard}}
+  which will tailor \brandingapplicationsuitename for your particular and computer and handheld,
+  based on the  answers to a few questions. 
+\end{itemize}
+
+\begin{itemize}
+  \item \desktopmenuitem{Help > Help contents...} Shows the \brandingapplicationdesktopname
+  help.
+  
+  \item \desktopmenuitem{Help > Help on this dialog...} Shows the 
+  \brandingapplicationdesktopname help, jumping directly to the 
+  section on the main dialog.
+
+  \item \desktopmenuitem{Help > Search help...} Looks in the help for a 
+  specified keyword phrase.
+  
+  \item \desktopmenuitem{Help > Tip of the day...} Shows a tip of the day. You 
+  can toggle showing these on startup, as well as set the type of tip, using 
+  the controls in the {Preference Dialog's} 
+  \helpignore{\ref{sec:pd-preferences-dialog-interface-tab}}
+  \helponly{\helplink{Interface tab}{pd-preferences-dialog-interface-tab}}
+  .
+  
+  \item \desktopmenuitem{Help > About \brandingapplicationdesktopname...} Shows version number,
+  build date, copyright information, and the people who brought you this 
+  software.
+  
+\end{itemize}
+
+\advancedtip{You can right click anywhere in the channel list, and a popup menu 
+will appear. This menu has a selection of the File, Update and Import/Export
+menu items.}
+
+\advancedtip{Double clicking on a channel in the list works the same as selecting 
+the channel, and pressing the 
+\desktopmenuitem{File > Configure selected channel...} menu item. 
+So does pressing the 'Return' key when the list item is selected.}
+
+\helpignore{\section{Preferences Dialog}\label{sec:pd-preferences-dialog}}
+\helponly{\section{Preferences Dialog}\label{pd-preferences-dialog}}
+
+This tab sets all the advanced preferences for \brandingapplicationdesktopname. There are many
+advanced settings, so they are split into several tabs. 
+
+\helpignore{\subsection{Interface Tab}\label{sec:pd-preferences-dialog-interface-tab}}
+\helponly{\subsection{Interface Tab}\label{pd-preferences-dialog-interface-tab}}
+
+\basictip{Changes made on this tab will take effect the next time you start
+\brandingapplicationdesktopname.}
+
+\desktopcontrol{Translate interface into the local language} toggles whether to 
+translate the dialogs from English into the language preferred by the computer.
+If enabled, one can then selecte whether to \desktopcontrol{Autodetect language} 
+or to \desktopcontrol{Force a specific language}. It is recommended to use the 
+autodetection option, but if you wish to try to force a language, you can 
+choose one of the currently available languages using the 
+\desktopcontrol{Choose language...} button.
+
+\advancedtip{Languages listed in the "Choose language" popup are available to 
+be translated if you so desire. To translate, you can download poEdit from 
+\code{poedit.sf.net} and use a nice GUI client to bring \brandingapplicationdesktopname to the 
+speakers of your language. See the file called HOW\_TO\_TRANSLATE.txt for full
+details.} 
+
+\desktopcontrol{Show toolbar} toggles whether or not to show a toolbar on the 
+main dialog. If a toolbar is shown, you can select a preferred toolbar style  
+from the list.
+
+\desktopcontrol{Show statusbar} toggles whether to show the status bar at the
+bottom of the main dialog.
+
+\desktopcontrol{Dialog placement} specifies where you want dialogs to appear 
+on your screen, as each is displayed in turn. Some dialogs, such as warning 
+messages, and wizards will stay in the middle regardless, however. The main 
+frame of the application counts as a dialog--it you want it to stay where you 
+left it, instead of centering, select the \desktopcontrol{My previous location} 
+option.
+
+\desktopcontrol{Show daily tips on startup...} displays a "Tip of the day"
+popup on program startup with some tips on how to use \brandingapplicationdesktopname better.
+You can toggle the tip box on and off, and also configure the type of tips to
+show: build your basic \brandingapplicationsuitename knowledge, advanced \brandingapplicationsuitename knowledge, or
+knowledge of rubber chickens.
+
+\desktopcontrol{Show splash screen on startup} toggles whether or not to show a
+\brandingapplicationsuitename splashscreen while \brandingapplicationdesktopname initially loads.
+
+\helpignore{\subsection{Autoupdate Tab}\label{sec:pd-preferences-dialog-autoupate-tab}}
+\helponly{\subsection{Autoupdate Tab}\label{pd-preferences-dialog-autoupdate-tab}}
+
+This dialog sets the behaviour for automatically updating due \brandingapplicationsuitename channels 
+at the specified time.
+
+There are 4 possible behaviours:
+
+\begin{itemize}
+  \item \desktopcontrol{Never autoupdate} This turns off autoupdating.
+  Channels will only update, when one of the \desktopmenuitem{Update channel}
+  menu items (or equivalent toolbar buttons) are pressed on the 
+  \helpignore{\ref{sec:pd-main-dialog}}
+  \helponly{\helplink{Main Dialog}{pd-main-dialog}}
+  .
+  
+  \item \desktopcontrol{Update any channel as soon as it becomes due} While 
+  \brandingapplicationdesktopname is running, as soon as a channel becomes due, \brandingapplicationdesktopname 
+  will update the channel that is due.
+
+  \item \desktopcontrol{Off-peak mode} Channels aren't updated
+  immediately, but instead added to a queue of channels to update. When \brandingapplicationsuitename
+  Desktop is running, if the current time is between the hours specified, 
+  any due channels are updated. This feature is most useful for those who get 
+  a cheaper Internet access rate by connecting during an off-peak time.
+  
+  \item \desktopcontrol{Autoupdate any due channels each time I press my 
+  handheld's Sync button} will update any due channels each time the handheld 
+  is placed in its cradle and the sync button pressed.
+\end{itemize}
+
+The \desktopcontrol{Precision} control allows you to enter the interval (in 
+minutes) between comparing the current datetime to the channel's due dates, as 
+well as checking if the \desktopcontrol{Hour to update channels} has been 
+reached. For example, if you set the precision to 5 minutes, the \brandingapplicationdesktopname 
+will check every minutes whether it should automatically update something.
+
+\basictip{Autoupdate will only during the times that the \brandingapplicationdesktopname 
+application is currently running.}
+
+\helpignore{\subsection{Spidering Tab }\label{sec:pd-preferences-dialog-spidering-tab}}
+\helponly{\subsection{Spidering Tab }\label{pd-preferences-dialog-spidering-tab}}
+
+\desktopcontrol{Show spider progress with} sets the way in inform you of a 
+channel's progress as it is being spidered. There are 2 choices:
+
+\begin{itemize}
+  \item \desktopcontrol{A console window} Launches a shell console window
+  and starts the parser to pluck the channel. 
+
+  \item \desktopcontrol{A progress dialog}:  A dialog pops up showing the
+  current channels' progress, including a details window capturing the messages 
+  from the parser as it spiders. For details on the progress dialog, see
+  \helpignore{\ref{sec:pd-progress-dialog}}
+  \helponly{\helplink{Progress Dialog}{pd-progress-dialog}}.
+\end{itemize}
+
+\basictip{On Linux/GTK, you can scroll back and forth on the console window 
+to review the channel update progress. You can do the srolling in either of
+two ways: either right and left click with the mouse while the mouse pointer 
+is over the scrollbar, or press \code{Shift + Page Up} and \code{Shift + Page Down}.
+The Page Up and Page Down keys to use are the ones that aren't on the numeric 
+keypad, but the other ones.}
+
+\basictip{On Linux/GTK you can close the console window by clicking the close
+icon twice. The first click will terminate plucker-build, the second click will 
+terminate the console window.}
+
+\desktopcontrol{Autoclose progress when done} specifies what to do with the 
+progress feedback (console window or progress dialog) when spidering is 
+complete. There are 3 choices:
+
+\begin{itemize}
+  \item \desktopcontrol{Always} Always automatically close the feedback, 
+  regardless of whether the channel had an error or not. 
+
+  \item \desktopcontrol{If no errors occurred}: Automatically close the feedback 
+  if there was no errors, otherwise keep it open. \notimplemented
+  
+  \item \desktopcontrol{Never}: Never automatically close the feedback. Keep it 
+  visible until it is closed manuallly.
+\end{itemize}
+
+\desktopcontrol{Execute command before spidering a group of channels} executes 
+the specified operating system command immediately before starting to spider 
+the first channel of a \em{group} of one or more channels.
+
+\desktopcontrol{Execute command after spidering a group of channels} executes 
+the specified operating system command immediately after starting to spider 
+the first channel of a \em{group} of one or more channels.
+
+\advancedtip{These are 'synchronous executions'. That is, the program flow of
+\brandingapplicationdesktopname is halted until the applications called by these commands have 
+terminated. This gives the command time to finish whatever it needs to do.}
+
+\advancedtip{The purpose of these is to execute a command at the end of 
+updating a set of channels, usually a command that takes arguments of serveral 
+output files. For example, instead of executing a command to FTP an output file 
+after spidering each channel (as set on the \em{Configure Channel Dialog's}
+\helpignore{\ref{sec:pd-channel-dialog-spidering-tab}}
+\helponly{\helplink{Spidering Tab}{pd-channel-dialog-spidering-tab})
+ ) you could FTP all the updated .pdb files in one single command, by 
+specifying 
+it here.}}
+
+\advancedtip{The command executed after spidering is done after the output 
+files are installed to their handheld or directory destinations.}
+
+\desktopcontrol{Edit shared inclusion/exclusion list...} calls up the
+\helpignore{\ref{sec:pd-exclusion-dialog}}
+\helponly{\helplink{Inclusion/Exclusion List Dialog}{pd-exclusion-dialog}}
+to edit the \em{shared} inclusion/exclusion list. This shared exclusion list is used for 
+all channels. As well as the shared inclusion/exclusion list, a channel-specific 
+inclusion/exclusion list can be used for each channel.
+
+\helpignore{\subsection{HTML Editor Tab}\label{sec:pd-preferences-dialog-editor-tab}}
+\helponly{\subsection{HTML Editor Tab}\label{pd-preferences-dialog-editor-tab}}
+
+\brandingapplicationdesktopname comes with a built-in HTML editor. Select \desktopcontrol{Use
+The application's built-in HTML editor} to use the built-in editor, or choose
+\desktopcontrol{Use an external HTML editor} to specify your own.
+
+\advancedtip{If you are on a POSIX system and you want to edit using a terminal
+editor, then depending on your window manager, you probably need to prefix it with
+xterm. For example to edit the file in vim: \code{xterm -e vim} }
+
+\advancedtip{If want to lanch a complex set of arguments to an external 
+editor, you can specify the filename with a \code{plkrFILE} in the command 
+string. For example: entering \code{emacs plkrFILE -arg1 -arg2} in the 
+external editor will execute \code{emacs myfile.html -arg1 -arg2} when you 
+want to edit myfile.html. (If no plkrFILE is found, it is just is tacked onto 
+the end of the command string).}
+
+The built-in HTML editor has several options to customize its function:
+
+\begin{itemize}
+  \item \desktopcontrol{Toolbar complexity}: You can choose either a basic 
+  toolbar or an advanced toolbar. The basic toolbar only shows a single 
+  button, "Insert new  hyperlink...", which is used to add a new link to 
+  your page. The advanced toolbar has the full complement of tags which 
+  \brandingapplicationsuitename supports.
+
+  \item \desktopcontrol{Insert linefeeds after text generated by toolbar   
+  buttons}: If this checkbox is checked, then a carriage return will be 
+  inserted into the source code at the end of tags generated by toolbar 
+  buttons. If not checked, no line returns will be automatically inserted.
+\end{itemize}
+
+For details on the HTML editor see
+  \helpignore{\ref{sec:pd-editor-dialog}}
+  \helponly{\helplink{Editor Dialog}{pd-editor-dialog}}.
+
+\helpignore{\subsection{Showcase Tab}\label{sec:pd-preferences-dialog-showcase-tab}}
+\helponly{\subsection{Showcase Tab}\label{pd-preferences-dialog-showcase-tab}}
+
+The showcase dialog can be configured in several ways.
+
+\desktopcontrol{Dialog layout}: The dialog can either have a horizontal or 
+vertical layout. In a vertical layout, the main pane is at the top of the 
+dialog.
+
+\desktopcontrol{Fields to use in my channels}: When you select a channel from 
+the showcase listings and press OK, that showcase's information is retrieved 
+for your current channel that you are configuring. This checkbox toggles 
+whether you wish to retrieve all possible fields (name, url, maxdepth, etc) or 
+just the name and URL only.
+
+\desktopcontrol{Choose fields to display in details pane...}: This allows you 
+to choose what fields appear in the details pane, when a channel is selected.
+
+\advancedtip{If a channel does not have an entry for a certain field, then that 
+empty field will not be displayed in the details pane.}
+
+\desktopcontrol{Include images in channel previews}: If checked, images will be
+downloaded and included in the channel previews. Turning the images off makes 
+previews be displayed faster.
+\notimplemented
+
+\helpignore{\subsection{Proxy Tab}\label{sec:pd-preferences-dialog-proxy-tab}}
+\helponly{\subsection{Proxy Tab}\label{pd-preferences-dialog-proxy-tab}}
+
+Check the \desktopcontrol{This computer uses a proxy to access the Internet} 
+checkbox if you go online through a proxy. 
+
+Fill the boxes with the appropriate values. For example: if your proxy is 
+\code{http://proxy.aol.com:8080} then in the \desktopcontrol{Proxy server} 
+box enter \code{http://proxy.aol.com} and in the \desktopcontrol{Port} box 
+enter \code{8080}
+
+\basictip{Don't forget the \code{http://} at the start of the proxy server.}
+
+Enter your username into the \desktopcontrol{Proxy username} box and enter
+your password into the \desktopcontrol{Proxy password} box.
+
+\desktopcontrol{Prompt for proxy password each time} will prompt you for 
+your proxy's password each time you run Plucker Desktop, which is more secure.
+
+\advancedtip{If you choose not to prompt each time, then the password will be
+saved to the configuration file, instead of just located in RAM. Prompting is 
+less convenient, but is more secure.}
+
+\helpignore{\section{Progress Dialog}\label{sec:pd-progress-dialog}}
+\helponly{\section{Progress Dialog}\label{pd-progress-dialog}}
+
+The Progress Dialog shows the progress of the \brandingapplicationsuitename spider as it retrieves 
+and updates the desired channels. 
+
+The top of the dialog shows two progress guages. The uppermost progress gauge 
+indicates the number of channels completed thus far. For example if 4 channels 
+are being updated in this session, and 1 is complete so far, the gauge will be
+at 25 percent. The lowermost progress gauge shows the number of files thus 
+far retrieved for the channel that is currently being updated.
+
+On the right side of the dialog, there is 3 buttons: Stop, Details, and Export Details.
+\desktopcontrol{Stop} aborts the current spidering job. 
+\desktopcontrol{Details} toggles between showing and hiding the details box. 
+\desktopcontrol{Export Details} writes the current contents of the details 
+box to a specified text file.
+
+The details textbox logs the messages sent from the spider as it does its task 
+of updating the channels. The verbosity of the messages can be set in 
+the 
+\helpignore{\ref{sec:pd-preferences-dialog}}
+\helponly{\helplink{Preferences Dialog}{pd-preferences-dialog}}. If verbosity 
+was set to minimal, for this channel then the lower gauge will be removed from 
+the progress dialog.
+
+You can call up a context sensitive popup menu with the mouse by right-clicking
+inside the details box. There are three options in the popup menu: 
+\desktopcontrol{Copy selected} copies the selected rows of the details box 
+to the clipboard, \desktopcontrol{Clear all} clears the details listbox, and 
+\desktopcontrol{Select all} selects all the rows of the details box, ready to 
+then be copied.
+
+\basictip{If you have a question about \brandingapplicationsuitename, you can copy the relevant text 
+from the details box, and paste it into an email to the \brandingapplicationsuitename mailing lists, to
+describe your problem when asking for help.}
+
+If you specified in the 
+\helpignore{\ref{sec:pd-preferences-dialog}} 
+\helponly{\helplink{Preferences Dialog}{pd-preferences-dialog}} 
+that you wished the progress dialog to never automatically close on completion, 
+the \desktopcontrol{Stop} button will change its label to an 
+\desktopcontrol{OK} button and wait for you to press OK before it closes. If 
+you specified that you wished to "always close", or "close if no errors", then 
+it will do so.
+
+\advancedtip{On GTK, the scroll history is currently 2000 lines, since that is 
+the maximum number of lines that a GTK listbox can contain at one time.}
+
+\helpignore{\section{Configure Channel Dialog}\label{sec:pd-channel-dialog}}
+\helponly{\section{Configure Channel Dialog}\label{pd-channel-dialog}}
+
+The Configure Channel Dialog sets the properties for a channel. At the top of
+the dialog is a \desktopcontrol{Channel name} field which specifies the name of
+the channel, which will appear in both the \brandingapplicationdesktopname's list of channels,
+and in the handheld Viewer's \viewercontrol{Library} screen.
+
+\basictip{A channel name has a maximum limit of 26 letters. This is a PalmOS 
+restriction.}
+
+\helpignore{\subsection{Starting Page Tab}\label{sec:pd-channel-dialog-start-tab}}
+\helponly{\subsection{Starting Page Tab}\label{pd-channel-dialog-start-tab}}
+
+The starting page is the initial page retrieved for the channel. This page,
+and optionally, the pages it links to, are retrieved.
+
+A starting page can be one of 3 things:
+
+\begin{itemize}
+  \item \desktopcontrol{A website URL} Type in an internet address, or press 
+  the \desktopcontrol{Browse showcase...} button to choose an internet address 
+  from some featured \brandingapplicationsuitename-compatible sites.
+
+  \item \desktopcontrol{A local file} Type in the location of a file [starting 
+  with the prefix file://], or press the \desktopcontrol{Choose file...} button 
+  to browse your disk for a file.
+
+  \item \desktopcontrol{A list of my links} Press the
+  \desktopcontrol{Edit my list of links with HTML editor} button to call up the
+  \helpignore{\ref{sec:pd-editor-dialog}}
+  \helponly{\helplink{Editor Dialog}{pd-editor-dialog}}
+  to edit a list of starting links. These links will all be spidered and the
+  results made into a channel.
+\end{itemize}
+
+\basictip{If starting on a website URL, don't forget the \code{http://} at the
+start.}
+
+\advancedtip{"You can use \brandingapplicationsuitename to retrieve a password protected site (ie one 
+where your webbrowser pop ups up a dialog prompting for username and password, 
+not one where you enter the username and password somewhere in the webpage.)
+This is done by including your username/password in the starting url. The format
+is: \code{http://myusername:mypassword@www.somewebsite.com}.
+Be aware that your username and password will now be included in the referring
+page if you go offsite, so to prevent other sites from looking at your username
+and password in their weblogs, be sure that either stayonhost or stayondomain 
+filter is switched on, in the
+\helpignore{\ref{sec:pd-channel-dialog-limits-tab}}
+\helponly{\helplink{Limits Tab}{pd-channel-dialog-limits-tab}}
+.}
+
+\helpignore{\subsection{Spidering Tab}\label{sec:pd-channel-dialog-spidering-tab}}
+\helponly{\subsection{Spidering Tab}\label{pd-channel-dialog-spidering-tab}}
+
+\desktopcontrol{Retrieve files by following links} is an important setting that
+tells how you want the links to be followed. Links can either be followed in a
+breadth first manner or a depth first manner.
+
+\basictip{Depth first is usually faster, but may miss a few pages. Breadth
+first is usually slower, storing more links in the 'todo' queue of links at any
+given moment. If you are using depth first, and you notice some expected pages
+are missing from the output, switch to breadth first.}
+
+\desktopcontrol{Progress message detail level} is the number of messages that
+are shown by the parser as it spiders a channel. Set to minimum for almost no
+messages, medium for errors only, or to maximum for all possible messages.
+Maximum is useful for debugging malformed HTML or finding a possible parser
+bug.
+
+\advancedtip{If using a progress dialog instead of a console window to
+watch progress, in the 'minimum' mode, the progress dialog has zero messages,
+whereas the console window will show any error messages. There is a
+technical reason for this (you can read the sourcecode of the
+progress dialog class heirarchy if you want the details).}
+
+\desktopcontrol{Truncate URLs displayed in the progress window to []
+letters} allows you to truncate the length of displayed URL of files as
+displayed in the progress dialog/console window. Truncation replaces the
+middle part of the displayed URL as a series of dots. For example, a
+truncated URL might be displayed as:
+\code{Processing http://www.businessweek.com/technology/cont....5047.html}
+This truncation only affects the display of the progress information,
+it doesn't change any of the actual spidering.
+
+\desktopcontrol{Specify a referrer URL} allows a 'referrer' string to be sent
+to the server when accessing the start page of the channel. The 'referrer' is
+the URL of page that was page that was downloaded before the start page was
+downloaded.
+
+\desktopcontrol{When retrieving files from this channel's web server,
+identify as:} specifies what 'user-agent' the spider identifies itself as,
+when it requests the files to download. The 'user-agent' is often used by
+webmasters to decide what page should be delivered, so that it may look best
+on a certain type of browser. You can either select
+\desktopcontrol{This browser type} and choose one of the listed browsers, or
+you can select \desktopcontrol{This custom user-agent string}
+and enter a string into the text control.
+
+\advancedtip{Strings for 'user-agent' are usually of the format 
+\code{Mozilla/3.0 (compatible; \brandingapplicationsuitename 1.2)} but they can be anything at all}.
+
+\helpignore{\subsection{Limits Tab}\label{sec:pd-channel-dialog-limits-tab}}
+\helponly{\subsection{Limits Tab}\label{pd-channel-dialog-limits-tab}}
+
+\desktopcontrol{Maximum depth} specifies how many page down from the starting
+page to continue spidering. A value of 1 only retrieves the initial page, a
+value of 2 retrieves the page and pages that are directly linked from the
+starting page.
+
+\desktopcontrol{Stay on host / stay on domain filter} If this filter is turned
+on, then pages that originate from a different host or domain are ignored.
+If you use \desktopcontrol{Stay on host}, then pages originating from a
+different host from the starting pages, will be ignored, and not included in
+the output. For example: if the starting page is
+\code{http://www.slashdot.org}, then items coming from
+\code{http://adfu.slashdot.org} and \code{http://www.cnn.com} would be ignored.
+If you use \desktopcontrol{Stay on domain}, then pages originating from a
+different domain from the starting pages, will be ignored, and not included in
+the output, put pages from a different server on the same domain will be
+included. For example: if the starting page is
+\code{http://www.slashdot.org}, then items coming from
+\code{http://adfu.slashdot.org} would be also be included, but pages coming 
+from \code{http://www.cnn.com} will be ignored.
+
+\desktopcontrol{URL pattern filter} If this filter is turned on, then pages 
+that do not match this regular expression pattern in the URL will be ignored.
+For example if spidering \code{www.bmj.com} and you only want to retrieve the
+current articles, which are in the directory \code{www.bmj.com/current}, then 
+specifying a URL pattern value of \code{.*www.bmj.com/current.*} would only 
+retrieve files in that subdirectory on the server. 
+\basictip{For a brief tutorial on the basic syntax of regular expressions, see
+  \helpignore{\ref{sec:pd-exclusion-dialog-regular-expressions}}
+  \helponly{\helplink{regular expressions}{pd-exclusion-dialog-regular-expressions}}
+}.
+
+\desktopcontrol{Inclusion/exclusion list filter} Allows a channel-specific 
+inclusion/exclusion list to be specified for the channel. 
+This channel-specific exclusion list is appended to the shared 
+global exclusion list when this particular channel is spidered. 
+Click the \desktopcontrol{Edit channel-specific inclusion/exclusion list}
+button to add and edit the listings. For details on inclusion/exclusion lists 
+and their editing, see 
+\helpignore{\ref{sec:pd-exclusion-dialog}}
+\helponly{\helplink{Inclusion/Exclusion List Dialog}{pd-exclusion-dialog}}.
+
+\helpignore{\subsection{Formatting Tab}\label{sec:pd-channel-dialog-formatting-tab}}
+\helponly{\subsection{Formatting Tab}\label{pd-channel-dialog-formatting-tab}}
+
+\desktopcontrol{Specify a default character set to use with channel} allows a 
+character set to be used. One may either select one of the supplied common 
+character sets from the dropdown list, or type in a different one into the 
+edit box.
+
+\advancedtip{There is a few hundred other character sets that can be used. 
+For a full list of possible character sets. visit the master list at
+\code{http://www.iana.org/assignments/character-sets} .
+From that list, get the "MIBenum" number for the character set that you want,
+and enter that MIBenum number into this edit box.
+}
+
+\desktopcontrol{Specify a default color for hyperlinks} allows a custom color 
+for hyperlinks, if the document doesn't specify the color for the hyperlink. 
+Use the \desktopcontrol{Choose color...} button to select a color. 
+
+\basictip{If reading on a grayscale PDA, it is advised to to select a darker
+color for the hyperlinks, otherwise they may be too light to be seen readily.}
+
+\basictip{If you don't specify a hyperlink color, they hyperlinks will be the 
+same color as the normal text.}
+
+\desktopcontrol{Indent the line of each new paragraph} marks the start of 
+each new paragraph with an indent of approximately 3 spaces. 
+
+\desktopcontrol{Use enhanced table support} enables better formatting of
+tables. When enabled, the tables cells are retained in their proper columns.
+If disabled, then the cells are placed in a single vertical column.
+
+\helpignore{\subsection{Images Tab}\label{sec:pd-channel-dialog-images-tab}}
+\helponly{\subsection{Images Tab}\label{pd-channel-dialog-images-tab}}
+
+The \desktopcontrol{Include images} checkbox toggles whether or not to include
+images when spidering and building the channel. If images are included, then
+the \desktopcontrol{Color depth} dropdown can be specified to make the images
+black and white, 4 shades of gray, 16 shades of gray, 256 colors, or thousands
+of colors. Higher depth images consume larger space and can only be viewed on a
+handheld device which can display that number of colors.
+
+\begin{basictip}
+To view higher color depths on the handheld: Start the Viewer on
+the handheld, from the menu, choose \viewercontrol{Options > Preferences} and 
+select the similar depth from the \viewercontrol{Screen depth} dropdown.
+\end{basictip}
+
+\advancedtip{There is an upper boundary on the size that a Palm database 
+record can hold. If there is a large, high color depth image, it will either
+be resized downward or its color depth reduced, in order to fit into the 
+output, rather than leaving an empty blank.}
+
+The 
+\desktopcontrol{Show alternative text tags for images not included in output} 
+checkbox toggles whether or not to show the alternative text 
+(an image's 'alt' tag) for an image, for images that were not retrieved and 
+included into the output file. \notimplemented
+
+\desktopcontrol{To fit on a handheld screen, use a thumbnail for any image 
+larger than} specifies 2 fields for height and width of images. If an image 
+exceeds these dimensions, then a thumbnail will be used. When a thumbnail is 
+used, there are 3 possible ways to handle thumbnails:
+
+\begin{itemize}
+  \item \desktopcontrol{Always link the thumbnail to a second, full-size copy} 
+  A thumbnail will be included inline with the rest of the document, and the 
+  image can be tapped with a stylus to show the full size image. 
+  \basictip{In the viewer, often the full-size image will be larger than the 
+  handheld screen, so can pan around the full-size image by dragging the stylus 
+  on the handheld screen.}
+
+  \item \desktopcontrol{Only use the thumbnail, don't include a second, larger 
+  copy in the channel's output} Only the thumbnail will be included--the 
+  larger version will not be included, allowing the output to require less 
+  storage space on the handheld.
+
+  \item \desktopcontrol{Link the thumbnail to a second, larger copy, but keep 
+  the larger copy less than:} specifies 2 fields for height and 
+  width of the larger image. If the second, larger copy exceeds these dimensions, 
+  the larger copy is shrunk down to keep the pixel size under the given values.
+\end{itemize}
+
+\desktopcontrol{Maximum storage}
+allows you to set how you want to handle images with a very large filesize.
+Most often you will want to choose "Allow a converted image to exceed 60kb"
+which will store an image in the output as a series of 60kb slices which 
+get then reassembled back into the complete image 
+(this happens seamlessly in the viewer).
+If you don't want to have any single image that takes up more than 60kb of
+storage space in the output file, then you can choose to either 
+"Keep a converted file under 60kb by reducing image dimensions" or 
+"Keep a converted file under 60kb by reducing color depth", depending on 
+which algorithm you want to use to whittle down the image's filesize.
+
+\advancedtip{When you allow a converted image to exceed 60kb, the user's 
+handheld does need enough free RAM to view the entire uncompressed image 
+at once.}
+
+\advancedtip{The reason for the choice of 60kb as a filesize cutoff point, 
+is because 60kb is the amount of data that can be put in a single Palm 
+database record, and the amount of data that can be drawn in an offscreen 
+window in the handheld viewer.}
+
+\advancedtip{You could theoretically put values in for 'Link the thumbnail 
+to a second, larger copy, but keep the larger copy less than:' that are
+smaller than your values for 'To fit on a handheld screen, use a thumbnail 
+for any image larger than' and end up having images that link to an even 
+smaller version. However, you will hardly ever do this, as it isn't very 
+useful.}
+
+\helpignore{\subsection{Output Options Tab}\label{sec:pd-channel-dialog-output-tab}}
+\helponly{\subsection{Output Options Tab}\label{pd-channel-dialog-output-tab}}
+
+\desktopcontrol{To compress the output file} can either use DOC compression or
+the recommended ZLIB compression. ZLIB gives better compression, but requires
+requires Palm OS\registered 3.1 or higher, as well as installation of the zlib
+library onto the handheld. DOC compression is available to be used on
+Palm\registered devices with OS versions earlier to Palm OS\registered 3.1. You
+can install the ZLIB library onto the handheld at any time via the
+\helpignore{\ref{sec:pd-install-wizard}}
+\helponly{\helplink{Install Handheld Software Wizard}{pd-install-wizard}}
+
+\desktopcontrol{Only compress images that are larger than} species the mimimum
+file size that a retrieved file needs to be, in order for that retrieved file
+to be compressed. If it is larger than the filesize it is compressed,
+otherwise it remains uncompressed. Uncompressed images are displayed more
+quickly in the viewer.
+
+\desktopcontrol{Specify the category in which to list the channel in the
+viewer's library} automatically files the channel inside a category. Otherwise,
+the channel will be placed into the \viewercontrol{Unfiled} category.
+
+\advancedtip{You can specify multiple categories, by entering in multiple
+categories, separated by semicolons.}
+
+\desktopcontrol{Include the original URL of each page in the output file}
+allows the URL of each spidered page to be read inside the viewer. Removing the
+original URL makes the output file slightly smaller, and is most useful for an
+e-book, or to protect a private URL or file location. To read the original URL
+of a page in the Viewer, from the menu, choose
+\viewercontrol{View > Details...} and read the \viewercontrol{URL} text.
+
+\desktopcontrol{Specify a security 'owner ID' password needed to open the
+output file} provides basic file protection. The output file can only be read
+on a handheld device with a username that matches this owner ID. For example
+if you entered a owner ID of \code{John Doe} then it could only be read on a
+device that has a user name of \code{John Doe}.
+
+\desktopcontrol{Allow the channel output to be beamed among handhelds} allows
+the outputted file to be beamed among the handhelds of \brandingapplicationsuitename users.
+
+\desktopcontrol{Signal backup bit} backs up the outputted file on the desktop
+computer. Then, if for some reason, the handheld memory is erased, the
+outputted file can be restored from the desktop, with all its bookmarks intact.
+
+\desktopcontrol{The channel can be directly started from an icon in the
+handheld's main launcher} places an icon in the handheld's main screen showing
+the list of installed programs. Clicking on that icon starts that channel
+directly, instead of having to start the \brandingapplicationsuitename Viewer application and then
+choosing the channel from the viewer's Library listing.
+
+A default \brandingapplicationsuitename channel icon is used for launchable channels. This icon can
+be replaced with custom icons. The \desktopcontrol{Replace default large icon
+with a custom icon} and the \desktopcontrol{Replace default small icon with a
+custom icon} fields allow both the large and small icons to be replaced. 
+
+\brandingapplicationdesktopname includes some sample custom launcher icons for 
+you to use, both large and small icons. These are located in the 
+\brandingapplicationdesktopname resource directory in the \code{launcher_icons_large} directory
+and the \code{launcher_icons_small directory} (these directories are the default directories when
+you browse for an icon). 
+
+Note that there is a template icon in each of the above-mentioned directories called 
+\code{template.png} which can be used as a template for creating a new icon. These 
+template icons are the proper size, and use arrows to show the allowable drawing 
+area for each. The large icon must be an image on a canvas sized 32 pixels wide x 32 pixels
+high, but with the visible icon confined to the upper 32 pixels wide x 19
+pixels high region of the canvas (the reason for the empty whitespace at the bottom is
+to allow room for the name of the file to be shown). 
+The small icon must be 15 pixels wide x 9 pixels high, and can fill up the entire canvas.
+Icons should be black-and-white color depth. The icon should be in .png format 
+(other formats may not convert as well).
+
+\helpignore{\subsection{Destination Tab}\label{sec:pd-channel-dialog-destination-tab}}
+\helponly{\subsection{Destination Tab}\label{pd-channel-dialog-destination-tab}}
+
+Channel output gets sent to the desired destinations. There are two lists of
+destinations: the upper list is a list of handheld destinations, and the lower
+list is a list of destination directories on the desktop computer's harddrive.
+
+To add a handheld destination, click the \desktopcontrol{Add handheld...}
+button. You can then add a handheld destination using the
+\helpignore{\ref{sec:pd-handheld-dest-dialog}}
+\helponly{\helplink{Handheld Destination Dialog}{pd-handheld-dest-dialog}}
+.
+
+To remove some handheld destinations, select the handheld destinations in the 
+listbox, and click the \desktopcontrol{Remove selected handhelds} button.
+
+To add a directory destination, click the 
+\desktopcontrol{Add output directory...} button. Select the desired directory 
+from the browse directory dialog, and click OK to add.
+
+To remove some directory destinations, select the handheld destinations in the listbox,
+and click the \desktopcontrol{Remove selected directories} button.
+
+\helpignore{\subsection{Scheduling Tab}\label{sec:pd-channel-dialog-scheduling-tab}}
+\helponly{\subsection{Scheduling Tab}\label{pd-channel-dialog-scheduling-tab}}
+
+This tab specifies how often this channel as being due for an update.
+
+\desktopcontrol{Mark this channel as due for updates at a certain interval} will 
+mark this channel as being due at the interval which you specify below. If 
+this checkbox is unchecked, the due time in the main dialog's channel list 
+will appear as 'Never'.
+
+The interval between updates can be specified with
+\desktopcontrol{This channel is due for an update every...} to specify a 
+number of either hours/days/weeks/months/years to elapse between marking the 
+channel as due for an update.
+
+The interval is paced out from time marked in the \desktopcontrol{Starting on}
+section. Choose a month, year and day, and hour from the calendar controls.
+Pressing the \desktopcontrol{Now} button automatically sets the calendar
+controls to the current day and hour.
+
+\helpignore{\section{Handheld Destination Dialog}\label{sec:pd-handheld-dest-dialog}}
+\helponly{\section{Handheld Destination Dialog}\label{pd-handheld-dest-dialog}}
+
+\desktopcontrol{Select user} offers a list of the handheld users to install to. 
+Choose the desired user.
+
+\desktopcontrol{This is a USB-connected device} checkbox tells whether or not the 
+device is connected by USB. This is currently only used on Linux, Mac and MSW don't 
+use or need it. On Linux, if this checkbox is selected, then when it is time to 
+send files to the handheld, Plucker Desktop will pause and show a dialog, informing 
+you to press the HotSync button, which will connect your USB to your Linux OS so that 
+files can then be transferred.
+
+By default, the output will install into the handheld's RAM memory. 
+Mac and MSW also allow installing the file directly to a Card on the handheld. 
+Choose either \desktopcontrol{The handheld's RAM memory},
+\desktopcontrol{The removable SD/MMC card}, or
+\desktopcontrol{The removable Memory Stick}, or
+\desktopcontrol{The removable CompactFlash card} as desired.
+
+
+\helpignore{\section{Editor Dialog}\label{sec:pd-editor-dialog}}
+\helponly{\section{Editor Dialog}\label{pd-editor-dialog}}
+
+\brandingapplicationdesktopname ships with an integrated HTML editor to write \brandingapplicationsuitename documents.
+\brandingapplicationsuitename supports a large portion of the HTML 3.2 specification, and adds some
+tag parameters that make sense in a handheld offline viewer.
+
+Most of the editor dialog's real estate consists of two tabs, named "Edit" and 
+"Preview". Clicking the preview tab gives a rough preview of the HTML, clicking
+edit returns to editing the page. 
+
+\advancedtip{The preview tab is not as powerful as the Handheld viewer's HTML 
+display, so there will be some differences in the preview tab and the output
+on the handheld. For example, horizontal rule alignments won't appear in the 
+preview tab, but will show up in the viewer.}
+
+Press the \desktopcontrol{OK} button to commit your changes or the 
+\desktopcontrol{Cancel} to exit without saving changes.
+
+Users may customize the editor behavior in certain ways. These are set in the 
+Preference dialog's
+\helpignore{\ref{sec:pd-preferences-dialog-editor-tab}}
+\helponly{\helplink{HTML editor section}{pd-preferences-dialog-editor-tab}} 
+.
+
+Depending on which toolbar was selected in the advanced options, either a basic
+or an advanced toolbar will be shown. The basic toolbar has a single button
+named \desktopcontrol{Insert new hyperlink...} and the advanced toolbar has a
+full compliment of tags supported by \brandingapplicationsuitename. Clicking on a toolbutton will
+insert a tag.
+
+\basictip{Hovering the mouse over the toolbuttons will give a description of
+each button's function, as well as the text that it will insert.}
+
+\advancedtip{For most of the formatting tags (bold, italic, etc) you can select
+some text and then click the appropriate toolbar button, and the start and
+close tags will be properly inserted on either end of the selected text.}
+
+Some toolbuttons (such as a line break's \code{<br>} will insert the tag 
+directly, because the tag doesn't take any parameters. Other toolbuttons 
+(such as an image's \code{<img>} tag) will popup a dialog asking for some 
+parameters, which it will then use to generate the tag text and insert it. 
+Toolbuttons that will pop up a dialog are marked with a small black arrow in 
+the upper-left of the button image. 
+
+The following is a reference to all the fields in the Editor's popup dialogs. 
+These can all be accessed by pressing their respective "Help" button:
+
+\helpignore{\subsection{Insert Hyperlink Dialog}\label{sec:pd-hyperlink-dialog}}
+\helponly{\subsection{Insert Hyperlink Dialog}\label{pd-hyperlink-dialog}}
+
+\desktopcontrol{Link description} Type in the phrase that will be clicked upon.  
+
+The link target can either be a URL or file. For \desktopcontrol{A website URL}, 
+type in an internet address, or press the \desktopcontrol{Browse showcase...} 
+button to choose an internet address from some featured \brandingapplicationsuitename-compatible 
+sites. For \desktopcontrol{A local file}, type in the location of a file
+[starting with the prefix file://], or press the 
+\desktopcontrol{Choose file...} button to browse your disk for a file.
+
+The remaining optional hyperlink settings: 
+\desktopcontrol{Use stayondomain filter}, 
+\desktopcontrol{Use stayonhost filter}, 
+\desktopcontrol{Use maximum depth filter}, 
+\desktopcontrol{Use 'url pattern' filter},
+\desktopcontrol{Specify image inclusion/depth},
+\desktopcontrol{Specify maximum image width}, and 
+\desktopcontrol{Specify maximum image height}  
+are all the same as the settings for a channel, as found and descibed in the 
+Configure channel dialog's 
+\helpignore{\ref{sec:pd-channel-dialog-spidering-tab}}
+\helponly{\helplink{Spidering Limits Tab}{pd-channel-dialog-spidering-tab}} 
+and 
+\helpignore{\ref{sec:pd-channel-dialog-images-tab}}
+\helponly{\helplink{Images Tab}{pd-channel-dialog-images-tab}}.
+
+\helpignore{\subsection{Insert Email Dialog}\label{sec:pd-hyperlink-dialog}}
+\helponly{\subsection{Insert Email Dialog}\label{pd-hyperlink-dialog}}
+
+\desktopcontrol{Description} Type in the phrase that will be 
+  clicked upon, to send an email to the address from within the \brandingapplicationsuitename viewer.  
+
+\desktopcontrol{Email address} Type in the address that the email will
+  be send to. A default address is shown.
+
+\advancedtip{If you leave the description field blank when you press OK, the 
+description will automatically be generated as the same as the email address.}
+
+\helpignore{\subsection{Insert Bookmark Dialog}\label{sec:pd-bookmark-dialog}}
+\helponly{\subsection{Insert Bookmark Dialog}\label{pd-bookmark-dialog}}
+
+\desktopcontrol{Description} Type in the phrase that will be bookmarked.  
+
+\desktopcontrol{Anchor name} Type in a name of the bookmark, as it 
+will be referenced in a hyperlink. For example a bookmark named 
+\code{mybookmark} on a page called \code{mypage.html} can be hyperlinked to 
+as \code{<a href="http://mypage.html#mybookmark">click here</a>}
+
+\basictip{These are technically called "named anchors". They are not the 
+same as the bookmarks the end user can create and modify from inside the 
+\brandingapplicationsuitename viewer.}
+
+\helpignore{\subsection{Insert Popup Dialog}\label{sec:pd-popup-dialog}}
+\helponly{\subsection{Insert Popup Dialog}\label{pd-popup-dialog}}
+
+\notimplemented
+
+\desktopcontrol{Link description} Type in the phrase that will be clicked upon, 
+to pop up a dialog showing a short message.  
+
+\item \desktopcontrol{Message} Type in the message that will be displayed 
+inside the small popup box.
+
+\advancedtip{This functions the same as a 
+\code{<a href="javascript:alert('mymessage')">click here</a>} link behaves in 
+common modern desktop browsers.}
+
+\helpignore{\subsection{Insert Image Dialog}\label{sec:pd-image-dialog}}
+\helponly{\subsection{Insert Image Dialog}\label{pd-image-dialog}}
+
+\desktopcontrol{Image source} Type in the the filename or URL of the 
+image to include, or press the \desktopcontrol{Choose file...} button to 
+select one from your harddrive.  
+
+\desktopcontrol{Image is relative to page location} If checked, then
+when press OK, it will calculate the relative path from the currently opened
+document to the image. Relative paths use commands of \code{..} to say "go 
+up a directory from the directory this page is in". \notimplemented
+
+\desktopcontrol{Alternative text} Type in some text that will be 
+displayed for an image that is viewed by a \brandingapplicationsuitename user who has their images 
+turned off. Strongly recommended.
+
+\desktopcontrol{Color} If you are including a black and white image, 
+and you would like the black replaced with a different color on people who 
+are viewing it in grayscale or color, you can select a color with the 
+\desktopcontrol{Choose color..} button. Using the same compiled output file, 
+a black and white user sees the black and white graphic and color users see 
+the color graphic. This is also a way to give color graphics with an absolute 
+minimum size of the output file.
+
+\desktopcontrol{Hyperlink} Images can be used as hyperlinks. Type in 
+the URL or file that should be jumped to, when the user taps on the image.  
+
+\helpignore{\subsection{Insert Horizontal Rule Dialog}\label{sec:pd-hr-dialog}}
+\helponly{\subsection{Insert Horizontal Rule Dialog}\label{pd-hr-dialog}}
+
+\desktopcontrol{Width} Choose the width of the horizontal rule, and 
+use the dropdown to specify the units as either number of pixels or 
+percentage of the handheld's screen width.  
+
+\desktopcontrol{Height} Select the height (thickness) of the line, 
+measured in pixels.
+  
+\desktopcontrol{Alignment} Select the alignmnent of the horizontal 
+rule. "Default" will not insert any alignment command, instead using whatever 
+the most recent align command in the document was.
+ 
+\desktopcontrol{Color} You can select a color for the horizontal rule 
+with the \desktopcontrol{Choose color..} button. Using the same compiled 
+output file, a black and white user will see a black horizontal rule, and 
+color users see the colored horizontal rule. Grayscale users will see the 
+horizontal rule in whichever shade of gray most closely resembles the color.  
+
+\basictip{Alignment only has an visible effect if the horizontal rule width 
+is not 100 percent of the screen width.}
+
+\advancedtip{The handheldscreen width is 150 pixels, so the parser will reduce 
+widths greater than 150 pixels down to 150 pixels.}
+
+%\helpignore{\subsection{Insert Symbol / Character Dialog}\label{sec:pd-symbol-dialog}}
+%\helponly{\subsection{Insert Symbol / Character Dialog}\label{pd-symbol-dialog}}
+%
+%This dialog has a clickable graphic of symbols. Clicking a symbol will show its 
+%appropriate code in the \desktopcontrol{Symbol} edit box. 
+%
+%Press \desktopcontrol{OK} to insert the symbol's code. When the parser later
+%converts the page, that special symbol will be displayed in the handheld Viewer.
+
+\helpignore{\subsection{Insert Span Dialog}\label{sec:pd-span-dialog}}
+\helponly{\subsection{Insert Span Dialog}\label{pd-span-dialog}}
+
+\desktopcontrol{Align} Select the alignmnent of the section.
+
+\basictip{\code{<span>} tag is somewhat similar to a \code{div} tag.}
+
+\helpignore{\subsection{Insert Font Dialog}\label{sec:pd-font-dialog}}
+\helponly{\subsection{Insert Font Dialog}\label{pd-font-dialog}}
+
+\desktopcontrol{Color} You can select a color for the font
+with the \desktopcontrol{Choose color..} button. Using the same compiled 
+output file, a black and white user will see a black font, and
+color users see the colored font. Grayscale users will see the 
+font in whichever shade of gray most closely resembles the color. 
+
+\helpignore{\subsection{Insert Table Dialog}\label{sec:pd-table-dialog}}
+\helponly{\subsection{Insert Table Dialog}\label{pd-table-dialog}}
+
+\desktopcontrol{Rows} Select the number of rows you initially want in
+the table (you can add more later).
+
+\desktopcontrol{Columns} Select the number of columns you initially
+want in the table (you can add more later).
+
+\desktopcontrol{Border} Select if you wish the table to have borders
+between the cells.
+
+\desktopcontrol{Color} You can select a color for the table borders
+with the \desktopcontrol{Choose color..} button. Using the same compiled
+output file, a black and white user will see a black table borders, and
+color users see the colored table borders. Grayscale users will see the
+table borders in whichever shade of gray most closely resembles the color.
+
+\basictip{Be sure to checkmark the
+\desktopcontrol{Use enhanced table support} on the
+\helpignore{\ref{sec:pd-channel-dialog-formatting-tab}}
+\helponly{\helplink{Channel Dialog Formatting Tab}{pd-channel-dialog-formatting-tab}}
+in order to get better looking tables.}
+
+\helpignore{\subsection{Insert Table Cell Dialog}\label{sec:pd-td-th-dialog}}
+\helponly{\subsection{Insert Table Cell Dialog}\label{pd-td-th-dialog}}
+
+\basictip{A TD is a data cell, and a TH is a header cell.}
+
+\desktopcontrol{Alignment} Select the desired alignment of the contents
+inside the cell. If alignment isn't specified, then the default for a TD is
+left alignment, and the default for a TH is centered.
+
+\desktopcontrol{Column span} Enter how many columns you want this cell to
+span in the table.
+
+\desktopcontrol{Row span} Enter how many rows you want this cell to
+span in the table.
+
+\helpignore{\subsection{Insert Ordered List Dialog}\label{sec:pd-ol-dialog}}
+\helponly{\subsection{Insert Ordered List Dialog}\label{pd-ol-dialog}}
+
+\desktopcontrol{Enumeration type} Select the type of numbering system
+you want the list items to have. \notimplemented
+
+\desktopcontrol{Specify start number} Check this box if you wish to
+have the list start a certain arbitrary number (otherwise will start at '1').
+\notimplemented
+
+\desktopcontrol{Starting at} If specifing start number, choose the 
+start number here. \notimplemented
+
+\desktopcontrol{Compact} Select if you wish the list to appear 
+"compact". "Compact" strips out the few pixels of empty vertical whitespace 
+that is usually inserted between the previous item and the next item. This is 
+useful on the handheld when trying to cram in as many listed options into a 
+small screen, so user doesn't have to scroll down to see the rest. 
+\notimplemented
+
+\helpignore{\subsection{Insert Unordered List Dialog}\label{sec:pd-ul-dialog}}
+\helponly{\subsection{Insert Unordered List Dialog}\label{pd-ul-dialog}}
+
+\desktopcontrol{Bullet type} Select the type of bullets that you want 
+the list items to have. \notimplemented
+
+\desktopcontrol{Compact} Select if you wish the list to appear 
+"compact". "Compact" strips out the few pixels of empty vertical whitespace 
+that is usually inserted between the previous item and the next item. This is 
+useful on the handheld when trying to cram in as many listed options into a
+small screen, so user doesn't have to scroll down to see the rest. 
+\notimplemented
+
+\helpignore{\subsection{Insert Body Dialog}\label{sec:pd-body-dialog}}
+\helponly{\subsection{Insert Body Dialog}\label{pd-body-dialog}}
+
+\desktopcontrol{Text Color} You can select a default color for the 
+page's text with the \desktopcontrol{Choose color..} button. Using the same 
+compiled output file, a black and white user will see a black text, and 
+color users see the colored text. Grayscale users will see the text in 
+whichever shade of gray most closely resembles the color.
+
+\desktopcontrol{Link Color} You can select a default color for the 
+page's hyperlinks with the \desktopcontrol{Choose color..} button. Using the 
+same compiled output file, a black and white user will see black 
+hyperlinks, and color users see the colored hyperlinks. Grayscale users will 
+see the hyperlinks in whichever shade of gray most closely resembles the 
+color.
+
+\basictip{The default text color you specify in the body tag is only used for 
+text that is not inside \code{<font color="..."></font>} tags.} 
+
+\advancedtip{You can override the default hyperlink color for an individual 
+hyperlink if you put a \code{<font color="..."></font>} inside the 
+\code{<a ...></a>} tags.} 
+
+\advancedtip{If a no body tag specifying the a text color is found, the text 
+color will be black. If no link color is found in the page, then the 
+hyperlinks will be colored the same as the text.}
+
+\helpignore{\section{Inclusion/Exclusion List Dialog}\label{sec:pd-exclusion-dialog}}
+\helponly{\section{Inclusion/Exclusion List Dialog}\label{pd-exclusion-dialog}}
+
+The inclusion/exclusion list dialog is split into a \desktopcontrol{file
+extensions} tab, and a \desktopcontrol{website URLs} tab, which work
+similarly to follow/block certain links. Use these entries to specify certain 
+files that you do or don't want to be spidered and included into the
+outputted file.
+
+The list has three columns. From left to right these are:
+
+\begin{itemize}
+  \item \desktopcontrol{File extension} [or \desktopcontrol{URL}] The file 
+  extension or URL to block. These use
+  \helpignore{\ref{sec:pd-exclusion-dialog-regular-expressions}}
+  \helponly{\helplink{regular expressions}{pd-exclusion-dialog-regular-expressions}}
+  as wildcards.
+
+  \item \desktopcontrol{Action} Whether to exclude or include this string. Most 
+  things will be excluded, but may wish to have an include action to work with 
+  an exclude command. For example, may wish to exclude all links ending with
+  \code{.au} [which is an audio file] but to still include links from
+  Australian email addresses [which end in \code{.com.au} or \code{.org.au} or
+  \code{net.au}]. Looking at the shared inclusion/exclusion list that ships with 
+  \brandingapplicationdesktopname, you can see that there is two regular expression 
+  items to do perform exactly that function.
+
+  \item \desktopcontrol{Priority} Inclusions/exclusions can be ordered in increasing 
+  precedence, so that inclusion/exclusion items of higher priority overrule items of 
+  lower priority. All the items in the shared inclusion/exclusion list that ships 
+  with \brandingapplicationdesktopname have a priority of 0, so that they can be easily 
+  overridden.
+\end{itemize}
+
+3 buttons are down the right of the dialog, to \desktopcontrol{Add},
+\desktopcontrol{Edit} or \desktopcontrol{Delete} an inclusion/exclusion item.
+Double-clicking on a item in the list works the same a selecting an item and
+pressing the \desktopcontrol{Edit} button.
+
+\helpignore{\subsection{Adding/Editing An Inclusion/Exclusion}\label{sec:pd-exclusion-dialog-adding-editing}}
+\helponly{\subsection{Adding/Editing An Inclusion/Exclusion}\label{pd-exclusion-dialog-adding-editing}}
+
+There are 3 fields that correspond to the 3 columns of the inclusion/exclusion table. See
+\helpignore{\ref{sec:pd-exclusion-dialog}} \helponly{\helplink{Inclusion/Exclusion List
+Dialog}{pd-exclusion-dialog}} for a description of the 3 columns, and
+\helpignore{\ref{sec:pd-exclusion-dialog-regular-expressions}}
+\helponly{\helplink{Regular
+Expressions}{pd-exclusion-dialog-regular-expressions}} for help in how to
+create good inclusion/exclusion lists.
+
+\helpignore{\subsection{Regular Expressions}\label{sec:pd-exclusion-dialog-regular-expressions}}
+\helponly{\subsection{Regular Expressions}\label{pd-exclusion-dialog-regular-expressions}}
+
+Regular expressions are a method of describing advanced pattern matching. This
+note describes the 4 symbols of the regular expression syntax that is relevant
+to building \brandingapplicationsuitename exclusion lists.
+
+\regexcommand{. (the decimal point)} The wildcard, it matches any single
+character except the newline character.
+
+\regexcommand{*} Means 0 or more occurrences of the preceding item. This is
+most useful when used in combination with the period wildcard. For example
+\regexsample{.*} means match 0 characters or any number of characters of any
+word.
+
+\regexcommand{\verb%\%} An 'escape' character. Indicates that the next
+character shouldn't behave as its usual function inside regular expressions,
+but instead be treated as a normal character, as though it wasn't a special
+function. For example, putting a \regexsample{\verb%\%} in front of a
+\regexsample{\verb%.%} makes it an actual period, so an exclusion list entry
+of \regexsample{\verb%www\.plkr\.org%} only would match the string
+\code{www.plkr.org}, whereas the exclusion list entry
+\regexsample{www.plkr.org}, since there is period wildcard, means to match
+\code{www.plkr.org}, as well as \code{wwwaplkrxorg}, \code{wwwbplkrdorg}, and
+so on.
+
+\basictip{If the url has a \regexcommand{\verb%?%} character, for example
+\code{http://www.mysite.com/index.shtml?login=tdavidson} don't forget to 
+escape the \regexcommand{\verb%?%} character, as the \regexcommand{\verb%?%}
+ character has special meaning in regular expression syntax. The proper
+ escaping would be
+\regexsample{\verb%http://www\.mysite\.com/index\.shtml\?login=tdavidson%}
+}
+
+\basictip{On MSW, if you are spidering a local file on your harddrive, then
+you need to remember to escape the backslashes for directories. Because, as
+we mentioned above, that \regexcommand{\verb%\%} means to escape the next
+letter, so we have to 'escape the escape' to get an actual backslash. So
+for example, a URL of \code{\verb%C:\windows\myfile.html%} would be properly
+escaped to be \regexsample{\verb%C:\\windows\\myfile.html%}
+}
+
+\regexcommand{\verb%$%} Means to only match if the phrase is at end of the
+searched string. This is most useful for file extensions. For example,
+inspecting the exclusion list entry \regexsample{\verb%.*\.zip$%}, we see that
+starts with .* to mean any number of characters, then \. to mean a literal
+period, then the letters 'zip' at the end. This will then match \code{spam.zip}
+and \code{garbage.zip}, and so on, but \code{www.zip2net.com} will not be
+matched.
+
+\helpignore{\section{Showcase Dialog}\label{sec:pd-showcase-dialog}}
+\helponly{\section{Showcase Dialog}\label{pd-showcase-dialog}}
+
+This dialog displays a small sample of \brandingapplicationsuitename-compatible websites. The dialog
+is composed of 2 panes:
+
+\begin{itemize}
+  \item A list, showing the channels available in the showcase, and their
+  respective URLs.
+
+  \item A details pane, showing details about the selected channel.
+\end{itemize}
+
+Click once on a channel in the table, to display that channel's preview and
+details. 
+
+Either double-click on a channel or select a channel and then press
+the \desktopcontrol{OK} button to choose this channel.
+
+The panes can be resized by dragging the splitter between the panes.
+
+Options for the showcase dialog can be set in the Main dialog's advanced 
+shared settting's 
+\helpignore{\ref{sec:pd-preferences-dialog-showcase-tab}}
+\helponly{\helplink{\brandingapplicationsuitename showcase section}{pd-preferences-dialog-showcase-tab}}.
+.
+
+\helpignore{\section{Setup Wizard}\label{sec:pd-setup-wizard}}
+\helponly{\section{Setup Wizard}\label{pd-setup-wizard}}
+This wizard sets up up a talilored \brandingapplicationsuitename onto your computer and 
+handheld.
+
+\helpignore{\subsection{Software Selection Page}\label{sec:pd-install-wizard-software-selection-page}}
+\helponly{\subsection{Software Selection Page}\label{pd-install-wizard-software-selection-page}}
+
+This page specifies the type of handheld software to be installed.
+
+\desktopcontrol{Type of handheld device} can be either a normal resolution
+Palm OS device (160x160 pixel screen) or a high resolution Palm OS device.
+Choose the type of device you have.
+
+\desktopcontrol{Color depth of handheld device} is the maximum number of 
+colors that the device can display. 
+
+\advancedtip{There is different software binaries for the normal and high 
+resolution, but separate color and grayscale binaries are no longer created:
+all have color capability. The color depth parameter is just used to 
+configure the image depth for your channels when setting up \brandingapplicationdesktopname.}
+
+\desktopcontrol{Language for handheld software} specifies which language of 
+Viewer software to install.
+
+There are three possible items to install:
+
+\begin{itemize}
+  \item \desktopcontrol{Install \brandingapplicationsuitename Viewer} The viewer application, 
+  required to read \brandingapplicationsuitename content on the handheld.
+
+  \item \desktopcontrol{Install ZLIB decompression tool} The tool required to
+  decompress \brandingapplicationsuitename content that was originally compressed with ZLIB
+  compression. Compression of a channel can be set to either DOC or ZLIB in 
+  the 
+  \helpignore{\ref{sec:pd-channel-dialog-output-tab}}
+  \helponly{\helplink{Channel Dialog's Output Options Tab}{pd-channel-dialog-output-tab}}.
+
+  \item \desktopcontrol{Install \brandingapplicationsuitename Viewer's manual} A complete manual 
+  describing the caring and feeding of \brandingapplicationsuitename. The manual can be erased at 
+  any later time, in order to conserve storage space on the device.
+\end{itemize}
+
+\helpignore{\subsection{Destination Page}\label{sec:pd-setup-wizard-destination-page}}
+\helponly{\subsection{Destination Page}\label{pd-setup-wizard-destination-page}}
+
+This page lists specifies where to install the software components.
+
+The handheld software will be sent to the desired destinations. There are two 
+lists of destinations: the upper list is a list of handheld destinations, and
+the lower list is a list of destination directories on the desktop computer's
+harddrive.
+
+To add a handheld destination, click the \desktopcontrol{Add handheld...} 
+button. You can then add a handheld destination using the
+\helpignore{\ref{sec:pd-handheld-dest-dialog}}
+\helponly{\helplink{Handheld Destination Dialog}{pd-handheld-dest-dialog}}
+.
+
+To remove some handheld destinations, select the handheld destinations in 
+the listbox, and click the \desktopcontrol{Remove selected handhelds} button.
+
+To add a directory destination, click the 
+\desktopcontrol{Add output directory...} button. Select the desired directory 
+from the browse directory dialog, and click OK to add. 
+
+To remove some directory destinations, select the handheld destinations in 
+the listbox, and click the \desktopcontrol{Remove selected directories} button.
+
+\helpignore{\subsection{Proxy Page}\label{sec:pd-setup-wizard-proxy-page}}
+\helponly{\subsection{Proxy Page}\label{pd-setup-wizard-proxy-page}}
+
+Check the \desktopcontrol{Use a proxy to access the Internet} checkbox if you
+go online through a proxy. 
+
+Fill the boxes with the appropriate values. For example: if your proxy is
+\code{http://proxy.aol.com:8080} then in the \desktopcontrol{Proxy server}
+box enter \code{http://proxy.aol.com} and in the \desktopcontrol{Port} box 
+enter \code{8080}
+
+\basictip{Don't forget the \code{http://} at the start of the proxy server.}
+
+Enter your username into the \desktopcontrol{Proxy username} box and enter 
+your password into the \desktopcontrol{Proxy password} box.
+
+\advancedtip{Proxy login and password fields are not secure, as they will be
+saved to the configuration file.}
+
+\helpignore{\subsection{Preconfigured Channels Page}\label{sec:pd-setup-wizard-preconfigured-channels-page}}
+\helponly{\subsection{Preconfigured Channels Page}\label{pd-setup-wizard-preconfigured-channels-page}}
+
+You can optionally have some channels preconfigured channels set up for you.
+
+Use the checkboxes beside each channel name to select/delect desired channels.
+
+The channels that you select will be set up when you complete the
+setup wizard.
+
+\helpignore{\section{Add Channel Wizard}\label{sec:pd-add-channel-wizard}}
+\helponly{\section{Add Channel Wizard}\label{pd-add-channel-wizard}}
+
+This wizard adds a new \brandingapplicationsuitename channel to your list.
+
+\helpignore{\subsection{Channel Name Page}\label{sec:pd-add-channel-wizard-channel-name-page}}
+\helponly{\subsection{Channel Name Page}\label{pd-add-channel-wizard-channel-name-page}}
+
+Enter a name of the new channel. This is the name that will appear in your
+list of channels.
+
+\basictip{A channel name has a maximum limit of 26 letters. This is a PalmOS 
+restriction.}
+
+\helpignore{\subsection{Starting Page Page}\label{sec:pd-add-channel-wizard-starting-page-page}}
+\helponly{\subsection{Starting Page Page}\label{pd-add-channel-wizard-starting-page-page}}
+
+This page specifies the starting page of the channel.
+
+The starting page is the initial page retrieved for the channel. This page,
+and optionally, the pages it links to, are retrieved.
+
+A starting page can be either:
+
+\begin{itemize}
+  \item \desktopcontrol{A website URL} Type in an internet address, or press 
+  the \desktopcontrol{Browse showcase...} button to choose an internet address 
+  from some featured \brandingapplicationsuitename-compatible sites.
+
+  \item \desktopcontrol{A local file} Type in the location of a file [starting 
+  with the prefix file://], or press the \desktopcontrol{Choose file...} button 
+  to browse your disk for a file.
+\end{itemize}
+
+\advancedtip{For ease to new users, the "List of my links" option is
+not included as an option here. Use a regular "Add Channel" command if you 
+want to use a list of links as your starting page.}
+
+\helpignore{\subsection{Limits Page}\label{sec:pd-add-channel-wizard-limits-page}}
+\helponly{\subsection{Limits Page}\label{pd-add-channel-wizard-limits-page}}
+
+This page sets up some limits for retrieval of the channel.
+
+\desktopcontrol{Maximum depth} specifies how many page down from the starting
+page to continue spidering. A value of 1 only retrieves the initial page, a
+value of 2 retrieves the page and pages that are directly linked from the
+starting page.
+
+\desktopcontrol{Ignore links to a server that is different from starting
+page's server} will tell \brandingapplicationsuitename to not retrieve pages that originate from a 
+server that is different from the starting pages. There are two possiblities: 
+
+\begin{itemize}
+\item \desktopcontrol{Limit to the exact server only} If your starting page is
+\code{http://www.slashdot.org}, then items coming from 
+\code{http://adfu.slashdot.org} as well as \code{http://www.x10.com} 
+would be ignored.
+
+\item \desktopcontrol{Only restrict to domain} If your starting page is 
+\code{http://www.slashdot.org}, then items coming from 
+\code{http://www.x10.com} would be ignored, but items coming from 
+\code{http://adfu.slashdot.org} would be included.
+\end{itemize}
+
+\helpignore{\subsection{Destination Page}\label{sec:pd-add-channel-wizard-destination-page}}
+% Note the trailing space hack so can give a unique name vs. setup wizard
+\helponly{\subsection{Destination Page }\label{pd-add-channel-wizard-destination-page}}
+
+This page lists specifies where to install the software components. 
+
+The handheld software will be sent to the desired destinations. There are two 
+lists of destinations: the upper list is a list of handheld destinations, and 
+the lower list is a list of destination directories on the desktop computer's 
+harddrive.
+
+To add a handheld destination, click the \desktopcontrol{Add handheld...} 
+button. You can then add a handheld destination using the
+\helpignore{\ref{sec:pd-handheld-dest-dialog}}
+\helponly{\helplink{Handheld Destination Dialog}{pd-handheld-dest-dialog}}
+.
+
+To remove some handheld destinations, select the handheld destinations in 
+the listbox, and click the \desktopcontrol{Remove selected handhelds} button.
+
+To add a directory destination, click the 
+\desktopcontrol{Add output directory...} button. Select the desired directory 
+from the browse directory dialog, and click OK to add. 
+
+To remove some directory destinations, select the handheld destinations in 
+the listbox, and click the \desktopcontrol{Remove selected directories} button.
+
+\helpignore{\section{Install Handheld Software Wizard}\label{sec:pd-install-wizard}}
+\helponly{\section{Install Handheld Software Wizard}\label{pd-install-wizard}}
+
+This wizard installs the specified \brandingapplicationsuitename software onto the handheld.
+
+\helpignore{\subsection{Software Selection Page}\label{sec:pd-install-wizard-software-selection-page}}
+% Note double trailing space hack. Unique name vs. setup. Double used to match destination.
+\helponly{\subsection{Software Selection Page  }\label{pd-install-wizard-software-selection-page}}
+
+This page specifies the type of handheld software to be installed.
+
+\desktopcontrol{Type of handheld device} can be either a normal resolution 
+Palm OS device (160x160 pixel screen) or a high resolution Palm OS device. 
+Choose the type of device you have.
+
+\desktopcontrol{Color depth of handheld device} is the maximum number of 
+colors that the device can display. 
+
+\advancedtip{There is different software binaries for the normal and high 
+resolution, but separate color and grayscale binaries are no longer created:
+all have color capability. The color depth parameter is just used to 
+configure the image depth for your channels when setting up \brandingapplicationdesktopname.}
+
+\desktopcontrol{Language for handheld software} specifies which language of 
+Viewer software to install.
+
+There are three possible items to install:
+
+\begin{itemize}
+  \item \desktopcontrol{Install \brandingapplicationsuitename Viewer} The viewer application, 
+  required to read \brandingapplicationsuitename content on the handheld.
+
+  \item \desktopcontrol{Install ZLIB decompression tool} The tool required to
+  decompress \brandingapplicationsuitename content that was originally compressed with ZLIB
+  compression. Compression of a channel can be set to either DOC or ZLIB in 
+  the 
+  \helpignore{\ref{sec:pd-channel-dialog-output-tab}}
+  \helponly{\helplink{Channel Dialog's Output Options Tab}{pd-channel-dialog-output-tab}}.
+
+  \item \desktopcontrol{Install \brandingapplicationsuitename Viewer's manual} A complete manual 
+  describing the caring and feeding of \brandingapplicationsuitename. The manual can be erased at 
+  any later time, in order to conserve storage space on the device.
+\end{itemize}
+
+\helpignore{\subsection{Destination Page}\label{sec:pd-install-wizard-destination-page}}
+% Note double space trailing space, to differentiate from other 2.
+\helponly{\subsection{Destination Page  }\label{pd-install-wizard-destination-page}}
+
+This page lists specifies where to install the software components. 
+
+The handheld software will be sent to the desired destinations. There are two 
+lists of destinations: the upper list is a list of handheld destinations, and 
+the lower list is a list of destination directories on the desktop computer's 
+harddrive.
+
+To add a handheld destination, click the \desktopcontrol{Add handheld...}
+button. You can then add a handheld destination using the
+\helpignore{\ref{sec:pd-handheld-dest-dialog}}
+\helponly{\helplink{Handheld Destination Dialog}{pd-handheld-dest-dialog}}
+.
+
+To remove some handheld destinations, select the handheld destinations in 
+the listbox, and click the \desktopcontrol{Remove selected handhelds} button.
+
+To add a directory destination, click the 
+\desktopcontrol{Add output directory...} button. Select the desired directory 
+from the browse directory dialog, and click OK to add. 
+
+To remove some directory destinations, select the handheld destinations in 
+the listbox, and click the \desktopcontrol{Remove selected directories} button.
+
+
+\begin{helponly}
+\chapter{Commandline Mode}\label{pd-commandline-mode}
+This chapter describes how to use \brandingapplicationdesktopname via the commandline.
+\end{helponly}
+
+\helpignore{\section{Using commandline \brandingapplicationdesktopname}\label{sec:pd-using-commandline-plucker-desktop}}
+\helponly{\section{Using commandline \brandingapplicationdesktopname}\label{pd-pd-using-commandline-plucker-desktop}}
+
+If you start \brandingapplicationdesktopname without any commandline arguments, then the 
+application will start in the normal GUI manner.
+
+However, if you start \brandingapplicationdesktopname with commandline arguments, it will do
+the specified action and then automatically terminate when you are finished. 
+The commandline version requires the OS's window manager to already be running 
+(for example, Gnome, KDE, or Windows is running).
+
+\basictip{You can specify how you want to view progress, and whether you 
+want to automatically close on exit via the 
+\helpignore{\ref{sec:pd-preferences-dialog-spidering-tab}}
+\helponly{\helplink{Preferences Dialog Spidering Tab}{pd-preferences-dialog-spidering-tab}}
+. 
+If you choose not to close on exit, then the program will wait for your 
+interaction before it terminates; this allows you to inspect the log files, 
+for example.}
+
+You should first set up your desired options in the GUI desktop. 
+Then you can proceed do a desired action via the commandline.
+
+There are 3 actions you can do: update selected channels, update due channels, 
+or update all channels. These actions are equivalent to their respective 
+toolbar button actions on the 
+\helpignore{\ref{sec:pd-main-dialog}}
+\helponly{\helplink{Main Dialog}{pd-main-dialog}}
+.
+
+\basictip{On Mac OSX, the commandline version needs to be invoked with the 
+full path, since it needs to find the resources at runtime, for example type: 
+\code{/Applications/Plucker.app/Contents/MacOS/plucker-desktop --update-due}.}
+
+Read more on how to use each commandline action:
+
+\helpignore{\subsection{Commandline update selected channels}\label{sec:pd-commandline-option-summary}}
+\helponly{\subsection{Commandline update selected channels}\label{pd-commandline-option-summary}}
+
+This will update some specified channels.
+
+To use, use the \code{--update-selected} command. There are two methods of 
+specifying which channels you want to update: by their channel names, or 
+their sections within your plucker.ini/.pluckerrc configuration file. 
+
+The first method is to specify the channels by their channel names. For example, 
+if you wanted to update the channels named \code{Wired} and \code{BBC News}:
+
+\code{plucker-desktop --update-selected "Wired" "BBC News"}
+
+\advancedtip{The name of the channel corresponds to the doc\_name key of that
+channel in your plucker.ini/.pluckerrc file} 
+
+The second method is to specify the channels by their section in your 
+plucker.ini/.pluckerrc file. Sections are the 'subheader' of your 
+plucker.ini/.pluckerrc file under which the keys for that channel are 
+listed. There might be a section named \code{[BBCNews]} under which all the 
+keys for that channel are listed. To update channels by their section name, 
+include the \code{--use-sections} switch. For example:
+
+\code{plucker-desktop --update-selected --use-sections "Wired" "BBCNews"}
+
+\basictip{Be sure to enclose each channel name or section in quotes, if it 
+has spaces in it.}
+
+\basictip{Both methods of specifying the channels are case-sensitive.}
+
+\basictip{The program will inform you with a popup message if you entered 
+a channel section or name which was not found in the plucker.ini/.pluckerrc 
+file.}
+
+\advancedtip{Channel names are not unique. It is possible to have 2 channels 
+with a similar channel name (doc\_name) of \code{BBC News}.
+If there is multiple channels existing for a specified channel name, all 
+channels with that channel name get updated. 
+The channel section names, however, are always unique: there can't be 2 
+different \code{[BBCNews]} sections of the plucker.ini/.pluckerrc file.}
+
+\helpignore{\subsection{Commandline update due channels}\label{sec:pd-commandline-option-summary}}
+\helponly{\subsection{Commandline update due channels}\label{pd-commandline-option-summary}}
+
+This will update your channels that are currently due.
+
+To use, use the \code{--update-due} command. For example:
+
+\code{plucker-desktop --update-due}
+
+If no channels are currently due, it will just silently exit.
+
+
+\helpignore{\subsection{Commandline update all channels}\label{sec:pd-commandline-option-summary}}
+\helponly{\subsection{Commandline update all channels}\label{pd-commandline-option-summary}}
+
+This will update all your channels.
+
+To use, use the \code{--update-all} command. For example:
+
+\code{plucker-desktop --update-all}
+
+
+\helpignore{\section{Commandline option summary}\label{sec:pd-commandline-option-summary}}
+\helponly{\section{Commandline option summary}\label{pd-commandline-option-summary}}
+
+You can either use short options or long options. For example \code{-a} is 
+the same as \code{--update-all}.
+
+Commands:
+
+\begin{itemize}
+  \item \code{-h --help} Show help message and exit
+  \item \code{-s --update-selected} Update selected channels
+  \item \code{-d --update-due} Update due channels
+  \item \code{-a --update-all} Update all channels
+\end{itemize} 
+
+Option modifiers:
+
+\begin{itemize}
+  \item \code{-p --use-sections} Specify channels by their section within 
+  your plucker.ini/.pluckerrc file, instead of their channel name (doc\_name key).
+\end{itemize} 
+
+\advancedtip{On MSW, you can use either '-' or '/' to specify a short option.}
+
+
+\begin{helponly}
+
+\chapter{About}\label{pd-about}
+
+\section{Authors and Credits}\label{pd-credits}
+
+See Help > About for a list of the people that brought you this software,
+or visit \code{\brandingapplicationpublisherurl}.
+
+\section{GPL Licence}\label{pd-gnu-licence}
+
+\brandingapplicationdesktopname is Free Software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+You should have received a copy of the GPL with this program. 
+If not, contact plucker-dev@rubberchicken.org and it will be 
+provided to you.
+
+\section{Tools Used To Create \brandingapplicationdesktopname}\label{pd-tools-to-make-plucker-desktop}
+
+\brandingapplicationdesktopname was built with free software. The latest sourcecode for 
+\brandingapplicationdesktopname can be downloaded from \code{http://www.plkr.org}.
+
+The \brandingapplicationdesktopname application was written in C++, using the wxWindows
+cross-platform toolkit. Information about wxWindows is available from
+\code{www.wxwindows.org}.
+
+HTML editor employs the wxStyledTextCtrl library, written by Robin Dunn
+\code{(robin@alldunn.com)} which wraps the Scintilla edit control
+\code{(www.scintilla.org)}.
+
+XML resources run using the XMLRC resource library written by Vaclav Slavik
+\code{(v.slavik@volny.cz)}.
+
+Internationalization is performed through:
+\begin{itemize}
+  \item GNU Gettext Utilities \code{www.gnu.org/software/gettext}
+  \item xrcedit (xml string extraction) \code{www.wxwindows.org}
+  \item poEdit (visual translation) \code{poedit.sf.net}
+\end{itemize}
+
+Source code editing was with:
+\begin{itemize}
+  \item nedit \code{www.nedit.org} 
+  \item vim \code{www.vim.org}  
+  \item DevC++ \code{www.bloodshed.net}
+\end{itemize}
+
+Images created with:
+\begin{itemize}
+  \item GIMP \code{www.gimp.org}
+\end{itemize}
+
+Compilation on the various platforms was with:
+\begin{itemize}
+  \item GNU C Compiler \code{www.gnu.org/software/gcc}
+  \item Apple Developer Tools \code{www.apple.com}
+  \item Redhat/Cygnus Cygwin \code{www.redhat.com}
+  \item Borland Free C++ Commandline Compiler 5.5 \code{www.borland.com}
+\end{itemize}
+
+Debugging was with:
+\begin{itemize}
+  \item GDB \code{www.gnu.org/software/gdb}
+  \item DDD \code{www.gnu.org/software/ddd}
+  \item DebugView \code{www.sysinternals.com}
+\end{itemize}
+
+Installers for the various platforms created with:
+\begin{itemize}
+  \item InnoSetup \code{www.innosetup.com}
+  \item ISTool \code{www.bhenden.org/istool}
+\end{itemize}
+
+Documentation created and managed with:
+\begin{itemize}
+  \item Tex2RTF (Online help) \code{www.wxwindows.org/tex2rtf}
+  \item Doxygen (Source code documentation) \code{www.doxygen.org}
+\end{itemize}
+
+\chapter{Appendix}\label{pd-appendix}
+
+\section{Configuration file keys}\label{pd-configuration-file-keys}
+
+This describes the configuration file keys added to plucker.ini or .pluckerrc
+to be used by \brandingapplicationdesktopname. These are in addition to the keys used by the
+\brandingapplicationsuitename distiller (see the Plucker reference for a full description of them).
+The keys are grouped by their section that they are in, with keys listed 
+alphabetically in each.
+
+\basictip{The boolean keys need to be 0 or 1, not TRUE/FALSE or YES/NO. Strings
+don't have quotation marks around the values. Directories don't have any 
+trailing slash on them}
+
+\bf{[PLUCKER\_DESKTOP] keys}
+
+\begin{itemize}
+  \item \configkey{add\_channel\_wizard\_do\_launch\_channel\_dialog} 1 to launch
+    a Channel dialog after completing an Add Channel Wizard. 0 to just 
+    return to the Main Dialog.
+  \item \configkey{after\_group\_command} Command to execute after spidering a group
+    of channels.
+  \item \configkey{branding\_about\_dialog\_style} Style of about dialog: "simple"
+    will show a single html page, "enhanced" [and ""] will show the regular
+    a 3-tabbed enhanced about, and "messagebox" or any other non-empty string 
+    will show the standard messagebox.
+  \item \configkey{branding\_application\_desktop\_name} Name of the application's desktop
+    component. Default is "Plucker Desktop".
+  \item \configkey{branding\_application\_publisher} Publisher of the application,
+    Default is "The Plucker Team"
+  \item \configkey{branding\_application\_suite\_name} Name of the application suite. 
+    Default is "Plucker".
+  \item \configkey{branding\_preferences\_dialog\_hidden\_pages} Index numbers of pages
+    in the preferences dialog to be hidden. Semicolon delimited array. Numbered 
+    from 0 on the leftmost. Default is no pages hidden.
+  \item \configkey{branding\_tips\_exclusion\_filter} Semicolon delimited array of 
+   filters to apply to exclude certain tips-of-the-day from being displayed. 
+   For example, plkrTIP_ADVANCED will hide advanced tips. See the tips.txt file in
+   the resources for the possible filters.
+  \item \configkey{before\_group\_command} Command to execute after spidering a
+    group of channels.
+  \item \configkey{channel\_dialog\_position\_x} Previous x position of this dialog.
+  \item \configkey{channel\_dialog\_position\_y} Previous y position of this dialog.
+  \item \configkey{channel\_dialog\_size\_x} Previous width of this dialog.
+  \item \configkey{channel\_dialog\_size\_y} Previous height of this dialog.
+  \item \configkey{directory\_documentation} Directory of \brandingapplicationdesktopname 
+     documentation.
+  \item \configkey{directory\_locale} Directory of \brandingapplicationdesktopname locale files 
+    (gettext .mo files).
+  \item \configkey{directory\_pda\_viewer} Directory of \brandingapplicationsuitename viewer .prcs to be
+     installed.
+  \item \configkey{directory\_pyplucker} Returns the PyPlucker directory which has Spider.py
+     and the other files for the Python parser (Currently only used on MSW and MAC).
+  \item \configkey{directory\_python\_vm} Returns the directory holding the python vm 
+     (Currently only used on MAC).
+  \item \configkey{directory\_resource} Directory of \brandingapplicationdesktopname resources.
+  \item \configkey{directory\_wxwindows\_configuration} Directory to store a file
+     of wxWindows settings, like help bookmarks, file dialog styles, etc.
+     (Not the directory returned by wx-config on POSIX). 
+  \item \configkey{editor\_dialog\_position\_x} Previous x position of this dialog.
+  \item \configkey{editor\_dialog\_position\_y} Previous y position of this dialog.
+  \item \configkey{editor\_dialog\_size\_x} Previous width of this dialog.
+  \item \configkey{editor\_dialog\_size\_y} Previous height of this dialog.
+  \item \configkey{editor\_use\_advanced\_toolbars} 1 to use the advanced toolbar
+    in the HTML editor. 0 to use the basic one, with 'Insert Hyperlink' only.
+  \item \configkey{editor\_tools\_insert\_linefeeds} 1 to insert linefeeds at the
+    end of text generated through one of the toolbar buttons.
+  \item \configkey{help\_startup\_tips\_enabled} 1 to show startup tips on startup.
+    0 to not.
+  \item \configkey{help\_startup\_tips\_type} Number 0-2 of type of startup tip to
+    to show on startup. 0=basic tip, 1=advanced tip, 2=rubber chicken trivia.
+  \item \configkey{help\_startup\_tips\_last\_tip\_shown} The number of the last
+    tip shown. This is the line number of the startup tips text file for the
+    certain type.
+  \item \configkey{html\_editor} Optional commandline to an external editor. If 
+    left blank, will use the integrated internal HTML editor.
+  \item \configkey{installation\_plkrdata\_fullnames} Semicolon delimited array 
+    of filenames that were consulted during installation. This key is used
+    internally, and should not ever need to be set by hand.
+  \item \configkey{installation\_plkrdata\_datetimes} Semicolon delimited array
+    of last modified datetimes of filenames that were consulted during installation.
+    It is used to compare a file to see if it has already been imported.
+    This key is used internally, and should not ever need to be set by hand.
+  \item \configkey{internationalization\_enabled} 1 to enable localization of
+    interface into another language. 0 to disable.
+  \item \configkey{is\_first\_execution} 1 if it is the first execution of the 
+    program (and thus should launch the setup wizard, etc). 0 if not.
+  \item \configkey{locale\_wx\_number} A wxWindows number of the current locale. 
+    Used internally and shouldn't be changed. However, a value of -1 can be
+    specified, which will pop up a choice dialog on startup, asking which 
+    language to use.
+  \item \configkey{main\_frame\_position\_x} Previous x position of this dialog.
+  \item \configkey{main\_frame\_position\_y} Previous y position of this dialog.
+  \item \configkey{main\_frame\_size\_x} Previous width of this dialog.
+  \item \configkey{main\_frame\_size\_y} Previous height of this dialog.
+    \configkey{main\_frame\_statusbar\_enabled} 1 to show the status bar in the main dialog, 
+    0 to not.
+  \item \configkey{main\_frame\_toolbar\_enabled} 1 to show a toolbar in the main dialog.
+    0 to not.  
+  \item \configkey{message\_dialog\_enabled\_no\_destinations\_selected} 1 to keep
+    showing the message dialog that there is no destinations selected, when
+    close a channel dialog. 0 to repress this message dialog.
+  \item \configkey{message\_dialog\_enabled\_no\_destinations\_selected\_update} 1 to keep
+    showing the message dialog that there is no destinations selected, when
+    about to update a channel. 0 to repress this message dialog.
+  \item \configkey{message\_dialog\_enabled\_palm\_desktop} 1 to keep
+    showing the message dialog that was unable to find Palm Desktop and
+    other Palm keys in the registry. 0 to repress this message dialog.
+    Used on MSW only.
+  \item \configkey{plucker\_desktop\_version} Version of \brandingapplicationdesktopname application
+  \item \configkey{plucker\_home} A cached version of the value of PluckerHome in the
+    systems registry (only used on MSW).
+  \item \configkey{preferences\_dialog\_position\_x} Previous x position of this dialog.
+  \item \configkey{preferences\_dialog\_position\_y} Previous y position of this dialog.
+  \item \configkey{preferences\_dialog\_size\_x} Previous width of this dialog.
+  \item \configkey{preferences\_dialog\_size\_y} Previous height of this dialog.
+  \item \configkey{process\_launch\_distiller\_directly} MSW only. 1 to execute the distiller 
+    program directly, instead of calling plucker-build which then executes the
+    distiler. Very likely want this to be 1. 
+  \item \configkey{process\_kill\_using\_sigkill} 1 to use SIGKILL to terminate a process
+    instead of SIGTERM. Default is to use SIGKILL on MSW and SIGTERM on all others. 
+    On MSW, SIGKILL is mapped to closing a process by sending window close events to 
+    the application, which is useless if there isn't any, such as a console-only 
+    plucker-build, python or java application.
+  \item \configkey{progress\_dialog\_close\_on\_error} 1 to close the progress dialog
+    even if there was an error reported by the parser.
+  \item \configkey{progress\_dialog\_close\_on\_exit} 1 to close the progress dialog
+    automatically on exit if there was no errors reported by the parser.
+  \item \configkey{progress\_dialog\_show\_details} 1 to initially show the details
+    when a progress dialog is displayed. 0 to initially hide details.
+  \item \configkey{showcase\_dialog\_insert\_all\_parameters} 1 to insert all parameters
+  \item \configkey{showcase\_dialog\_layout\_type} 0=horizontal layout. 1=vertical layout.
+  \configkey{showcase\_dialog\_main\_splitterwindow\_sash\_position} Previous
+    sash position in pixels for the splitterwindow. Will resize back to an
+    acceptable value if value would put the splitter offscreen.
+  \item \configkey{showcase\_dialog\_position\_x} Previous x position of this dialog.
+  \item \configkey{showcase\_dialog\_position\_y} Previous y position of this dialog.
+  \item \configkey{showcase\_dialog\_show\_details} 1 to show details in the showcase
+    dialog. 0 to not.
+  \item \configkey{showcase\_dialog\_show\_images} 1 to show images in channel
+    previews. 0 to not.
+  \item \configkey{showcase\_dialog\_show\_preview} 1 to show previews in the showcase
+    dialog. 0 to not.    
+  \item \configkey{showcase\_dialog\_size\_x} Previous width of this dialog.
+  \item \configkey{showcase\_dialog\_size\_y} Previous height of this dialog.
+    from the showcase into the channel. 0 to just insert name and URL only.
+  \item \configkey{spidering\_display\_mode} The feedback method for spidering. 
+    Either \code{dialog} or \code{console}.
+  \item \configkey{splashscreen\_enabled} 1 to show splashscreen on startup. 0 to not.
+  \item \configkey{theme} Theme of the icon set.
+    \item \configkey{viewer\_hires\_basename} Basename of hires viewer. Maximum of
+    21 letters. For example, if the hires basename is viewer_hires_, then the 
+	chinese viewer filename that the viewer installer wizard will look for, is
+	viewer_hires_zh_CN.prc. Default value is viewer_hires_
+  \item \configkey{viewer\_lores\_basename} Basename of lores viewer. Maximum of
+    21 letters. For example, if the lores basename is viewer_, then the 
+	chinese viewer filename that the viewer installer wizard will look for, is
+	viewer_zh_CN.prc. Default value is viewer_
+  \item \configkey{window\_placement\_type} Number of 0-2 of where to place a child
+    dialog when it is opened. 0=center on screen, 1=center on parent,
+    2=last location.
+\end{itemize}
+
+\bf{Channel section keys}
+
+\begin{itemize}
+  \item \configkey{copy\_to\_dir} The directory to install channel's output.
+  \item \configkey{handheld\_target\_storage\_mode} Semicolon-delimited list of whether
+    the handheld users should install to RAM, SD-Card, Memory Stick, etc.
+    0=Install to RAM. 1=Install to SD Card. 2=Install to Memory Stick.
+    3=Install to CompactFlash Card.
+    The items in the comma-delimited list match up with the items in the user= key.
+  \item \configkey{update\_base} The base time from which to calculate a due time,
+    by adding (update\_period x update\_frequency) to it. Must be in W3C
+    format, for example: \code{2002-07-25T17:51:13}
+  \item \configkey{update\_enabled} 1 to mark this channel as being due at a
+    specified time. 0 to mark it as never due.
+  \item \configkey{update\_frequency} The number of periods that should elapse
+    from the update\_base before channel is due.
+  \item \configkey{update\_period} The units of update. Valid values are
+    \code{hourly}, \code{daily}, \code{weekly}, \code{monthly}, or
+    \code{yearly}.
+  \item \configkey{user} The Sync username to install channel's output. A
+    non-blank value on POSIX means to use pilot-link.
+\end{itemize}
+
+\section{Known issues}\label{pd-known-issues}
+
+This describes the current known issues in \brandingapplicationdesktopname, why they are an issue,
+and their resolution status.
+
+\subsection{All platforms}\label{pd-known-issues-all-platforms}
+
+\bf{Some parser features are not yet implemented}
+
+Some parser features haven't been written at this time. These features are so marked
+in the \brandingapplicationdesktopname help. You can get a summary of them by going to the help's
+search tab, and searching for the phrase \code{not yet implemented}. Status:
+these will get implemented over the next while.
+
+\bf{Monthly update at end-of-month accumulates to shortest month}
+
+If a channel's update period is monthly, and set to update on the 29th, 30th or 31st
+of the month, then will move to last day of month and then stay there for the
+month hit. For example, if the channel is updated monthly, with a
+base date of Jan 31, then next month will be Feb 28, then next month will be Mar28.
+Reason is that increasing month from last due date, and can't store a Feb 31st as it
+is illegal. Status: probably this will remain unless there is a workaround. Use
+a period of days, weeks, hours, etc, if this is a problem, and you want finer control.
+
+\subsection{POSIX}
+
+No known platform-specific issues at this time.
+
+\subsection{MSW}
+
+\bf{OS won't use certain translations}
+
+Depending on your version of MSW, and what encoding support was included when
+you installed the OS, there may be some foreign languages that you cannot use
+in \brandingapplicationdesktopname. If \brandingapplicationdesktopname can't use the specified language,
+there will just be a pop up message telling you so, and the program will
+continue normally, albeit in English.
+This is just because the OS doesn't have the support installed for that
+language's character set. Status: limitation of the OS.
+
+\bf{Process dialog won't update during a NT screensaver lock}
+
+If setting up a \brandingapplicationdesktopname job from the commandline, behind a locked NT
+screensaver, then updating of the progress bar won't happen, until you wriggle
+the mouse and thus wake up the system. The reason for this is probably
+because during the screensaver lock, the system has entered a semi-sleep
+state, and not sending idle events to various windows. Solution is just to 
+use the console DOS update prgress dialogs in this case. Status: likely a 
+limitation of the OS.
+
+\bf{Repeated process killing on older MSW versions may cause crash}
+
+The reason is that older (95/98/Me) MSW versions only have two API functions to
+stop a running process, to either send a WM\_CLOSE event (telling the application
+to close its windows) or a ::TerminateProcess() function which will stop the
+application cold. There is no [documented] API function to do a SIGTERM
+equivalent command on a commandline application which has no windows, hence
+::TerminateProcess() needs to be called on it, and heavy repeated use of this may
+cause a crash of the program depending on how old your version of Windows is.
+This lack of API still has not been addressed in NT/2000/XP, but an independent
+workaround has been invented for these later versions of the OS, which gives the
+proper functionality and removes the possiblity of a crash. The workaround
+involves entering the process and killing it from within (see sourcecode for
+details). Status: limitation of the OS.
+
+\bf{Can't use semicolon in a Sync username}
+
+There can't be a sync username with a semicolon character in it, since that is
+what is used to separate entries in the configuration file.
+This is also true in other array things like the viewer category, etc.
+
+\end{helponly}
+

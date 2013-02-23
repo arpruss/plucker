@@ -1,0 +1,93 @@
+
+To add support for a new language you have to do the 
+following:
+
+- Create the language file
+
+  In the "langs" directory you will find the language files for 
+  all supported languages. They are named using the ISO language 
+  code, e.g. English = en.rcp and German = de.rcp. 
+
+  To add support for a new language you should copy the file "sample.rcp" 
+  to "<code>.rcp" and "sample.h" to "<code>.h" (look in the ISO-CODE file
+  to find the correct code for your language)
+
+- Change ISO-code in header
+
+  Open the file "code.rcp" and change "sample" for the TRANSLATION
+  and $$LANG keywords to the code for the new language (remember to
+  use lower case letters):
+
+  E.g.
+
+  TRANSLATION "sample"
+  BEGIN
+
+  "$$LANG"     = "sample"
+  :
+  END
+
+  would be changed to 
+
+  TRANSLATION "de"
+  BEGIN
+
+  "$$LANG"     = "de"
+  :
+  END
+
+  in de.rcp (support for German)
+
+- Translate all strings
+
+  Between the BEGIN and END, you will find a serie of lines
+  with the following format:
+
+  "$$TAG" = "Text string"
+
+  E.g.
+
+  "$$BACK" = "Back"
+  "$$CONFIRM DELETE" = "Confirm Delete"
+
+  The tag is used by the viewer.rcp template and should not be changed,
+  the string is what you need to translate.
+
+  The examples above look like this in de.rcp:
+
+  "$$BACK" = "Rückwärts"
+  "$$CONFIRM DELETE" = "Bestätigung für löschen"
+
+  NOTE: Try to avoid making the new string much longer than the 
+        original string.
+
+- Tell the configuration scripts about your new language
+
+  Add your language code in the configure.in to the LANG
+  variable.
+
+  E.g. LANG="en de"
+
+  The new language code should also be added to the Unix/Linux
+  setup script. In the install_viewer() function the language 
+  and viewer name should be added to the viewer structure.
+  
+- Build a copy of the viewer with support for the new language
+
+  If there is not already a Makefile you will have to create
+  one by running "./autogen.sh" or "./configure" and then run
+  make to create a viewer for each supported language. The
+  latest built binaries can always be found in the "binary" 
+  directory.
+
+  If you already have a Makefile it should be enough to just
+  run make, it should recreate a new Makefile with support
+  for the new language and build the viewer.
+
+OPTIONAL:
+
+- Change object locations in header file
+
+  If some objects are misplaced in the new viewer you should
+  open the file "<code>.h" and change the values for the objects.
+

@@ -1,0 +1,96 @@
+------------------------------------------------
+BUILDING ON XCODE (XCode version 2.4.1)
+------------------------------------------------
+
+Install XCode from the OS X CD's if you haven't already.
+
+Download wxWidgets (either wxMac or wxAll) from www.wxwidgets.org, and unzip it to some directory, herefore referred to as <wxdir>. A good choice for it is ~/wxMac. [Note that with xcode, no files have to be installed into /usr/.. or /usr/local, everything can be done from whatever folder you want.] 
+
+Use the wxWidgets.xcodeproj located at <wxdir>/src/wxWidgets.xcodeproj build wxWidgets [build the static debug and static release targets]. 
+
+Open <wxdir>/samples/minimal/minimal.xcodeproj and build that minimal example to ensure things are working well.
+
+The best thing to do is to checkout the source of plucker into your <wxdir>. 
+This will result in a folder of <wxdir>/plucker/plucker_desktop.
+Open up <wxdir>/plucker/plucker_desktop/plucker-desktop.xcodeproj and build the static development and 
+deployment (ppc), deployment (i386)  targets.
+
+A package will be built. When you run it, it will cough when it tries to load the xml resources which don't exist. 
+You need the resources (like the xrc, etc) inside the bundle.
+There are a few options here. 
+
+Option 1 (recommended):
+-Dig out the compiled executable from the bundle that xcode made and put it into the <plucker-desktop> in the source tree, then,
+-In terminal, go to <plucker-desktop>/installer/osx and run this:
+Makefile -f Makefile-xcode bundle
+And the bundle will assemble of the pieces around the source tree.
+
+Option 2: Open a downloaded version of Plucker.app from desktop.plkr.org to see how things are organized in there. 
+Move the stuff from the downloaded Plucker.app/Contents/Resources to xcode's spit out Plucker.app/Content/Resources/), and dropped in the current matching folder into /Contents/Resources.
+If the last release differs alot from CVS, then XRC files etc: might have updated also, you can just drop the CVS resource files into their matching location in the xcode's spit out Plucker.app/Content/Resources/
+
+--------------------------------------------------
+Note on optional ways to further decrease code size:
+--------------------------------------------------
+This project's .xcodeproj was based on wxWidgets minimal.xcodeproj. Some enhancements have been made:
+
+Initially as a universal binary release it was >100mb!
+
+The following switches were added versus minimal sample (for the Deployment target):
+In XCode, go to Project>ProjectSettings:
+Dead Code Stripping (Yes)
+Only Link In Essential Symbols (Yes)
+This brings a universal binary down from 100mb to about 20mb.
+
+If want to make a smaller file yet, you could just make either a i386 or ppc executable, 
+which would be about 11megs:
+
+In XCode, go to Project>ProjectSettings:
+In the "Configuration" drop down list, choose "Deployment"
+In the "Collection: drop down list, choose "Customized Settings".
+
+In the field called "Architectures", change it from the one architecture:
+change: 
+	ppc i386
+to either: 
+	ppc
+or to:
+	i386
+
+------------------------------------------------
+Note on OS X 10.3 Deployment target
+------------------------------------------------
+I feel that will plucker-desktop the deployment can be OS X 10.3.
+
+In XCode, go to Project>ProjectSettings, and choose "Customized Settings" from the drop down list.
+
+Change "Mac OS X Deployment Target" from:
+	Mac OS X 10.4
+to:
+	Mac OS X 10.3
+	
+I have tested the app on 10.3 and I don't notice any problems.
+
+I think though that I have also tested an executable built with 10.4 as the target, and it ran on OX 10.3,
+and I didn't notice a problem there either.
+
+------------------------------------------------
+Running plucker-desktop from the commandline
+------------------------------------------------
+
+Since need to locate the xml resource files, etc, and I think that these are calculated based on a "where are we approach" based on the commandline arguments, here is how it can be run from the commandline in OSX. 
+
+If there were no resouces to be found, then could have cd'ed to the dir where have the .app file. In example, the app is called minimal.app, and program inside is called minimal:
+./minimal.app/Contents/MacOS/minimal
+
+However, to properly find the resources, we need to specify the full path. Eg to update all channels (the -a flag), if
+if Plucker is in the /Applications directory, we need to run:
+/Applications/Plucker.app//Contents/MacOS/plucker-desktop -a
+
+------------------------------------------------
+Notes on building Plucker python parser for OS X:
+------------------------------------------------
+
+Should specify the configure option for default image parser to be pil2, so that this appears in the /PyPlucker/__init.py__
+
+Might as well use configure for the version number too (also appears in /PyPlucker/__init.py__), so that spider will report it correctly to websites.

@@ -1,0 +1,37 @@
+This is a modified version of PyPlucker that doesn't require any installation
+of the other components of Plucker.
+
+
+FEATURES:
+==========================================================================
+- Image support on Linux, UNIX & Windows machines.
+- Handles >32K files by splitting them
+- etc...
+
+
+INSTALLATION:
+==========================================================================
+This package should be installed either in a directory named
+'lib/python2.4/site-packages/PyPlucker' or can be put in a directory named
+PyPlucker (on Windows).
+
+
+USAGE:
+==========================================================================
+hotsync & hotsync.cmd scripts are provided for convenience.
+
+PyPlucker/Spider.py --help
+
+Pluckerdir directory should contain home.html, external.html and error.html.
+In home.html are recognised following flags: <A HREF="..." NOIMAGES
+MAXDEPTH=n STAYONHOST STAYBELOW>
+
+If you want to use integration with Pyrite & Install conduit, use
+./plucker.py [-U username] [--pluckerdir <dir>] [--verbose NUM] 
+Pyrite conduit for Plucker.
+
+
+DECODING:
+==========================================================================
+It might be useful to be able to decode already existing PDBs into an old
+cache directory; you can try the 'decode.py' script for this.

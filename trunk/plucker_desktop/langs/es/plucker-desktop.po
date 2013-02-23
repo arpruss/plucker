@@ -1,0 +1,3561 @@
+# -----------------------------------------------------------------------------------------
+# Name:        sample_po.txt
+# Purpose:     A .po file for Plucker-Desktop translation. See the file TRANSLATING in this 
+#              directory for full directions on how to add a new translation.
+# Author:      Your Name
+# Modified by:
+# Created:     2001/10/20
+# Copyright:   (c) Your Name ( you@youraddress.org )
+# Licence:     GPL
+# RCS-ID:      $Id: plucker-desktop.po,v 1.23 2004/03/30 06:51:20 robertoconnor Exp $
+# -----------------------------------------------------------------------------------------
+#
+#: channel_dialog.cpp:1582
+msgid ""
+msgstr ""
+"Project-Id-Version: Plucker Desktop\n"
+"POT-Creation-Date: 2004-03-30 02:18-0330\n"
+"PO-Revision-Date: 2002-11-17 16:58+0100\n"
+"Last-Translator: DDrake <drake_exe@yahoo.es>\n"
+"Language-Team: The Plucker Team <plucker-dev@rubberchicken.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: startup_tips.cpp:106
+msgid "tip"
+msgstr ""
+
+#: html_tip_dialog.h:87 html_tip_dialog.h:133 startup_tips.cpp:125
+#: startup_tips.cpp:162
+msgid "Tip of the day"
+msgstr "Sugerencia del día"
+
+#: processed_tip_provider.cpp:96
+msgid "Tips not available, sorry!"
+msgstr ""
+
+#: html_tip_dialog.cpp:101
+msgid "&Close"
+msgstr "&Cerrar"
+
+#: html_tip_dialog.cpp:103
+msgid "&Show tips at startup"
+msgstr "&Mostrar Sugerencias al iniciar"
+
+#: html_tip_dialog.cpp:106
+msgid "&Next Tip"
+msgstr "&Siguiente sugerencia"
+
+#: internationalization.cpp:193
+msgid "[System default]"
+msgstr "[Por defecto]"
+
+#: internationalization.cpp:194 viewer_wizardpage.cpp:143
+#, fuzzy
+msgid "Catalan"
+msgstr "Italiano"
+
+#: internationalization.cpp:195 viewer_wizardpage.cpp:144
+msgid "Czech"
+msgstr "Checo"
+
+#: internationalization.cpp:196 viewer_wizardpage.cpp:145
+msgid "Danish"
+msgstr "Danés"
+
+#: internationalization.cpp:197 viewer_wizardpage.cpp:146
+msgid "German"
+msgstr "Alemán"
+
+#: internationalization.cpp:198 viewer_wizardpage.cpp:148
+msgid "Spanish"
+msgstr "Español"
+
+#: internationalization.cpp:199 viewer_wizardpage.cpp:147
+#: viewer_wizardpage.cpp:269
+msgid "English"
+msgstr "Inglés"
+
+#: internationalization.cpp:200
+msgid "English (US)"
+msgstr "Inglés (US)"
+
+#: internationalization.cpp:201 viewer_wizardpage.cpp:149
+msgid "Faeroese"
+msgstr "Faeroese"
+
+#: internationalization.cpp:202 viewer_wizardpage.cpp:150
+msgid "French"
+msgstr "Francés"
+
+#: internationalization.cpp:203 viewer_wizardpage.cpp:151
+msgid "Italian"
+msgstr "Italiano"
+
+#: internationalization.cpp:204 viewer_wizardpage.cpp:152
+msgid "Japanese"
+msgstr "Japonés"
+
+#: internationalization.cpp:205
+msgid "Dutch"
+msgstr "Holandés"
+
+#: internationalization.cpp:206 viewer_wizardpage.cpp:153
+msgid "Polish"
+msgstr "Polaco"
+
+#: internationalization.cpp:207 viewer_wizardpage.cpp:154
+msgid "Russian"
+msgstr "Ruso"
+
+#: internationalization.cpp:218
+msgid "Please choose language:"
+msgstr "Por favor, elija su idioma:"
+
+#: internationalization.cpp:219 preferences_dialog.cpp:882
+#: showcase_dialog.cpp:277 showcase_listctrl.cpp:95
+msgid "Language"
+msgstr "Idioma"
+
+#: handheld_dest_dialog.cpp:180 help_controller.cpp:100
+#: resource\xrc\xrc_strings_output.h:158 resource\xrc\xrc_strings_output.h:170
+#: resource\xrc\xrc_strings_output.h:260 resource\xrc\xrc_strings_output.h:276
+#: resource\xrc\xrc_strings_output.h:287 resource\xrc\xrc_strings_output.h:296
+#: resource\xrc\xrc_strings_output.h:308 resource\xrc\xrc_strings_output.h:314
+#: resource\xrc\xrc_strings_output.h:320 resource\xrc\xrc_strings_output.h:328
+#: resource\xrc\xrc_strings_output.h:336 resource\xrc\xrc_strings_output.h:342
+#: resource\xrc\xrc_strings_output.h:349 resource\xrc\xrc_strings_output.h:355
+#: resource\xrc\xrc_strings_output.h:361 resource\xrc\xrc_strings_output.h:370
+#: resource\xrc\xrc_strings_output.h:383 resource\xrc\xrc_strings_output.h:395
+#: resource\xrc\xrc_strings_output.h:404 resource\xrc\xrc_strings_output.h:602
+#: resource\xrc\xrc_strings_output.h:608
+msgid "Help"
+msgstr "Ayuda"
+
+#: help_controller.cpp:198
+msgid "Couldn't open help file named"
+msgstr "No puedo abrir el fichero de ayuda llamado"
+
+#: help_controller.cpp:246
+msgid "Enter keyword to search for:"
+msgstr "Introduzca palabra a buscar:"
+
+#: help_controller.cpp:247
+msgid "Search help for keyword"
+msgstr "Buscar palabar clave en Ayuda"
+
+#: plucker_wizard_base.cpp:227
+msgid "Cancel wizard"
+msgstr "Cancelar Asistente"
+
+#: setup_wizard.cpp:102
+#, fuzzy
+msgid "This wizard will guide you through setting up"
+msgstr "Este asistente le guiará en la configuración de Plucker Desktop en su sistema."
+
+#: setup_wizard.cpp:106
+msgid "for your system."
+msgstr ""
+
+#: setup_wizard.cpp:108
+msgid ""
+"You can specify what handheld software you would like installed, what "
+"handhelds or directories you want channels and software installed to, and "
+"set up your proxy"
+msgstr "Puede especificar que programa de PDA quiere instalado"
+
+#: install_viewer_wizard.cpp:95 setup_wizard.cpp:110
+msgid "Click Next to begin, or Cancel to exit the wizard."
+msgstr "Click en Siguiente para empezar, o Cancelar para salir del Asistente"
+
+#: setup_wizard.cpp:128
+msgid "Install software/channels to these handheld destinations"
+msgstr "Instalar programa/canales a estos PDAs de destino"
+
+#: setup_wizard.cpp:129
+msgid "Install software/channels to these directory destinations"
+msgstr "Instalar programa/canales a estas carpetas de destino"
+
+#: setup_wizard.cpp:161
+msgid "You can have some default channels automatically configured."
+msgstr ""
+
+#: setup_wizard.cpp:162
+#, fuzzy
+msgid "Use the checkboxes to select your desired channels."
+msgstr "Borrar canales seleccionados"
+
+#: setup_wizard.cpp:177
+#, fuzzy
+msgid "The wizard has gathered all information needed to configure"
+msgstr "El Asistente ha recopilado información necesaria para configurar Plucker Desktop"
+
+#: setup_wizard.cpp:181
+msgid "Click Finish to apply these settings and complete the wizard."
+msgstr "Click en Finalizar para aplicar esta configuración y comletar el Asistente."
+
+#: install_viewer_wizard.cpp:88 plucker_wizard_wrappers.cpp:125
+msgid "Install Handheld Software Wizard"
+msgstr "Instalar Asistente del PDA"
+
+#: install_viewer_wizard.cpp:91
+msgid "This wizard will reinstall the"
+msgstr ""
+
+#: install_viewer_wizard.cpp:91
+#, fuzzy
+msgid "viewer software to your handheld."
+msgstr "Este Asistente instalará de nuevo el visor Plucker en su PDA"
+
+#: install_viewer_wizard.cpp:93
+msgid ""
+"This is helpful if the software was accidentally erased from the device, and "
+"now needs to be reinstalled."
+msgstr "Esto es útil si el programa hubiese sido borrado accidentalmente del PDA, y ahora necesitase ser reinstalado."
+
+#: install_viewer_wizard.cpp:114
+msgid "Install handheld software to these handheld destinations"
+msgstr "Instalar el programa del PDA en estos dispositivos de destino"
+
+#: install_viewer_wizard.cpp:115
+msgid "Install handheld software to these directory destinations"
+msgstr "Instalar el programa del PDA en estas carpetas de destino"
+
+#: install_viewer_wizard.cpp:125
+msgid ""
+"The wizard has gathered all information needed to install the handheld "
+"software."
+msgstr "El asistente ha recopilado toda la información necesaria para instalar el software del PDA."
+
+#: install_viewer_wizard.cpp:127
+msgid "Click Finish to perform the installation and complete the wizard."
+msgstr "Haga Click en Finalizar para ejecutar la instalación y finalizar el Asistente."
+
+#: install_viewer_wizard.cpp:129
+msgid ""
+"After clicking Finish, the handheld software will be sent your specified "
+"destinations."
+msgstr "Después de hacer Click en Finalizar, el programa del PDA se enviará al destino especificado."
+
+#: add_channel_wizard.cpp:88
+msgid "Enter a name for the new channel."
+msgstr "Introduzca un nombre para el nuevo canal."
+
+#: add_channel_wizard.cpp:89
+msgid "The channel name can be up to 26 letters long."
+msgstr "El nombre del canal puede ser de hasta 26 caracteres."
+
+#: add_channel_wizard.cpp:91 resource\xrc\xrc_strings_output.h:19
+msgid "Channel name:"
+msgstr "Nombre del Canal:"
+
+#: add_channel_wizard.cpp:117
+msgid "Enter a starting page for the channel."
+msgstr "Introduzca una página inicial para el canal."
+
+#: add_channel_wizard.cpp:118
+msgid "The starting page and the pages it links to will be retrieved."
+msgstr "La página inicial y a las que enlaza serán recuperadas."
+
+#: add_channel_wizard.cpp:119
+msgid ""
+"You can choose to start on either a website URL or a local file on your hard "
+"drive."
+msgstr "Puede elegir entre empezar en una dirección de internet, o un fichero local en su disco duro."
+
+#: add_channel_wizard.cpp:121
+msgid "Start on a website URL:"
+msgstr "Empezar en una dirección de internet:"
+
+#: add_channel_wizard.cpp:122
+msgid "Start on a local file:"
+msgstr "Empezar en un fichero local:"
+
+#: add_channel_wizard.cpp:144
+msgid "Send channel output to these handheld destinations:"
+msgstr "Enviar resultado del canal a estos PDA de destino:"
+
+#: add_channel_wizard.cpp:145
+msgid "Send channel output to these directory destinations:"
+msgstr "Enviar resultado del canal a estas carpetas de destino:"
+
+#: add_channel_wizard.cpp:155
+msgid ""
+"The wizard has gathered all the information needed to create a new channel."
+msgstr "El Asistente ha recopilado toda la información necesaria para crear el nuevo canal."
+
+#: add_channel_wizard.cpp:156
+msgid "Click Finish to add the channel and complete the wizard."
+msgstr "Haga Click en Finalizar para añadir el canal y completar el Asistente."
+
+#: add_channel_wizard.cpp:158
+msgid "Launch a 'Configure channel' dialog when I click Finish."
+msgstr "Lanzar la Configuración del canal cuando finalize."
+
+#: destinations_wizardpage.cpp:181
+msgid ""
+"At least one destination is required. Click 'Add handheld..' or .'Add output "
+"directory...'."
+msgstr "Un destino es requerido como mínimo. Haga Click en ´Añadir PDA.´ o ´Añadir directorio de destino...´"
+
+#: destinations_wizardpage.cpp:182
+msgid "Destination required"
+msgstr "Se requiere destino"
+
+#: viewer_wizardpage.cpp:130
+msgid "Normal resolution Palm OS device"
+msgstr "Resolución normal para dispositivo Palm OS"
+
+#: viewer_wizardpage.cpp:131
+msgid "High resolution Palm OS device"
+msgstr "Resolución alta para dispositivo Palm OS"
+
+#: resource\xrc\xrc_strings_output.h:105 resource\xrc\xrc_strings_output.h:251
+#: viewer_wizardpage.cpp:135
+msgid "Black and white"
+msgstr "Blanco y negro"
+
+#: resource\xrc\xrc_strings_output.h:106 resource\xrc\xrc_strings_output.h:252
+#: viewer_wizardpage.cpp:136
+msgid "4 shade grayscale"
+msgstr "4 tonos de gris"
+
+#: resource\xrc\xrc_strings_output.h:107 resource\xrc\xrc_strings_output.h:253
+#: viewer_wizardpage.cpp:137
+msgid "16 shade grayscale"
+msgstr "16 tonos de gris"
+
+#: resource\xrc\xrc_strings_output.h:108 resource\xrc\xrc_strings_output.h:254
+#: viewer_wizardpage.cpp:138
+msgid "256 colors"
+msgstr "256 colores"
+
+#: resource\xrc\xrc_strings_output.h:109 resource\xrc\xrc_strings_output.h:255
+#: viewer_wizardpage.cpp:139
+msgid "Thousands of colors"
+msgstr "Miles de colores"
+
+#: viewer_wizardpage.cpp:155
+msgid "Thai"
+msgstr ""
+
+#: viewer_wizardpage.cpp:156
+msgid "Turkish"
+msgstr "Turco"
+
+#: viewer_wizardpage.cpp:157
+msgid "Simplified Chinese"
+msgstr "Chino simplificado"
+
+#: viewer_wizardpage.cpp:190
+msgid "Software options"
+msgstr "Opciones del programa"
+
+#: viewer_wizardpage.cpp:201
+msgid "Type of handheld device:"
+msgstr "Tipo de dispositivo:"
+
+#: viewer_wizardpage.cpp:207
+msgid "Color depth of handheld device:"
+msgstr "Profundidad de color de dispositivo:"
+
+#: viewer_wizardpage.cpp:213
+msgid "Language for handheld software:"
+msgstr "Idioma del dispositivo:"
+
+#: viewer_wizardpage.cpp:223
+msgid "Items to install"
+msgstr "Elementos a instalar"
+
+#: viewer_wizardpage.cpp:227 viewer_wizardpage.cpp:237
+#, fuzzy
+msgid "Install"
+msgstr "Insertar Email:"
+
+#: viewer_wizardpage.cpp:227
+msgid "Viewer"
+msgstr ""
+
+#: viewer_wizardpage.cpp:227
+#, fuzzy
+msgid "(required)"
+msgstr "Texto requerido"
+
+#: viewer_wizardpage.cpp:232
+#, fuzzy
+msgid "Install ZLIB decompression tool"
+msgstr "Instalar herramienta de descompresión ZLIB (muy recomendado)"
+
+#: viewer_wizardpage.cpp:232
+#, fuzzy
+msgid "(strongly recommended)"
+msgstr "Plucker (recomendado)"
+
+#: viewer_wizardpage.cpp:237
+msgid "user's manual"
+msgstr ""
+
+#: viewer_wizardpage.cpp:237
+msgid "(optional)"
+msgstr ""
+
+#: textctrl_wizardpage.cpp:164
+msgid "Please enter a value in the text box to continue the wizard."
+msgstr ""
+"Por favor, introduzca un valor en el campo de texto para continuar con el "
+"Asistente."
+
+#: textctrl_wizardpage.cpp:165
+msgid "Text required"
+msgstr "Texto requerido"
+
+#: resource\xrc\xrc_strings_output.h:24 resource\xrc\xrc_strings_output.h:239
+#: starting_page_wizardpage.cpp:141
+msgid "Browse showcase..."
+msgstr "Navegar Biblioteca..."
+
+#: resource\xrc\xrc_strings_output.h:27 resource\xrc\xrc_strings_output.h:140
+#: resource\xrc\xrc_strings_output.h:142 resource\xrc\xrc_strings_output.h:242
+#: resource\xrc\xrc_strings_output.h:279 starting_page_wizardpage.cpp:153
+msgid "Choose file..."
+msgstr "Elija fichero..."
+
+#: channel_dialog.cpp:1557 starting_page_wizardpage.cpp:264
+msgid "Choose start file"
+msgstr "Elija fichero de comienzo"
+
+#: limits_wizardpage.cpp:102
+msgid ""
+"Enter the depth of pages that you want to retrieve (1=retrieve starting page "
+"only):"
+msgstr "Introduzca la profundidad de páginas que quiere recopilar (1=recopilar sólo la página inicial)"
+
+#: limits_wizardpage.cpp:106 resource\xrc\xrc_strings_output.h:54
+msgid "Maximum depth"
+msgstr "Profundidad máxima"
+
+#: limits_wizardpage.cpp:110 resource\xrc\xrc_strings_output.h:55
+msgid "Retreive linked pages to a depth of"
+msgstr "Recivir páginas enlazadas a una profundidad de"
+
+#: limits_wizardpage.cpp:117
+msgid "from the starting page"
+msgstr "de la página inicial"
+
+#: limits_wizardpage.cpp:127
+msgid ""
+"Enter whether you want to exclude linked pages that are not on the server:"
+msgstr "Especifique si quiere excluir las páginas enlazadas que no se encuentran en el servidor."
+
+#: limits_wizardpage.cpp:132 resource\xrc\xrc_strings_output.h:57
+msgid "'Stay on host' / 'Stay on domain' filters"
+msgstr "filtros de :Permanecer en Servidor:/:Permanecer en Dominio:"
+
+#: limits_wizardpage.cpp:136 resource\xrc\xrc_strings_output.h:58
+msgid "Ignore links to a server that is different from starting page's server"
+msgstr "Ignorar enlaces a un servidor que es diferente de el de la página principal"
+
+#: limits_wizardpage.cpp:144
+msgid "Limit to the exact server only"
+msgstr "Limitar sólo al servidor"
+
+#: limits_wizardpage.cpp:155
+msgid "Only restrict to domain (eg allow www.plkr.org and www2.plkr.org)"
+msgstr "Sólo restringir el dominio (ejemplo: permite www.plkr.org y www2.plkr.org)"
+
+#: proxy_wizardpage.cpp:103 resource\xrc\xrc_strings_output.h:592
+msgid "Enable proxy"
+msgstr "Activar proxy"
+
+#: proxy_wizardpage.cpp:108
+msgid "This computer uses a proxy to access the Internet"
+msgstr "Este ordenador utiliza un proxy para conectarse a Internet"
+
+#: proxy_wizardpage.cpp:111
+msgid ""
+"(If you are not sure whether or not you have a proxy, then just click 'Next')"
+msgstr ""
+
+#: proxy_wizardpage.cpp:116 resource\xrc\xrc_strings_output.h:594
+msgid "Proxy settings"
+msgstr "Parámetros de proxy"
+
+#: proxy_wizardpage.cpp:121 resource\xrc\xrc_strings_output.h:595
+msgid "Proxy server:"
+msgstr "Servidor proxy:"
+
+#: proxy_wizardpage.cpp:127 resource\xrc\xrc_strings_output.h:596
+msgid "Port:"
+msgstr "Puerto:"
+
+#: proxy_wizardpage.cpp:133 resource\xrc\xrc_strings_output.h:597
+msgid "Proxy login:"
+msgstr "Usuario proxy:"
+
+#: proxy_wizardpage.cpp:139 resource\xrc\xrc_strings_output.h:598
+msgid "Proxy password:"
+msgstr "Contraseña proxy:"
+
+#: proxy_wizardpage.cpp:147 resource\xrc\xrc_strings_output.h:599
+msgid "Prompt for proxy password each time (more secure)"
+msgstr ""
+
+#: proxy_wizardpage.cpp:297
+msgid ""
+"Your proxy server is invalid. It must begin with either http:// or https://"
+msgstr "Su servidor proxy es inválido. Debe comenzar con http:// o https://"
+
+#: proxy_wizardpage.cpp:298
+msgid "Proxy invalid"
+msgstr "Proxy inválido"
+
+#: plucker_wizard_wrappers.cpp:77
+msgid "The setup wizard is not complete."
+msgstr "El Asistente de configuración no se completó"
+
+#: plucker_wizard_wrappers.cpp:78
+msgid "You can run this wizard again at a later time to complete the setup."
+msgstr "Puede ejecutar este Asistente de nuevo más tarde para completar la configuración."
+
+#: plucker_wizard_wrappers.cpp:79
+msgid "Exit the setup wizard?"
+msgstr "¿Salir del Asistente?"
+
+#: plucker_wizard_wrappers.cpp:86
+msgid "Setup Wizard"
+msgstr ""
+
+#: plucker_wizard_wrappers.cpp:115
+msgid "The install handheld software wizard is not complete."
+msgstr "El Asistente de instalación del programa del PDA no se completó."
+
+#: plucker_wizard_wrappers.cpp:116
+msgid ""
+"You can run this wizard again at a later time to re-install the software."
+msgstr "Puede volver a ejecutar este asistente más tarde para reinstalar el programa."
+
+#: plucker_wizard_wrappers.cpp:117 plucker_wizard_wrappers.cpp:154
+msgid "Exit the wizard?"
+msgstr "¿Salir del Asistente?"
+
+#: plucker_wizard_wrappers.cpp:152
+msgid "The add channel wizard is not complete."
+msgstr "El Asistente de añadir canales no está completo."
+
+#: plucker_wizard_wrappers.cpp:153
+msgid "You can run this wizard again at a later time to add the channel."
+msgstr "Puede ejecutar este Asistente más tarde para añadir el canal"
+
+#: plucker_wizard_wrappers.cpp:162
+msgid "Add New Channel Wizard"
+msgstr "Asistente para Añadir Nuevo Canal"
+
+#: channel_check_listctrl.cpp:157
+#, fuzzy
+msgid "Channel Name"
+msgstr "Nombre del canal"
+
+#: editor_dialog.cpp:538
+msgid "Unable to save home.html"
+msgstr "Imposible guardar home.html"
+
+#: hyperlink_dialog.cpp:259
+msgid "Choose file to link to"
+msgstr "Elija fichero para enlazar"
+
+#: image_dialog.cpp:108
+msgid "Choose image source file"
+msgstr "Elija imagen de origen"
+
+#: exclusion_dialog.cpp:133
+msgid "File Extension"
+msgstr "Extensión del fichero"
+
+#: exclusion_dialog.cpp:143 preferences_dialog.cpp:880 showcase_dialog.cpp:275
+#: showcase_listctrl.cpp:93
+msgid "URL"
+msgstr "URL"
+
+#: exclusion_dialog.cpp:273 exclusion_listctrl.cpp:202
+#: exclusion_listctrl.cpp:279
+msgid "Exclude"
+msgstr "Excluir"
+
+#: exclusion_dialog.cpp:277 exclusion_dialog.cpp:349
+#: exclusion_listctrl.cpp:237 exclusion_listctrl.cpp:283
+msgid "Include"
+msgstr "Incluir"
+
+#: exclusion_listctrl.cpp:123
+msgid "Action"
+msgstr "Acción"
+
+#: exclusion_listctrl.cpp:124
+msgid "Priority"
+msgstr "Prioridad"
+
+#: exclusion_listctrl.cpp:143
+msgid "Add a new exclusion..."
+msgstr "Añadir una nueva exclusión..."
+
+#: exclusion_listctrl.cpp:144
+msgid "Edit selected exclusion..."
+msgstr "Editar exclusión seleccionada..."
+
+#: exclusion_listctrl.cpp:145
+msgid "Delete selected exclusion"
+msgstr "Borrar exclusión seleccionada"
+
+#: exclusion_listctrl.cpp:307
+msgid ""
+"Are you sure you wish to delete this URL/extension from your exclusion list?"
+msgstr "¿Está seguro de que desea eliminar esta URL/extensión de su lista de exclusión?"
+
+#: exclusion_listctrl.cpp:310
+msgid "Confirm delete"
+msgstr "Confimar borrado"
+
+#: blocked_dialog.cpp:128
+msgid "You must enter some text in the \"Item to block\" edit box."
+msgstr "Debe introducir algun texto en el campo editable del \"Item to block\""
+
+#: blocked_dialog.cpp:129
+msgid "Enter exclusion"
+msgstr "Introduzca exclusión"
+
+#: hhictrl.cpp:240 hhictrl.cpp:320 showcase_dialog.cpp:209
+#: showcase_dialog.cpp:218 showcase_dialog.cpp:225 showcase_dialog.cpp:410
+#: showcase_dialog.cpp:423 showcase_dialog.cpp:430
+msgid "Yes"
+msgstr "Si"
+
+#: hhictrl.cpp:244 showcase_dialog.cpp:211 showcase_dialog.cpp:220
+#: showcase_dialog.cpp:227
+msgid "No"
+msgstr "No"
+
+#: preferences_dialog.cpp:879 showcase_dialog.cpp:274 showcase_listctrl.cpp:92
+msgid "Name"
+msgstr "Nombre"
+
+#: preferences_dialog.cpp:881 showcase_dialog.cpp:276 showcase_listctrl.cpp:94
+msgid "Description"
+msgstr "Descripción"
+
+#: preferences_dialog.cpp:883 showcase_dialog.cpp:278 showcase_listctrl.cpp:96
+msgid "Category"
+msgstr "Categoría"
+
+#: preferences_dialog.cpp:884 showcase_dialog.cpp:279 showcase_listctrl.cpp:97
+msgid "Update Frequency"
+msgstr "Frecuencia de Actualización"
+
+#: preferences_dialog.cpp:885 showcase_dialog.cpp:280 showcase_listctrl.cpp:98
+msgid "Update Period"
+msgstr "Actualizar Periodo"
+
+#: preferences_dialog.cpp:886 showcase_dialog.cpp:281 showcase_listctrl.cpp:99
+msgid "Update Base"
+msgstr "Actualizar Base"
+
+#: preferences_dialog.cpp:887 showcase_dialog.cpp:282
+#: showcase_listctrl.cpp:100
+msgid "Update Enabled"
+msgstr "Actualizar Activado"
+
+#: preferences_dialog.cpp:888 showcase_dialog.cpp:283
+#: showcase_listctrl.cpp:101
+msgid "Image Depth"
+msgstr "Profundidad de Imágen"
+
+#: preferences_dialog.cpp:889 showcase_dialog.cpp:284
+#: showcase_listctrl.cpp:102
+msgid "Maximum Depth"
+msgstr "Profundidad máxima"
+
+#: preferences_dialog.cpp:890 showcase_dialog.cpp:285
+#: showcase_listctrl.cpp:103
+msgid "Stay On Host"
+msgstr "Permanecer en servidor principal"
+
+#: preferences_dialog.cpp:891 showcase_dialog.cpp:286
+#: showcase_listctrl.cpp:104
+msgid "Stay On Domain"
+msgstr "Permanecer en Dominio"
+
+#: preferences_dialog.cpp:892 showcase_dialog.cpp:287
+#: showcase_listctrl.cpp:105
+msgid "URL Pattern"
+msgstr "Formato URL"
+
+#: showcase_dialog.cpp:750
+msgid "Downloading channel preview..."
+msgstr "Descargando vista previa del canal"
+
+#: showcase_dialog.cpp:786 showcase_dialog.cpp:801
+msgid "Channel preview unavailable."
+msgstr "Vista previa del canal no disponible."
+
+#: showcase_dialog.cpp:823
+msgid "Formatting images..."
+msgstr "Dando formato a las imágenes..."
+
+#: showcase_dialog.cpp:826
+msgid "Formatting hyperlinks..."
+msgstr "Dando formato a los enlaces..."
+
+#: showcase_dialog.cpp:832
+msgid "Downloading images..."
+msgstr "Descargando Imágenes..."
+
+#: plucker-desktop.cpp:84
+msgid ""
+"Another instance of the application is already running, so aborting startup "
+"of second instance."
+msgstr ""
+
+#: plucker-desktop.cpp:85
+msgid "Already running"
+msgstr ""
+
+#: main_frame.cpp:197 resource\xrc\xrc_strings_output.h:446
+msgid "&About"
+msgstr ""
+
+#: main_frame.cpp:545 resource\xrc\xrc_strings_output.h:16
+msgid "About"
+msgstr ""
+
+#: main_frame.cpp:572
+#, fuzzy
+msgid "version"
+msgstr "Versión"
+
+#: main_listctrl.cpp:183
+msgid "Channel name"
+msgstr "Nombre del canal"
+
+#: main_listctrl.cpp:184
+msgid "Due"
+msgstr "Vencimiento"
+
+#: main_listctrl.cpp:335
+msgid "Are you sure you wish to permanently delete the selected channels?"
+msgstr "¿Está seguro de que desea eliminar permanentemente el/los canales seleccionados?"
+
+#: main_listctrl.cpp:336
+msgid "Confirm channel delete"
+msgstr "Confime eliminación del canal"
+
+#: main_listctrl.cpp:459
+msgid "No channels are currently due at this time."
+msgstr "Ningun ca"
+
+#: main_listctrl.cpp:460
+msgid "All due channels are updated"
+msgstr "Todos los canales previstos estan actualizados"
+
+#: main_listctrl.cpp:493
+msgid ""
+"You currently have no channels in your list. Would you like to add a channel "
+"now?"
+msgstr "Actualmente no dispone de ningún canal en su lista. ¿Desea añadir un canal ahora?"
+
+#: main_listctrl.cpp:494
+msgid "No channels to update"
+msgstr "No hay canales que actualizar"
+
+#: main_listctrl.cpp:583
+msgid "Enter a descriptive name for the channel (maximum of 26 letters):"
+msgstr "Introduzca un nombre descriptivo para el canal (máximo de 26 caracteres)"
+
+#: main_listctrl.cpp:584 resource\xrc\xrc_strings_output.h:407
+#: resource\xrc\xrc_strings_output.h:449 resource\xrc\xrc_strings_output.h:465
+msgid "Add a new channel"
+msgstr "Añadir un nuevo canal"
+
+#: main_listctrl.cpp:692 main_listctrl.cpp:819
+#: resource\xrc\xrc_strings_output.h:565
+msgid "Never"
+msgstr "Nunca"
+
+#: main_listctrl.cpp:939 resource\xrc\xrc_strings_output.h:448
+#: resource\xrc\xrc_strings_output.h:464
+msgid "Add a new channel..."
+msgstr "Añadir un nuevo canal..."
+
+#: main_listctrl.cpp:942 resource\xrc\xrc_strings_output.h:450
+#: resource\xrc\xrc_strings_output.h:466
+msgid "Add a new channel using wizard..."
+msgstr "Añadir un nuevo canal usando el Asistente..."
+
+#: main_listctrl.cpp:945 resource\xrc\xrc_strings_output.h:452
+#: resource\xrc\xrc_strings_output.h:468
+msgid "Configure selected channel..."
+msgstr "Configurar canal seleccionado..."
+
+#: main_listctrl.cpp:946 resource\xrc\xrc_strings_output.h:454
+#: resource\xrc\xrc_strings_output.h:470
+msgid "Delete selected channels"
+msgstr "Borrar los canales seleccionados"
+
+#: main_listctrl.cpp:948 resource\xrc\xrc_strings_output.h:456
+#: resource\xrc\xrc_strings_output.h:472
+msgid "Update selected channels"
+msgstr "Actualizar los canales seleccionados"
+
+#: main_listctrl.cpp:949 resource\xrc\xrc_strings_output.h:458
+#: resource\xrc\xrc_strings_output.h:474
+msgid "Update all due channels"
+msgstr "Actualizar todos los canales pendientes"
+
+#: main_listctrl.cpp:950 resource\xrc\xrc_strings_output.h:427
+#: resource\xrc\xrc_strings_output.h:460 resource\xrc\xrc_strings_output.h:461
+#: resource\xrc\xrc_strings_output.h:476 resource\xrc\xrc_strings_output.h:477
+msgid "Update all channels"
+msgstr "Actualizar todos los canales"
+
+#: main_listctrl.cpp:962
+msgid "Paste URL as new channel"
+msgstr "Pegar URL como nuevo canal"
+
+#: main_listctrl.cpp:963
+msgid "Paste files as separate new channels"
+msgstr "Pegar ficheros como nuevos canales"
+
+#: main_listctrl.cpp:1129
+msgid "No destinations are selected for channel '"
+msgstr "No se seleccionaron destinos para el canal '"
+
+#: main_listctrl.cpp:1130
+msgid "'. Add some destinations now?"
+msgstr "'. ¿Añadir algunos destinos ahora?"
+
+#: channel_dialog.cpp:2046 main_listctrl.cpp:1137
+msgid "No destinations selected"
+msgstr "No se seleccionaron destinos."
+
+#: main_listctrl.cpp:1138
+msgid "Always perform this check when about to update channels"
+msgstr "Siempre hacer esta comprobación cuando se vayan a actualizar canales"
+
+#: channel_dialog.cpp:155
+msgid "Send channel output to these handhelds"
+msgstr "Enviar resultado del canal a estos dispositivos."
+
+#: channel_dialog.cpp:156
+msgid "Send channel output to these directories"
+msgstr "Enviar resultado del canal a estos directorios."
+
+#: channel_dialog.cpp:1303
+msgid "The specified file could not be found. Do you wish to create it?"
+msgstr "El fichero especificado no se puede encontrar. ¿Desea crear uno?"
+
+#: channel_dialog.cpp:1304
+msgid "Create new html file"
+msgstr "Crear nuevo fichero Html"
+
+#: channel_dialog.cpp:1895
+msgid "Choose large icon"
+msgstr "Elija icono grande"
+
+#: channel_dialog.cpp:1911
+msgid "Choose small icon"
+msgstr "Elija icono pequeño"
+
+#: channel_dialog.cpp:2045
+msgid ""
+"No destinations are selected for this channel. Add some destinations now?"
+msgstr "No se seleccionaron destinos para este. ¿Añadir alguna ahora?"
+
+#: channel_dialog.cpp:2047
+msgid "Always perform this check when closing this dialog"
+msgstr "Siempre hacer esta comprobación cuando se cierre este diálogo."
+
+#: utils_controls.cpp:156
+msgid "Choose the colour"
+msgstr "Elija el color"
+
+#: hhictrl.cpp:123
+msgid "Handheld destination"
+msgstr "Dispositivo de destino"
+
+#: hhictrl.cpp:132
+msgid "Add handheld..."
+msgstr "Añadir dispositivo"
+
+#: hhictrl.cpp:138
+msgid "Remove selected handhelds"
+msgstr "Eliminar dispositivos seleccionados"
+
+#: hhictrl.cpp:158
+msgid "Directory destination"
+msgstr "Directorio de destino"
+
+#: hhictrl.cpp:168
+msgid "Add output directory..."
+msgstr "Añadir directorio de salida"
+
+#: hhictrl.cpp:174
+msgid "Remove selected directories"
+msgstr "Eliminar directorios seleccionados"
+
+#: hhictrl.cpp:222 hhictrl.cpp:305
+msgid "SD Card"
+msgstr ""
+
+#: hhictrl.cpp:226
+msgid "M.Stick"
+msgstr ""
+
+#: hhictrl.cpp:230 hhictrl.cpp:309
+msgid "CF Card"
+msgstr ""
+
+#: hhictrl.cpp:235 hhictrl.cpp:301
+msgid "RAM"
+msgstr ""
+
+#: hhictrl.cpp:545
+#, fuzzy
+msgid "Select additional handheld to receive the output"
+msgstr "Seleccionar directorio en el cual guardar el resultado"
+
+#: hhictrl.cpp:591
+msgid "Select directory in which to place the output"
+msgstr "Seleccionar directorio en el cual guardar el resultado"
+
+#: pda_listctrl.cpp:96
+msgid "Storage"
+msgstr ""
+
+#: pda_listctrl.cpp:98
+msgid "USB"
+msgstr ""
+
+#: preferences_dialog.cpp:857
+msgid "Choose external editor"
+msgstr "Elegir editor externo"
+
+#: preferences_dialog.cpp:897
+msgid "Fields to display in details pane:"
+msgstr "Campos para mostrar en el cuadro de detalles:"
+
+#: preferences_dialog.cpp:898
+msgid "Select desired fields"
+msgstr "Seleccione campos"
+
+#: time_control.cpp:108
+msgid ":"
+msgstr ":"
+
+#: handheld_dest_dialog.cpp:96
+#, fuzzy
+msgid "Handheld"
+msgstr "Añadir dispositivo"
+
+#: handheld_dest_dialog.cpp:103
+msgid "Handheld user:"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:111
+msgid "This is a USB-connected device"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:116
+msgid "Location on handheld"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:119
+msgid "On the handheld, send the files to:"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:130
+msgid "The handheld's RAM memory"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:135
+msgid "The removable SD/MMC card"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:140
+msgid "The removable Memory Stick"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:145
+msgid "The removable CompactFlash card"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:156
+#, fuzzy
+msgid "Send to the default directory on the card"
+msgstr "Enviarlo a estos directorios"
+
+#: handheld_dest_dialog.cpp:162
+msgid "Send to this specified directory on the card:"
+msgstr ""
+
+#: details_progress_dialog.cpp:431 handheld_dest_dialog.cpp:174
+#: resource\xrc\xrc_strings_output.h:15 resource\xrc\xrc_strings_output.h:17
+#: resource\xrc\xrc_strings_output.h:156 resource\xrc\xrc_strings_output.h:168
+#: resource\xrc\xrc_strings_output.h:258 resource\xrc\xrc_strings_output.h:274
+#: resource\xrc\xrc_strings_output.h:285 resource\xrc\xrc_strings_output.h:294
+#: resource\xrc\xrc_strings_output.h:306 resource\xrc\xrc_strings_output.h:312
+#: resource\xrc\xrc_strings_output.h:318 resource\xrc\xrc_strings_output.h:326
+#: resource\xrc\xrc_strings_output.h:334 resource\xrc\xrc_strings_output.h:340
+#: resource\xrc\xrc_strings_output.h:347 resource\xrc\xrc_strings_output.h:353
+#: resource\xrc\xrc_strings_output.h:359 resource\xrc\xrc_strings_output.h:368
+#: resource\xrc\xrc_strings_output.h:381 resource\xrc\xrc_strings_output.h:393
+#: resource\xrc\xrc_strings_output.h:402 resource\xrc\xrc_strings_output.h:600
+#: resource\xrc\xrc_strings_output.h:606
+msgid "OK"
+msgstr "OK"
+
+#: handheld_dest_dialog.cpp:177 resource\xrc\xrc_strings_output.h:157
+#: resource\xrc\xrc_strings_output.h:169 resource\xrc\xrc_strings_output.h:259
+#: resource\xrc\xrc_strings_output.h:275 resource\xrc\xrc_strings_output.h:286
+#: resource\xrc\xrc_strings_output.h:295 resource\xrc\xrc_strings_output.h:307
+#: resource\xrc\xrc_strings_output.h:313 resource\xrc\xrc_strings_output.h:319
+#: resource\xrc\xrc_strings_output.h:327 resource\xrc\xrc_strings_output.h:335
+#: resource\xrc\xrc_strings_output.h:341 resource\xrc\xrc_strings_output.h:348
+#: resource\xrc\xrc_strings_output.h:354 resource\xrc\xrc_strings_output.h:360
+#: resource\xrc\xrc_strings_output.h:369 resource\xrc\xrc_strings_output.h:382
+#: resource\xrc\xrc_strings_output.h:394 resource\xrc\xrc_strings_output.h:403
+#: resource\xrc\xrc_strings_output.h:601 resource\xrc\xrc_strings_output.h:607
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: plucker_controller.cpp:1322
+#, fuzzy
+msgid "channel update status"
+msgstr "Estado de la actualización del canal de Plucker"
+
+#: plucker_controller.cpp:1471
+msgid "Unnamed Channel"
+msgstr "Canal sin nombre"
+
+#: commandline_parser.cpp:169
+#, fuzzy
+msgid "Commandline Interface"
+msgstr "Interfaz de comandos de Plucker Desktop"
+
+#: commandline_parser.cpp:170 resource\xrc\xrc_strings_output.h:4
+msgid "Version"
+msgstr "Versión"
+
+#: commandline_parser.cpp:171 resource\xrc\xrc_strings_output.h:6
+msgid "Build Date"
+msgstr "Fecha de creación"
+
+#: commandline_parser.cpp:173
+#, fuzzy
+msgid "(c) Copyright 1998-2003"
+msgstr "(c) Copyright 1998-2002 El Equipo Plucker"
+
+#: commandline_parser.cpp:175
+msgid ""
+"Updates selected channels (-s), due channels (-d), or all channels (-a)."
+msgstr ""
+"Actualizar canales seleccionados (-s), canales pendientes (-d), o todos los "
+"canales (-a)."
+
+#: commandline_parser.cpp:176
+msgid ""
+"If updating selected channels, (-p) specifies channel by their section names"
+msgstr "Si actualiza los canales seleccionados, (-p) especifica canal por su nombre de sección"
+
+#: commandline_parser.cpp:177
+msgid "in your plucker.ini/.pluckerrc, instead of their channel names."
+msgstr "en su plucker.ini/.pluckerrc, en vez de sus nombres de canal."
+
+#: commandline_parser.cpp:178
+msgid "If you specify no options, then the application will start in GUI mode."
+msgstr "Si no especifica ninguna opción, la aplicación arrancará en modo grafico"
+
+#: commandline_parser.cpp:179
+msgid "See online help for more information."
+msgstr "Revise la ayuda en linea para más información"
+
+#: commandline_parser.cpp:181
+msgid "Summary of options"
+msgstr "Sumario de opciones"
+
+#: commandline_parser.cpp:200
+msgid ""
+"Syntax error: You have specified multiple commands. Choose just one of (-s), "
+"(-d), or (-a)."
+msgstr "Error de sintaxis: Ha especificado multiples comandos. Elija sólo uno (-s), (-d), or (-a)."
+
+#: commandline_parser.cpp:222
+msgid "Syntax error: To use 'update selected', you must specify some channels."
+msgstr "Error de sintaxis: Para usar ´Actualizar seleccionados´, debe especificar algún canal."
+
+#: commandline_parser.cpp:238
+msgid "Warning: plucker.ini/.pluckerrc has no section="
+msgstr "Atención: plucker.ini/.pluckerrc no tiene sección="
+
+#: commandline_parser.cpp:250
+msgid ""
+"Warning: None of those channel doc_names could be found in plucker.ini/."
+"pluckerrc."
+msgstr "Atención: Ninguno de los nombres de esos canales puede ser encontrado en plucker.ini/.pluckerrc."
+
+#: commandline_parser.cpp:272
+msgid ""
+"You have no channels in your plucker.ini/.pluckerrc file. Add some channels "
+"first."
+msgstr "No tiene canales en su fichero plucker.ini/.pluckerrc. Añada algunos canales primero."
+
+#: proxy_prompt.cpp:119
+#, fuzzy
+msgid "Enter your proxy password:"
+msgstr "Contraseña proxy:"
+
+#: proxy_prompt.cpp:120
+#, fuzzy
+msgid "Enter Proxy Password"
+msgstr "Contraseña proxy:"
+
+#: palm_installer_gtk.cpp:147
+msgid ""
+"Press the HotSync button on your USB handheld first. Then click OK to "
+"continue when you are ready."
+msgstr ""
+
+#: palm_installer_gtk.cpp:149
+msgid ""
+"(You can bypass this pause dialog by unchecking the USB checkbox in the "
+"handheld destination)"
+msgstr ""
+
+#: palm_installer_gtk.cpp:154
+msgid "Press HotSync Button First"
+msgstr ""
+
+#: palm_installer_msw.cpp:116 palm_installer_msw.cpp:125
+msgid ""
+"Unable to access Palm Desktop software.\n"
+"You will need to choose directories, not HotSync handhelds, as the "
+"destinations for channels."
+msgstr ""
+
+#: palm_installer_msw.cpp:117
+msgid "Palm Desktop detection warning"
+msgstr "Advertencia de detección de Palm Desktop"
+
+#: palm_installer_msw.cpp:118
+msgid "Always perform this check in the future"
+msgstr "Siempre realizar esta comprobación en el futuro"
+
+#: palm_installer_msw.cpp:136
+msgid "Error: unable to get Lastuser_name from Registry"
+msgstr "Error: imposible coger Lastuser_name del registro."
+
+#: palm_installer_msw.cpp:141
+msgid "Error: unable to get Palm path from Registry"
+msgstr "Error: imposible coger ruta de Palm del registro."
+
+#: palm_installer_msw.cpp:329
+msgid "Error: unable to write update flag to Registry"
+msgstr "Error: imposible escribir señal de actualización al registro."
+
+#: palm_installer_mac.cpp:164
+msgid "SecureDigital (SD) Card"
+msgstr ""
+
+#: build_progress_dialog.cpp:139
+#, c-format
+msgid "Channels updated: 0 of %d"
+msgstr "Canales actualizados: 0 de %d"
+
+#: build_progress_dialog.cpp:159
+msgid "Executing command before spidering channels..."
+msgstr "Ejecutando comando antes de el proceso de Tejido de los canales."
+
+#: build_progress_dialog.cpp:165
+#, fuzzy
+msgid "Initializing"
+msgstr "Inicializando canal"
+
+#: build_progress_dialog.cpp:166
+#, fuzzy
+msgid "spidering engine"
+msgstr "Tejido de enlaces"
+
+#: build_progress_dialog.cpp:198
+msgid "Updating channel: "
+msgstr "Actualizando canal:"
+
+#: build_progress_dialog.cpp:209
+msgid "Processing "
+msgstr "Procesando"
+
+#: build_progress_dialog.cpp:220
+msgid "Initializing channel: "
+msgstr "Inicializando canal"
+
+#: build_progress_dialog.cpp:258
+#, c-format
+msgid "Channels updated: %d of %d"
+msgstr "Canales actualizados: %d de %d"
+
+#: build_progress_dialog.cpp:300
+msgid "Tasks completed for all channels."
+msgstr "Tareas completadas para todos los canales"
+
+#: build_progress_dialog.cpp:314
+msgid "Executing command after spidering channels..."
+msgstr "Ejecutando comando despues del proceso de Tejido de los canales"
+
+#: build_progress_dialog.cpp:369
+#, c-format
+msgid "Retrieving files (%ld of %ld)"
+msgstr "Recuperando ficheros (%ld of %ld)"
+
+#: build_progress_dialog.cpp:382
+msgid "Converting retrieved files...."
+msgstr "Convirtiendo ficheros recuperados..."
+
+#: build_progress_dialog.cpp:388
+msgid "Conversion complete. Writing output file..."
+msgstr "Conversión completa. Escribiendo fichero de resultados..."
+
+#: build_progress_dialog.cpp:398
+msgid "All pages retrieved and parsed. Starting conversion..."
+msgstr "Todas las páginas recuperadas y analizadas. Empezando conversión..."
+
+#: build_progress_dialog.cpp:435
+msgid "Installing channel output to destinations..."
+msgstr "Instalando resultado del canal en destinos..."
+
+#: build_progress_dialog.cpp:443
+msgid "Setting new due date..."
+msgstr ""
+
+#: details_progress_dialog.cpp:236 resource\xrc\xrc_strings_output.h:163
+msgid "<< Details"
+msgstr "<< Detalles"
+
+#: details_progress_dialog.cpp:291
+msgid "Details >>"
+msgstr "Detalles >>"
+
+#: details_progress_listbox.cpp:208
+msgid "Save details log file"
+msgstr "Guardar fichero de registro"
+
+#: details_progress_listbox.cpp:299
+msgid "Copy selected"
+msgstr "Copiar seleccionado"
+
+#: details_progress_listbox.cpp:300
+msgid "Clear all"
+msgstr "Borrar todo"
+
+#: details_progress_listbox.cpp:301
+msgid "Select all"
+msgstr "Seleccionar todo"
+
+#: about_dialog.cpp:109 about_dialog.cpp:182
+msgid "Authors"
+msgstr "Autores"
+
+#: about_dialog.cpp:118 about_dialog.cpp:169
+msgid "Credits"
+msgstr "Créditos"
+
+#: about_dialog.cpp:121 about_dialog.cpp:172
+#, fuzzy
+msgid ""
+"The following kind folks provided support, ideas or conversation as part of "
+"the"
+msgstr "Los siguientes compañeros dieron soporte, ideas o conversación como parte del proyecto Plucker. Que vivan muchos años:"
+
+#: about_dialog.cpp:122
+msgid "project. May they live long and prosper:"
+msgstr ""
+
+#: about_dialog.cpp:128
+msgid ""
+"If you feel left out, then please add yourself to the file, or send e-mail "
+"to <u>plucker-dev@rubberchicken.org</u>! "
+msgstr "Si crees que deberias estar aqui, añádete al fichero o envia un email a <u>plucker-dev@rubberchicken.org</u>"
+
+#: about_dialog.cpp:156
+msgid "Translators"
+msgstr "Traductores"
+
+#: about_dialog.cpp:159
+msgid "The following kind folks brought"
+msgstr ""
+
+#: about_dialog.cpp:160
+msgid "to their speakers of their language:"
+msgstr ""
+
+#: about_dialog.cpp:173
+msgid "project. May they live long and plucker:"
+msgstr ""
+
+#: about_dialog.cpp:188
+#, fuzzy
+msgid ""
+"If you feel left out, then please add yourself to the file, or send e-mail "
+"to <u>plucker-dev@rubberchicken.org</u>!"
+msgstr "Si crees que deberias estar aqui, añádete al fichero o envia un email a <u>plucker-dev@rubberchicken.org</u>"
+
+#: checkbox_message_dialog.h:78
+msgid "Message"
+msgstr "Mensaje"
+
+#: checkbox_message_dialog.h:81
+msgid "Don't remind me again"
+msgstr "No recordar mas"
+
+#: plucker_wizard_base.h:81
+msgid "Abort the wizard?"
+msgstr "¿Cancelar el Asistente?"
+
+#: install_viewer_wizard.h:76 setup_wizard.h:79
+msgid "Abort the setup wizard?"
+msgstr "¿Cancelar el Asistente de configuración?"
+
+#: add_channel_wizard.h:79
+msgid "Abort the add channel wizard?"
+msgstr "¿Cancelar el Asistente para añadir canal?"
+
+#: destinations_wizardpage.h:77
+msgid "Send it to these handhelds"
+msgstr "Enviarlo a estos dispositivos"
+
+#: destinations_wizardpage.h:79
+msgid "Sent it to these directories"
+msgstr "Enviarlo a estos directorios"
+
+#: utils_controls.h:227
+msgid "All files  (*.*)|*.*"
+msgstr "Todos los ficheros  (*.*)|*.*"
+
+#: utils_controls.h:228
+msgid ""
+"Images (*.png, *.gif, *.jpg)|*.png;*.gif;*.jpg;*.jpeg|PNG files (*.png)|*."
+"png|GIF files (*.gif)|*.gif|JPG files (*.jpg,*jpeg)|*.jpg;*.jpeg|All files  "
+"(*.*)|*.*"
+msgstr "Imágenes (*.png, *.gif, *.jpg)|*.png;*.gif;*.jpg;*.jpeg|PNG files (*.png)|*.png|GIF files (*.gif)|*.gif|JPG files (*.jpg,*jpeg)|*.jpg;*.jpeg|All files  (*.*)|*.*"
+
+#: utils_controls.h:229
+msgid ""
+"Images (*.bmp, *.png, *.gif)|*.bmp;*.png;*.gif|Bitmaps (*.bmp)|*.bmp|PNG "
+"files (*.png)|*.png|GIF files (*.gif)|*.gif"
+msgstr "Imágenes (*.bmp, *.png, *.gif)|*.bmp;*.png;*.gif|Bitmaps (*.bmp)|*.bmp|PNG files (*.png)|*.png|GIF files (*.gif)|*.gif"
+
+#: utils_controls.h:232
+msgid "Programs (*.exe)|*.exe"
+msgstr "Programas (*.exe)|*.exe"
+
+#: utils_controls.h:234
+msgid "Programs (*.*)|*.*"
+msgstr "Programas (*.*)|*.*"
+
+#: utils_controls.h:237
+msgid ""
+"All files  (*.*)|*.*|HTML, XML, Text files (*.html, *.htm, *.xml, *.txt)|*."
+"html;*.htm;*.xml'*.txt|Images (*.png, *.gif, *.jpg)|*.png;*.gif;*.jpg;*.jpeg"
+msgstr "Todos los ficheros  (*.*)|*.*|HTML, XML, Text files (*.html, *.htm, *.xml, *.txt)|*.html;*.htm;*.xml'*.txt|Imágenes (*.png, *.gif, *.jpg)|*.png;*.gif;*.jpg;*.jpeg"
+
+#: hhictrl.h:78
+msgid "Install files to these handhelds"
+msgstr "Instalar ficheros a estos dispositivos"
+
+#: hhictrl.h:79
+msgid "Install files to these directories"
+msgstr "Instalar ficheros a estos directorios"
+
+#: resource\xrc\xrc_strings_output.h:1
+msgid "About Plucker Desktop"
+msgstr "Acerca de Plucker Desktop"
+
+#: resource\xrc\xrc_strings_output.h:2
+msgid "Details"
+msgstr "Detalles"
+
+#: resource\xrc\xrc_strings_output.h:3
+msgid "Plucker Desktop"
+msgstr "Plucker Desktop"
+
+#: resource\xrc\xrc_strings_output.h:5
+msgid "1.2.0.0"
+msgstr "1.2.0.0"
+
+#: resource\xrc\xrc_strings_output.h:7
+msgid "Aug 30 2002"
+msgstr "Aug 30 2002"
+
+#: resource\xrc\xrc_strings_output.h:8
+msgid "This application provides visual content management for Plucker."
+msgstr "Esta aplicación provee administración visual del contenido Plucker"
+
+#: resource\xrc\xrc_strings_output.h:9
+#, fuzzy
+msgid "(c) Copyright 1998-2003 The Plucker Team."
+msgstr "(c) Copyright 1998-2002 El Equipo Plucker"
+
+#: resource\xrc\xrc_strings_output.h:10
+msgid "This application is Free Software under the conditions of the "
+msgstr "Esta aplicación es Software Libre bajo las condiciones de la"
+
+#: resource\xrc\xrc_strings_output.h:11
+msgid "Free Software Foundation's General Public License."
+msgstr "Licencia Pública General de la Fundación de Software Libre"
+
+#: resource\xrc\xrc_strings_output.h:12
+msgid "www.plkr.org"
+msgstr "www.plkr.org"
+
+#: resource\xrc\xrc_strings_output.h:13
+msgid "Plucker Desktop credits"
+msgstr "Créditos de Plucker Desktop"
+
+#: resource\xrc\xrc_strings_output.h:14
+msgid "Plucker credits"
+msgstr "Créditos de Plucker"
+
+#: resource\xrc\xrc_strings_output.h:18
+msgid "Configure Channel"
+msgstr "Configurar canal"
+
+#: resource\xrc\xrc_strings_output.h:20
+msgid "Starting page"
+msgstr "Pagina de comienzo"
+
+#: resource\xrc\xrc_strings_output.h:21
+msgid "Start with"
+msgstr "Empezar con"
+
+#: resource\xrc\xrc_strings_output.h:22
+msgid "A website URL:"
+msgstr "Una direccion de internet (URL):"
+
+#: resource\xrc\xrc_strings_output.h:23 resource\xrc\xrc_strings_output.h:238
+msgid "http://"
+msgstr "http://"
+
+#: resource\xrc\xrc_strings_output.h:25
+msgid "A local file:"
+msgstr "Un fichero local_"
+
+#: resource\xrc\xrc_strings_output.h:26 resource\xrc\xrc_strings_output.h:241
+msgid "file://"
+msgstr "file://"
+
+#: resource\xrc\xrc_strings_output.h:28
+msgid "Edit file..."
+msgstr "Editar fichero..."
+
+#: resource\xrc\xrc_strings_output.h:29
+msgid "A list of my links:"
+msgstr "Una lista de mis enlaces:"
+
+#: resource\xrc\xrc_strings_output.h:30
+msgid "Edit my list of links with HTML editor..."
+msgstr "Editar mi lista de enlaces con un editor HTML..."
+
+#: resource\xrc\xrc_strings_output.h:31 resource\xrc\xrc_strings_output.h:557
+msgid "Spidering"
+msgstr "Tejido de enlaces"
+
+#: resource\xrc\xrc_strings_output.h:32
+msgid "Retrieval order"
+msgstr "Orden de recuperación"
+
+#: resource\xrc\xrc_strings_output.h:33
+msgid "Retrieve files by following links:"
+msgstr "Recuperar ficheros por los siguientes enlaces:"
+
+#: resource\xrc\xrc_strings_output.h:34
+msgid "Breadth first"
+msgstr "Extensión primero"
+
+#: resource\xrc\xrc_strings_output.h:35
+msgid "Depth first"
+msgstr "Profundidad primero"
+
+#: resource\xrc\xrc_strings_output.h:36
+msgid "Spidering status"
+msgstr "Estátus del Tejido de enlaces"
+
+#: resource\xrc\xrc_strings_output.h:37
+msgid "Progress message detail level:"
+msgstr "Nivel de detalle del nivel de progreso:"
+
+#: resource\xrc\xrc_strings_output.h:38
+msgid "Minimum (no progress information, only error messages)"
+msgstr "Mínimo (sin información de progreso, sólo mensajes de error)"
+
+#: resource\xrc\xrc_strings_output.h:39
+msgid "Medium (page being spidered, pages remaining in queue)"
+msgstr "Media (página siendo procesada, páginas restantes)"
+
+#: resource\xrc\xrc_strings_output.h:40
+msgid "Maximum (full information, most useful for debugging)"
+msgstr "Máxima (completa información, útil para depurar)"
+
+#: resource\xrc\xrc_strings_output.h:41
+msgid "Truncate URLs displayed in the progress window to:"
+msgstr "Recortar URLs mostradas en la ventana de progreso a:"
+
+#: resource\xrc\xrc_strings_output.h:42
+msgid "letters"
+msgstr "letras"
+
+#: resource\xrc\xrc_strings_output.h:43
+msgid "Referrers and browser identification"
+msgstr "Remitidores e identificación del navegador"
+
+#: resource\xrc\xrc_strings_output.h:44
+msgid "Specify a referrer URL:"
+msgstr "Especifique una URL remitidora:"
+
+#: resource\xrc\xrc_strings_output.h:45
+msgid "When retrieving files from this channel's web server, identify as:"
+msgstr ""
+"Cuando recupere ficheros de este servidor web de canales, identificarse como:"
+
+#: resource\xrc\xrc_strings_output.h:46
+msgid "This browser type:"
+msgstr "Este tipo de navegador:"
+
+#: resource\xrc\xrc_strings_output.h:47
+msgid "Plucker (recommended)"
+msgstr "Plucker (recomendado)"
+
+#: resource\xrc\xrc_strings_output.h:48
+msgid "AvantGo"
+msgstr "AvantGo"
+
+#: resource\xrc\xrc_strings_output.h:49
+msgid "This custom user-agent:"
+msgstr "Personalizado:"
+
+#: resource\xrc\xrc_strings_output.h:50 resource\xrc\xrc_strings_output.h:566
+msgid "Command executions"
+msgstr "Ejecuciones de comandos"
+
+#: resource\xrc\xrc_strings_output.h:51
+msgid "Execute a command before spidering this channel:"
+msgstr "Ejecutar un comando antes de Tejer este canal:"
+
+#: resource\xrc\xrc_strings_output.h:52
+msgid "Execute a command after spidering this channel:"
+msgstr "Ejecutar un comando después de Tejer este canal:"
+
+#: resource\xrc\xrc_strings_output.h:53
+msgid "Limits"
+msgstr "Límites"
+
+#: resource\xrc\xrc_strings_output.h:56
+msgid "from the starting page (1=retrieve starting page only)"
+msgstr "desde la página inicial (1=recuperar sólo página inicial)"
+
+#: resource\xrc\xrc_strings_output.h:59
+msgid ""
+"Limit to the exact server only: if started on www.plkr.org, only allow www."
+"plkr.org"
+msgstr "Limitarse exáctamente al servidor: si empieza en www.plkr.org, sólo permitir www.plkr.org"
+
+#: resource\xrc\xrc_strings_output.h:60
+msgid ""
+"Only restrict to domain: if started on www.plkr.org, allow www.plkr.org and "
+"www2.plkr.org"
+msgstr "Sólo restringir al dominio: if started on www.plkr.org, allow www.plkr.org and www2.plkr.org"
+
+#: resource\xrc\xrc_strings_output.h:61
+msgid "'URL pattern' filter"
+msgstr "Filtro ´patrón URL´"
+
+#: resource\xrc\xrc_strings_output.h:62
+msgid "Only follow URLs that match this regular expression pattern:"
+msgstr "Sólo seguir direcciones que concuerden con este patrón regular:"
+
+#: resource\xrc\xrc_strings_output.h:63
+#, fuzzy
+msgid "Channel-specific inclusion/exclusion list filter"
+msgstr "Lista de filtros de exclusión específica de canales."
+
+#: resource\xrc\xrc_strings_output.h:64
+#, fuzzy
+msgid ""
+"In addition to the shared inclusion/exclusion list, also follow/ignore links "
+"pointing to these file types or servers:"
+msgstr "Añadido a la lista compartida de exclusiones, también ignorar enlaces apuntando a estos tipos de ficheros o servidores:"
+
+#: resource\xrc\xrc_strings_output.h:65
+#, fuzzy
+msgid "Edit channel-specific inclusion/exclusion list..."
+msgstr "Editar lista de exclusiones especifica de canales..."
+
+#: resource\xrc\xrc_strings_output.h:66
+msgid "Formatting"
+msgstr "Formateando"
+
+#: resource\xrc\xrc_strings_output.h:67
+msgid "Character set encoding"
+msgstr "Set de caracteres"
+
+#: resource\xrc\xrc_strings_output.h:68
+msgid "Specify a default character set to use for this channel:"
+msgstr "Especifique un set de caracteres para usar en este canal:"
+
+#: resource\xrc\xrc_strings_output.h:69
+msgid "ASCII"
+msgstr "ASCII"
+
+#: resource\xrc\xrc_strings_output.h:70
+msgid "Big5"
+msgstr "Big5"
+
+#: resource\xrc\xrc_strings_output.h:71
+msgid "EBCDIC-INT"
+msgstr "EBCDIC-INT"
+
+#: resource\xrc\xrc_strings_output.h:72
+msgid "eucCN"
+msgstr "eucCN"
+
+#: resource\xrc\xrc_strings_output.h:73
+msgid "eucJP"
+msgstr "eucJP"
+
+#: resource\xrc\xrc_strings_output.h:74
+msgid "eucKR"
+msgstr "eucKR"
+
+#: resource\xrc\xrc_strings_output.h:75
+msgid "eucTW"
+msgstr "eucTW"
+
+#: resource\xrc\xrc_strings_output.h:76
+msgid "GB2312"
+msgstr "GB2312"
+
+#: resource\xrc\xrc_strings_output.h:77
+msgid "ISO-2022-CN"
+msgstr "ISO-2022-CN"
+
+#: resource\xrc\xrc_strings_output.h:78
+msgid "ISO-2022-CN-EXT"
+msgstr "ISO-2022-CN-EXT"
+
+#: resource\xrc\xrc_strings_output.h:79
+msgid "ISO-2022-JP"
+msgstr "ISO-2022-JP"
+
+#: resource\xrc\xrc_strings_output.h:80
+msgid "ISO-646DK"
+msgstr "ISO-646DK"
+
+#: resource\xrc\xrc_strings_output.h:81
+msgid "ISO-8859-1"
+msgstr "ISO-8859-1"
+
+#: resource\xrc\xrc_strings_output.h:82
+msgid "ISO-8859-2"
+msgstr "ISO-8859-2"
+
+#: resource\xrc\xrc_strings_output.h:83
+msgid "ISO-8859-3"
+msgstr "ISO-8859-3"
+
+#: resource\xrc\xrc_strings_output.h:84
+msgid "ISO-8859-4"
+msgstr "ISO-8859-4"
+
+#: resource\xrc\xrc_strings_output.h:85
+msgid "ISO-8859-5"
+msgstr "ISO-8859-5"
+
+#: resource\xrc\xrc_strings_output.h:86
+msgid "ISO-8859-6"
+msgstr "ISO-8859-6"
+
+#: resource\xrc\xrc_strings_output.h:87
+msgid "ISO-8859-7"
+msgstr "ISO-8859-7"
+
+#: resource\xrc\xrc_strings_output.h:88
+msgid "ISO8859-15"
+msgstr "ISO8859-15"
+
+#: resource\xrc\xrc_strings_output.h:89
+msgid "JIS7"
+msgstr "JIS7"
+
+#: resource\xrc\xrc_strings_output.h:90
+msgid "macintosh"
+msgstr "macintosh"
+
+#: resource\xrc\xrc_strings_output.h:91
+msgid "SJIS"
+msgstr "SJIS"
+
+#: resource\xrc\xrc_strings_output.h:92
+msgid "TACTIS"
+msgstr "TACTIS"
+
+#: resource\xrc\xrc_strings_output.h:93
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: resource\xrc\xrc_strings_output.h:94 resource\xrc\xrc_strings_output.h:172
+msgid "Hyperlinks"
+msgstr "Hiperenlaces"
+
+#: resource\xrc\xrc_strings_output.h:95
+msgid "Specify a default color for hyperlinks:"
+msgstr "Especifique un color por defecto para los Hiperenlaces:"
+
+#: resource\xrc\xrc_strings_output.h:96 resource\xrc\xrc_strings_output.h:273
+#: resource\xrc\xrc_strings_output.h:283 resource\xrc\xrc_strings_output.h:293
+#: resource\xrc\xrc_strings_output.h:311 resource\xrc\xrc_strings_output.h:317
+#: resource\xrc\xrc_strings_output.h:331 resource\xrc\xrc_strings_output.h:333
+msgid "Choose color..."
+msgstr "Elija color:..."
+
+#: resource\xrc\xrc_strings_output.h:97
+msgid "Paragraph style"
+msgstr "Estilo de Párrafo"
+
+#: resource\xrc\xrc_strings_output.h:98
+msgid "Indent the first line of each new paragraph"
+msgstr "Indentar la primera línea de cada párrafo"
+
+#: resource\xrc\xrc_strings_output.h:99 resource\xrc\xrc_strings_output.h:216
+msgid "Tables"
+msgstr "Tablas"
+
+#: resource\xrc\xrc_strings_output.h:100
+msgid "Use enhanced table support (currently experimental)"
+msgstr ""
+
+#: resource\xrc\xrc_strings_output.h:101
+msgid "Images"
+msgstr "Imágenes"
+
+#: resource\xrc\xrc_strings_output.h:102
+msgid "Basic image handling"
+msgstr "Manejo básico de imágen"
+
+#: resource\xrc\xrc_strings_output.h:103
+msgid "Include images"
+msgstr "Incluir imágenes"
+
+#: resource\xrc\xrc_strings_output.h:104
+msgid "Color depth:"
+msgstr "Profundidad de color:"
+
+#: resource\xrc\xrc_strings_output.h:110
+msgid "Show alternative text tags for images not included in output"
+msgstr "Mostrar texto alternativo para imágenes no incluidas."
+
+#: resource\xrc\xrc_strings_output.h:111
+msgid "Advanced image handling"
+msgstr "Manejo de imágenes avanzado"
+
+#: resource\xrc\xrc_strings_output.h:112
+msgid ""
+"To fit on handheld screen, use a thumbnail for any image that is larger than:"
+msgstr ""
+"Para adaptarse a la pantalla del dispositivo, usar una miniatura para "
+"cualquier imagen mas grande de:"
+
+#: resource\xrc\xrc_strings_output.h:113 resource\xrc\xrc_strings_output.h:119
+msgid "pixels wide by"
+msgstr "Pixels de ancho por"
+
+#: resource\xrc\xrc_strings_output.h:114 resource\xrc\xrc_strings_output.h:120
+msgid "pixels high"
+msgstr "pixels de alto"
+
+#: resource\xrc\xrc_strings_output.h:115
+msgid "If a thumbnail is used for an image, then:"
+msgstr "Si se usa una miniatura para una imágen, entonces:"
+
+#: resource\xrc\xrc_strings_output.h:116
+msgid "Always link the thumbnail to a second, full-size copy"
+msgstr "Enlazar siempre la miniatura a una segunda copia de tamaño completo."
+
+#: resource\xrc\xrc_strings_output.h:117
+#, fuzzy
+msgid ""
+"Only use the thumbnail, don't include a second, larger copy in the channel's "
+"output"
+msgstr "Sólo usar la miniatura, no incluir la imagen de tamaño completo en el canal resultante"
+
+#: resource\xrc\xrc_strings_output.h:118
+#, fuzzy
+msgid ""
+"Link the thumbnail to a second, larger copy, but keep the larger copy less "
+"than:"
+msgstr "Sólo enlazar la miniatura a una copia secundaria de tamaño completo, si esta es menor de:"
+
+#: resource\xrc\xrc_strings_output.h:121
+#, fuzzy
+msgid "Maximum storage:"
+msgstr "Profundidad máxima"
+
+#: resource\xrc\xrc_strings_output.h:122
+#, fuzzy
+msgid "Allow a converted image to exceed 60kb (recommended)"
+msgstr "Reformatear imágenes convertidas que excedan los 60kb reduciendo:"
+
+#: resource\xrc\xrc_strings_output.h:123
+#, fuzzy
+msgid "Keep a converted image under 60kb by reducing image dimensions"
+msgstr "Reformatear imágenes convertidas que excedan los 60kb reduciendo:"
+
+#: resource\xrc\xrc_strings_output.h:124
+#, fuzzy
+msgid "Keep a converted image under 60kb by reducing color depth"
+msgstr "Reformatear imágenes convertidas que excedan los 60kb reduciendo:"
+
+#: resource\xrc\xrc_strings_output.h:125
+msgid "Output options"
+msgstr "Opciones de salida"
+
+#: resource\xrc\xrc_strings_output.h:126
+msgid "Compression options"
+msgstr "Opciones de compresión"
+
+#: resource\xrc\xrc_strings_output.h:127
+msgid "To compress the output file, use"
+msgstr "Para comprimir el resultado, usar"
+
+#: resource\xrc\xrc_strings_output.h:128
+msgid "DOC compression"
+msgstr "Compresión DOC"
+
+#: resource\xrc\xrc_strings_output.h:129
+msgid "ZLIB compression (recommended)"
+msgstr "Compresión ZLIB (recomendada)"
+
+#: resource\xrc\xrc_strings_output.h:130
+msgid "Only compress images that are larger than"
+msgstr "Sólo comprimir imágenes mas grandes de"
+
+#: resource\xrc\xrc_strings_output.h:131
+msgid "bytes"
+msgstr "bytes"
+
+#: resource\xrc\xrc_strings_output.h:132
+msgid "Advanced output options"
+msgstr "Opciones de salida avanzadas"
+
+#: resource\xrc\xrc_strings_output.h:133
+msgid ""
+"Specify the category in which to list the channel in the viewer's library:"
+msgstr "Especificar la categoria en la cual listar el canal en el dispositivo"
+
+#: resource\xrc\xrc_strings_output.h:134
+msgid "Include the original URL of each page in the output file"
+msgstr "Incluir la URL original de cada página en el fichero resultante"
+
+#: resource\xrc\xrc_strings_output.h:135
+msgid "Specify a security 'owner ID' password needed to open the output file:"
+msgstr "Especificar una contraseña de seguridad (ID de propietario) necesaria para abrir el fichero resultante"
+
+#: resource\xrc\xrc_strings_output.h:136
+msgid "Allow the channel output file to be beamed among handhelds"
+msgstr ""
+"Permitir que el fichero resultante sea enviado por IR entre dispositivos."
+
+#: resource\xrc\xrc_strings_output.h:137
+msgid ""
+"Signal backup bit (marks the file as one to backup to the desktop computer)"
+msgstr "Marcar con señal de resguardo (Backup) (Marca el fichero como activo para crear copia de seguridad en el escritorio)"
+
+#: resource\xrc\xrc_strings_output.h:138
+msgid ""
+"The channel can be started directly from an icon in handheld's main launcher"
+msgstr ""
+"El canal puede ser iniciado directamente desde un icono en el lanzador "
+"principal del dispositivo"
+
+#: resource\xrc\xrc_strings_output.h:139
+msgid "Replace default large icon with a custom icon:"
+msgstr "Reemplazar icono grande por defecto con uno pesonalizado"
+
+#: resource\xrc\xrc_strings_output.h:141
+msgid "Replace default small icon with a custom icon:"
+msgstr "Reemplazar icono pequeño por defecto con uno pesonalizado"
+
+#: resource\xrc\xrc_strings_output.h:143
+msgid "Destination"
+msgstr "Destino"
+
+#: resource\xrc\xrc_strings_output.h:144
+msgid "Scheduling"
+msgstr "Planificación"
+
+#: resource\xrc\xrc_strings_output.h:145
+msgid "Enable scheduling"
+msgstr "Activar planificación"
+
+#: resource\xrc\xrc_strings_output.h:146
+msgid "Mark this channel as due for updates at a certain interval"
+msgstr ""
+"Marcar este canal listo para actualizaciones en un intervalo especificado"
+
+#: resource\xrc\xrc_strings_output.h:147
+msgid "Update interval"
+msgstr "Intervalo de actualización"
+
+#: resource\xrc\xrc_strings_output.h:148
+msgid "This channel is due for an update every:"
+msgstr "Este canal esta listo para una actualización cada:"
+
+#: resource\xrc\xrc_strings_output.h:149
+msgid "hours"
+msgstr "horas"
+
+#: resource\xrc\xrc_strings_output.h:150
+msgid "days"
+msgstr "días"
+
+#: resource\xrc\xrc_strings_output.h:151
+msgid "weeks"
+msgstr "semanas"
+
+#: resource\xrc\xrc_strings_output.h:152
+msgid "months"
+msgstr "meses"
+
+#: resource\xrc\xrc_strings_output.h:153
+msgid "years"
+msgstr "años"
+
+#: resource\xrc\xrc_strings_output.h:154
+msgid "Starting on:"
+msgstr "Empezando en:"
+
+#: resource\xrc\xrc_strings_output.h:155
+msgid "Now"
+msgstr "Ahora"
+
+#: resource\xrc\xrc_strings_output.h:159
+msgid "Channel Update Progress"
+msgstr "Progreso de la actualización del canal"
+
+#: resource\xrc\xrc_strings_output.h:160
+msgid "Channels updated"
+msgstr "Canales actualizados"
+
+#: resource\xrc\xrc_strings_output.h:161
+msgid "Progress for this channel"
+msgstr "Progreso para este canal"
+
+#: resource\xrc\xrc_strings_output.h:162
+msgid "Stop"
+msgstr "Parar"
+
+#: resource\xrc\xrc_strings_output.h:164
+msgid "Export details..."
+msgstr "Exportar detalles..."
+
+#: resource\xrc\xrc_strings_output.h:165 resource\xrc\xrc_strings_output.h:571
+#: resource\xrc\xrc_strings_output.h:572
+msgid "HTML editor"
+msgstr "Editor HTML"
+
+#: resource\xrc\xrc_strings_output.h:166
+msgid "Edit"
+msgstr "Editar"
+
+#: resource\xrc\xrc_strings_output.h:167
+msgid "Preview"
+msgstr "Vista Previa"
+
+#: resource\xrc\xrc_strings_output.h:171
+msgid "Insert a hyperlink..."
+msgstr "Insertar un hiperenlace..."
+
+#: resource\xrc\xrc_strings_output.h:173
+msgid "Insert hyperlink <a href= ...></a>"
+msgstr "Insertar un hiperenlace <a href= ...></a>"
+
+#: resource\xrc\xrc_strings_output.h:174
+msgid "Insert email link <a href=mailto: ...></a>"
+msgstr "Insertar enlace de email <a href=mailto: ...></a>"
+
+#: resource\xrc\xrc_strings_output.h:175
+msgid "Insert named bookmark <a name= ...></a>"
+msgstr "Insertar nombre de marcador <a name= ...></a>"
+
+#: resource\xrc\xrc_strings_output.h:176
+msgid "Insert popup alert <a href=javascript:alert( ...)></a>"
+msgstr ""
+"Insertar ventana emergente de alerta <a href=javascript:alert( ...)></a>"
+
+#: resource\xrc\xrc_strings_output.h:177
+msgid "Common"
+msgstr "Común"
+
+#: resource\xrc\xrc_strings_output.h:178
+msgid "Insert default-aligned paragraph <p></p>"
+msgstr "Insertar alineación por defecto de párrafo <p></p>"
+
+#: resource\xrc\xrc_strings_output.h:179
+msgid "Insert left-aligned paragraph <p align=left></p>"
+msgstr "Insertar párrafo alineado a la izquierda <p align=left></p>"
+
+#: resource\xrc\xrc_strings_output.h:180
+msgid "Insert center-aligned paragraph <p align=center></p>"
+msgstr "Insertar párrafo centrado <p align=center></p>"
+
+#: resource\xrc\xrc_strings_output.h:181
+msgid "Insert right-aligned paragraph <p align=right></p>"
+msgstr "Insertar párrafo alineado a la derecha <p align=left></p>"
+
+#: resource\xrc\xrc_strings_output.h:182
+msgid "Insert full-aligned paragraph <p align=justify></p>"
+msgstr "Insertar párrafo justificado <p align=justify></p>"
+
+#: resource\xrc\xrc_strings_output.h:183
+msgid "Insert line break <br>"
+msgstr "Insertar salto de línea <br>"
+
+#: resource\xrc\xrc_strings_output.h:184
+msgid "Insert image <img src= ...>"
+msgstr "Insertar imágen <img src= ...>"
+
+#: resource\xrc\xrc_strings_output.h:185
+msgid "Insert horizontal rule <hr ...>"
+msgstr "Insertar regla horizontal <hr ...>"
+
+#: resource\xrc\xrc_strings_output.h:186
+msgid "Insert non-breaking space"
+msgstr "Insertar espacio"
+
+#: resource\xrc\xrc_strings_output.h:187
+msgid "Layout"
+msgstr "Esquema"
+
+#: resource\xrc\xrc_strings_output.h:188
+msgid "Insert a span <span ...></span>"
+msgstr "Insertar intervalo  <span ...></span>"
+
+#: resource\xrc\xrc_strings_output.h:189
+msgid "Insert a left-aligned content block <div align=left></div>"
+msgstr ""
+"Insertar bloque de contenido alineado a la izquierda <div align=left></div>"
+
+#: resource\xrc\xrc_strings_output.h:190
+msgid "Insert a center-aligned content block <div align=center></div>"
+msgstr "Insertar bloque de contenido centrado <div align=center></div>"
+
+#: resource\xrc\xrc_strings_output.h:191
+msgid "Insert a right-aligned block <div align=right></div>"
+msgstr ""
+"Insertar bloque de contenido alineado a la derecha <div align=right></div>"
+
+#: resource\xrc\xrc_strings_output.h:192
+msgid "Insert a center-aligned block using center <center></center>"
+msgstr ""
+"Insertar un bloque centrado usando la etiqueta center <center></center>"
+
+#: resource\xrc\xrc_strings_output.h:193
+#, fuzzy
+msgid "Insert a blockquote <blockquote></blockquote>"
+msgstr "Insertar una cita <quote></quote>"
+
+#: resource\xrc\xrc_strings_output.h:194
+#, fuzzy
+msgid "Insert a quotation <q></q>"
+msgstr "Insertar una cita <quote></quote>"
+
+#: resource\xrc\xrc_strings_output.h:195
+msgid "Insert a citation <cite></cite>"
+msgstr "Insertar mención <cite></cite>"
+
+#: resource\xrc\xrc_strings_output.h:196
+msgid "Fonts"
+msgstr "Fuentes"
+
+#: resource\xrc\xrc_strings_output.h:197
+msgid "Insert a font change <font ...></font>"
+msgstr "Insertar cambio de fuente <font ...></font>"
+
+#: resource\xrc\xrc_strings_output.h:198
+msgid "Insert bolded text <b></b>"
+msgstr "Insertar texto en negrita <b></b>"
+
+#: resource\xrc\xrc_strings_output.h:199
+msgid "Insert strongly bolded text <strong></strong>"
+msgstr "Insertar texto en más negrita <strong></strong>"
+
+#: resource\xrc\xrc_strings_output.h:200
+msgid "Insert italic text <i></i>"
+msgstr "Insertar texto en cursiva <i></i>"
+
+#: resource\xrc\xrc_strings_output.h:201
+msgid "Insert emphasized text <em></em>"
+msgstr "Insertar texto con énfasis <em></em>"
+
+#: resource\xrc\xrc_strings_output.h:202
+msgid "Insert underline text <u></u>"
+msgstr "Insertar testo subrayado <u></u>"
+
+#: resource\xrc\xrc_strings_output.h:203
+msgid "Insert strikethrough text <strike></strike>"
+msgstr "Insertar texto tachado <strike></strike>"
+
+#: resource\xrc\xrc_strings_output.h:204
+#, fuzzy
+msgid "Insert typewriter text <tt></tt>"
+msgstr "Insertar testo subrayado <u></u>"
+
+#: resource\xrc\xrc_strings_output.h:205
+#, fuzzy
+msgid "Insert superscript text <sup></sup>"
+msgstr "Insertar testo subrayado <u></u>"
+
+#: resource\xrc\xrc_strings_output.h:206
+#, fuzzy
+msgid "Insert subscript text <sub></sub>"
+msgstr "Insertar testo subrayado <u></u>"
+
+#: resource\xrc\xrc_strings_output.h:207
+msgid "Insert preformatted text <pre></pre>"
+msgstr "Insertar texto preformateado <pre></pre>"
+
+#: resource\xrc\xrc_strings_output.h:208
+msgid "Insert coded text <code></code>"
+msgstr "Insertar texto codificado <code></code>"
+
+#: resource\xrc\xrc_strings_output.h:209
+msgid "Insert heading 1 text <h1></h1>"
+msgstr "Insertar encabezado de texto 1 <h1></h1>"
+
+#: resource\xrc\xrc_strings_output.h:210
+msgid "Insert heading 2 text <h2></h2>"
+msgstr "Insertar encabezado de texto 2 <h2></h2>"
+
+#: resource\xrc\xrc_strings_output.h:211
+msgid "Insert heading 3 text <h3></h3>"
+msgstr "Insertar encabezado de texto 3 <h3></h3>"
+
+#: resource\xrc\xrc_strings_output.h:212
+msgid "Insert heading 4 text <h4></h4>"
+msgstr "Insertar encabezado de texto 4 <h4></h4>"
+
+#: resource\xrc\xrc_strings_output.h:213
+msgid "Insert heading 5 text <h5></h5>"
+msgstr "Insertar encabezado de texto 5 <h5></h5>"
+
+#: resource\xrc\xrc_strings_output.h:214
+msgid "Insert heading 6 text <h6></h6>"
+msgstr "Insertar encabezado de texto 6 <h6></h6>"
+
+#: resource\xrc\xrc_strings_output.h:215
+#, fuzzy
+msgid "Insert small text <small></small>"
+msgstr "Insertar texto en cursiva <i></i>"
+
+#: resource\xrc\xrc_strings_output.h:217
+msgid "Insert a table <table></table>"
+msgstr "Insertar una tabla <table></table>"
+
+#: resource\xrc\xrc_strings_output.h:218
+msgid "Insert a table row <tr></tr>"
+msgstr "Insertar una columna de tabla <tr></tr>"
+
+#: resource\xrc\xrc_strings_output.h:219
+msgid "Insert a table header cell <th ...></th>"
+msgstr "Insertar encabezado de celda <th ...></th>"
+
+#: resource\xrc\xrc_strings_output.h:220
+msgid "Insert a table cell <td ...></td>"
+msgstr "Insertar celda de tabla <td ...></td>"
+
+#: resource\xrc\xrc_strings_output.h:221
+msgid "Lists"
+msgstr "Listas"
+
+#: resource\xrc\xrc_strings_output.h:222
+msgid "Insert an ordered list <ol ...></ol>"
+msgstr "Insertar una lista ordenada <ol ...></ol>"
+
+#: resource\xrc\xrc_strings_output.h:223
+msgid "Insert an unordered list <ul ...></ul>"
+msgstr "Insertar lista no ordenada <ul ...></ul>"
+
+#: resource\xrc\xrc_strings_output.h:224
+msgid "Insert a list element <li></li>"
+msgstr "Insertar un elemento de la lista <li></li>"
+
+#: resource\xrc\xrc_strings_output.h:225
+msgid "Insert a menu <menu ...></menu>"
+msgstr "Insertar un menú <menu ...></menu>"
+
+#: resource\xrc\xrc_strings_output.h:226
+msgid "Insert a definition list <dl></dl>"
+msgstr "Insertar lista <dl></dl>"
+
+#: resource\xrc\xrc_strings_output.h:227
+msgid "Insert a definition term <dt></dt>"
+msgstr "Insertar término <dt></dt>"
+
+#: resource\xrc\xrc_strings_output.h:228
+msgid "Insert a definition description <dd></dd>"
+msgstr "Insertar descripción <dd></dd>"
+
+#: resource\xrc\xrc_strings_output.h:229
+msgid "Other"
+msgstr "Otro"
+
+#: resource\xrc\xrc_strings_output.h:230
+msgid "Insert html tag <html></html>"
+msgstr "Inserta etiqueta html <html></html>"
+
+#: resource\xrc\xrc_strings_output.h:231
+msgid ""
+"Insert handheldfriendly meta tag (informs handheld browsers that page is "
+"light) <meta...></meta>"
+msgstr "Insertar etiqueta optimizada para PDA (informa al navegador del dispositivo que la página es ligera) <meta...></meta>"
+
+#: resource\xrc\xrc_strings_output.h:232
+msgid "Insert body tag (also sets document's text colors) <body...></body>"
+msgstr "Insertar etiqueta de cuerpo (también pone el color del texto del documento) <body...></body>"
+
+#: resource\xrc\xrc_strings_output.h:233
+msgid "Insert hidden comment <!--- --->"
+msgstr "Insertar comentario oculto <!--- --->"
+
+#: resource\xrc\xrc_strings_output.h:234
+msgid "Insert Hyperlink"
+msgstr "Insertar hiperenlace"
+
+#: resource\xrc\xrc_strings_output.h:235
+msgid "Required hyperlink properties"
+msgstr "Propiedades de hiperenlace requeridas"
+
+#: resource\xrc\xrc_strings_output.h:236 resource\xrc\xrc_strings_output.h:357
+msgid "Link description:"
+msgstr "Descripción del enlace"
+
+#: resource\xrc\xrc_strings_output.h:237
+msgid "Website URL:"
+msgstr "Dirección web (URL):"
+
+#: resource\xrc\xrc_strings_output.h:240
+msgid "File name:"
+msgstr "Nombre del fichero"
+
+#: resource\xrc\xrc_strings_output.h:243
+msgid "Optional hyperlink settings"
+msgstr "Configuraciones opciones del hiperenlace"
+
+#: resource\xrc\xrc_strings_output.h:244
+msgid ""
+"Use 'stay on host' filter: ignore links pointing to an external server that "
+"is different from the starting page's server"
+msgstr "Usar filtro ´Permanecer en servidor principal´: ignorar enlaces apuntando a un servidor externo que sea diferente al de la página principal."
+
+#: resource\xrc\xrc_strings_output.h:245
+msgid ""
+"Use 'stay on domain' filter: ignore links pointing to a server on a "
+"different domain from the starting page's server"
+msgstr "Usar filtro ´Permanecer en dominio´: ignorar enlaces apuntando a un servidor en un dominio diferente al de la página principal"
+
+#: resource\xrc\xrc_strings_output.h:246
+msgid "Use 'maximum depth' filter: only retreive pages up to"
+msgstr "Usar filtro ´profundidad máxima´: sólo recuperar páginas hasta"
+
+#: resource\xrc\xrc_strings_output.h:247
+msgid "links down from the starting page"
+msgstr "enlaces desde la página inicial."
+
+#: resource\xrc\xrc_strings_output.h:248
+msgid ""
+"Use 'url pattern' filter: only follow URLs having this regular expression:"
+msgstr "Usar filtro ´patrón URL´:sólo seguir direcciones que contengan esta expresión:"
+
+#: resource\xrc\xrc_strings_output.h:249
+msgid "Specify image inclusion / color depth:"
+msgstr "Especificar inclusión de imagen / profundidad de color:"
+
+#: resource\xrc\xrc_strings_output.h:250
+msgid "No images"
+msgstr "Sin imágenes"
+
+#: resource\xrc\xrc_strings_output.h:256
+msgid "Specify image maximum width:"
+msgstr "Especificar ancho máximo de imágen:"
+
+#: resource\xrc\xrc_strings_output.h:257
+msgid "Specify image maximum height:"
+msgstr "Especificar alto máximo de imágen:"
+
+#: resource\xrc\xrc_strings_output.h:261
+msgid "Insert Horizontal Rule"
+msgstr "Insertar regla horizontal"
+
+#: resource\xrc\xrc_strings_output.h:262
+msgid "Width:"
+msgstr "Ancho:"
+
+#: resource\xrc\xrc_strings_output.h:263
+msgid "percent"
+msgstr "porcentaje"
+
+#: resource\xrc\xrc_strings_output.h:264 resource\xrc\xrc_strings_output.h:266
+msgid "pixels"
+msgstr "pixels"
+
+#: resource\xrc\xrc_strings_output.h:265
+msgid "Height:"
+msgstr "Alto:"
+
+#: resource\xrc\xrc_strings_output.h:267 resource\xrc\xrc_strings_output.h:298
+msgid "Alignment:"
+msgstr "Alineación"
+
+#: resource\xrc\xrc_strings_output.h:268 resource\xrc\xrc_strings_output.h:299
+msgid "Default"
+msgstr "Por defecto"
+
+#: resource\xrc\xrc_strings_output.h:269 resource\xrc\xrc_strings_output.h:300
+#: resource\xrc\xrc_strings_output.h:323
+msgid "Left"
+msgstr "Izquierda"
+
+#: resource\xrc\xrc_strings_output.h:270 resource\xrc\xrc_strings_output.h:302
+#: resource\xrc\xrc_strings_output.h:324
+msgid "Right"
+msgstr "Derecha"
+
+#: resource\xrc\xrc_strings_output.h:271 resource\xrc\xrc_strings_output.h:301
+#: resource\xrc\xrc_strings_output.h:325
+msgid "Center"
+msgstr "Centro"
+
+#: resource\xrc\xrc_strings_output.h:272 resource\xrc\xrc_strings_output.h:282
+msgid "Color:"
+msgstr "Color:"
+
+#: resource\xrc\xrc_strings_output.h:277
+msgid "Insert Image"
+msgstr "Insertar imágen"
+
+#: resource\xrc\xrc_strings_output.h:278
+msgid "Image source:"
+msgstr "Origen de la imágen:"
+
+#: resource\xrc\xrc_strings_output.h:280
+msgid "Image is relative to page location"
+msgstr "La imágen es relativa a la localización de la página"
+
+#: resource\xrc\xrc_strings_output.h:281
+msgid "Alternative text:"
+msgstr "Texto alternativo:"
+
+#: resource\xrc\xrc_strings_output.h:284
+msgid "Hyperlink:"
+msgstr "Hiperenlace:"
+
+#: resource\xrc\xrc_strings_output.h:288
+#, fuzzy
+msgid "Insert Table"
+msgstr "Insertar imágen"
+
+#: resource\xrc\xrc_strings_output.h:289
+msgid "Rows:"
+msgstr "Filas:"
+
+#: resource\xrc\xrc_strings_output.h:290
+msgid "Columns:"
+msgstr "Columnas:"
+
+#: resource\xrc\xrc_strings_output.h:291
+msgid "Border:"
+msgstr "Borde:"
+
+#: resource\xrc\xrc_strings_output.h:292
+msgid "Border color:"
+msgstr "Color del borde:"
+
+#: resource\xrc\xrc_strings_output.h:297
+#, fuzzy
+msgid "Insert Table Cell"
+msgstr "Insertar imágen"
+
+#: resource\xrc\xrc_strings_output.h:303
+msgid "Justified"
+msgstr ""
+
+#: resource\xrc\xrc_strings_output.h:304
+#, fuzzy
+msgid "Column span:"
+msgstr "Columnas:"
+
+#: resource\xrc\xrc_strings_output.h:305
+#, fuzzy
+msgid "Row span:"
+msgstr "Filas:"
+
+#: resource\xrc\xrc_strings_output.h:309 resource\xrc\xrc_strings_output.h:315
+msgid "Insert Font"
+msgstr "Insertar fuente:"
+
+#: resource\xrc\xrc_strings_output.h:310 resource\xrc\xrc_strings_output.h:316
+msgid "Font color:"
+msgstr "Color de la fuente:"
+
+#: resource\xrc\xrc_strings_output.h:321
+msgid "Insert Span"
+msgstr "Insertar intervalo"
+
+#: resource\xrc\xrc_strings_output.h:322
+msgid "Align:"
+msgstr "Alineación:"
+
+#: resource\xrc\xrc_strings_output.h:329
+msgid "Insert Body"
+msgstr "Insertar cuerpo"
+
+#: resource\xrc\xrc_strings_output.h:330
+msgid "Text color:"
+msgstr "Color del texto:"
+
+#: resource\xrc\xrc_strings_output.h:332
+msgid "Link color:"
+msgstr "Color del enlace:"
+
+#: resource\xrc\xrc_strings_output.h:337
+msgid "Insert Bookmark"
+msgstr "Insertar Marcador"
+
+#: resource\xrc\xrc_strings_output.h:338 resource\xrc\xrc_strings_output.h:344
+msgid "Description:"
+msgstr "Descripción"
+
+#: resource\xrc\xrc_strings_output.h:339
+msgid "Anchor name:"
+msgstr "Nombre de Ancla:"
+
+#: resource\xrc\xrc_strings_output.h:343
+msgid "Insert Email"
+msgstr "Insertar Email:"
+
+#: resource\xrc\xrc_strings_output.h:345
+msgid "Email address:"
+msgstr "Direccion de Email:"
+
+#: resource\xrc\xrc_strings_output.h:346
+msgid "plucker-dev@rubberchicken.org"
+msgstr "plucker-dev@rubberchicken.org"
+
+#: resource\xrc\xrc_strings_output.h:350
+msgid "Insert Symbol / Character"
+msgstr "Insertar Símbolo / Caracter"
+
+#: resource\xrc\xrc_strings_output.h:351
+msgid "Select a symbol and press OK:"
+msgstr "Seleccione un símbolo y presione OK:"
+
+#: resource\xrc\xrc_strings_output.h:352
+msgid "Symbol:"
+msgstr "Símbolo:"
+
+#: resource\xrc\xrc_strings_output.h:356
+msgid "Insert Javascrip Popup"
+msgstr "Insertar ventana emergente Javascript"
+
+#: resource\xrc\xrc_strings_output.h:358
+msgid "Popup message:"
+msgstr "Mensaje en ventana emergente:"
+
+#: resource\xrc\xrc_strings_output.h:362
+msgid "Insert Unordered List"
+msgstr "Insertar lista no odenada"
+
+#: resource\xrc\xrc_strings_output.h:363
+msgid "Bullet type:"
+msgstr "Tipo de símbolo:"
+
+#: resource\xrc\xrc_strings_output.h:364
+msgid "Disc (default)"
+msgstr "Disco (por defecto)"
+
+#: resource\xrc\xrc_strings_output.h:365
+msgid "Square"
+msgstr "Cuadrado"
+
+#: resource\xrc\xrc_strings_output.h:366
+msgid "Circle"
+msgstr "Circulo"
+
+#: resource\xrc\xrc_strings_output.h:367 resource\xrc\xrc_strings_output.h:380
+msgid "Compact:"
+msgstr "Compacto:"
+
+#: resource\xrc\xrc_strings_output.h:371
+msgid "Insert Ordered List"
+msgstr "Insertar lista ordenada"
+
+#: resource\xrc\xrc_strings_output.h:372
+msgid "Enumeration type:"
+msgstr "Tipos de enumeración_"
+
+#: resource\xrc\xrc_strings_output.h:373
+msgid "1   arabic (default)"
+msgstr "1   arabic (por defecto)"
+
+#: resource\xrc\xrc_strings_output.h:374
+msgid "A   uppercase alpha"
+msgstr "A   Mayúscula alpha"
+
+#: resource\xrc\xrc_strings_output.h:375
+msgid "a   lowercase alpha"
+msgstr "a   Minúscula alpha"
+
+#: resource\xrc\xrc_strings_output.h:376
+msgid "I   uppercase roman"
+msgstr "I   Mayúscula roman"
+
+#: resource\xrc\xrc_strings_output.h:377
+msgid "i   lowecase roman"
+msgstr "i   Minúscula roman"
+
+#: resource\xrc\xrc_strings_output.h:378
+msgid "Specifiy start number:"
+msgstr "Especificar número de comienzo:"
+
+#: resource\xrc\xrc_strings_output.h:379
+msgid "Starting at:"
+msgstr "Comenzar en:"
+
+#: resource\xrc\xrc_strings_output.h:384
+#, fuzzy
+msgid "Inclusion/Exclusion Lists"
+msgstr "Listas de exclusión"
+
+#: resource\xrc\xrc_strings_output.h:385
+#, fuzzy
+msgid "Website URLs"
+msgstr "Dirección web (URL):"
+
+#: resource\xrc\xrc_strings_output.h:386 resource\xrc\xrc_strings_output.h:390
+msgid "Add.."
+msgstr "Añadir..."
+
+#: resource\xrc\xrc_strings_output.h:387 resource\xrc\xrc_strings_output.h:391
+msgid "Edit..."
+msgstr "Editar..."
+
+#: resource\xrc\xrc_strings_output.h:388 resource\xrc\xrc_strings_output.h:392
+msgid "Delete"
+msgstr "Borrar"
+
+#: resource\xrc\xrc_strings_output.h:389
+#, fuzzy
+msgid "File extensions"
+msgstr "Extensión del fichero"
+
+#: resource\xrc\xrc_strings_output.h:396
+#, fuzzy
+msgid "Edit inclusion/exclusion list item"
+msgstr "Editar objeto de lista de exclusión"
+
+#: resource\xrc\xrc_strings_output.h:397
+msgid "Item:"
+msgstr ""
+
+#: resource\xrc\xrc_strings_output.h:398
+msgid "Action:"
+msgstr "Acción:"
+
+#: resource\xrc\xrc_strings_output.h:399
+msgid "Exclude this item"
+msgstr "Excluir este objeto:"
+
+#: resource\xrc\xrc_strings_output.h:400
+msgid "Include this item"
+msgstr "Incluir este objeto:"
+
+#: resource\xrc\xrc_strings_output.h:401
+msgid "Priority:"
+msgstr "Prioridad:"
+
+#: resource\xrc\xrc_strings_output.h:405
+msgid "&File"
+msgstr "&Fichero"
+
+#: resource\xrc\xrc_strings_output.h:406
+msgid "&Add a new channel..."
+msgstr "&Añadir nuevo canal..."
+
+#: resource\xrc\xrc_strings_output.h:408
+msgid "Add a new channel using &wizard..."
+msgstr "Añadir nuevo canal usando el &asistente..."
+
+#: resource\xrc\xrc_strings_output.h:409 resource\xrc\xrc_strings_output.h:451
+#: resource\xrc\xrc_strings_output.h:467
+msgid "Add a new channel using the Add New Channel Wizard"
+msgstr "Añadir nuevo canal usando el Asistente para nuevo canal"
+
+#: resource\xrc\xrc_strings_output.h:410
+msgid "&Configure selected channel..."
+msgstr "&Configurar canal seleccionado..."
+
+#: resource\xrc\xrc_strings_output.h:411 resource\xrc\xrc_strings_output.h:453
+#: resource\xrc\xrc_strings_output.h:469
+msgid "Configure channel settings for the selected channel"
+msgstr "Configurar opciones para el canal seleccionado"
+
+#: resource\xrc\xrc_strings_output.h:412
+msgid "&Delete selected channels"
+msgstr "&Borrar canales seleccionados"
+
+#: resource\xrc\xrc_strings_output.h:413 resource\xrc\xrc_strings_output.h:455
+#: resource\xrc\xrc_strings_output.h:471
+msgid "Delete the selected channels"
+msgstr "Borrar canales seleccionados"
+
+#: resource\xrc\xrc_strings_output.h:414
+msgid "E&xit"
+msgstr "S&alir"
+
+#: resource\xrc\xrc_strings_output.h:415
+#, fuzzy
+msgid "Exit the application"
+msgstr "¿Salir del Asistente?"
+
+#: resource\xrc\xrc_strings_output.h:416
+msgid "&Import/Export"
+msgstr "&Importar/Exportar"
+
+#: resource\xrc\xrc_strings_output.h:417
+msgid "Paste &URL as new channel..."
+msgstr "Pegar &URL como nuevo canal..."
+
+#: resource\xrc\xrc_strings_output.h:418
+msgid "Paste a URL from the clipboard as a new channel"
+msgstr "Pegar URL de el portapapeles como nuevo canal"
+
+#: resource\xrc\xrc_strings_output.h:419
+msgid "Paste files as &separate new channels..."
+msgstr "Pegar ficheros como canales &separados..."
+
+#: resource\xrc\xrc_strings_output.h:420
+msgid "Paste files from the clipboard using a new channel for each file"
+msgstr ""
+"Pegar ficheros de el portapapeles usando un nuevo canal para cada fichero"
+
+#: resource\xrc\xrc_strings_output.h:421
+msgid "&Update"
+msgstr "&Actualizar"
+
+#: resource\xrc\xrc_strings_output.h:422
+msgid "Update &selected channels"
+msgstr "Actualizar canales &seleccionados"
+
+#: resource\xrc\xrc_strings_output.h:423 resource\xrc\xrc_strings_output.h:457
+#: resource\xrc\xrc_strings_output.h:473
+msgid "Update the selected channels"
+msgstr "Actualizar los canales seleccionados"
+
+#: resource\xrc\xrc_strings_output.h:424
+msgid "Update all &due channels"
+msgstr "Actualizar todos los canales pendientes"
+
+#: resource\xrc\xrc_strings_output.h:425 resource\xrc\xrc_strings_output.h:459
+#: resource\xrc\xrc_strings_output.h:475
+msgid "Update all channels that are currently due"
+msgstr "Actualizar todos los canales que estan previstos"
+
+#: resource\xrc\xrc_strings_output.h:426
+msgid "Update &all channels"
+msgstr "Actualizar &todos los canales"
+
+#: resource\xrc\xrc_strings_output.h:428
+msgid "&Options"
+msgstr "&Opciones"
+
+#: resource\xrc\xrc_strings_output.h:429
+msgid "&Preferences..."
+msgstr "&Preferencias"
+
+#: resource\xrc\xrc_strings_output.h:430 resource\xrc\xrc_strings_output.h:463
+#: resource\xrc\xrc_strings_output.h:479
+msgid "Set interface, autoupdate, proxy, spidering, and other behaviours"
+msgstr ""
+"Ajustar interfaz, auto-actualizar, proxy, Tejido, y otros comportamientos"
+
+#: resource\xrc\xrc_strings_output.h:431
+msgid "Set &default configuration for new channels..."
+msgstr "Ajustar configuración por &defecto para nuevos canales..."
+
+#: resource\xrc\xrc_strings_output.h:432
+msgid "Change the default values used in newly created channels"
+msgstr "Cambiar los valores por defecto para los canales nuevos."
+
+#: resource\xrc\xrc_strings_output.h:433
+msgid "&Install handheld viewer software..."
+msgstr "&Instalar el visor para el dispositivo..."
+
+#: resource\xrc\xrc_strings_output.h:434
+#, fuzzy
+msgid "Reinstall the viewer software and manual to the handheld"
+msgstr "Reinstalar visor de Plucker y el manual en el dispositivo."
+
+#: resource\xrc\xrc_strings_output.h:435
+msgid "Rerun &setup wizard..."
+msgstr "Volver a ejecutar asistente de &instalación..."
+
+#: resource\xrc\xrc_strings_output.h:436
+msgid "Runs the first-start setup wizard to set up the proxy, etc"
+msgstr "Ejecuta la primera configuración para ajustar el proxy, etc"
+
+#: resource\xrc\xrc_strings_output.h:437
+msgid "&Help"
+msgstr "&Ayuda"
+
+#: resource\xrc\xrc_strings_output.h:438
+msgid "&Help contents..."
+msgstr "&Contenidos de la Ayuda"
+
+#: resource\xrc\xrc_strings_output.h:439
+msgid "Display contents of the help"
+msgstr ""
+
+#: resource\xrc\xrc_strings_output.h:440
+msgid "Help on using &this dialog..."
+msgstr "Ayuda para usar &este diálogo..."
+
+#: resource\xrc\xrc_strings_output.h:441
+msgid "Display help on how to use this main dialog"
+msgstr "Mostrar ayuda para usar este diálogo principal"
+
+#: resource\xrc\xrc_strings_output.h:442
+msgid "&Search help..."
+msgstr "&Buscar Ayuda..."
+
+#: resource\xrc\xrc_strings_output.h:443
+#, fuzzy
+msgid "Search the help for a keyword"
+msgstr "Buscar palabar clave en Ayuda"
+
+#: resource\xrc\xrc_strings_output.h:444
+msgid "&Tip of the day"
+msgstr "&Consejo del dia"
+
+#: resource\xrc\xrc_strings_output.h:445
+#, fuzzy
+msgid "Show a tip of the day"
+msgstr "Sugerencia del día"
+
+#: resource\xrc\xrc_strings_output.h:447
+msgid "Display version number and copyright notice"
+msgstr "Mostrar número de versión y copyright"
+
+#: resource\xrc\xrc_strings_output.h:462 resource\xrc\xrc_strings_output.h:478
+msgid "Preferences..."
+msgstr "Preferencias..."
+
+#: resource\xrc\xrc_strings_output.h:480
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: resource\xrc\xrc_strings_output.h:481
+msgid "Interface"
+msgstr "Interfaz"
+
+#: resource\xrc\xrc_strings_output.h:482
+msgid "Internationalization"
+msgstr "Internacionalización"
+
+#: resource\xrc\xrc_strings_output.h:483
+msgid "Translate interface into the local language"
+msgstr "Traducir interfaz a idioma local"
+
+#: resource\xrc\xrc_strings_output.h:484
+msgid "Autodetect language (recommended)"
+msgstr "Autodetectar idioma (recomendado)"
+
+#: resource\xrc\xrc_strings_output.h:485
+msgid "Force a specific language:"
+msgstr "Forzar idioma especificado"
+
+#: resource\xrc\xrc_strings_output.h:486
+msgid "Choose language..."
+msgstr "Elegir idioma..."
+
+#: resource\xrc\xrc_strings_output.h:487
+msgid "Look and feel"
+msgstr "Estilo"
+
+#: resource\xrc\xrc_strings_output.h:488
+msgid "Show toolbar:"
+msgstr "Mostrar barra de herramientas"
+
+#: resource\xrc\xrc_strings_output.h:489
+msgid "Default style"
+msgstr "Estilo por defecto"
+
+#: resource\xrc\xrc_strings_output.h:490
+msgid "Default high-colour style"
+msgstr "Muchos colores por defecto"
+
+#: resource\xrc\xrc_strings_output.h:491
+msgid "Show statusbar"
+msgstr "Mostrar barra de estatus"
+
+#: resource\xrc\xrc_strings_output.h:492
+msgid "Dialog placement:"
+msgstr "Colocación del diálogo:"
+
+#: resource\xrc\xrc_strings_output.h:493
+msgid "Center on screen"
+msgstr "Centrar en pantalla"
+
+#: resource\xrc\xrc_strings_output.h:494
+msgid "Center on parent dialog"
+msgstr "Centrar en diálogo padre"
+
+#: resource\xrc\xrc_strings_output.h:495
+msgid "My previous location"
+msgstr "Mi anterior ubicación"
+
+#: resource\xrc\xrc_strings_output.h:496
+msgid "Startup"
+msgstr "Inicio"
+
+#: resource\xrc\xrc_strings_output.h:497
+msgid "Show daily tips on startup:"
+msgstr "Mostrar consejos del día en inicio:"
+
+#: resource\xrc\xrc_strings_output.h:498
+msgid "Show splash screen on startup"
+msgstr "Mostrar pantalla de inicio al arrancar"
+
+#: resource\xrc\xrc_strings_output.h:499
+msgid "Autoupdate"
+msgstr "Auto-actualizar"
+
+#: resource\xrc\xrc_strings_output.h:500
+msgid "Channel autoupdate mode"
+msgstr "Modo de auto-actualización del canal"
+
+#: resource\xrc\xrc_strings_output.h:501
+msgid ""
+"Never autoupdate. Only update when I click one of the 'Update Channels' "
+"buttons"
+msgstr "Nunca auto-actualizar. Sólo actualizar cuando seleccione uno de los botones de ´Actualizar Canales´"
+
+#: resource\xrc\xrc_strings_output.h:502
+msgid "Autoupdate any channel as soon as it becomes due"
+msgstr "Auto-actualizar cualquier canal tan pronto como este previsto"
+
+#: resource\xrc\xrc_strings_output.h:503
+msgid "Off-peak mode: defer autoupdates until the current time is between:"
+msgstr "Modo-Off: aplazar auto-actualizaciones hasta que la hora actual esté entre:"
+
+#: resource\xrc\xrc_strings_output.h:504 resource\xrc\xrc_strings_output.h:529
+msgid "0000 / 12:00 AM"
+msgstr "0000 / 12:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:505 resource\xrc\xrc_strings_output.h:530
+msgid "0100 / 1:00 AM"
+msgstr "0100 / 1:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:506 resource\xrc\xrc_strings_output.h:531
+msgid "0200 / 2:00 AM"
+msgstr "0200 / 2:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:507 resource\xrc\xrc_strings_output.h:532
+msgid "0300 / 3:00 AM"
+msgstr "0300 / 3:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:508 resource\xrc\xrc_strings_output.h:533
+msgid "0400 / 4:00 AM"
+msgstr "0400 / 4:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:509 resource\xrc\xrc_strings_output.h:534
+msgid "0500 / 5:00 AM"
+msgstr "0500 / 5:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:510 resource\xrc\xrc_strings_output.h:535
+msgid "0600 / 6:00 AM"
+msgstr "0600 / 6:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:511 resource\xrc\xrc_strings_output.h:536
+msgid "0700 / 7:00 AM"
+msgstr "0700 / 7:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:512 resource\xrc\xrc_strings_output.h:537
+msgid "0800 / 8:00 AM"
+msgstr "0800 / 8:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:513 resource\xrc\xrc_strings_output.h:538
+msgid "0900 / 9:00 AM"
+msgstr "0900 / 9:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:514 resource\xrc\xrc_strings_output.h:539
+msgid "1000 / 10:00 AM"
+msgstr "1000 / 10:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:515 resource\xrc\xrc_strings_output.h:540
+msgid "1100 / 11:00 AM"
+msgstr "1100 / 11:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:516 resource\xrc\xrc_strings_output.h:541
+msgid "1200 / 12:00 PM"
+msgstr "1200 / 12:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:517 resource\xrc\xrc_strings_output.h:542
+msgid "1300 / 1:00 PM"
+msgstr "1300 / 1:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:518 resource\xrc\xrc_strings_output.h:543
+msgid "1400 / 2:00 PM"
+msgstr "1400 / 2:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:519 resource\xrc\xrc_strings_output.h:544
+msgid "1500 / 3:00 PM"
+msgstr "1500 / 3:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:520 resource\xrc\xrc_strings_output.h:545
+msgid "1600 / 4:00 PM"
+msgstr "1600 / 4:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:521 resource\xrc\xrc_strings_output.h:546
+msgid "1700 / 5:00 PM"
+msgstr "1700 / 5:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:522 resource\xrc\xrc_strings_output.h:547
+msgid "1800 / 6:00 PM"
+msgstr "1800 / 6:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:523 resource\xrc\xrc_strings_output.h:548
+msgid "1900 / 7:00 PM"
+msgstr "1900 / 7:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:524 resource\xrc\xrc_strings_output.h:549
+msgid "2000 / 8:00 PM"
+msgstr "2000 / 8:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:525 resource\xrc\xrc_strings_output.h:550
+msgid "2100 / 9:00 PM"
+msgstr "2100 / 9:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:526 resource\xrc\xrc_strings_output.h:551
+msgid "2200 / 10:00 PM"
+msgstr "2200 / 10:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:527 resource\xrc\xrc_strings_output.h:552
+msgid "2300 / 11:00 PM"
+msgstr "2300 / 11:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:528
+msgid "and"
+msgstr "y"
+
+#: resource\xrc\xrc_strings_output.h:553
+msgid "Autoupdate any due channels each time I press my handheld's sync button"
+msgstr "Auto-actualizar cualquier canal previsto cada vez que presione el botón de sincronizar del dispositivo"
+
+#: resource\xrc\xrc_strings_output.h:554
+msgid "Advanced"
+msgstr "Avanzado"
+
+#: resource\xrc\xrc_strings_output.h:555
+msgid "Precision: compare current time to channels' due time every "
+msgstr "Precisión: comparar la hora actual con los canales previstos cada"
+
+#: resource\xrc\xrc_strings_output.h:556
+msgid "minutes"
+msgstr "minutos"
+
+#: resource\xrc\xrc_strings_output.h:558
+msgid "Spidering status display"
+msgstr "Estado del Tejido de enlaces"
+
+#: resource\xrc\xrc_strings_output.h:559
+msgid "Show spider progress with:"
+msgstr "Mostrar el progreso de procesado de enlaces con:"
+
+#: resource\xrc\xrc_strings_output.h:560
+msgid "A console window"
+msgstr "Una ventana de consola"
+
+#: resource\xrc\xrc_strings_output.h:561
+msgid "A progress dialog"
+msgstr "Un diálogo de progreso"
+
+#: resource\xrc\xrc_strings_output.h:562
+msgid "Auto-close progress when done:"
+msgstr "Auto-cerrar progreso cuando acabe:"
+
+#: resource\xrc\xrc_strings_output.h:563
+msgid "Always"
+msgstr "Siempre"
+
+#: resource\xrc\xrc_strings_output.h:564
+msgid "If no errors occurred"
+msgstr "Si no hubo errores"
+
+#: resource\xrc\xrc_strings_output.h:567
+msgid "Execute command before spidering a group of channels:"
+msgstr "Ejecutar comando antes de Tejer enlaces de un grupo de canales:"
+
+#: resource\xrc\xrc_strings_output.h:568
+msgid "Execute command after spidering a group of channels:"
+msgstr "Ejecutar comando después de Tejer enlaces de un grupo de canales:"
+
+#: resource\xrc\xrc_strings_output.h:569
+#, fuzzy
+msgid "Inclusion/exclusion lists"
+msgstr "Listas de exclusión"
+
+#: resource\xrc\xrc_strings_output.h:570
+#, fuzzy
+msgid "Edit shared inclusion/exclusion list (used by all channels)..."
+msgstr "Editar listas de exclusión compartidas (usadas por todos los canales)..."
+
+#: resource\xrc\xrc_strings_output.h:573
+#, fuzzy
+msgid "Use the application's built-in HTML editor"
+msgstr "Usar editor de HTML de Plucker Desktop"
+
+#: resource\xrc\xrc_strings_output.h:574
+msgid "Use an external HTML editor:"
+msgstr "Usar editor HTML Externo"
+
+#: resource\xrc\xrc_strings_output.h:575
+msgid "Choose..."
+msgstr "Elija..."
+
+#: resource\xrc\xrc_strings_output.h:576
+msgid "Built-in editor options"
+msgstr "Opciones del editor incorporado"
+
+#: resource\xrc\xrc_strings_output.h:577
+msgid "Toolbar complexity:"
+msgstr "Complejidad de la barra de herramientas:"
+
+#: resource\xrc\xrc_strings_output.h:578
+msgid "Basic (insert hyperlink only)"
+msgstr "Básica (insertar sólo hiperenlaces)"
+
+#: resource\xrc\xrc_strings_output.h:579
+msgid "Complete (full toolbar set)"
+msgstr "Completa (todas las opciones)"
+
+#: resource\xrc\xrc_strings_output.h:580
+msgid "Insert linefeeds after text generated by toolbar buttons"
+msgstr ""
+"Insertar linea en blanco despues del texto de los botones de la barra de "
+"herramientas"
+
+#: resource\xrc\xrc_strings_output.h:581 resource\xrc\xrc_strings_output.h:603
+msgid "Showcase"
+msgstr "Biblioteca"
+
+#: resource\xrc\xrc_strings_output.h:582
+#, fuzzy
+msgid "Showcase options"
+msgstr "Opciones del programa"
+
+#: resource\xrc\xrc_strings_output.h:583
+msgid "Showcase dialog layout:"
+msgstr "Diseño del diálogo de la Biblioteca:"
+
+#: resource\xrc\xrc_strings_output.h:584
+msgid "Horizontal layout"
+msgstr "Disposición horizontal"
+
+#: resource\xrc\xrc_strings_output.h:585
+msgid "Vertical layout"
+msgstr "Disposición vertical"
+
+#: resource\xrc\xrc_strings_output.h:586
+msgid "Fields to use in my channel:"
+msgstr "Campos para usar en Mi Canal"
+
+#: resource\xrc\xrc_strings_output.h:587
+msgid "Name and URL only"
+msgstr "Nombre y URL únicamente"
+
+#: resource\xrc\xrc_strings_output.h:588
+msgid "All possible fields"
+msgstr "Todos los campos posibles"
+
+#: resource\xrc\xrc_strings_output.h:589
+msgid "Choose fields to display in details pane..."
+msgstr "Elija campos para mostrar en el panel de detalles de la Biblioteca..."
+
+#: resource\xrc\xrc_strings_output.h:590
+msgid "Include images in channel previews (takes a longer time)"
+msgstr "Incluir imágenes en las vistas previas (lleva mas rato)"
+
+#: resource\xrc\xrc_strings_output.h:591
+msgid "Proxy"
+msgstr "Proxy"
+
+#: resource\xrc\xrc_strings_output.h:593
+msgid "Use a proxy to access the Internet"
+msgstr "Usar un proxy para acceder a internet"
+
+#: resource\xrc\xrc_strings_output.h:604
+msgid "Show live preview"
+msgstr "Mostrar vista previa conectado"
+
+#: resource\xrc\xrc_strings_output.h:605
+msgid "Show details"
+msgstr "Mostrar detalles"
+
+#: resource\xrc\xrc_strings_output.h:609
+msgid "Launching..."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:16
+#, fuzzy
+msgid ""
+"<b>plkrAPPLICATION_SUITE_NAME</b> is a software suite that saves websites of "
+"your choice on your handheld. <b>plkrAPPLICATION_DESKTOP_NAME</b> is the "
+"program that handles the selection of websites that you want sent when you "
+"HotSync. You can then use the <b>plkrAPPLICATION_SUITE_NAME Viewer</b> to "
+"browse on your handheld."
+msgstr "<b>Plucker</b> es un programa para guardar sitios web de su elección en su dispositivo de mano. <b>Plucker Desktop</b> es el programa que maneja la selección de sitios web que quiere enviar al dispositivo cuando realice HotSync. Puede usar el <b>Visor Plucker</b> para navegarlos en su dispositivo."
+
+#: resource\strings_tips\tips.txt:17
+#, fuzzy
+msgid ""
+"You can get help in plkrAPPLICATION_DESKTOP_NAME by selecting <b>Help &gt; "
+"Help contents...</b> from the menubar. All other dialogs have a <b>Help</b> "
+"button in the lower left-corner, which can be clicked to learn about the "
+"current options on that dialog. You can also hover over toobar buttons and "
+"menuitems in the main dialog, and a short help message will be displayed in "
+"the bottom status bar area."
+msgstr "Puede obtener ayuda sobre Plucker Desktop seleccionando <b>Ayuda &gt; Contenidos de la ayuda...</b> de la barra de menú. Todos los demás diálogos tienen un botón de <b>Ayuda</b> en la esquina inferior izquierda, el cual puede ser pulsado para obtener información sobre dicha ventana. Adicionalmente puede mantener el cursor del ratón sobre los botones de la barra de herramientas y opciones de los menús en el diálogo principal para obtener un breve mensaje de ayuda que se mostrará en la barra de estatus localizada en la parte inferior de la ventana."
+
+#: resource\strings_tips\tips.txt:18
+#, fuzzy
+msgid ""
+"If you missed something during the installation, you can always get it back "
+"by clicking the <b>Options</b> menu, then on <b>Rerun setup wizard</b>."
+msgstr "Si durante la instalación se saltó algun paso, siempre puede volver a ella haciendo click en el menú <b>Opciones</b>, y seguidamente en <b>Volver a ejecutar asistente de &instalación...</b>"
+
+#: resource\strings_tips\tips.txt:19
+#, fuzzy
+msgid ""
+"If your handheld doesn't have the plkrAPPLICATION_SUITE_NAME Viewer program "
+"installed on it, is missing the manual, or if the plkrAPPLICATION_SUITE_NAME "
+"Viewer program stops working, you can reinstall it all by clicking the "
+"<b>Options</b> menu, then on <b>Install handheld viewer software</b>."
+msgstr "Si su dispositivo de mano no tiene el Visor Plucker instalado, ha perdido el manual o simplemente el Visor Plucker ha dejado de funcionar, puede volver a instalarlo haciendo click en el menú <b>Opciones</b>, y seguidamente en <b>Instalar el visor para el dispositivo...</b>"
+
+#: resource\strings_tips\tips.txt:20
+msgid ""
+"You can add a website by creating a <b>channel</b>. Channels contain "
+"information such as the home page of the website, the number of links that "
+"you will be able to click on, and the number of colors shown in pictures."
+msgstr "Puede añadir un sitio web creando un <b>canal</b>. Los canales contienen información tal como la página principal de el sitio web, el número de enlaces que quiere poder utilizar o el número de colores que se utiliza para las imágenes."
+
+#: resource\strings_tips\tips.txt:21
+msgid ""
+"You can configure a channel by <b>right</b>-clicking on it in your list of "
+"channels, then selecting <b>Configure selected channel</b>."
+msgstr "Puede configurar un canal haciendo click con el botón <b>derecho</b> en el en la lista de canales, y seguidamente seleccionando <b>Configurar canal seleccionado</b>"
+
+#: resource\strings_tips\tips.txt:22
+#, fuzzy
+msgid ""
+"You can change how often a channel is updated by selecting a channel in the "
+"list, clicking the <b>Configure selected channel</b> toolbutton or menuitem, "
+"and setting the controls on the <b>Scheduling</b> tab."
+msgstr "Puede especificar con que frecuencia quiere que un determinado canal se actualize seleccionandolo en la lista, haciendo click en el botón de la barra de herramientas <b>Configurar canal seleccionado</b>, y en el cuadro de diálogo especificar las opciones en <b>Planificación</b>"
+
+#: resource\strings_tips\tips.txt:23
+#, fuzzy
+msgid ""
+"plkrAPPLICATION_DESKTOP_NAME's job is often referred to as <b>spidering</b> "
+"a website. That is why when you update a channel it says that it is "
+"\"Initializing plkrAPPLICATION_SUITE_NAME spidering engine.\""
+msgstr "Normalmente nos referiremos a el trabajo de Plucker Desktop como <b>Tejer</b> un sitio web. Este es el motivo por el cual cuando actualizamos un canal obtenemos el mensaje \"Inicializando el motor de Plucker de Tejido de canales\"(Nota del traductor:  El término empleado en la versión original es \"Spidering\". A falta de uno mejor, he decidido usar Tejer por su semejanza con la acción realizada)"
+
+#: resource\strings_tips\tips.txt:24
+msgid ""
+"Many of the most-commonly used dialogs are resizable.  If you have a high "
+"resolution monitor, drag the dialog corner to increase the dialog size. Your "
+"new size will be saved automatically."
+msgstr "Muchos de los diálogos usados asiduamente pueden ser modificados de tamaño facilmente. Si dispone de un monitor de alta resolución, pinche y arrastre en cualquiera de las esquinas del diálogo para modificar su tamaño. Las nuevas dimensiones se salvaran automaticamente."
+
+#: resource\strings_tips\tips.txt:25
+msgid ""
+"If you are using a proxy to access to the internet, don't forget to include "
+"the <b><tt>http:</tt></b> at the start of the proxy address setting. For "
+"example it should be something like <b><tt>http://proxy.aol.com</tt></b>. If "
+"you put just <b><tt>proxy.aol.com</tt></b>, it won't work."
+msgstr "Si está utilizando un proxy para acceder a internet, no olvide incluir <b><tt>http:</tt></b> al comienzo de la dirección del mismo. Por ejemplo, si debiera ser algo como <b><tt>http://proxy.aol.com</tt></b>, si simplemente pone <b><tt>proxy.aol.com</tt></b> no funcionará."
+
+#: resource\strings_tips\tips.txt:26
+msgid ""
+"You can add a new channel quickly by clicking the <b>Add Channel Wizard</b> "
+"button."
+msgstr "Puede añadir un nuevo canal rápidamente haciendo click en el botón  <b>Asistente para Añadir Nuevo Canal</b>"
+
+#: resource\strings_tips\tips.txt:27
+msgid ""
+"A <b>channel name</b> has a maximum length of <b>26</b> characters (a PalmOS "
+"restriction)."
+msgstr "Un <b>Nombre de Canal</b> tiene un máximo de <b>26</b> caracteres (Esto es una restricción de PalmOS)."
+
+#: resource\strings_tips\tips.txt:28
+#, fuzzy
+msgid ""
+"There is a showcase of ready-to-go plkrAPPLICATION_SUITE_NAME channels.  "
+"When adding a channel just click the <b>Browse showcase...</b> button and "
+"you can pick one out."
+msgstr "Plucker incorpora una Biblioteca con sitios webs listos para ser utilizados. Cuando añada un canal, simplemente haga click en el botón <b>Navegar Biblioteca...</b> y seleccione uno."
+
+#: resource\strings_tips\tips.txt:29
+msgid ""
+"There is a version of the handheld veiwer specially built for high "
+"resolution devices.  If you have a high resolution device, you can choose to "
+"install the high resolution viewer. To install the high resolution viewer, "
+"from the menu select <b>Options &gt; Install Handheld Software</b>, and "
+"enter it in the <b>Type of Handheld Device</b>."
+msgstr "Existe una versión del Visor de Plucker especialmente diseñada para dispositivos de alta resolución. Si usted dispone de uno, puede elegir instalarlo desde el menú <b>Opciones &gt; Instalar el visor para el dispositivo</b>, y especificandolo en <b>Tipo de dispositivo.</b>."
+
+#: resource\strings_tips\tips.txt:30
+#, fuzzy
+msgid ""
+"Want to download some literature to read in plkrAPPLICATION_SUITE_NAME "
+"format? Visit <b><u>www.pluckerbooks.com</u></b> and browse the hundreds of "
+"selections by title or author."
+msgstr "¿Quiere descargar libros para leer en el formato Plucker? Visite <b><u>www.pluckerbooks.com</u></b> y navegue por cientos de selecciones ordenadas por título y autor."
+
+#: resource\strings_tips\tips.txt:31
+#, fuzzy
+msgid ""
+"plkrAPPLICATION_SUITE_NAME is available in many translations. At any time, "
+"you can switch the language of the plkrAPPLICATION_DESKTOP_NAME program, and "
+"also install a different language for the handheld's Viewer."
+msgstr "Plucker está disponible en bastante idiomas. En cualquier momento puede cambiar el idioma de Plucker Desktop, e incluso instalar un visor para el dispositivo en un lenguaje diferente."
+
+#: resource\strings_tips\tips.txt:32
+msgid ""
+"Using exclusion lists can remove unwanted banners ads and unwanted filetypes "
+"from being downloaded onto your handheld."
+msgstr "Usando listas de exclusión puede eliminar publicidad de las páginas y tipos de fichero no deseados para que no se descarguen a su dispositivo."
+
+#: resource\strings_tips\tips.txt:33
+#, fuzzy
+msgid ""
+"Have a special photo you want to view on your handheld? You can use "
+"plkrAPPLICATION_SUITE_NAME to convert it to your handheld. "
+"plkrAPPLICATION_SUITE_NAME supports images in .jpg, .gif, .bmp and .png "
+"formats."
+msgstr "¿Tiene una foto especial que quiera visualizar en su dispositivo? Puede usar Plucker para llevarla en su PDA. Plucker soporta imágenes en .jpg, .gif, .bmp y .png."
+
+#: resource\strings_tips\tips.txt:34
+#, fuzzy
+msgid ""
+"Need some assistance from fellow plkrAPPLICATION_SUITE_NAME users, or wish "
+"to help others out? Read and search our mailing lists at <b><u>http://lists."
+"rubberchicken.org</u></b>. To ask a question to the mailing list, subscribe "
+"to the list (when you subscribe you can opt to not have the messages sent to "
+"you). Once subscribed, you can ask and answer questions on <b><u>plucker-"
+"list@rubberchicken.org</u></b>."
+msgstr "¿Necesita ayuda de la comunidad de usuarios de Plucker o simplemente desea echar una mano? Lea y busque en las listas de correo en <u>http://lists.rubberchicken.org</u></b>. Para formular una pregunta en la lista de correo, debe subscribirse primero. (puede optar por no recibir los mensajes) Una vez subscrito, puede preguntar y responder en <b><u>plucker-list@rubberchicken.org</u></b>."
+
+#: resource\strings_tips\tips.txt:35
+msgid ""
+"Looking for some more handheld-friendly sites, beyond what is in the "
+"showcase? You can look through a Wiki-based listing at <b><u>http://openurls."
+"plkr.org</u></b>."
+msgstr "¿Busca más sitios listos para usar en Plucker aparte de los que puede encontrar en la Biblioteca? Eche un vistazo al catálogo Wiki en <b><u>http://openurls.plkr.org</u></b>."
+
+#: resource\strings_tips\tips.txt:36
+msgid ""
+"Under Linux/GTK, the help window is modal. Close the help window to return "
+"to your dialog."
+msgstr "Bajo Linux/GTK, la ventana de ayuda es modal. Cierre la ventana de ayuda para volver al diálogo."
+
+#: resource\strings_tips\tips.txt:37
+#, fuzzy
+msgid ""
+"You can run plkrAPPLICATION_DESKTOP_NAME with commandline parameters. This "
+"allows you to set up a job whereby plkrAPPLICATION_DESKTOP_NAME starts, "
+"update channels, and then automatically ends. See the online help for "
+"details, or execute the program with a <b>--help</b> for a short usage "
+"summary"
+msgstr "Puede usar Plucker Desktop empleando parámetros de linea de comandos. Esto permite activar una tarea por la cual Plucker Desktop comienza, actualiza canales y automaticamente finaliza. Eche un vistazo a la ayuda online para más detalles, o ejecute el comando <b>plucker-desktop --help</b> para un breve sumario."
+
+#: resource\strings_tips\tips.txt:38
+msgid ""
+"If you are using a url pattern limit or an exclusion of a url that has a <b>?"
+"</b> in the URL, then you need to properly escape the <b>?</b> as it is a "
+"special character in regular expressions. For example, you need to escape "
+"the URL <b>http://mysite.org/index.shtml?login=tjohnston</b> as <b>http://"
+"mysite\\.org/index\\.shtml?login=tjohnston</b>"
+msgstr "Si está utilizando un patrón de limitación o exclusion para una url, y esta contiene el carácter <b>?</b>, necesita incluirlo correctamente ya que es un carácter especial en expresiones regulares. Por ejemplo, para la dirección <b>http://mysite.org/index.shtml?login=tjohnston</b>, una vez modificada deberia quedar asi <b>http://mysite\\.org/index\\.shtml?login=tjohnston</b>"
+
+#: resource\strings_tips\tips.txt:39
+#, fuzzy
+msgid ""
+"If you are unfamiliar with using regular expressions (for exclusions), in "
+"the online help, there is a short, one page summary of regular expression "
+"syntax that is most relevant to plkrAPPLICATION_SUITE_NAME."
+msgstr ""
+"En la ayuda online, hay un corto sumario de las expresiones regulares mas "
+"relevantes de Plucker."
+
+#: resource\strings_tips\tips.txt:40
+#, fuzzy
+msgid ""
+"You can switch on a full toolset for the built-in HTML editor to have one-"
+"click access to all plkrAPPLICATION_SUITE_NAME-supported HTML tags and "
+"parameters. Turn it on in <b>Preferences dialog &gt; HTML editor tab &gt; "
+"Toolbar complexity</b>."
+msgstr "Puede activar un completo conjunto de botones en el editor HTML incorporado en Plucker para acceder con un sólo clock a todas las etiquetas y parámetros disponibles. Activelo en <b>Preferencias &gt; Etiqueta Editor HTML &gt; Conplejidad de la barra de herramientas/b>."
+
+#: resource\strings_tips\tips.txt:41
+msgid ""
+"There is two sets of exclusion lists: an exclusion that applies to all "
+"channels <b>Preferences dialog &gt; Spidering tab</b> and the exclusion list "
+"specifically for that channel <b>Configure channel dialog &gt; Limits tab</"
+"b>."
+msgstr "Hay dos conjuntos de listas de exclusión: uno se aplica a todos los canales <b>Preferencias &gt; Tejido de Enlaces</b>"
+
+#: resource\strings_tips\tips.txt:42
+#, fuzzy
+msgid ""
+"You can use plkrAPPLICATION_SUITE_NAME to retrieve a password protected site "
+"(ie one where your webbrowser pop ups up a dialog prompting for username and "
+"password) by including your username/password in the starting url. The "
+"format is: <b><tt>http://myusername:mypassword@www.somewebsite.com</tt></b>. "
+"Be aware that your username and password will now be included in the "
+"referring page if you go offsite, so to maintain security, be sure that "
+"stayonhost or stayondomain is switched on."
+msgstr "Puede usar Plucker para recuperar un sitio web protegido por contraseña (por ejemplo, uno en el cual su navegador active una ventana pidiendole un nombre de usuario y una contraseña) incluyendo el nombre de usuario / contraseña en la direccion de comienzo. El formato sería: <b><tt>http://usuario:contraseña@www.algunapágina.com</tt></b>. Tenga presente que el nombre de usuario y la contraseña serán incluidos en el la página referente si sale fuera del sitio, por lo tanto, para mantener su seguridad, asegurese de que Permanecer en Servidor Principal o Permanecer en Dominio estan activadas."
+
+#: resource\strings_tips\tips.txt:43
+msgid ""
+"You can switch between displaying channel update progress in a console "
+"window or an update dialog. It can be changed in the <b>Preferences dialog "
+"&gt; Spidering tab</b>."
+msgstr "Puede alternar entre mostrar el progreso de actualización en una ventana de consola o un diálogo de actualización. Puede cambiar esto en <b>Preferencias &gt; Tejido de Enlaces</b>"
+
+#: resource\strings_tips\tips.txt:44
+msgid ""
+"The <b><tt>plucker://</tt></b> protocol specifies a file location in "
+"relation to the home plucker directory."
+msgstr "El protocolo b><tt>plucker://</tt></b> especifica la localización de un fichero en relaccion a el directorio principal de Plucker."
+
+#: resource\strings_tips\tips.txt:45
+msgid ""
+"There are two ways of securing a document: you can turn off beaming, and you "
+"can encode the file with an ID that must match the handheld's owner id, in "
+"order to be read."
+msgstr "Hay dos formas de proteger un documento: puede desactivar la opción de envio mediante IR o puede codificar el fichero con un número de identificación que debe ser igual al del dispositivo de mano para poder ser leido."
+
+#: resource\strings_tips\tips.txt:46
+msgid ""
+"In the HTML editor, if using the advanced toolbar, you can select a portion "
+"of text and then hit the desired toolbar button and the tags will be "
+"inserted on either side of the selected text."
+msgstr "En el editor HTML, si está utilizando la barra de herramientas avanzada, puede seleccionar una porción del texto y al pulsar sobre el botón de la barra deseado, las etiquetas aparecerán a cada uno de los lados de dicha selección."
+
+#: resource\strings_tips\tips.txt:47
+msgid ""
+"By unchecking the <b>Include original URL of each page in output file</b> "
+"checkbox, you can slightly reduce the size of the output file, as well as "
+"protect private internet addresses or file paths."
+msgstr "Deseleccionando la opción <b>Incluir la URL original de cada página en el fichero resultante</b> puede reducir ligeramente el tamaño del archivo resultante, asi como proteger direcciones que no desea sean almacenadas."
+
+#: resource\strings_tips\tips.txt:48
+msgid ""
+"Most complex-formatted media articles online have a \"Printable format\" "
+"link that you want to use as a starting URL, as an easy way to strip out the "
+"unneeded text."
+msgstr "La mayoria de los textos complejamente formateados en internet suelen tener una versión en \"Formato imprimible\", la cual puede usar como página de inicio para su canal como recurso para eliminar texto no necesario."
+
+#: resource\strings_tips\tips.txt:49
+msgid ""
+"In the Online Help, you can click the <b>A</b> button in the help's toolbar "
+"to set the fonts. You can also mark an important page, using the <b>Add "
+"bookmark</b> icon."
+msgstr "En la ayuda online, puede hacer click en el botón <b>A</b> en la barra de herramientas de la ayuda para seleccionar la fuente. Tambien puede marcar páginas importantes usando el icono <b>Añadir marcador</b>"
+
+#: resource\strings_tips\tips.txt:50
+#, fuzzy
+msgid ""
+"You can make a plkrAPPLICATION_SUITE_NAME channel into multiple categories "
+"in the viewer, by entering multiple category names separated by semicolons."
+msgstr "Puede incluir un canal Plucker en múltiples categorias en el visor, escribiendo estas separadas por punto y coma."
+
+#: resource\strings_tips\tips.txt:51
+#, fuzzy
+msgid ""
+"You can join the plkrAPPLICATION_SUITE_NAME programming effort! It doesn't "
+"matter if you can't code. There are many different ways to help."
+msgstr "¡Únase a el esfuerzo de programación de Plucker! No importa si no sabe programar; hay muchas maneras de ayudar, por ejemplo, escribiendo estas Ayudas :-)"
+
+#~ msgid "Image dimensions"
+#~ msgstr "Dimensiones de la imágen"
+
+#~ msgid "Color depth"
+#~ msgstr "Profundidad de color"
+
+#, fuzzy
+#~ msgid ""
+#~ "Unable to access Palm Desktop software. HotSync Manager syncing will be "
+#~ "disabled."
+#~ msgstr "Imposible acceder a la aplicación Palm Desktop. El asistente de HotSync será desactivado."
+
+#, fuzzy
+#~ msgid ""
+#~ "Unable to access Palm Desktop software.\n"
+#~ "HotSync Manager syncing will be disabled."
+#~ msgstr ""
+#~ "Imposible acceder a la aplicación Palm Desktop. El asistente de \n"
+#~ "HotSync será desactivado."
+
+#~ msgid ""
+#~ "If you feel left out, then please add yourself to the file, or send e-"
+#~ "mail to <u>plucker_desktop-dev@rubberchicken.org</u>! "
+#~ msgstr "Si crees que deberias estar aqui, añádete al fichero o envia un email a <u>plucker-dev@rubberchicken.org</u>"
+
+#~ msgid "Blocked website URLs"
+#~ msgstr "Direcciones web (URL) bloqueadas"
+
+#~ msgid "Blocked file extensions"
+#~ msgstr "Extensiones de archivos bloqueadas"
+
+#~ msgid "Item to block:"
+#~ msgstr "Objeto a bloquear:"
+
+#~ msgid "Basic Plucker tip"
+#~ msgstr "Sugerencia Básica de Plucker"
+
+#~ msgid "Advanced Plucker tip"
+#~ msgstr "Sugerencia Avanzada de Plucker"
+
+#~ msgid "Rubber chicken trivia"
+#~ msgstr "Trivial del Pollo de Goma"
+
+#~ msgid "Plucker Desktop Help: %s"
+#~ msgstr "Ayuda Plucker Desktop: %s"
+
+#~ msgid "Plucker Desktop Setup Wizard"
+#~ msgstr "Asistente para la Instalación de Plucker Desktop"
+
+#~ msgid "Install Plucker Viewer  (required)"
+#~ msgstr "Instalar Visor Plucker (requerido)"
+
+#~ msgid "Install Plucker user's manual  (optional)"
+#~ msgstr "Instalar manual de usuario de Plucker (opcional)"
+
+#~ msgid "(c) Copyright 1998-2002 The Plucker Team."
+#~ msgstr "(c) Copyright 1998-2002 El Equipo Plucker"
+
+#~ msgid "Initializing Plucker spidering engine..."
+#~ msgstr "Inicializando el motor de Plucker de Tejido de canales"
+
+#~ msgid ""
+#~ "The following kind folks brought Plucker Desktop to their speakers of "
+#~ "their language:"
+#~ msgstr "Los siguientes compañeros llevaron Plucker Desktop a los hablantes de su idioma:"
+
+#~ msgid ""
+#~ "The following kind folks provided support, ideas or conversation as part "
+#~ "of the Plucker Desktop project. May they live long and plucker:"
+#~ msgstr "Los siguientes compañeros dieron soporte, ideas o conversación como parte del proyecto Plucker Desktop. Que vivan muchos años:"
+
+#~ msgid "Insert Dialog"
+#~ msgstr "Insertar diálogo"
+
+#~ msgid "Exit Plucker Desktop"
+#~ msgstr "Salir de Plucker Desktop"
+
+#~ msgid "Display the Plucker Desktop help contents"
+#~ msgstr "Mostrar los contenidos de la Ayuda de Plucker Desktop"
+
+#~ msgid "Search Plucker Desktop help"
+#~ msgstr "Buscar en la ayuda de Plucker Desktop"
+
+#~ msgid "&Basic Plucker Desktop tip..."
+#~ msgstr "&Consejo Básico de Plucker Desktop"
+
+#~ msgid "Show a tip on how to get around Plucker Desktop"
+#~ msgstr "Mostrar un consejo entenderse con Plucker Desktop"
+
+#~ msgid "&Advanced Plucker Desktop tip..."
+#~ msgstr "&Consejo Avanzado de Plucker Desktop..."
+
+#~ msgid "Show how to become a power users of Plucker Desktop"
+#~ msgstr "Mostrar como llegar a ser un usuario avanzado de Plucker Desktop"
+
+#~ msgid "&Rubber chicken trivia tip..."
+#~ msgstr "&Consejo del pollo de goma..."
+
+#~ msgid "Show fundamental knowledge about rubber chickens"
+#~ msgstr "Mostrar conocimiento fundamental sobre los pollos de goma"
+
+#~ msgid "&About Plucker Desktop"
+#~ msgstr "&Sobre Plucker Desktop"
+
+#~ msgid "Basic Plucker tips"
+#~ msgstr "Consejos básicos de Plucker"
+
+#~ msgid "Advanced Plucker tips"
+#~ msgstr "Consejos avanzados de Plucker"
+
+#~ msgid "Plucker showcase options"
+#~ msgstr "Opciones de la Biblioteca de Plucker"
+
+#~ msgid "Plucker Showcase"
+#~ msgstr "Biblioteca de Plucker"
+
+#~ msgid ""
+#~ "You can change the content of these tips to either advanced tips or "
+#~ "rubber chicken trivia by clicking the <b>Options</b> menu, then on "
+#~ "<b>Preferences</b>. Just change the option next to the <b>Show daily tips "
+#~ "on startup</b> checkbox."
+#~ msgstr "Puede cambiar el contenido de las Sugerencias a Sugerencias Avanzadas o al Trivial del Pollo de Goma haciendo click en el menú <b>Opciones</b> y seguidamente en <b>Preferencias</b>. Simplemente cambie la opción cercana a <b>Mostrar sugerencias del dia al iniciar</b>"
+
+#~ msgid ""
+#~ "Popular belief holds that the rubber chicken was first used as a joke by "
+#~ "the French during the French Revolution."
+#~ msgstr "La creencia popular mantiene que el pollo de goma fue usado primeramente como una broma por los franceses durante la Revolución Francesa."
+
+#~ msgid ""
+#~ "The modern revival of the fake food props is thought to in the early "
+#~ "1800s. Since gluttony was in vogue with high society as a sign of "
+#~ "affluence, a white-faced clown named Grimaldi, would strut the stage with "
+#~ "pockets filled with food props to ridicule the upper class. Alas, "
+#~ "Grimaldi passed away a decade before the advent of rubber."
+#~ msgstr "El moderno resurgir de las comidas a base de sucedaneos respalda el pensamiento de comienzos de 1800. Desde que la glotoneria era una práctica habitual en la alta sociedad, un payaso con la cara pintada de blanco llamado Grimaldi, saltó a la fama con con los bolsillos llenos de comida para ridiculizar a la clase alta. Grimaldi falleció una década antes de la llegada de la goma."
+
+#~ msgid ""
+#~ "The world's largest rubber chicken production plant is Loftus, in Salt "
+#~ "Lake City, USA. Incorporated in 1939, it now employs 47, exporting rubber "
+#~ "chickens and other high-ticket items to the four corners of the globe."
+#~ msgstr "La planta de producción de pollos de goma más grande del mundo se encuentra en Loftus, en Salt Lake City, USA. Fundada en 1939, actualmente emplea a 47 personas. Su función es exportar pollos de goma y otros objetos de calidad a las cuatro esquinas del globo."
+
+#~ msgid ""
+#~ "In early Monty Python skits, occasionally the program would be "
+#~ "interrupted by someone wearing a chainmail who would walk in and hit "
+#~ "someone on the head with a dead chicken. This was later changed to a "
+#~ "rubber chicken. Python (the language of the Plucker parser) shares "
+#~ "similar Monty roots."
+#~ msgstr ""
+#~ "En los primeros comienzos de las obras de Monty Python, ocasionalmente el "
+#~ "programa se veia interrumpido por alguien llevando una cota de malla que "
+#~ "entraba y golpeaba a alguien en la cabeza con un pollo muerto. Esto fue "
+#~ "posteriormente modificado incorporando un pollo de goma. Python (el "
+#~ "lenguaje del analizador de Plucker) comparte algunas similitudes con las "
+#~ "raices de Monty."

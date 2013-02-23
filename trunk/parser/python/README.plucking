@@ -1,0 +1,112 @@
+This file describes how to generate a Plucker document to install on your
+Palm device.
+
+NOTE: This is the "Classic" method of creating Plucker documents. You can
+also create Plucker documents entirely from the commandline, without
+creating home.html and local directories on your system.
+
+See Spider.py --help for more details on that. 
+
+
+THE Spider.py SCRIPT
+==========================================================================
+The installation process should have installed a Python script called
+Spider.py somewhere in the PyPlucker subdirectory of the python library
+tree.  On standard Linux systems, this will be located in:
+
+  /usr/lib/python2.4/site-packages/PyPlucker/Spider.py
+
+Some distributions (e.g. from a Debian package or RPMs) will also install a
+symlink to this script called plucker-build, and place it in /usr/bin.  If
+it is not there, you may want to put a symbolic link from the Spider.py to
+that.
+
+ln -s /usr/lib/python2.4/site-packages/PyPlucker/Spider.py /usr/bin/plucker-build
+
+
+
+SETTING UP TO PLUCK
+==========================================================================
+
+For each Plucker document you will have to set at least one Plucker
+directory.  Into that directory you should copy the following files:
+
+	home.html
+	external.html
+	mailto.html
+
+Examples of these files can be found in this directory.
+
+Next, edit home.html and change it to include the links to sites you want to
+gather and convert into your Plucker document.
+
+
+CALLING Spider.py
+==========================================================================
+Call the script to build the database:
+
+  python /path/to/script/Spider.py -p <the plucker directory> -f <database name>
+
+On my system this would be for example:
+
+  python /usr/lib/python2.4/site-packages/PyPlucker/Spider.py -p $HOME/.plucker/News/ -f TheNews
+
+This will create a database TheNews.pdb in $HOME/.plucker/News/ that can
+then be installed on the palm.
+
+Spider.py has many more options.  Call it with '--help' to learn about
+them.
+
+	Python /usr/lib/python2.4/site-packages/PyPlucker/Spider.py --help
+
+Of the others, -H <url> is the most useful.  Use that, if the root page
+should not be the home.html im the plucker directory but a page somewhere
+(even on a different server).
+
+You could e.g. say:
+
+	python /path/to/script/Spider.py -p $HOME/tmp/plucker -f Plucker -H http://www.plkr.org/
+
+This will spider and convert the home page (plus the directly referenced
+pages) of Plucker.
+
+
+
+WHAT TO PUT IN HOME.HTML?
+==========================================================================
+You can put anything in it that resembles at least a bit of valid HTML. The
+expample in this directory has the full declaration etc. to make it legal
+XHTML.  This is not really needed but does not hurt and helps your editor to
+verify you code (if your editor is smart enough, that is).
+
+In addition to normal HTML the <a> tag accepts the following new attributes:
+
+  MAXDEPTH="n"
+	Fetch to a maximum depth of n.  Defaults to 1.
+
+  NOIMAGES
+	No images will be fetched below this.  Defaults to loading images.
+
+  STAYONHOST
+	Fetch only pages below this, that are on the same site as the page
+	pointed to.
+
+  STAYBELOW="text"
+	Fetch only pages below this, whose URL's start with 'text'.  If you
+        ommit the '="text', it will default to the URL this tag points to
+        (i.e. the contents of the href attribute).
+
+
+EXCLUDING THINGS
+==========================================================================
+Sometimes, the STAYONHOST and STAYBELOW attributes do not give enough
+selection ability to include only those things that you want included.
+
+Spider.py looks for so called 'exclusion lists' in form of text files.  It
+first loads the file $HOME/.plucker/exclusionlist.txt if it exists and then
+loads exclusionlist.txt in the directory you specified with the -p flag
+(again, only if it exists).
+
+The exclusionlist.txt files should be in a specific format, that is
+explained in the example file in this directory.  Read that for more about
+this feature,

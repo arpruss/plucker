@@ -1,0 +1,109 @@
+------------------------------------------------------------------------------
+Note: This was last updated back during wxWindows 2.3, alot has changed,
+and if want to make with bcc, need to update the makefile.b32 first.
+Probably a bakefile would be more helpful.
+------------------------------------------------------------------------------
+
+OVERVIEW
+--------
+
+This document describes how to build on Borland C++. There are 3 sections,
+choose what you want to do:
+
+(I) I just want to compile it for the first time, thanks.
+(II) I want to compile it without the HTML editor's StyledTextControl (STC).
+(III) I want to now make a debug build for development.
+
+(I) I just want to compile it for the first time, thanks.
+------------------------------------------------------------------------------
+
+- Download Borland 5.5 and install to its default directory.
+- Download Borland's service pack 1 (SP1) and install to its default directory.
+- Download wxWindows 2.3.3 and install to the wx default directory.
+- Do the recommended steps in the wxWindows install documents to setup the DOS
+  environment and .cfg files.
+- Build the wxWindows library in non debug mode:
+    cd /wx/msw/src
+    make makefile.b32 FINAL=1
+- Build the XML resource library:
+    cd /wx/contrib/src/xrc
+    make -f makefile.b32 FINAL=1
+- Build the wxStyledTextCtrl (stc) library:
+    (1) cd /wx/contrib/stc/src
+    (2) make -f makefile.b32 FINAL=1
+    (3) Optionally: By default the generated stc library appears in /wx/contrib/lib.
+        For convenience, you may wish to move it to wx/lib.
+- Build plucker-desktop:
+    cd to your plucker_desktop/ directory
+    make -f makefile.b32 FINAL=1 WITHSTC=1
+- A plucker-desktop executable is now available. Note It calls resources at
+  run-time at specified locations, such as
+  C:\Program Files\Plucker\plucker_desktop\resource\main_menu.xrc
+  You can get these resources in the proper place by just downloading and
+  existing Plucker Desktop installer, which will put the resources, etc
+  into their proper place.
+
+(II) I want to compile it without the HTML editor's StyledTextControl (STC).
+------------------------------------------------------------------------------
+
+StyledTextControl (STC) is on by default for Borland compiler.
+If want to have a go of it with it turned off instead:
+
+- Have everything from a regular compile in step(I) above, done already.
+- Open up <plucker_desktop_dir>/setup.h and turn off the flag for styled text in editor.
+- Remake plucker-desktop, but without the WITHSTC=1 flag. Since you are making a
+  non-debug build, you will include a FINAL=1
+        >>>cd plucker_desktop/
+        >>>make -f makefile.b32 clean
+        >>>make -f makefile.b32 FINAL=1
+
+(III) I want to now make a debug build for development.
+-------------------------------------------------------
+
+To get a debug build, have to be built with DLLs, otherwise the Borland linker can't
+link, since the debug library is so big. Therefore, do the following steps:
+- Clean and rebuild the wxWindows library in debug mode, with DLLs
+  (wx2.3.3 had warnings of duplicate symbols but works okay):
+        >>>cd /wx/msw/src
+        >>>make makefile.b32 clean
+        >>>make makefile.b32 DLL=1
+- Build the XML resource library using the wx DLL and building a DLL (Note:
+  there won't be a XRC dll anywhere, the wxxrc.lib will be correct though. As
+  of wx2.3.3 was warnings of not using precompiled headers but works okay):
+        >>>cd /wx/contrib/src/xrc
+        >>>make -f makefile.b32 clean
+        >>>make -f makefile.b32 WXUSINGDLL=1 WXBUILDDLL=1
+- Build the wxStyledTextCtrl (stc) using the wx DLL and building a DLL (Note:
+  there won't be a XRC dll anywhere, the wxstc.lib will be correct though):
+        >>>cd /wx/contrib/stc/src
+        >>>make -f makefile.b32 clean
+        >>>make -f makefile.b32 WXUSINGDLL=1 WXBUILDDLL=1
+    (3) Optionally: By default the generated stc library appears in /wx/contrib/lib.
+        For convenience, you may wish to move it to wx/lib.
+- Build plucker-desktop:
+        >>>cd to your plucker_desktop/ directory
+        >>>make -f makefile.b32 WXUSINGDLL=1 WITHSTC=1
+- A plucker-desktop executable is now available. The wx.dll file needs to be
+  in the same directory as the executable for things to run (or else in the
+  system path somewhere perhaps is possible too). Note also, that it calls resources
+  at run-time at specified locations, such as
+  C:\Program Files\Plucker\plucker_desktop\resource\main_menu.xrc
+  You can get these resources in the proper place by just downloading and
+  existing Plucker Desktop installer, which will put the resources, etc
+  into their proper place.
+
+NOTE: The build absolutely have no FINAL=1 on any of the parts
+(ie Plucker Desktop needs to be built without FINAL=1 since the library was
+built without FINAL=1. They must match. Otherwise you will get weird errors.)
+
+wxMSW viewing debugging information
+--------------------------------------
+
+If compiled wxWindows and the application as a debug build, then debugging
+messages are sent to the OS.
+To watch debugging information:
+-For Windows, there is a freeware debugging tool to watch the debug
+ messages scroll by in the debug build of plucker-desktop.exe.
+ It is downloadable from: 
+ http://www.sysinternals.com/ntw2k/freeware/debugview.shtml
+ This tool also ships in the wxWindows distribution for Windows.

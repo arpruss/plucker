@@ -1,0 +1,7 @@
+DESCRIPTION
+
+Plucker is a suite of Programs to provide an offline webbrowser and ebook reader for PDA's. 
+
+MORE INFORMATION
+
+For more information about Plucker, see the main web site at http://www.plkr.org.

@@ -1,0 +1,86 @@
+WHAT IS COMIC PLUCKER?
+----------------------
+	comic-plucker is a perl script that will do the following: 
+
+	1.) Fetch the content of a comic page (such as ucomics.com)
+	2.) Extract all of the comic links from that "master" page
+	3.) Fetch each comic link, and extract its daily strip image
+	4.) Write that daily strip image to its own local comic page
+	    $in HOME/.plucker/comics
+	
+	From there, you can point your favorite Plucker document
+	conversion tool to ~/.plucker/comics/index.html and spider
+	the comics into their own database.
+
+
+WHO WROTE THIS SCRIPT?
+----------------------
+	It was written by me, David A. Desrosiers, a Perl hacker of
+	sorts, long-time contributor to Plucker and related PalmOS
+	projects.
+
+	You can find me in several places on the web every day,
+	including Perl Monks, irc, and various forums and mailing
+	lists.
+
+
+WHY DID YOU WRITE THIS?
+-----------------------
+	I didn't like the Python version because it required keeping
+	a list of active comics up-to-date, and it was very slow,
+	compared to the Perl version. 
+
+	This version will always stay on top of the listed comics. If
+	a comic is no longer available, it will not fetch it. The
+	Python version required editing a local file of comics,
+	images, and urls to make sure it remained current.
+
+	It also acts a bit more stealthily than the Python version in
+	that it tries to masquerade its UserAgent a little bit, to
+	stay under the radar. Yes, the server side logs will show all
+	hits from those random UserAgents coming from the same IP
+	address, but it shouldn't be too noticable to log parsers.
+
+	And I really wanted to use this rewrite of the Python version
+	as a way to teach myself more about some screen-scraping
+	ideas. This was fun.
+
+
+WHAT FEATURES ARE MISSING?
+--------------------------
+
+	- Allow options to set starting comic page (ucomics, king,
+	  etc.)
+
+	- Fix final @Links when using Parallel::ForkManager
+
+	- Allow individual comic selection (Sarge, Peanuts, etc.)
+
+	- Strip spaces/dreck from filenames, alphanumerics only
+
+	- Add a "purge" function to delete/archive older content
+
+	- Better sorting of comics that start with "A <thing>" and
+	  "The <thing>" so they aren't sorted by the word "A" or
+	  "The"
+
+	- Re-categorization in the final index.html based on letter
+	  groupings or site
+
+	- Image conversion to one single image format, using GD or
+	  Perl::Magick
+
+HOW DO I RUN THIS SCRIPT?
+-------------------------
+
+	To run this script, just execute it.. that's it! (of course,
+	make sure you have all of the required modules first, many
+	are in core, use CPAN to get the ones that are not:
+
+		perl -MCPAN -e 'install "Module::Name"'
+
+	So if you don't have the Parallel::ForkManager module for
+	example, you would install it as follows:
+
+		perl -MCPAN -e 'install "Parallel::ForkManager"'
+

@@ -1,0 +1,28 @@
+       Plucker TODO/Wishlist
+-------------------------------------------------------
+- Database
+  Page deletion in the database, runtime
+  "Scratch Pad" for comments on each URL, stored in a record in the db
+
+- Viewer 
+  Back/Forward button with list of previous visited pages
+  Next/Previous page buttons
+
+- Parser
+  AvantGo and SiteScooper file upload format integrated into home.html
+  Complete email-driven Plucker interface
+  Perl parser
+  Limit # of fetches for a given page (eg 3 days)
+  Parallel gather
+  Smart gathering/conduit; only update a document if it's actually changed
+
+- Server
+  Cron gather
+  Plucker Reflector 
+  Perl Plucker Server
+  AvantGo channel parser / web based server (like AvantGo.com)
+
+- General 
+  Software Quality Assurance of included tools
+  Build an API e.g. Parsing, scheduling, etc
+  Modify params from pilot

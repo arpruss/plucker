@@ -1,0 +1,6 @@
+This is a list of the special Palm characters used in formatting of
+the Plucker text -- these characters will have to be translated to
+appropriate equivalents for viewers in other languages.
+
+0x95 -- big dot -- used for top-level list bullet (janssen, 9/5/01)
+

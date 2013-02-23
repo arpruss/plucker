@@ -1,0 +1,15 @@
+//
+// $Id: fontdata.rcp,v 1.4 2007/10/08 15:25:27 chrish Exp $
+//
+
+DATA "NFNT" narrowFontID         "fonts/narrowfont.bin"
+DATA "NFNT" narrowBoldFontID     "fonts/narrowboldfont.bin"
+DATA "NFNT" narrowFixedFontID    "fonts/narrowfixedfont.bin"
+#ifdef HAVE_HIRES
+DATA "nfnt" tinyFontID_palm      "fonts/tinyfont_palm.bin"
+DATA "nfnt" tinyBoldFontID_palm  "fonts/tinyboldfont_palm.bin"
+DATA "nfnt" smallFontID_palm     "fonts/smallfont_palm.bin"
+DATA "nfnt" smallBoldFontID_palm "fonts/smallboldfont_palm.bin"
+DATA "nfnt" stdFixedFontID_palm  "fonts/stdfixedfont_palm.bin"
+DATA "NFNT" stdFixedFontID_sony  "fonts/stdfixedfont_sony.bin"
+#endif

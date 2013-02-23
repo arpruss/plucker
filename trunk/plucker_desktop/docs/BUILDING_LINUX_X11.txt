@@ -1,0 +1,27 @@
+IMPORTANT NOTE
+--------------
+
+wxGTK is *much* more stable and mature than wxX11. wxX11 is only 
+experimental at this stage. To use on POSIX systems, using wxGTK  
+instead of wxX11 is strongly recommended.
+
+REQUIREMENTS
+------------
+
+You need: 
+(a) wxWindows: wxX11 version 2.3.3 or higher
+(b) GCC
+
+BUILDING
+--------
+
+This is almost exactly the same as GTK. It is recommended to read 
+BUILDING_LINUX_GTK.txt
+The only thing that is different is the ./configure command at the start.
+For x11 it is:
+
+./configure --with-x11 --disable-shared --with-univ \
+    --with-debug_flag --enable-log --with-debug_info \
+    --enable-debug --without-threads --without-sockets \ 
+    --without-odbc -with-libjpeg --enable-debug_cntxt \
+    --disable-no_rtti

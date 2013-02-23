@@ -1,0 +1,115 @@
+//-----------------------------------------------------------------------------------
+// Note: These were last reviewed on wxWidgets 2.4
+// Some may no longer be applicable, but I am leaving them here in case they come up.
+//-----------------------------------------------------------------------------------
+
+wxGTK gcc/makefiles:
+- Cannot have spaces after the '\' when making a list of source files, otherwise make will
+  fail. For example this will work
+SOURCES = myfile1.cpp   \# No trailing space
+          myfile2.cpp
+  But this will not, because of the trailing spaces after the '\':
+SOURCES = myfile1.cpp   \    # Invalid with trailing spaces
+          myfile2.cpp
+          
+- GCC on Mandrake anyway doesn't seem to like stray \ at the end of strings. These fail:
+  #define mylongsentences "apples are" \
+                          "good"
+  or
+  wxLogError( _( "You have to be logged in" \                        
+               "Click here to login"
+             ) );
+- Try out vim on unix for editing makefiles. Spaces after a '\' will cause the '\' to be
+  a different color, so you can find it easier.
+
+- An error "warning NUL character seen: rest of line ignored" may mean that there is 
+  some extra spaces after the last item in the list. For example:
+  OBJECTS = $(GROUP1)      \
+            $(GROUP2)      \
+            $(GROUP3)      
+
+- GCC make will ignore everything else in the list after a # In example below, $(GROUP 4)
+  won't get compiled
+  SOURCES=$(GROUP1)
+          $(GROUP2)
+  #       $(GROUP3)
+          $(GROUP4)
+- An error of:
+  /usr/lib/crt1.o:In function '_start'
+  /usr/lib/crt1.o(.text+0x18): undefined references to 'main'
+  means that you probably didn't link in the main program.cpp
+
+- Strongly recommended to use an indent of a tab (with a hardware indent of 8) 
+  instead of spaces, and must not mix the 2 in a list. If using hardware tabs,
+  GCC will ask "Did you mean tab instead of 8 spaces?) on your bad lines.
+
+DDD (the visual debugger for GDB):
+ -After a first run, it says it can't set some offset breakpoint at memory address whatever.
+  Choose File>Restart to restart DDD and the app, and it will now work.
+
+Borland C++ 5.5:
+- The debug versions seem to crash when add a new file into the project and recompile it
+  and access your new part. Goes away when do a make clean first, then compile and run.
+
+General:
+- int is defined as a long. Hence can get away with ( "%d", my_long) instead of
+  ( "%ld", my_long ) if so desired.
+
+Cryptic errors:
+- "virtual table" error on GTK. This means your #pragma interface, #pragma implementation
+  isn't correctly spelled to the .cpp file of the class. Nothing to do with the event table.
+
+XPM images:
+- In an xpm, "silver" is not defined as a color in xpm. Use #c6c6c6 instead.
+
+Events:
+- In the BEGIN_EVENT_TABLE(a,b) macro, the 'b' has to be the direct parent of the class
+  if it wants to get the parent's event table. For example, there is a plucker_wizard_base and
+  a setup_wizard. Need to have BEGIN_EVENT_TABLE( setup_wizard, plucker_wizard_base)
+  not BEGIN_EVENT_TABLE(setup_wizard, wxWizard). It will compile fine, but you won't get 
+  the inherited events added in the plucker_wizard_base class.
+
+wxProcess:
+- wxProcess::Exists( int pid ) asserts on Borland C++ 5.5. But shouldn't be using this
+  in a dialog anyways, since you should be keeping track of whether your own process
+  is still running. Otherwise another program could start a process with that id and 
+  thus the process id would end up existing and it would be killed.
+
+wxNotebooks:
+- Events need a wxNotebookEvent not a wxCommandEvent
+- Used wxGetOldSelection() to inquire about pages during and notebook tab change,
+  as wxGetSelection under MSW doesn't return the new one, it returns the old one.
+  
+wxListCtrl:
+- Deleting rows requires that delete them from bottom to top, as the items slide up as
+  each is deleted.
+- An OnSize event is called when a custom listctrl is grafted onto an "unknown" XRC 
+  placeholder, so if doing an OnSize overriden function to make columns autosize, the 
+  column creation needs to be done in the constructor.
+
+wxConfig:
+- The read, write functions are overloaded. Need to include a L to specify long.
+- Better when changing the config path, or the entire config object to save the current
+  config path or the current wxConfig, switch it, do whatever is needed, then restore to
+  your saved one.
+  
+wxString:
+- ( const wxString& ... ) usually better for things that won't change, so they can accept a 
+  constant also, as well as a variable. ( wxString ... ) can also be used as a copy 
+  constructor
+- Before adding or <<, need to have a wxString object to hold the results, not just 
+  adding, consts, or will get weird results. For example in a :
+  the_configuration->Write( "doc_file", "channels" + '/' + "hello" );
+  will write garbage, since can't add "channels" + '/' + "hello" with nothing 
+  to hold them. Needs to be this:
+  wxString my_string;
+  my_string << "channels" << '/' << "hello";
+  the_configuration->Write( "doc_file", my_string );
+
+wxArray
+- Best to have these as a pointer in the argument list for a function, since need to be 
+  cleared when done or else continue to float around.
+
+casts:
+- Everything should be properly cast instead of guessing the compiler will do it.
+

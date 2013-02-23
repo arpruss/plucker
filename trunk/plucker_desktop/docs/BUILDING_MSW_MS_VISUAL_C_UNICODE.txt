@@ -1,0 +1,53 @@
+BUILDING_MS_VC6SP5
+
+This is for Visual C++ 6, later versions may be similar. There are tips in the docs that come with wxWidgets
+for other Visual C++ versions, as well as a wxWiki. Because we are building the application at the same level
+in the wx directory tree as the samples, if you can get the wx samples to compile, you should get Plucker Desktop
+to compile.
+
+To build the debug and release unicode (which is all that Plucker Desktop is supporting as of 2007), 
+meaning only NT, 2000, XP, Vista and above.
+
+First get Visual C++ 6 installed, with SP6 (SP6 available from microsoft as a download).
+
+Download wxWidgets from wxwidgets.org and run the setup installer.
+
+The directory where you installed wxWidgets will heretofore be referred to as <wxdir>
+
+Open the <wxdir>/build/msw/wx.dsw
+
+In the left pane, right click to bring up the file ../include/wx/msw/setup.h
+In the line far down, and change the
+#define wxUSE_UNICODE 0
+to
+#define wxUSE_UNICODE 1
+
+In menu: Build > Batch Build... > and go through the list and only check off
+the ones that say either
+Win32 unicode release
+or
+win32 unicode debug
+[ie NOT the ones that have neither the word 'Universal' nor have the word 'DLL']
+
+In menu: Build > Batch Build > Build to build all those checked libraries.
+
+Test that things are working by opening up the minimal wx sample in <wxdir>/samples/minimal.dsw
+In menu: Build > Set Active Configuration and choose the minimal Unicode Debug. (or release if releasing).
+
+The wxWidgets makefile system and libraries keep changing so fast, for Visual C, I just compile plucker_desktop on MSW and OSW from within the wxTree.
+To do so, spark up CVS, and check out the "plucker" module into your <wxwin> directory. This will result in the folder of
+<wxwin>/plucker/plucker_desktop/
+This folder is thus now at the same level as the examples.
+
+Open up <wxwin>/plucker/plucker_desktop/<wxwin>/plucker/plucker_desktop/plucker-desktop.dsw 
+
+From the menu, choose Build > Set Active Target > "plucker-desktop unicode debug"
+
+To run it, in needs to load up the runtime resources. It looks in two possible places (via the registry), or a local file down from the current directory 
+Option one: install a recent release of Plucker Desktop, so that you get the folder like C:\Program Files\Plucker\plucker_desktop\resources folder made, and copy the matching resource files from CVS into that folder, or:
+
+Option two: moving the plucker-desktop.exe [and plucker-desktop.exe.manifest] <wxdir>/plucker/, and then double-click to run.
+
+ 
+
+

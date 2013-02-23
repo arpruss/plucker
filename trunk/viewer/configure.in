@@ -1,0 +1,881 @@
+dnl
+dnl $Id: configure.in,v 1.143 2007/05/30 21:39:01 chrish Exp $
+dnl
+dnl Plucker autoconf input
+dnl
+dnl
+
+AC_PREREQ(2.13)
+AC_INIT(viewer.c)
+AC_CONFIG_HEADER(config.h)
+
+PACKAGE=viewer
+
+VERSION="1.9"
+
+AC_SUBST(PACKAGE)
+AC_SUBST(VERSION)
+
+
+dnl ================================
+dnl         Default settings
+dnl ================================
+
+DEFAULT_SCROLL_TO_BOTTOM=yes
+DEFAULT_HIRES=yes
+DEFAULT_ROTATE=yes
+DEFAULT_GRAY=yes
+DEFAULT_VFSFONTS=yes
+DEFAULT_WORDLOOKUP=no
+DEFAULT_ANNOTATION=yes
+DEFAULT_TRANSLITERATION=yes
+DEFAULT_CPUSPEED=no
+DEFAULT_SKINS=no
+DEFAULT_ARMLET=no
+DEFAULT_IMODE=no
+DEFAULT_CATEGORY=""
+DEFAULT_WAIT_ICON=bubble
+DEFAULT_LANG="en de cs it fr ja fo da zh_CN pl ru es tr th ca no"
+DEFAULT_ECLEVEL=none
+DEFAULT_GESTURE_DEBUG=no
+DEFAULT_DEBUG_LOG=no
+DEFAULT_DEBUG_LABELS=no
+DEFAULT_RETURN_TO_PREV_APP=no
+DEFAULT_PALM_DIA=yes
+DEFAULT_RTL=no
+DEFAULT_ROT13=no
+
+
+dnl ================================
+dnl         General apps
+dnl ================================
+AC_PATH_PROG(AUTOCONF, autoconf, autoconf)
+AC_PATH_PROG(PERL, perl)
+AC_SUBST(PERL)
+AC_PROG_LN_S
+
+
+dnl ================================
+dnl         Macros
+dnl ================================
+AC_DEFUN([AC_ARG_DISABLE], [
+    disablestring=`echo "$1" | sed 's/_/-/g'` 
+    AC_MSG_CHECKING([--disable-$disablestring])
+    AC_ARG_ENABLE($1, [$2], 
+    [
+        if test "$enableval" = yes; then
+            ac_cv_use_$1='$3=yes'
+        else
+            ac_cv_use_$1='$3=no'
+        fi
+    ],
+    [
+        ac_cv_use_$1='$3='$DEFAULT_$3
+    ])
+
+    eval "$ac_cv_use_$1"
+
+    if test "$$3" = "no"; then
+        AC_MSG_RESULT(yes)
+    else
+        AC_MSG_RESULT(no)
+    fi
+])
+                      
+
+AC_DEFUN([AC_CHECK_PALMSDK5], [
+    AC_TRY_COMPILE([
+        #include <PalmOS.h>
+
+        #ifndef PALMOS_SDK_VERSION
+        #define PALMOS_SDK_VERSION 1
+        #endif
+
+        #if PALMOS_SDK_VERSION < 0x0500
+        #error
+        #endif
+    ], [], [
+        PALM_SDK5=yes
+    ],[
+        PALM_SDK5=no
+    ])
+])
+
+AC_DEFUN([TRY_FIX_SDK], [
+    AC_MSG_CHECKING(if it is fixable)
+    if test "X$PERL" != "X"; then
+        AC_MSG_RESULT(yes)
+
+        SCRIPT=$srcdir/scripts/fix_sdk.pl
+        if test -d $SDKDIR; then
+            rm -rf $SDKDIR
+        fi
+        mkdir $SDKDIR
+        OS=`$UNAME`
+        if test "$OS" = "Darwin"; then
+            cp -R $1/* $SDKDIR
+        else
+            cp -au $1/* $SDKDIR
+        fi
+        ORIGLANG=$LANG
+        LANG=
+        find $SDKDIR -name '*.h' -exec $PERL $SCRIPT {} ';'
+        LANG=$ORIGLANG
+        $2
+        AC_MSG_RESULT($WORKS)
+        if test "$WORKS" = "yes"; then
+            $3
+        else
+            $4
+        fi
+    else
+        AC_MSG_RESULT(no)
+
+        AC_MSG_WARN([********************************************************])
+        AC_MSG_WARN([Perl is required in order to attempt to fix the this SDK])
+        AC_MSG_WARN([Since I cannot find perl on your system we will never])
+        AC_MSG_WARN([find out if I can truly fix it or not!])
+        AC_MSG_WARN([********************************************************])
+
+        $4
+    fi
+])
+
+AC_DEFUN([AC_CHECK_HANDERA_SDK], [
+    AC_LANG_C
+    CC="$M68K_GCC $SDK_CFLAGS $HANDERA_CFLAGS -Wall -Werror"
+    AC_MSG_CHECKING(if Handera SDK works)
+    AC_TRY_COMPILE([
+        #include <PalmOS.h>
+        #include <Vga.h>
+    ], [], [
+        AC_MSG_RESULT(yes)
+    ],[
+        HANDERA_SDK=no
+        AC_MSG_RESULT(no)
+    ])
+])
+
+AC_DEFUN([AC_CHECK_PALMONE_SDK], [
+    AC_LANG_C
+    CC="$M68K_GCC $SDK_CFLAGS $PALMONE_CFLAGS -Wall -Werror"
+    AC_MSG_CHECKING([if palmOne SDK works])
+    AC_TRY_COMPILE([
+        #include <PalmOS.h>
+        #include <palmOne_68K.h>
+        #include <68K/Hs.h>
+    ], [], [
+        AC_MSG_RESULT(yes)
+    ],[
+        PALMONE_SDK=no
+        AC_MSG_RESULT(no)
+    ])
+])
+
+AC_DEFUN([AC_CHECK_AXXPAC_SDK], [
+    AC_LANG_C
+    CC="$M68K_GCC $AXX_CFLAGS -Wall -Werror"
+    AC_MSG_CHECKING([if AxxPac header file works])
+    AC_TRY_COMPILE([
+        #include <PalmOS.h>
+        #include <PalmCompatibility.h>
+        #include <axxPac.h>
+    ], [], [
+        AXXPAC=yes
+    ],[
+        AXXPAC=no
+    ])
+])
+
+AC_DEFUN([AC_CHECK_SONY_SDK], [
+    AC_LANG_C
+    CC="$M68K_GCC $SDK_CFLAGS $SONY_CFLAGS -Wall -Werror"
+    AC_MSG_CHECKING(if Sony SDK works)
+    AC_TRY_COMPILE([
+        #include <PalmOS.h>
+        #include <SonyCLIE.h>
+    ], [], [
+        WORKS=yes
+    ],[
+        WORKS=no
+    ])
+])
+
+
+dnl ==============================================
+dnl              Viewer Section
+dnl ==============================================
+
+dnl Append extra source/armlet files that should be included in the viewer
+OS_EXTRA_SRC=""
+OS_EXTRA_ARM=""
+
+AC_PATH_PROGS(M68K_GCC, m68k-palmos-gcc)
+if test "X$M68K_GCC" = "X"; then
+    AC_MSG_ERROR("Unable to find cross-compiler")
+fi
+# fixes autoconf >= 2.50
+cross_compiling=yes
+AC_LANG_C
+CC="$M68K_GCC"
+CFLAGS="-Dmain=PilotMain"
+AC_TRY_COMPILE([],[])
+CFLAGS=
+
+dnl Checking build environment
+dnl ==========================
+
+AC_PATH_PROG(UNAME, uname)
+if test "X$UNAME" != "X"; then
+    AC_MSG_CHECKING(operating system ($UNAME -o))
+    OS=`$UNAME -o`
+    AC_MSG_RESULT($OS)
+    if test "$OSTYPE" = "Cygwin"; then
+        CWD_INCLUDE="-isystem ."
+    else
+        CWD_INCLUDE="-I."
+    fi
+else
+    CWD_INCLUDE="-I."
+fi
+
+
+dnl Checking for the necessary Palm development tools
+dnl =================================================
+
+AC_PATH_PROGS(M68K_OBJ_RES, m68k-palmos-obj-res obj-res)
+if test "X$M68K_OBJ_RES" = "X"; then
+    AC_MSG_ERROR("Unable to find obj-res")
+fi
+AC_PATH_PROGS(M68K_AS, m68k-palmos-as)
+if test "X$M68K_AS" = "X"; then
+    AC_MSG_ERROR("Unable to find assembler")
+fi
+AC_PATH_PROGS(MULTIGEN, multigen m68k-palmos-multigen)
+if test "X$MULTIGEN" = "X"; then
+    AC_MSG_ERROR("Unable to find multigen")
+fi
+AC_PATH_PROG(PILRC, pilrc)
+if test "X$PILRC" = "X"; then
+    AC_MSG_ERROR("Unable to find pilrc")
+else
+    # See if pilrc supports extended bitmaps (2.9p5 and later)
+    # See if pilrc supports -noEllipsis option (2.9 and later)
+    EXBMPMAJOR=2
+    EXBMPMINOR=9
+    EXBMPPATCH=5
+    MIN_PILRC_EXBMP="$EXBMPMAJOR.$EXBMPMINOR p$EXBMPPATCH"
+    AC_MSG_CHECKING(for pilrc version >= $MIN_PILRC_EXBMP)
+    PILRC_VERSION=`$PILRC 2>/dev/null | head -n 1`
+    MAJOR=`echo $PILRC_VERSION | cut -d ' ' -f 2 | cut -b 2`
+    MINOR=`echo $PILRC_VERSION | cut -d ' ' -f 2 | cut -b 4`
+    PATCH=`echo $PILRC_VERSION | cut -d ' ' -f 5`
+    if test "X$PATCH" = "X"; then
+        PATCH=0
+    fi
+    SUPPORTEXBMP=no
+    NOELLIPSIS=no
+    if test "$MAJOR" -gt "$EXBMPMAJOR"; then
+        SUPPORTEXBMP=yes
+        NOELLIPSIS=yes
+    elif test "$MAJOR" -eq "$EXBMPMAJOR"; then
+        if test "$MINOR" -gt "$EXBMPMINOR"; then
+            SUPPORTEXBMP=yes
+            NOELLIPSIS=yes
+        elif test "$MINOR" -eq "$EXBMPMINOR"; then
+            if test "$PATCH" -ge "$EXBMPPATCH"; then
+                SUPPORTEXBMP=yes
+            fi
+            NOELLIPSIS=yes
+        fi
+    fi
+
+    AC_MSG_RESULT($SUPPORTEXBMP)
+    if test "$SUPPORTEXBMP" = "yes"; then
+        AC_DEFINE(HAVE_PILRC_EXBMP,, [ Define if pilrc supports extended bitmaps ])
+    else
+        AC_MSG_WARN(pilrc $MIN_PILRC_EXBMP or later is required if you want to)
+        AC_MSG_WARN(build a viewer that supports EX extended bitmaps/icons)
+    fi
+fi
+AC_SUBST(NOELLIPSIS)
+AC_PATH_PROG(BUILD_PRC, build-prc)
+if test "X$BUILD_PRC" = "X"; then
+    AC_MSG_ERROR("Unable to find build-prc")
+fi
+AC_PATH_PROG(CTAGS, ctags, ctags)
+
+
+AC_LANG_C
+AC_MSG_CHECKING(for PalmOS SDK 5.0)
+CC="$M68K_GCC"
+AC_CHECK_PALMSDK5
+if test "$PALM_SDK5" = "yes"; then
+    AC_MSG_RESULT(found)
+else
+    CC="$M68K_GCC -palmos5"
+    AC_CHECK_PALMSDK5
+    if test "$PALM_SDK5" = "yes"; then
+        SDK_CFLAGS="$SDK_CFLAGS -palmos5"
+        AC_MSG_RESULT(found)
+    else
+        AC_MSG_ERROR(not found)
+    fi
+fi
+CC=""
+
+AC_MSG_CHECKING(--with-lang argument)
+AC_ARG_WITH(lang, [  --with-lang=LANG        build viewers translated to the given languages ],
+    LANG="$withval", LANG=$DEFAULT_LANG)
+AC_MSG_RESULT($LANG)
+AC_SUBST(LANG)
+
+AC_MSG_CHECKING(--enable-category argument)
+AC_ARG_ENABLE(category, [  --enable-category=CATEGORY
+                          set the default launcher category],
+    CATEGORY="$enableval"; AC_MSG_RESULT($enableval),
+    CATEGORY=$DEFAULT_CATEGORY; AC_MSG_RESULT(none))
+AC_SUBST(CATEGORY)
+
+AC_MSG_CHECKING(--enable-armlets argument)
+AC_ARG_ENABLE(armlets, [  --enable-armlets        to enable arm-specific code],
+    ARMLETS=yes, ARMLETS=$DEFAULT_ARMLET)
+AC_MSG_RESULT($ARMLETS)
+
+if test "$ARMLETS" != "no"; then
+    AC_PATH_PROGS(ARM_GCC, arm-palmos-gcc)
+    if test "X$ARM_GCC" = "X"; then
+        ARMLETS=no;
+    fi
+    AC_DEFINE(BUILD_ARMLETS,, [ Define if building armlets ])
+fi
+AC_SUBST(ARMLETS)
+
+
+AC_MSG_CHECKING(--enable-wait-icon argument)
+AC_ARG_ENABLE(wait_icon, [  --enable-wait-icon=ICON set the wait indicator to ICON (thought-bubble or hourglass)],
+    if test "$enableval" = "thought-bubble"; then
+        WAIT_ICON=bubble;
+    elif test "$enableval" = "hourglass"; then
+        WAIT_ICON=hourglass;
+    else
+        AC_MSG_ERROR(Unknown wait indicator: $enableval);
+    fi,
+    WAIT_ICON=$DEFAULT_WAIT_ICON)
+AC_MSG_RESULT($WAIT_ICON)
+AC_SUBST(WAIT_ICON)
+
+AC_MSG_CHECKING(--enable-errorchecklevel argument)
+AC_ARG_ENABLE(errorchecklevel, [  --enable-errorchecklevel=LEVEL
+                          set the ERROR_CHECK_LEVEL to LEVEL (none, partial,
+                          or full) ],
+    ECLEVEL="$enableval",
+    ECLEVEL=$DEFAULT_ECLEVEL)
+ERROR_LEVEL="-DERROR_CHECK_LEVEL=ERROR_CHECK_NONE"
+if test "X$ECLEVEL" = "Xpartial"; then
+    ERROR_LEVEL="-DERROR_CHECK_LEVEL=ERROR_CHECK_PARTIAL"
+elif test "X$ECLEVEL" = "Xfull"; then
+    ERROR_LEVEL="-DERROR_CHECK_LEVEL=ERROR_CHECK_FULL"
+fi
+AC_MSG_RESULT($ECLEVEL)
+AC_SUBST(ERROR_LEVEL)
+
+AC_MSG_CHECKING(--enable-gesture-debug argument)
+AC_ARG_ENABLE(gesture_debug, [  --enable-gesture-debug  include Graffiti indicator to debug the gestures
+                          feature ],
+    GESTURE_DEBUG="yes", GESTURE_DEBUG=$DEFAULT_GESTURE_DEBUG)
+AC_MSG_RESULT($GESTURE_DEBUG)
+if test "$GESTURE_DEBUG" = "yes"; then
+    AC_DEFINE(ENABLE_GESTURE_DEBUG,, [ Define to enable gesture debug indicator ])
+fi
+
+AC_MSG_CHECKING(--enable-debug-log argument)
+AC_ARG_ENABLE(debug_log, [  --enable-debug-log      include macros writing debug info to log file when
+                          running viewer in POSE and to memo when running it
+                          on a real device ],
+    DEBUG_LOG=yes, DEBUG_LOG=$DEFAULT_DEBUG_LOG)
+AC_MSG_RESULT($DEBUG_LOG)
+if test "$DEBUG_LOG" = "yes"; then
+    DEBUG_LOG="-DDEBUG -DDEBUG_LOG"
+    OS_EXTRA_SRC="${OS_EXTRA_SRC} debug.c"
+else
+    DEBUG_LOG=""
+fi
+AC_SUBST(DEBUG_LOG)
+
+AC_MSG_CHECKING(--enable-debug-labels argument)
+AC_ARG_ENABLE(debug_labels, [  --enable-debug-labels   include each function's name into the text section
+                          to get the function names included in POSE's
+                          profiling output ],
+    DEBUG_LABELS=yes, DEBUG_LABELS=$DEFAULT_DEBUG_LABELS)
+AC_MSG_RESULT($DEBUG_LABELS)
+if test "$DEBUG_LABELS" = "yes"; then
+    DEBUG_LABELS="-mdebug-labels"
+else
+    DEBUG_LABELS=""
+fi
+AC_SUBST(DEBUG_LABELS)
+
+AC_MSG_CHECKING(--enable-imode argument)
+AC_ARG_ENABLE(imode, [  --enable-imode          to enable i-mode support (also requires the
+                          imodeicons.pdb database)],
+    IMODE=yes, IMODE=$DEFAULT_IMODE)
+AC_MSG_RESULT($IMODE)
+
+if test "$IMODE" != "no"; then
+    AC_DEFINE(HAVE_IMODE,, [ Define if using i-mode support])
+fi
+
+AC_ARG_DISABLE(scroll_to_bottom, [  --disable-scroll-to-bottom
+                          always scroll even pages instead of stopping when
+                          the end of the page is reached (will add some extra
+                          whitespace at the bottom of the page) ], SCROLL_TO_BOTTOM)
+                      
+if test "$SCROLL_TO_BOTTOM" != "no"; then
+    AC_DEFINE(ENABLE_SCROLL_TO_BOTTOM,, [ Define if scroll should stop when reaching bottom of page ])
+fi
+
+AC_ARG_DISABLE(hires, [  --disable-hires         to disable hires-specific code],
+    HIRES)
+
+if test "$HIRES" != "no"; then
+    AC_DEFINE(HAVE_HIRES,, [ Define if using hires ])
+    OS_EXTRA_SRC="${OS_EXTRA_SRC} hires.c"
+fi
+
+AC_ARG_DISABLE(rotate, [  --disable-rotate        to disable display rotation code],
+    ROTATE)
+
+if test "$ROTATE" = "yes"; then
+    AC_DEFINE(HAVE_ROTATE,, [ Define if using rotate ])
+    OS_EXTRA_SRC="${OS_EXTRA_SRC} rotate.c rotatebitmap.c"
+    if test "$ARMLETS" = "yes"; then
+        OS_EXTRA_ARM="${OS_EXTRA_ARM} \$(ARMLETDIR)/rotatebitmap"
+    fi
+fi
+
+AC_ARG_DISABLE(palm_dia, [  --disable-palm-dia      to disable Palm DIA support],
+    PALM_DIA)
+
+if test "$PALM_DIA" = "yes"; then
+    AC_DEFINE(HAVE_PALM_DIA,, [ Define if using Palm DIA ])
+fi
+
+AC_ARG_DISABLE(anti_alias, [  --disable-anti-alias    to disable anti-aliased font code],
+    GRAY)
+
+if test "$GRAY" != "no"; then
+    AC_DEFINE(HAVE_GRAY_FONT,, [ Define if using anti-aliased fonts ])
+    OS_EXTRA_SRC="${OS_EXTRA_SRC} grayfont.c"
+fi
+
+AC_ARG_DISABLE(vfs_fonts, [  --disable-vfs-fonts     to disable user fonts on VFS code],
+    VFSFONTS)
+
+if test "$VFSFONTS" != "no"; then
+    AC_DEFINE(SUPPORT_VFS_FONTS,, [ Define if using VFS fonts ])
+fi
+
+AC_ARG_DISABLE(annotation, [  --disable-annotation   to disable annotation support],
+    ANNOTATION)
+
+if test "$ANNOTATION" != "no"; then
+    DEFAULT_WORDLOOKUP=yes
+    AC_DEFINE(SUPPORT_ANNOTATION,, [ Define if supporting annotation ])
+fi
+
+AC_ARG_ENABLE(word_lookup, [  --enable-word-lookup    to enable word lookup support],
+    WORDLOOKUP=yes, WORDLOOKUP=$DEFAULT_WORDLOOKUP)
+
+if test "$WORDLOOKUP" = "yes"; then
+    AC_DEFINE(SUPPORT_WORD_LOOKUP,, [ Define if supporting word lookup ])
+    AC_DEFINE(SUPPORT_PPI,, [ Define if supporting PPI ])
+    OS_EXTRA_SRC="${OS_EXTRA_SRC} prefslookup.c"
+fi
+
+AC_ARG_DISABLE(transliteration, [  --disable-transliteration   to disable search transliteration],
+    TRANSLITERATION)
+
+if test "$TRANSLITERATION" = "yes"; then
+    AC_DEFINE(SUPPORT_TRANSLITERATION,, [ Define if supporting search transliteration ])
+    OS_EXTRA_SRC="${OS_EXTRA_SRC} xlit.c"
+fi
+
+AC_ARG_ENABLE(cpuspeed, [  --enable-cpuspeed       to enable CPU speed change support],
+    CPUSPEED=yes, CPUSPEED=$DEFAULT_CPUSPEED)
+
+if test "$CPUSPEED" = "yes"; then
+    AC_DEFINE(SUPPORT_CPUSPEED,, [ Define if supporting CPU speed change ])
+    OS_EXTRA_SRC="${OS_EXTRA_SRC} cpuspeed.c"
+fi
+
+AC_ARG_ENABLE(skins, [  --enable-skins          to enable skins support],
+    SKINS=yes, SKINS=$DEFAULT_SKINS)
+
+if test "$SKINS" = "yes"; then
+    AC_DEFINE(SUPPORT_SKINS,, [ Define if supporting skins ])
+    OS_EXTRA_SRC="${OS_EXTRA_SRC} skins.c"
+fi
+
+AC_ARG_ENABLE(returntoapp, [  --enable-returntoapp    to enable return to previous app on exit],
+    RETURN_TO_PREV_APP=yes, RETURN_TO_PREV_APP=$DEFAULT_RETURN_TO_PREV_APP)
+
+if test "$RETURN_TO_PREV_APP" = "yes"; then
+    AC_DEFINE(RETURN_TO_PREV_APP,, [ Define if supporting skins ])
+fi
+
+AC_MSG_CHECKING(--enable-rtl argument)
+AC_ARG_ENABLE(rtl, [  --enable-rtl            to enable right-to-left rendering support (must
+                          still be activated in the font & layout settings)],
+    RTL=yes, RTL=$DEFAULT_RTL)
+AC_MSG_RESULT($RTL)
+
+if test "$RTL" != "no"; then
+    AC_DEFINE(HAVE_RTL,, [ Define if using right-to-left support])
+fi
+
+AC_MSG_CHECKING(--enable-rot13 argument)
+AC_ARG_ENABLE(rot13, [  --enable-rot13        to enable Rot13 support],
+    ROT13=yes, ROT13=$DEFAULT_ROT13)
+AC_MSG_RESULT($ROT13)
+
+if test "$ROT13" != "no"; then
+    AC_DEFINE(HAVE_ROT13,, [ Define if using Rot13 support])
+fi
+
+dnl Checking for Handera SDK
+dnl ========================
+
+AC_MSG_CHECKING(--with-handera argument)
+AC_ARG_WITH(handera, [  --with-handera=DIR      use the Handera SDK in DIR],
+    if test "$withval" != "yes"; then
+        HANDERA_CFLAGS="-I$withval";
+    fi
+    HANDERA_SDK="$withval"; AC_MSG_RESULT($withval),
+    HANDERA_SDK=no; AC_MSG_RESULT(no))
+if test "X$HANDERA_SDK" != "Xno"; then
+    AC_CHECK_HANDERA_SDK
+fi
+if test "$HANDERA_SDK" != "no"; then
+    AC_DEFINE(HAVE_HANDERA_SDK,, [ Define if using Handera SDK ])
+    SDK_CFLAGS="${SDK_CFLAGS} ${HANDERA_CFLAGS}";
+fi
+
+dnl Checking for PalmOne SDK
+dnl ===========================
+
+AC_MSG_CHECKING(--with-palmone argument)
+AC_ARG_WITH(palmone, [  --with-palmone=DIR     use the palmOne SDK in DIR],
+    if test "$withval" != "yes"; then
+        PALMONE_CFLAGS="-I$withval -I$withval/Common/System -I $withval/Common/Libraries/HsSoundLib/ -I $withval/68K/System -I $withval/Common/Libraries/Telephony -I$withval/68K/Libraries/CarrierCustomLib/ -I$withval/Common/Libraries/CodecPluginMgr";
+    fi
+    PALMONE_SDK="$withval"; AC_MSG_RESULT($withval),
+    PALMONE_SDK=no; AC_MSG_RESULT(no))
+if test "$PALMONE_SDK" != "no"; then
+    PO_SDK=$PALMONE_SDK
+    AC_CHECK_PALMONE_SDK
+dnl CRH
+    if test "$PALMONE_SDK" = "no"; then
+        AC_MSG_CHECKING(if it is fixable)
+        AC_MSG_RESULT(...)
+        PALMONE_SDK=$PO_SDK
+        if test -d palmoneIncs; then
+            rm -rf palmoneIncs
+        fi
+        mkdir palmoneIncs
+        OS=`$UNAME`
+        if test "$OS" = "Darwin"; then
+            cp -R $withval/* palmoneIncs
+        else
+            cp -au $withval/* palmoneIncs
+        fi
+
+        $srcdir/scripts/fix_palmone_sdk.sh palmoneIncs
+        PALMONE_SDK=palmoneIncs
+        PALMONE_CFLAGS="-IpalmoneIncs -IpalmoneIncs/Common/System -IpalmoneIncs/Common/Libraries/HsSoundLib/ -IpalmoneIncs/68K/System -IpalmoneIncs/Common/Libraries/Telephony -IpalmoneIncs/68K/Libraries/CarrierCustomLib/ -IpalmoneIncs/Common/Libraries/CodecPluginMgr";
+        AC_CHECK_PALMONE_SDK
+    fi
+fi
+
+if test "$PALMONE_SDK" != "no"; then
+    AC_DEFINE(HAVE_PALMONE_SDK,, [ Define if using palmOne SDK ])
+    OS_EXTRA_SRC="${OS_EXTRA_SRC} fiveway.c"
+    SDK_CFLAGS="${SDK_CFLAGS} ${PALMONE_CFLAGS}";
+fi
+
+dnl Checking for Sony SDK
+dnl =====================
+
+AC_MSG_CHECKING(--with-sony argument)
+AC_ARG_WITH(sony, [  --with-sony=DIR         use the Sony SDK in DIR],
+    if test "$withval" != "yes"; then
+        SONY_CFLAGS="-I$withval -I$withval/System -I$withval/Libraries"
+    fi
+    SONY_SDK="$withval";
+    AC_MSG_RESULT($withval),
+    SONY_SDK=no; AC_MSG_RESULT(no))
+
+if test "X$SONY_SDK" != "Xno"; then
+    AC_CHECK_SONY_SDK
+    AC_MSG_RESULT($WORKS)
+
+    if test "$WORKS" = "no"; then
+        SDKDIR=sony_sdk
+        TRY_FIX_SDK($SONY_SDK,
+            SONY_CFLAGS="-I$SDKDIR -I$SDKDIR/System -I$SDKDIR/Libraries"
+            AC_CHECK_SONY_SDK,
+            SONY_SDK=$SDKDIR, SONY_SDK=no
+        )
+    fi
+fi
+
+if test "$SONY_SDK" != "no"; then
+    SDK_CFLAGS="${SDK_CFLAGS} ${SONY_CFLAGS}"
+    AC_DEFINE(HAVE_SONY_SDK,, [ Define if using Sony SDK ])
+fi
+
+dnl Checking for Sony Silkscreen SDK
+dnl ================================
+
+AC_MSG_CHECKING(--with-sonysilk argument)
+AC_ARG_WITH(sonysilk, [  --with-sonysilk=DIR     path to Sony Silkscreen SDK (specifically, SonySlkw.h)],
+    SONYSILK=$withval; AC_MSG_RESULT($withval),
+    SONYSILK=no; AC_MSG_RESULT(no))
+if test "X$SONYSILK" != "Xno" -a "$SONY_SDK" != "no"; then
+    if test "X$SONYSILK" != "X"; then
+        SONYSILK_CFLAGS="-I$SONYSILK"
+    else
+        SONYSILK_CFLAGS="-I$SONY_SDK/System/etc"
+    fi
+    CC="$M68K_GCC $SDK_CFLAGS"
+    CPP="$M68K_GCC -E -x c"
+    CPPFLAGS="$CPPFLAGS $SONYSILK_CFLAGS"
+    AC_CHECK_HEADERS(SonySlkw.h, SONYSILK_SDK=yes)
+fi
+if test "$SONYSILK_SDK" = "yes"; then
+    AC_DEFINE(HAVE_SONYSILK_SDK,, [ Define if using Sony Silkscreen SDK ])
+    SDK_CFLAGS="${SDK_CFLAGS} ${SONYSILK_CFLAGS}";
+else
+    SONYSILK_SDK=no
+fi
+
+
+dnl Checking for AxxPac SDK
+dnl =======================
+
+AC_MSG_CHECKING(--with-axxpac argument)
+AC_ARG_WITH(axxpac, [  --with-axxpac=DIR       use the axxPac.h header file in DIR],
+    if test "$withval" != "yes"; then
+        AXX_CFLAGS="-I$withval";
+    fi
+    AXXPAC="$withval"; AC_MSG_RESULT($withval),
+    AXXPAC=no; AC_MSG_RESULT(no))
+if test "X$AXXPAC" != "Xno"; then
+    AC_CHECK_AXXPAC_SDK
+    AC_MSG_RESULT($AXXPAC)
+fi
+if test "$AXXPAC" != "no"; then
+    AC_DEFINE(HAVE_AXXPAC,, [ Define if using axxpac support ])
+    SDK_CFLAGS="${SDK_CFLAGS} ${AXX_CFLAGS}"
+    OS_EXTRA_SRC="${OS_EXTRA_SRC} axxpacimp.c"
+fi
+
+dnl Define jogdial and silkscreen settings
+dnl ======================================
+dnl Decide if we want/need/support JogDial
+if test "$HANDERA_SDK" != "no" -o "$PALMONE_SDK" != "no" -o "$SONY_SDK" != "no"; then
+    AC_DEFINE(HAVE_JOGDIAL,, [ Define if using jogdial ])
+    OS_EXTRA_SRC="${OS_EXTRA_SRC} jogdial.c prefsjogdial.c"
+fi
+
+dnl Decide if we want/need/support Silkscreen
+if test "$HANDERA_SDK" != "no" -o "$SONY_SDK" != "no" -o "$PALM_DIA" != "no"; then
+    AC_DEFINE(HAVE_SILKSCREEN,, [ Define if using silkscreen ])
+    OS_EXTRA_SRC="${OS_EXTRA_SRC} DIA.c resize.c"
+fi
+
+dnl Decide if we want/need/support Handera Silkscreen buttons
+if test "$HANDERA_SDK" != "no"; then
+    OS_EXTRA_SRC="${OS_EXTRA_SRC} handera.c"
+fi
+
+dnl Checking for PalmCUnit
+dnl ======================
+
+AC_MSG_CHECKING(--with-palmcunit argument)
+AC_ARG_WITH(palmcunit, [  --with-palmcunit=DIR    path to PalmCUnit ],
+    PALMCUNIT=$withval; AC_MSG_RESULT($withval),
+    PALMCUNIT=no; AC_MSG_RESULT(no))
+
+if test "X$PALMCUNIT" != "Xno"; then
+    if test "X$PALMCUNIT" != "X"; then
+        AC_DEFINE(HAVE_PALMCUNIT,, [ Define if using PalmCUnit ])
+        PALMCUNITDIR=$PALMCUNIT
+        AC_SUBST(PALMCUNITDIR)
+    fi
+fi
+
+
+AC_SUBST(HIRES)
+AC_SUBST(OS_EXTRA_SRC)
+AC_SUBST(OS_EXTRA_ARM)
+AC_SUBST(EXTRA_DEFINES)
+AC_SUBST(SDK_CFLAGS)
+AC_SUBST(CFLAGS)
+AC_SUBST(CWD_INCLUDE)
+
+
+dnl ===========================================================================
+
+AC_OUTPUT( \
+Makefile \
+cleaner/Makefile \
+langs/Makefile \
+fonts/Makefile \
+xlit/Makefile \
+armlets/Makefile \
+ppi/Makefile \
+)
+dnl ===========================================================================
+
+
+dnl Spit out the configuration
+dnl ==========================
+
+echo
+echo "Viewer options for $VERSION"
+echo
+if test "X$WAIT_ICON" = "Xbubble" ; then
+    echo "  Wait indicator:             thought-bubble"
+else
+    echo "  Wait indicator:             hourglass"
+fi
+if test "X$CATEGORY" != "X" ; then
+    echo "  Default launcher category:  $CATEGORY"
+else
+    echo "  Default launcher category:  none"
+fi
+if test "X$GESTURE_DEBUG" = "Xyes" ; then
+    echo "  Gesture debug indicator:    enabled"
+else
+    echo "  Gesture debug indicator:    disabled"
+fi
+if test "X$ECLEVEL" = "Xpartial"; then
+    echo "  Error check level:          partial"
+elif test "X$ECLEVEL" = "Xfull"; then
+    echo "  Error check level:          full"
+else
+    echo "  Error check level:          none"
+fi
+if test "X$DEBUG_LOG" != "X" ; then
+    echo "  Debug log:                  enabled"
+else
+    echo "  Debug log:                  disabled"
+fi
+if test "X$DEBUG_LABELS" != "X" ; then
+    echo "  Debug labels:               enabled"
+else
+    echo "  Debug labels:               disabled"
+fi
+if test "$SCROLL_TO_BOTTOM" != "no" ; then
+    echo "  Scroll:                     to bottom"
+else
+    echo "  Scroll:                     even pages"
+fi
+if test "$ARMLETS" != "no" ; then
+    echo "  Armlets Support:            enabled"
+else
+    echo "  Armlets Support:            disabled"
+fi
+if test "$HIRES" != "no" ; then
+    echo "  HiRes Support:              enabled"
+else
+    echo "  HiRes Support:              disabled"
+fi
+if test "$ROTATE" != "no" ; then
+    echo "  Rotate Support:             enabled"
+else
+    echo "  Rotate Support:             disabled"
+fi
+if test "$GRAY" != "no" ; then
+    echo "  Anti-aliased Font Support:  enabled"
+else
+    echo "  Anti-aliased Font Support:  disabled"
+fi
+if test "$VFSFONTS" != "no" ; then
+    echo "  VFS User Font Support:      enabled"
+else
+    echo "  VFS User Font Support:      disabled"
+fi
+if test "$ANNOTATION" != "no" ; then
+    echo "  Annotation Support:         enabled"
+else
+    echo "  Annotation Support:         disabled"
+fi
+if test "$TRANSLITERATION" != "no" ; then
+    echo "  Transliteration Support:    enabled"
+else
+    echo "  Transliteration Support:    disabled"
+fi
+if test "$SKINS" = "yes" ; then
+    echo "  Skins Support:              enabled"
+else
+    echo "  Skins Support:              disabled"
+fi
+if test "$CPUSPEED" = "yes" ; then
+    echo "  CPU Speed Change Support:   enabled"
+else
+    echo "  CPU Speed Change Support:   disabled"
+fi
+if test "$PALM_DIA" != "no" ; then
+    echo "  Palm DIA Support:           enabled"
+else
+    echo "  Palm DIA Support:           disabled"
+fi
+if test "$HANDERA_SDK" != "no" ; then
+    echo "  Handera Support:            enabled"
+else
+    echo "  Handera Support:            disabled"
+fi
+if test "$PALMONE_SDK" != "no" ; then
+    echo "  palmOne Support:            enabled"
+else
+    echo "  palmOne Support:            disabled"
+fi
+if test "$SONY_SDK" != "no" ; then
+    echo "  Sony Support:               enabled"
+else
+    echo "  Sony Support:               disabled"
+fi
+if test "$IMODE" != "no" ; then
+    echo "  I-mode Support:             enabled"
+else
+    echo "  I-mode Support:             disabled"
+fi
+if test "$AXXPAC" != "no" ; then
+    echo "  AxxPac Support:             enabled"
+else
+    echo "  AxxPac Support:             disabled"
+fi
+if test "$PALMCUNIT" != "no" ; then
+    echo "  PalmCUnit support:          enabled"
+else
+    echo "  PalmCUnit support:          disabled"
+fi
+if test "$RETURN_TO_PREV_APP" = "yes" ; then
+    echo "  Return to prev app:         enabled"
+else
+    echo "  Return to prev app:         disabled"
+fi
+if test "$RTL" != "no" ; then
+    echo "  Right-to-Left Support:      enabled"
+else
+    echo "  Right-to-Left Support:      disabled"
+fi
+if test "$ROT13" != "no" ; then
+    echo "  Rot13 Support:              enabled"
+else
+    echo "  Rot13 Support:              disabled"
+fi
+echo
+

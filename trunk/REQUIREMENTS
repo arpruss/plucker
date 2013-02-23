@@ -1,0 +1,161 @@
+Plucker System Requirements
+---------------------------
+PalmOS viewer:
+
+  Models: Palm OS devices running OS 2.0.3 or later
+
+
+GTK viewer:
+
+  Operating systems:  Unix (Linux, Solaris, Mac OS X, BSD, etc.)
+
+  Software:  GUI toolkit GTK+, version 2 or later
+
+
+Distiller:
+
+  Operating systems:  Unix (Linux, Solaris, Mac OS X, BSD, etc.), Windows
+
+  Software:  Python (1.5.2 or later)  Note that the Python that comes with
+             Redhat Linux has a mysterious bug that causes some URLs to be truncated;
+             better to re-install from www.python.org.
+
+  Image support software:
+        on Unix:  one of the following:
+              ImageMagick 5.4.4 or later
+              PIL 1.1 or later (may already be in your Python)
+              netpbm 9.15 or later
+        on Windows:  ImageMagick & Bmp2Tbmp
+
+
+Desktop:
+
+  Operating Systems: Linux/Unix, OS/2, Windows
+
+  Software: Python (1.5.2 or later), wxWindows (for GUI desktop)
+
+  Additional software (e.g. to include images): ImageMagick, pilot-link 
+        (including the Pilot.pm module), perl, netpbm 9.15 or later, 
+        jpeg (djpeg)
+
+
+Where you find the tools:
+
+  python     : http://www.python.org/
+
+  PIL        : http://www.pythonware.com/products/pil/
+  ImageMagick: http://www.imagemagick.org/
+  netpbm     : http://netpbm.sourceforge.net/
+
+  pilot-link : http://pilot-link.org/
+  perl       : http://www.perl.com/
+  jpeg       : ftp://ftp.uu.net/graphics/jpeg/
+  wxWindows  : http://www.wxwindows.org
+
+  GTK+       : http://www.gtk.org/
+  JIU        : http://jiu.sourceforge.net/
+  Jython     : http://www.jython.org/
+  Java       : http://java.sun.com/
+
+  OS/2 tools : http://www.leo.org/pub/comp/os/os2/leo
+             : http://cip.physik.uni-wuerzburg.de/~arwagner/products/plucker/download
+
+  Windows tools : Python 1.5.2 : http://www.python.org/download/download_windows.html
+                  ImageMagick  : ftp://ftp.wizards.dupont.com/pub/ImageMagick/win2k/ImageMagick-win2k.zip
+                  Bmp2Tbmp     : http://www.Dirk-Heiser.de/Bmp2Tbmp/
+
+
+It should be possible to get Plucker running on other Unix systems 
+too.  If you get it running on some system not listed above, then 
+please notify us so we can add it to the list. We can be reached 
+at plucker-team@rubberchicken.org
+
+
+Development (in general)
+------------------------
+
+To configure the source, you will need various tools, depending on
+what sections of the project you are working on.  See the below
+sections for information on specific tools.
+
+In general, to configure the system, you will need GNU Autoconf 2.13.
+Do not try to use 2.5x; it seems to have oddities that don't work with
+our configure.in file.
+
+To configure, do not run "configure" directly; instead, run the
+top level shell script "autogen.sh", passing it the options you would
+normally pass to configure.
+
+
+Palm OS viewer development
+--------------------------
+
+If you want to compile the viewer you have to install the necessary
+development tools (and make sure that they are in your path). 
+
+Where you find the tools:
+
+prc-tools:              http://prc-tools.sourceforge.net/
+SDK5:                   http://www.palmos.com/cgi-bin/sdk50.cgi
+pilrc (v2.8 or later):  http://www.pilrc.com/
+
+See the README in the viewer dir for additional info.
+
+
+Python distiller development
+----------------------------
+
+You will need to have Python (1.5.2 or later) and one of the
+image-processing libraries detailed above installed to work on the
+distiller.  You should have the full path to the directory
+"SRC/parser/python" in your PYTHONPATH environment variable.  You can
+run the distiller with the command line:
+
+ $ python /SRC/parser/python/PyPlucker/Spider.py [command-line-args]
+
+
+Java distiller development
+--------------------------
+
+The Java distiller *is* the Python distiller, so to work on the
+functionality of it, you will need the same things you need for the
+Python distiller.  To compile the Java jar file for it, you will need
+in addition Java (1.2 or later), Jython (2.1 or later) and the Java
+Imaging Utilities (JIU) image-processing library (0.10.0 or later).
+
+
+Documentation development
+-------------------------
+
+If you want to build or work on the Documentation, you will also need
+LaTeX and LaTeX2HTML and its associated tools -- Perl 5, TeX, dvips,
+ghostscript, and netpbm (see the Latex2HTML docs for info on where to
+obtain these).  You will also need GNU sed.
+
+LaTeX:       ftp://ftp.tug.org/tex/
+Latex2HTML:  http://ctan.tug.org/ctan/tex-archive/support/latex2html
+GNU sed:     ftp://ftp.gnu.org/gnu/sed/
+
+NOTE: the latex2html installation must support GIF images.
+
+
+Plucker Desktop Development
+---------------------------
+
+If you want to compile Plucker Desktop, you will need the 
+Free wxWindows cross-platform C++ development toolkit. 
+Version 2.4.2 or higher of wxWindows higher is required. 
+
+A C++ compiler supported by wxWindows is also needed: GCC on POSIX
+systems, Borland or MSVC or Cygwin on Microsoft Windows are the 
+recommended compilers, and the built-in free Developer Tools 
+GCC compiler on Apple OS X, but all common C++ compilers can be used.
+
+See the plucker_desktop/docs/BUILDING*.txt files for full
+details and step-by-step instructions for Linux, Microsoft Windows 
+and others.
+
+Where you find the development tools:
+
+wxWindows: http://www.wxwindows.org
+GCC:       http://www.gnu.org/software/gcc/gcc.html

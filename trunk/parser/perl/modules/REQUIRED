@@ -1,0 +1,64 @@
+Here's a brief listing of the required modules required for the perl
+parser to work and their CPAN locations. CPAN is your friend!
+
+----------------------------------------------------------------------
+Module id = HTML::LinkExtor
+    DESCRIPTION   Extract links from HTML documents
+    CPAN_USERID  GAAS (Gisle Aas <gisle@aas.no>)
+    CPAN_VERSION 1.19
+    CPAN_FILE    GAAS/HTML-Parser-2.25.tar.gz
+    DSLI_STATUS  RmpO (released,mailing-list,perl,object-oriented)
+    MANPAGE      HTML::LinkExtor - Extract links from an HTML document
+    INST_FILE    /usr/lib/perl5/site_perl/5.005/HTML/LinkExtor.pm
+    INST_VERSION 1.19
+
+ftp://ftp-mirror.internap.com/pub/CPAN/authors/id/GAAS/HTML-Parser-2.25.tar.gz
+----------------------------------------------------------------------
+Module id = LWP::UserAgent
+    DESCRIPTION  A WWW UserAgent class
+    CPAN_USERID  GAAS (Gisle Aas <gisle@aas.no>)
+    CPAN_VERSION 1.69
+    CPAN_FILE    GAAS/libwww-perl-5.47.tar.gz
+    DSLI_STATUS  RmpO (released,mailing-list,perl,object-oriented)
+    MANPAGE      LWP::UserAgent - A WWW UserAgent class
+    INST_FILE    /usr/lib/perl5/site_perl/5.005/LWP/UserAgent.pm
+    INST_VERSION 1.69
+
+ftp://ftp-mirror.internap.com/pub/CPAN/authors/id/GAAS/libwww-perl-5.47.tar.gz
+----------------------------------------------------------------------
+Module id = HTML::Parser
+    DESCRIPTION   Basic HTML Parser
+    CPAN_USERID  GAAS (Gisle Aas <gisle@aas.no>)
+    CPAN_VERSION 2.25
+    CPAN_FILE    GAAS/HTML-Parser-2.25.tar.gz
+    DSLI_STATUS  RmpO (released,mailing-list,perl,object-oriented)
+    MANPAGE      HTML::Parser - HTML tokenizer
+    INST_FILE    /usr/lib/perl5/site_perl/5.005/HTML/Parser.pm
+    INST_VERSION 2.25
+
+ftp://ftp-mirror.internap.com/pub/CPAN/authors/id/GAAS/HTML-Parser-2.25.tar.gz
+----------------------------------------------------------------------
+Module id = HTML::TokeParser
+    DESCRIPTION   Alternative HTML::Parser interface
+    CPAN_USERID  GAAS (Gisle Aas <gisle@aas.no>)
+    CPAN_VERSION 2.07
+    CPAN_FILE    GAAS/HTML-Parser-2.25.tar.gz
+    DSLI_STATUS  RmpO (released,mailing-list,perl,object-oriented)
+    MANPAGE      HTML::TokeParser - Alternative HTML::Parser interface
+    INST_FILE    /usr/lib/perl5/site_perl/5.005/HTML/TokeParser.pm
+    INST_VERSION 2.07
+
+ftp://ftp-mirror.internap.com/pub/CPAN/authors/id/GAAS/HTML-Parser-2.25.tar.gz
+----------------------------------------------------------------------
+Module id = URI::URL
+    DESCRIPTION  Uniform Resource Locator objects
+    CPAN_USERID  GAAS (Gisle Aas <gisle@aas.no>)
+    CPAN_VERSION 5.02
+    CPAN_FILE    GAAS/URI-1.04.tar.gz
+    DSLI_STATUS  RmpO (released,mailing-list,perl,object-oriented)
+    MANPAGE      URI::URL - Uniform Resource Locators
+    INST_FILE    /usr/lib/perl5/site_perl/5.005/URI/URL.pm
+    INST_VERSION 5.02
+
+ftp://ftp-mirror.internap.com/pub/CPAN/authors/id/GAAS/URI-1.04.tar.gz
+----------------------------------------------------------------------

@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+
+<object class="wxDialog" name="preferences_dialog">
+    <title>Preferences</title>
+    <style>wxCAPTION|wxSYSTEM_MENU|wxRESIZE_BORDER</style> 
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>0</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+            <border>5</border>
+            <object class="wxNotebook" name="preferences_dialog_notebook">
+                <usenotebooksizer>1</usenotebooksizer>
+                <size>550,160</size>
+                <object class="notebookpage">
+                    <label>Interface</label>
+                    <object class="wxPanel" name="preferences_dialog_interface_tab">
+                        <object class="wxFlexGridSizer">
+                            <cols>1</cols>
+                            <rows>0</rows>
+                            <vgap>0</vgap>
+                            <hgap>0</hgap>
+                            <growablecols>0</growablecols>
+                            <growablerows>2</growablerows>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Internationalization</label>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="preferences_dialog_internationalization_enabled_checkbox">
+                                            <label>Translate interface into the local language</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>3</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>1</growablecols>
+                                            <growablerows>0,1</growablerows>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxRadioButton" name="preferences_dialog_internationalization_autodetect_radiobutton">
+                                                    <label>Autodetect language (recommended)</label>
+                                                </object>
+                                            </object>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>1,1</size>
+                                            </object>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxRadioButton" name="preferences_dialog_internationalization_choose_radiobutton">
+                                                    <label>Force a specific language:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxButton" name="preferences_dialog_internationalization_choose_button">
+                                                    <label>Choose language...</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Look and feel</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>3</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>1</growablecols>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxCheckBox" name="preferences_dialog_show_toolbar_checkbox">
+                                                    <label>Show toolbar:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="preferences_dialog_theme_choice">
+                                                    <size>200,-1</size>
+                                                    <content>
+                                                        <item>Default style</item>
+                                                        <item>Default high-colour style</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="preferences_dialog_show_statusbar_checkbox">
+                                            <label>Show statusbar</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>3</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>1</growablecols>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="preferences_dialog_window_placement_statictext">
+                                                    <label>Dialog placement:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="preferences_dialog_window_placement_choice">
+                                                    <size>200,-1</size>
+                                                    <content>
+                                                        <item>Center on screen</item>
+                                                        <item>Center on parent dialog</item>
+                                                        <item>My previous location</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Startup</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>2</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>1</growablecols>
+                                            <growablerows>0,1</growablerows>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxCheckBox" name="preferences_dialog_startup_tips_checkbox">
+                                                    <label>Show daily tips on startup:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="preferences_dialog_startup_tips_choice">
+                                                    <size>100,-1</size>
+                                                    <content>
+                                                        <item>Basic Plucker tips</item>
+                                                        <item>Advanced Plucker tips</item>
+                                                        <item>Rubber chicken trivia</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxCheckBox" name="preferences_dialog_splashscreen_checkbox">
+                                                    <label>Show splash screen on startup</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Autoupdate</label>
+                    <object class="wxPanel" name="preferences_dialog_autoupdate_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxVERTICAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Channel autoupdate mode</label>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                                                <border>5</border>
+                                                <object class="wxRadioButton" name="preferences_dialog_autoupdate_mode_never_radiobutton">
+                                                    <style>wxRB_GROUP</style>
+                                                    <label>Never autoupdate. Only update when I click one of the 'Update Channels' buttons</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                                                <border>5</border>
+                                                <object class="wxRadioButton" name="preferences_dialog_autoupdate_mode_immediately_radiobutton">
+                                                    <label>Autoupdate any channel as soon as it becomes due</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxRadioButton" name="preferences_dialog_autoupdate_mode_deferred_radiobutton">
+                                                    <label>Off-peak mode: defer autoupdates until the current time is between:</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <size>20,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE</flag>
+                                                <border>5</border>
+                                                <object class="unknown" name="preferences_dialog_autoupdate_lower_time_control">
+                                                    <size>150,30</size>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>15</border>
+                                                <object class="wxStaticText" name="preferences_dialog_autoupdate_mode_deferred_statictext">
+                                                    <label>and</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE</flag>
+                                                <border>5</border>
+                                                <object class="unknown" name="preferences_dialog_autoupdate_upper_time_control">
+                                                    <size>150,30</size>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxRadioButton" name="preferences_dialog_autoupdate_mode_on_sync_radiobutton">
+                                            <label>Autoupdate any due channels each time I press my handheld's sync button</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Advanced</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="preferences_dialog_autoupdate_precision1_statictext">
+                                                    <label>Precision: compare current time to channels' due time every </label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxSpinCtrl" name="preferences_dialog_autoupdate_precision_spinctrl">
+                                                    <size>60,-1</size>
+                                                    <min>1</min>
+                                                    <max>10000</max>
+                                                    <value>1</value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="preferences_dialog_autoupdate_precision2_statictext">
+                                                    <label>minutes</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Spidering</label>
+                    <object class="wxPanel" name="preferences_dialog_spidering_tab">
+                        <object class="wxFlexGridSizer">
+                            <cols>1</cols>
+                            <rows>0</rows>
+                            <vgap>0</vgap>
+                            <hgap>0</hgap>
+                            <growablecols>0</growablecols>
+                            <growablerows>2</growablerows>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Spidering status display</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>2</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>1</growablecols>
+                                            <growablerows>0,1</growablerows>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="preferences_dialog_progress_statictext">
+                                                    <label>Show spider progress with:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="preferences_dialog_progress_choice">
+                                                    <size>100,-1</size>
+                                                    <content>
+                                                        <item>A console window</item>
+                                                        <item>A progress dialog</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="preferences_dialog_autoclose_progress_statictext">
+                                                    <label>Auto-close progress when done:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="preferences_dialog_autoclose_progress_choice">
+                                                    <size>100,-1</size>
+                                                    <content>
+                                                        <item>Always</item>
+                                                        <item>If no errors occurred</item>
+                                                        <item>Never</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Command executions</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="preferences_dialog_command_before_group_checkbox">
+                                            <label>Execute command before spidering a group of channels:</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxTextCtrl" name="preferences_dialog_command_before_group_textctrl">
+                                            <size>225,-1</size>
+                                            <value></value>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="preferences_dialog_command_after_group_checkbox">
+                                            <label>Execute command after spidering a group of channels:</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxTextCtrl" name="preferences_dialog_command_after_group_textctrl">
+                                            <size>225,-1</size>
+                                            <value></value>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Exclusion lists</label>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxButton" name="preferences_dialog_exclusion_lists_button">
+                                            <label>Edit shared exclusion list (used by all channels)...</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>HTML editor</label>
+                    <object class="wxPanel" name="preferences_dialog_editor_tab">
+                        <object class="wxFlexGridSizer">
+                            <cols>1</cols>
+                            <rows>0</rows>
+                            <vgap>0</vgap>
+                            <hgap>0</hgap>
+                            <growablecols>0</growablecols>
+                            <growablerows>1</growablerows>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>HTML editor</label>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                                        <border>5</border>
+                                        <object class="wxRadioButton" name="preferences_dialog_builtin_editor_radiobutton">
+                                            <style>wxRB_GROUP</style>
+                                            <label>Use Plucker desktop's built-in HTML editor</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                                        <border>5</border>
+                                        <object class="wxRadioButton" name="preferences_dialog_external_editor_radiobutton">
+                                            <label>Use an external HTML editor:</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>2</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>0</growablecols>
+                                            <growablerows>0</growablerows>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="preferences_dialog_external_editor_textctrl">
+                                                    <size>50,-1</size>
+                                                    <value></value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxButton" name="preferences_dialog_external_editor_button">
+                                                    <label>Choose...</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Built-in editor options</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>2</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>1</growablecols>
+                                            <growablerows>0</growablerows>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="preferences_dialog_editor_toolbar_statictext">
+                                                    <label>Toolbar complexity:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="preferences_dialog_editor_toolbar_choice">
+                                                    <size>50,-1</size>
+                                                    <content>
+                                                        <item>Basic (insert hyperlink only)</item>
+                                                        <item>Complete (full toolbar set)</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="preferences_dialog_editor_insert_linefeeds_checkbox">
+                                            <label>Insert linefeeds after text generated by toolbar buttons</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Showcase</label>
+                    <object class="wxPanel" name="preferences_dialog_showcase_tab">
+                        <object class="wxFlexGridSizer">
+                            <cols>1</cols>
+                            <rows>0</rows>
+                            <vgap>0</vgap>
+                            <hgap>0</hgap>
+                            <growablecols>0</growablecols>
+                            <growablerows>0</growablerows>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Plucker showcase options</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>2</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>1</growablecols>
+                                            <growablerows>0,1</growablerows>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="preferences_dialog_showcase_layout_statictext">
+                                                    <label>Showcase dialog layout:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="preferences_dialog_showcase_layout_choice">
+                                                    <size>100,-1</size>
+                                                    <content>
+                                                        <item>Horizontal layout</item>
+                                                        <item>Vertical layout</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="preferences_dialog_showcase_insert_parameters_statictext">
+                                                    <label>Fields to use in my channel:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="preferences_dialog_showcase_insert_all_parameters_choice">
+                                                    <size>100,-1</size>
+                                                    <content>
+                                                        <item>Name and URL only</item>
+                                                        <item>All possible fields</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxButton" name="preferences_dialog_showcase_details_button">
+                                            <label>Choose fields to display in details pane...</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="preferences_dialog_showcase_images_checkbox">
+                                            <label>Include images in channel previews (takes a longer time)</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Proxy</label>
+                    <object class="wxPanel" name="preferences_dialog_proxy_tab">
+                        <object class="wxFlexGridSizer">
+                            <cols>1</cols>
+                            <rows>0</rows>
+                            <vgap>0</vgap>
+                            <hgap>0</hgap>
+                            <growablecols>0</growablecols>
+                            <growablerows>1</growablerows>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Enable proxy</label>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="preferences_dialog_use_proxy_checkbox">
+                                            <label>Use a proxy to access the Internet</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Proxy settings</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>2</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="preferences_dialog_proxy_server_statictext">
+                                                    <label>Proxy server:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="preferences_dialog_proxy_server_textctrl">
+                                                    <size>290,-1</size>
+                                                    <value></value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="preferences_dialog_proxy_port_statictext">
+                                                    <label>Port:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="preferences_dialog_proxy_port_textctrl">
+                                                    <size>50,-1</size>
+                                                    <value></value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="preferences_dialog_proxy_login_statictext">
+                                                    <label>Proxy login:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="preferences_dialog_proxy_login_textctrl">
+                                                    <size>150,-1</size>
+                                                    <style>wxTE_PASSWORD</style>
+                                                    <value></value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="preferences_dialog_proxy_password_statictext">
+                                                    <label>Proxy password:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="preferences_dialog_proxy_password_textctrl">
+                                                    <size>150,-1</size>
+                                                    <style>wxTE_PASSWORD</style>
+                                                    <value></value>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+</resource>

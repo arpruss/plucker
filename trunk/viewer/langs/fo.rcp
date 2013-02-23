@@ -1,0 +1,1037 @@
+/* $Id: fo.rcp,v 1.92 2007/08/28 14:32:11 desrod Exp $ */
+
+/**************************************************************
+ * Faeroese resources - Jacob Sparre Andersen <sparre@nbi.dk> *
+ **************************************************************/
+
+TRANSLATION "fo"
+BEGIN
+
+
+"$$LANG"                    =   "fo"
+
+
+/*************************************************************
+ *                      MENU OPTIONS                         *
+ *************************************************************/
+
+"$$ABOUT PLUCKER"           =   "Um Plucker"
+"$$ADD BOOKMARK..."         =   "Nýtt bókmerki..."
+"$$BACK"                    =   "Aftur"
+"$$BOOKMARKS..."            =   "Bókmerki..."
+"$$BOTTOM"                  =   "Til endan"
+"$$CONTACT DEVELOPERS"      =   "Skriva til høvundarnir"
+"$$DELETE ALL..."           =   "Sletta alt..."
+/*************************************************************/
+"$$DELETE READ..."          =   "Delete read documents..."
+/*************************************************************/
+"$$DETAILS..."              =   "Details..."
+"$$FIND AGAIN"              =   "Finn aftur"
+"$$FIND..."                 =   "Finn..."
+"$$FORWARD"                 =   "Fram"
+"$$GO"                      =   "Far"
+"$$HOME"                    =   "Heim"
+"$$LIBRARY..."              =   "Skráir..."
+"$$OPTIONS"                 =   "Val"
+"$$PREFERENCES..."          =   "Uppseting..."
+"$$TOP"                     =   "Til byrjan"
+"$$VIEW"                    =   "Útsjónd"
+/*************************************************************/
+"$$AUTOSCROLL FASTER"       =   "Autoscroll Faster"
+"$$AUTOSCROLL SLOWER"       =   "Autoscroll Slower"
+"$$COPY TO MEMO"            =   "Export to Memo"
+"$$DELETE DOC..."           =   "Delete document..."
+"$$START AUTOSCROLL"        =   "Start Autoscroll"
+"$$STOP AUTOSCROLL"         =   "Stop Autoscroll"
+"$$SELECT FONT..."          =   "Font and layout..."
+"$$SYNC LIST"               =   "Update document list"
+"$$SHOWHIDE"                =   "Show/Hide"
+"$$SORT"                    =   "Sort"
+"$$NAME"                    =   "Name"
+"$$TYPE"                    =   "Type"
+"$$DATE"                    =   "Date"
+"$$SIZE"                    =   "Size"
+"$$CATEGORY"                =   "Category"
+"$$TOGGLE FULLSCREEN"       =   "Toggle fullscreen"
+"$$LOOKUP WORD"             =   "Lookup word"
+"$$SET KEYBOARD/GRAFFITI..."   =   "Set keyboard/graffiti..."
+/*************************************************************/
+
+
+/*************************************************************
+ *                        SHORTCUTS                          *
+ *************************************************************/
+
+"$$SC ADD BOOKMARK"         =   "+"   /* Nýtt bókmerki */
+"$$SC BACK"                 =   "A"   /* Aftur         */
+"$$SC TOP"                  =   "B"   /* Til byrjan    */
+"$$SC COPY TO MEMO"         =   "C"
+"$$SC DELETE ALL"           =   "D"
+"$$SC DELETE DOC"           =   "D"
+"$$SC BOTTOM"               =   "E"   /* Til enda      */
+"$$SC FIND"                 =   "F"   /* Finn...       */
+"$$SC LOOKUP WORD"          =   "G"
+"$$SC HOME"                 =   "H"   /* Heim          */
+"$$SC FIND AGAIN"           =   "I"   /* Finn aftur    */
+"$$SC START AUTOSCROLL"     =   "J"
+"$$SC SET KEYBOARD/GRAFFITI"   =   "K"
+"$$SC DETAILS"              =   "L"
+"$$SC BOOKMARKS"            =   "M"   /* Bókmerki      */
+"$$SC SELECT FONT"          =   "N"
+"$$SC TOGGLE FULLSCREEN"    =   "O"
+"$$SC STOP AUTOSCROLL"      =   "Q"
+"$$SC LIBRARY"              =   "R"   /* Skráir        */
+"$$SC SYNC LIST"            =   "T"
+"$$SC PREFERENCES"          =   "U"   /* Uppseting...  */
+"$$SC AUTOSCROLL SLOWER"    =   "V"
+"$$SC FORWARD"              =   "W"   /* Fram          */
+"$$SC AUTOSCROLL FASTER"    =   "Z"
+
+
+/*************************************************************
+ *                         FORMS                             *
+ *************************************************************/
+
+/*** MAIN ***/
+
+"$$MAIN: ADD BOOKMARK"              =   "Nýtt bókmerki"
+"$$MAIN: BOTTOM"                    =   "Til endan"
+"$$MAIN: FOLLOW LINK"               =   "Far eftir tilvísing"
+"$$MAIN: OPEN IMAGE"                =   "Opna mynd"
+"$$MAIN: TOP"                       =   "Til byrjan"
+"$$MAIN: VIEW BOOKMARKS"            =   "Hygg at bókmerki"
+"$$MAIN: 10%"                       =   "10%"
+"$$MAIN: 20%"                       =   "20%"
+"$$MAIN: 30%"                       =   "30%"
+"$$MAIN: 40%"                       =   "40%"
+"$$MAIN: 50%"                       =   "50%"
+"$$MAIN: 60%"                       =   "60%"
+"$$MAIN: 70%"                       =   "70%"
+"$$MAIN: 80%"                       =   "80%"
+"$$MAIN: 90%"                       =   "90%"
+/************************************************************/
+"$$MAIN: ADD ANNOTATION"            =   "Add annotation"
+/************************************************************/
+
+/*** ABOUT ***/
+
+"$$ABOUT: BODY1"                    =   "Plucker er eitt savn af forrit ið"
+"$$ABOUT: BODY2"                    =   "kemur vi ein off-line vevlesari til"
+"$$ABOUT: BODY3"                    =   "PalmOS-skipanir. Tað er Free"
+"$$ABOUT: BODY4"                    =   "Software sum frágreitt í General"
+"$$ABOUT: BODY5"                    =   "Public License hjá Free Software"
+"$$ABOUT: BODY6"                    =   "Foundation."
+"$$ABOUT: WEBSITE"                  =   "www.plkr.org"
+"$$ABOUT: OK"                       =   "Í lagi"
+"$$ABOUT: TITLE"                    =   "Um Plucker"
+
+
+/*** DOCUMENT LIBRARY ***/
+
+"$$LIBRARY: BEAM"                   =   "Strála"
+"$$LIBRARY: CATEGORIZE"             =   "Být í bólkum"
+"$$LIBRARY: CATEGORY"               =   "Bólkur"
+"$$LIBRARY: DATE"                   =   "Dato"
+"$$LIBRARY: NAME"                   =   "Navn"
+"$$LIBRARY: OPEN"                   =   "Opna"
+"$$LIBRARY: SIZE"                   =   "Stødd"
+/*************************************************************/
+"$$LIBRARY: DELETE"                 =   "Delete"
+"$$LIBRARY: NO DOCUMENTS"           =   "No documents found"
+"$$LIBRARY: RENAME"                 =   "Rename"
+"$$LIBRARY: SHOW:"                  =   "Show:"
+"$$LIBRARY: TITLE"                  =   "Document Library"
+"$$LIBRARY: UNREAD"                 =   "Unread"
+"$$LIBRARY: HELP"                   =
+    "• You will be able to manage your various Plucker documents from here "\
+    "simply by selecting which one you want to view."\   
+    "\n\n"\
+    "• A tap on the document icon in front of a document will provide you "\
+    "with a dropdown list including different operations for the selected "\
+    "document (Open, Categorize, Delete, Rename and Beam)."\
+    "\n\n"\
+    "• You can sort the documents according to name, date or size in both "\
+    "ascending and descending order."
+/*************************************************************/
+
+
+/*** RENAME DOCUMENT ***/
+
+"$$RENAME: NAME:"                   =   "Skriva nýtt navn:"
+/*************************************************************/
+"$$RENAME: CANCEL"                  =   "Cancel"
+"$$RENAME: RENAME"                  =   "Rename"
+"$$RENAME: TITLE"                   =   "Rename"
+/*************************************************************/
+
+
+/*** PREFERENCES ***/
+
+"$$PREFS: TITLE"                    =   "Uppseting"
+"$$PREFS: BUTTON"                   =   "Knappar"
+/****************************************************************************/
+"$$PREFS: OK"                       =   "OK"
+"$$PREFS: CANCEL"                   =   "Cancel"
+"$$PREFS: GENERAL"                  =   "General"
+"$$PREFS: LAYOUT"                   =   "Layout"
+"$$PREFS: LIBRARY"                  =   "Library"
+"$$PREFS: AUTOSCROLL"               =   "Autoscroll"
+"$$PREFS: HARDCOPY"                 =   "Export"
+"$$PREFS: CONTROL"                  =   "Tap"
+"$$PREFS: GESTURE"                  =   "Gesture"
+"$$PREFS: JOGDIAL"                  =   "JogDial"
+"$$PREFS: LOOKUP"                   =   "Lookup"
+"$$PREFS: COLOR"                    =   "Color"
+"$$PREFS: FONT"                     =   "Font"
+/****************************************************************************/
+
+
+/*** GENERAL PREFERENCES ***/
+
+"$$PREFSGENERAL: ADD BOOKMARK..."          =   "Nýtt bókmerki..."
+"$$PREFSGENERAL: BOTTOM"                   =   "Til endan"
+"$$PREFSGENERAL: BUTTON ACTION..."         =   "Knappar..."
+"$$PREFSGENERAL: PREFERENCES..."           =   "Uppseting..."
+"$$PREFSGENERAL: TAP ACTION..."            =   "Pennur..."
+"$$PREFSGENERAL: TOP"                      =   "Til byrjan"
+"$$PREFSGENERAL: LEFT"                     =   "Vinsta"
+"$$PREFSGENERAL: RIGHT"                    =   "Høgru"
+/***************************************************************************/
+"$$PREFSGENERAL: ALWAYS DELETE ANNOTATIONS"    = "Delete notes/marks with doc"
+"$$PREFSGENERAL: ANNOTATIONS IN BOOKMARK LIST" = "List annotations with bookmarks"
+"$$PREFSGENERAL: BOTTOM TOOLBAR"           =   "Bottom"
+"$$PREFSGENERAL: COMMAND BUTTON:"          =   "Command Toolbar Button:"
+"$$PREFSGENERAL: COPY TO MEMO"             =   "Export to Memo"
+"$$PREFSGENERAL: DELETE DOC..."            =   "Delete Doc..."
+"$$PREFSGENERAL: DETAILS..."               =   "Details..."
+"$$PREFSGENERAL: NO TOOLBAR"               =   "None"
+"$$PREFSGENERAL: NONE"                     =   "None"
+"$$PREFSGENERAL: SILK TOOLBAR"             =   "In silk"
+"$$PREFSGENERAL: TOOLBAR:"                 =   "Toolbar:"
+"$$PREFSGENERAL: TOP TOOLBAR"              =   "Top"
+"$$PREFSGENERAL: NONE"                     =   "None"
+"$$PREFSGENERAL: SCREEN DEPTH:"            =   "Screen depth:"
+"$$PREFSGENERAL: SCROLLBAR:"               =   "Scrollbar:"
+"$$PREFSGENERAL: HELP"                     =
+    "• On a device running Palm OS 3.5 you can set one of the buttons "\
+    "for the command toolbar. Has no effect for other versions of Palm OS."\
+    "\n\n"\
+    "• You can set the default screen depth the device should operate at. "\
+    "\n\n"\
+    "• You can have the toolbar at the top or bottom of the screen, or no toolbar at all."\
+    "\n\n"\
+    "• You can have either a left scrollbar, a right scrollbar or no scrollbar."
+/*************************************************************/
+
+
+/*** LAYOUT PREFERENCES ***/
+
+/************************************************************/
+"$$PREFSLAYOUT: ENABLE MARGINS"          =   "Enable margins"
+"$$PREFSLAYOUT: ENABLE SOFT-HYPHENS"     =   "Enable soft-hyphens"
+"$$PREFSLAYOUT: UNDERLINE"               =   "Enable underline tags"
+"$$PREFSLAYOUT: CONNECT PARTS WITH PAGING"
+                                           =   "Connect parts with paging"
+"$$PREFSLAYOUT: ALIGNMENT:"              =   "Alignment"
+"$$PREFSLAYOUT: AS IN DOC"               =   "As in document"
+"$$PREFSLAYOUT: FORCE LEFT"              =   "Force left"
+"$$PREFSLAYOUT: FORCE RIGHT"             =   "Force right"
+"$$PREFSLAYOUT: FORCE CENTER"            =   "Force center"
+"$$PREFSLAYOUT: FORCE JUSTIFY"           =   "Force justify"
+"$$PREFSLAYOUT: HELP"                    =
+    "• By enabling the underline option all links will be "\
+    "indicated with a dotted line and the solid line will "\
+    "instead be used for the HTML underline tag (<U>). It is "\
+    "still possible to distinguish visited and unvisited links "\
+    "by enabling the strike-through option."\
+    "\n\n"\
+    "• You can connect multipart documents with the paging "\
+    "controls so that using a page-down (or half-page-down) "\
+    "control on the last screen of a page will take you to "\
+    "the last displayed link, and similarly for using a page-up or "\
+    "half-page-up control on the first screen."\
+    "\n\n"\
+    "• You can override the document's alignment settings."
+/*************************************************************/
+
+
+/*** FONT PREFERENCES ***/
+/*************************************************************/
+"$$PREFSFONT: LIBRARY"      =   "Library"
+"$$PREFSFONT: MAIN"         =   "Main"
+/*************************************************************/
+
+
+/*** COLOR PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSCOLOR: STRIKE-THROUGH"          =   "Enable strike-through"
+"$$PREFSCOLOR: FORCE DEFAULT TEXT COLORS" =  "Force default text colors"
+"$$PREFSCOLOR: HELP"                    =
+    "• If you think it is difficult to see whether a "\
+    "link has been visited or not, you could try to enable "\
+    "strike-through. It will add a strike-through to each "\
+    "visited link."\
+    "• You can force text to be black and links to be blue."
+/*************************************************************/
+
+
+/*** LIBRARY PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSLIBRARY: UPDATE DOCLIST"           =   "Update list:"
+"$$PREFSLIBRARY: AUTOMATIC"                =   "Automatic"
+"$$PREFSLIBRARY: MANUAL"                   =   "Manual"
+"$$PREFSLIBRARY: IGNORE CARD"              =   "Ignore card"
+"$$PREFSLIBRARY: ADVANCED"                 =   "Advanced"
+"$$PREFSLIBRARY: ASCENDING"                =   "Ascending"
+"$$PREFSLIBRARY: CATEGORY STYLE:"          =   "Category Style:"
+"$$PREFSLIBRARY: CLASSIC"                  =   "Classic"
+"$$PREFSLIBRARY: DATE"                     =   "Date"
+"$$PREFSLIBRARY: DATE/TIME"                =   "Use date/time for sort by date"
+"$$PREFSLIBRARY: DESCENDING"               =   "Descending"
+"$$PREFSLIBRARY: NAME"                     =   "Name"
+"$$PREFSLIBRARY: SHOW DATE COLUMN"         =   "Show Date Column"
+"$$PREFSLIBRARY: SHOW SIZE COLUMN"         =   "Show Size Column"
+"$$PREFSLIBRARY: SHOW TYPE COLUMN"         =   "Show Type Column"
+"$$PREFSLIBRARY: SIZE"                     =   "Size"
+"$$PREFSLIBRARY: SORT BY:"                 =   "Sort Documents By:"
+"$$PREFSLIBRARY: SORT ORDER:"              =   "Sort Order:"
+"$$PREFSLIBRARY: TYPE"                     =   "Type"
+"$$PREFSLIBRARY: CATEGORY"                 =   "Category"
+"$$PREFSLIBRARY: INDICATE OPENED"          =   "Enable Strike-through"
+"$$PREFSLIBRARY: HELP"                     =
+    "• Because it can be a slow process to update the list of documents on "\
+    "some devices there is an option to select whether the list should be "\
+    "automatically updated (both RAM and external cards), automatically "\
+    "updated (only RAM), or manually updated."\
+    "\n\n"\
+    "• You can sort the documents according to name, date or size in both "\
+    "ascending and descending order."\
+    "\n\n"\
+    "• It is possible to select whether the sort by date should use only the "\
+    "date or if it should use both date and time (faster, but could make the "\
+    "list look 'unsorted')."
+/*************************************************************/
+
+
+/*** AUTOSCROLL PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSAUTOSCROLL: AUTOSCROLL DELAY:"       =   "Autoscroll delay:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL DIRECTION:"   =   "Autoscroll direction:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL JUMP:"        =   "Autoscroll jump:"
+"$$PREFSAUTOSCROLL: DOWN"                    =   "Down"
+"$$PREFSAUTOSCROLL: MILLISECONDS"            =   "msec"
+"$$PREFSAUTOSCROLL: PAGE(S)"                 =   "Page(s)"
+"$$PREFSAUTOSCROLL: PIXEL(S)"                =   "Pixel(s)"
+"$$PREFSAUTOSCROLL: STAY ON"                 =   "Stay on while autoscrolling"
+"$$PREFSAUTOSCROLL: UP"                      =   "Up"
+"$$PREFSAUTOSCROLL: HELP"                    =
+    "• This form customizes the behaviour of the autoscroll."\
+    "\n\n"\
+    "• You can autoscroll a specified number of either pixels or pages."\
+    "\n\n"\
+    "• You can set the autoscroll direction to either up or down." \
+    "\n\n"\
+    "• You can set the time delay in between each autoscroll jump. Delay "\
+    "is measured in milliseconds."\
+    "\n\n"\
+    "• You can prevent the device from powering off during an autoscroll. "\
+    "The device will continue to autoscroll until it reaches the bottom of a "\
+    "page, or the battery becomes low (or you tap somewhere, or you physically "\
+    "turn off the device.)"\
+    "\n\n"\
+    "• Note that while autoscrolling is happening, you can control "\
+    "the speed with buttons on the toolbar as well as with all the controls "\
+    "(such as Page Up/Down keys) that normally are used to scroll by "\
+    "a screen or half a screen."
+/******************************************************************/
+
+
+/*** HARDCOPY PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSHARDCOPY: TITLE"            =   "Hardcopy Actions"
+"$$PREFSHARDCOPY: ACTION:"          =   "Action:"
+"$$PREFSHARDCOPY: DIALOG"           =   "Dialog"
+"$$PREFSHARDCOPY: IMMEDIATE"        =   "Immediate"
+"$$PREFSHARDCOPY: RANGE:"           =   "Range:"
+"$$PREFSHARDCOPY: IN VIEW AREA"     =   "In view area"
+"$$PREFSHARDCOPY: VISIBLE PARAGRAPHS" = "Visible paragraphs"
+"$$PREFSHARDCOPY: LINK:"            =   "Link:"
+"$$PREFSHARDCOPY: BOTTOM"           =   "Bottom"
+"$$PREFSHARDCOPY: INLINE"           =   "Inline"
+"$$PREFSHARDCOPY: NONE"             =   "None"
+"$$PREFSHARDCOPY: HELP"             =
+    "• You can choose the action of 'export to memo' feature in this form. This feature enables you to clip, edit, and export text in the current view area to Palm's standard memopad."\
+    "\n\n"\
+    "• Clipped text can be edited in dialog, or be copied immediately to memopad."\
+    "\n\n"\
+    "• Text in the current viewarea or in the visible paragraphs is clipped."\
+    "\n\n"\
+    "• URLs of the links are listed at the bottom, indicated inline, or simply ignored."
+/*************************************************************/
+
+
+/*** EXTERNALLINK PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSEXTERNALLINK: TITLE"            =   "External Link Handling"
+"$$PREFSEXTERNALLINK: ACTION:"          =   "Action:"
+"$$PREFSEXTERNALLINK: DIALOG"           =   "Dialog"
+"$$PREFSEXTERNALLINK: TO MEMO"          =   "Directly to memopad"
+"$$PREFSEXTERNALLINK: BROWSE"           =   "Browse"
+/*************************************************************/
+
+
+/*** BUTTON PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSBUTTONS: HARD KEYS"              =   "Hardkeys for navigation"
+"$$PREFSBUTTONS: ARROW KEYS"             =   "Activate custom arrow keys"
+"$$PREFSBUTTONS: HELP"                   =
+    "• By enabling the hardkeys option you can use the hardware buttons to perform "\
+    "the specified actions."\
+    "\n\n"\
+    "• You can select different actions for each of the four hardware buttons."
+/*************************************************************/
+
+
+/*** GESTURE PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSGESTURES: USE GESTURES"          =   "Graffiti gestures for navigation"
+"$$PREFSGESTURES: HELP"                  =
+    "• By enabling the gestures option, you can use gestures in the graffiti area "\
+    "to perform the specified actions."\
+    "\n\n"\
+    "• There are five gestures: stroke right, stroke left, stroke up, stroke down, "\
+    "and a graffiti tap."\
+    "\n\n"\
+    "• You can select different actions for each of the five gestures."
+/*************************************************************/
+
+
+/*** CONTROL PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSTAP: MODE 1"                     =   "Mode 1"
+"$$PREFSTAP: MODE 2"                     =   "Mode 2"
+"$$PREFSTAP: MODE 3"                     =   "Mode 3"
+"$$PREFSTAP: PEN SCROLL MSG1"            =   "Tap on screen and"
+"$$PREFSTAP: PEN SCROLL MSG2"            =   "drag pen up or down"
+"$$PREFSTAP: PEN SCROLL MSG3"            =   "to scroll the page"
+"$$PREFSTAP: PEN SCROLL MSG4"            =   ""
+"$$PREFSTAP: REGION ACTION:"             =   "Region Action:"
+"$$PREFSTAP: HELP"                       =
+    "• The Tap Action allows you to specify the behavior of pen taps on the "\
+    "screen. It can be used in three different modes."\
+    "\n\n"\
+    "• The first two modes divide the screen into different sections allowing "\
+    "you to specify different actions (e.g. scroll up one full page, go back "\
+    "one page) for each section."\
+    "\n\n"\
+    "• The third mode makes is possible to drag the stylus on the screen to "\
+    "scroll the text."
+/*************************************************************/
+
+
+/*** JOGDIAL PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSJOGDIAL: USE JOGDIALS"      =   "Enable JogDial for navigation"
+"$$PREFSJOGDIAL: HELP"  =
+    "• If you own a palm that has a JogDial, you can assign different " \
+    "actions to perform specific funtions in Plucker."\
+    "\n\n"\
+    "• There are six actions: scroll up, scroll down, push in, push in and " \
+    "up, push in and down and back. Not all actions may be available, "\
+    "depending on your device."\
+    "\n\n"\
+    "• You can select different events for each of the five JogDial actions."
+/*************************************************************/
+
+
+/*** WORD LOOKUP PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSLOOKUP: ALWAYS ACTIVE"         = "Word lookup always active"
+"$$PREFSLOOKUP: ACTION:"               = "Action:"
+"$$PREFSLOOKUP: SEARCH FORM"           = "Insert into search form"
+"$$PREFSLOOKUP: PPI"                   = "Look up in PPI"
+"$$PREFSLOOKUP: TO CLIPBOARD"          = "Copy to the clipboard"
+"$$PREFSLOOKUP: ANNOTATE"              = "Annotate"
+"$$PREFSLOOKUP: HELP"                  =
+    "• Plucker has a word-lookup function.  When the function is active, "\
+    "tapping on a word selects that word and performs an action. "\
+    "\n\n"\
+    "• If word lookup is set to be always active, then tapping on a word "\
+    "not inside a link always selects a word."\
+    "\n\n"\
+    "• Otherwise, you can use the 'Lookup word' function in the 'Go' menu "\
+    "to turn on a temporary tap-selection mode for the next tap.  That "\
+    "function can also be assigned to a hard key or any other "\
+    "configurable control."\
+    "\n\n"\
+    "• Hint: To select a word that contains a non-alphanumeric character such "\
+    "as an apostrophe or a dash, tap on that character when selecting and all "\
+    "instances of that character will be treated as letters."
+/*************************************************************/
+
+
+
+
+/*** FONT SELECT ***/
+
+/*************************************************************/
+"$$FONTS: FONT:"                    =   "Font:"
+"$$FONTS: SELECT FONT"              =   "Select font and layout"
+"$$FONTS: BUILT-IN FONTS:"          =   "Built-in fonts:"
+"$$FONTS: USER-LOADED FONT:"        =   "User-loaded font:"
+"$$FONTS: OK"                       =   "OK"
+"$$FONTS: CANCEL"                   =   "Cancel"
+"$$FONTS: LINE SPACING:"            =   "Line spacing:"
+"$$FONTS: PARAGRAPH SPACING:"       =   "Paragraph spacing:"
+"$$FONTS: RTL"                      =   "RTL"
+"$$FONTS: VARY WITH DOCUMENT"       =   "Vary with document"
+"$$FONTS: ROTATE:"                  =   "Rotation: "
+"$$FONTS: NONE"                     =   "None"
+"$$FONTS: COUNTERCLOCKWISE"         =   "Counterclockwise"
+"$$FONTS: CLOCKWISE"                =   "Clockwise"
+"$$FONTS: ALSO SET AS DEFAULT"      =   "Also set as default"
+"$$FONTS: HELP"                     =
+    "• You can select one of the standard Palm fonts or one "\
+    "of the built-in Plucker fonts."\
+    "\n\n"\
+    "• If you have a Plucker font package loaded, you can select "\
+    "that, instead, if this is supported on your device."\
+    "\n\n"\
+    "• You can vary line- and paragraph-spacing in the document. "\
+    "Setting the line-spacing to a negative value may cause some "\
+    "minor visual defects such as lines not showing up."\
+    "\n\n"\
+    "• You can rotate the display by 90 degrees.  On OS 3.5, images"\
+    "will be omitted."\
+    "\n\n"\
+    "• You can allow the font settings to vary between documents "\
+    "and if you do that, you will also have the option to make the "\
+    "current settings be the default ones for new documents."
+/*************************************************************/
+
+
+/*** KEYBOARD CUSTOMIZATION ***/
+
+/****************************************************************************/
+"$$KEYBOARD: SET KEYBOARD / GRAFFITI"        =   "Set keyboard / graffiti"
+"$$KEYBOARD: KEYBOARD OR GRAFFITI"         =   "Keyboard or graffiti"
+"$$KEYBOARD: SPECIAL KEYS"          =   "Special keys"
+"$$KEYBOARD: OK"                    =   "OK"
+"$$KEYBOARD: CANCEL"                =   "Cancel"
+"$$KEYBOARD: DEFAULT"               =   "Default"
+"$$KEYBOARD: CLEAR"                 =   "Clear"
+"$$KEYBOARD: INTERFERENCE MSG1"     =   "Some settings can be incompatible"
+"$$KEYBOARD: INTERFERENCE MSG2"     =   "with gestures and/or Graffiti 2."
+"$$KEYBOARD: HELP"                  =
+    "• If you have a keyboard, you can control Plucker with it. "\
+    "You can also control Plucker by using Graffiti to write "\
+    "down certain characters."\
+    "\n\n"\
+    "• Printable characters such as 'a' or '$' can be typed in or "\
+    "drawn with Graffiti strokes directly into the customization form "\
+    "and then you can select the appropriate behavior."\
+    "\n\n"\
+    "• Special keys like 'Return' or arrow keys need to be "\
+    "selected from the drop down list, and then you can select the "\
+    "appropriate actions."\
+    "\n\n"\
+    "• Some characters/keys will not work if you have Graffiti "\
+    "gestures activated in the Plucker preferences.  In particular, "\
+    "the i, I, 1, l, L, period and backspace keys/characters and "\
+    "some shifted Graffiti characters "\
+    "will not be available unless you have gestures disabled."\
+    "\n\n"\
+    "• Some characters are incompatible with Graffiti 2 input.  If "\
+    "you wish to control Plucker with Graffiti 2 input through this "\
+    "customization option, do not assign "\
+    "actions to multistroke characters.  Also, entering a Graffiti 2 "\
+    "multistroke character into Plucker while an action is assigned "\
+    "to the l, space, single quote, minus or backspace characters "\
+    "will lead to unexpected results."
+
+"$$KEY: RETURN"                     =   "Return"
+"$$KEY: TAB"                        =   "Tab"
+"$$KEY: UP"                         =   "Up"
+"$$KEY: DOWN"                       =   "Down"
+"$$KEY: LEFT"                       =   "Left"
+"$$KEY: RIGHT"                      =   "Right"
+"$$KEY: BACKSPACE"                  =   "Backspace"
+/****************************************************************************/
+
+
+
+
+/*** SELECTION ***/
+
+"$$SELECT: ADD BOOKMARK..."        =   "Nýtt bókmerki..."
+"$$SELECT: BOOKMARKS..."           =   "Bókmerki..."
+"$$SELECT: BUTTON ACTION..."       =   "Knappar..."
+"$$SELECT: DETAILS..."             =   "Details..."
+"$$SELECT: FIND AGAIN"             =   "Finn aftur"
+"$$SELECT: FIND..."                =   "Finn..."
+"$$SELECT: FULL PAGE DOWN"         =   "Heil síða niður"
+"$$SELECT: FULL PAGE UP"           =   "Heil síða upp" 
+"$$SELECT: GO BACK"                =   "Far aftur" 
+"$$SELECT: GO FORWARD"             =   "Far frameftir" 
+"$$SELECT: GO HOME"                =   "Far heim"
+"$$SELECT: GO TO BOTTOM"           =   "Far til botninum"
+"$$SELECT: GO TO TOP"              =   "Far til byrjanin"
+"$$SELECT: HALF PAGE DOWN"         =   "Hálva síða niður" 
+"$$SELECT: HALF PAGE UP"           =   "Hálva síða upp" 
+"$$SELECT: LIBRARY..."             =   "Skráir..."
+"$$SELECT: PREFERENCES..."         =   "Uppseting..."
+"$$SELECT: TAP ACTION..."          =   "Pennur..."
+/*************************************************************/
+"$$SELECT: AUTOSCROLL FASTER"      =   "Autoscroll Faster"
+"$$SELECT: AUTOSCROLL SLOWER"      =   "Autoscroll Slower"
+"$$SELECT: COPY TO MEMO"           =   "Export to Memo"
+"$$SELECT: DELETE DOC..."          =   "Delete Doc..."
+"$$SELECT: GESTURE ACTION..."      =   "Gesture Action..."
+"$$SELECT: GO TO LINK"             =   "Go to link"
+"$$SELECT: NEXT ANCHOR"            =   "Next anchor"
+"$$SELECT: NONE"                   =   "None"
+"$$SELECT: PREV ANCHOR"            =   "Prev anchor"
+"$$SELECT: SELECT FONT..."         =   "Font and layout..."
+"$$SELECT: TOGGLE AUTOSCROLL"      =   "Toggle Autoscroll"
+"$$SELECT: COMMAND STROKE"         =   "Command stroke"
+"$$SELECT: MENU..."                =   "Menu..."
+"$$SELECT: TOGGLE TOOLBAR"         =   "Toggle toolbar"
+"$$SELECT: TOGGLE FULLSCREEN"      =   "Toggle fullscreen"
+"$$SELECT: ONE LINE UP"            =   "One line up"
+"$$SELECT: ONE LINE DOWN"          =   "One line down"
+"$$SELECT: ADJUST BRIGHTNESS"      =   "Brightness..."
+"$$SELECT: ADJUST CONTRAST"        =   "Contrast..."
+"$$SELECT: TOGGLE BACKLIGHT"       =   "Toggle backlight"
+"$$SELECT: ROTATE RIGHT"           =   "Rotate right"
+"$$SELECT: ROTATE LEFT"            =   "Rotate left"
+"$$SELECT: SAVE POSITION"          =   "Save position"
+"$$SELECT: LOOKUP WORD IN PPI"     =   "PPI select word"
+"$$SELECT: LOOKUP TO SEARCH FORM"  =   "Search select word"
+"$$SELECT: LOOKUP TO CLIPBOARD"    =   "Clipboard select word"
+"$$SELECT: LOOKUP TO ANNOTATE"     =   "Annotate select word"
+"$$UNSUPPORTED"                    =   "Unsupported action"
+/*************************************************************/
+
+
+/*** DETAILS ***/
+
+"$$DETAILS: COPY URL"               =   "Avrita URL"
+"$$DETAILS: OK"                     =   "Í lagi"
+"$$DETAILS: STATUS:"                =   "Status:"
+"$$DETAILS: TITLE"                  =   "Details"
+"$$DETAILS: UNREAD"                 =   "Ólisin"
+"$$DETAILS: URL:"                   =   "URL:"
+/*************************************************************/
+"$$DETAILS: CANCEL"                 =   "Cancel"
+"$$DETAILS: READ"                   =   "Read"
+"$$DETAILS: SHOW IMAGES"            =   "Show Images"
+"$$DETAILS: HELP"                   =
+    "• You can change the status of a document so that it will be shown as "\
+    "unread (i.e. with a solid link)."\
+    "\n\n"\
+    "• By turning off images all images will be removed from the page."
+/*************************************************************/
+
+
+/*** SEARCH ***/
+
+"$$FIND: FIND:"                     =   "Finn:"
+"$$FIND: IN ALL PAGES"              =   "Á allum síðum"
+"$$FIND: IN PAGE"                   =   "Á síðu"
+"$$FIND: OK"                        =   "Í lagi"
+"$$FIND: TITLE"                     =   "Plucker Find"
+/*************************************************************/
+"$$FIND: PHRASE"                    =   "Phrase"
+"$$FIND: NO TRANSLITERATION"        =   "No transliteration"
+"$$FIND: NON-ASCII TO PERIOD"       =   "Non-ASCII to period"
+"$$FIND: DROP LATIN 1 ACCENTS"      =   "Drop Latin 1 accents"
+"$$FIND: DOWN IN DOC"               =   "Down in doc"
+"$$FIND: CANCEL"                    =   "Cancel"
+"$$FIND: CASE SENSITIVE"            =   "Case Sensitive"
+"$$FIND: SUB PAGES"                 =   "Sub pages"
+"$$FIND: HELP"                      =
+    "• Tapping on the icon to the right of the search field "\
+    "gives you a list of recent search strings to choose from."\
+    "\n\n"\
+    "• You can search the current page, the whole document, the whole "\
+    "document down from the current position, or subpages (breadth-first "\
+    "spidering)."\
+    "\n\n"\
+    "• You can make your search case insensitive if applicable to your language."\
+    "\n\n"\
+    "• In a phrase search you must have an "\
+    "exact match for everything in the search string, including spaces."\
+    "\n\n"\
+    "• If you turn off phrase search, each space-separated string "\
+    "must be found within the same paragraph.  Thus if you "\
+    "put in the search string 'Big bad wolf' (without the quotation marks), "\
+    "then you will find all paragraphs that contain the strings 'Big', 'bad' "\
+    "and 'wolf' somewhere in them, "\
+    "though not necessarily as whole words and not necessarily in this order. "\
+    "\n\n"\
+    "• Only the first term will be highlighted in the text when you view the "\
+    "results."\
+    "\n\n"\
+    "• With phrase search disabled, if you have more than ten search terms, "\
+    "the extra ones will be ignored."\
+    "\n\n"\
+    "• For fastest searching, put the least common term as the first one "\
+    "if phrase search is disabled."\
+    "\n\n"\
+    "• You can choose to transliterate the text and search string before "\
+    "searching.  For instance, you can choose to change all non-ASCII "\
+    "characters (such as 'ü') to periods.  Or you can choose to drop "\
+    "accents on all Latin 1 characters, so that, for instance, a 'u-umlaut' "\
+    "gets changed to a 'u'.  This also changes other non-ASCII characters "\
+    "such as fancy quotation marks to their closest ASCII equivalent.  Since "\
+    "your search string is also transliterated before searching, this is basically "\
+    "an accent-insensitive search."
+/*************************************************************/
+
+
+/*** SEARCH RESULT ***/
+
+"$$RESULT: FINDMORE"                =   "Finn meira"
+"$$RESULT: STOP"                    =   "Steðga"
+"$$RESULT: TITLE"                   =   "Plucker Find"
+/*************************************************************/
+"$$RESULT: CANCEL"                  =   "Cancel"
+"$$RESULT: MATCHES"                 =   "Matches for"
+"$$RESULT: NOMATCHES"               =   "No matches for"
+"$$RESULT: SEARCHING..."            =   "Searching..."
+/*************************************************************/
+
+
+/*** EMAIL ***/
+
+"$$EMAIL: CC:"                      =   "Cc:"
+"$$EMAIL: SUBJECT:"                 =   "Evni:"
+"$$EMAIL: TITLE"                    =   "Plucker Email"
+"$$EMAIL: TO:"                      =   "Til:"
+/*************************************************************/
+"$$EMAIL: CANCEL"                   =   "Cancel"
+"$$EMAIL: SEND"                     =   "Send Mail"
+/*************************************************************/
+
+
+/*** ADD BOOKMARK ***/
+
+"$$ADD BOOKMARK: NAME:"             =   "Navn:"
+"$$ADD BOOKMARK: TITLE"             =   "Nýtt bókmerki"
+/*************************************************************/
+"$$ADD BOOKMARK: ADD"               =   "Add"
+"$$ADD BOOKMARK: CANCEL"            =   "Cancel"
+/*************************************************************/
+
+
+/*** BOOKMARK ***/
+
+"$$BOOKMARKS: DONE"                 =   "Liðug"
+"$$BOOKMARKS: GO TO"                =   "Far"
+"$$BOOKMARKS: TITLE"                =   "Bókmerki"
+/*************************************************************/
+"$$BOOKMARKS: DELETE"               =   "Delete"
+/*************************************************************/
+
+
+/*** EXTERNAL LINKS ***/
+
+"$$EXTERN: BACK"                    =   "Aftur"
+"$$EXTERN: COPY URL"                =   "Avrita URL"
+"$$EXTERN: LABEL1"                  =   "Orsaka. Tilvísingin tú valdi varð"
+"$$EXTERN: LABEL2"                  =   "ikki heintaður av Plucker."
+"$$EXTERN: LABEL3"                  =   "Tað var helst eitt annað vevstað"
+"$$EXTERN: LABEL4"                  =   "ella longri burtur enn tú valdi"
+"$$EXTERN: LABEL5"                  =   "at fara frá høvuðs síðuni."
+"$$EXTERN: LABEL6"                  =   ""
+"$$EXTERN: TITLE"                   =   "Tilvísing til annað vevstað"
+"$$EXTERN: URL:"                    =   "URL:"
+/*************************************************************/
+"$$EXTERN: BROWSE ONLINE"           =   "Go online"
+"$$EXTERN: NO URL"                  =   "No URL information is available."
+/*************************************************************/
+
+
+/*** CATEGORY ***/
+
+"$$CATEGORY: AND"                   =   "OG"
+"$$CATEGORY: OK"                    =   "Í lagi"
+"$$CATEGORY: OR"                    =   "ELLA"
+"$$CATEGORY: TITLE"                 =   "Bólkar"
+/*************************************************************/
+"$$CATEGORY: ALL"                   =   "All"
+"$$CATEGORY: CANCEL"                =   "Cancel"
+"$$CATEGORY: DELETE"                =   "Delete"
+"$$CATEGORY: MULTIPLE SELECT"       =   "Multiple Select"
+"$$CATEGORY: NONE"                  =   "None"
+"$$CATEGORY: RENAME"                =   "Rename"
+"$$CATEGORY: UNFILED"               =   "Unfiled"
+"$$CATEGORY: HELP"                  =
+    "• Tap on the pushbutton with the category name to toggle between hiding "\
+    "and showing the category."\
+    "\n\n"\
+    "• Check the box MULTIPLE SELECT to allow more than one category to be "\
+    "displayed at a time."\
+    "\n\n"\
+    "• To add a new category, tap on an empty pushbutton. The document icon "\
+    "provides the options to delete and rename a category."\
+    "\n\n"\
+    "• If you delete a category name, the documents filed under that name will "\
+    "become unfiled documents."\
+    "\n\n"\
+    "• To merge documents in different categories, rename one category to the "\
+    "other category name."
+/*************************************************************/
+
+
+/*** NEW CATEGORY ***/
+
+"$$EDIT CATEGORIES: NAME:"          =   "Skriva navn á nýggja bólkinum:"
+"$$EDIT CATEGORIES: OK"             =   "Í lagi"
+/*************************************************************/
+"$$EDIT CATEGORIES: CANCEL"         =   "Cancel"
+"$$EDIT CATEGORIES: TITLE"          =   "Edit Categories"
+/*************************************************************/
+
+
+/*** INITIALIZING CATEGORY ***/
+
+/*************************************************************/
+"$$INITDOC: SYNCHRONIZING"          =   "Synchronizing Documents"
+"$$INITDOC: OPEN DOC LIST"          =   "Opening document list"
+/*************************************************************/
+
+
+/*** SORT DOCUMENTS ***/
+
+/*************************************************************/
+"$$SORTDOC: SORTING..."             =   "Sorting..."
+/*************************************************************/
+
+
+/*** HARDCOPY ***/
+
+/****************************************************************************/
+"$$HARDCOPY: TITLE"                 =   "Export to Memo"
+"$$HARDCOPY: CANCEL"                =   "Cancel"
+"$$HARDCOPY: EXPORT"                =   "Export"
+"$$HARDCOPY: ROT13"                 =   "Rot13"
+/****************************************************************************/
+
+/*** ANNOTATION ***/
+
+/*************************************************************/
+"$$ANNOTATION: TITLE"                 =   "Annotate"
+"$$ANNOTATION: OK"                    =   "OK"
+"$$ANNOTATION: CANCEL"                =   "Cancel"
+"$$ANNOTATION: DELETE"                =   "Delete"
+/*************************************************************/
+
+/*** EXPORT LINK TO MEMO ***/
+
+/*************************************************************/
+"$$EXPORT: EXPORTING LINK..."       =   "Exporting link..."
+/*************************************************************/
+
+
+/*************************************************************
+ *                         ALERTS                            *
+ *************************************************************/
+
+/*** COMMON STRINGS ***/
+
+"$$NO"                      =   "Nei"
+"$$OK"                      =   "Í lagi"
+"$$YES"                     =   "Ja"
+/*************************************************************/
+"$$LEAVE"                   =   "Leave"
+"$$EXIT"                    =   "Exit"
+"$$CANCEL"                  =   "Cancel"
+"$$DELETE"                  =   "Delete"
+"$$NEXT"                    =   "Next page"
+"$$RESTART"                 =   "Restart"
+/*************************************************************/
+
+
+/*** INFORMATION ***/
+
+/*************************************************/
+"$$SYSTEM INCOMPATIBLE"     =   "System Incompatible"
+"$$SYSTEM MSG"              =   "System Version 2.0 or greater is required to run "\
+                                "this application."
+/*************************************************/
+
+"$$HIGH BITDEPTH"           =   "Kann ikki vísa myndin"
+"$$HIGH BITDEPTH MSG"       =   "Har er ov nógvar litir í myndini."
+
+"$$EMPTY PATTERNS"          =   "Eingin leitimynstur"
+"$$EMPTY PATTERNS MSG"      =   "Har er ikki leitimynstur frá tíðligari."
+
+"$$NO BEAM SUPPORT"         =   "Kann ikki strála"
+"$$NO BEAM SUPPORT MSG"     =   "Henda eindin kann ikki strála."
+
+/*************************************************/
+"$$COPY PROTECTED"          =   "Cannot Beam"
+"$$COPY PROTECTED MSG"      =   "Copy-protected documents cannot be beamed."
+/*************************************************/
+
+
+/*** CONFIRMATION ***/
+
+/*******************************************************************************/
+"$$DELETE OLD ANNOTATIONS"  =   "Out of date annotations"
+"$$DELETE OLD ANNOTATIONS MSG" =  "The annotations / bookmarks are older than "\
+                                  "the document.  Do you want to delete them now to "\
+                                  "prevent possible problems?"
+"$$DO NOT ASK"                 =  "Never"
+"$$DELETE ANNOTATIONS"         = "Delete annotations"
+"$$DELETE ANNOTATIONS MSG"     = "Do you want to delete the annotations and bookmarks for ^1?"
+"$$ALWAYS"                     = "Always delete"
+/*******************************************************************************/
+
+"$$CONFIRM DELETE"          =   "Confirm Delete"
+"$$DELETE MSG"              =   "Sletta fyri altíð ^1?"
+
+/*************************************************/
+"$$CONFIRM DELETE ALL"      =   "Confirm Delete All"
+"$$DELETE ALL MSG"          =   "Permanently delete all documents for selected "\
+                                "category/categories?"
+
+"$$MERGE CATEGORY"          =   "Merge Category"
+"$$MERGE CATEGORY MSG"      =   "You have renamed the category to one "\
+                                "that already exists. This will merge those "\
+                                "two categories. Do you wish to continue?"
+
+"$$END OF PAGE MSG"          =  "End of page reached.  Search next page or restart from "\
+                                "beginning of search?"
+
+"$$END OF DOC MSG"          =   "End of document reached.  Restart from beginning of search?"
+
+"$$CONFIRM DELETE METADOC"  =   "Confirm delete metadoc"
+"$$DELETE METADOC MSG"      =   "Delete meta document of ^1 as well?"
+
+"$$CONFIRM DELETE READ"     =   "Confirm delete read"
+"$$DELETE READ MSG"         =   "Delete read documents for selected "\
+                                "category/categories?"
+/*************************************************************/
+
+
+
+/*** WARNING ***/
+
+"$$BROKEN DOCUMENT"         =   "Brotin skrá!"
+"$$BROKEN MSG"              =   "Týdningarmiklar partar av skránni manglar í ^1.\nGerið so "\
+                                "væl at flyta eina nýggja skrá yvir."
+
+"$$INSUFFICIENT MEMORY"     =   "Ov lítið minni"
+"$$INSUFFICIENT MSG"        =   "Eindin hevur ov lítið minni til at útpakka síðuni. "\
+                                "Tú noyðast at fría minni til Plucker."
+
+"$$LOW MEMORY"              =   "Lítið minni"
+"$$EMAIL MEMORY MSG"        =   "Tað kann vera at tú ikki hevur nóg mikið minni til at skriva "\
+                                "eitt teldubræv. Gerið so væl at fría eitt sindur minni ella "\
+                                "skriva eitt stutt bræv."
+"$$IMAGE MEMORY MSG"        =   "Har er ikki nóg mikið minni til at vísa myndin."
+
+"$$NO TOADDR"               =   "Eingin adressa í til-feltinum"
+"$$NO TOADDR MSG"           =   "Tú noyðast at skriva ein adressa í til-feltinum."
+
+/*************************************************/
+"$$ZLIB NOT SUPPORTED"      =   "ZLib not supported"
+"$$ZLIB MSG"                =   "This device cannot handle ZLib compressed documents"
+
+"$$IMAGE COMPRESSION"       =   "Compression not supported"
+"$$COMPRESSION MSG"         =   "This device cannot handle Palm OS image compression. "\
+                                "Image rendering will be turned off for this document."
+
+
+"$$AUTOSCROLL STAY ON"     =   "Autoscroll Stay On"
+"$$STAY ON MSG"            =   "This option prevents the device from "\
+                               "automatically powering off during an "\
+                               "autoscroll. Auto power-off will remain "\
+                               "disabled until you tap screen, hit the "\
+                               "power button, or reach the end of page."
+
+"$$INVALID OWNER"           =   "Invalid document owner!"
+"$$INVALID OWNER MSG"       =   "Your device's user name does not match that "\
+                                "registered for the owner of '^1'.  The "\
+                                "document cannot be opened except under that "\
+                                "name."
+
+"$$MANUAL SYNC"             =   "Update of document list"
+"$$MANUAL SYNC MSG"         =   "This option prevents the viewer from "\
+                                "automatically updating the document list. "\
+                                "Use the menu option 'Update document list' "\
+                                "in the document library to manually update "\
+                                "the list."
+/*************************************************/
+
+
+/*** ERROR ***/
+
+/*************************************************/
+"$$NO CATEGORY"             =   "No Category Selected"
+"$$NO CATEGORY MSG"         =   "You must select at least one category."
+/*************************************************/
+
+"$$CATEGORY NAME"           =   "Bólkanavn"
+"$$CATEGORY NAME MSG"       =   "Bólkurin ^1 finst longu. "\
+                                "Gerið so væl at brúka eitt annað navn."
+
+"$$CANNOT DELETE"           =   "Kann ikki sletta"
+"$$CANNOT DELETE MSG"       =   "Kann ikki sletta skránni!"
+
+"$$CANNOT DELETE ALL"       =   "Kann ikki sletta alt"
+"$$CANNOT DELETE ALL MSG"   =   "Kann ikki sletta allar skráirnar!"
+
+/*************************************************************/
+"$$CANNOT DELETE READ"      =   "Cannot delete read"
+"$$CANNOT DELETE READ MSG"  =   "Cannot delete read documents!"
+/*************************************************************/
+
+"$$BAD MAILTO"              =   "Mailto-feilur"
+"$$BAD MAILTO MSG"          =   "Mailto-feltið er í ólagi. Teldupostadressan "\
+                                "er ikki at finna!"\
+                                "\n\n"\
+                                "Gerið so væl at geva Plucker-høvundarnir boð."
+
+/*************************************************/
+"$$ALREADY EXISTS"          =   "A document named ^1 already exists."
+
+"$$CANNOT RENAME DOC"       =   "Cannot rename document!"
+
+"$$READ ONLY"               =   "Read-only document"
+"$$READ ONLY MSG"           =   "Document is read-only and cannot be renamed."
+
+"$$UNKNOWN TYPE"            =   "Unknown type"
+"$$UNKNOWN TYPE MSG"        =   "Unknown type on document"
+
+"$$CANNOT FIND DOC"         =   "Cannot find document"
+"$$CANNOT FIND DOC MSG"     =   "Cannot find document in RAM or on external card!"
+
+"$$UNHANDLED EXCEPTION"     =   "Unhandled exception"
+"$$UNHANDLED EXCEPTION MSG" =   "Unhandled exception, error code = ^1"
+
+"$$CANNOT ADD BOOKMARK"     =   "Cannot add bookmark"
+"$$CANNOT ADD BOOKMARK MSG" =   "Failed to add '^1'"
+
+"$$CANNOT DELETE BOOKMARK"     =   "Cannot delete bookmark"
+"$$CANNOT DELETE BOOKMARK MSG" =   "Failed to delete '^1'"
+
+"$$IMAGE ERROR"             =   "Image error"
+"$$IMAGE ERROR MSG"         =   "There is a problem displaying the image. "\
+                                "Perhaps Plucker is running out of memory."
+/*************************************************/
+
+END
+

@@ -1,0 +1,582 @@
+%
+% $Id: Quickstart.tex,v 1.17 2003/07/31 15:12:06 desrod Exp $
+%
+\chapter{Installation and Quickstart Manual}
+
+This chapter describes how to set up Plucker on your system and how to
+configure it to gather contents for you. It does not cover all
+features of Plucker for which you might refer to later chapters of
+this handbook, but it will give you an introduction on how to use
+Plucker's basic features. Many of the advanced topics are not covered
+here to make this introduction readable even for beginners and as
+simple as possible. Once you got the generals procedures of Plucker it
+will be easy for you to understand the later parts of this handbook
+which are meant mainly as reference guide.
+
+\section{OS specific instructions}
+
+First of all we will list some of the OS specific installation
+procedures as well as OS specific things you should know to run
+Plucker.
+
+\subsection{OS/2}
+
+Basically there are two ways to install Plucker on OS/2:
+
+\begin{itemize}
+  \item The Expert: You may obtain all packages you need to run
+  Plucker separately and set them up by hand. This would be the
+  preferred way if you have already several packages installed on your
+  system (unless you work a lot with Unix-style tools on OS/2 this is
+  not very likely the case) and if you have some experiences setting
+  up such stuff.
+
+  \item The Easy way: Just get the WarpIn-Installation packages and
+  run install. This is the preferred way for new and/or inexperienced
+  users and if you do not have the main parts to run Plucker installed
+  on your system. \textbf{Unless specific circumstances or
+  environments we encourage you to use this way!} The OS/2-installer
+  will do no harm to your system and it will make it quite easy to
+  de-install Plucker.
+\end{itemize}
+
+In any way you will get all files needed on our OS/2 page at
+
+\textit{\htmladdnormallink{http://www.stellarcom.org/plucker/os2\_bins/index.html}{http://www.stellarcom.org/plucker/os2_bins/index.html}}.
+
+On this page you will find all tools necessary to set up Plucker
+either way you choose.\\
+
+\note You need to install Plucker on a HPFS-partition. It will not
+work on FAT file systems.\\
+
+\note Currently there persist still some problems with image
+conversion on OS/2 so you might not be able to use images in your
+documents. We work on a solution to that issue.
+
+
+After setting up Plucker please refer to chapter \~ref{sec:Parser} on
+how to set up the necessary configuration files for Plucker.
+
+\subsubsection{Using the Installer}
+
+As stated above this is very easy indeed. Follow these steps:
+
+\begin{enumerate}
+  \item After downloading \name{PluckerInstaller.zip} just unzip it
+  using your favorite tool to handle ZIP-files. (e.g.\ just type
+  \code{unzip PluckerInstaller.zip} from your shell.)
+
+  \item Copy the \name{WarpIn} folder to whatever location you want to
+  store \name{WarpIn} at. If you have WarpIn already installed you
+  may skip this step. (But ensure that you have the same or a newer
+  version of WarpIn.) After this open that folder and double-click on
+  \name{\name{WarpIn}.exe}. This will create the necessary program
+  objects and associations to use \name{WarpIn}. Note that
+  \name{WarpIn} is not written explicitly for Plucker and that we only
+  use it. For details about \name{WarpIn} refer to its \name{README}
+  files and documentation.  \name{WarpIn} is Freeware.\\
+
+\note Once you have installed \name{WarpIn} on your system you can use
+it to install any other product that is delivered in WPI format. An
+increasing number of tools use this for there installation. 
+
+  \item Now you are ready to install Plucker itself. This is quite
+  easy. Open the folder where you unziped Plucker on the WPS and just
+  double-click on the several WPI-packages (you may note that they are
+  now associated with \name{WarpIn}.) This fires up \name{WarpIn}
+  which asks you some basic questions on where you want to store the
+  files and stuff like that. Simply follow the on-screen-instructions.
+
+  \item The installer will create a folder on your Desktop called
+  \name{Plucker for OS/2} which will contain all necessary objects for
+  using Plucker. Additionally it will set up Python and Pilot-Link as
+  well as ImageMagick for image conversion.
+\end{enumerate}
+
+That's it! Now you are ready to run Plucker on OS/2. \\
+
+But before you start your first plucking we want to remind you to
+read section \~ref{sec:basic} to set up Plucker to gather the right
+contents.  You need to follow the steps there to get useful
+results.\\
+
+For detailed instructions how to use Plucker refer to the other
+chapters in this documentation. You may find some hints on how to make
+most out of Plucker in the appropriate locations within normal
+documentation, just in case there is anything different on OS/2 than
+on all the other platforms. You may note that this is very rarely the
+case at all.\\
+
+\note If you have any of the packages already installed that are
+delivered by the installer (most likely this will be the case with
+Pilot-Link) then simply skip it in the installation process for
+Plucker.
+
+
+\subsubsection{Setting up by hand}
+
+This section will be quite short as we assume that you know what you
+are doing. You will find all tools necessary for at
+\textit{\htmladdnormallink{http://www.stellarcom.org/plucker/os2\_bins}{http://www.stellarcom.org/plucker/os2\_bins}}
+
+The basic steps:
+
+\begin{enumerate}
+  \item Set up Python for OS/2
+
+  \item In case you want to use zLIB-compression (see below) you need
+  to install the additional zLIB.DLL for Python. (See our web site.)
+
+  \item Install \name{ImageMagick} or \name{NetPBM} (whatever you
+  prefer) for image conversion. Note that Plucker needs two additional
+  converters for creating usual TBMP-format used on your hand-held. So
+  we suggest that you get either of this packages from our web site.
+  The necessary converters in current versions are included in the
+  packages provided there.
+
+  \item Install \name{Pilot-Link for OS/2}
+
+  \item Unzip Plucker to the directory where you want to store the
+  program
+
+  \item Make sure that the environment variable \name{\$HOME} is set
+
+  \item Create a directory called \code{.plucker} within your
+  \name{\$HOME}-directory.
+
+\end{enumerate}
+
+If all packages are properly set up (this includes necessary changes
+to \textit{CONFIG.SYS}, path-/libpath-entries and some environment
+variables, refer to the docs of each package for this) you are ready
+to run Plucker. Simply continue with the usual configuration.\\
+
+Again: If you do not know what we where talking about here we suggest
+that you use the installer. It will take care about all the necessary
+settings. If you have any of the packages already installed that are
+delivered by the installer  then simply skip it in the installation
+process for Plucker.
+
+\subsection{Unix/Linux}
+
+There are several ways to get Plucker installed
+
+\begin{itemize}
+\item RPM package
+\item DEB package
+\item TAR package with binaries
+\item TAR package with source code
+\end{itemize}
+
+If you install the RPM package, you only have to run
+\name{plucker-setup} to set up the Plucker environment in you home
+directory (see chapter \~ref{sec:Parser} for more info about changing
+the description, configuration and exclusion list files)
+
+If you have downloaded the binary TAR package, then do the following:
+
+\begin{enumerate}
+\item Unpack the file.
+\item Go to the \name{unix} directory.
+\item Run \name{./install-plucker}
+\item Answer the questions about where the files should be installed.
+\end{enumerate}
+
+If you have downloaded the source package, you will do the same thing as
+explained above, but this time you must have \textbf{all} development 
+tools installed to be able to build all parts of Plucker.
+
+\subsection{Windows}
+
+On Windows we encurage you to use the graphical installer we provide.
+It will take care about all steps necessary to set up Plucker
+correctly. The follwoing steps are necessary to get Plucker running on
+Windows using this installer:
+
+\begin{enumerate}
+  \item Download the Installerpackage for Windows from our web page and
+  run it.
+
+  \item Follow the on-screen instructions.
+\end{enumerate}
+
+\section{Basic customization - Or: Before you start} \label{sec:basic}
+
+Now you have set up Plucker on your workstation. What is left to do?
+\begin{itemize}
+	\item Tell Plucker what pages to gather
+	\item Customize the hotsync-script (only OS/2 and Windows)
+	\item Start your first plucking and check that everything work as
+	expected
+\end{itemize}
+
+The first goal is achived by creating a document called \emph{description
+file} or \emph{home document}. The second is only necessary if you are 
+running OS/2 or Windows and is normally done by editing a script called 
+\emph{hotsync} (although you can name it whatever you like). And the last 
+step is to run this script or to run \emph{plucker-build} if you are 
+using Linux/Unix.
+
+\subsection{Specifying the pages you want to view - The Home Document}
+
+The home page is the first page you see when you start Plucker on your
+PDA, and is also the page you see when you tap on the \emph{home} icon
+(the little house) in the viewer on the Palm OS hand-held device. The
+home page is by default created using the description file at
+\name{\$HOME/.plucker/home.html}.\\
+
+When you installed Plucker, a default description file was put in
+\name{\$HOME/.plucker}. You can change this file in any text editor
+and it doesn't require deep knowlege of HTML to create it. We will 
+explain how to do this step by step in a minute.\\
+
+Except for the \longcode{description file}{MAXDEPTH} and similar
+attributes the \name{description file} is like any other HTML file.
+This also means that you can view \name{home.html} in your normal
+web browser (e.g. Netscape). In fact you can even use a normal
+web page at some web server as your home document. See chapter
+\~ref{sec:Parser} for details on how to do this.\\
+
+Prior to performing a HotSync, you have to tell Plucker about where to
+grab the pages that you want to view. Plucker starts by scanning the
+\name{description file} (also refered to as \name{home document}) that
+you have defined. As stated above if you did not define otherwise this
+will be \name{\$HOME/.plucker/home.html}. \\
+
+The parser finds any links in that file, and follows them. Each link
+(e.g.\ something like \verb|<A HREF="...">|) is read from the Internet,
+stored and parsed on your hard disk and included in the document that
+you will later sync to your Palm. Let us explore the \name{description 
+file} in more detail.\\
+
+A simple, typical home document will look like this (without the
+linenumbers, they are only added for easier reference later on):\\
+
+\begin{verbatim}
+[01]\t<H1>Plucker Home</H1>
+[02]
+[03]\t<H2>Plucker Information</H2>
+[04]\t<P><A HREF="http://www.plkr.org"> Plucker home page</A><P>
+[05]
+[06]\t<H2>Linux links</H2>
+[07]\t<A HREF="http://slashdot.org/index.pl?light=1&noboxes=1" NOIMAGES MAXDEPTH=1>Slashdot.org</A><P>
+[08]\t<H2>News</H2>
+[09]\t<A HREF="http://channel.nytimes.com/partners/palm-pilot/summ.html" MAXDEPTH=2>New York Times</A><P>
+[10]\t<A HREF="http://www.news.com/Newsfeed/Avantgo/index.html" MAXDEPTH=2>C-Net NEWS.COM</A><P>
+\end{verbatim}
+
+Here you see several typical examples. First of all you may note that
+this document follows the general outlines of normal HTML as stated
+above. If you do not know HTML already, do not worry. What you need
+here is really very easy. Let us look it trough line by line. (If you
+already know HTML this will be somewhat boring to you.)\\
+
+First you note that commands in HTML are enclosed in angle brackets.
+Each command has a begin and an end always using the same tag, the
+end marked by an additional slash in front of the tag's name. The first
+and 3rd row e.g.\ create Headlines. The numbers simply specify different 
+fontsizes.\\
+
+\begin{latexonly}
+More interesting is the 4th line. First it starts a new paragraph
+(\textless P\textgreater) and then you see the most important tag in 
+HTML: a link. Links have the following form:
+\end{latexonly}
+\begin{htmlonly}
+More interesting is the 4th line. First it starts a new paragraph
+(<P>) and then you see the most important tag in HTML: a link. Links 
+have the following form:
+\end{htmlonly}\\
+
+\begin{verbatim}
+<A HREF="http://www.plkr.org">Plucker home page</A>
+\end{verbatim}
+
+Enclosed in quotes you find the page they refer to (the URL) then
+after an closing angle bracket you see the title of the link that
+should be displayed to the user. You will see exactly this text within
+Plucker on your home document.\\
+
+Now you have the basic procedure how to tell Plucker to get a specific
+web page for you. What does Plucker do if it finds a tag like this in
+\name{home.html}? It will simply follow the URL you specified and get
+this page. Note that as this page is plain HTML you can also view it
+within your normal web browser and use the links the same way as
+Plucker does it. That way you can easily check if all links are
+working as you expected without the need to run the parser each time
+and sync.\\
+
+Well, it is nice to grab a web page, but what to do with a newsticker
+that lists only the headlines? You want to retrieve the articles as 
+well. Let's have a look at line 9. You will note that this
+time the link is enhanced by an additional tag: \code{MAXDPTH=2}. This
+is the way to instruct Plucker to retrieve deeper levels from a
+web server. You can give \code{MAXDEPTH} any number as parameter.
+\code{MAXDEPTH=2} means to load the target (linked-to) page, and any
+targets within that page. This will just do the job. It will first
+grab the headlines and then follow all linked pages to get the articles
+as well.\\
+
+\code{MAXDEPTH=3} will load the target page, its linked pages, and any
+pages linked within there and so on. You really do not want to set
+\code{MAXDEPTH} too high.  That could be very bad. A \code{MAXDEPTH}
+of well under 50 would probably load the entire Internet, so you may
+run into some storage problems\ldots\\
+
+\code{MAXDEPTH} is one of the most important tags used to customize
+the information to download. Another important tag is
+\longcode{description file}{NOIMAGES}. A sample on how to use it can
+be found in line 7. If you do not want to download any images you
+should specify this tag.  Simply add it after the URL to
+pluck. As you see in line 7 you can combine the various tags. That is
+line 7 instructs Plucker to download only the title pages without
+images. You see you can even explicitly specify a value of 1 to the
+\code{MAXDEPTH} argument. This does not make much sense at the first
+glance as our first example showed that leaving out the
+\code{MAXDEPTH} statement will give the same result. But stop. The
+reason to give a explicit \code{MAXDEPTH} is that you can define which
+depth is the default for Plucker within Pluckers configuration file we
+will talk about later on. So if you set the default depth to 2 e.g.\
+but this page should definitely be plucked only to a depth of 1 you can
+specify it explicitly here instead of defining a depth of 2 for all
+other pages. (It is not a bad idea to define the depth explicitly for
+all pages as one can see at first glance how deep Plucker will
+work.)\\
+
+Now in line 7 you see another possibility of Plucker. You might have
+wondered about these funny chars that appear in the url. Well with
+that definition you instruct Plucker to request the result of a so
+called CGI and to pass some paraeters as well. A CGI is basically a
+script run by a web provider to gather explicit informations e.g.\ from
+a database. You do not need to worry about the details, the easiest
+way to get the correct URL is always to point your web browser to the
+page where the information is located and copy the URL from its
+URL-field into the home-document of Plucker. Here we just wanted to
+show that Plucker can even handle such funny URLs.\\
+
+\hint{} If you specify a CGI for a newsticker and you always get the
+same news it is most likely that the date of the issue is passed to
+the script via the URL.\\
+
+\note \code{MAXDEPTH} will most likely be sufficient for web pages that
+where written for PDAs. If you are plucking \emph{normal} web pages be
+careful with \code{MAXDEPTH}, as many pages contain a menu to
+navigate the site and Plucker will follow these links as well. That is
+Plucker does not distinguish between a menu or a \emph{normal} link.
+That way a \code{MAXDEPTH=2} which is meant to download an overview page 
+and the articles (e.g.\ of your newspaper) could easily result in Plucker
+trying to retrieve the news archive of your favourite newspaper as well
+(since it is linked from within the menu). So it is wise to attend 
+the first runs of Plucker if you add new pages to your description file, 
+especially if you do not use PDA-optimized pages. There are very 
+effective ways to prevent Plucker from running into this kind of problems.  
+Besides the \code{MAXDEPTH} and \code{NOIMAGES} tags there are various 
+other tags that influlence the gathering process.  E.g.\ you can have 
+Plucker to exclude specific links etc. See below in chapter 
+\~ref{sec:Parser} for details about. We will not go into to much details 
+here.\\
+
+\hint{} Web pages created for handhelds have some advantages over normal
+web pages. Plucker can retrieve normal web pages, no matter, but specially
+designed pages are normally smaller, contain less graphics etc.\\
+
+\hint{} Plucker can not handle \emph{frames}. Usually, pages designed
+for handhelds do not contain frames\ldots\\
+
+\hint{} A good collection of links to handheld friendly sites are
+included with Plucker.\\
+
+Our German speaking users can find sites with mostly German content at
+\htmladdnormallink{http://www.palmtop-portal.de}{http://www.palmtop-portal.de}.
+
+\section{Running the Parser}
+
+Now that you have created your description file you are ready to run
+the parser to get the pages. For our simple case here this does not
+require much. Simply open a command line window, change to the
+directory where you installed the python parser and run the following 
+(\% is the shell prompt)\\
+
+\indata{\% python PyPlucker/Spider.py -f PluckerDB}
+
+(This call will work on any system, on Unix you can leave out the
+explicit call to Python of course.) Make sure you have established a
+connection to the Internet before you issue this call.\\
+
+Now the parser will read your freshly created \name{home.html} follow
+the links the way you defined them and finally write a file to your
+harddisk called \name{PluckerDB.pdb}. In case of problems you might
+want to add the additional parameter \code{-V2} to see where the error
+occurs.\\
+
+\note{} The spider has plenty of parameters. You will find a detailed
+description of all of them in chapter \~ref{sec:Parser}. Additionally
+to the parameters specified to the parser call you can set default
+values in a file calles \name{plucker.ini} (on OS/2 and Windows) or
+\name{.pluckerrc} (on Unix). So if something happens that you did not
+expect it is a good idea to check this file. A detailed description of
+the parameters for this file and its format can also be found in
+chapter \~ref{sec:Parser} and within the file itself.
+
+\section{Transfer to your Palm}
+
+After you ran the parser on your system it will generate a document
+for you, that is a file suitable for the viewer. Of course you need
+to transfer this document to your handheld. By default we
+suggest the usage of \code{pilot-xfer}. \code{pilot-xfer} is one of
+the tools (more or less the central tool) of the famous
+\name{pilot-link} package which is available for numerous platforms.
+For Unix and OS/2 you might find both the binary and the source
+distribution at \\
+
+\htmladdnormallink{ftp://ryeham.ee.ryerson.ca/pub/PalmOS/}{ftp://ryeham.ee.ryerson.ca/pub/PalmOS/}\\
+
+for Windows please have a look at Thilo Christs port at \\
+
+\htmladdnormallink{http://linux.stud.fh-heilbronn.de/~christ/pilot-xfer}{http://linux.stud.fh-heilbronn.de/~christ/pilot-xfer}\\
+
+Besides that Plucker offers its own conduit for Windows which
+cooperates directly with the usual HotSync, and there is as well a
+perl-based conduit available which you can still use to transfer the
+data (though you might only want to use it in very special
+circumstances, and in fact we discourage its usage).
+
+\subsection{Pilot-Link}
+
+Though the general usage of Pilot-Link package is beyond the scope of
+this manual we will tell you enough to transfer your documents on the
+Palm using Pilot-Link. On Unix and OS/2 you have mainly two choices:
+
+\begin{enumerate}
+  \item Create a document with the parser and transfer that one
+  \item Create a so call \textit{cache-directory} and use the
+        perl-based conduit.
+\end{enumerate}
+
+We encourage you to use the first method as it is easier and does not
+require working perl and pilot-link's perl-interface on your system.
+The perl based conduit may offer you some advantages though, so its
+covered in the advanced topics. Please have a look there.\\
+
+The usage of \name{pilot-xfer} is quite simple. Provided you set up
+the package correctly (on OS/2 this is done by the installer) all
+you need to do is
+
+\indata{\% pilot-xfer -i FILE \ldots}
+
+This will prompt you to press the hotsync button and then transfer the
+document to your handheld. On OS/2 you can of course use the WPS to do
+this. Simply open the folder where you stored your documents and
+double-click on the one you want to install. (The GUI-installer has
+set up he appropriate connections for you already.)\\
+
+\hint{} In case you have more than one document to transfer you can
+also use the \option{-r} switch and invoke \name{pilot-link} the
+following way to transfer all documents within a directory at once
+
+\indata{\% pilot-xfer -r DIR}
+\\
+
+\hint{} For OS/2 users. If you need to do this very often you might 
+want to enhance the context menu of your document folder by this function.
+Actually this is quite easy. Just create a program object that
+contains the necessary call with all parameters needed (in the program
+field just enter \code{pilot-xfer.exe}, in the parameters field you
+might want to enter \code{-r \.}. Note the full-stop in the argument),
+then open your folder settings and go to the \name{Menu} page. Now
+simply drop the newly created program object in the lower list box and
+name it appropriately using the \name{Settings..} button. Now the
+context menu of your folder will have an additional entry to transfer
+the whole folder to your hand-held. You might want to generate a shadow
+of that folder on your desktop for easy access.
+
+\subsection{The Windows conduit}
+
+The Windows conduit is, unlike \name{pilot-link}, entirely written for
+Plucker. For that it offers some parameters quite specific which we
+will elaborate a bit about here. Additionally it transfers the data
+not directly to the Palm but notifies the Hotsync Manager about a
+document waiting for transfer, that is the document is sent to
+your hand-held on your next HotSync-operation, not like on Unix when
+you call the conduit.\\
+
+The first difference in the usage is that it is thought to be used with
+\textit{cache-directories}. That is it assumes that you run the parser
+using \option{-c}. The new version supports the transfer of a complete
+document as well though. \\
+
+All parameters are in the form \option{-parameter=value}. Note that 
+they do not follow POSIX conventions nor the normal DOS-conventions. 
+Use one minus sign to separate all parameters. If you specify no 
+parameter at all you will get a short help message.
+
+The possible parameters are:
+
+\begin{itemize}
+  \item \option{-dir}: The path to \code{\$PLUCKERDIR}
+  \item \option{-user}: Hotsync manager needs to know for which user the
+document in question should be installed. (As you know the Hotsync
+Manager allows for multiuser environments.) Use this switch to set
+the username.
+
+\note You must set this parameter. Without it no data will be
+transfered.
+
+  \item \option{-cache}: The name of the cache-directory if you use the
+parser with the \option{-c} switch. The default value is \name{Cache}
+if you do not provide that parameter. This path is given relative to
+the path you provided with \option{-dir}.
+
+  \item \option{-id}: Creator ID for the document. Default is \textbf{Plkr}. You
+may not want to change this value.
+
+  \item \option{-dbversion}: Versions number for the document.
+  Default is 7. You may not want to change this value.
+  \item \option{-dbname}: Name of the document, that is the name with
+which the document will show up on the Palm. Default is \emph{PluckerDB}.
+You will want to change this, and you have to change it if you want
+multiple documents.
+   \item \option{-fname}: Filename for the document on your local
+harddisk. Default \emph{PluckerDB.pdb}. You need to change this for
+multiple documents.
+  \item \option{-fix}: 0x0D0A Sequences are converted to 0x0A. Normally
+you should not need this parameter anymore.
+  \item \option{-install}: Install a document. This parameter is needed
+instead of \option{-cache} if you run the parser with the
+\option{-f}-switch. \option{-user} must be set, \option{-dir} must not
+
+\item \option{-verbose}: Set the verbosity Level. Default are
+  \begin{itemize}
+   \item[0] = Verbosity level 0 is silent except for errors
+   (\emph{No news is good news})
+   \item[1] = Verbosity level 1 gives progress status
+   \item[2] = Verbosity level 2 is used for debugging
+  \end{itemize}
+  \item \option{-copyprev}: Set the CopyPrevention flag for the
+        document. You may not be able to copy such documents from
+        one Palm to another (easily). Useful for confidential data
+        (but do not consider it to be a sufficient security lock.)
+  \item \option{-backup}: Set the backup flag for the document,
+        documents without this flag will not be backed up by hotsync.
+  \item \option{-launchable}: Set the launchable flag for the document
+Set this to see your document like a program in the Palm's launcher.
+\end{itemize}
+\note The last three parameters are only useful if you run the parser
+with the \option{-c} parameter that is you let it write cache
+directories instead of whole documents. Otherwise the parser will add
+this flags if you tell it to do so.
+
+\section{Finally..}
+
+After you successully retrieved your documents and enjoyed reading
+them on your PDA you might want to do this every day. To ease things
+up consider putting these calls into a short script file. On OS/2 and
+Windows simly create a file called hotsync.cmd (OS/2) or hotsync.bat
+(Windows) and place the calls just like you would have entered them on
+the command prompt. In case you use dial up conections to the internet
+you can even include the calls to build up that connection before the
+gathering process starts.\\
+
+Now you should be ready to start using Plucker. The next chapter will
+describe the client application on your hand-held, the \emph{Viewer}.

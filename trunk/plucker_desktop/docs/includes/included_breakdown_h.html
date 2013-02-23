@@ -1,0 +1,311 @@
+<style type="text/css">
+a {text-decoration: none;}
+td { font-family: helvetica,arial,sans-serif; font-size: 8pt; font-weight: bold; background-color: rgb(255,255,128); padding: 4px }
+h1 {font-family: helvetica,sans-serif; font-size: 12pt; font-weight: bold;}
+pre {font-family: courier,serif; font-size: 10pt; font-weight: normal;}
+</style>
+
+<body bgcolor="#ffffff">
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">A file comment description block, which describes this file. It is pretty
+    straightforward. These comments are structured and in Doxygen format. They are collected
+    by Doxygen and make the generated documentation automatically. </td>
+  </tr>
+</table>
+</center></div>
+
+<pre><font COLOR="#808080"><i>//----------------------------------------------------------------------------------------
+/*!
+    \file       bookmark_dialog.h        
+    \modified                            
+    \copyright  (c) Robert O'Connor ( rob@medicalmnemonics.com )    
+    \licence    GPL
+    \brief      Describes bookmark_dialog class    
+    \author     Robert O'Connor
+    \date       2002/01/03    
+ */</i></font>  
+<i><font
+COLOR="#808080">// RCS-ID:      $Id: included_breakdown_h.html,v 1.2 2003/03/17 17:43:21 robertoconnor Exp $
+//----------------------------------------------------------------------------------------</font></i></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">This is the regular C/C++ define that ensures the compiler will include
+    the stuff in this .h header file only once, over the course of the compilation. It is of
+    the format shown: this header file's filename in all capitals, with .h replaced as _H,
+    with underscores at each end.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// Begin single inclusion of this .h file condition
+//----------------------------------------------------------------------------------------
+</font></i>
+#<b><font
+COLOR="#800080">ifndef</font></b> <font COLOR="#B8860B">_BOOKMARK_DIALOG_H_</font>
+#<b><font
+COLOR="#800080">define</font></b> <font COLOR="#B8860B">_BOOKMARK_DIALOG_H_</font></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">The GCC #pragma interface is required for proper Linux compilation. It is
+    the name of this header file. If it wasn't put in, then every .cpp file would contain
+    debug info about every other .cpp file, which makes code size, compilation time, etc, all
+    worse. This directive tells compiler not to put the debug info in every .cpp file, just
+    wait for bookmark_dialog.cpp and it will only be put in bookmark_dialog.cpp. We turn it
+    off though for Apple, since OSX Jaguar doesn't like it (or need it).</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// GCC interface
+//----------------------------------------------------------------------------------------
+</font></i>
+#<b><font
+COLOR="#800080">if </font></b> <font COLOR="#B8860B">defined(__GNUG__) &amp;&amp; ! defined(__APPLE__)</font>
+    #<strong><font 
+COLOR="#800080">pragma interface</font></strong> <b><font COLOR="#800080">&quot;bookmark_dialog.h&quot;</font></b>
+#<b><font
+COLOR="#800080">endif</font></b></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">This includes all the defines used by the program. The plucker_defines.h
+    also includes a link to the program's setup.h file, which allows features to be easily
+    compiled out of the program. </td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// Shared defines
+//----------------------------------------------------------------------------------------
+</font></i>
+#<b><font
+COLOR="#800080">include</font></b> <b><font COLOR="#800080">&quot;plucker_defines.h&quot;</font></b></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">The program's setup.h file has a list of defines that allow a feature to
+    be compiled out, by setting a feature define to 1 or 0. This file (bookmark_dialog) is
+    part of the integrated HTML editor feature, so we want only want to include the rest of
+    this file if setupUSE_INTEGRATED_HTML_EDITOR was set to 1 in the setup.h </td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// Begin feature removal condition
+//----------------------------------------------------------------------------------------
+</font></i>
+#<b><font
+COLOR="#800080">if</font></b> ( <font COLOR="#B8860B">setupUSE_INTEGRATED_HTML_EDITOR</font> )</pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">Include whatever headers are needed by the class definition. Since
+    bookmark dialog derives from wxWindow's wxDialog, we need to include the header of that
+    file.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">// ---------------------------------------------------------------------------------------
+// Headers
+// ---------------------------------------------------------------------------------------
+</font></i>
+#<b><font
+COLOR="#800080">include</font></b> <b><font COLOR="#800080">&quot;wx/dialog.h&quot;</font></b></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">The class definition block: body dialog dervies from wxDialog. Note the
+    Doxygen comments, which will document this class in the developer documentation.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// Class definition: bookmark_dialog
+//----------------------------------------------------------------------------------------
+</font></i>
+<i><font
+COLOR="#808080">//! A dialog for a &quot;a name=&quot; tag for the HTML editor.
+</font></i><font
+color="#228B22">class</font> bookmark_dialog : public wxDialog
+{</pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">This is a wxWindows DYNAMIC_CLASS macro used by the C++ concept of
+    'RTTI', which you may see in some classes. All you need know about RTTI or this macro is
+    three things: <br>
+    - It is pretty much required if this class that will be a component in another class. For
+    example the main_listctrl gets made and embedded into the main_frame, and so the
+    main_listctrl needs this macro.<br>
+    - It is helpful in memory leak detection (for example Borland BCC would say 'Memory leak:
+    bookmark dialog on line 54' on shutdown, and you could see what kind of object it was that
+    you leaked).<br>
+    -If this class is a class that your object can make and use at runtime, then
+    DECLARE_DYNAMIC_CLASS(...) is the one to use. If it an abstract base class (such as
+    plucker_wizard_base), then DECLARE_ABSTRACT_CLASS(..) is the one to use.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre>    <font color="#FF0000">DECLARE_DYNAMIC_CLASS( bookmark_dialog )</font></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">The public methods of the class. These are the functions that can be
+    called by other classes. 
+    There will usually be a constructor, and destructor here, and perhaps a few more
+    custom functions.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><b><font COLOR="#800080">public</font></b>:</pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">First public method listed is the constructor. If you are using
+    DECLARE_DYNAMIC_CLASS macro,&nbsp; then you either need to supply a default argument for
+    every parameter, or else have a second empty constructor that is just a dummy and isn't
+    used.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre>    <i><font COLOR="#808080">//! Constructor.
+</font></i>    <i><font COLOR="#808080">/*!
+        \param parent The parent window.
+     */</font></i>
+    bookmark_dialog( <font
+color="#228B22">wxWindow</font>* parent <font color="red">= (wxWindow* )NULL</font> );</pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">After the constructor(s), comes the destructor. If planned to derive
+    again from this class then this destructor would need to be virtual, so all the
+    destructors get called, all the way back up the object hierarchy, not just one destructor.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre>    <i><font COLOR="#808080">//!Destructor.
+</font></i>    <font color="#FF0000">virtual</font> ~bookmark_dialog();   </pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">After the constructor(s) and the destructor comes any other public
+    methods</td>
+  </tr>
+</table>
+</center></div>
+
+<pre>    <i><font COLOR="#808080">//! Gets the tag strings generated by the dialog, ready to insert by parent
+</font></i>    <i><font
+COLOR="#808080">/*!
+        \param starting_text The text to place at the start of parent's selected text.private: 
+        \param ending_text The text to place at the end of parent's selected text.  
+     */</font></i>
+    <b><font
+color="#228B22">void</font></b> transfer_to( <font color="#228B22">wxString</font>&amp; starting_text,
+                      <font
+color="#228B22">wxString</font>&amp; ending_text
+                    );</pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">Then comes a list of protected methods/members. Protected members are
+    only availalble to this class, or any class that you later derive from this class.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><font color="#FF0000"><b>protected</b>:</font></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">Finally, the list of private members. Private members are only available
+    to this class. They describe the internal workings of how this dialog manages itself, to
+    get things done. Note that the private objects and pointers have a prefix of m_ to denote
+    they are 'm'embers of this class.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><b><font COLOR="#800080">private</font></b>:</pre>
+
+<pre>    <b><font color="#228B22">void</font></b> on_help_button( wxCommandEvent &amp;event );  
+    <i><font
+COLOR="#808080">//Override base class functions
+</font></i>    <b><font color="#228B22">void</font></b> OnOK( wxCommandEvent&amp; event );
+    
+    <strong><font
+color="#228B22">wxString</font></strong> m_starting_text;
+    <strong><font color="#228B22">wxString</font></strong> m_ending_text;</pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">This is a wxWindows macro that is required if you want the class to have
+    some custom responses to any events. This will be seen in almost all GUI classes.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre>    DECLARE_EVENT_TABLE()
+
+};</pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">If this header file had a setup option all removal, then close that
+    compiler #if condition.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// End feature removal condition
+//----------------------------------------------------------------------------------------
+</font></i>
+#<b><font
+COLOR="#800080">endif</font></b> // <font COLOR="#B8860B">setupUSE_INTEGRATED_HTML_EDITOR</font> </pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">An finally close up the compiler #if option that ensured this header only
+    gets included once.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// End single inclusion of this .h file condition
+//----------------------------------------------------------------------------------------
+</font></i>
+#<b><font
+COLOR="#800080">endif</font></b>  //<font COLOR="#B8860B">_BOOKMARK_DIALOG_H_</font></pre>

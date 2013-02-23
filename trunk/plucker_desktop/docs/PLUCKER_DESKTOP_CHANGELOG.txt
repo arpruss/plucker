@@ -1,0 +1,343 @@
+1.8.0.0 (Jun 23, 2007)
+
+[X] Many bugfixes, but important new items are:  
+
+[X] Unicode support.
+
+[X] Native GTK2 look and feel.
+
+[X] Autoupdate code removed. Use crontabs or similar schedulers.
+
+[ ] wxStyledTextCtrl/Scintilla code removed. There is now no other
+    dependencies other than wxWidgets, which comes with most distributions.
+
+[X] Windows version is multiuser compliant.
+
+[X] Windows version is now 2000/NT/XP/Vista or above in order to 
+    be unicode, and multiuser compliant.
+
+[X] OS X version is 10.4 and higher. Plucker Desktop 1.6 version worked well on 
+    10.2 and 10.3 OS X and is still available if needed.
+
+[X] Universal binary support for OS X: runs on Intel Macs.
+
+[X] That wriggle-the-mouse issue on the Plucker Desktop progress dialog 
+    on GTK is resolved with GTK2.
+
+[X] Updated parser included, with support for timeout for a site.
+
+1.6.0.1 (Oct 28, 2003)
+
+[X] OS X tip-of-day turned off again, to avoid crash on initial run.
+
+[X] MSW writes signed longs to registry (more common now that Palm Desktop 4.1 
+    usually uses a magic number using all 4 bytes.
+
+[X] The option to not link to the full-sized version of images now works 
+    as described.
+    The description of linking to a full-sized version but ensuring the 
+    full-sized version stays below a certain size is now more accurate.
+
+[X] Running parser in console window should work on MSW.
+
+[X] Fix for Slashdot showcase palm site contributed.
+
+1.6.0.0 (Oct 21, 2003)
+
+[X] Channel dialog > Images tab updated for the new multi-image support.
+    Multi-image is large pannable images.
+
+[X] There is now some sample custom large and small launcher icons included
+    one of which is a template icon called template.png showing the drawable
+    area. Help updated on this topic.
+
+[X] Bugfix for when select a scheduling time's hour/minute, it now saves correctly,
+    instead of saving as 00:00.
+
+[X] OS X UI fixes: "Preferences..." is now available in its proper OS X location.
+    HTML editor lower tab icons (to switch between editor and preview) are no longer 
+    obscured.
+
+[X] OS X: Tip of the day can now be shown on startup.
+
+[X] OS X: Fixed to enable running without Palm Desktop.
+
+[X] MSW: Another stab at Borland's 'Locale cannot be set' bug.
+
+1.4.0.2 (Aug 06, 2003)
+
+[X] OS X properly configured to parse images.
+
+[X] Harmless yet annoying 'Locale cannot be set' warning on MSW should go away on en_US systems.
+
+[X] OSX install to card now tries to use the translated folder for SD card, etc.
+    Note: if you were using Plucker Desktop 1.4.0.1 on a non-English system, delete this folder:
+    <yourhomedir>/Documents/Palm/Users/<yourhotsyncdir>/Files to Install/SecureDigital (SD) Card
+
+1.4.0.1 (July 26, 2003)
+
+[X] 1.2->1.4 on MSW installer.
+
+[X] Tips defines stripped from plucker_defines.h
+
+[ ] Can install to Compact Flash
+    [X] On OSX
+    [ ] On MSW (needs correct name of install directory)
+
+[X] Fixed OSX bug in which install folders weren't created if a brand new user, who had 
+    never HotSynced.
+
+[X] OSX should now parse all Palm Users files.
+
+[X] MemoryStick corrected to "Memory Stick" in GUI and help.
+
+[X] Memory Stick->M.Stick in the Handheld destination control to fit in the column.
+
+1.4.0.0 (July 1, 2003)
+
+[X] Specfile can now build RPMs and SRPMs. Default is now /usr/*. 
+    In future this will be modifiable through use of prefix.
+
+[X] Order of the libs in LDLLIBS in OSX/Unix makefile rearranged, so 
+    that the dependant ones come first (required for Unix, double check 
+    that OSX will still build it okay).
+
+[X] Fix to GTK version for turning off USB pauses.
+
+[X] MSW installer updated. Requirements updated.
+
+[X] New icons, new art for wizard and splash.
+
+[X] When a hires is selected for device, in setup wizard, the default settings for 
+    images are updated, and the ARMlet Zlib is used instead of the non-ARM one.
+
+[X] Add new Plucker Team members.
+
+[X] It shouldn't be an error just because can't find last user from Registry. May 
+    never have synced yet.
+
+[X] OSX can install to a Handheld SD/MMC card (MemoryStick soon).
+
+[X] Organization of subfolders in MSW and OSX: parsers are now under /parsers and 
+    viewers under /viewers to make better multiple parsers. 
+
+[X] MSW context-sensitive menu convert is now an editable batch file, instead of a 
+    no-sourcecode-available-with-hardcoded-paths executable file.
+
+[X] Can now choose to only enter the http_proxy password at runtime (more secure). 
+    Will remember it for lifetime of program execution.
+
+[X] OSX "Export details..." now has a correct extension.
+
+1.2.0.12 (May 23, 2003)
+
+[X] Option for pausing for using pilot-link with USB devices.
+
+[X] Export logfile filename shortened for Mac OSX.
+
+[X] Exclusion list renamed to Inclusion/Exclusion list (see my comments to plucker
+    lists as to why I recommended this change).
+
+[X] OSX will install files to Handheld using HotSync manager.
+
+[X] OSX now compiles to a full bundle with a makefile.
+
+[X] Added in Preferences... and Quit menu bar relocation to Application menu on Mac  
+    (will appear in next version of wxWindows)
+
+1.2.0.11 (March 23, 2003)
+
+[X] Added XPM Handler (needed for wxGTK version. Mac and Win
+    seem to have their own built-in).
+
+[X] Linux makefile updated.
+
+1.2.0.10 (March 22, 2003)
+
+[X] Fixed typo in overridable directories.
+
+[X] Some int/long casts updated, so zero warnings.
+
+[X] OSX filled in to proper integration.
+
+[X] On OSX, commented out showing startup tips at startup on OSX in which:
+    - Shows tips, then click close.
+    - After click close, crash.
+    - Doesn't crash if show the tips via the menu.
+
+[X] Tabs at bottom of listctrl in OSX already fixed in wx CVS (HTML editor).
+
+[X] Found out why no toolbar shown on OSX. Looks like flat toolbar style isn't supported yet.
+
+1.2.0.9 (March 17, 2003)
+
+[X] Setup wizard now has a checkbox list of selectable channels to set up.
+    [X] Code
+    [X] Help
+
+[X] db_file and db_name are starting to be deprecated (channel_listctrl).
+
+1.2.0.8 (March 13, 2003)
+
+[X] #pragma interface/implementation removed from Mac, as apparently the August 2002
+    dev tools and OSX Jaguar don't like them (the pragmas are not needed on
+    OSX anyways).
+
+[X] Add Thai translation to list of available viewers (still needs to 
+    be added to viewers).
+
+[X] Fix for importation of installation/showcase plkrdata to take all sections, not just 
+    the first one.
+
+[X] Linux importation of installation plkrdata implemented.
+
+[X] Mac "About" menuitem relocation uncommented, and better described in 
+    comments.
+
+[X] wx translations updated to 2.4.
+
+1.2.0.7 (Mar 12, 2003)
+
+[X] Help controller will just show a silent debug message if one of the help files
+    is missimg, instead of showing an error message.
+
+[X] Installation settings improved.
+    [X] Code improved.
+    [X] Inno setup improved.
+
+[X] PNGs updated to the more portable XPM, avoiding the hassle of various versions of
+    linked libpng on POSIX.
+
+[X] Toolbar theme now grays out when uncheck the show toolbar checkbox.
+
+1.2.0.6 (Mar 9, 2003)
+
+[X] Updated to wxWindows 2.4.0
+        [X] Updated REQUIREMENTS.
+        [X] code update (only a DirExists update to wxDirExists in plucker_installer_msw.cpp).
+        [X] An XRC update to editor for changing size of textctrl when change dialog size.
+
+[X] Tips rewritten with a preprocessor instead of separate files.
+
+[X] Added 'If not sure if have a proxy then just click next' to proxy setup wizard.
+
+[X] Online help frame now has a correct help icon.
+
+[X] Low-res toolbar has more generic icon.
+
+[X] Tables support added (with a default of tables enabled).
+    [X] XRC
+    [X] Code
+    [X] Help
+
+[X] Improved customization ability.
+
+[X] Frame icon now loads from file.
+        [X] Code change
+        [X] Update MSW install script to include the new icons
+        [X] Update Linux install script to include the new icons
+
+[X] HTML editor updates:
+    [X] Icons improved to fit with rest of application.
+    [X] Addition of superscript, subscript, tt, blockquote, small buttons to toolbar.
+    [X] Corrections: q button now inserts as q, not quote. Table border color
+        now inserts as "bordercolor" not "border color".
+    [X] Addition of td and th dialogs, which support alignment, colspan, rowspan.
+
+[X] MSVC makefile updated.
+
+[X] Fix for close-app-while-minimized redisplaying main window offscreen.
+
+[X] Image list now loads at runtime.
+
+1.2.0.5 (Feb 16, 2003)
+
+[X] Fixed a double-clearing-of-array on closing of handheld destination
+    dialog [which manifest as instability after a few times].
+
+[X] Debug build available on MSW.
+
+[X] Updated docs for BCC compilation to describe building debug via a DLL.
+
+[X] Small about dialog if compiled out the full-sized About dialog.
+
+[X] Corrected an assert in utils_string::string_to_arrayint: now first checks
+    that wasn't sent an empty string.
+
+[X] Implemented first pass at single instance checking.
+
+[X] Mods to installer script to remove components.
+
+[X] Return of disabling toolbar/menuitems if channel not selected in main dialog,
+    and edit/delete disabling if an entry not selected in exclusion list dialog
+    [#ifdef'able].
+
+1.2.0.4 (Feb 12, 2003)
+
+[X] Option added for installing to memory stick.
+    [X] Defines for card types, plus switch/cases for easier additions
+        of cards.
+    [X] is_install_to_card INI key replaced to handheld_target_storage_mode
+    [X] handheld_dest_type stuct member "is_card" updated to
+        handheld_target_storage_mode.
+    [X] is_install_to_card added to list of deprecated keys that are
+        automatically not propogated.
+
+[X] Fixed #ifdef for OSX compilation in palm_installer_gtk.h.
+
+[X] Fixed a '.' to '->' typo for Linux/OSX on plucker_controller.cpp.
+
+[X] Added a missing clearing of array on plucker_controller.cpp.
+
+[X] Stripped double close check from details_progress_dialog.h/.cpp since
+    not needed anymore (should still double check on POSIX).
+
+[X] When updating on MSW, all now update their due date, not just the first.
+    [finishes moveover from update at end to update as go along]
+    (Eugene Y. Vasserman, DK Lock).
+
+[X] Bill N. email updated.
+
+1.2.0.3 (Feb 8, 2003)
+
+[X] Commandline mode now exits silently if update-due and no channels due,
+    instead of popping up a messagebox to say so. (Bill Nalen)
+
+[X] Conduit for updating when hit HotSync button. (Bill Nalen)
+
+[X] Default list-of-links page is now CBC mobile site.
+
+[X] On POSIX, all output channels are synced to device at end, but now on MAC/MSW,
+    they are sent as each built. POSIX way so only have to click button once at
+    end, MAC/MSW so that can stop part way and still have some completed.
+
+[X] LeMonde removed from Showcase because they now put a 403 error on their
+    homepage.
+
+[X] Unhid OnSync radio button from Prefs>Autoupdate. (Bill Nalen)
+
+[X] Can now install directly to a SD/MMC card
+    [X] WX_CLEAR_ARRAYS added to free memory from the "new" memory allocation
+        with '= new handheld_dest_type', or else make it a member somewhere.
+    [X] hhictrl listctrl forked into two subtypes, as don't need the extra columns
+        in the directory listctrl.
+    [X] replaced install_files_by_username with typedef'ed install_files_by_handheld_dest
+    [X] pda_listctrl pulled out of hhictrl.cpp into its own class
+    [X] Correct saving to config file: The things are going out of scope, so blank.
+    [X] Correct copying to SD Slot dir/registry when so indicated.
+    [X] Hide currently unused "copy to card directory" controls on handheld_dest_dialog
+    [X] If the CardInst... dir doesn't exist, then make it.
+
+[X] BCC build instructions improved clarity.
+
+[X] MSW+commandline+progress dialog+autoclose now terminates app upon completion.
+
+[X] Bill Nalen added to Plucker Desktop > Authors.
+
+[X] Plucker Desktop credits updated.
+
+[X] Typo bugfix in Palm Destkop 2.0 registry key location.
+
+[X] Changelog added to developer docs, distribution.
+
+[X] Describe the new features in online help.

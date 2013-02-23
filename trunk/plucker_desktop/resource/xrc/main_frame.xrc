@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<resource xmlns="http://www.wxwidgets.org/wxxrc" version="2.5.3.0">
+
+<object class="wxFrame" name="main_frame">
+    <title>Launching...</title>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>0</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>0</border>
+            <object class="unknown" name="main_frame_main_listctrl">
+                <size>200,200</size>
+            </object>
+        </object>
+    </object>
+</object>
+
+</resource>

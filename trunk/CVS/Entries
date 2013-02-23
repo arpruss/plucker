@@ -1,0 +1,28 @@
+/AUTHORS/1.27/Mon Sep 18 11:14:00 2006//
+/BUGREPORT/1.4/Thu Feb 27 12:19:23 2003//
+/COPYING/1.3/Sun Jan  2 16:44:15 2000//
+/CREDITS/1.43/Sat Nov 27 11:23:38 2004//
+/ChangeLog/1.62/Mon Sep 18 11:13:59 2006//
+/FAQ/1.28/Fri Feb 11 16:07:18 2005//
+/INSTALL/1.16/Mon Oct  6 21:41:20 2003//
+/Makefile.in/1.38/Mon Apr  4 01:46:07 2005//
+/Makefile.maint/1.27/Wed May 19 13:37:31 2004//
+/NEWS/1.117/Sat Oct 29 14:14:21 2005//
+/README/1.19/Sat Feb 12 16:52:23 2005//
+/README.OS2/1.5/Mon Feb 12 17:59:53 2001//
+/REQUIREMENTS/1.45/Mon Oct  6 21:45:31 2003//
+/TODO/1.9/Wed May 19 13:37:31 2004//
+/autogen.sh/1.1/Sat Jan 27 11:05:29 2001//
+/configure.in/1.115/Thu Jun 28 18:16:24 2007//
+/install-sh/1.3/Wed May 22 22:29:40 2002//
+/mkinstalldirs/1.1/Sat Aug  5 11:41:27 2000//
+D/conduit////
+D/docs////
+D/os2////
+D/parser////
+D/plucker_desktop////
+D/tools////
+D/unix////
+D/utils////
+D/viewer////
+D/viewer-GTK+2-POSIX////

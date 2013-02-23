@@ -1,0 +1,180 @@
+/COPYING/1.1.1.1/Sun Aug  1 18:47:14 1999//
+/DIA.c/1.19/Thu Feb 15 15:16:43 2007//
+/DIA.h/1.4/Thu May 13 00:12:17 2004//
+/DIA.txt/1.4/Wed May 12 01:49:10 2004//
+/Guidelines.txt/1.7/Mon Oct 21 14:35:43 2002//
+/Makefile.in/1.119/Sun Nov 12 02:00:53 2006//
+/README/1.28/Sun Oct 12 11:02:18 2003//
+/SysZLib.h/1.1/Sat Aug 23 18:18:44 2003//
+/allforms.h/1.20/Sun Jul 25 16:41:27 2004//
+/anchor.c/1.64/Fri Nov 10 06:51:21 2006//
+/anchor.h/1.33/Thu Nov  9 13:19:14 2006//
+/annotation.c/1.19/Mon Jan 21 00:22:17 2008//
+/annotation.h/1.12/Sun Jan 20 22:21:33 2008//
+/annotationform.c/1.9/Sun Nov 12 02:00:54 2006//
+/annotationform.h/1.6/Sun Nov 12 02:00:55 2006//
+/axxpacimp.c/1.6/Wed Sep 24 13:06:43 2003//
+/axxpacimp.h/1.1/Sun Jun  8 12:42:40 2003//
+/bookmark.c/1.51/Sun Nov 12 02:00:55 2006//
+/bookmark.h/1.19/Sun Nov 12 02:00:55 2006//
+/bookmarkform.c/1.45/Sun Nov 12 02:00:55 2006//
+/bookmarkform.h/1.13/Sat Jul 12 14:57:03 2003//
+/cache.c/1.26/Mon Feb 12 14:08:22 2007//
+/cache.h/1.10/Sat May 22 19:42:43 2004//
+/categoryform.c/1.35/Sat May  8 09:04:53 2004//
+/categoryform.h/1.11/Wed Jan 29 15:16:15 2003//
+/configure.in/1.143/Wed May 30 21:39:01 2007//
+/const.h/1.56/Thu Nov  9 13:19:14 2006//
+/control.c/1.147/Sun Nov 12 02:00:55 2006//
+/control.h/1.40/Sun Nov 12 02:00:55 2006//
+/cpuspeed.c/1.2/Mon Apr  4 22:18:32 2005//
+/cpuspeed.h/1.2/Mon Apr  4 22:18:32 2005//
+/debug.c/1.30/Mon Jun  2 23:18:51 2003//
+/debug.h/1.20/Thu Jan  2 07:49:37 2003//
+/detailsform.c/1.41/Wed May 12 02:21:26 2004//
+/detailsform.h/1.13/Thu Sep 26 15:26:40 2002//
+/dimensions.h/1.8/Thu Jul  3 03:13:14 2003//
+/doclist.c/1.38/Sun Jan 20 22:21:33 2008//
+/doclist.h/1.14/Mon Aug  8 02:30:59 2005//
+/document.c/1.183/Thu Feb 15 15:16:43 2007//
+/document.h/1.74/Sun Nov 12 02:00:55 2006//
+/emailform.c/1.38/Wed Sep 29 17:39:03 2004//
+/emailform.h/1.15/Wed Oct  8 17:50:12 2003//
+/externalform.c/1.48/Thu Feb 15 15:16:43 2007//
+/externalform.h/1.18/Wed Oct  8 15:54:29 2003//
+/fiveway.c/1.19/Mon Jan 21 16:44:41 2008//
+/fiveway.h/1.13/Mon Jan 21 16:44:41 2008//
+/font.c/1.54/Fri Apr 14 03:27:18 2006//
+/font.h/1.16/Sat Dec 13 15:47:26 2003//
+/fullscreenform.c/1.52/Mon Jan 21 16:44:41 2008//
+/fullscreenform.h/1.11/Sun Jan 20 20:59:16 2008//
+/genericfile.c/1.36/Sun Jan 20 21:15:42 2008//
+/genericfile.h/1.17/Sun Jan 20 20:59:16 2008//
+/grayfont.c/1.42/Sat Apr 29 05:33:57 2006//
+/grayfont.h/1.10/Tue Feb 10 02:10:44 2004//
+/handera.c/1.2/Sat May 22 19:42:43 2004//
+/handera.h/1.2/Sat May  8 09:13:08 2004//
+/hardcopyform.c/1.23/Sat Jun 26 18:12:05 2004//
+/hardcopyform.h/1.5/Sun Feb 23 17:48:20 2003//
+/hires.c/1.71/Thu Apr 29 01:52:05 2004//
+/hires.h/1.38/Thu Apr 29 01:52:05 2004//
+/history.c/1.36/Sat Aug 27 15:08:59 2005//
+/history.h/1.34/Sat Aug 27 15:08:59 2005//
+/image.c/1.83/Thu Feb 15 15:16:43 2007//
+/image.h/1.28/Wed Feb  4 16:09:06 2004//
+/imodeicons.pdb/1.1/Thu Oct 23 19:23:47 2003/-kb/
+/jogdial.c/1.25/Thu Feb 15 15:16:43 2007//
+/jogdial.h/1.18/Thu Feb 15 15:16:43 2007//
+/keyboard.c/1.9/Mon Aug  8 02:30:59 2005//
+/keyboard.h/1.3/Sun Aug  3 14:07:02 2003//
+/keyboardform.c/1.12/Sat May  8 09:04:54 2004//
+/keyboardform.h/1.3/Sun Aug  3 14:07:02 2003//
+/libraryform.c/1.120/Thu Feb 15 15:16:43 2007//
+/libraryform.h/1.18/Wed May 19 11:40:03 2004//
+/link.c/1.26/Sat Jul 12 14:57:03 2003//
+/link.h/1.20/Sat Jul 12 14:57:03 2003//
+/list.c/1.4/Thu Jan 30 14:11:40 2003//
+/list.h/1.2/Wed Jan 29 15:16:15 2003//
+/loadbar.c/1.3/Sat Jan  3 13:32:43 2004//
+/loadbar.h/1.2/Sun Sep  7 14:00:05 2003//
+/mainform.c/1.158/Sun Jan 20 21:15:42 2008//
+/mainform.h/1.18/Sun Nov 12 02:00:55 2006//
+/metadata.h/1.5/Sat May 22 15:04:16 2004//
+/metadocument.c/1.49/Mon Jan 21 00:48:10 2008//
+/metadocument.h/1.20/Mon Jan 21 00:47:01 2008//
+/os.c/1.97/Thu Feb 15 15:16:44 2007//
+/os.h/1.47/Thu Apr 20 03:49:16 2006//
+/palmbitmap.h/1.3/Sun Nov 30 15:50:27 2003//
+/paragraph.c/1.166/Sun Nov 12 02:00:55 2006//
+/paragraph.h/1.49/Sun Nov 12 02:00:56 2006//
+/pluckererror.h/1.7/Sun Nov 30 15:50:27 2003//
+/prefsautoscroll.c/1.7/Sun Sep 26 11:39:53 2004//
+/prefsautoscroll.h/1.1/Mon Feb  3 22:46:17 2003//
+/prefsbrowsing.c/1.14/Thu Aug 25 21:03:30 2005//
+/prefsbrowsing.h/1.2/Sun Jul 25 16:41:27 2004//
+/prefsbutton.c/1.11/Sun Sep 26 11:40:11 2004//
+/prefsbutton.h/1.1/Mon Feb  3 22:46:17 2003//
+/prefscolor.c/1.2/Sat Mar 31 23:34:15 2007//
+/prefscolor.h/1.1/Sun Jul 25 16:41:27 2004//
+/prefscontrol.c/1.4/Sun Jul 25 16:41:27 2004//
+/prefscontrol.h/1.1/Mon Feb  3 22:46:17 2003//
+/prefsdata.c/1.97/Sun Nov 12 16:23:44 2006//
+/prefsdata.h/1.104/Mon Jan 21 16:44:41 2008//
+/prefsfont.c/1.3/Sun Jul 25 19:42:56 2004//
+/prefsfont.h/1.1/Sun Jul 25 16:41:27 2004//
+/prefsform.c/1.81/Wed May 30 21:39:01 2007//
+/prefsform.h/1.18/Sun Nov 12 16:23:44 2006//
+/prefsgeneral.c/1.14/Sun Nov 12 16:23:44 2006//
+/prefsgeneral.h/1.1/Mon Feb  3 22:46:17 2003//
+/prefsgesture.c/1.4/Sun Jul 25 16:41:27 2004//
+/prefsgesture.h/1.1/Mon Feb  3 22:46:17 2003//
+/prefshardcopy.c/1.5/Sun Jul 25 16:41:27 2004//
+/prefshardcopy.h/1.1/Mon Feb  3 22:46:17 2003//
+/prefsjogdial.c/1.7/Thu Jul  3 14:13:43 2003//
+/prefsjogdial.h/1.1/Mon Feb  3 22:46:18 2003//
+/prefslibrary.c/1.8/Sun Jul 25 16:41:27 2004//
+/prefslibrary.h/1.1/Mon Feb  3 22:46:18 2003//
+/prefslookup.c/1.6/Sat Mar 31 23:34:15 2007//
+/prefslookup.h/1.1/Wed Dec 31 14:49:40 2003//
+/ramfile.c/1.26/Sun Jan 20 22:21:33 2008//
+/ramfile.h/1.13/Mon Aug  8 02:30:59 2005//
+/renamedocform.c/1.9/Sat May  8 09:04:54 2004//
+/renamedocform.h/1.3/Wed Jan 29 15:16:15 2003//
+/resize.c/1.30/Wed Dec  6 18:32:08 2006//
+/resize.h/1.11/Mon Jun 28 18:09:01 2004//
+/resizeconsts.h/1.4/Mon Jun 28 18:09:01 2004//
+/resourceids.h/1.151/Sun Apr  1 01:00:39 2007//
+/resultform.c/1.57/Sun Nov 12 02:00:56 2006//
+/resultform.h/1.16/Thu Jan  1 15:27:30 2004//
+/rotate.c/1.30/Sat Apr 24 17:28:21 2004//
+/rotate.h/1.10/Mon Aug 11 02:31:57 2003//
+/rotatebitmap.c/1.16/Wed Nov 19 01:51:59 2003//
+/rotatebitmap.h/1.6/Tue Dec 30 17:46:26 2003//
+/screen.c/1.48/Fri May 14 21:37:56 2004//
+/screen.h/1.26/Fri Nov 14 17:26:57 2003//
+/search.c/1.72/Tue Apr 20 21:03:33 2004//
+/search.h/1.22/Wed Jul 23 04:27:11 2003//
+/search8.c/1.6/Tue Nov 25 00:45:38 2003//
+/search8.h/1.7/Tue Dec 30 17:46:27 2003//
+/searchform.c/1.52/Sun Nov 12 19:17:22 2006//
+/searchform.h/1.13/Thu Sep 26 15:27:03 2002//
+/searchxlit.h/1.2/Sat Jun 14 17:15:26 2003//
+/session.c/1.36/Mon Aug  8 02:30:59 2005//
+/session.h/1.16/Wed Jan  8 18:32:12 2003//
+/skins.c/1.6/Sun Apr 18 15:34:48 2004//
+/skins.h/1.5/Sun Feb  1 11:26:33 2004//
+/statusform.c/1.6/Wed May 12 01:49:10 2004//
+/statusform.h/1.2/Sat May 22 19:42:43 2004//
+/table.c/1.68/Mon Aug  8 02:30:59 2005//
+/table.h/1.13/Wed Feb  4 16:09:06 2004//
+/testsuite.c/1.7/Sun Jan  4 00:21:36 2004//
+/timeout.c/1.3/Sun Feb 23 17:48:20 2003//
+/timeout.h/1.2/Sat Feb 15 17:07:15 2003//
+/uncompress.c/1.52/Sun Apr 16 23:12:44 2006//
+/uncompress.h/1.21/Wed Feb 26 01:46:24 2003//
+/util.c/1.100/Mon Nov 13 23:33:43 2006//
+/util.h/1.78/Mon Nov 13 23:33:43 2006//
+/vfsfile.c/1.51/Sun Jan 20 22:21:33 2008//
+/vfsfile.h/1.16/Sun Jan  4 10:35:05 2004//
+/viewer.c/1.144/Sun Nov 12 14:40:52 2006//
+/viewer.h/1.62/Wed May 30 21:39:01 2007//
+/viewer.rcp.in/1.207/Thu Feb 15 15:16:44 2007//
+/xlit.c/1.11/Mon Aug  8 02:30:59 2005//
+/xlit.h/1.4/Tue Mar  2 04:08:39 2004//
+D/Deutsch////
+D/EXT_SDK////
+D/English////
+D/TRG_SDK////
+D/ZLib////
+D/armlets////
+D/binary////
+D/cleaner////
+D/fonts////
+D/icons////
+D/imode////
+D/langs////
+D/ppi////
+D/scripts////
+D/sony_sdk////
+D/test////
+D/xlit////

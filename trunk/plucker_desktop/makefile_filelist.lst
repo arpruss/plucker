@@ -1,0 +1,152 @@
+#Define a list of sources, arranged by group, then sum them all up under "SOURCES="
+
+CORE_GUI_SOURCES = \
+		plucker-desktop.cpp \
+		main_frame.cpp \
+		main_listctrl.cpp \
+		channel_listctrl_base.cpp \
+		channel_dialog.cpp \
+		utils_controls.cpp \
+		utils_clipboard.cpp \
+		image_list.cpp \
+		hhictrl.cpp \
+		pda_listctrl.cpp \
+		preferences_dialog.cpp \
+		time_control.cpp \
+		build_progress_wrappers.cpp \
+		handheld_dest_dialog.cpp
+
+CORE_NONGUI_SOURCES = \
+		configuration.cpp \
+		channel_type.cpp \
+		plucker_controller.cpp \
+		palm_installer_base.cpp \
+		utils_datetime.cpp \
+		utils_string.cpp \
+		utils_execute.cpp \
+		commandline_parser.cpp \
+		handheld_dest_type.cpp \
+		handheld_dest_wrappers.cpp \
+		proxy_prompt.cpp
+
+CORE_OS_SPECIFIC_NONGUI_SOURCES = \
+		palm_installer_gtk.cpp \
+		palm_installer_msw.cpp \
+		palm_installer_mac.cpp \
+		os_msw.cpp
+
+# Compile in/out via setupUSE_INTERNATIONALIZATION in plucker_desktop/setup.h
+INTERNATIONALIZATION_SOURCES = \
+		internationalization.cpp
+
+# Compile in/out via setupUSE_SPLASHSCREEN in plucker_desktop/setup.h
+SPLASHSCREEN_SOURCES = \
+		splashscreen.cpp
+
+# Compile in/out via setupUSE_STARTUPTIPS in plucker_desktop/setup.h
+STARTUP_TIPS_SOURCES = \
+		startup_tips.cpp \
+		processed_tip_provider.cpp
+
+# Compile in/out via setupUSE_HTML_TIP_DIALOG in plucker_desktop/setup.h
+HTML_TIP_DIALOG_SOURCES = \
+		html_tip_dialog.cpp
+
+# Compile in/out via setupUSE_ONLINE_HELP in plucker_desktop/setup.h
+ONLINE_HELP_SOURCES = \
+		help_controller.cpp
+
+# Compile in/out via setupUSE_WIZARDS in plucker_desktop/setup.h
+WIZARDS_SOURCES = \
+		plucker_wizard_base.cpp \
+		setup_wizard.cpp \
+		install_viewer_wizard.cpp \
+		add_channel_wizard.cpp \
+		destinations_wizardpage.cpp \
+		viewer_wizardpage.cpp \
+		message_wizardpage.cpp \
+		checkbox_wizardpage.cpp \
+		textctrl_wizardpage.cpp \
+		starting_page_wizardpage.cpp \
+		limits_wizardpage.cpp \
+		proxy_wizardpage.cpp \
+		plucker_wizard_wrappers.cpp \
+		channel_list_wizardpage.cpp \
+		channel_check_listctrl.cpp
+
+# Compile in/out via setupUSE_CHECKBOX_MESSAGE_DIALOG in plucker_desktop/setup.h
+CHECKBOX_MESSAGE_DIALOG_SOURCES = \
+		checkbox_message_dialog.cpp
+
+# Compile in/out via setupUSE_INTEGRATED_HTML_EDITOR in plucker_desktop/setup.h
+INTEGRATED_HTML_EDITOR_SOURCES = \
+		editor_dialog.cpp \
+		body_dialog.cpp \
+		bookmark_dialog.cpp \
+		email_dialog.cpp \
+		font_dialog.cpp \
+		hr_dialog.cpp \
+		hyperlink_dialog.cpp \
+		image_dialog.cpp \
+		ol_dialog.cpp \
+		popup_dialog.cpp \
+		span_dialog.cpp \
+		table_dialog.cpp \
+		td_th_dialog.cpp \
+		ul_dialog.cpp
+
+# Compile in/out via setupUSE_INTEGRATED_EXCLUSION_LIST_EDITOR in plucker_desktop/setup.h
+INTEGRATED_EXCLUSION_LIST_EDITOR_SOURCES = \
+		exclusion_dialog.cpp \
+		exclusion_listctrl.cpp \
+		blocked_dialog.cpp
+
+# Compile in/out via setupUSE_SHOWCASE in plucker_desktop/setup.h
+SHOWCASE_SOURCES = \
+		showcase_dialog.cpp \
+		showcase_listctrl.cpp \
+		showcase_splitterwindow.cpp
+
+# Art provider
+ART_PROVIDER_SOURCES = \
+		art_provider.cpp
+
+# Compile in/out via setupUSE_ENHANCED_PROGRESS_DIALOG in plucker_desktop/setup.h
+ENHANCED_PROGRESS_DIALOG_SOURCES = \
+		build_progress_dialog.cpp \
+		process_progress_dialog.cpp \
+		piped_process.cpp \
+		details_progress_dialog.cpp \
+		details_progress_listbox.cpp
+
+# Compile in/out via setupUSE_ENHANCED_ABOUT_DIALOG in plucker_desktop/setup.h
+ENHANCED_ABOUT_DIALOG_SOURCES = \
+		about_dialog.cpp
+
+# Compile in/out via setupUSE_IMPORT_CONTROLLER in plucker_desktop/setup.h
+IMPORT_CONTROLLER_SOURCES = \
+		import_controller.cpp
+
+# Now, assemble the groups
+SOURCES = \
+		$(CHECKBOX_MESSAGE_DIALOG_SOURCES) \
+		$(SPLASHSCREEN_SOURCES) \
+		$(STARTUP_TIPS_SOURCES) \
+		$(HTML_TIP_DIALOG_SOURCES) \
+		$(INTERNATIONALIZATION_SOURCES) \
+		$(ONLINE_HELP_SOURCES) \
+		$(WIZARDS_SOURCES) \
+		$(INTEGRATED_HTML_EDITOR_SOURCES) \
+		$(INTEGRATED_EXCLUSION_LIST_EDITOR_SOURCES) \
+		$(SHOWCASE_SOURCES) \
+		$(SHOWCASE_PREVIEW_PANE_SOURCES) \
+		$(CORE_GUI_SOURCES) \
+		$(CORE_NONGUI_SOURCES) \
+		$(CORE_OS_SPECIFIC_NONGUI_SOURCES) \
+		$(ART_PROVIDER_SOURCES) \
+		$(ENHANCED_PROGRESS_DIALOG_SOURCES) \
+		$(ENHANCED_ABOUT_DIALOG_SOURCES) \
+		$(IMPORT_CONTROLLER_SOURCES)
+
+
+

@@ -1,0 +1,2847 @@
+//
+// $Id: viewer.rcp.in,v 1.207 2007/02/15 15:16:44 prussar Exp $
+//
+
+#include "config.h"
+#include "const.h"
+#include "resourceids.h"
+
+#include "fonts/fontdata.rcp"
+
+#define	kFrmNavHeaderFlagsObjectFocusStartState  0x00000001
+#define	kFrmNavHeaderFlagsAppFocusStartState     0x00000002
+
+
+#if defined( HAVE_HIRES ) && defined( HAVE_HANDERA_SDK )
+// Handera support
+HEX "sKst" ID 1000 0x00 0x00 0x00 0x00
+#endif
+
+#ifdef HAVE_SILKSCREEN
+// Dana AlphaSmart support
+HEX "wTap" ID 1000
+    0x00 0x00 0x00 0x01
+#endif
+
+#ifdef HAVE_SILKSCREEN
+#include "resizeconsts.h"
+
+#define BIN_MAIN_FULLSCREEN    0
+#define BIN_LIBRARY_FULLSCREEN 1
+#define BIN_EDITABLE           2
+
+WORDLIST ID resizeIndex
+BEGIN
+   frmMainTop             frmMainTop
+   frmMainBottom          frmMainBottom
+   frmMainNone            frmMainNone
+   frmLibrary             frmLibrary
+   frmResult              frmResult
+   frmFullscreen          frmFullscreen
+   frmBookmarks           frmBookmarks
+   frmEmail               frmEmail
+   frmHardcopy            frmHardcopy
+#if defined( HAVE_HIRES ) && defined( HAVE_HANDERA_SDK )
+   frmMainTopHandera      frmMainTopHandera
+   frmMainBottomHandera   frmMainBottomHandera
+   frmMainNoneHandera     frmMainNoneHandera
+   frmLibraryHandera      frmLibraryHandera
+#endif
+   frmAnnotation          frmAnnotation
+END
+#endif
+
+STRING ID strLang  "$$LANG"
+
+
+//
+//  Main Form with title and control objects
+//
+
+FORM ID frmMainTop AT ( 0 0 160 160 )
+MENUID menuMainForm
+NOFRAME
+USABLE
+BEGIN
+    FORMBITMAP AT (0 0) BITMAP bmpMenu USABLE
+
+    FORMBITMAP AT (15 PREVTOP) BITMAP bmpDbase USABLE
+    BUTTON "" frmMainPercentPopup AT (PREVLEFT+17 2 22 9) NOFRAME FONT 0
+    LIST "$$MAIN: TOP" "$$MAIN: 10%" "$$MAIN: 20%" "$$MAIN: 30%" 
+         "$$MAIN: 40%" "$$MAIN: 50%" "$$MAIN: 60%" "$$MAIN: 70%"
+         "$$MAIN: 80%" "$$MAIN: 90%" "$$MAIN: BOTTOM"
+         ID frmMainPercentList AT (PREVLEFT PREVTOP MAIN_PERCENT 11)
+         NONUSABLE VISIBLEITEMS 11
+    POPUPLIST frmMainPercentPopup frmMainPercentList
+    FORMBITMAP AT (PREVLEFT+22 0) BITMAP bmpBookmark USABLE
+    LIST "" ID frmMainBookmarkList AT (PREVLEFT PREVTOP MAIN_BOOKMARK_LIST 11)
+         NONUSABLE VISIBLEITEMS 12
+    POPUPLIST bmpBookmark frmMainBookmarkList
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpFind USABLE
+    FORMBITMAP AT (PREVLEFT+11 PREVTOP) BITMAP bmpAgain USABLE
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpAutoscrollDecr USABLE
+    FORMBITMAP AT (PREVLEFT+10 PREVTOP) BITMAP bmpAutoscrollStop NONUSABLE
+    FORMBITMAP AT (PREVLEFT PREVTOP) BITMAP bmpAutoscrollStart USABLE
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpAutoscrollIncr USABLE
+    FORMBITMAP AT (PREVLEFT+10 PREVTOP) BITMAP bmpLeft USABLE
+    FORMBITMAP AT (PREVLEFT+12 PREVTOP) BITMAP bmpWait NONUSABLE
+#ifdef SUPPORT_WORD_LOOKUP
+    FORMBITMAP AT (PREVLEFT PREVTOP) BITMAP bmpLookup NONUSABLE
+#endif
+    FORMBITMAP AT (PREVLEFT PREVTOP) BITMAP bmpHome USABLE
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpRight USABLE
+
+#if defined( HAVE_HIRES ) || defined( HAVE_HANDERA_SDK )
+    FORMBITMAP AT (0 PREVBOTTOM+1) BITMAP bmpLongBar USABLE
+#else
+    FORMBITMAP AT (0 PREVBOTTOM+1) BITMAP bmpBar USABLE
+#endif
+
+    SCROLLBAR ID frmMainScrollBar AT (153 PREVBOTTOM+2 7 142)
+         VALUE 0 MIN 0 MAX 0 PAGESIZE 0
+
+    LIST "$$MAIN: FOLLOW LINK" "$$MAIN: OPEN IMAGE"
+         ID frmMainImageDialog AT (0 0 MAIN_IMAGE_DIALOG 11)
+         NONUSABLE VISIBLEITEMS 2
+    POPUPLIST frmMainImageDialogPopup frmMainImageDialog
+END
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmMainTop
+BEGIN
+    DIA_FORM_USE_BIN // formFlags
+    BIN_MAIN_FULLSCREEN   // bin
+    DIA_STATE_MIN    // preferredState
+    // Object data
+    0             DIA_H_PLUS_DH+DIA_W_PLUS_DW          0 // the form itself
+    frmMainPercentList      DIA_X_RIGHT                0
+    frmMainPercentPopup     DIA_X_RIGHT                0
+    bmpBookmark             DIA_X_RIGHT                0
+    bmpFind                 DIA_X_RIGHT                0
+    bmpAgain                DIA_X_RIGHT                0
+    bmpAutoscrollDecr       DIA_X_RIGHT                0
+    bmpAutoscrollStop       DIA_X_RIGHT                0
+    bmpAutoscrollStart      DIA_X_RIGHT                0
+    bmpAutoscrollIncr       DIA_X_RIGHT                0
+    bmpLeft                 DIA_X_RIGHT                0
+    bmpWait                 DIA_X_RIGHT                0
+#ifdef SUPPORT_WORD_LOOKUP
+    bmpLookup               DIA_X_RIGHT                0
+#endif
+    bmpHome                 DIA_X_RIGHT                0
+    bmpRight                DIA_X_RIGHT                0
+    frmMainScrollBar        DIA_X_RIGHT+DIA_H_PLUS_DH  0
+END
+#endif
+
+//
+//  Main Form with control objects at bottom (includes a Graffiti
+//  indicator in debug mode.)
+//
+
+FORM ID frmMainBottom AT ( 0 0 160 160 )
+MENUID menuMainForm
+NOFRAME
+USABLE
+BEGIN
+    FORMBITMAP AT (0 147) BITMAP bmpMenu USABLE
+
+    FORMBITMAP AT (15 PREVTOP) BITMAP bmpDbase USABLE
+    BUTTON "" frmMainPercentPopup AT (PREVLEFT+17 149 22 9) NOFRAME FONT 0
+    LIST "$$MAIN: TOP" "$$MAIN: 10%" "$$MAIN: 20%" "$$MAIN: 30%"
+         "$$MAIN: 40%" "$$MAIN: 50%" "$$MAIN: 60%" "$$MAIN: 70%"
+         "$$MAIN: 80%" "$$MAIN: 90%" "$$MAIN: BOTTOM"
+         ID frmMainPercentList AT (PREVLEFT 38 MAIN_PERCENT 11)
+         NONUSABLE VISIBLEITEMS 11
+    POPUPLIST frmMainPercentPopup frmMainPercentList
+    FORMBITMAP AT (PREVLEFT+22 147) BITMAP bmpBookmark USABLE
+    LIST "" ID frmMainBookmarkList AT (PREVLEFT PREVTOP MAIN_BOOKMARK_LIST 11)
+         NONUSABLE VISIBLEITEMS 12
+    POPUPLIST bmpBookmark frmMainBookmarkList
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpFind USABLE
+    FORMBITMAP AT (PREVLEFT+11 PREVTOP) BITMAP bmpAgain USABLE
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpAutoscrollDecr USABLE
+    FORMBITMAP AT (PREVLEFT+10 PREVTOP) BITMAP bmpAutoscrollStop NONUSABLE
+    FORMBITMAP AT (PREVLEFT PREVTOP) BITMAP bmpAutoscrollStart USABLE
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpAutoscrollIncr USABLE
+    FORMBITMAP AT (PREVLEFT+10 PREVTOP) BITMAP bmpLeft USABLE
+    FORMBITMAP AT (PREVLEFT+12 PREVTOP) BITMAP bmpWait NONUSABLE
+#ifdef SUPPORT_WORD_LOOKUP
+    FORMBITMAP AT (PREVLEFT PREVTOP) BITMAP bmpLookup USABLE
+#endif
+    FORMBITMAP AT (PREVLEFT PREVTOP) BITMAP bmpHome USABLE
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpRight USABLE
+
+#if defined( HAVE_HIRES ) || defined( HAVE_HANDERA_SDK )
+    FORMBITMAP AT (0 PREVTOP-2) BITMAP bmpLongBar USABLE
+#else
+    FORMBITMAP AT (0 PREVTOP-2) BITMAP bmpBar USABLE
+#endif
+
+    SCROLLBAR ID frmMainScrollBar AT (153 2 7 142)
+         VALUE 0 MIN 0 MAX 0 PAGESIZE 0
+
+    GADGET ID frmMainDrawingArea AT (0 2 160 142)
+
+    LIST "$$MAIN: FOLLOW LINK" "$$MAIN: OPEN IMAGE"
+         ID frmMainImageDialog AT (0 0 MAIN_IMAGE_DIALOG 11)
+         NONUSABLE VISIBLEITEMS 2
+    POPUPLIST frmMainImageDialogPopup frmMainImageDialog
+
+#ifdef ENABLE_GESTURE_DEBUG
+    GRAFFITISTATEINDICATOR AT (18 149)
+#endif
+END
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmMainBottom
+BEGIN
+    DIA_FORM_USE_BIN // formFlags
+    BIN_MAIN_FULLSCREEN   // bin
+    DIA_STATE_MIN    // preferredState
+    // Object data
+    0             DIA_H_PLUS_DH+DIA_W_PLUS_DW          0 // the form itself
+    bmpMenu                 DIA_Y_BOTTOM               0
+    frmMainPercentPopup     DIA_Y_BOTTOM+DIA_X_RIGHT   0
+    frmMainPercentList      DIA_Y_BOTTOM+DIA_X_RIGHT   0
+    bmpDbase                DIA_Y_BOTTOM                            0
+    bmpBookmark             DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpFind                 DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpAgain                DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpAutoscrollDecr       DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpAutoscrollStop       DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpAutoscrollStart      DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpAutoscrollIncr       DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpLeft                 DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpWait                 DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpLongBar              DIA_Y_BOTTOM                            0
+#ifdef SUPPORT_WORD_LOOKUP
+    bmpLookup               DIA_X_RIGHT                             0
+#endif
+    bmpHome                 DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpRight                DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    frmMainDrawingArea      DIA_X_RIGHT+DIA_H_PLUS_DH               0
+    GSI_OBJECT_ID           DIA_Y_BOTTOM                            0
+END
+#endif
+
+
+//
+// Main Form without title and control objects
+//
+
+FORM ID frmMainNone AT ( 0 0 160 160 )
+MENUID menuMainForm
+NOFRAME
+USABLE
+BEGIN
+    SCROLLBAR ID frmMainScrollBar AT (153 2 7 157) VALUE 0 MIN 0 MAX 0 PAGESIZE 0
+
+    LIST "$$MAIN: FOLLOW LINK" "$$MAIN: OPEN IMAGE"
+         ID frmMainImageDialog AT (0 0 MAIN_IMAGE_DIALOG 11)
+         NONUSABLE VISIBLEITEMS 2
+    POPUPLIST frmMainImageDialogPopup frmMainImageDialog
+    GADGET ID frmMainDrawingArea AT (0 0 160 160)
+END
+
+STRING ID strMainAddBookmark    "$$MAIN: ADD BOOKMARK"
+#ifdef SUPPORT_ANNOTATION
+STRING ID strMainAddAnnotation  "$$MAIN: ADD ANNOTATION"
+#endif
+STRING ID strMainViewBookmark   "$$MAIN: VIEW BOOKMARKS"
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmMainNone
+BEGIN
+    DIA_FORM_USE_BIN // formFlags
+    BIN_MAIN_FULLSCREEN   // bin
+    DIA_STATE_MIN    // preferredState
+    // Object data
+    0             DIA_H_PLUS_DH+DIA_W_PLUS_DW          0 // the form itself
+    frmMainDrawingArea      DIA_H_PLUS_DH+DIA_W_PLUS_DW 0
+END
+#endif
+
+
+MENU menuMainForm
+BEGIN
+    PULLDOWN "$$GO"
+    BEGIN
+        MENUITEM "$$LIBRARY..."     mGoLibrary          "$$SC LIBRARY"
+        MENUITEM "$$DELETE DOC..."  mGoDeleteDocument   "$$SC DELETE DOC"
+        MENUITEM SEPARATOR
+        MENUITEM "$$HOME"           mGoHome             "$$SC HOME"
+        MENUITEM "$$BACK"           mGoBack             "$$SC BACK"
+        MENUITEM "$$FORWARD"        mGoForward          "$$SC FORWARD"
+        MENUITEM SEPARATOR
+        MENUITEM "$$TOP"            mGoTop              "$$SC TOP"
+        MENUITEM "$$BOTTOM"         mGoBottom           "$$SC BOTTOM"
+        MENUITEM SEPARATOR
+        MENUITEM "$$FIND..."        mGoSearch           "$$SC FIND"
+        MENUITEM "$$FIND AGAIN"     mGoSearchAgain      "$$SC FIND AGAIN"
+        MENUITEM SEPARATOR
+        MENUITEM "$$ADD BOOKMARK..."   mGoAddBookmark   "$$SC ADD BOOKMARK"
+        MENUITEM "$$BOOKMARKS..."   mGoBookmarks        "$$SC BOOKMARKS"
+    END
+
+    PULLDOWN "$$VIEW"
+    BEGIN
+        MENUITEM "$$DETAILS..."         mViewDetails            "$$SC DETAILS"
+        MENUITEM SEPARATOR
+        MENUITEM "$$START AUTOSCROLL"   mViewAutoscrollStart    "$$SC START AUTOSCROLL"
+        MENUITEM "$$STOP AUTOSCROLL"    mViewAutoscrollStop     "$$SC STOP AUTOSCROLL"
+        MENUITEM "$$AUTOSCROLL FASTER"  mViewAutoscrollIncr     "$$SC AUTOSCROLL FASTER"
+        MENUITEM "$$AUTOSCROLL SLOWER"  mViewAutoscrollDecr     "$$SC AUTOSCROLL SLOWER"
+        MENUITEM SEPARATOR
+        MENUITEM "$$TOGGLE FULLSCREEN"  mViewToggleFullscreen   "$$SC TOGGLE FULLSCREEN"
+        MENUITEM SEPARATOR
+        MENUITEM "$$COPY TO MEMO"       mViewCopyToMemo         "$$SC COPY TO MEMO"
+#ifdef SUPPORT_WORD_LOOKUP
+        MENUITEM "$$LOOKUP WORD"        mGoLookup               "$$SC LOOKUP WORD"
+#endif    
+    END
+
+    PULLDOWN "$$OPTIONS"
+    BEGIN
+        MENUITEM "$$SELECT FONT..."     mOptionsFont     "$$SC SELECT FONT"
+        MENUITEM "$$SET KEYBOARD/GRAFFITI..." mOptionsKeyboard  "$$SC SET KEYBOARD/GRAFFITI"
+        MENUITEM "$$PREFERENCES..."     mOptionsPref     "$$SC PREFERENCES"
+        MENUITEM SEPARATOR
+        MENUITEM "$$CONTACT DEVELOPERS" mOptionsContact
+        MENUITEM SEPARATOR
+        MENUITEM "$$ABOUT PLUCKER"      mOptionsAbout
+    END
+END
+
+
+MENU menuLibraryForm
+BEGIN
+    PULLDOWN "$$OPTIONS"
+    BEGIN
+        MENUITEM "$$SYNC LIST"          mOptionsSyncList    "$$SC SYNC LIST"
+        MENUITEM "$$DELETE ALL..."      mOptionsDeleteAll   "$$SC DELETE ALL"
+        MENUITEM "$$DELETE READ..."     mOptionsDeleteRead
+        MENUITEM SEPARATOR
+        MENUITEM "$$SELECT FONT..."     mOptionsFont        "$$SC SELECT FONT"
+        MENUITEM "$$SET KEYBOARD/GRAFFITI..." mOptionsKeyboard  "$$SC SET KEYBOARD/GRAFFITI"
+        MENUITEM "$$PREFERENCES..."     mOptionsPref        "$$SC PREFERENCES"
+        MENUITEM SEPARATOR
+        MENUITEM "$$CONTACT DEVELOPERS" mOptionsContact
+        MENUITEM SEPARATOR
+        MENUITEM "$$ABOUT PLUCKER"      mOptionsAbout
+    END
+    PULLDOWN "$$SHOWHIDE"
+    BEGIN
+        MENUITEM "$$TYPE"               mOptionsType
+        MENUITEM "$$DATE"               mOptionsDate
+        MENUITEM "$$SIZE"               mOptionsSize
+    END
+    PULLDOWN "$$SORT"
+    BEGIN
+        MENUITEM "$$NAME"               mSortName
+        MENUITEM "$$TYPE"               mSortType
+        MENUITEM "$$DATE"               mSortDate
+        MENUITEM "$$SIZE"               mSortSize
+        MENUITEM "$$CATEGORY"           mSortCategory
+    END
+END
+
+
+MENU menuFullscreenForm
+BEGIN
+    PULLDOWN "$$GO"
+    BEGIN
+        MENUITEM "$$LIBRARY..."     mGoLibrary          "$$SC LIBRARY"
+        MENUITEM "$$DELETE DOC..."  mGoDeleteDocument   "$$SC DELETE DOC"
+        MENUITEM SEPARATOR
+        MENUITEM "$$HOME"           mGoHome             "$$SC HOME"
+        MENUITEM "$$BACK"           mGoBack             "$$SC BACK"
+        MENUITEM "$$FORWARD"        mGoForward          "$$SC FORWARD"
+        MENUITEM SEPARATOR
+        MENUITEM "$$TOP"            mGoTop              "$$SC TOP"
+        MENUITEM "$$BOTTOM"         mGoBottom           "$$SC BOTTOM"
+        MENUITEM SEPARATOR
+        MENUITEM "$$ADD BOOKMARK..."   mGoAddBookmark   "$$SC ADD BOOKMARK"
+        MENUITEM "$$BOOKMARKS..."   mGoBookmarks        "$$SC BOOKMARKS"
+        MENUITEM SEPARATOR
+        MENUITEM "$$DETAILS..."     mViewDetails        "$$SC DETAILS"
+    END
+
+    PULLDOWN "$$OPTIONS"
+    BEGIN
+        MENUITEM "$$SELECT FONT..."     mOptionsFont    "$$SC SELECT FONT"
+        MENUITEM "$$PREFERENCES..."     mOptionsPref    "$$SC PREFERENCES"
+        MENUITEM SEPARATOR
+        MENUITEM "$$CONTACT DEVELOPERS" mOptionsContact
+        MENUITEM SEPARATOR
+        MENUITEM "$$ABOUT PLUCKER"      mOptionsAbout
+    END
+END
+
+
+//
+//  Handera HiRes Main Form with title and control objects
+//
+
+#if defined( HAVE_HIRES ) && defined( HAVE_HANDERA_SDK )
+
+FORM ID frmMainTopHandera AT ( 0 0 240 240 )
+MENUID menuMainForm
+NOFRAME
+USABLE
+BEGIN
+    FORMBITMAP AT (0 0) BITMAP bmpMenu USABLE
+
+    FORMBITMAP AT (15 PREVTOP) BITMAP bmpDbase USABLE
+    BUTTON "" frmMainPercentPopup AT (PREVLEFT+17 2 22 9) NOFRAME FONT 0
+    LIST "$$MAIN: TOP" "$$MAIN: 10%" "$$MAIN: 20%" "$$MAIN: 30%"
+         "$$MAIN: 40%" "$$MAIN: 50%" "$$MAIN: 60%" "$$MAIN: 70%"
+         "$$MAIN: 80%" "$$MAIN: 90%" "$$MAIN: BOTTOM"
+         ID frmMainPercentList AT (PREVLEFT PREVTOP MAIN_PERCENT 11)
+         NONUSABLE VISIBLEITEMS 11
+    POPUPLIST frmMainPercentPopup frmMainPercentList
+    FORMBITMAP AT (PREVLEFT+22 0) BITMAP bmpBookmark USABLE
+    LIST "" ID frmMainBookmarkList AT (PREVLEFT PREVTOP MAIN_BOOKMARK_LIST 11)
+         NONUSABLE VISIBLEITEMS 12
+    POPUPLIST bmpBookmark frmMainBookmarkList
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpFind USABLE
+    FORMBITMAP AT (PREVLEFT+11 PREVTOP) BITMAP bmpAgain USABLE
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpAutoscrollDecr USABLE
+    FORMBITMAP AT (PREVLEFT+10 PREVTOP) BITMAP bmpAutoscrollStop NONUSABLE
+    FORMBITMAP AT (PREVLEFT PREVTOP) BITMAP bmpAutoscrollStart USABLE
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpAutoscrollIncr USABLE
+    FORMBITMAP AT (PREVLEFT+10 PREVTOP) BITMAP bmpLeft USABLE
+    FORMBITMAP AT (PREVLEFT+12 PREVTOP) BITMAP bmpWait NONUSABLE
+#ifdef SUPPORT_WORD_LOOKUP
+    FORMBITMAP AT (PREVLEFT PREVTOP) BITMAP bmpLookup USABLE
+#endif
+    FORMBITMAP AT (PREVLEFT PREVTOP) BITMAP bmpHome USABLE
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpRight USABLE
+
+    FORMBITMAP AT (0 PREVBOTTOM+1) BITMAP bmpLongBar USABLE
+
+    SCROLLBAR ID frmMainScrollBar AT (233 PREVBOTTOM+2 7 222)
+         VALUE 0 MIN 0 MAX 0 PAGESIZE 0
+
+    GADGET ID frmMainDrawingArea AT (0 PREVTOP 240 222)
+
+    LIST "$$MAIN: FOLLOW LINK" "$$MAIN: OPEN IMAGE"
+         ID frmMainImageDialog AT (0 0 MAIN_IMAGE_DIALOG 11)
+         NONUSABLE VISIBLEITEMS 2
+    POPUPLIST frmMainImageDialogPopup frmMainImageDialog
+END
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmMainTopHandera
+BEGIN
+    DIA_FORM_USE_BIN + DIA_FORM_HANDERA // formFlags
+    BIN_MAIN_FULLSCREEN   // bin
+    DIA_STATE_MIN    // preferredState
+    // Object data
+    0             DIA_H_PLUS_DH+DIA_W_PLUS_DW          0 // the form itself
+    frmMainPercentList      DIA_X_RIGHT                0
+    frmMainPercentPopup     DIA_X_RIGHT                0
+    bmpBookmark             DIA_X_RIGHT                0
+    bmpFind                 DIA_X_RIGHT                0
+    bmpAgain                DIA_X_RIGHT                0
+    bmpAutoscrollDecr       DIA_X_RIGHT                0
+    bmpAutoscrollStop       DIA_X_RIGHT                0
+    bmpAutoscrollStart      DIA_X_RIGHT                0
+    bmpAutoscrollIncr       DIA_X_RIGHT                0
+    bmpLeft                 DIA_X_RIGHT                0
+    bmpWait                 DIA_X_RIGHT                0
+#ifdef SUPPORT_WORD_LOOKUP
+    bmpLookup               DIA_X_RIGHT                0
+#endif
+    bmpHome                 DIA_X_RIGHT                0
+    bmpRight                DIA_X_RIGHT                0
+    frmMainDrawingArea      DIA_H_PLUS_DH+DIA_W_PLUS_DW 0
+END
+#endif
+
+
+
+//
+//  Handera HiRes Main Form with control objects at bottom (includes a Graffiti
+//  indicator in debug mode.)
+//
+
+FORM ID frmMainBottomHandera AT ( 0 0 240 240 )
+MENUID menuMainForm
+NOFRAME
+USABLE
+BEGIN
+    FORMBITMAP AT (0 227) BITMAP bmpMenu USABLE
+
+    FORMBITMAP AT (15 PREVTOP) BITMAP bmpDbase USABLE
+    BUTTON "" frmMainPercentPopup AT (PREVLEFT+30 229 22 9) NOFRAME FONT 0
+    LIST "$$MAIN: TOP" "$$MAIN: 10%" "$$MAIN: 20%" "$$MAIN: 30%"
+         "$$MAIN: 40%" "$$MAIN: 50%" "$$MAIN: 60%" "$$MAIN: 70%"
+         "$$MAIN: 80%" "$$MAIN: 90%" "$$MAIN: BOTTOM"
+         ID frmMainPercentList AT (PREVLEFT 38 MAIN_PERCENT 11)
+         NONUSABLE VISIBLEITEMS 11
+    POPUPLIST frmMainPercentPopup frmMainPercentList
+    FORMBITMAP AT (PREVLEFT+22 227) BITMAP bmpBookmark USABLE
+    LIST "" ID frmMainBookmarkList AT (PREVLEFT PREVTOP MAIN_BOOKMARK_LIST 11)
+         NONUSABLE VISIBLEITEMS 12
+    POPUPLIST bmpBookmark frmMainBookmarkList
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpFind USABLE
+    FORMBITMAP AT (PREVLEFT+11 PREVTOP) BITMAP bmpAgain USABLE
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpAutoscrollDecr USABLE
+    FORMBITMAP AT (PREVLEFT+10 PREVTOP) BITMAP bmpAutoscrollStop NONUSABLE
+    FORMBITMAP AT (PREVLEFT PREVTOP) BITMAP bmpAutoscrollStart USABLE
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpAutoscrollIncr USABLE
+    FORMBITMAP AT (PREVLEFT+10 PREVTOP) BITMAP bmpLeft USABLE
+    FORMBITMAP AT (PREVLEFT+12 PREVTOP) BITMAP bmpWait NONUSABLE
+#ifdef SUPPORT_WORD_LOOKUP
+    FORMBITMAP AT (PREVLEFT PREVTOP) BITMAP bmpLookup USABLE
+#endif
+    FORMBITMAP AT (PREVLEFT PREVTOP) BITMAP bmpHome USABLE
+    FORMBITMAP AT (PREVLEFT+13 PREVTOP) BITMAP bmpRight USABLE
+
+    FORMBITMAP AT (0 PREVTOP-2) BITMAP bmpLongBar USABLE
+
+    SCROLLBAR ID frmMainScrollBar AT (233 2 7 222)
+         VALUE 0 MIN 0 MAX 0 PAGESIZE 0
+
+    GADGET ID frmMainDrawingArea AT (0 2 240 222)
+
+    LIST "$$MAIN: FOLLOW LINK" "$$MAIN: OPEN IMAGE"
+         ID frmMainImageDialog AT (0 0 MAIN_IMAGE_DIALOG 11) NONUSABLE VISIBLEITEMS 2
+    POPUPLIST frmMainImageDialogPopup frmMainImageDialog
+
+#ifdef ENABLE_GESTURE_DEBUG
+    GRAFFITISTATEINDICATOR AT (18 149)
+#endif
+END
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmMainBottomHandera
+BEGIN
+    DIA_FORM_USE_BIN + DIA_FORM_HANDERA // formFlags
+    BIN_MAIN_FULLSCREEN   // bin
+    DIA_STATE_MIN    // preferredState
+    // Object data
+    0             DIA_H_PLUS_DH+DIA_W_PLUS_DW          0 // the form itself
+    bmpDbase                DIA_Y_BOTTOM                            0
+    bmpLongBar              DIA_Y_BOTTOM                            0
+    bmpMenu                 DIA_Y_BOTTOM               0
+    frmMainPercentPopup     DIA_Y_BOTTOM+DIA_X_RIGHT   0
+    frmMainPercentList      DIA_Y_BOTTOM+DIA_X_RIGHT   0
+    bmpBookmark             DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpFind                 DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpAgain                DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpAutoscrollDecr       DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpAutoscrollStop       DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpAutoscrollStart      DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpAutoscrollIncr       DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpLeft                 DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpWait                 DIA_Y_BOTTOM+DIA_X_RIGHT                0
+#ifdef SUPPORT_WORD_LOOKUP
+    bmpLookup               DIA_X_RIGHT                             0
+#endif
+    bmpHome                 DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    bmpRight                DIA_Y_BOTTOM+DIA_X_RIGHT                0
+    frmMainDrawingArea      DIA_W_PLUS_DW+DIA_H_PLUS_DH             0
+    GSI_OBJECT_ID           DIA_Y_BOTTOM                            0
+END
+#endif
+
+//
+// Handera HiRes Main Form without title and control objects
+//
+
+FORM ID frmMainNoneHandera AT ( 0 0 240 240 )
+MENUID menuMainForm
+NOFRAME
+USABLE
+BEGIN
+    SCROLLBAR ID frmMainScrollBar AT (233 2 7 237) VALUE 0 MIN 0 MAX 0 PAGESIZE 0
+    LIST "$$MAIN: TOP" "$$MAIN: 10%" "$$MAIN: 20%" "$$MAIN: 30%"
+         "$$MAIN: 40%" "$$MAIN: 50%" "$$MAIN: 60%" "$$MAIN: 70%"
+         "$$MAIN: 80%" "$$MAIN: 90%" "$$MAIN: BOTTOM"
+         ID frmMainPercentList AT (58 159 MAIN_PERCENT 11)
+         NONUSABLE VISIBLEITEMS 11
+    POPUPLIST frmMainPercentPopup frmMainPercentList
+    LIST "" ID frmMainBookmarkList AT (PREVLEFT+30 229 MAIN_BOOKMARK_LIST 11)
+         NONUSABLE VISIBLEITEMS 12
+    POPUPLIST bmpBookmark frmMainBookmarkList
+    LIST "$$MAIN: FOLLOW LINK" "$$MAIN: OPEN IMAGE"
+         ID frmMainImageDialog AT (0 0 MAIN_IMAGE_DIALOG 11)
+         NONUSABLE VISIBLEITEMS 2
+    POPUPLIST frmMainImageDialogPopup frmMainImageDialog
+    GADGET ID frmMainDrawingArea AT (0 0 240 240)
+END
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmMainNoneHandera
+BEGIN
+    DIA_FORM_USE_BIN + DIA_FORM_HANDERA // formFlags
+    BIN_MAIN_FULLSCREEN   // bin
+    DIA_STATE_MIN    // preferredState
+    // Object data
+    0             DIA_H_PLUS_DH+DIA_W_PLUS_DW          0 // the form itself
+    frmMainDrawingArea DIA_H_PLUS_DH+DIA_W_PLUS_DW          0
+END
+#endif
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmMainNoneHandera
+BEGIN
+    DIA_FORM_USE_BIN // formFlags
+    BIN_MAIN_FULLSCREEN   // bin
+    DIA_STATE_MIN    // preferredState
+    // Object data
+    0             DIA_H_PLUS_DH+DIA_W_PLUS_DW          0 // the form itself
+    frmMainDrawingArea DIA_H_PLUS_DH+DIA_W_PLUS_DW          0
+END
+#endif
+
+
+//
+//  Handera HiRes Document Library Form
+//
+
+FORM ID frmLibraryHandera AT ( 0 0 240 240 )
+MENUID menuLibraryForm
+USABLE
+SAVEBEHIND
+BEGIN
+    TITLE "$$LIBRARY: TITLE"
+    BUTTON "" frmLibraryHelp AT (3 3 15 15) USABLE
+
+    POPUPTRIGGER "" ID frmLibraryCategoryPopup AT (RIGHT@240 3 AUTO AUTO)
+         RIGHTANCHOR NONUSABLE
+    LIST "" ID frmLibraryCategoryList AT (RIGHT@239 0 100 AUTO)
+         NONUSABLE VISIBLEITEMS 1
+
+    BUTTON "$$LIBRARY: CATEGORY" ID frmLibraryCategoryBtn
+         AT (RIGHT@239 1 AUTO AUTO) RIGHTANCHOR NONUSABLE FONT 2
+
+    LABEL "$$LIBRARY: NO DOCUMENTS" frmLibraryNoDocuments
+         AT (CENTER CENTER) NONUSABLE
+
+    SCROLLBAR ID frmLibraryScrollBar AT (RIGHT@240 22 7 240-22)
+         VALUE 0 MIN 0 MAX 0 PAGESIZE 0
+
+    LIST "$$LIBRARY: OPEN" "$$LIBRARY: CATEGORIZE" "$$LIBRARY: DELETE"
+         "$$LIBRARY: RENAME" "$$LIBRARY: UNREAD" "$$LIBRARY: BEAM"
+         ID frmLibraryList
+         AT (0 0 LIBRARY_ACTION_LIST+(LIBRARY_ACTION_LIST/2) 11)
+         NONUSABLE VISIBLEITEMS 6 FONT 0
+    POPUPLIST frmLibraryPopup frmLibraryList
+END
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmLibraryHandera
+BEGIN
+    DIA_FORM_USE_BIN + DIA_FORM_HANDERA // formFlags
+    BIN_LIBRARY_FULLSCREEN   // bin
+    DIA_STATE_MIN    // preferredState
+    // Object data
+    0             DIA_H_PLUS_DH+DIA_W_PLUS_DW          0 // the form itself
+    frmLibraryCategoryPopup DIA_X_RIGHT                0
+    frmLibraryCategoryList  DIA_X_RIGHT                0
+    frmLibraryCategoryBtn   DIA_X_RIGHT                0
+    frmLibraryNoDocuments   DIA_X_PLUS_1_2_DW+DIA_Y_PLUS_1_2_DH  0
+    frmLibraryScrollBar     DIA_X_RIGHT+DIA_H_PLUS_DH  0
+END
+#endif
+
+#endif // Handera
+
+//
+//  About Form
+//
+
+FORM ID frmAbout AT ( 2 2 156 156 )
+MODAL
+DEFAULTBTNID frmAboutOK
+BEGIN
+    TITLE "$$ABOUT: TITLE"
+
+    LABEL "$$ABOUT: BODY1" AUTOID AT (3 15) FONT 0
+    LABEL "$$ABOUT: BODY2" AUTOID AT (PREVLEFT PREVBOTTOM-1) FONT 0
+    LABEL "$$ABOUT: BODY3" AUTOID AT (PREVLEFT PREVBOTTOM-1) FONT 0
+    LABEL "$$ABOUT: BODY4" AUTOID AT (PREVLEFT PREVBOTTOM-1) FONT 0
+    LABEL "$$ABOUT: BODY5" AUTOID AT (PREVLEFT PREVBOTTOM-1) FONT 0
+    LABEL "$$ABOUT: BODY6" AUTOID AT (PREVLEFT PREVBOTTOM-1) FONT 0
+
+    FORMBITMAP AT (PREVLEFT PREVBOTTOM+1) BITMAP bmpChicken USABLE
+
+    LABEL "$$ABOUT: WEBSITE" AUTOID AT (CENTER BOTTOM@142) FONT 0
+
+    BUTTON "$$ABOUT: OK" ID frmAboutOK AT (3 BOTTOM@153 AUTO AUTO)
+    LABEL "v@@VIEWER_VERSION@@" AUTOID AT (RIGHT@153 PREVTOP) FONT 0
+END
+
+
+//
+//  Document Library Form
+//
+
+FORM ID frmLibrary AT ( 0 0 160 160 )
+MENUID menuLibraryForm
+USABLE
+SAVEBEHIND
+BEGIN
+    TITLE "$$LIBRARY: TITLE"
+    BUTTON "" ID frmLibraryHelp AT (2 2 10 10) USABLE
+
+    POPUPTRIGGER "" ID frmLibraryCategoryPopup AT (RIGHT@160 1 AUTO AUTO)
+         RIGHTANCHOR NONUSABLE
+    LIST "" ID frmLibraryCategoryList AT (RIGHT@160 0 80 AUTO)
+         NONUSABLE VISIBLEITEMS 1
+
+    BUTTON "$$LIBRARY: CATEGORY" ID frmLibraryCategoryBtn
+         AT (RIGHT@159 1 AUTO 10) RIGHTANCHOR NONUSABLE
+
+    LABEL "$$LIBRARY: NO DOCUMENTS" frmLibraryNoDocuments
+         AT (CENTER CENTER) NONUSABLE
+
+    SCROLLBAR ID frmLibraryScrollBar at (RIGHT@160 15 7 160-15)
+         VALUE 0 MIN 0 MAX 0 PAGESIZE 0
+
+    LIST "" ID frmLibraryList
+         AT (0 0 LIBRARY_ACTION_LIST 11) NONUSABLE VISIBLEITEMS 1 FONT 0
+    POPUPLIST frmLibraryPopup frmLibraryList
+END
+
+STRING ID strLibraryHelp        "$$LIBRARY: HELP"
+STRING ID strLibraryName        "$$LIBRARY: NAME"
+STRING ID strLibraryDate        "$$LIBRARY: DATE"
+STRING ID strLibrarySize        "$$LIBRARY: SIZE"
+STRING ID strLibraryOpen        "$$LIBRARY: OPEN"
+STRING ID strLibraryCategorize  "$$LIBRARY: CATEGORIZE"
+STRING ID strLibraryDelete      "$$LIBRARY: DELETE"
+STRING ID strLibraryRename      "$$LIBRARY: RENAME"
+STRING ID strLibraryBeam        "$$LIBRARY: BEAM"
+STRING ID strLibraryUnread      "$$LIBRARY: UNREAD"
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmLibrary
+BEGIN
+    DIA_FORM_USE_BIN // formFlags
+    BIN_LIBRARY_FULLSCREEN   // bin
+    DIA_STATE_MIN    // preferredState
+    // Object data
+    0             DIA_H_PLUS_DH+DIA_W_PLUS_DW          0 // the form itself
+    frmLibraryCategoryPopup DIA_X_RIGHT                0
+    frmLibraryCategoryList  DIA_X_RIGHT                0
+    frmLibraryCategoryBtn   DIA_X_RIGHT                0
+    frmLibraryNoDocuments   DIA_X_PLUS_1_2_DW+DIA_Y_PLUS_1_2_DH  0
+    frmLibraryScrollBar     DIA_X_RIGHT+DIA_H_PLUS_DH  0
+END
+#endif
+
+//
+//  Rename Document Form
+//
+
+FORM ID frmRenameDoc AT ( 2 88 156 70 )
+USABLE
+MODAL
+SAVEBEHIND
+BEGIN
+    TITLE "$$RENAME: TITLE"
+
+    LABEL "$$RENAME: NAME:" AUTOID AT (5 20) FONT 1
+    FIELD ID frmRenameDocField AT (PREVLEFT PREVTOP+12 140 AUTO)
+         USABLE LEFTALIGN FONT 0 EDITABLE UNDERLINED MAXCHARS 31 AUTOSHIFT
+
+    BUTTON "$$RENAME: RENAME" ID frmRenameDocOK AT (3 BOTTOM@65 AUTO AUTO)
+    BUTTON "$$RENAME: CANCEL" ID frmRenameDocCancel
+         AT (PREVRIGHT+5 PREVTOP AUTO AUTO)
+
+    GRAFFITISTATEINDICATOR AT (RIGHT@143 BOTTOM@65)
+END
+
+
+//
+//  Preferences Form
+//
+
+FORM ID frmPrefs AT ( 0 0 160 160 )
+USABLE
+SAVEBEHIND
+BEGIN
+    TITLE "$$PREFS: TITLE"
+    BUTTON "" frmPrefsHelp AT (2 2 10 10) USABLE
+
+    POPUPTRIGGER "" ID frmPrefsSectionPopup AT (RIGHT@158 1 AUTO AUTO)
+         RIGHTANCHOR
+    LIST "" ID frmPrefsSectionList AT (RIGHT@158 0 PREF_SECTION AUTO) NONUSABLE
+    POPUPLIST frmPrefsSectionPopup frmPrefsSectionList
+
+//  General Preferences
+
+    LABEL "$$PREFSGENERAL: COMMAND BUTTON:" frmPrefsGeneralMenuToolbarLabel
+         AT (5 20) FONT 0 NONUSABLE
+    POPUPTRIGGER "" frmPrefsGeneralMenuToolbarPopup
+         AT (PREVLEFT PREVTOP+10 AUTO AUTO) LEFTANCHOR NONUSABLE
+    LIST "$$PREFSGENERAL: NONE" "$$PREFSGENERAL: ADD BOOKMARK..."
+         "$$PREFSGENERAL: DETAILS..." "$$PREFSGENERAL: PREFERENCES..."
+         "$$PREFSGENERAL: BUTTON ACTION..." "$$PREFSGENERAL: TAP ACTION..."
+         "$$PREFSGENERAL: TOP" "$$PREFSGENERAL: BOTTOM"
+         "$$PREFSGENERAL: COPY TO MEMO" "$$PREFSGENERAL: DELETE DOC..."
+         ID frmPrefsGeneralMenuToolbarList
+         AT (PREVLEFT PREVTOP PREF_CMD_BUTTON PREVHEIGHT)
+         NONUSABLE VISIBLEITEMS 10
+    POPUPLIST frmPrefsGeneralMenuToolbarPopup frmPrefsGeneralMenuToolbarList
+
+    LABEL "$$PREFSGENERAL: SCREEN DEPTH:" frmPrefsGeneralScreenDepthLabel
+         AT (5 PREVTOP+13) FONT 0 NONUSABLE
+    POPUPTRIGGER "" frmPrefsGeneralScreenDepthPopup
+         AT (PREVRIGHT+1 PREVTOP 15 AUTO) LEFTANCHOR NONUSABLE
+    LIST "" ID frmPrefsGeneralScreenDepthList
+         AT (PREVLEFT+5 PREVTOP PREVWIDTH PREVHEIGHT) NONUSABLE
+    POPUPLIST frmPrefsGeneralScreenDepthPopup frmPrefsGeneralScreenDepthList
+
+    LABEL "$$PREFSGENERAL: TOOLBAR:" frmPrefsGeneralToolbarModeLabel
+         AT (5 PREVTOP+13) FONT 0 NONUSABLE
+    POPUPTRIGGER "" frmPrefsGeneralToolbarModePopup
+         AT (PREVRIGHT+1 PREVTOP PREF_TOOLBAR AUTO) LEFTANCHOR NONUSABLE
+    LIST "" ID frmPrefsGeneralToolbarModeList
+         AT (PREVLEFT+5 PREVTOP PREVWIDTH PREVHEIGHT) NONUSABLE
+    POPUPLIST frmPrefsGeneralToolbarModePopup frmPrefsGeneralToolbarModeList
+
+    LABEL "$$PREFSGENERAL: SCROLLBAR:" frmPrefsGeneralScrollbarLabel
+        AT (5 PREVTOP+13) FONT 0 NONUSABLE
+    POPUPTRIGGER "$$PREFSGENERAL: NONE" frmPrefsGeneralScrollbarPopup
+         AT (PREVRIGHT+1 PREVTOP PREF_SCROLLBAR AUTO) LEFTANCHOR NONUSABLE
+    LIST "$$PREFSGENERAL: RIGHT" "$$PREFSGENERAL: LEFT" "$$PREFSGENERAL: NONE"
+         ID frmPrefsGeneralScrollbarList
+         AT (PREVLEFT+3 PREVTOP PREVWIDTH PREVHEIGHT) NONUSABLE VISIBLEITEMS 3
+    POPUPLIST frmPrefsGeneralScrollbarPopup frmPrefsGeneralScrollbarList
+
+    CHECKBOX "$$PREFSGENERAL: ALWAYS DELETE ANNOTATIONS"
+         ID frmPrefsGeneralAlwaysDeleteAnnotations
+         AT (5 PREVTOP+13 AUTO AUTO) NONUSABLE
+
+#ifdef SUPPORT_ANNOTATION
+    CHECKBOX "$$PREFSGENERAL: ANNOTATIONS IN BOOKMARK LIST"
+         ID frmPrefsGeneralAnnotationsInBookmarkList
+         AT (5 PREVTOP+13 AUTO AUTO) NONUSABLE
+#endif
+
+
+// Layout Preferences
+
+    CHECKBOX "$$PREFSLAYOUT: CONNECT PARTS WITH PAGING"
+         ID frmPrefsLayoutPageControlsLink
+         AT (3 20 AUTO AUTO) LEFTANCHOR NONUSABLE
+    CHECKBOX "$$PREFSLAYOUT: UNDERLINE" ID frmPrefsLayoutUnderline
+         AT (3 PREVBOTTOM AUTO AUTO) LEFTANCHOR NONUSABLE
+    CHECKBOX "$$PREFSLAYOUT: ENABLE SOFT-HYPHENS"
+         ID frmPrefsLayoutEnableSoftHyphens
+         AT (3 PREVBOTTOM AUTO AUTO) LEFTANCHOR NONUSABLE
+    CHECKBOX "$$PREFSLAYOUT: ENABLE MARGINS"
+         ID frmPrefsLayoutEnableMargins
+         AT (3 PREVBOTTOM AUTO AUTO) LEFTANCHOR NONUSABLE
+
+    LABEL "$$PREFSLAYOUT: ALIGNMENT:" frmPrefsLayoutAlignLabel
+         AT (5 PREVBOTTOM+1) FONT 0 NONUSABLE
+    POPUPTRIGGER "$$PREFSLAYOUT: AS IN DOC" frmPrefsLayoutAlignPopup
+         AT (PREVRIGHT+1 PREVTOP PREF_ALIGNMENT AUTO) LEFTANCHOR NONUSABLE
+    LIST "$$PREFSLAYOUT: AS IN DOC" "$$PREFSLAYOUT: FORCE LEFT"
+         "$$PREFSLAYOUT: FORCE RIGHT" "$$PREFSLAYOUT: FORCE CENTER"
+         "$$PREFSLAYOUT: FORCE JUSTIFY"
+         ID frmPrefsLayoutAlignList
+         AT (PREVLEFT+3 PREVTOP PREVWIDTH PREVHEIGHT) NONUSABLE VISIBLEITEMS 5
+    POPUPLIST frmPrefsLayoutAlignPopup frmPrefsLayoutAlignList
+
+    LABEL "$$FONTS: LINE SPACING:" frmPrefsLayoutLineSpacingLabel AT (5 PREVTOP+12) FONT 0 NONUSABLE
+    POPUPTRIGGER "--" ID frmPrefsLayoutLineSpacingPopup
+         AT (PREVRIGHT+4 PREVTOP AUTO AUTO) LEFTANCHOR NONUSABLE
+    LIST "-2" "-1" "0" "1" "2" "3" "4" ID frmPrefsLayoutLineSpacingList
+         AT (PREVLEFT+1 PREVTOP AUTO AUTO) NONUSABLE VISIBLEITEMS 7 NONUSABLE
+    POPUPLIST frmPrefsLayoutLineSpacingPopup frmPrefsLayoutLineSpacingList
+
+    LABEL "$$FONTS: PARAGRAPH SPACING:" frmPrefsLayoutParagraphSpacingLabel AT (5 PREVTOP+12) FONT 0 NONUSABLE
+    POPUPTRIGGER "--" ID frmPrefsLayoutParagraphSpacingPopup
+         AT (PREVRIGHT+4 PREVTOP AUTO AUTO) LEFTANCHOR NONUSABLE
+    LIST "x0" "x0.5" "x1" "x1.5" "x2" ID frmPrefsLayoutParagraphSpacingList
+         AT (PREVLEFT PREVTOP AUTO AUTO) NONUSABLE VISIBLEITEMS 5 NONUSABLE
+    POPUPLIST frmPrefsLayoutParagraphSpacingPopup frmPrefsLayoutParagraphSpacingList
+#ifdef HAVE_ROTATE
+    LABEL "$$FONTS: ROTATE:" frmPrefsLayoutRotateLabel AT (5 PREVTOP+13) FONT 0 NONUSABLE
+    POPUPTRIGGER "--" ID frmPrefsLayoutRotatePopup
+         AT (PREVRIGHT+4 PREVTOP AUTO AUTO) LEFTANCHOR NONUSABLE
+    LIST "$$FONTS: NONE" "$$FONTS: CLOCKWISE" "$$FONTS: COUNTERCLOCKWISE" ID frmPrefsLayoutRotateList
+         AT (PREVLEFT PREVTOP AUTO AUTO) NONUSABLE VISIBLEITEMS 3
+    POPUPLIST frmPrefsLayoutRotatePopup frmPrefsLayoutRotateList
+#endif
+#ifdef HAVE_RTL
+    CHECKBOX "$$FONTS: RTL" ID frmPrefsLayoutRTL
+        AT (3 PREVTOP+12 AUTO AUTO) LEFTANCHOR NONUSABLE
+#endif
+
+    CHECKBOX "$$FONTS: VARY WITH DOCUMENT" ID frmPrefsLayoutIndividual
+        AT (3 PREVTOP+12 AUTO AUTO) LEFTANCHOR NONUSABLE
+    CHECKBOX "$$FONTS: ALSO SET AS DEFAULT" ID frmPrefsLayoutAsDefault
+        AT (3 PREVBOTTOM+1 AUTO AUTO) LEFTANCHOR NONUSABLE
+
+
+// Font Preferences
+
+    PUSHBUTTON "$$PREFSFONT: MAIN" ID frmPrefsFontMainMode
+         AT (3 20 AUTO AUTO) GROUP 2 NONUSABLE
+    PUSHBUTTON "$$PREFSFONT: LIBRARY" ID frmPrefsFontLibraryMode
+         AT (PREVRIGHT+1 PREVTOP AUTO AUTO) GROUP 2 NONUSABLE
+
+    LABEL "$$FONTS: BUILT-IN FONTS:" frmPrefsFontLabel AT (4 PREVBOTTOM+3) FONT 0 NONUSABLE
+    PUSHBUTTON " " ID frmPrefsFont1 AT (PREVLEFT+10 PREVBOTTOM+1 15 15) GROUP 1 NONUSABLE
+    PUSHBUTTON " " ID frmPrefsFont2 AT (PREVRIGHT+1 PREVTOP 15 15) GROUP 1 NONUSABLE
+    PUSHBUTTON " " ID frmPrefsFont3 AT (PREVRIGHT+1 PREVTOP 15 15) GROUP 1 NONUSABLE
+    PUSHBUTTON " " ID frmPrefsFont4 AT (PREVRIGHT+1 PREVTOP 15 15) GROUP 1 NONUSABLE
+    PUSHBUTTON " " ID frmPrefsFont5 AT (PREVRIGHT+1 PREVTOP 15 15) GROUP 1 NONUSABLE
+
+    LABEL "$$FONTS: USER-LOADED FONT:" frmPrefsFontUserLabel AT (4 PREVBOTTOM+4) FONT 0 NONUSABLE
+    PUSHBUTTON " " ID frmPrefsFontUser AT (14 PREVTOP+15 15 15) GROUP 1 NONUSABLE
+    POPUPTRIGGER "--" ID frmPrefsFontUserFontPopup
+         AT (PREVRIGHT+4 PREVTOP+1 120 AUTO) LEFTANCHOR NONUSABLE
+    LIST "" ID frmPrefsFontUserFontList AT (PREVLEFT PREVTOP 110 AUTO) NONUSABLE
+    POPUPLIST frmPrefsFontUserFontPopup frmPrefsFontUserFontList
+
+    CHECKBOX "$$FONTS: VARY WITH DOCUMENT" ID frmPrefsFontIndividual
+        AT (3 PREVTOP+20 AUTO AUTO) LEFTANCHOR NONUSABLE
+    CHECKBOX "$$FONTS: ALSO SET AS DEFAULT" ID frmPrefsFontAsDefault
+        AT (3 PREVBOTTOM+1 AUTO AUTO) LEFTANCHOR NONUSABLE
+
+
+// Color Preferences
+
+    // Text colour
+    // Background colour
+    // Links
+    //   - Visited
+    //   - Unvisited
+
+    CHECKBOX "$$PREFSCOLOR: STRIKE-THROUGH" ID frmPrefsColorStrikethrough
+         AT (3 20 AUTO AUTO) LEFTANCHOR NONUSABLE
+    CHECKBOX "$$PREFSCOLOR: FORCE DEFAULT TEXT COLORS" ID frmPrefsColorForceDefaultColors
+         AT (3 PREVBOTTOM+1 AUTO AUTO) LEFTANCHOR NONUSABLE
+
+    CHECKBOX "$$FONTS: VARY WITH DOCUMENT" ID frmPrefsColorIndividual
+        AT (3 PREVBOTTOM+1 AUTO AUTO) LEFTANCHOR NONUSABLE
+    CHECKBOX "$$FONTS: ALSO SET AS DEFAULT" ID frmPrefsColorAsDefault
+        AT (3 PREVBOTTOM+1 AUTO AUTO) LEFTANCHOR NONUSABLE
+
+
+// Library Preferences
+
+    LABEL "$$PREFSLIBRARY: UPDATE DOCLIST" ID frmPrefsLibrarySyncPolicyLabel
+         AT (5 20) FONT 0 NONUSABLE
+    POPUPTRIGGER "" frmPrefsLibrarySyncPolicyPopup
+         AT (PREVRIGHT+1 PREVTOP PREF_SYNC_POLICY AUTO) LEFTANCHOR NONUSABLE
+    LIST "$$PREFSLIBRARY: AUTOMATIC" "$$PREFSLIBRARY: MANUAL"
+         "$$PREFSLIBRARY: IGNORE CARD" ID frmPrefsLibrarySyncPolicyList
+         AT (PREVLEFT+5 PREVTOP PREVWIDTH PREVHEIGHT) NONUSABLE VISIBLEITEMS 3
+    POPUPLIST frmPrefsLibrarySyncPolicyPopup frmPrefsLibrarySyncPolicyList
+
+    LABEL "$$PREFSLIBRARY: CATEGORY STYLE:" frmPrefsLibraryCategoryStyleLabel
+         AT (5 PREVTOP+13) FONT 0 NONUSABLE
+    POPUPTRIGGER "" frmPrefsLibraryCategoryStylePopup
+         AT (PREVRIGHT+1 PREVTOP PREF_CATEGORY_STYLE AUTO) LEFTANCHOR NONUSABLE
+    LIST "$$PREFSLIBRARY: CLASSIC" "$$PREFSLIBRARY: ADVANCED"
+         ID frmPrefsLibraryCategoryStyleList
+         AT (PREVLEFT+5 PREVTOP PREVWIDTH PREVHEIGHT) NONUSABLE VISIBLEITEMS 2
+    POPUPLIST frmPrefsLibraryCategoryStylePopup frmPrefsLibraryCategoryStyleList
+
+    LABEL "$$PREFSLIBRARY: SORT BY:" frmPrefsLibrarySortByLabel
+         AT (5 PREVTOP+13) FONT 0 NONUSABLE
+    POPUPTRIGGER "" frmPrefsLibrarySortByPopup
+         AT (PREVRIGHT+1 PREVTOP PREF_SORT_OPTIONS AUTO) LEFTANCHOR NONUSABLE
+    LIST "$$PREFSLIBRARY: NAME" "$$PREFSLIBRARY: DATE" "$$PREFSLIBRARY: SIZE"
+         "$$PREFSLIBRARY: TYPE" "$$PREFSLIBRARY: CATEGORY" ID frmPrefsLibrarySortByList
+         AT (PREVLEFT+5 PREVTOP PREVWIDTH PREVHEIGHT) NONUSABLE VISIBLEITEMS 4
+    POPUPLIST frmPrefsLibrarySortByPopup frmPrefsLibrarySortByList
+
+    LABEL "$$PREFSLIBRARY: SORT ORDER:" frmPrefsLibrarySortOrderLabel
+         AT (5 PREVTOP+13) FONT 0 NONUSABLE
+    POPUPTRIGGER "" frmPrefsLibrarySortOrderPopup
+         AT (PREVRIGHT+1 PREVTOP PREF_SORT_ORDER AUTO) LEFTANCHOR NONUSABLE
+    LIST "$$PREFSLIBRARY: ASCENDING" "$$PREFSLIBRARY: DESCENDING"
+         ID frmPrefsLibrarySortOrderList
+         AT (PREVLEFT+5 PREVTOP PREVWIDTH PREVHEIGHT) NONUSABLE VISIBLEITEMS 2
+    POPUPLIST frmPrefsLibrarySortOrderPopup frmPrefsLibrarySortOrderList
+
+    CHECKBOX "$$PREFSLIBRARY: DATE/TIME" ID frmPrefsLibraryDateTime
+        AT (3 PREVTOP+12 AUTO AUTO) LEFTANCHOR NONUSABLE
+    CHECKBOX "$$PREFSLIBRARY: INDICATE OPENED" ID frmPrefsLibraryIndicateOpened
+        AT (3 PREVBOTTOM AUTO AUTO) LEFTANCHOR NONUSABLE
+
+// Autoscroll Preferences
+
+    LABEL "$$PREFSAUTOSCROLL: AUTOSCROLL JUMP:" frmPrefsAutoscrollJumpLabel
+         AT (5 20) FONT 0 NONUSABLE
+    PUSHBUTTON "1" ID frmPrefsAutoscrollJumpButton
+         AT (PREVRIGHT+2 PREVTOP 16 11) GROUP 1 DISABLED NONUSABLE
+    REPEATBUTTON "\001" ID frmPrefsAutoscrollJumpUpButton
+         AT (PREVRIGHT+2 PREVTOP-2 12 7) FONT 5 NOFRAME NONUSABLE
+    REPEATBUTTON "\002" ID frmPrefsAutoscrollJumpDownButton
+         AT (PREVLEFT PREVBOTTOM 12 7) FONT 5 NOFRAME NONUSABLE
+
+    POPUPTRIGGER "$$PREFSAUTOSCROLL: PIXEL(S)" frmPrefsAutoscrollModePopup
+         AT (PREVRIGHT+1 20 PREF_AUTOSCROLLMODE AUTO) LEFTANCHOR NONUSABLE
+    LIST "$$PREFSAUTOSCROLL: PIXEL(S)" "$$PREFSAUTOSCROLL: PAGE(S)" ID frmPrefsAutoscrollModeList
+         AT (PREVLEFT+2 PREVTOP PREVWIDTH PREVHEIGHT) NONUSABLE VISIBLEITEMS 2
+    POPUPLIST frmPrefsAutoscrollModePopup frmPrefsAutoscrollModeList
+
+    LABEL "$$PREFSAUTOSCROLL: AUTOSCROLL DIRECTION:" frmPrefsAutoscrollDirLabel
+         AT (5 PREVTOP+16) FONT 0 NONUSABLE
+    POPUPTRIGGER "$$PREFSAUTOSCROLL: DOWN" frmPrefsAutoscrollDirPopup
+         AT (PREVRIGHT+2 PREVTOP PREF_AUTOSCROLLDIR AUTO) LEFTANCHOR NONUSABLE
+    LIST "$$PREFSAUTOSCROLL: UP" "$$PREFSAUTOSCROLL: DOWN" ID frmPrefsAutoscrollDirList
+         AT (PREVLEFT+3 PREVTOP PREVWIDTH AUTO) NONUSABLE VISIBLEITEMS 2
+    POPUPLIST frmPrefsAutoscrollDirPopup frmPrefsAutoscrollDirList
+
+    LABEL "$$PREFSAUTOSCROLL: AUTOSCROLL DELAY:" frmPrefsAutoscrollIntervalLabel
+         AT (5 PREVTOP+16) FONT 0 NONUSABLE
+    PUSHBUTTON "1" ID frmPrefsAutoscrollIntervalButton
+         AT (PREVRIGHT+2 PREVTOP 22 11) GROUP 1 DISABLED NONUSABLE
+    REPEATBUTTON "\001" ID frmPrefsAutoscrollIntervalUpButton
+         AT (PREVRIGHT+2 PREVTOP-2 12 7) FONT 5 NOFRAME NONUSABLE
+    REPEATBUTTON "\002" ID frmPrefsAutoscrollIntervalDownButton
+         AT (PREVLEFT PREVBOTTOM 12 7) FONT 5 NOFRAME NONUSABLE
+    LABEL "$$PREFSAUTOSCROLL: MILLISECONDS" frmPrefsAutoscrollMillisecondsLabel
+         AT (PREVRIGHT+2 PREVTOP-4) FONT 0 NONUSABLE
+
+    CHECKBOX "$$PREFSAUTOSCROLL: STAY ON" ID frmPrefsAutoscrollStayOn
+         AT (3 PREVTOP+16 AUTO AUTO) LEFTANCHOR NONUSABLE
+
+// Hardcopy Preferences
+
+    LABEL "$$PREFSHARDCOPY: TITLE" frmPrefsHardcopyTitle
+         AT (5 20) FONT 0 NONUSABLE
+
+    LABEL "$$PREFSHARDCOPY: ACTION:" frmPrefsHardcopyActionLabel
+         AT (5 PREVTOP+13) FONT 0 NONUSABLE
+    POPUPTRIGGER "" frmPrefsHardcopyActionPopup
+         AT (PREVRIGHT+2 PREVTOP PREF_HARDCOPY_ACTION AUTO) LEFTANCHOR NONUSABLE
+    LIST "$$PREFSHARDCOPY: DIALOG" "$$PREFSHARDCOPY: IMMEDIATE"
+         ID frmPrefsHardcopyActionList AT (PREVLEFT PREVTOP PREVWIDTH AUTO)
+         NONUSABLE VISIBLEITEMS 2 FONT 0
+    POPUPLIST frmPrefsHardcopyActionPopup frmPrefsHardcopyActionList
+
+    LABEL "$$PREFSHARDCOPY: RANGE:" frmPrefsHardcopyRangeLabel
+         AT (5 PREVTOP+13) FONT 0 NONUSABLE
+    POPUPTRIGGER "" frmPrefsHardcopyRangePopup
+         AT (PREVRIGHT+2 PREVTOP PREF_HARDCOPY_RANGE AUTO) LEFTANCHOR NONUSABLE
+    LIST "$$PREFSHARDCOPY: IN VIEW AREA" "$$PREFSHARDCOPY: VISIBLE PARAGRAPHS"
+         ID frmPrefsHardcopyRangeList AT (PREVLEFT PREVTOP PREVWIDTH AUTO)
+         NONUSABLE VISIBLEITEMS 2 FONT 0
+    POPUPLIST frmPrefsHardcopyRangePopup frmPrefsHardcopyRangeList
+
+    LABEL "$$PREFSHARDCOPY: LINK:" frmPrefsHardcopyLinkLabel
+         AT (5 PREVTOP+13) FONT 0 NONUSABLE
+    POPUPTRIGGER "" frmPrefsHardcopyLinkPopup
+         AT (PREVRIGHT+2 PREVTOP PREF_HARDCOPY_LINK AUTO) LEFTANCHOR NONUSABLE
+    LIST "$$PREFSHARDCOPY: BOTTOM" "$$PREFSHARDCOPY: INLINE"
+         "$$PREFSHARDCOPY: NONE" ID frmPrefsHardcopyLinkList
+         AT (PREVLEFT PREVTOP AUTO AUTO) NONUSABLE VISIBLEITEMS 3 FONT 0
+    POPUPLIST frmPrefsHardcopyLinkPopup frmPrefsHardcopyLinkList
+
+// Button Preferences
+
+    CHECKBOX "$$PREFSBUTTONS: HARD KEYS" ID frmPrefsButtonHardKeys
+         AT (3 20 AUTO AUTO) LEFTANCHOR NONUSABLE
+
+    CHECKBOX "$$PREFSBUTTONS: ARROW KEYS" ID frmPrefsButtonArrowKeys
+         AT (PREVLEFT PREVBOTTOM+1 AUTO AUTO) LEFTANCHOR NONUSABLE
+
+    SELECTORTRIGGER "$$SELECT: NONE" ID frmPrefsButtonSelectAction
+         AT (5 PREVBOTTOM+5 PREF_BUTTON_ACTION AUTO) FONT 1 LEFTANCHOR NONUSABLE
+    LIST "" ID frmPrefsButtonActionList
+         AT (PREVLEFT 38 PREVWIDTH 130) NONUSABLE VISIBLEITEMS 14 FONT 0
+    POPUPLIST frmPrefsButtonSelectAction frmPrefsButtonActionList
+
+    PUSHBUTTON " " ID frmPrefsButtonDatebook
+         AT (13 76 23 23) GROUP 2 NONUSABLE
+    PUSHBUTTON " " ID frmPrefsButtonAddress
+         AT (PREVRIGHT+7 PREVTOP 23 23) GROUP 2 NONUSABLE
+    PUSHBUTTON " " ID frmPrefsButtonUp
+         AT (PREVRIGHT+7 PREVTOP-3 13 12) GROUP 2 NONUSABLE
+    PUSHBUTTON " " ID frmPrefsButtonDown
+         AT (PREVLEFT PREVBOTTOM+5 13 12) GROUP 2 NONUSABLE
+    PUSHBUTTON " " ID frmPrefsButtonTodo
+         AT (PREVRIGHT+7 PREVTOP-14 23 23) GROUP 2 NONUSABLE
+    PUSHBUTTON " " ID frmPrefsButtonMemo
+         AT (PREVRIGHT+7 PREVTOP 23 23) GROUP 2 NONUSABLE
+
+    // Before we can make these objects usable, we'll need to move the above
+    // objects around a bit. See PrefsButtonLoad() in prefsform.c
+    PUSHBUTTON " " ID frmPrefsButtonLeft
+         AT (58 81 12 13) GROUP 2 NONUSABLE
+    PUSHBUTTON " " ID frmPrefsButtonSelect
+         AT (PREVRIGHT+3 PREVTOP 13 13) GROUP 2 NONUSABLE
+    PUSHBUTTON " " ID frmPrefsButtonRight
+         AT (PREVRIGHT+3 PREVTOP 12 13) GROUP 2 NONUSABLE
+
+// Tap Preferences
+
+    PUSHBUTTON "$$PREFSTAP: MODE 1" ID frmPrefsControlMode1
+         AT (3 20 AUTO AUTO) GROUP 3 NONUSABLE
+    PUSHBUTTON "$$PREFSTAP: MODE 2" ID frmPrefsControlMode2
+         AT (PREVRIGHT+1 PREVTOP AUTO AUTO) GROUP 3 NONUSABLE
+    PUSHBUTTON "$$PREFSTAP: MODE 3" ID frmPrefsControlMode3
+         AT (PREVRIGHT+1 PREVTOP AUTO AUTO) GROUP 3 NONUSABLE
+
+    FORMBITMAP AT (3 PREVBOTTOM+10) BITMAP bmpMode1 NONUSABLE
+    FORMBITMAP AT (3 PREVTOP) BITMAP bmpMode2 NONUSABLE
+    FORMBITMAP AT (3 PREVTOP) BITMAP bmpMode3 NONUSABLE
+
+    LABEL "$$PREFSTAP: REGION ACTION:" frmPrefsControlRegionLabel
+         AT (50 PREVTOP) FONT 1 NONUSABLE
+
+    LABEL "$$PREFSTAP: PEN SCROLL MSG1" frmPrefsControlMsg1 AT (50 PREVBOTTOM+3)
+         NONUSABLE FONT 0 NONUSABLE
+    LABEL "[1]" frmPrefsControlLabel1 AT (50 PREVTOP) NONUSABLE FONT 1
+    POPUPTRIGGER "$$SELECT: NONE" ID frmPrefsControlPopup1
+         AT (PREVRIGHT+2 PREVTOP PREF_CONTROL_ACTION AUTO) NONUSABLE LEFTANCHOR
+    LIST "" ID frmPrefsControlList1
+         AT (PREVLEFT PREVTOP PREVWIDTH 130) NONUSABLE VISIBLEITEMS 1 FONT 0
+    POPUPLIST frmPrefsControlPopup1 frmPrefsControlList1
+
+    LABEL "$$PREFSTAP: PEN SCROLL MSG2" frmPrefsControlMsg2 AT (50 PREVBOTTOM+3)
+         NONUSABLE FONT 0
+    LABEL "[2]" frmPrefsControlLabel2 AT (50 PREVTOP) NONUSABLE FONT 1
+    POPUPTRIGGER "$$SELECT: NONE" ID frmPrefsControlPopup2
+         AT (PREVRIGHT+2 PREVTOP PREF_CONTROL_ACTION AUTO) NONUSABLE LEFTANCHOR
+    LIST "" ID frmPrefsControlList2 AT (PREVLEFT PREVTOP PREVWIDTH 130)
+         NONUSABLE VISIBLEITEMS 1 FONT 0
+    POPUPLIST frmPrefsControlPopup2 frmPrefsControlList2
+
+    LABEL "$$PREFSTAP: PEN SCROLL MSG3" frmPrefsControlMsg3 AT (50 PREVBOTTOM+3) NONUSABLE FONT 0
+    LABEL "[3]" frmPrefsControlLabel3 AT (50 PREVTOP) NONUSABLE FONT 1
+    POPUPTRIGGER "$$SELECT: NONE" ID frmPrefsControlPopup3 AT (PREVRIGHT+2 PREVTOP PREF_CONTROL_ACTION AUTO) NONUSABLE LEFTANCHOR
+    LIST "" ID frmPrefsControlList3 AT (PREVLEFT PREVTOP PREVWIDTH 130) NONUSABLE
+         VISIBLEITEMS 1 FONT 0
+    POPUPLIST frmPrefsControlPopup3 frmPrefsControlList3
+
+    LABEL "$$PREFSTAP: PEN SCROLL MSG4" frmPrefsControlMsg4 AT (50 PREVBOTTOM+3)
+         NONUSABLE FONT 0
+    LABEL "[4]" frmPrefsControlLabel4 AT (50 PREVTOP) NONUSABLE FONT 1
+    POPUPTRIGGER "$$SELECT: NONE" ID frmPrefsControlPopup4
+         AT (PREVRIGHT+2 PREVTOP PREF_CONTROL_ACTION AUTO) NONUSABLE LEFTANCHOR
+    LIST "" ID frmPrefsControlList4 AT (PREVLEFT PREVTOP PREVWIDTH 130) NONUSABLE
+         VISIBLEITEMS 1 FONT 0
+    POPUPLIST frmPrefsControlPopup4 frmPrefsControlList4
+
+// Gesture Preferences
+
+    CHECKBOX "$$PREFSGESTURES: USE GESTURES" ID frmPrefsGestureGestures
+        AT (3 20 AUTO AUTO) LEFTANCHOR NONUSABLE
+
+    SELECTORTRIGGER "$$SELECT: NONE" ID frmPrefsGestureSelectAction
+        AT (5 PREVBOTTOM+7 PREF_BUTTON_ACTION AUTO) FONT 1 LEFTANCHOR NONUSABLE
+    LIST "" ID frmPrefsGestureActionList
+         AT (PREVLEFT PREVTOP PREVWIDTH 110) NONUSABLE VISIBLEITEMS 14 FONT 0
+    POPUPLIST frmPrefsGestureSelectAction frmPrefsGestureActionList
+
+    PUSHBUTTON " " ID frmPrefsGestureUp AT (64 58 27 19) GROUP 4 NONUSABLE
+    FORMBITMAP AT (PREVLEFT+1 PREVTOP+1) BITMAP bmpGestureUp USABLE NONUSABLE
+
+    PUSHBUTTON " " ID frmPrefsGestureLeft AT (PREVLEFT-33 PREVTOP+23 27 19)
+         GROUP 4 NONUSABLE
+    FORMBITMAP AT (PREVLEFT+1 PREVTOP+1) BITMAP bmpGestureLeft NONUSABLE
+
+    PUSHBUTTON " " ID frmPrefsGestureTap AT (PREVLEFT+31 PREVTOP-1 27 19)
+         GROUP 4 NONUSABLE
+    FORMBITMAP AT (PREVLEFT+1 PREVTOP+1) BITMAP bmpGestureTap NONUSABLE
+
+    PUSHBUTTON " " ID frmPrefsGestureRight AT (PREVLEFT+31 PREVTOP-1 27 19)
+         GROUP 4 NONUSABLE
+    FORMBITMAP AT (PREVLEFT+1 PREVTOP+1) BITMAP bmpGestureRight NONUSABLE
+
+    PUSHBUTTON " " ID frmPrefsGestureDown AT (PREVLEFT-33 PREVTOP+23 27 19)
+         GROUP 4 NONUSABLE
+    FORMBITMAP AT (PREVLEFT+1 PREVTOP+1) BITMAP bmpGestureDown NONUSABLE
+
+#ifdef HAVE_JOGDIAL
+// Jogdial Preferences
+
+    CHECKBOX "$$PREFSJOGDIAL: USE JOGDIALS" ID frmPrefsJogdialJogEnabled
+         AT (3 20 AUTO AUTO) LEFTANCHOR NONUSABLE
+
+    SELECTORTRIGGER "$$SELECT: NONE" ID frmPrefsJogdialSelectAction
+         AT (5 PREVBOTTOM+7 PREF_BUTTON_ACTION AUTO) FONT 1 LEFTANCHOR NONUSABLE
+    LIST "" ID frmPrefsJogdialActionList
+         AT (PREVLEFT PREVTOP PREVWIDTH 110) NONUSABLE VISIBLEITEMS 14 FONT 0
+    POPUPLIST frmPrefsJogdialSelectAction frmPrefsJogdialActionList
+
+    PUSHBUTTON " " ID frmPrefsJogdialUp AT (33 58 27 27) GROUP 5 NONUSABLE
+    FORMBITMAP AT (PREVLEFT+1 PREVTOP+1) BITMAP bmpJogdialUp NONUSABLE
+
+    PUSHBUTTON " " ID frmPrefsJogdialPushUp AT (PREVRIGHT+32 PREVTOP-1 27 27)
+         GROUP 5 NONUSABLE
+    FORMBITMAP AT (PREVLEFT+1 PREVTOP+1) BITMAP bmpJogdialPushUp NONUSABLE
+
+    PUSHBUTTON " " ID frmPrefsJogdialPush AT (PREVRIGHT+32 PREVTOP-1 27 27)
+         GROUP 5 NONUSABLE
+    FORMBITMAP AT (PREVLEFT+1 PREVTOP+1) BITMAP bmpJogdialPush NONUSABLE
+
+    PUSHBUTTON " " ID frmPrefsJogdialDown AT (33 PREVBOTTOM+20 27 27)
+         GROUP 5 NONUSABLE
+    FORMBITMAP AT (PREVLEFT+1 PREVTOP+1) BITMAP bmpJogdialDown NONUSABLE
+
+    PUSHBUTTON " " ID frmPrefsJogdialPushDown AT (PREVRIGHT+32 PREVTOP-1 27 27)
+         GROUP 5 NONUSABLE
+    FORMBITMAP AT (PREVLEFT+1 PREVTOP+1) BITMAP bmpJogdialPushDown NONUSABLE
+
+    PUSHBUTTON " " ID frmPrefsJogdialBack AT (PREVRIGHT+32 PREVTOP-1 27 27)
+         GROUP 5 NONUSABLE
+    FORMBITMAP AT (PREVLEFT+1 PREVTOP+1) BITMAP bmpJogdialBack NONUSABLE
+#endif
+
+#ifdef SUPPORT_WORD_LOOKUP
+// Word Lookup Preferences
+    CHECKBOX "$$PREFSLOOKUP: ALWAYS ACTIVE"
+         ID frmPrefsLookupAlwaysActive
+         AT (3 20 AUTO AUTO) LEFTANCHOR NONUSABLE
+    LABEL "$$PREFSLOOKUP: ACTION:" frmPrefsLookupActionLabel
+        AT (5 PREVBOTTOM+1) FONT 0 NONUSABLE
+    POPUPTRIGGER "$$PREFSLOOKUP: SEARCH FORM" frmPrefsLookupActionPopup
+         AT (PREVRIGHT+1 PREVTOP 100 AUTO) LEFTANCHOR NONUSABLE
+    LIST "$$PREFSLOOKUP: SEARCH FORM"
+#ifdef SUPPORT_PPI
+         "$$PREFSLOOKUP: PPI"
+#else
+         "$$UNSUPPORTED"
+#endif
+         "$$PREFSLOOKUP: TO CLIPBOARD"
+#ifdef SUPPORT_ANNOTATION
+         "$$PREFSLOOKUP: ANNOTATE"
+#else
+         "$$UNSUPPORTED"
+#endif
+         ID frmPrefsLookupActionList
+         AT (PREVLEFT+3 PREVTOP 100 PREVHEIGHT) NONUSABLE VISIBLEITEMS 4
+    POPUPLIST frmPrefsLookupActionPopup frmPrefsLookupActionList
+
+    CHECKBOX "$$FONTS: VARY WITH DOCUMENT" ID frmPrefsLookupIndividual
+        AT (3 PREVTOP+12 AUTO AUTO) LEFTANCHOR NONUSABLE
+    CHECKBOX "$$FONTS: ALSO SET AS DEFAULT" ID frmPrefsLookupAsDefault
+        AT (3 PREVBOTTOM+1 AUTO AUTO) LEFTANCHOR NONUSABLE
+#endif
+
+    BUTTON "$$PREFS: OK" ID frmPrefsOK AT (3 BOTTOM@157 AUTO AUTO)
+    BUTTON "$$PREFS: CANCEL" ID frmPrefsCancel
+         AT (PREVRIGHT+5 PREVTOP AUTO AUTO)
+    BUTTON "$$PREFS: DEFAULT" ID frmPrefsDefault AT (PREVRIGHT+5 PREVTOP AUTO AUTO) NONUSABLE
+END
+
+STRING ID strPrefsGeneral       "$$PREFS: GENERAL"
+STRING ID strPrefsLayout        "$$PREFS: LAYOUT"
+STRING ID strPrefsFont          "$$PREFS: FONT"
+STRING ID strPrefsColor         "$$PREFS: COLOR"
+STRING ID strPrefsLibrary       "$$PREFS: LIBRARY"
+STRING ID strPrefsAutoscroll    "$$PREFS: AUTOSCROLL"
+STRING ID strPrefsHardcopy      "$$PREFS: HARDCOPY"
+STRING ID strPrefsButton        "$$PREFS: BUTTON"
+STRING ID strPrefsControl       "$$PREFS: CONTROL"
+STRING ID strPrefsGesture       "$$PREFS: GESTURE"
+#ifdef HAVE_JOGDIAL
+STRING ID strPrefsJogdial       "$$PREFS: JOGDIAL"
+#endif
+#ifdef SUPPORT_WORD_LOOKUP
+STRING ID strPrefsLookup        "$$PREFS: LOOKUP"
+#endif
+STRING ID strPrefsTopToolbar    "$$PREFSGENERAL: TOP TOOLBAR"
+STRING ID strPrefsBottomToolbar "$$PREFSGENERAL: BOTTOM TOOLBAR"
+STRING ID strPrefsSilkToolbar   "$$PREFSGENERAL: SILK TOOLBAR"
+STRING ID strPrefsNoToolbar     "$$PREFSGENERAL: NO TOOLBAR"
+
+STRING ID strPrefsGeneralHelp    "$$PREFSGENERAL: HELP"
+STRING ID strPrefsLayoutHelp     "$$PREFSLAYOUT: HELP"
+STRING ID strPrefsColorHelp      "$$PREFSCOLOR: HELP"
+STRING ID strPrefsLibraryHelp    "$$PREFSLIBRARY: HELP"
+STRING ID strPrefsAutoscrollHelp "$$PREFSAUTOSCROLL: HELP"
+STRING ID strPrefsHardcopyHelp   "$$PREFSHARDCOPY: HELP"
+STRING ID strPrefsButtonHelp     "$$PREFSBUTTONS: HELP"
+STRING ID strPrefsControlHelp    "$$PREFSTAP: HELP"
+STRING ID strPrefsGestureHelp    "$$PREFSGESTURES: HELP"
+STRING ID strPrefsFontHelp       "$$FONTS: HELP"
+
+#ifdef HAVE_JOGDIAL
+STRING ID strPrefsJogdialHelp    "$$PREFSJOGDIAL: HELP"
+#endif
+#ifdef SUPPORT_WORD_LOOKUP
+STRING ID strPrefsLookupHelp     "$$PREFSLOOKUP: HELP"
+#endif
+
+
+STRINGTABLE ID strTblActions ""
+                "$$SELECT: NONE" "$$SELECT: FULL PAGE UP"
+                "$$SELECT: HALF PAGE UP" "$$SELECT: HALF PAGE DOWN"
+                "$$SELECT: FULL PAGE DOWN" "$$SELECT: GO BACK"
+                "$$SELECT: GO FORWARD" "$$SELECT: GO HOME"
+                "$$SELECT: GO TO TOP" "$$SELECT: GO TO BOTTOM"
+                "$$SELECT: FIND..." "$$SELECT: FIND AGAIN"
+                "$$SELECT: ADD BOOKMARK..." "$$SELECT: BOOKMARKS..."
+                "$$SELECT: LIBRARY..." "$$SELECT: DETAILS..."
+                "$$SELECT: PREFERENCES..." "$$SELECT: BUTTON ACTION..."
+                "$$SELECT: TAP ACTION..." "$$SELECT: GESTURE ACTION..."
+                "$$SELECT: TOGGLE AUTOSCROLL" "$$SELECT: AUTOSCROLL FASTER"
+                "$$SELECT: AUTOSCROLL SLOWER" "$$SELECT: NEXT ANCHOR"
+                "$$SELECT: PREV ANCHOR" "$$SELECT: GO TO LINK"
+                "$$SELECT: COPY TO MEMO" "$$SELECT: DELETE DOC..."
+                "$$SELECT: SELECT FONT..." "$$SELECT: COMMAND STROKE"
+                "$$SELECT: MENU..."
+                "$$SELECT: TOGGLE TOOLBAR" "$$SELECT: TOGGLE FULLSCREEN"
+                "$$SELECT: ONE LINE UP" "$$SELECT: ONE LINE DOWN"
+                "$$SELECT: ADJUST BRIGHTNESS"
+                "$$SELECT: ADJUST CONTRAST"
+                "$$SELECT: TOGGLE BACKLIGHT"
+                "$$SELECT: ROTATE RIGHT"
+                "$$SELECT: ROTATE LEFT"
+                "$$SELECT: SAVE POSITION"
+#ifdef SUPPORT_WORD_LOOKUP
+#ifdef SUPPORT_PPI
+                "$$SELECT: LOOKUP WORD IN PPI"
+#else
+                "$$UNSUPPORTED"
+#endif
+                "$$SELECT: LOOKUP TO SEARCH FORM"
+                "$$SELECT: LOOKUP TO CLIPBOARD"
+#ifdef SUPPORT_ANNOTATION
+                "$$SELECT: LOOKUP TO ANNOTATE"
+#else
+                "$$UNSUPPORTED"
+#endif
+#else
+                "$$UNSUPPORTED"
+                "$$UNSUPPORTED"
+                "$$UNSUPPORTED"
+                "$$UNSUPPORTED"
+#endif
+
+STRINGTABLE ID strTblKeys ""
+                "$$KEY: RETURN"
+                "$$KEY: TAB"
+                "$$KEY: UP"
+                "$$KEY: DOWN"
+                "$$KEY: LEFT"
+                "$$KEY: RIGHT"
+                "$$KEY: BACKSPACE"
+
+
+
+//
+// Keyboard customize form
+//
+
+
+FORM ID frmKeyboard AT ( 2 2 156 156 )
+USABLE
+MODAL
+SAVEBEHIND
+HELPID strKeyboardHelp
+BEGIN
+    TITLE "$$KEYBOARD: SET KEYBOARD / GRAFFITI"
+
+    LABEL "$$KEYBOARD: KEYBOARD OR GRAFFITI" AUTOID AT (4 18) FONT 1
+
+    FIELD ID frmKeyboardStdKey AT (4 PREVTOP+15 15 15)
+         USABLE LEFTALIGN EDITABLE UNDERLINED MAXCHARS 1 FONT 0
+
+    POPUPTRIGGER "$$SELECT: NONE" ID frmKeyboardStdKeyActionPopup
+         AT (60 PREVTOP KEYBOARD_BUTTON_ACTION AUTO) LEFTANCHOR FONT 0
+    LIST "" ID frmKeyboardStdKeyActionList
+         AT (PREVLEFT PREVTOP PREVWIDTH AUTO) NONUSABLE VISIBLEITEMS 14
+    POPUPLIST frmKeyboardStdKeyActionPopup frmKeyboardStdKeyActionList
+
+    LABEL "$$KEYBOARD: SPECIAL KEYS" AUTOID AT (4 PREVTOP+15) FONT 1
+
+    POPUPTRIGGER "$$KEY: RETURN" ID frmKeyboardSpecialKeyPopup
+         AT (4 PREVTOP+15 KEYBOARD_SPECIAL_KEYS AUTO) LEFTANCHOR FONT 0
+    LIST "" ID frmKeyboardSpecialKeyList
+         AT (PREVLEFT PREVTOP PREVWIDTH AUTO) NONUSABLE VISIBLEITEMS 14
+    POPUPLIST frmKeyboardSpecialKeyPopup frmKeyboardSpecialKeyList
+
+    POPUPTRIGGER "$$SELECT: NONE" ID frmKeyboardSpecialKeyActionPopup
+         AT (60 PREVTOP KEYBOARD_BUTTON_ACTION AUTO) LEFTANCHOR
+    LIST "" ID frmKeyboardSpecialKeyActionList
+         AT (PREVLEFT PREVTOP PREVWIDTH AUTO) NONUSABLE VISIBLEITEMS 14
+    POPUPLIST frmKeyboardSpecialKeyActionPopup frmKeyboardSpecialKeyActionList
+
+    LABEL "$$KEYBOARD: INTERFERENCE MSG1" AUTOID
+         AT (4 PREVTOP+26) FONT 0
+    LABEL "$$KEYBOARD: INTERFERENCE MSG2" AUTOID
+         AT (4 PREVTOP+13) FONT 0
+
+    BUTTON "$$KEYBOARD: OK" ID frmKeyboardOK AT (3 BOTTOM@153 KEYBOARD_OK_BUTTON AUTO)
+    BUTTON "$$KEYBOARD: CANCEL" ID frmKeyboardCancel
+         AT (PREVRIGHT+4 PREVTOP KEYBOARD_CANCEL_BUTTON AUTO)
+    BUTTON "$$KEYBOARD: DEFAULT" ID frmKeyboardDefault
+         AT (PREVRIGHT+4 PREVTOP KEYBOARD_DEFAULT_BUTTON AUTO)
+    BUTTON "$$KEYBOARD: CLEAR" ID frmKeyboardClear
+         AT (PREVRIGHT+4 PREVTOP KEYBOARD_CLEAR_BUTTON AUTO)
+END
+
+STRING ID strKeyboardHelp    "$$KEYBOARD: HELP"
+
+
+//
+//  Details Form
+//
+
+FORM ID frmDetails AT ( 2 25 156 133 )
+USABLE
+MODAL
+SAVEBEHIND
+HELPID strDetailsHelp
+BEGIN
+    TITLE "$$DETAILS: TITLE"
+
+    LABEL "$$DETAILS: STATUS:" AUTOID AT (5 40) FONT 1
+    PUSHBUTTON "$$DETAILS: READ" ID frmDetailsStatusRead
+         AT (PREVRIGHT+2 PREVTOP AUTO AUTO) GROUP 1
+    PUSHBUTTON "$$DETAILS: UNREAD" ID frmDetailsStatusUnread
+         AT (PREVRIGHT+1 PREVTOP AUTO AUTO) GROUP 1
+
+    LABEL "$$DETAILS: SHOW IMAGES" AUTOID AT (5 PREVBOTTOM+5) FONT 1
+    CHECKBOX "" ID frmDetailsShowImages
+         AT (PREVRIGHT+2 PREVTOP AUTO AUTO) LEFTANCHOR
+
+    LABEL "$$DETAILS: URL:" AUTOID AT (5 PREVBOTTOM+5) FONT 1
+    FIELD ID frmDetailsLink AT (PREVRIGHT+2 PREVTOP 125 40) USABLE LEFTALIGN
+         FONT 0 EDITABLE MAXCHARS 200 MULTIPLELINES
+
+    BUTTON "$$DETAILS: OK" ID frmDetailsOK
+         AT (3 BOTTOM@130 DETAILS_OK_BUTTON AUTO)
+    BUTTON "$$DETAILS: CANCEL" ID frmDetailsCancel
+         AT (PREVRIGHT+5 PREVTOP DETAILS_CANCEL_BUTTON AUTO)
+    BUTTON "$$DETAILS: COPY URL" ID frmDetailsCopy
+         AT (PREVRIGHT+5 PREVTOP DETAILS_COPY_BUTTON AUTO)
+END
+
+STRING ID strDetailsHelp    "$$DETAILS: HELP"
+
+
+//
+//  Search Form
+//
+
+FORM ID frmSearch AT ( 2 33 156 125 )
+USABLE
+MODAL
+SAVEBEHIND
+HELPID strSearchHelp
+BEGIN
+    TITLE "$$FIND: TITLE"
+
+    LABEL "$$FIND: FIND:" AUTOID AT (5 20) FONT 1
+    FIELD ID frmSearchField AT (PREVRIGHT+1 PREVTOP SEARCH_FIELD_LENGTH 30)
+         USABLE LEFTALIGN FONT 0 EDITABLE UNDERLINED MAXCHARS MAX_PATTERN_LEN
+         MULTIPLELINES AUTOSHIFT
+    BUTTON "\011" ID frmSearchHistory AT (PREVRIGHT+1 PREVTOP AUTO AUTO)
+         NOFRAME FONT 3
+    LIST "" ID frmSearchHistoryList AT (PREVRIGHT-82 PREVTOP 80 AUTO)
+         NONUSABLE DISABLED FONT 0
+
+    CHECKBOX "$$FIND: CASE SENSITIVE" ID frmSearchCasesensitive
+         AT (5 PREVTOP+30 AUTO AUTO) LEFTANCHOR
+
+    CHECKBOX "$$FIND: PHRASE" ID frmSearchPhrase
+         AT (5 PREVTOP+13 AUTO AUTO) LEFTANCHOR
+
+    POPUPTRIGGER "$$FIND: IN PAGE" ID frmSearchPopup
+         AT (5 PREVTOP+13 SEARCH_POPUP AUTO) LEFTANCHOR
+    LIST "$$FIND: IN PAGE" "$$FIND: IN ALL PAGES" "$$FIND: DOWN IN DOC" "$$FIND: SUB PAGES"
+         ID frmSearchList AT (PREVLEFT PREVTOP PREVWIDTH 22) NONUSABLE
+         DISABLED FONT 0 VISIBLEITEMS 4
+    POPUPLIST ID frmSearchPopup frmSearchList
+
+#ifdef SUPPORT_TRANSLITERATION
+    POPUPTRIGGER "" ID frmSearchXlitPopup
+         AT (5 PREVTOP+13 AUTO AUTO) LEFTANCHOR
+    LIST "" ID frmSearchXlitList AT (PREVLEFT PREVTOP 120 AUTO) NONUSABLE
+         DISABLED FONT 0
+    POPUPLIST ID frmSearchXlitPopup frmSearchXlitList
+#endif
+
+    BUTTON "$$FIND: OK" ID frmSearchOK AT (3 BOTTOM@122 AUTO AUTO)
+    BUTTON "$$FIND: CANCEL" ID frmSearchCancel
+         AT (PREVRIGHT+5 PREVTOP AUTO AUTO)
+
+    GRAFFITISTATEINDICATOR AT (RIGHT@143 BOTTOM@122)
+END
+
+#ifdef HAVE_FIVEWAY_SDK
+NAVIGATION ID frmSearch
+INITIALSTATE kFrmNavHeaderFlagsObjectFocusStartState
+INITIALOBJECTID frmSearchField
+JUMPOBJECTID   frmSearchField
+BOTTOMLEFTOBJECTID frmSearchOK
+NAVIGATIONMAP
+        ROW frmSearchField frmSearchHistory
+        ROW frmSearchCasesensitive
+        ROW frmSearchPhrase
+        ROW frmSearchPopup
+#ifdef SUPPORT_TRANSLITERATION
+        ROW frmSearchXlitPopup
+#endif
+        ROW frmSearchOK frmSearchCancel
+END
+#endif
+
+
+STRING ID strSearchHelp         "$$FIND: HELP"
+
+STRING ID strNoTransliteration  "$$FIND: NO TRANSLITERATION"
+
+
+//
+//  Search Result Form
+//
+
+STRING ID strResultMatches      "$$RESULT: MATCHES"
+STRING ID strResultNoMatches    "$$RESULT: NOMATCHES"
+STRING ID strResultSearching    "$$RESULT: SEARCHING..."
+
+
+FORM ID frmResult AT ( 2 2 156 156 )
+USABLE
+MODAL
+SAVEBEHIND
+BEGIN
+    TITLE "$$RESULT: TITLE"
+
+    FIELD ID frmResultStatus AT (5 17 150 11) USABLE FONT 0 NONEDITABLE
+         MAXCHARS 15+MAX_PATTERN_LEN
+
+    BUTTON "$$RESULT: STOP" ID frmResultStop AT (3 BOTTOM@153 AUTO AUTO)
+    BUTTON "$$RESULT: CANCEL" ID frmResultCancel AT (3 BOTTOM@153 AUTO AUTO)
+         NONUSABLE
+    BUTTON "$$RESULT: FINDMORE" ID frmResultFindMore
+         AT (PREVRIGHT+5 PREVTOP AUTO AUTO) NONUSABLE
+END
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmResult
+BEGIN
+    DIA_FORM_USE_BIN     // formFlags
+    BIN_MAIN_FULLSCREEN   // bin
+    DIA_STATE_MIN         // preferredState
+    // Object data
+    0             DIA_H_PLUS_DH+DIA_W_PLUS_DW          0 // the form itself
+    frmResultStop           DIA_Y_BOTTOM               0
+    frmResultCancel         DIA_Y_BOTTOM               0
+    frmResultFindMore       DIA_Y_BOTTOM               0
+END
+#endif
+
+
+//
+//  Email Form
+//
+
+FORM ID frmEmail AT ( 0 0 160 160 )
+FRAME
+USABLE
+BEGIN
+    TITLE "$$EMAIL: TITLE"
+
+    LABEL "$$EMAIL: TO:" frmEmailToLabel AT (RIGHT@28 20) FONT 1
+    FIELD ID frmEmailTo AT (PREVRIGHT+2 PREVTOP 148-PREVRIGHT+2 AUTO) USABLE
+         LEFTALIGN FONT 0 EDITABLE MAXCHARS 50 UNDERLINED MULTIPLELINES
+         HASSCROLLBAR
+    BUTTON "\022" ID frmEmailToArrow AT (151 PREVTOP 8 AUTO) USABLE FONT 3
+         NOFRAME
+
+    LABEL "$$EMAIL: CC:" frmEmailCcLabel AT (RIGHT@28 PREVBOTTOM) FONT 1
+    FIELD ID frmEmailCc AT (PREVRIGHT+2 PREVTOP 148-PREVRIGHT+2 AUTO) USABLE
+         LEFTALIGN FONT 0 EDITABLE MAXCHARS 50 UNDERLINED MULTIPLELINES
+         HASSCROLLBAR
+    BUTTON "\022" ID frmEmailCcArrow AT (151 PREVTOP 8 AUTO) USABLE FONT 3
+         NOFRAME
+
+    LABEL "$$EMAIL: SUBJECT:" frmEmailSubjectLabel AT (RIGHT@28 PREVBOTTOM)
+         FONT 1
+    FIELD ID frmEmailSubject AT (PREVRIGHT+2 PREVTOP 148-PREVRIGHT+2 AUTO)
+         USABLE LEFTALIGN FONT 0 EDITABLE MAXCHARS 50 UNDERLINED MULTIPLELINES
+         HASSCROLLBAR AUTOSHIFT
+    BUTTON "\022" ID frmEmailSubjectArrow AT (151 PREVTOP 8 AUTO) USABLE FONT 3
+         NOFRAME
+
+    FIELD ID frmEmailMessage AT (2 PREVBOTTOM 150 80) USABLE LEFTALIGN FONT 0
+         EDITABLE MAXCHARS 5000 UNDERLINED MULTIPLELINES HASSCROLLBAR AUTOSHIFT
+    SCROLLBAR ID frmEmailScrollBar AT (PREVRIGHT+1 PREVTOP 7 PREVHEIGHT)
+         VALUE 0 MIN 0 MAX 0 PAGESIZE 0
+
+    BUTTON "$$EMAIL: SEND" ID frmEmailSend AT (3 BOTTOM@156 AUTO AUTO)
+    BUTTON "$$EMAIL: CANCEL" ID frmEmailCancel
+         AT (PREVRIGHT+5 PREVTOP AUTO AUTO)
+
+    GRAFFITISTATEINDICATOR AT (RIGHT@143 BOTTOM@156)
+END
+
+#ifdef HAVE_FIVEWAY_SDK
+NAVIGATION ID frmEmail
+INITIALSTATE kFrmNavHeaderFlagsObjectFocusStartState
+INITIALOBJECTID frmEmailSubject
+JUMPOBJECTID   frmEmailSubject
+BOTTOMLEFTOBJECTID frmEmailSend
+NAVIGATIONMAP
+        ROW frmEmailTo
+        ROW frmEmailCc
+        ROW frmEmailSubject
+        ROW frmEmailMessage
+        ROW frmEmailSend frmEmailCancel
+END
+#endif
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmEmail
+BEGIN
+    DIA_FORM_USE_BIN // formFlags
+    BIN_EDITABLE     // bin
+    DIA_STATE_MAX    // preferredState
+    // Object data
+    0             DIA_H_PLUS_DH+DIA_W_PLUS_DW          0 // the form itself
+    GSI_OBJECT_ID      DIA_Y_BOTTOM+DIA_X_RIGHT          0
+    frmEmailMessage    DIA_W_PLUS_DW+DIA_H_PLUS_DH       0
+    frmEmailScrollBar  DIA_H_PLUS_DH+DIA_X_RIGHT         0
+    frmEmailSubject    DIA_W_PLUS_DW                     0
+    frmEmailCc         DIA_W_PLUS_DW                     0
+    frmEmailCcArrow    DIA_X_RIGHT                       0
+    frmEmailToArrow    DIA_X_RIGHT                       0
+    frmEmailSubjectArrow DIA_X_RIGHT                     0
+    frmEmailTo         DIA_W_PLUS_DW                     0
+    frmEmailSend       DIA_Y_BOTTOM                      0
+    frmEmailCancel     DIA_Y_BOTTOM                      0
+END
+#endif
+
+//
+//  Bookmark Form
+//
+
+FORM ID frmBookmarks AT ( 2 2 156 156 )
+USABLE
+MODAL
+SAVEBEHIND
+BEGIN
+    TITLE "$$BOOKMARKS: TITLE"
+
+    LIST "" ID frmBookmarksList AT (0 13 156 121) USABLE FONT 0
+
+    BUTTON "$$BOOKMARKS: DONE" ID frmBookmarksDone AT (3 BOTTOM@153 AUTO AUTO)
+    BUTTON "$$BOOKMARKS: DELETE" ID frmBookmarksDelete
+         AT (PREVRIGHT+5 PREVTOP AUTO AUTO)
+    BUTTON "$$BOOKMARKS: GO TO" ID frmBookmarksGo
+         AT (PREVRIGHT+5 PREVTOP AUTO AUTO)
+END
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmBookmarks
+BEGIN
+    DIA_FORM_USE_BIN // formFlags
+    BIN_MAIN_FULLSCREEN   // bin
+    DIA_STATE_MIN    // preferredState
+    // Object data
+    0             DIA_H_PLUS_DH+DIA_W_PLUS_DW          0 // the form itself
+    frmBookmarksDone   DIA_Y_BOTTOM                      0
+    frmBookmarksDelete DIA_Y_BOTTOM                      0
+    frmBookmarksGo     DIA_Y_BOTTOM                      0
+    frmBookmarksList   DIA_W_PLUS_DW+DIA_H_PLUS_DH       0
+END
+#endif
+
+//
+//  External Links Form
+//
+
+FORM ID frmExternalLinks AT ( 2 2 156 156 )
+USABLE
+MODAL
+SAVEBEHIND
+BEGIN
+    TITLE "$$EXTERN: TITLE"
+
+    LABEL "$$EXTERN: LABEL1" AUTOID AT (5 15) FONT 0
+    LABEL "$$EXTERN: LABEL2" AUTOID AT (PREVLEFT PREVBOTTOM-1) FONT 0
+    LABEL "$$EXTERN: LABEL3" AUTOID AT (PREVLEFT PREVBOTTOM-1) FONT 0
+    LABEL "$$EXTERN: LABEL4" AUTOID AT (PREVLEFT PREVBOTTOM-1) FONT 0
+    LABEL "$$EXTERN: LABEL5" AUTOID AT (PREVLEFT PREVBOTTOM-1) FONT 0
+    LABEL "$$EXTERN: LABEL6" AUTOID AT (PREVLEFT PREVBOTTOM-1) FONT 0
+
+    LABEL "$$EXTERN: URL:" AUTOID AT (5 PREVBOTTOM+5) FONT 1
+    FIELD ID frmExternalLinksLink AT (PREVRIGHT+2 PREVTOP 125 40) USABLE
+         LEFTALIGN FONT 0 EDITABLE MAXCHARS 200 MULTIPLELINES
+
+    BUTTON "$$EXTERN: BACK" ID frmExternalLinksBack AT (3 BOTTOM@153 AUTO AUTO)
+    BUTTON "$$EXTERN: COPY URL" ID frmExternalLinksCopy
+         AT (PREVRIGHT+5 PREVTOP AUTO AUTO)
+#ifdef HAVE_PALMONE_SDK
+    BUTTON "$$EXTERN: BROWSE ONLINE" ID frmExternalLinksBrowse
+         AT (PREVRIGHT+5 PREVTOP AUTO AUTO)
+#endif
+END
+
+STRING ID strExternNoURL  "$$EXTERN: NO URL"
+
+
+//
+//  Category Form
+//
+
+FORM ID frmCategory AT ( 0 2 160 158 )
+USABLE
+SAVEBEHIND
+MODAL
+HELPID strCatHelp
+BEGIN
+    TITLE "$$CATEGORY: TITLE"
+
+    BUTTON "\011" ID frmCatOpen2 AT (1 33 7 9) NOFRAME FONT 3 NONUSABLE
+    BUTTON "\011" ID frmCatOpen3 AT (PREVLEFT PREVBOTTOM+3 7 9) NOFRAME FONT 3
+         NONUSABLE
+    BUTTON "\011" ID frmCatOpen4 AT (PREVLEFT PREVBOTTOM+3 7 9) NOFRAME FONT 3
+         NONUSABLE
+    BUTTON "\011" ID frmCatOpen5 AT (PREVLEFT PREVBOTTOM+3 7 9) NOFRAME FONT 3
+         NONUSABLE
+    BUTTON "\011" ID frmCatOpen6 AT (PREVLEFT PREVBOTTOM+3 7 9) NOFRAME FONT 3
+         NONUSABLE
+    BUTTON "\011" ID frmCatOpen7 AT (PREVLEFT PREVBOTTOM+3 7 9) NOFRAME FONT 3
+         NONUSABLE
+    BUTTON "\011" ID frmCatOpen8 AT (PREVLEFT PREVBOTTOM+3 7 9) NOFRAME FONT 3
+         NONUSABLE
+    PUSHBUTTON "$$CATEGORY: UNFILED" ID frmCat1 AT (PREVRIGHT+2 20 65 11)
+    PUSHBUTTON "" ID frmCat2
+         AT (PREVLEFT PREVBOTTOM+1 PREVWIDTH PREVHEIGHT) NONUSABLE
+    PUSHBUTTON "" ID frmCat3
+         AT (PREVLEFT PREVBOTTOM+1 PREVWIDTH PREVHEIGHT) NONUSABLE
+    PUSHBUTTON "" ID frmCat4
+         AT (PREVLEFT PREVBOTTOM+1 PREVWIDTH PREVHEIGHT) NONUSABLE
+    PUSHBUTTON "" ID frmCat5
+         AT (PREVLEFT PREVBOTTOM+1 PREVWIDTH PREVHEIGHT) NONUSABLE
+    PUSHBUTTON "" ID frmCat6
+         AT (PREVLEFT PREVBOTTOM+1 PREVWIDTH PREVHEIGHT) NONUSABLE
+    PUSHBUTTON "" ID frmCat7
+         AT (PREVLEFT PREVBOTTOM+1 PREVWIDTH PREVHEIGHT) NONUSABLE
+    PUSHBUTTON "" ID frmCat8
+         AT (PREVLEFT PREVBOTTOM+1 PREVWIDTH PREVHEIGHT) NONUSABLE
+
+    BUTTON "\011" ID frmCatOpen9 AT (78 21 7 9) NOFRAME FONT 3 NONUSABLE
+    BUTTON "\011" ID frmCatOpen10 AT (PREVLEFT PREVBOTTOM+3 7 9) NOFRAME FONT 3
+         NONUSABLE
+    BUTTON "\011" ID frmCatOpen11 AT (PREVLEFT PREVBOTTOM+3 7 9) NOFRAME FONT 3
+         NONUSABLE
+    BUTTON "\011" ID frmCatOpen12 AT (PREVLEFT PREVBOTTOM+3 7 9) NOFRAME FONT 3
+         NONUSABLE
+    BUTTON "\011" ID frmCatOpen13 AT (PREVLEFT PREVBOTTOM+3 7 9) NOFRAME FONT 3
+         NONUSABLE
+    BUTTON "\011" ID frmCatOpen14 AT (PREVLEFT PREVBOTTOM+3 7 9) NOFRAME FONT 3
+         NONUSABLE
+    BUTTON "\011" ID frmCatOpen15 AT (PREVLEFT PREVBOTTOM+3 7 9) NOFRAME FONT 3
+         NONUSABLE
+    BUTTON "\011" ID frmCatOpen16 AT (PREVLEFT PREVBOTTOM+3 7 9) NOFRAME FONT 3
+         NONUSABLE
+    PUSHBUTTON "" ID frmCat9 AT (PREVRIGHT+3 20 65 11) NONUSABLE
+    PUSHBUTTON "" ID frmCat10
+         AT (PREVLEFT PREVBOTTOM+1 PREVWIDTH PREVHEIGHT) NONUSABLE
+    PUSHBUTTON "" ID frmCat11
+         AT (PREVLEFT PREVBOTTOM+1 PREVWIDTH PREVHEIGHT) NONUSABLE
+    PUSHBUTTON "" ID frmCat12
+         AT (PREVLEFT PREVBOTTOM+1 PREVWIDTH PREVHEIGHT) NONUSABLE
+    PUSHBUTTON "" ID frmCat13
+         AT (PREVLEFT PREVBOTTOM+1 PREVWIDTH PREVHEIGHT) NONUSABLE
+    PUSHBUTTON "" ID frmCat14
+         AT (PREVLEFT PREVBOTTOM+1 PREVWIDTH PREVHEIGHT) NONUSABLE
+    PUSHBUTTON "" ID frmCat15
+         AT (PREVLEFT PREVBOTTOM+1 PREVWIDTH PREVHEIGHT) NONUSABLE
+    PUSHBUTTON "" ID frmCat16
+         AT (PREVLEFT PREVBOTTOM+1 PREVWIDTH PREVHEIGHT) NONUSABLE
+
+    CHECKBOX "$$CATEGORY: MULTIPLE SELECT" ID frmCatMultiple
+         AT (3 BOTTOM@135 AUTO AUTO) LEFTANCHOR
+    PUSHBUTTON "$$CATEGORY: AND" ID frmCatAND
+         AT (RIGHT@CATEGORIES_AND_POS PREVTOP AUTO AUTO) NONUSABLE GROUP 1
+    PUSHBUTTON "$$CATEGORY: OR" ID frmCatOR
+         AT (PREVRIGHT+1 PREVTOP AUTO AUTO) NONUSABLE GROUP 1
+
+    LIST "$$CATEGORY: DELETE" "$$CATEGORY: RENAME" ID frmCatList
+         AT (0 0 CATEGORIES_POPUP 11) NONUSABLE VISIBLEITEMS 2 FONT 0
+    POPUPLIST frmCatPopup frmCatList
+
+    BUTTON "$$CATEGORY: OK" ID frmCatOK AT (3 BOTTOM@155 CATEGORIES_OK_BUTTON AUTO)
+    BUTTON "$$CATEGORY: CANCEL" ID frmCatCancel
+         AT (PREVRIGHT+5 PREVTOP CATEGORIES_CANCEL_BUTTON AUTO)
+    BUTTON "$$CATEGORY: ALL" ID frmCatAll AT (PREVRIGHT+5 PREVTOP CATEGORIES_ALL_BUTTON AUTO)
+    BUTTON "$$CATEGORY: NONE" ID frmCatNone
+         AT (PREVRIGHT+5 PREVTOP CATEGORIES_NONE_BUTTON AUTO)
+END
+
+STRING ID strCatHelp    "$$CATEGORY: HELP"
+
+
+//
+//  New Category Form
+//
+
+FORM ID frmNewCategory AT ( 2 90 156 68 )
+USABLE
+MODAL
+SAVEBEHIND
+BEGIN
+    TITLE "$$EDIT CATEGORIES: TITLE"
+
+    LABEL "$$EDIT CATEGORIES: NAME:" AUTOID AT (3 20) FONT 1
+    FIELD ID frmNewCatName AT (3 PREVBOTTOM+2 140 AUTO) USABLE LEFTALIGN FONT 0
+         EDITABLE UNDERLINED MAXCHARS 15 AUTOSHIFT
+
+    BUTTON "$$EDIT CATEGORIES: OK" ID frmNewCatOK AT (3 BOTTOM@63 AUTO AUTO)
+    BUTTON "$$EDIT CATEGORIES: CANCEL" ID frmNewCatCancel
+         AT (PREVRIGHT+5 PREVTOP AUTO AUTO)
+
+    GRAFFITISTATEINDICATOR AT (RIGHT@143 BOTTOM@68)
+END
+
+
+//
+//  Synchronizing Document List Message
+//
+
+STRING ID strSyncDocList "$$INITDOC: SYNCHRONIZING"
+
+//
+//  Open Document List Message
+//
+
+STRING ID strOpenDocList "$$INITDOC: OPEN DOC LIST"
+
+//
+//  Sort Documents Message
+//
+
+STRING ID strSortDoc "$$SORTDOC: SORTING..."
+
+
+//
+//  Hardcopy Form
+//
+
+FORM ID frmHardcopy AT ( 0 0 160 160 )
+FRAME
+USABLE
+BEGIN
+    TITLE "$$HARDCOPY: TITLE"
+
+    BUTTON "$$HARDCOPY: CANCEL" ID frmHardcopyCancel
+         AT (3 BOTTOM@159 AUTO AUTO)
+    BUTTON "$$HARDCOPY: EXPORT" ID frmHardcopyExport
+         AT (PREVRIGHT+5 PREVTOP AUTO AUTO)
+#ifdef HAVE_ROT13
+    BUTTON "$$HARDCOPY: ROT13" ID frmHardcopyRot13
+         AT (PREVRIGHT+5 PREVTOP AUTO AUTO)
+#endif
+    FIELD ID frmHardcopyField AT (2 15 150 BOTTOM@PREVTOP-17) USABLE LEFTALIGN
+         FONT 0 EDITABLE MAXCHARS 2900 MULTIPLELINES UNDERLINED
+    SCROLLBAR ID frmHardcopyScrollBar AT (PREVRIGHT+1 PREVTOP 7 PREVHEIGHT)
+         VALUE 0 MIN 0 MAX 0 PAGESIZE 0
+
+    GRAFFITISTATEINDICATOR AT (RIGHT@143 BOTTOM@156)
+END
+
+#ifdef HAVE_FIVEWAY_SDK
+NAVIGATION ID frmHardcopy
+INITIALSTATE kFrmNavHeaderFlagsObjectFocusStartState
+INITIALOBJECTID frmHardcopyField
+JUMPOBJECTID   frmHardcopyField
+BOTTOMLEFTOBJECTID frmHardcopyCancel
+NAVIGATIONMAP
+        ROW frmHardcopyField
+        ROW frmHardcopyCancel 
+            frmHardcopyExport
+#ifdef HAVE_ROT13
+            frmHardcopyRot13
+#endif
+END
+#endif
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmHardcopy
+BEGIN
+    DIA_FORM_USE_BIN // formFlags
+    BIN_EDITABLE     // bin
+    DIA_STATE_MAX    // preferredState
+    // Object data
+    0                  DIA_W_PLUS_DW+DIA_H_PLUS_DH    0 // the form itself
+    frmHardcopyCancel  DIA_Y_BOTTOM                   0
+    frmHardcopyExport  DIA_Y_BOTTOM                   0
+#ifdef HAVE_ROT13
+    frmHardcopyRot13   DIA_Y_BOTTOM                   0
+#endif
+    frmHardcopyField   DIA_W_PLUS_DW+DIA_H_PLUS_DH    0
+    frmHardcopyScrollBar DIA_H_PLUS_DH+DIA_X_RIGHT    0
+    GSI_OBJECT_ID        DIA_X_RIGHT+DIA_Y_BOTTOM     0
+END
+#endif
+
+//
+//  Annotation Form
+//
+
+STRING ID strAddBookmarkTitle "$$ADD BOOKMARK: TITLE"
+STRING ID strAnnotationTitle  "$$ANNOTATION: TITLE"
+
+FORM ID frmAnnotation AT ( 0 0 160 160 )
+FRAME
+USABLE
+BEGIN
+    TITLE "012345679012345679012345679012345679012345679012345679012345679"
+    BUTTON "$$ANNOTATION: OK" ID frmAnnotationOK
+         AT (1 BOTTOM@159 AUTO AUTO)
+    BUTTON "$$ANNOTATION: CANCEL" ID frmAnnotationCancel
+         AT (PREVRIGHT+5 PREVTOP AUTO AUTO)
+    BUTTON "$$ANNOTATION: DELETE" ID frmAnnotationDelete
+         AT (PREVRIGHT+5 PREVTOP AUTO AUTO) NONUSABLE
+    FIELD ID frmAnnotationField AT (2 15 150 BOTTOM@PREVTOP-17) USABLE LEFTALIGN
+         FONT 0 EDITABLE MAXCHARS 4000 MULTIPLELINES UNDERLINED
+    SCROLLBAR ID frmAnnotationScrollBar AT (PREVRIGHT+1 PREVTOP 7 PREVHEIGHT)
+         VALUE 0 MIN 0 MAX 0 PAGESIZE 0
+
+    GRAFFITISTATEINDICATOR AT (RIGHT@143 BOTTOM@156)
+END
+
+#ifdef HAVE_FIVEWAY_SDK
+NAVIGATION ID frmAnnotation
+INITIALSTATE kFrmNavHeaderFlagsObjectFocusStartState
+INITIALOBJECTID frmAnnotationField
+JUMPOBJECTID   frmAnnotationField
+BOTTOMLEFTOBJECTID frmAnnotationOK
+NAVIGATIONMAP
+        ROW frmAnnotationField
+        ROW frmAnnotationOK frmAnnotationCancel frmAnnotationDelete
+END
+#endif
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmAnnotation
+BEGIN
+    DIA_FORM_USE_BIN // formFlags
+    BIN_EDITABLE   // bin
+    DIA_STATE_MAX    // preferredState
+    // Object data
+    0                  DIA_W_PLUS_DW+DIA_H_PLUS_DH    0 // the form itself
+    frmAnnotationOK        DIA_Y_BOTTOM                   0
+    frmAnnotationDelete    DIA_Y_BOTTOM                   0
+    frmAnnotationCancel    DIA_Y_BOTTOM                   0
+    frmAnnotationField     DIA_W_PLUS_DW+DIA_H_PLUS_DH    0
+    frmAnnotationScrollBar DIA_H_PLUS_DH+DIA_X_RIGHT      0
+    GSI_OBJECT_ID          DIA_X_RIGHT+DIA_Y_BOTTOM       0
+END
+#endif
+
+//
+// Full-screen Image Form
+//
+
+FORM ID frmFullscreen AT ( 0 0 160 160 )
+MENUID menuFullscreenForm
+NOFRAME
+USABLE
+BEGIN
+    BUTTON "$$BACK" ID frmFullscreenBack AT (1 147 AUTO AUTO)
+END
+
+#ifdef HAVE_SILKSCREEN
+WORDLIST ID frmFullscreen
+BEGIN
+    DIA_FORM_USE_BIN // formFlags
+    BIN_MAIN_FULLSCREEN   // bin
+    DIA_STATE_MIN    // preferredState
+    // Object data
+    0             DIA_H_PLUS_DH+DIA_W_PLUS_DW          0 // the form itself
+END
+#endif
+
+
+
+//
+//  Categories
+//
+
+CATEGORIES ID strCatDefault     "$$CATEGORY: UNFILED"
+
+
+//
+// Alerts
+//
+
+#if 1 || defined( DEBUG ) && defined( DEBUG_LOG )
+ALERT ID infoDebug
+INFORMATION
+BEGIN
+    TITLE "DEBUG"
+    MESSAGE "^1\n^2\n"
+    BUTTONS "$$OK"
+END
+#endif
+
+ALERT ID infoWrongROMVersion
+INFORMATION
+BEGIN
+    TITLE "$$SYSTEM INCOMPATIBLE"
+    MESSAGE "$$SYSTEM MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID infoTooHighBitDepth
+INFORMATION
+BEGIN
+    TITLE "$$HIGH BITDEPTH"
+    MESSAGE "$$HIGH BITDEPTH MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID infoEmptyPatterns
+INFORMATION
+BEGIN
+    TITLE "$$EMPTY PATTERNS"
+    MESSAGE "$$EMPTY PATTERNS MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID infoNoBeamSupport
+INFORMATION
+BEGIN
+    TITLE "$$NO BEAM SUPPORT"
+    MESSAGE "$$NO BEAM SUPPORT MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID infoCopyProtected
+INFORMATION
+BEGIN
+    TITLE "$$COPY PROTECTED"
+    MESSAGE "$$COPY PROTECTED MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID confirmDeleteOldAnnotations
+CONFIRMATION
+BEGIN
+    TITLE "$$DELETE OLD ANNOTATIONS"
+    MESSAGE "$$DELETE OLD ANNOTATIONS MSG"
+    BUTTONS "$$YES" "$$NO" "$$DO NOT ASK"
+END
+
+ALERT ID confirmDeleteAnnotations
+CONFIRMATION
+BEGIN
+    TITLE "$$DELETE ANNOTATIONS"
+    MESSAGE "$$DELETE ANNOTATIONS MSG"
+    BUTTONS "$$YES" "$$NO" "$$ALWAYS"
+END
+
+ALERT ID confirmEndOfDoc
+DEFAULTBUTTON 1
+CONFIRMATION
+BEGIN
+    TITLE "$$FIND: TITLE"
+    MESSAGE "$$END OF DOC MSG"
+    BUTTONS "$$OK" "$$CANCEL"
+END
+
+ALERT ID confirmEndOfPage
+DEFAULTBUTTON 2
+CONFIRMATION
+BEGIN
+    TITLE "$$FIND: TITLE"
+    MESSAGE "$$END OF PAGE MSG"
+    BUTTONS "$$NEXT" "$$RESTART" "$$CANCEL"
+END
+
+ALERT ID confirmDelete
+DEFAULTBUTTON 1
+CONFIRMATION
+BEGIN
+    TITLE "$$CONFIRM DELETE"
+    MESSAGE "$$DELETE MSG"
+    BUTTONS "$$DELETE" "$$CANCEL"
+END
+
+ALERT ID confirmDeleteMetaDoc
+DEFAULTBUTTON 1
+CONFIRMATION
+BEGIN
+    TITLE "$$CONFIRM DELETE METADOC"
+    MESSAGE "$$DELETE METADOC MSG"
+    BUTTONS "$$DELETE" "$$LEAVE"
+END
+
+ALERT ID confirmDeleteAllDoc
+DEFAULTBUTTON 1
+CONFIRMATION
+BEGIN
+    TITLE "$$CONFIRM DELETE ALL"
+    MESSAGE "$$DELETE ALL MSG"
+    BUTTONS "$$DELETE" "$$CANCEL"
+END
+
+ALERT ID confirmDeleteReadDoc
+DEFAULTBUTTON 1
+CONFIRMATION
+BEGIN
+    TITLE "$$CONFIRM DELETE READ"
+    MESSAGE "$$DELETE READ MSG"
+    BUTTONS "$$DELETE" "$$CANCEL"
+END
+
+ALERT ID confirmMergeCategory
+DEFAULTBUTTON 1
+CONFIRMATION
+BEGIN
+    TITLE "$$MERGE CATEGORY"
+    MESSAGE "$$MERGE CATEGORY MSG"
+    BUTTONS "$$YES" "$$NO"
+END
+
+
+ALERT ID warnBrokenDocument
+WARNING
+BEGIN
+    TITLE "$$BROKEN DOCUMENT"
+    MESSAGE "$$BROKEN MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID warnInsufficientMemory
+WARNING
+BEGIN
+    TITLE "$$INSUFFICIENT MEMORY"
+    MESSAGE "$$INSUFFICIENT MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID warnLowEmailMem
+WARNING
+BEGIN
+    TITLE "$$LOW MEMORY"
+    MESSAGE "$$EMAIL MEMORY MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID warnLowHardcopyMem
+WARNING
+BEGIN
+    TITLE "$$LOW MEMORY"
+    MESSAGE "$$HARDCOPY MEMORY MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID warnLowImageMem
+WARNING
+BEGIN
+    TITLE "$$LOW MEMORY"
+    MESSAGE "$$IMAGE MEMORY MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID warnNoTo
+WARNING
+BEGIN
+    TITLE "$$NO TOADDR"
+    MESSAGE "$$NO TOADDR MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID warnNoZLibSupport
+WARNING
+BEGIN
+    TITLE "$$ZLIB NOT SUPPORTED"
+    MESSAGE "$$ZLIB MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID warnManualSync
+WARNING
+BEGIN
+    TITLE "$$MANUAL SYNC"
+    MESSAGE "$$MANUAL SYNC MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID warnStayOn
+WARNING
+BEGIN
+    TITLE "$$AUTOSCROLL STAY ON"
+    MESSAGE "$$STAY ON MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID warnInvalidOwner
+WARNING
+BEGIN
+    TITLE "$$INVALID OWNER"
+    MESSAGE "$$INVALID OWNER MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID errNoCategory
+ERROR
+BEGIN
+    TITLE "$$NO CATEGORY"
+    MESSAGE "$$NO CATEGORY MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID errCategoryExists
+ERROR
+BEGIN
+    TITLE "$$CATEGORY NAME"
+    MESSAGE "$$CATEGORY NAME MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID errCannotDeleteDoc
+ERROR
+BEGIN
+    TITLE "$$CANNOT DELETE"
+    MESSAGE "$$CANNOT DELETE MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID errCannotDeleteAllDoc
+ERROR
+BEGIN
+    TITLE "$$CANNOT DELETE ALL"
+    MESSAGE "$$CANNOT DELETE ALL MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID errCannotDeleteReadDoc
+ERROR
+BEGIN
+    TITLE "$$CANNOT DELETE READ"
+    MESSAGE "$$CANNOT DELETE READ MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID errBadMailto
+ERROR
+BEGIN
+    TITLE "$$BAD MAILTO"
+    MESSAGE "$$BAD MAILTO MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID errAlreadyExists
+ERROR
+BEGIN
+    TITLE "$$RENAME: TITLE"
+    MESSAGE "$$ALREADY EXISTS"
+    BUTTONS "$$OK"
+END
+
+ALERT ID errCannotRenameDoc
+ERROR
+BEGIN
+    TITLE "$$RENAME: TITLE"
+    MESSAGE "$$CANNOT RENAME DOC"
+    BUTTONS "$$OK"
+END
+
+ALERT ID errReadOnly
+ERROR
+BEGIN
+    TITLE "$$READ ONLY"
+    MESSAGE "$$READ ONLY MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID errUnknownType
+ERROR
+BEGIN
+    TITLE "$$UNKNOWN TYPE"
+    MESSAGE "$$UNKNOWN TYPE MSG"
+    BUTTONS "$$OK"
+END
+
+
+ALERT ID errCannotFind
+ERROR
+BEGIN
+    TITLE "$$CANNOT FIND DOC"
+    MESSAGE "$$CANNOT FIND DOC MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID errUnhandledException
+ERROR
+BEGIN
+    TITLE "$$UNHANDLED EXCEPTION"
+    MESSAGE "$$UNHANDLED EXCEPTION MSG"
+    BUTTONS "$$EXIT"
+END
+
+ALERT ID errCannotAddBookmark
+ERROR
+BEGIN
+    TITLE "$$CANNOT ADD BOOKMARK"
+    MESSAGE "$$CANNOT ADD BOOKMARK MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID errCannotDeleteBookmark
+ERROR
+BEGIN
+    TITLE "$$CANNOT DELETE BOOKMARK"
+    MESSAGE "$$CANNOT DELETE BOOKMARK MSG"
+    BUTTONS "$$OK"
+END
+
+ALERT ID errImageError
+ERROR
+BEGIN
+    TITLE "$$IMAGE ERROR"
+    MESSAGE "$$IMAGE ERROR MSG"
+    BUTTONS "$$OK"
+END
+
+
+//
+// Bitmaps
+//
+
+#if defined( HAVE_HIRES ) && defined( HAVE_PILRC_EXBMP )
+BITMAPFAMILYEX ID bmpDbase COMPRESS
+BEGIN
+    BITMAP "library.bmp" BPP 1
+    BITMAP "library-2bpp.bmp" BPP 2
+    BITMAP "library-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "library_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+
+BITMAPFAMILYEX ID bmpFind COMPRESS
+BEGIN
+    BITMAP "find.bmp" BPP 1
+    BITMAP "find-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "find_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+
+BITMAPFAMILYEX ID bmpAgain COMPRESS
+BEGIN
+    BITMAP "again.bmp" BPP 1
+    BITMAP "again-2bpp.bmp" BPP 2
+    BITMAP "again-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "again_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+
+BITMAPFAMILYEX ID bmpHome COMPRESS
+BEGIN
+    BITMAP "home.bmp" BPP 1
+    BITMAP "home-2bpp.bmp" BPP 2
+    BITMAP "home-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "home_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+
+BITMAPFAMILYEX ID bmpLeft COMPRESS
+BEGIN
+    BITMAP "left.bmp" BPP 1
+    BITMAP "left-2bpp.bmp" BPP 2
+    BITMAP "left-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "left_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+
+BITMAPFAMILYEX ID bmpRight COMPRESS
+BEGIN
+    BITMAP "right.bmp" BPP 1
+    BITMAP "right-2bpp.bmp" BPP 2
+    BITMAP "right-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "right_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+
+BITMAPFAMILYEX ID bmpLookup COMPRESS
+BEGIN
+    BITMAP "lookup.bmp" BPP 1
+    BITMAP "lookup-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "lookup_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+
+BITMAPFAMILYEX ID bmpWait COMPRESS
+BEGIN
+    BITMAP "@@WAIT@@.bmp" BPP 1
+    BITMAP "@@WAIT@@-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "@@WAIT@@_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+#else
+BITMAPFAMILY ID bmpDbase
+    "library.bmp"
+    "library-2bpp.bmp"
+    ""
+    "library-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+BITMAPFAMILY ID bmpFind
+    "find.bmp"
+    ""
+    ""
+    "find-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+BITMAPFAMILY ID bmpAgain
+    "again.bmp"
+    "again-2bpp.bmp"
+    ""
+    "again-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+BITMAPFAMILY ID bmpHome
+    "home.bmp"
+    "home-2bpp.bmp"
+    ""
+    "home-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+BITMAPFAMILY ID bmpLeft
+    "left.bmp"
+    "left-2bpp.bmp"
+    ""
+    "left-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+BITMAPFAMILY ID bmpRight
+    "right.bmp"
+    "right-2bpp.bmp"
+    ""
+    "right-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+BITMAPFAMILY ID bmpLookup
+    "lookup.bmp"
+    "lookup-2bpp.bmp"
+    "lookup-4bpp.bmp"
+    "lookup-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+BITMAPFAMILY ID bmpWait
+    "@@WAIT@@.bmp"
+    ""
+    ""
+    "@@WAIT@@-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+#endif
+
+BITMAP ID bmpChicken
+    "chicken.bmp"
+    COMPRESS
+
+BITMAP ID bmpMode1
+    "mode1.bmp"
+    COMPRESS
+
+BITMAP ID bmpMode2
+    "mode2.bmp"
+    COMPRESS
+
+BITMAP ID bmpMode3
+    "mode3.bmp"
+    COMPRESS
+
+#if defined( HAVE_HIRES ) && defined( HAVE_PILRC_EXBMP )
+BITMAPFAMILYEX ID bmpMenu COMPRESS
+BEGIN
+    BITMAP "menu.bmp" BPP 1
+    BITMAP "menu-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "menu_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+#else
+BITMAPFAMILY ID bmpMenu
+    "menu.bmp"
+    ""
+    ""
+    "menu-8bpp.bmp"
+    COMPRESS
+#endif
+
+BITMAPFAMILY ID bmpBar
+    "bar.bmp"
+    ""
+    ""
+    "bar-8bpp.bmp"
+    COMPRESS
+
+BITMAP ID bmpShortBar
+    "shortbar.bmp"
+    COMPRESS
+
+#if defined( HAVE_HIRES ) && defined( HAVE_PILRC_EXBMP )
+BITMAPFAMILYEX ID bmpBookmark COMPRESS
+BEGIN
+    BITMAP "bookmark.bmp" BPP 1
+    BITMAP "bookmark-2bpp.bmp" BPP 2
+    BITMAP "bookmark-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "bookmark_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+#else
+BITMAPFAMILY ID bmpBookmark
+    "bookmark.bmp"
+    "bookmark-2bpp.bmp"
+    ""
+    "bookmark-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+#endif
+
+BITMAP ID bmpSettings
+    "settings.bmp"
+    COMPRESS
+
+BITMAP ID bmpSyncList
+    "sync.bmp"
+    COMPRESS
+
+BITMAP ID bmpTop
+    "top.bmp"
+    COMPRESS
+
+BITMAP ID bmpBottom
+    "bottom.bmp"
+    COMPRESS
+
+BITMAP ID bmpTapAction
+    "tapaction.bmp"
+    COMPRESS
+
+BITMAP ID bmpBtnAction
+    "buttonaction.bmp"
+    COMPRESS
+
+BITMAP ID bmpGestureUp
+    "gestureup.bmp"
+    COMPRESS
+
+BITMAP ID bmpGestureRight
+    "gestureright.bmp"
+    COMPRESS
+
+BITMAP ID bmpGestureDown
+    "gesturedown.bmp"
+    COMPRESS
+
+BITMAP ID bmpGestureLeft
+    "gestureleft.bmp"
+    COMPRESS
+
+BITMAP ID bmpGestureTap
+    "gesturetap.bmp"
+    COMPRESS
+
+#ifdef HAVE_JOGDIAL
+BITMAP ID bmpJogdialUp
+    "jogdialup.bmp"
+    COMPRESS
+    
+BITMAP ID bmpJogdialDown
+    "jogdialdown.bmp"
+    COMPRESS
+    
+BITMAP ID bmpJogdialPush
+    "jogdialpush.bmp"
+    COMPRESS
+
+BITMAP ID bmpJogdialPushUp
+    "jogdialpushup.bmp"
+    COMPRESS
+    
+BITMAP ID bmpJogdialPushDown
+    "jogdialpushdown.bmp"
+    COMPRESS
+
+BITMAP ID bmpJogdialBack
+    "jogdialback.bmp"
+    COMPRESS
+#endif
+
+#if defined( HAVE_HIRES ) && defined( HAVE_PILRC_EXBMP )
+BITMAPFAMILYEX ID bmpAutoscrollStart COMPRESS
+BEGIN
+    BITMAP "autostart.bmp" BPP 1
+    BITMAP "autostart-2bpp.bmp" BPP 2
+    BITMAP "autostart-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "autostart_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+
+BITMAPFAMILYEX ID bmpAutoscrollStop COMPRESS
+BEGIN
+    BITMAP "autostop.bmp" BPP 1
+    BITMAP "autostop-2bpp.bmp" BPP 2
+    BITMAP "autostop-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "autostop_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+
+BITMAPFAMILYEX ID bmpAutoscrollIncr COMPRESS
+BEGIN
+    BITMAP "autoincr.bmp" BPP 1
+    BITMAP "autoincr-2bpp.bmp" BPP 2
+    BITMAP "autoincr-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "autoincr_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+
+BITMAPFAMILYEX ID bmpAutoscrollDecr COMPRESS
+BEGIN
+    BITMAP "autodecr.bmp" BPP 1
+    BITMAP "autodecr-2bpp.bmp" BPP 2
+    BITMAP "autodecr-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "autodecr_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+
+BITMAPFAMILYEX ID bmpMemoryStick COMPRESS
+BEGIN
+    BITMAP "memorystick.bmp" BPP 1
+    BITMAP "memorystick-2bpp.bmp" BPP 2
+    BITMAP "memorystick-4bpp.bmp" BPP 4
+    BITMAP "memorystick-8bpp.bmp" BPP 8
+    BITMAP "memorystick_x2.bmp" BPP 1 DENSITY 2
+    BITMAP "memorystick_x2-2bpp.bmp" BPP 2 DENSITY 2
+    BITMAP "memorystick_x2-4bpp.bmp" BPP 4 DENSITY 2
+    BITMAP "memorystick_x2-8bpp.bmp" BPP 8 DENSITY 2
+END
+
+BITMAPFAMILYEX ID bmpMemoryStick_half COMPRESS
+BEGIN
+    BITMAP "memorystick_half.bmp" BPP 1 /* Placeholder */
+    BITMAP "memorystick.bmp" BPP 1 DENSITY 2
+    BITMAP "memorystick-2bpp.bmp" BPP 2 DENSITY 2
+    BITMAP "memorystick-4bpp.bmp" BPP 4 DENSITY 2
+    BITMAP "memorystick-8bpp.bmp" BPP 8 DENSITY 2
+END
+
+BITMAPFAMILYEX ID bmpCompactFlash COMPRESS
+BEGIN
+    BITMAP "compactflash.bmp" BPP 1
+    BITMAP "compactflash-8bpp.bmp" BPP 8
+    BITMAP "compactflash_x2.bmp" BPP 1 DENSITY 2
+    BITMAP "compactflash_x2-8bpp.bmp" BPP 8 DENSITY 2
+END
+
+BITMAPFAMILYEX ID bmpCompactFlash_half COMPRESS
+BEGIN
+    BITMAP "compactflash_half.bmp" BPP 1 /* Placeholder */
+    BITMAP "compactflash.bmp" BPP 1 DENSITY 2
+    BITMAP "compactflash-8bpp.bmp" BPP 8 DENSITY 2
+END
+
+BITMAPFAMILYEX ID bmpSecureDigital COMPRESS
+BEGIN
+    BITMAP "securedigital.bmp" BPP 1
+    BITMAP "securedigital-8bpp.bmp" BPP 8
+    BITMAP "securedigital_x2.bmp" BPP 1 DENSITY 2
+    BITMAP "securedigital_x2-8bpp.bmp" BPP 8 DENSITY 2
+END
+
+BITMAPFAMILYEX ID bmpSecureDigital_half COMPRESS
+BEGIN
+    BITMAP "securedigital_half.bmp" BPP 1 /* Placeholder */
+    BITMAP "securedigital.bmp" BPP 1 DENSITY 2
+    BITMAP "securedigital-8bpp.bmp" BPP 8 DENSITY 2
+END
+
+BITMAPFAMILYEX ID bmpSmallPluckerIcon COMPRESS
+BEGIN
+    BITMAP "viewersm.bmp" BPP 1
+    BITMAP "viewersm-2bpp.bmp" BPP 2
+    BITMAP "viewersm-8bpp.bmp" BPP 8 TRANSPARENCY 255 255 255
+    BITMAP "viewersm_x2.bmp" BPP 1 DENSITY 2
+    BITMAP "viewersm_x2-2bpp.bmp" BPP 2 DENSITY 2
+    BITMAP "viewersm_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 255 255 255
+END
+
+BITMAPFAMILYEX ID bmpSmallPluckerIcon_half COMPRESS
+BEGIN
+    BITMAP "viewersm_half.bmp" BPP 1 /* Placeholder */
+    BITMAP "viewersm.bmp" BPP 1 DENSITY 2
+    BITMAP "viewersm-2bpp.bmp" BPP 2 DENSITY 2
+    BITMAP "viewersm-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 255 255 255
+END
+#else
+BITMAPFAMILY ID bmpAutoscrollStart
+    "autostart.bmp"
+    "autostart-2bpp.bmp"
+    ""
+    "autostart-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+BITMAPFAMILY ID bmpAutoscrollStop
+    "autostop.bmp"
+    "autostop-2bpp.bmp"
+    ""
+    "autostop-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+BITMAPFAMILY ID bmpAutoscrollIncr
+    "autoincr.bmp"
+    "autoincr-2bpp.bmp"
+    ""
+    "autoincr-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+BITMAPFAMILY ID bmpAutoscrollDecr
+    "autodecr.bmp"
+    "autodecr-2bpp.bmp"
+    ""
+    "autodecr-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+BITMAPFAMILY ID bmpMemoryStick
+    "memorystick.bmp"
+    "memorystick-2bpp.bmp"
+    "memorystick-4bpp.bmp"
+    "memorystick-8bpp.bmp"
+    COMPRESS
+
+BITMAPFAMILY ID bmpCompactFlash
+    "compactflash.bmp"
+    ""
+    ""
+    "compactflash-8bpp.bmp"
+    COMPRESS
+
+BITMAPFAMILY ID bmpSecureDigital
+    "securedigital.bmp"
+    ""
+    ""
+    "securedigital-8bpp.bmp"
+    COMPRESS
+
+BITMAPFAMILY ID bmpSmallPluckerIcon
+    "viewersm.bmp"
+    "viewersm-2bpp.bmp"
+    ""
+    "viewersm-8bpp.bmp"
+    COMPRESS
+#endif
+
+#if defined( HAVE_HIRES ) || defined( HAVE_HANDERA_SDK )
+BITMAPFAMILY ID bmpLongBar
+    "longbar.bmp"
+    ""
+    ""
+    "longbar-8bpp.bmp"
+    COMPRESS
+#endif
+
+/* We need to define two definitions of bmpMemoryStick, bmpCompactFlash,
+   bmpSecureDigital, and bmpSmallPluckerIcon becuase of hires devices that
+   don't support OS5 extended bitmaps. Here we load an _x2 counterpart to mimic
+   DENSITY 2 within a normal bitmap. That way when they're loaded on the device
+   they can be manipulated in such a way that they APPEAR as a hires bitmap
+   while only utilizing the standard lores bitmap format */
+
+#if defined( HAVE_HIRES ) && defined( HAVE_SONY_SDK )
+BITMAPFAMILY ID bmpMemoryStick_x2
+    "memorystick_x2.bmp"
+    "memorystick_x2-2bpp.bmp"
+    "memorystick_x2-4bpp.bmp"
+    "memorystick_x2-8bpp.bmp"
+    COMPRESS
+#endif
+
+#if defined( HAVE_HIRES ) && defined( HAVE_HANDERA_SDK )
+BITMAPFAMILY ID bmpCompactFlash_x2
+    "compactflash_x2.bmp"
+    ""
+    ""
+    "compactflash_x2-8bpp.bmp"
+    COMPRESS
+
+BITMAPFAMILY ID bmpSecureDigital_x2
+    "securedigital_x2.bmp"
+    ""
+    ""
+    "securedigital_x2-8bpp.bmp"
+    COMPRESS
+#endif
+
+#if defined( HAVE_HIRES ) && \
+    ( defined( HAVE_SONY_SDK ) || defined( HAVE_HANDERA_SDK ) )
+BITMAPFAMILY ID bmpSmallPluckerIcon_x2
+    "viewersm_x2.bmp"
+    "viewersm_x2-2bpp.bmp"
+    ""
+    "viewersm_x2-8bpp.bmp"
+    COMPRESS
+#endif
+
+BITMAP ID bmpCopyToMemo
+    "copy.bmp"
+    COMPRESS
+
+BITMAPFAMILY ID bmpArrowLeft
+    "arrowleft.bmp"
+    ""
+    ""
+    "arrowleft-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+BITMAPFAMILY ID bmpArrowRight
+    "arrowright.bmp"
+    ""
+    ""
+    "arrowright-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+BITMAPFAMILY ID bmpArrowUp
+    "arrowup.bmp"
+    ""
+    ""
+    "arrowup-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+BITMAPFAMILY ID bmpArrowDown
+    "arrowdown.bmp"
+    ""
+    ""
+    "arrowdown-8bpp.bmp"
+    TRANSPARENCY 0 255 0 COMPRESS
+
+
+//
+// Application icons
+//
+
+#if defined( HAVE_HIRES ) && defined( HAVE_PILRC_EXBMP )
+ICONFAMILYEX
+BEGIN
+    BITMAP "viewer.bmp" BPP 1
+    BITMAP "viewer-2bpp.bmp" BPP 2
+    BITMAP "viewer-4bpp.bmp" BPP 4
+    BITMAP "viewer-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "viewer_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 0 255 0
+END
+
+SMALLICONFAMILYEX
+BEGIN
+    BITMAP "viewersm.bmp" BPP 1
+    BITMAP "viewersm-2bpp.bmp" BPP 2
+    BITMAP "viewersm-8bpp.bmp" BPP 8 TRANSPARENCY 0 255 0
+    BITMAP "viewersm_x2.bmp" BPP 1 DENSITY 2
+    BITMAP "viewersm_x2-2bpp.bmp" BPP 2 DENSITY 2
+    BITMAP "viewersm_x2-8bpp.bmp" BPP 8 DENSITY 2 TRANSPARENCY 255 255 255
+END
+#else
+ICONFAMILY
+    "viewer.bmp"
+    "viewer-2bpp.bmp"
+    "viewer-4bpp.bmp"
+    "viewer-8bpp.bmp"
+    TRANSPARENCY 0 255 0
+
+SMALLICONFAMILY
+    "viewersm.bmp"
+    "viewersm-2bpp.bmp"
+    ""
+    "viewersm-8bpp.bmp"
+    TRANSPARENCY 255 255 255
+#endif
+
+
+//
+// and finally
+//
+
+VERSION ID 1    "@@VIEWER_VERSION@@"
+@@DEFAULT_CATEGORY@@

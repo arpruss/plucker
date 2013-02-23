@@ -1,0 +1,1007 @@
+/* $Id: ru.rcp,v 1.82 2007/08/28 14:32:11 desrod Exp $ */
+
+/************************************************************
+ * Russian resources by Oleg. V. Krulkovsky <oleg@palmq.ru> *
+ ************************************************************/
+
+TRANSLATION "ru"
+BEGIN
+
+
+"$$LANG"                    =   "ru"
+
+
+/*************************************************************
+ *                      MENU OPTIONS                         *
+ *************************************************************/
+
+"$$ABOUT PLUCKER"           =   "О программе"
+"$$ADD BOOKMARK..."         =   "Добавить закладку..."
+"$$AUTOSCROLL FASTER"       =   "Автоскролл. быстрее"
+"$$AUTOSCROLL SLOWER"       =   "Автоскролл. медленнее"
+"$$BACK"                    =   "Назад"
+"$$BOOKMARKS..."            =   "Закладки..."
+"$$BOTTOM"                  =   "Вниз"
+"$$CONTACT DEVELOPERS"      =   "Написать разработчикам"
+"$$DELETE ALL..."           =   "Удалить все..."
+/*************************************************************/
+"$$DELETE READ..."          =   "Delete read documents..."
+/*************************************************************/
+"$$DETAILS..."              =   "Свойства..."
+"$$FIND AGAIN"              =   "Найти далее"
+"$$FIND..."                 =   "Найти..."
+"$$FORWARD"                 =   "Вперед"
+"$$GO"                      =   "Вперед"
+"$$HOME"                    =   "Домой"
+"$$LIBRARY..."              =   "Библиотека..."
+"$$OPTIONS"                 =   "Опции"
+"$$PREFERENCES..."          =   "Настройки..."
+"$$START AUTOSCROLL"        =   "Пуск автскрролл."
+"$$STOP AUTOSCROLL"         =   "Стоп автоскролл"
+"$$TOP"                     =   "Верх"
+"$$VIEW"                    =   "Просмотр"
+"$$DELETE DOC..."           =   "Удалить документ..."
+"$$SYNC LIST"               =   "Обновить список документов"
+/****************************************************************************/
+"$$SELECT FONT..."          =   "Font and layout..."
+"$$TOGGLE FULLSCREEN"       =   "Toggle fullscreen"
+"$$LOOKUP WORD"             =   "Lookup word"
+"$$COPY TO MEMO"            =   "Export to Memo"
+"$$SHOWHIDE"                =   "Show/Hide"
+"$$SORT"                    =   "Sort"
+"$$NAME"                    =   "Name"
+"$$TYPE"                    =   "Type"
+"$$DATE"                    =   "Date"
+"$$SIZE"                    =   "Size"
+"$$CATEGORY"                =   "Category"
+"$$SET KEYBOARD/GRAFFITI..."   =   "Set keyboard/graffiti..."
+/****************************************************************************/
+
+
+/*************************************************************
+ *                        SHORTCUTS                          *
+ *************************************************************/
+
+"$$SC ADD BOOKMARK"         =   "+"
+"$$SC FIND AGAIN"           =   "A"
+"$$SC BACK"                 =   "B"
+"$$SC COPY TO MEMO"         =   "C"
+"$$SC DELETE ALL"           =   "D"
+"$$SC DELETE DOC"           =   "D"
+"$$SC BOOKMARKS"            =   "E"
+"$$SC FIND"                 =   "F"
+"$$SC HOME"                 =   "H"
+"$$SC DETAILS"              =   "I"
+"$$SC START AUTOSCROLL"     =   "J"
+"$$SC STOP AUTOSCROLL"      =   "K"
+"$$SC LIBRARY"              =   "L"
+"$$SC AUTOSCROLL FASTER"    =   "M"
+"$$SC AUTOSCROLL SLOWER"    =   "N"
+"$$SC SELECT FONT"          =   "O"
+"$$SC PREFERENCES"          =   "P"
+"$$SC LOOKUP WORD"          =   "Q"
+"$$SC SET KEYBOARD/GRAFFITI"   =   "S"
+"$$SC TOGGLE FULLSCREEN"    =   "U"
+"$$SC SYNC LIST"            =   "V"
+"$$SC FORWARD"              =   "W"
+"$$SC BOTTOM"               =   "Y"
+"$$SC TOP"                  =   "Z"
+
+
+/*************************************************************
+ *                         FORMS                             *
+ *************************************************************/
+
+/*** MAIN ***/
+
+"$$MAIN: ADD BOOKMARK"              =   "Добавить закладку"
+"$$MAIN: BOTTOM"                    =   "Низ"
+"$$MAIN: FOLLOW LINK"               =   "Переход по ссылке"
+"$$MAIN: OPEN IMAGE"                =   "Откр. изобр."
+"$$MAIN: TOP"                       =   "Верх"
+"$$MAIN: VIEW BOOKMARKS"            =   "Просмотр закладок"
+"$$MAIN: 10%"                       =   "10%"
+"$$MAIN: 20%"                       =   "20%"
+"$$MAIN: 30%"                       =   "30%"
+"$$MAIN: 40%"                       =   "40%"
+"$$MAIN: 50%"                       =   "50%"
+"$$MAIN: 60%"                       =   "60%"
+"$$MAIN: 70%"                       =   "70%"
+"$$MAIN: 80%"                       =   "80%"
+"$$MAIN: 90%"                       =   "90%"
+/************************************************************/
+"$$MAIN: ADD ANNOTATION"            =   "Add annotation"
+/************************************************************/
+
+/*** ABOUT ***/
+
+"$$ABOUT: BODY1"                    =   "Plucker это набор программ, обеспечивающий"
+"$$ABOUT: BODY2"                    =   "автономный просмотр веб-страниц на"
+"$$ABOUT: BODY3"                    =   "PalmOS-устройствах. Это Бесплатное ПО"
+"$$ABOUT: BODY4"                    =   "распространяется на условиях Free"
+"$$ABOUT: BODY5"                    =   "Software Foundation's General"
+"$$ABOUT: BODY6"                    =   "Public License."
+"$$ABOUT: WEBSITE"                  =   "www.plkr.org"
+"$$ABOUT: OK"                       =   "OK"
+"$$ABOUT: TITLE"                    =   "О программе"
+
+
+/*** DOCUMENT LIBRARY ***/
+
+"$$LIBRARY: BEAM"                   =   "Передать"
+"$$LIBRARY: CATEGORIZE"             =   "Добав.в кат."
+"$$LIBRARY: CATEGORY"               =   "Категория"
+"$$LIBRARY: DATE"                   =   "Дата"
+"$$LIBRARY: DELETE"                 =   "Удалить"
+"$$LIBRARY: NAME"                   =   "Название"
+"$$LIBRARY: OPEN"                   =   "Открыть"
+"$$LIBRARY: RENAME"                 =   "Переим."
+"$$LIBRARY: SHOW:"                  =   "Показать:"
+"$$LIBRARY: SIZE"                   =   "Размер"
+"$$LIBRARY: TITLE"                  =   "Библиотека"
+"$$LIBRARY: NO DOCUMENTS"           =   "Документы не найдены"
+/*************************************************************/
+"$$LIBRARY: UNREAD"                 =   "Unread"
+/*************************************************************/
+"$$LIBRARY: HELP"                   =
+    " You will be able to manage your various Plucker documents from here "\
+    "simply by selecting which one you want to view."\   
+    "\n\n"\
+    " A tap on the document icon in front of a document will provide you "\
+    "with a dropdown list including different operations for the selected "\
+    "document (Open, Categorize, Delete, Rename and Beam)."\
+    "\n\n"\
+    " You can sort the documents according to name, date or size in both "\
+    "ascending and descending order."
+
+
+/*** RENAME DOCUMENT ***/
+
+"$$RENAME: CANCEL"                  =   "Отмена"
+"$$RENAME: NAME:"                   =   "Новое имя:"
+"$$RENAME: RENAME"                  =   "Переим."
+"$$RENAME: TITLE"                   =   "Название"
+
+
+/*** PREFERENCES ***/
+
+"$$PREFS: TITLE"                    =   "Настройки"
+"$$PREFS: OK"                       =   "OK"
+"$$PREFS: CANCEL"                   =   "Отмена"
+"$$PREFS: LIBRARY"                  =   "Библиотека"
+"$$PREFS: AUTOSCROLL"               =   "Автоскр."
+"$$PREFS: BUTTON"                   =   "Кнопок"
+"$$PREFS: CONTROL"                  =   "Действие"
+"$$PREFS: GESTURE"                  =   "Штриха"
+/****************************************************************************/
+"$$PREFS: GENERAL"                  =   "General"
+"$$PREFS: LAYOUT"                   =   "Layout"
+"$$PREFS: HARDCOPY"                 =   "Export"
+"$$PREFS: JOGDIAL"                  =   "JogDial"
+"$$PREFS: LOOKUP"                   =   "Lookup"
+"$$PREFS: COLOR"                    =   "Color"
+"$$PREFS: FONT"                     =   "Font"
+/****************************************************************************/
+
+
+/*** GENERAL PREFERENCES ***/
+
+"$$PREFSGENERAL: ADD BOOKMARK..."          =   "Добав. закладку..."
+"$$PREFSGENERAL: BOTTOM"                   =   "Низ"
+"$$PREFSGENERAL: BOTTOM TOOLBAR"           =   "Внизу"
+"$$PREFSGENERAL: BUTTON ACTION..."         =   "Настройка кнопок..."
+"$$PREFSGENERAL: DELETE DOC..."            =   "Удалить документ..."
+"$$PREFSGENERAL: DETAILS..."               =   "Подробнее..."
+"$$PREFSGENERAL: NO TOOLBAR"               =   "Отключена"
+"$$PREFSGENERAL: NONE"                     =   "Нет"
+"$$PREFSGENERAL: PREFERENCES..."           =   "Настройки..."
+"$$PREFSGENERAL: TAP ACTION..."            =   "Действие клика..."
+"$$PREFSGENERAL: TOOLBAR:"                 =   "Панель инструментов:"
+"$$PREFSGENERAL: TOP"                      =   "Наверху"
+"$$PREFSGENERAL: TOP TOOLBAR"              =   "Вверху"
+"$$PREFSGENERAL: LEFT"                     =   "Слева"
+"$$PREFSGENERAL: NONE"                     =   "Нет"
+"$$PREFSGENERAL: RIGHT"                    =   "Справа"
+"$$PREFSGENERAL: SCREEN DEPTH:"            =   "Глубина цвета:"
+"$$PREFSGENERAL: SCROLLBAR:"               =   "Полос прокрутки:"
+/***************************************************************************/
+"$$PREFSGENERAL: ALWAYS DELETE ANNOTATIONS"    = "Delete notes/marks with doc"
+"$$PREFSGENERAL: ANNOTATIONS IN BOOKMARK LIST" = "List annotations with bookmarks"
+"$$PREFSGENERAL: COMMAND BUTTON:"          =   "Command Toolbar Button:"
+"$$PREFSGENERAL: COPY TO MEMO"             =   "Export to Memo"
+"$$PREFSGENERAL: SILK TOOLBAR"             =   "In silk"
+"$$PREFSGENERAL: HELP"                     =
+    " On a device running Palm OS 3.5 or better you can set one of "\
+    "the buttons for the command toolbar. Has no effect for older "\
+    "versions of Palm OS."\
+    "\n\n"\
+    " You can set the default screen depth the device should operate at. "\
+    "\n\n"\
+    " You can have the toolbar at the top or bottom of the screen, or no toolbar at all."\
+    "\n\n"\
+    " You can have either a left scrollbar, a right scrollbar or no scrollbar."
+/***************************************************************************/
+
+
+/*** LAYOUT PREFERENCES ***/
+
+"$$PREFSLAYOUT: UNDERLINE"               =   "Вкл. подчерк. тэгов"
+/***************************************************************************/
+"$$PREFSLAYOUT: ALIGNMENT:"              =   "Alignment"
+"$$PREFSLAYOUT: AS IN DOC"               =   "As in document"
+"$$PREFSLAYOUT: ENABLE SOFT-HYPHENS"     =   "Enable soft-hyphens"
+"$$PREFSLAYOUT: ENABLE MARGINS"          =   "Enable margins"
+"$$PREFSLAYOUT: FORCE LEFT"              =   "Force left"
+"$$PREFSLAYOUT: FORCE RIGHT"             =   "Force right"
+"$$PREFSLAYOUT: FORCE CENTER"            =   "Force center"
+"$$PREFSLAYOUT: FORCE JUSTIFY"           =   "Force justify"
+"$$PREFSLAYOUT: CONNECT PARTS WITH PAGING"
+                                           =   "Connect parts with paging"
+"$$PREFSLAYOUT: HELP"                    =
+    " By enabling the underline option all links will be "\
+    "indicated with a dotted line and the solid line will "\
+    "instead be used for the HTML underline tag (<U>). It is "\
+    "still possible to distinguish visited and unvisited links "\
+    "by enabling the strike-through option."\
+    "\n\n"\
+    " You can connect multipart documents with the paging "\
+    "controls so that using a page-down (or half-page-down) "\
+    "control on the last screen of a page will take you to "\
+    "the last displayed link, and similarly for using a page-up or "\
+    "half-page-up control on the first screen."\
+    "\n\n"\
+    " You can override the document's alignment settings."
+/***************************************************************************/
+
+
+/*** FONT PREFERENCES ***/
+/*************************************************************/
+"$$PREFSFONT: LIBRARY"      =   "Library"
+"$$PREFSFONT: MAIN"         =   "Main"
+/*************************************************************/
+
+
+/*** COLOR PREFERENCES ***/
+
+"$$PREFSCOLOR: STRIKE-THROUGH"          =   "Отмечать посещенные"
+/*************************************************************/
+"$$PREFSCOLOR: FORCE DEFAULT TEXT COLORS" =  "Force default text colors"
+"$$PREFSCOLOR: HELP"                    =
+    " If you think it is difficult to see whether a "\
+    "link has been visited or not, you could try to enable "\
+    "strike-through. It will add a strike-through to each "\
+    "visited link."\
+    " You can force text to be black and links to be blue."
+/***************************************************************************/
+
+
+/*** LIBRARY PREFERENCES ***/
+
+/****************************************************************************/
+"$$PREFSLIBRARY: UPDATE DOCLIST"           =   "Update list:"
+"$$PREFSLIBRARY: AUTOMATIC"                =   "Automatic"
+"$$PREFSLIBRARY: MANUAL"                   =   "Manual"
+"$$PREFSLIBRARY: IGNORE CARD"              =   "Ignore card"
+"$$PREFSLIBRARY: ADVANCED"                 =   "Advanced"
+"$$PREFSLIBRARY: ASCENDING"                =   "Ascending"
+"$$PREFSLIBRARY: CATEGORY STYLE:"          =   "Category Style:"
+"$$PREFSLIBRARY: CLASSIC"                  =   "Classic"
+"$$PREFSLIBRARY: DATE"                     =   "Date"
+"$$PREFSLIBRARY: DATE/TIME"                =   "Use date/time for sort by date"
+"$$PREFSLIBRARY: DESCENDING"               =   "Descending"
+"$$PREFSLIBRARY: NAME"                     =   "Name"
+"$$PREFSLIBRARY: SHOW DATE COLUMN"         =   "Show Date Column"
+"$$PREFSLIBRARY: SHOW SIZE COLUMN"         =   "Show Size Column"
+"$$PREFSLIBRARY: SHOW TYPE COLUMN"         =   "Show Type Column"
+"$$PREFSLIBRARY: SIZE"                     =   "Size"
+"$$PREFSLIBRARY: SORT BY:"                 =   "Sort Documents By:"
+"$$PREFSLIBRARY: SORT ORDER:"              =   "Sort Order:"
+"$$PREFSLIBRARY: TYPE"                     =   "Type"
+"$$PREFSLIBRARY: CATEGORY"                 =   "Category"
+"$$PREFSLIBRARY: INDICATE OPENED"          =   "Enable Strike-through"
+"$$PREFSLIBRARY: HELP"                     =
+    " Because it can be a slow process to update the list of documents on "\
+    "some devices there is an option to select whether the list should be "\
+    "automatically updated (both RAM and external cards), automatically "\
+    "updated (only RAM), or manually updated."\
+    "\n\n"\
+    " You can sort the documents according to name, date or size in both "\
+    "ascending and descending order."\
+    "\n\n"\
+    " It is possible to select whether the sort by date should use only the "\
+    "date or if it should use both date and time (faster, but could make the "\
+    "list look 'unsorted')."
+
+/*************************************************************/
+
+
+/*** AUTOSCROLL PREFERENCES ***/
+
+"$$PREFSAUTOSCROLL: AUTOSCROLL DELAY:"       =   "Задержка автоскр.:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL DIRECTION:"   =   "Направлене автоскр.:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL JUMP:"        =   "Скачок автоскр.:"
+"$$PREFSAUTOSCROLL: DOWN"                    =   "Вниз"
+"$$PREFSAUTOSCROLL: MILLISECONDS"            =   "мсек"
+"$$PREFSAUTOSCROLL: PAGE(S)"                 =   "Страницы"
+"$$PREFSAUTOSCROLL: PIXEL(S)"                =   "Пикселей"
+"$$PREFSAUTOSCROLL: STAY ON"                 =   "Оставаться вкл.во врем.автоскр."
+"$$PREFSAUTOSCROLL: UP"                      =   "Вверх"
+"$$PREFSAUTOSCROLL: HELP"                    =
+    " This form customizes the behaviour of the autoscroll."\
+    "\n\n"\
+    " You can autoscroll a specified number of either pixels or pages."\
+    "\n\n"\
+    " You can set the autoscroll direction to either up or down." \
+    "\n\n"\
+    " You can set the time delay in between each autoscroll jump. Delay "\
+    "is measured in milliseconds."\
+    "\n\n"\
+    " You can prevent the device from powering off during an autoscroll. "\
+    "The device will continue to autoscroll until it reaches the bottom of a "\
+    "page, or the battery becomes low (or you tap somewhere, or you physically "\
+    "turn off the device.)"\
+    "\n\n"\
+/******************************************************************/
+    " Note that while autoscrolling is happening, you can control "\
+    "the speed with buttons on the toolbar as well as with all the controls "\
+    "(such as Page Up/Down keys) that normally are used to scroll by "\
+    "a screen or half a screen."
+/******************************************************************/
+
+
+/*** HARDCOPY PREFERENCES ***/
+
+/****************************************************************************/
+"$$PREFSHARDCOPY: TITLE"            =   "Hardcopy Actions"
+"$$PREFSHARDCOPY: ACTION:"          =   "Action:"
+"$$PREFSHARDCOPY: DIALOG"           =   "Dialog"
+"$$PREFSHARDCOPY: IMMEDIATE"        =   "Immediate"
+"$$PREFSHARDCOPY: RANGE:"           =   "Range:"
+"$$PREFSHARDCOPY: IN VIEW AREA"     =   "In view area"
+"$$PREFSHARDCOPY: VISIBLE PARAGRAPHS" = "Visible paragraphs"
+"$$PREFSHARDCOPY: LINK:"            =   "Link:"
+"$$PREFSHARDCOPY: BOTTOM"           =   "Bottom"
+"$$PREFSHARDCOPY: INLINE"           =   "Inline"
+"$$PREFSHARDCOPY: NONE"             =   "None"
+"$$PREFSHARDCOPY: HELP"             =
+    " You can choose the action of 'export to memo' feature in this form. This feature enables you to clip, edit, and export text in the current view area to Palm's standard memopad."\
+    "\n\n"\
+    " Clipped text can be edited in dialog, or be copied immediately to memopad."\
+    "\n\n"\
+    " Text in the current viewarea or in the visible paragraphs is clipped."\
+    "\n\n"\
+    " URLs of the links are listed at the bottom, indicated inline, or simply ignored."
+/****************************************************************************/
+
+
+/*** EXTERNALLINK PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSEXTERNALLINK: TITLE"            =   "External Link Handling"
+"$$PREFSEXTERNALLINK: ACTION:"          =   "Action:"
+"$$PREFSEXTERNALLINK: DIALOG"           =   "Dialog"
+"$$PREFSEXTERNALLINK: TO MEMO"          =   "Directly to memopad"
+"$$PREFSEXTERNALLINK: BROWSE"           =   "Browse"
+/*************************************************************/
+
+
+/*** BUTTON PREFERENCES ***/
+
+"$$PREFSBUTTONS: HARD KEYS"              =   "Hardkeys for navigation"
+/****************************************************************************/
+"$$PREFSBUTTONS: ARROW KEYS"             =   "Activate custom arrow keys"
+/****************************************************************************/
+"$$PREFSBUTTONS: HELP"                   =
+    " By enabling the hardkeys option you can use the hardware buttons to perform "\
+    "the specified actions."\
+    "\n\n"\
+    " You can select different actions for each of the four hardware buttons."
+
+
+/*** CONTROL PREFERENCES ***/
+
+"$$PREFSTAP: MODE 1"                     =   "Режим 1"
+"$$PREFSTAP: MODE 2"                     =   "Режим 2"
+"$$PREFSTAP: MODE 3"                     =   "Режим 3"
+"$$PREFSTAP: PEN SCROLL MSG1"            =   "Конитесь экрана и"
+"$$PREFSTAP: PEN SCROLL MSG2"            =   "проведите стилусом вверх или вниз"
+"$$PREFSTAP: PEN SCROLL MSG3"            =   "для прокрутки страницы"
+"$$PREFSTAP: PEN SCROLL MSG4"            =   ""
+"$$PREFSTAP: REGION ACTION:"             =   "Область действия:"
+"$$PREFSTAP: HELP"                       =
+    " The Tap Action allows you to specify the behavior of pen taps on the "\
+    "screen. It can be used in three different modes."\
+    "\n\n"\
+    " The first two modes divide the screen into different sections allowing "\
+    "you to specify different actions (e.g. scroll up one full page, go back "\
+    "one page) for each section."\
+    "\n\n"\
+    " The third mode makes is possible to drag the stylus on the screen to "\
+    "scroll the text."
+
+
+/*** GESTURE PREFERENCES ***/
+
+"$$PREFSGESTURES: USE GESTURES"          =   "Росчерки Граффити для навигации"
+"$$PREFSGESTURES: HELP"                  =
+    " By enabling the gestures option, you can use gestures in the graffiti area "\
+    "to perform the specified actions."\
+    "\n\n"\
+    " There are five gestures: stroke right, stroke left, stroke up, stroke down, "\
+    "and a graffiti tap."\
+    "\n\n"\
+    " You can select different actions for each of the five gestures."
+
+
+/*** JOGDIAL PREFERENCES ***/
+
+/****************************************************************************/
+"$$PREFSJOGDIAL: USE JOGDIALS"  =     "Enable JogDial for navigation"
+"$$PREFSJOGDIAL: HELP"  =
+    " If you own a palm that has a JogDial, you can assign different " \
+    "actions to perform specific funtions in Plucker."\
+    "\n\n"\
+    " There are six actions: scroll up, scroll down, push in, push in and " \
+    "up, push in and down and back. Not all actions may be available, "\
+    "depending on your device."\
+    "\n\n"\
+    " You can select different events for each of the five JogDial actions."
+/****************************************************************************/
+
+/*** WORD LOOKUP PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSLOOKUP: ALWAYS ACTIVE"         = "Word lookup always active"
+"$$PREFSLOOKUP: ACTION:"               = "Action:"
+"$$PREFSLOOKUP: SEARCH FORM"           = "Insert into search form"
+"$$PREFSLOOKUP: PPI"                   = "Look up in PPI"
+"$$PREFSLOOKUP: TO CLIPBOARD"          = "Copy to the clipboard"
+"$$PREFSLOOKUP: ANNOTATE"              = "Annotate"
+"$$PREFSLOOKUP: HELP"                  =
+    " Plucker has a word-lookup function.  When the function is active, "\
+    "tapping on a word selects that word and performs an action. "\
+    "\n\n"\
+    " If word lookup is set to be always active, then tapping on a word "\
+    "not inside a link always selects a word."\
+    "\n\n"\
+    " Otherwise, you can use the 'Lookup word' function in the 'Go' menu "\
+    "to turn on a temporary tap-selection mode for the next tap.  That "\
+    "function can also be assigned to a hard key or any other "\
+    "configurable control."\
+    "\n\n"\
+    " Hint: To select a word that contains a non-alphanumeric character such "\
+    "as an apostrophe or a dash, tap on that character when selecting and all "\
+    "instances of that character will be treated as letters."
+/*************************************************************/
+
+
+
+
+/*** FONT SELECT ***/
+
+"$$FONTS: FONT:"                    =   "Шрифт:"
+"$$FONTS: OK"                       =   "OK"
+"$$FONTS: CANCEL"                   =   "Отмена"
+/****************************************************************************/
+"$$FONTS: SELECT FONT"              =   "Select font and layout"
+"$$FONTS: BUILT-IN FONTS:"          =   "Built-in fonts:"
+"$$FONTS: USER-LOADED FONT:"        =   "User-loaded font:"
+"$$FONTS: LINE SPACING:"            =   "Line spacing:"
+"$$FONTS: PARAGRAPH SPACING:"       =   "Paragraph spacing:"
+"$$FONTS: RTL"                      =   "RTL"
+"$$FONTS: ROTATE:"                  =   "Rotation: "
+"$$FONTS: NONE"                     =   "None"
+"$$FONTS: COUNTERCLOCKWISE"         =   "Counterclockwise"
+"$$FONTS: CLOCKWISE"                =   "Clockwise"
+"$$FONTS: VARY WITH DOCUMENT"       =   "Vary with document"
+"$$FONTS: ALSO SET AS DEFAULT"      =   "Also set as default"
+"$$FONTS: HELP"                     =
+    "• You can select one of the standard Palm fonts or one "\
+    "of the built-in Plucker fonts."\
+    "\n\n"\
+    "• If you have a Plucker font package loaded, you can select "\
+    "that, instead, if this is supported on your device."\
+    "\n\n"\
+    "• You can vary line- and paragraph-spacing in the document. "\
+    "Setting the line-spacing to a negative value may cause some "\
+    "minor visual defects such as lines not showing up."\
+    "\n\n"\
+    "• You can rotate the display by 90 degrees.  On OS 3.5, images"\
+    "will be omitted."\
+    "\n\n"\
+    "• You can allow the font settings to vary between documents "\
+    "and if you do that, you will also have the option to make the "\
+    "current settings be the default ones for new documents."
+/****************************************************************************/
+
+/*** KEYBOARD CUSTOMIZATION ***/
+
+/****************************************************************************/
+"$$KEYBOARD: SET KEYBOARD / GRAFFITI"        =   "Set keyboard / graffiti"
+"$$KEYBOARD: KEYBOARD OR GRAFFITI"         =   "Keyboard or graffiti"
+"$$KEYBOARD: SPECIAL KEYS"          =   "Special keys"
+"$$KEYBOARD: OK"                    =   "OK"
+"$$KEYBOARD: CANCEL"                =   "Cancel"
+"$$KEYBOARD: DEFAULT"               =   "Default"
+"$$KEYBOARD: CLEAR"                 =   "Clear"
+"$$KEYBOARD: INTERFERENCE MSG1"     =   "Some settings can be incompatible"
+"$$KEYBOARD: INTERFERENCE MSG2"     =   "with gestures and/or Graffiti 2."
+"$$KEYBOARD: HELP"                  =
+    "• If you have a keyboard, you can control Plucker with it. "\
+    "You can also control Plucker by using Graffiti to write "\
+    "down certain characters."\
+    "\n\n"\
+    "• Printable characters such as 'a' or '$' can be typed in or "\
+    "drawn with Graffiti strokes directly into the customization form "\
+    "and then you can select the appropriate behavior."\
+    "\n\n"\
+    "• Special keys like 'Return' or arrow keys need to be "\
+    "selected from the drop down list, and then you can select the "\
+    "appropriate actions."\
+    "\n\n"\
+    "• Some characters/keys will not work if you have Graffiti "\
+    "gestures activated in the Plucker preferences.  In particular, "\
+    "the i, I, 1, l, L, period and backspace keys/characters and "\
+    "some shifted Graffiti characters "\
+    "will not be available unless you have gestures disabled."\
+    "\n\n"\
+    "• Some characters are incompatible with Graffiti 2 input.  If "\
+    "you wish to control Plucker with Graffiti 2 input through this "\
+    "customization option, do not assign "\
+    "actions to multistroke characters.  Also, entering a Graffiti 2 "\
+    "multistroke character into Plucker while an action is assigned "\
+    "to the l, space, single quote, minus or backspace characters "\
+    "will lead to unexpected results."
+
+"$$KEY: RETURN"                     =   "Return"
+"$$KEY: TAB"                        =   "Tab"
+"$$KEY: UP"                         =   "Up"
+"$$KEY: DOWN"                       =   "Down"
+"$$KEY: LEFT"                       =   "Left"
+"$$KEY: RIGHT"                      =   "Right"
+"$$KEY: BACKSPACE"                  =   "Backspace"
+/****************************************************************************/
+
+
+
+/*** SELECTION ***/
+
+"$$SELECT: ADD BOOKMARK..."        =   "Добавить закладку..."
+"$$SELECT: AUTOSCROLL FASTER"      =   "Автоскролл. быстрее"
+"$$SELECT: AUTOSCROLL SLOWER"      =   "Автоскролл. медленнее"
+"$$SELECT: BOOKMARKS..."           =   "Закладки..."
+"$$SELECT: BUTTON ACTION..."       =   "Настройка кнопок..."
+"$$SELECT: DELETE DOC..."          =   "Удалить документ..."
+"$$SELECT: DETAILS..."             =   "Подробнее..."
+"$$SELECT: FIND AGAIN"             =   "Найти далее"
+"$$SELECT: FIND..."                =   "Найти..."
+"$$SELECT: FULL PAGE DOWN"         =   "Полн. стр. вниз" 
+"$$SELECT: FULL PAGE UP"           =   "Полн. стр. вверх" 
+"$$SELECT: GESTURE ACTION..."      =   "Настройка штриха..."
+"$$SELECT: GO BACK"                =   "Назад" 
+"$$SELECT: GO FORWARD"             =   "Вперед" 
+"$$SELECT: GO HOME"                =   "Домой"
+"$$SELECT: GO TO BOTTOM"           =   "В конец"
+"$$SELECT: GO TO TOP"              =   "В начало"
+"$$SELECT: HALF PAGE DOWN"         =   "Вниз на пол-стр." 
+"$$SELECT: HALF PAGE UP"           =   "Вверх на пол-стр." 
+"$$SELECT: LIBRARY..."             =   "Библиотека..."
+"$$SELECT: NONE"                   =   "Нет"
+"$$SELECT: PREFERENCES..."         =   "Настройки..."
+"$$SELECT: TAP ACTION..."          =   "Действие клика..."
+"$$SELECT: TOGGLE AUTOSCROLL"      =   "Вкл/Выкл автоскролл."
+/****************************************************/
+"$$SELECT: COPY TO MEMO"           =   "Export to Memo"
+"$$SELECT: GO TO LINK"             =   "Go to link"
+"$$SELECT: NEXT ANCHOR"            =   "Next anchor"
+"$$SELECT: PREV ANCHOR"            =   "Prev anchor"
+"$$SELECT: SELECT FONT..."         =   "Font and layout..."
+"$$SELECT: COMMAND STROKE"         =   "Command stroke"
+"$$SELECT: MENU..."                =   "Menu..."
+"$$SELECT: TOGGLE TOOLBAR"         =   "Toggle toolbar"
+"$$SELECT: TOGGLE FULLSCREEN"      =   "Toggle fullscreen"
+"$$SELECT: ONE LINE UP"            =   "One line up"
+"$$SELECT: ONE LINE DOWN"          =   "One line down"
+"$$SELECT: ADJUST BRIGHTNESS"      =   "Brightness..."
+"$$SELECT: ADJUST CONTRAST"        =   "Contrast..."
+"$$SELECT: TOGGLE BACKLIGHT"       =   "Toggle backlight"
+"$$SELECT: ROTATE RIGHT"           =   "Rotate right"
+"$$SELECT: ROTATE LEFT"            =   "Rotate left"
+"$$SELECT: SAVE POSITION"          =   "Save position"
+"$$SELECT: LOOKUP WORD IN PPI"     =   "PPI select word"
+"$$SELECT: LOOKUP TO SEARCH FORM"  =   "Search select word"
+"$$SELECT: LOOKUP TO CLIPBOARD"    =   "Clipboard select word"
+"$$SELECT: LOOKUP TO ANNOTATE"     =   "Annotate select word"
+"$$UNSUPPORTED"                    =   "Unsupported action"
+/****************************************************/
+
+
+/*** DETAILS ***/
+
+"$$DETAILS: CANCEL"                 =   "Отмена"
+"$$DETAILS: COPY URL"               =   "Копировать адрес"
+"$$DETAILS: OK"                     =   "OK"
+"$$DETAILS: READ"                   =   "Прочт."
+"$$DETAILS: SHOW IMAGES"            =   "Вкл.изобр-я"
+"$$DETAILS: STATUS:"                =   "Статус:"
+"$$DETAILS: TITLE"                  =   "Подробнее"
+"$$DETAILS: UNREAD"                 =   "Непрочт."
+"$$DETAILS: URL:"                   =   "URL:"
+"$$DETAILS: HELP"                   =
+    " You can change the status of a document so that it will be shown as "\
+    "unread (i.e. with a solid link)."\
+    "\n\n"\
+    " By turning off images all images will be removed from the page."
+
+
+/*** SEARCH ***/
+
+"$$FIND: CANCEL"                    =   "Отмена"
+"$$FIND: CASE SENSITIVE"            =   "Учит. регистр" 
+"$$FIND: FIND:"                     =   "Найти:"
+"$$FIND: IN ALL PAGES"              =   "На всех страницах"
+"$$FIND: IN PAGE"                   =   "На странице"
+"$$FIND: OK"                        =   "OK"
+"$$FIND: TITLE"                     =   "Поиск"
+/****************************************************/
+"$$FIND: DOWN IN DOC"               =   "Down in doc"
+"$$FIND: SUB PAGES"                 =   "Sub pages"
+"$$FIND: PHRASE"                    =   "Phrase"
+"$$FIND: NO TRANSLITERATION"        =   "No transliteration"
+"$$FIND: NON-ASCII TO PERIOD"       =   "Non-ASCII to period"
+"$$FIND: DROP LATIN 1 ACCENTS"      =   "Drop Latin 1 accents"
+"$$FIND: HELP"                      =
+    "• Tapping on the icon to the right of the search field "\
+    "gives you a list of recent search strings to choose from."\
+    "\n\n"\
+    "• You can search the current page, the whole document, the whole "\
+    "document down from the current position, or subpages (breadth-first "\
+    "spidering)."\
+    "\n\n"\
+    "• You can make your search case insensitive if applicable to your language."\
+    "\n\n"\
+    "• In a phrase search you must have an "\
+    "exact match for everything in the search string, including spaces."\
+    "\n\n"\
+    "• If you turn off phrase search, each space-separated string "\
+    "must be found within the same paragraph.  Thus if you "\
+    "put in the search string 'Big bad wolf' (without the quotation marks), "\
+    "then you will find all paragraphs that contain the strings 'Big', 'bad' "\
+    "and 'wolf' somewhere in them, "\
+    "though not necessarily as whole words and not necessarily in this order. "\
+    "\n\n"\
+    "• Only the first term will be highlighted in the text when you view the "\
+    "results."\
+    "\n\n"\
+    "• With phrase search disabled, if you have more than ten search terms, "\
+    "the extra ones will be ignored."\
+    "\n\n"\
+    "• For fastest searching, put the least common term as the first one "\
+    "if phrase search is disabled."\
+    "\n\n"\
+    "• You can choose to transliterate the text and search string before "\
+    "searching.  For instance, you can choose to change all non-ASCII "\
+    "characters (such as 'ь') to periods.  Or you can choose to drop "\
+    "accents on all Latin 1 characters, so that, for instance, a 'u-umlaut' "\
+    "gets changed to a 'u'.  This also changes other non-ASCII characters "\
+    "such as fancy quotation marks to their closest ASCII equivalent.  Since "\
+    "your search string is also transliterated before searching, this is basically "\
+    "an accent-insensitive search."
+/****************************************************/
+
+
+/*** SEARCH RESULT ***/
+
+"$$RESULT: CANCEL"                  =   "Отмена"
+"$$RESULT: FINDMORE"                =   "Найти далее"
+"$$RESULT: MATCHES"                 =   "Совпадения для"
+"$$RESULT: NOMATCHES"               =   "Нет совадений для"
+"$$RESULT: SEARCHING..."            =   "Поиск..."
+"$$RESULT: STOP"                    =   "Стоп"
+"$$RESULT: TITLE"                   =   "Поиск"
+
+
+/*** EMAIL ***/
+
+"$$EMAIL: CANCEL"                   =   "Отмена"
+"$$EMAIL: CC:"                      =   "Копия:"
+"$$EMAIL: SEND"                     =   "Отправить почту"
+"$$EMAIL: SUBJECT:"                 =   "Тема:"
+"$$EMAIL: TITLE"                    =   "Работа с почтой"
+"$$EMAIL: TO:"                      =   "Кому:"
+
+
+/*** ADD BOOKMARK ***/
+
+"$$ADD BOOKMARK: ADD"               =   "Добавить"
+"$$ADD BOOKMARK: CANCEL"            =   "Отмена"
+"$$ADD BOOKMARK: NAME:"             =   "Имя:"
+"$$ADD BOOKMARK: TITLE"             =   "Добавить закладку"
+
+
+/*** BOOKMARK ***/
+
+"$$BOOKMARKS: DELETE"               =   "Удалить"
+"$$BOOKMARKS: DONE"                 =   "Готово"
+"$$BOOKMARKS: GO TO"                =   "Переход"
+"$$BOOKMARKS: TITLE"                =   "Закладки"
+
+
+/*** EXTERNAL LINKS ***/
+
+"$$EXTERN: BACK"                    =   "Назад"
+"$$EXTERN: COPY URL"                =   "Копировать URL"
+"$$EXTERN: LABEL1"                  =   "Извините, но выбранная вами ссылка"
+"$$EXTERN: LABEL2"                  =   "не была получена программой."
+"$$EXTERN: LABEL3"                  =   "It was probably an external site,"
+"$$EXTERN: LABEL4"                  =   "or exceeded the maximum depth"
+"$$EXTERN: LABEL5"                  =   "that the referring page was asked"
+"$$EXTERN: LABEL6"                  =   "to retrieve."
+"$$EXTERN: NO URL"                  =   "Нет информации об URL."
+"$$EXTERN: TITLE"                   =   "Внешняя ссылка"
+"$$EXTERN: URL:"                    =   "URL:"
+/********************************************************************/
+"$$EXTERN: BROWSE ONLINE"           =   "Go online"
+/********************************************************************/
+
+
+/*** CATEGORY ***/
+
+"$$CATEGORY: ALL"                   =   "Все"
+"$$CATEGORY: AND"                   =   "и"
+"$$CATEGORY: CANCEL"                =   "Отмена"
+"$$CATEGORY: DELETE"                =   "Удалить"
+"$$CATEGORY: MULTIPLE SELECT"       =   "Множеств. выбор"
+"$$CATEGORY: NONE"                  =   "Нет"
+"$$CATEGORY: OK"                    =   "OK"
+"$$CATEGORY: OR"                    =   "или"
+"$$CATEGORY: RENAME"                =   "Переим."
+"$$CATEGORY: TITLE"                 =   "Категории"
+"$$CATEGORY: UNFILED"               =   "Неупоряд."
+"$$CATEGORY: HELP"                  =
+    " Tap on the pushbutton with the category name to toggle between hiding "\
+    "and showing the category."\
+    "\n\n"\
+    " Check the box MULTIPLE SELECT to allow more than one category to be "\
+    "displayed at a time."\
+    "\n\n"\
+    " To add a new category, tap on an empty pushbutton. The document icon "\
+    "provides the options to delete and rename a category."\
+    "\n\n"\
+    " If you delete a category name, the documents filed under that name will "\
+    "become unfiled documents."\
+    "\n\n"\
+    " To merge documents in different categories, rename one category to the "\
+    "other category name."
+
+
+/*** NEW CATEGORY ***/
+
+"$$EDIT CATEGORIES: CANCEL"         =   "Отмена"
+"$$EDIT CATEGORIES: NAME:"          =   "Ведите имя категории:"
+"$$EDIT CATEGORIES: OK"             =   "OK"
+"$$EDIT CATEGORIES: TITLE"          =   "Редактировать категории"
+
+
+/*** INITIALIZING CATEGORY ***/
+
+"$$INITDOC: SYNCHRONIZING"          =   "Синхронизировать документы"
+"$$INITDOC: OPEN DOC LIST"          =   "Открываю список документов"
+
+
+/*** SORT DOCUMENTS ***/
+
+"$$SORTDOC: SORTING..."             =   "Сортировка..."
+
+
+/*** HARDCOPY ***/
+
+/****************************************************************************/
+"$$HARDCOPY: TITLE"                 =   "Export to Memo"
+"$$HARDCOPY: CANCEL"                =   "Cancel"
+"$$HARDCOPY: EXPORT"                =   "Export"
+"$$HARDCOPY: ROT13"                 =   "Rot13"
+/****************************************************************************/
+
+
+/*** ANNOTATION ***/
+
+/*************************************************************/
+"$$ANNOTATION: TITLE"                 =   "Annotate"
+"$$ANNOTATION: OK"                    =   "OK"
+"$$ANNOTATION: CANCEL"                =   "Cancel"
+"$$ANNOTATION: DELETE"                =   "Delete"
+/*************************************************************/
+
+/*** EXPORT LINK TO MEMO ***/
+
+/*************************************************************/
+"$$EXPORT: EXPORTING LINK..."       =   "Exporting link..."
+/*************************************************************/
+
+
+/*************************************************************
+ *                         ALERTS                            *
+ *************************************************************/
+
+/*** COMMON STRINGS ***/
+
+"$$CANCEL"                  =   "Отмена"
+"$$DELETE"                  =   "Удалить"
+"$$NO"                      =   "Нет"
+"$$OK"                      =   "OK"
+"$$YES"                     =   "Да"
+/*************************************************************/
+"$$EXIT"                    =   "Exit"
+"$$LEAVE"                   =   "Leave"
+"$$NEXT"                    =   "Next page"
+"$$RESTART"                 =   "Restart"
+/*************************************************************/
+
+
+/*** INFORMATION ***/
+
+"$$SYSTEM INCOMPATIBLE"     =   "Система несовместима"
+"$$SYSTEM MSG"              =   "Ситема версии 2.0 или старше необходима для запуска "\
+                                "этого приложения."
+
+"$$HIGH BITDEPTH"           =   "Нельзя отобразить картинку"
+"$$HIGH BITDEPTH MSG"       =   "The bit depth is too high for this device."
+
+"$$EMPTY PATTERNS"          =   "Нет строки для поиска"
+"$$EMPTY PATTERNS MSG"      =   "Нет предыдущ. строки дл поиска."
+
+"$$NO BEAM SUPPORT"         =   "Устройство не оснащено ИК-портом"
+"$$NO BEAM SUPPORT MSG"     =   "Устройство не оснащено ИК-портом"
+
+"$$COPY PROTECTED"          =   "Не могу передать"
+"$$COPY PROTECTED MSG"      =   "Защищенные документы не передаются."
+
+
+/*** CONFIRMATION ***/
+
+/*******************************************************************************/
+"$$DELETE OLD ANNOTATIONS"  =   "Out of date annotations"
+"$$DELETE OLD ANNOTATIONS MSG" =  "The annotations / bookmarks are older than "\
+                                  "the document.  Do you want to delete them now to "\
+                                  "prevent possible problems?"
+"$$DO NOT ASK"                 =  "Never"
+"$$DELETE ANNOTATIONS"         = "Delete annotations"
+"$$DELETE ANNOTATIONS MSG"     = "Do you want to delete the annotations and bookmarks for ^1?"
+"$$ALWAYS"                     = "Always delete"
+/*******************************************************************************/
+
+"$$CONFIRM DELETE"          =   "Удалить?"
+"$$DELETE MSG"              =   "Навсегда удалить ^1?"
+
+/*************************************************************/
+"$$CONFIRM DELETE METADOC"  =   "Confirm delete metadoc"
+"$$DELETE METADOC MSG"      =   "Delete meta document of ^1 as well?"
+/*************************************************************/
+
+"$$CONFIRM DELETE ALL"      =   "Удалить все?"
+"$$DELETE ALL MSG"          =   "Permanently delete all documents for selected "\
+                                "category/categories?"
+
+/*************************************************************/
+"$$CONFIRM DELETE READ"     =   "Confirm delete read"
+"$$DELETE READ MSG"         =   "Delete read documents for selected "\
+                                "category/categories?"
+/*************************************************************/
+
+"$$MERGE CATEGORY"          =   "Объединить категории"
+"$$MERGE CATEGORY MSG"      =   "You have renamed the category to one "\
+                                "that already exists. This will merge those "\
+                                "two categories. Do you wish to continue?"
+
+/*************************************************************/
+"$$END OF PAGE MSG"          =  "End of page reached.  Search next page or restart from "\
+                                "beginning of search?"
+
+"$$END OF DOC MSG"          =   "End of document reached.  Restart from beginning of search?"
+/*************************************************************/
+
+
+/*** WARNING ***/
+
+"$$BROKEN DOCUMENT"         =   "Поврежденный документ!"
+"$$BROKEN MSG"              =   "Important records are missing in ^1.\nPlease "\
+                                "sync a new version of this document."
+
+"$$INSUFFICIENT MEMORY"     =   "Недостаточно памяти"
+"$$INSUFFICIENT MSG"        =   "Insufficient memory for uncompressing the page. "\
+                                "You will need to free up RAM memory."
+
+"$$LOW MEMORY"              =   "Мало памяти"
+"$$EMAIL MEMORY MSG"        =   "You may not have enough memory to compose an "\
+                                "e-mail message. Please free up some RAM memory "\
+                                "or keep your message very short."
+"$$IMAGE MEMORY MSG"        =   "There is not enough dynamic memory to display the image."
+
+"$$NO TOADDR"               =   "Не введен адрес в поле To:"
+"$$NO TOADDR MSG"           =   "You must enter an address in the To: Field."
+
+"$$ZLIB NOT SUPPORTED"      =   "Нет поддержки ZLib "
+"$$ZLIB MSG"                =   "This device cannot handle ZLib compressed documents"
+
+"$$IMAGE COMPRESSION"       =   "Сжатие не поддерживается"
+"$$COMPRESSION MSG"         =   "This device cannot handle Palm OS image compression. "\
+                                "Image rendering will be turned off for this document."
+
+"$$AUTOSCROLL STAY ON"     =   "Автоскроллинг остается включ."
+"$$STAY ON MSG"            =   "This option prevents the device from "\
+                               "automatically powering off during an "\
+                               "autoscroll. Auto power-off will remain "\
+                               "disabled until you tap screen, hit the "\
+                               "power button, or reach the end of page."
+
+"$$INVALID OWNER"           =   "Некорректный владелец док-та!"
+"$$INVALID OWNER MSG"       =   "Your device's user name does not match that "\
+                                "registered for the owner of '^1'.  The "\
+                                "document cannot be opened except under that "\
+                                "name."
+
+"$$MANUAL SYNC"             =   "Обновление списка документов"
+
+"$$MANUAL SYNC MSG"         =   "Эта опция запрещает вьюверу "\
+                                "автоматически обновлять список документов. "\
+                                "Используйте пункт меню 'Обновить список документов' "\
+                                "в библиотеке документов, чтобы обновить список "\
+                                "вручную."
+
+
+/*** ERROR ***/
+
+"$$NO CATEGORY"             =   "Не выбрана категория"
+"$$NO CATEGORY MSG"         =   "Выберите хотя бы одну категорию."
+
+"$$CATEGORY NAME"           =   "Имя категории"
+"$$CATEGORY NAME MSG"       =   "The category ^1 already exists. "\
+                                "Please use a different name."
+
+"$$CANNOT DELETE"           =   "Не могу удалить"
+"$$CANNOT DELETE MSG"       =   "Не могу удалить документ!"
+
+"$$CANNOT DELETE ALL"       =   "Не могу удалить все"
+"$$CANNOT DELETE ALL MSG"   =   "Не могу удалить все док-ты!"
+
+/*************************************************************/
+"$$CANNOT DELETE READ"      =   "Cannot delete read"
+"$$CANNOT DELETE READ MSG"  =   "Cannot delete read documents!"
+/*************************************************************/
+
+"$$BAD MAILTO"              =   "Ошибка Mailto"
+"$$BAD MAILTO MSG"          =   "The mailto record is corrupt. The e-mail "\
+                                "address cannot be found!"\
+                                "\n\n"\
+                                "Please inform the Plucker development team."
+
+"$$ALREADY EXISTS"          =   "Документ ^1 уже существует."
+
+"$$READ ONLY"               =   "Только для чтения"
+"$$READ ONLY MSG"           =   "Только для чтения."
+
+"$$UNKNOWN TYPE"            =   "Неизвестный формат"
+"$$UNKNOWN TYPE MSG"        =   "Неизвестный формат"
+
+"$$CANNOT RENAME DOC"       =   "Невозможно переименовать!"
+
+"$$CANNOT FIND DOC"         =   "Не могу найти док-т"
+"$$CANNOT FIND DOC MSG"     =   "Cannot find document in RAM or on external card!"
+
+"$$UNHANDLED EXCEPTION"     =   "Серьезная ощибка"
+"$$UNHANDLED EXCEPTION MSG" =   "Серьезная ощибка, код = ^1"
+
+"$$CANNOT ADD BOOKMARK"     =   "Не могу добавить закладку"
+"$$CANNOT ADD BOOKMARK MSG" =   "Не могу добавить '^1'"
+
+"$$CANNOT DELETE BOOKMARK"     =   "Не могу удалить закладку"
+"$$CANNOT DELETE BOOKMARK MSG" =   "Не могу удалить '^1'"
+
+/*************************************************************/
+"$$IMAGE ERROR"             =   "Image error"
+"$$IMAGE ERROR MSG"         =   "There is a problem displaying the image. "\
+                                "Perhaps Plucker is running out of memory."
+/*************************************************************/
+END
+

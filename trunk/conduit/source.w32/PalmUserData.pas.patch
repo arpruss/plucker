@@ -1,0 +1,77 @@
+--- PalmUserData.pas	Sun Mar 03 00:13:52 2002
++++ PalmUserData.pas.new	Sun Mar 03 00:16:52 2002
+@@ -12,6 +12,8 @@
+ 	 created by Mark Pierce (MakeDocW)
+  -------------------------------------------------------- }
+ 
++{$H+}
++
+ unit PalmUserData;
+ 
+ interface
+@@ -23,7 +25,7 @@
+ 	PUsers = ^TPalmUsers;
+ 
+ 	TPalmUsers = record
+-		Magic: Word;
++		Magic: DWord;
+ 		Name: Array[0..31] of Char;
+ 		SubDir: Array[0..31] of Char;
+ 	end;
+@@ -60,11 +62,10 @@
+ 	KeyLen: DWORD;
+ 	KeyType: DWORD;
+ begin
+-	inherited;
+ 	FUserList := nil;
+ 	FUsers := 0;
+ 	FLastUserNumber := 0;
+-	FLastUserName := '';
++	FLastUserName := '                                ';
+ 	HKeyUsr := 0;
+ 
+ 	// First look for DeskTop 1.0 Entries...
+@@ -99,7 +100,7 @@
+ 			KeyType := REG_SZ;
+ 			if (RegQueryValueEx(HKeyHnd, 'Path', nil, @KeyType, @FPalmDesktopPath,
+ 				@KeyLen) = ERROR_SUCCESS) then
+-					ReadUserData();
++					ReadUserData;
+ 			RegCloseKey(HKeyHnd);
+ 		end;
+ 
+@@ -112,7 +113,6 @@
+ 	if FUserList <> nil then
+ 		FreeMem(FUserList);
+ 	FUsers := 0;
+-	inherited;
+ end;
+ 
+ procedure TPalmUserData.ReadUserData;
+@@ -124,7 +124,7 @@
+ 	ListItemP: PUsers;
+ 	FoundUser: Boolean;
+ begin
+-	AssignFile(UserData, FPalmDesktopPath + '\users.dat');
++	AssignFile(UserData, StrPas(FPalmDesktopPath) + '\users.dat');
+ 	try
+ 		Offset := 0;
+ 		Reset(UserData, 1);
+@@ -148,7 +148,7 @@
+ 
+ 					// Read the user's magic number
+ 					Seek(UserData, Offset);
+-					BlockRead(UserData, ListItemP^.Magic, 2);
++					BlockRead(UserData, ListItemP^.Magic, 4);
+ 
+ 					// Read the user's name
+ 					Inc(Offset,4);
+@@ -269,7 +269,7 @@
+ 	begin
+ 		HKeyUsr := 0;
+ 
+-		InstallPath := GetPalmDesktopPath() + '\' + GetUserSubDir(User) + '\Install';
++		InstallPath := GetPalmDesktopPath + '\' + GetUserSubDir(User) + '\Install';
+ 		CreateDirectory(PChar(InstallPath), nil);
+ 
+ 		InstallPath := InstallPath + '\' + ExtractFileName(FileName);

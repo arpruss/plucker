@@ -1,0 +1,49 @@
+SEARCH TRANSLITERATIONS
+
+
+Transliterations are currently valid only for 8-bit characters.
+They are described by a .xlit text file with lines of the form:
+
+     fromChar toChar
+
+The chars can be specified by decimal (e.g., 334) or hex (0x12A) number, or
+directly entered in quotes ('"', " ", "\\", etc.)
+
+
+
+Additionally, you must include a line that says:
+
+     NAME Name of transliteration
+
+
+
+Optionally, you can include:
+
+     OTHER otherChar
+
+The otherChar is used for mapping any chars not specified, including
+all chars outside the 1-255 range.  If unspecified, these chars are
+not changed.
+
+
+
+Finally, you can also include:
+
+      SYMMETRIC n
+
+where n is 0 (no) or 1 (yes).  By default transliterations are asymmetric, so
+only the text to be searched is transliterated.  If the transliteration
+is symmetric, then both the text to be searched and the input search
+text are transliterated.  It is very strongly recommended that symmetric
+transliterations be projective, i.e., that the result of applying a symmetric
+transliteration twice be the same as that of applying it once.  Otherwise the
+effect for users may be quite confusing.
+
+
+Comments may start with # or //.
+
+
+xlit2bin.pl is a perl script that converts a .xlit file into a binary
+record which can then be placed in .pdb databases with creator ID Plkr and
+type Xlit, e.g., by using toprc -d.  You can have arbitrarily many such records in
+one of these databases, and as many such databases as you wish.

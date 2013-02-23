@@ -1,0 +1,820 @@
+NEWS for Plucker veterans
+-------------------------
+
+- 1.9
+
+  User stuff:
+  
+  * Full screen support on T3 and T5.  (Alexander Pruss)
+
+  * Menu option for sorting the documents in the Document Library
+    (Michael Nordström)
+
+  * Documents can be sorted by category. (Michael Nordström)
+
+  * If a document contains a publication date then that date will
+    be displayed instead of the file creation date (Michael Nordström)
+
+  * Rot13 support in the Export to Memo form. (Brad Sawatzky)
+
+  * Initial right-to-left rendering support. (Dov Feldstern)
+
+  * On devices running Palm OS 4.0 or later the date in the 
+    document library will depend on the time zone. (Michael Nordström)
+
+  Development stuff:
+
+  * Exact anchor support now in viewer.  Still needs to go into parser(s).
+
+  * Moved rotate setting to preferences.
+
+
+- 1.8
+
+  User stuff:
+
+  * i-mode support (Dave Maddock)
+
+  * The 5-way support in the library has been changed. (Michael Nordström)
+
+    New behaviour:
+
+      - If the list of documents is only one page then the fiveway will
+        be activated from the beginning.
+
+      - If the displayed list of documents includes the last accessed
+        document then the fiveway will be activated.
+
+      - The select/centre button will activate the fiveway and the
+        initially selected document will be the last accessed document
+        or if that document isn't visible the document at the middle of
+        the page will be selected. When the fiveway is activated the
+        select/centre button will open the selected document.
+
+      - The up/down button will either scroll the list one page up/down
+        (when the fiveway isn't activated) or select the previous/next
+        document in the list (when the fiveway is activated).
+
+      - The left button will deactivate the fiveway or if the fiveway
+        isn't activated it will exit the viewer. When the list of
+        documents is only one page pressing left will exit the viewer
+        instead of deactivate the fiveway.
+
+      - The right button will display the popup list with different
+        actions for the selected document (when the fiveway is activated).
+        When the fiveway isn't activated the right button will not result
+        in any action.
+
+  * The following preferences have been removed,
+
+      - "Enable dynamic scrollbar"; always disabled.
+
+      - "Enable visual aid"; always enabled.
+
+      - "Click sound for links"; always enabled (i.e. it uses the
+        setting for "system sound").
+
+  * Faster rotation.  (Alexander Pruss)
+
+  * Faster anti-aliased fonts on 68K.  (Alexander Pruss)
+
+  * Support for (slow) colored anti-aliased text in 8bpp.  (Alexander Pruss)
+  
+  * Anti-aliased fonts now work with colored backgrounds.  (Alexander Pruss)
+
+  * Support for font remapping via font package.  (Alexander Pruss)
+
+  * Italic font support.  (Alexander Pruss)
+
+  * Kerning for antialiased fonts.  Requires version 0.70+ of PalmFontConv.
+    (Alexander Pruss)
+
+  * Font packages can be put on VFS either in /Palm/Launcher/ or in 
+    /Palm/Programs/Plucker/Fonts/ (Alexander Pruss)
+
+  * You can now tap on a word to either put the word in the search form or
+    to look it up in a dictionary.  (Alexander Pruss)
+    
+  * Added Plucker Plugin Interface (PPI) to configure the interface with
+    third-party dictionary programs.  (Chris Hawks)
+
+  * Added Catalan translation (Albert Cuesta)
+
+  * Added Norwegian translation (Geir-Tore Lindsve)
+
+  * Added option to select whether the sort by date should use only the date
+    or if it should use both date and time (faster, but could make the list
+    look 'unsorted'). (Michael Nordström)
+
+  * The external card support will be disabled when the device detects a low
+    power situation to avoid errors when trying to access the card through
+    VFS. (Michael Nordström)
+
+  * External bookmarks support in viewer. (Dave Maddock)
+
+  * When the library is sorted by name, you can select a document by entering
+    the first couple of characters. (Alexander Pruss)
+
+  * The parser when using the Python Imaging Library will now automatically reduce
+    the depth of black-and-white images to 1-bit, thereby decreasing file size.
+    (Alexander Pruss)
+
+  * Drop-in transliteration module support added, and built-in transliterations
+    removed. (Alexander Pruss)
+
+  * Full support for DIA on Handera, Sony and PalmOS 5.2+ units, including
+    landscape if the hardware supports it.  (Alexander Pruss)
+    
+  * Full support for Dana AlphaSmart wide and tall modes.  (Alexander Pruss)
+
+  Development stuff:
+
+  * Support for unit test using PalmCUnit (http://www.rickandviv.net/palmcunit.html)
+    (Michael Nordström)
+
+
+
+- 1.6
+
+  User stuff:
+
+  * Support for anti-aliased fonts.  To convert outline fonts to
+    Plucker format, you may need things from palmfontconv.sourceforge.net
+
+  * Keyboard customization support.  (Alexander Pruss)
+
+  * Added support for continuous viewing of more than 32K of text.
+    (Alexander Pruss)
+
+  * Sped up rendering. (Alexander Pruss)
+
+  * Added display rotation. (Alexander Pruss)
+
+  * Added multiple term search. (Alexander Pruss)
+
+  * Added search armlet. (Alexander Pruss)
+
+  * AxxPac support (Angel Ivan Moreno)
+
+  * Handspring JogDial support (Rod Whitby)
+
+  * Handspring 5-way pad support (Michael Nordström)
+
+  * Support for online access to external links on Treo600 (Michael Nordström)
+
+  * Preference option to enable/disable soft-hyphens; some languages use
+    the same keycode for a normal character (Michael Nordström)
+
+  * Win32 script for handling POST requests in Plucker and also an Outlook
+    VBA macro to extract Plucker URLs (Jahn Rentmeister)
+
+  Development stuff:
+
+  * Changed the type and handling for several config options
+    (Michael Nordström)
+
+  * Removed ZLib directory and will include either M68K or Armlet version
+    of the SysZLib.prc in the viewer package (depending on the configuration
+    used for the viewer.)
+
+  * Included Justin Clark's armlet port of SysZLib.h.
+
+
+- 1.4
+
+  * Changed checkbox option to update document list manually into a
+    selection list with options to manually update list, automatically
+    update documents in RAM and external cards, or only in RAM
+    (Michael Nordström)
+
+  * The viewer will "remember" the category settings also
+    for documents on an external card that has been removed
+    (Michael Nordström)
+
+  * Hires support (Adam McDaniel)
+
+  * New Document Library (Adam McDaniel)
+
+  * I18N support (Masakazu Matsumoto)
+
+  * Next/prev anchor support (Josef Hajas)
+
+  * Added Thai translation (Karin Pimsamsee)
+
+  Development stuff:
+
+  * Added linked list feature; will be used for anchor handling,
+    cache, etc. (Michael Nordström)
+
+  * The viewer will accept beamed documents (Michael Nordström)
+
+  * Possible to use build directories for the viewer (Michael
+    Nordström)
+
+  * Removed support for the now obsolete A4 based version of prc-tools
+    (Michael Nordström)
+
+
+
+- 1.2
+
+  User stuff:
+
+  * One-click selection of category (Masakazu Matsumoto)
+
+  * Support for inlined images with a larger width than 
+    max line width (Masakazu Matsumoto)
+
+  * Added man pages for plucker-decode, plucker-dump, 
+    plucker-setup and pluck-comics (Michael Nordström)
+
+  * Support for sorting the databases according to name,
+    date or size in both ascending and descending order
+    (Michael Nordström)
+
+  * Support for strikethrough text (<s> and <strike>)
+    (Michael Nordström)
+
+  * The date used in the memo with the copied URLs will 
+    now be in the ISO format (Chris Hawks)
+
+  * Support for alignment attribute in paragraph tags
+    (Nick Vargish)
+
+  * Support for Visor's Flash Module (Michael Nordström
+    with help from David Martin to test it)
+
+  * Narrow font added to the viewer (Michael Nordström 
+    using font created by Robert O'Connor)
+
+  * Support for gestures, i.e. the user can specify actions 
+    for the up, down, right, left and tap gestures, similar 
+    to button actions (Robert O'Connor)
+
+  * Added Danish translation (Claus Hindsgaul)
+
+  * Added Simplified Chinese translation (Danny Zeng)
+
+  * Added Polish translation (Tomasz Wójcik)
+
+  * Added Russian translation (Oleg V. Krulikovsky)
+
+  * Added Spanish translation (Gustavo Broos)
+
+  * Added Turkish translation (Tufan Oruk)
+
+  * Narrow fixed font (Robert O'Connor)
+
+  * Autoscroll support (Robert O'Connor)
+
+  * Color and greyscale icons for toolbar (Robert O'Connor)
+
+  * Support for preformatted text (i.e. the <PRE> tag)
+    (Michael Nordström)
+
+  * The default category of a document will be added to
+    the list of categories if it's not already available
+    and there is a free position in the list, otherwise
+    the document will be assigned to Unfiled. Also made
+    it possible to assign several default categories 
+    separated by ';'  (Michael Nordström)
+
+  * Added <hr> parser support for size, align, and width (pixel and %)
+    (Robert O'Connor)
+
+  * Added document name to Details (Michael Nordström, after a
+    suggestion from Byron Collins)
+
+  * If no Plucker documents are available the viewer will go to
+    the Document Library (instead of showing an alert an exit).
+    (Michael Nordström)
+
+  * Optional owner-id protection added to Plucker documents, so
+    that they will only open on a device with a matching owner-id.
+    (Bill Janssen) 
+
+  * VFS support added. The viewer will look for Plucker documents
+    in /Palm/Programs/Plucker/, /Palm/Ebooks/, and /Palm/Launcher/
+    (Michael Nordström)
+
+  * Added word-wrap on a hyphen (Jamis Buck)
+
+  * Added option to set default launcher category for the viewer
+    (Michael Nordström)
+    
+  * Added option to update document list manually
+    (Michael Nordström)
+
+  Development stuff:
+
+  * Bug fix to avoid activating the control buttons during
+    pen movements (Michael Nordström)
+
+  * Added new target, dist-manual, which will create a tar 
+    package for the HTML manual (Michael Nordström)
+
+  * Changed the layout of the viewer's source code
+    (Michael Nordström)
+
+  * Added new configure options that can be used to disable
+    the building of the Palm apps and/or the documentation
+    (Michael Nordström)
+
+  * Added maintainer's Makefile used to build and release
+    new packages. Note that if you use the code direct from
+    CVS you have to run "make VERSION=<version>" to include
+    a version string.  (Michael Nordström)
+
+  * Added spec file for RPM package. (Michael Nordström)
+
+  * Configure script will check for more image tools and also
+    select the default image parser (Bill Janssen)
+
+  * Changed debug printouts to use POSE's HostControl API
+    (Max Bian)
+
+  * Added debug printouts to memo when running on PalmOS device
+    (Michael Nordström)
+
+  * Removed TRG SDK requirement (not necessary after VFS support
+    was added). (Michael Nordström)
+
+  * Applied patch found on the PalmZLib Sourceforge page. It adds
+    a few checks for NULL pointers. (Michael Nordström)
+
+
+- 1.1
+
+  User stuff:
+
+  * Preference option to change the standard font (Michael Nordström)
+
+  * Added possibility to jump to bookmarks from View Bookmarks dialog
+    (Michael Nordström)
+
+  * Added menu options for jumping to top and bottom of document
+    (Michael Nordström)
+
+  * Added possibility to move forward/backward using the DateBook/Addresses
+    buttons (Uwe Müssel)
+
+  * Added menu option to remove all databases for the selected 
+    category/categories in the DB Manager (Michael Nordström)
+
+  * Added French translation (Andy Rabagliati, Laurent Pasquer 
+    and Nicolas Huillard)
+
+  * Added Japanese translation (Masakazu MATSUMOTO)
+
+  * Added Faeroese translation (Jacob Sparre Andersen)
+
+  * Optimized the DB manager (Michael Nordström)
+
+  * More command toolbar options (Dirk Heiser)
+
+  * Added support for Basic Proxy Authorization (Dirk Heiser)
+
+  * Support for large images (Chris Hawks)
+
+  * New arguments added to the parser for the image handling
+    (Michael Nordström)
+
+  * When turning off the scrollbar the extra space will be used for
+    the rendering of the text (Michael Nordström)
+
+  * The parser will now use the environment variable PLUCKERDIR if it
+    is defined (Michael Nordström)
+
+  * Added pluck-comics, a tool to gather comics from selected websites
+    (Chris Hawks)
+
+  * The name of the database will be shown in the category form 
+    (Chris Hawks)
+
+  * Possible to configure all four hardware buttons for different actions
+    (Michael Nordström)
+
+  * Improved image support in the Python parser (Bill Janssen)
+
+  * Initial support for beaming Plucker databases from the DB manager.
+    On a TRGpro it is possible to beam databases from the CF card.
+    (Michael Nordström)
+
+  * Added confirmation dialogues to delete bookmarks and categories.
+    (Michael Nordström)
+
+  Development stuff:
+
+  * Added auto-detection of toolchain to configure scripts (Michael Nordström)
+
+  * Changed all viewer code to Kernighan & Ritchie coding style with the
+    indentation level to 8 spaces (Michael Nordström)
+
+  * Replaced "hard-coded" screen depth handling with a more general
+    solution (Michael Nordström)
+
+  * Command bit is set for menu key event (Michael Nordström)
+
+  * Added support for OS4 (Dirk Heiser)
+
+  * Changed the configure script so that it only checks for the dev
+    tools and the ZLib package if the cross-compiler has been found.
+    (Michael Nordström, after a suggestion from Adam Spiers)
+
+  * Added new target, dist-simple, which will create a zip package including 
+    the English version of the viewer, the ZLib shared library and the 
+    User's Guide as a Plucker document (Michael Nordström)
+
+  * Fixed a few memory leaks (Michael Nordström)
+
+- 1.0
+
+  User stuff:
+
+  * Support for command toolbar in PalmOS 3.5 (Dirk Heiser)
+
+  * Category support in DB Manager (Michael Nordström)
+
+  * Possible to copy URLs to the clipboard (Chris Hawks)
+
+  * Support for ZLib compressed databases (Michael Nordström)
+
+  * Support for BASE tag in documents (Bill Janssen)
+
+  * Improved table support (Bill Janssen)
+
+  * New config file option to suppress compression of small 
+    images, no_image_compression_limit (Dirk Heiser)
+
+  * New flag (and config file option) to set the default 
+    category, --category (Michael Nordström)
+
+  * Support for underline tags (<U>). When it is activated in
+    the preference all links will be indicated using the dotted
+    line. Use the strike-through option to still be able to
+    distinguish visited and unvisited links. (Michael Nordström)
+
+  * Man page for the parser (Bill Janssen)
+
+  Development stuff:
+
+  * New record added to store references to the URL records, see 
+    PluckerDB.html for details. (Chris Hawks)
+
+  * The ZLib support uses the PalmOS shared library that Tom Zerucha has 
+    created. This library will also work with Boxer (written by Tom), 
+    http://www.palmboxer.com/ . More info about the library is available
+    at http://palmzlib.sourceforge.net/
+
+  * Added support to config files for both prc-tools-2.0 and prc-tools-0.6.0
+    (Michael Nordström)
+
+  * New database format that should allow us to expand the format in 
+    the future without rendering previous versions obsolete, see 
+    PluckerDB.html for details. (Michael Nordström)
+
+  * Fixed a (harmless) bug in the session handling that has gone 
+    unnoticed for a very long time. (Michael Nordström)
+
+  * Changed the handling of Show images, so that there will still
+    be a "[img]" tag when you choose to not show images. Previously,
+    nothing was displayed which made it impossible to use image links.
+    (Michael Nordström)
+
+  * The ConfigFiles.py file now makes sure that the default value, 
+    if specified, is of the correct type.  It also abstracts out
+    the operation of looking up the option in the configs, to a 
+    new method, _get_string, which does not take an option.
+    (Bill Janssen)
+
+  * Fix to avoid Palm OS bug in bitmap compression (Michael Nordström)
+
+  * Fix to avoid buffer overflow for long database names (Michael Nordström)
+
+  * Fix to avoid problems with AutoCF when searching in databases located
+    on the CF card (Michael Nordström)
+
+  * Fix to avoid Palm OS bug in DmSetDatabaseInfo (Michael Nordström)
+
+  * Other bug fixes (Michael Nordström)
+
+
+- 0.9
+
+  User stuff:
+
+  * Support for databases in Flash (Michael Nordström)
+
+  * Support for large images (scroll the image using the pen)
+    (Michael Nordström)
+
+  * New preference option to set the screen bit depth 
+    (Michael Nordström)
+
+  * The viewer will automatically set the required bit depth
+    for the screen (if the depth is supported by the device)
+    for Tbmp documents, i.e. not documents with inlined
+    images (Michael Nordström)
+
+  * Added session control for the search options (case sensitive, 
+    search in page or all pages) (Michael Nordström)
+
+  * Added "history" for search patterns (Michael Nordström)
+
+  * Italian version of the viewer (Daniela Di Candia)
+
+  * The image text will now indicate the bit depth (Michael Nordström,
+    after a suggestion from Alexander Wagner)
+
+  * Pop-up dialog for a small image that is both a link to a large 
+    version of the image and to a page (Michael Nordström)
+
+  * Moved the option for pen scrolling from Preferences to the 
+    Tap Action (Michael Nordström)
+
+  Development stuff:
+
+  * Bug fixes: memory leak (under some very rare conditions) 
+    in uncompress handling, etc. (Michael Nordström)
+
+  * Major changes to database format separating the static
+    and dynamic data (Michael Nordström)
+
+  * It is now possible to place objects at different locations 
+    for the supported languages (Michael Nordström)
+
+  * Database version changed to 9 and other databases will be
+    rejected (Michael Nordström)
+
+  * New format for mailto tag records (Chris Hawks)
+
+  * Added depth status for each document (Michael Nordström,
+    idea from Holger Dürer)
+
+
+- 0.8
+
+  User stuff:
+
+  * Possible to use databases that have been beamed or 
+    installed using InstallBuddy (Michael Nordström)
+
+  * Alert when you try to open a databases in flash ROM
+    (Michael Nordström)
+
+  * Config file for the python parser (Holger Dürer)
+
+  Development stuff:
+
+  * Bug fixes (NULL handlers, memory leaks etc.) (Michael Nordström)
+
+  * Each record now also contains a unique ID that is
+    used for finding the correct record (Michael Nordström
+    after an idea from Ondrej Palkovsky)
+
+  * The viewer will now create a separate database for the
+    uncompress handling (Michael Nordström)
+
+  * Major changes to the database format, changed the UID
+    for some records and the first two bytes of a record 
+    will always contain the UID for the record 
+    (Michael Nordström)
+
+
+- 0.7
+
+  User stuff:
+
+  * Table based database manager added (Michael Nordström)
+
+  * Fullscreen mode added (Michael Nordström)
+
+  * Possible to have the toolbar either at the top or the
+    bottom of the page (Michael Nordström)
+
+  * Included file with different Palm (and Plucker) friendly
+    sites, links.html 
+
+  * Support for new alignment option, justify. (Chris Hawks)
+
+  * Improved handling of low memory conditions (Michael Nordström)
+
+  * Support for mailto tags (Chris Hawks)
+	
+  * Support for OS 3.1+ OpenDB command (for Launcher III, etc)
+    (Dirk Heiser)
+
+  * Re-wrote the code that added support for different screen
+    depths, it should now support the highest available screen
+    depths for the device it is running on. (Michael Nordström)
+
+  * Rename database option added to database manager (Michael Nordström)
+
+  * System sound (click) when tapping on control objects or links.
+    (Michael Nordström)
+
+  Development stuff:
+
+  * Bug fixes (rendering problems, search in uncompressed documents,
+    etc.) (Michael Nordström)
+
+  * Record #3 (error.html) has been removed from the viewer. 
+    (Michael Nordström)
+
+  * Code updated for SDK3.5 (Michael Nordström)
+
+
+- 0.6
+
+  User stuff:
+
+  * A warning if record #1, #2 and/or #3 are missing replaces the warning 
+    for wrong version. (Michael Nordström)
+
+  * If any important records are missing (except for #1, #2 and #3) they
+    will be created automatically. (Michael Nordström)
+
+  * If the last viewed database is found to be broken when the viewer is 
+    started it will alert the user about this and display the database 
+    manager. (Michael Nordström)
+
+  * Show images option added to details dialog. (Michael Nordström)
+
+  * Find function (Michael Nordström)
+
+  * Czech version of the viewer (Ondrej Palkovsky)
+  
+  * Support for 2bit greyscale images (Michael Nordström, using info&code
+    available at http://www.astraware.com/program/palm/snippits.html.
+    Thanks to Dirk Heiser for providing the URL.)
+
+  * Location in the current document (in %) included in the header.
+    (Chris Hawks)
+
+  * Tap on percentage and get a pop-up list (top, 10%, 20% ... 90%, bottom)
+    used to jump inside the document. (Michael Nordström)
+
+  * Scrollbar can be placed at the left/right side or be removed. 
+    (Michael Nordström)
+
+  * New icon in header to enable quick access to database manager.
+    (Chris Hawks)
+
+  * New icon in header to enable quick access to find/find again.
+    (Chris Hawks)
+
+  * Database manager is now using a normal list instead of a pop-up
+    list. (Michael Nordström, Chris Hawks)
+
+  * Database Info option added to database manager form. (Chris Hawks)
+
+  Development stuff:
+
+  * New structure for the language support (Michael Nordström)
+
+  * Configure scripts will now require that the m68k-palmos tools are
+    in the user's path. It will also be possible to configure and build
+    the viewer in a separate directory. (Michael Nordström)
+
+  * Many bugs fixed (Michael Nordström)
+
+
+- 0.5
+
+  User stuff:
+
+  * Support for compression of database. (Michael Nordström, Holger Dürer)
+
+  * Details dialog making it possible to mark a read document as unread. 
+    More stuff will be added to this dialog later on. (Michael Nordström)
+
+  * Support for alignment, margins ad new line should make it possible
+    to replicate the document closer to the original. (Michael Nordström)
+
+  * Italic font (Michael Nordström)
+
+  * Horizontal rule (Michael Nordström)
+
+  * Multi-database support (Michael Nordström)
+
+  * Warning if no database exists or if a database has the wrong 
+    version. (Michael Nordström)
+
+  * No underlining of images, where appropriate. (Michael Nordström)
+
+  * Scrollbars (Michael Nordström)
+
+  * Named anchors support (Michael Nordström, Holger Dürer)
+
+  * Strike-through option for visited links (Michael Nordström)
+
+  * Python based parser (Ondrej Palkovsky, Holger Dürer)
+
+  * LaTeX and HTML versions of documentation (Alexander Wagner)
+
+  * Preferences (Menu-hack, strike-through) (Michael Nordström) 
+
+  * Control options to set different behavior for different 
+    regions of the screen. (Michael Nordström)
+
+  * Menu-hack, i.e. tap on title to open menu. (Michael Nordström)
+
+  Development stuff:
+
+  * Disassembly tool (Holger Dürer)
+
+  * Improved debug support through serial port (Michael Nordström)
+
+  * Documents and images are now uncompressed using a 4k buffer
+    and two different records. Should decrease the required 
+    amount of dynamic memory. (Michael Nordström)
+
+  * Function descriptions added to all functions in the source 
+    code. (Michael Nordström)
+
+  * Guidelines for the coding conventions used in the viewer 
+    added. (Michael Nordström)
+
+  * Several bug corrections (Michael Nordström)
+
+  * API documentation (Michael Nordström)
+
+
+- 0.04 
+
+  Internal version
+
+
+- 0.03
+
+  User stuff:
+
+  * Inline and linked image support! (Mark Lillywhite)
+
+  * Visited links are now indicated by a gray underline. (Michael Nordström)
+
+  * Session management. (Michael Nordström)
+
+  * Some international characters are now supported. 
+    If you have information about problems please let us know. Thanks 
+    to Michael Nordström and Andreas Gaufer.
+
+  * The page-up and page-down keys now scroll 100 pixels, instead of 20.
+    The use of the pen to scroll the screen remains unchanged. (Jiva DeVoe)
+
+  * If you tap somewhere in the top half of the screen, the page scrolls down.
+    If you tap somewhere in the bottom half, the page scrolls up. (Jiva DeVoe)
+
+  * Now accepts links starting with "file:" (Mark Lillywhite)
+
+  * Perl based conduit (Alexander Wagner)
+
+  * OS/2 support for desktop tools, see README in parser/os2 (Alexander Wagner)
+
+  * wget replaces lynx for downloading web pages (future versions of Plucker
+    will replace wget with perl, see below)
+
+  * Changes in PluckerDB structure, so any PluckerDB created with 0.02 won't
+    work
+
+  * The downloaded HTML pages are now placed in ~/.plucker/html, please
+    make sure that this directory exists if you are upgrading from an earlier
+    version of Plucker.
+
+  Development stuff:
+
+  * The source file has been split up.  There is now a *.c and *.h file 
+    for most of the "objects" in the viewer. Hopefully this will make 
+    the structure a bit easier to figure, though probably not :)
+
+  * If you define DEBUG and DEBUG_SERIAL, then you can write debug messages
+    to the serial port. (It doesn't work all that great, but it's better then
+    what we had before!).
+
+  Other stuff:
+
+  * There is work proceeding apace on a new parser, written in Perl, which 
+    should make Plucker much easier to use.
+
+  * Many bugs fixed
+
+
+- 0.02
+
+  This is a really small update to plucker. It attempts to make the viewer run
+  on PalmOS units other than PalmOS 3; it appears to work on PalmOS 2.5, and
+  it's possible it will now run on PalmOS 1.
+
+  I've also made some very small changes to Plucker with thanks to suggestions
+  from Mark Seaborn. He's reported getting plucker working on a very early
+  Pilot. I'm not sure the precompiled version will work; you might need to
+  get the pilot tools and make some changes to viewer.c (or you might not).
+
+
+-- 0.01
+
+  Original release.
+
+
+The Plucker Team
+plucker-team@rubberchicken.org
