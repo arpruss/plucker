@@ -1,0 +1,21 @@
+AR=lib /nologo
+ARFLAGS=/out:cppre.lib
+CC=cl /nologo
+CXXFLAGS=-I. -c -GX -GR
+
+SRC=                  \
+Matcher.cpp           \
+Pattern.cpp           \
+UnicodeMatcher.cpp    \
+UnicodePattern.cpp    \
+
+OBJ=$(SRC:.cpp=.obj)
+
+cppre.lib: $(OBJ)
+	$(AR) $(ARFLAGS) $(OBJ)
+
+.cpp.obj:
+	$(CC) $(CXXFLAGS) $<
+
+clean:
+	del $(OBJ) cppre.lib

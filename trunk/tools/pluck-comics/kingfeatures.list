@@ -1,0 +1,535 @@
+#
+# $Id: kingfeatures.list,v 1.5 2006/05/20 13:18:25 desrod Exp $
+# urls updated on 2006/01/17 by Ducem Barr
+#
+
+comic_list.append({
+	'name': 'spidermn',
+	'page': 'http://www.kingfeatures.com/features/comics/spidermn/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'The Amazing Spiderman'})
+
+comic_list.append({
+	'name': 'apt3g',
+	'page': 'http://www.kingfeatures.com/features/comics/apt3g/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/Apartment_3-G\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Apartment 3G'})
+
+comic_list.append({
+	'name': 'babyblue',
+	'page': 'http://www.kingfeatures.com/features/comics/babyblue/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Baby Blues'})
+
+comic_list.append({
+	'name': 'bgoogle',
+	'page': 'http://www.kingfeatures.com/features/comics/bgoogle/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Barney Google and Snuffy Smith'})
+
+comic_list.append({
+	'name': 'bbailey',
+	'page': 'http://www.kingfeatures.com/features/comics/bbailey/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Beetle Bailey'})
+
+comic_list.append({
+	'name': 'bethalf',
+	'page': 'http://www.kingfeatures.com/features/comics/bethalf/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'The Better Half'})
+
+comic_list.append({
+	'name': 'bfriends',
+	'page': 'http://www.kingfeatures.com/features/comics/bfriends/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Between Friends'})
+
+comic_list.append({
+	'name': 'bizarro',
+	'page': 'http://www.kingfeatures.com/features/comics/bizarro/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Bizarro'})
+
+comic_list.append({
+	'name': 'blondie',
+	'page': 'http://www.kingfeatures.com/features/comics/blondie/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Blondie'})
+
+comic_list.append({
+	'name': 'buckles',
+	'page': 'http://www.kingfeatures.com/features/comics/buckles/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Buckles'})
+
+comic_list.append({
+	'name': 'crankshaft',
+	'page': 'http://www.kingfeatures.com/features/comics/crank/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Crankshaft'})
+
+comic_list.append({
+	'name': 'crock',
+	'page': 'http://www.kingfeatures.com/features/comics/crock/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Crock'})
+
+comic_list.append({
+	'name': 'curtis',
+	'page': 'http://www.kingfeatures.com/features/comics/curtis/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Curtis'})
+
+comic_list.append({
+	'name': 'dennis',
+	'page': 'http://www.kingfeatures.com/features/comics/dennis/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Dennis the Menace'})
+
+comic_list.append({
+	'name': 'edgecity',
+	'page': 'http://www.kingfeatures.com/features/comics/edgecity/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/Edge_City\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Edge City'})
+
+comic_list.append({
+	'name': 'familyc',
+	'page': 'http://www.kingfeatures.com/features/comics/familyc/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Family Circus'})
+
+comic_list.append({
+	'name': 'fgordon',
+	'page': 'http://www.kingfeatures.com/features/comics/fgordon/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Flash Gordon'})
+
+comic_list.append({
+	'name': 'fibbs',
+	'page': 'http://www.kingfeatures.com/features/comics/fibbs/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Franklin Fibbs'})
+
+comic_list.append({
+	'name': 'fwinker',
+	'page': 'http://www.kingfeatures.com/features/comics/fwinker/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Funky Winkerbean'})
+
+comic_list.append({
+	'name': 'grinbear',
+	'page': 'http://www.kingfeatures.com/features/comics/grinbear/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Grin and Bear It'})
+
+comic_list.append({
+	'name': 'hagar',
+	'page': 'http://www.kingfeatures.com/features/comics/hagar/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Hagar the Horrible'})
+
+comic_list.append({
+	'name': 'hazel',
+	'page': 'http://www.kingfeatures.com/features/comics/hazel/aboutMaina.php',
+	'expr': "hat\d*.gif",
+	'suff': '.gif',
+	'base': 'http://www.kingfeatures.com/features/comics/hazel/',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Hazel'})
+
+comic_list.append({
+	'name': 'henry',
+	'page': 'http://www.kingfeatures.com/features/comics/henry/aboutMaina.php',
+	'expr': "het\d*.gif",
+	'suff': '.gif',
+	'base': 'http://www.kingfeatures.com/features/comics/henry/',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Henry'})
+
+comic_list.append({
+	'name': 'hi_lois',
+	'page': 'http://www.kingfeatures.com/features/comics/hi_lois/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Hi and Lois'})
+
+comic_list.append({
+	'name': 'jparker',
+	'page': 'http://www.kingfeatures.com/features/comics/jparker/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Judge Parker'})
+
+comic_list.append({
+	'name': 'katzkids',
+	'page': 'http://www.kingfeatures.com/features/comics/katzkids/aboutMaina.php',
+	'expr': "kk\d*.gif",
+	'suff': '.gif',
+	'base': 'http://www.kingfeatures.com/features/comics/katzkids/',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Katzenjammer Kids'})
+
+comic_list.append({
+	'name': 'lawyer',
+	'page': 'http://www.kingfeatures.com/features/comics/Lawyer/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'A Lawyer, A Doctor And A Cop'})
+
+comic_list.append({
+	'name': 'lockhorn',
+	'page': 'http://www.kingfeatures.com/features/comics/lockhorn/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'The Lockhorns'})
+
+comic_list.append({
+	'name': 'mallard',
+	'page': 'http://www.kingfeatures.com/features/comics/mallard/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Mallard Fillmore'})
+
+comic_list.append({
+	'name': 'mandrake',
+	'page': 'http://www.kingfeatures.com/features/comics/mandrake/aboutMaina.php',
+	'expr': "mmt\d*.gif",
+	'suff': '.gif',
+	'base': 'http://www.kingfeatures.com/features/comics/mandrake/',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Mandrake the Magician'})
+
+comic_list.append({
+	'name': 'mtrail',
+	'page': 'http://www.kingfeatures.com/features/comics/mtrail/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Mark Trail'})
+
+comic_list.append({
+	'name': 'marvin',
+	'page': 'http://www.kingfeatures.com/features/comics/marvin/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Marvin'})
+
+comic_list.append({
+	'name': 'mworth',
+	'page': 'http://www.kingfeatures.com/features/comics/mworth/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Mary Worth'})
+
+comic_list.append({
+	'name': 'moosemol',
+	'page': 'http://www.kingfeatures.com/features/comics/moosemol/aboutMaina.php',
+	'expr': "mot\d*.gif",
+	'suff': '.gif',
+	'base': 'http://www.kingfeatures.com/features/comics/moosemol/',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Moose & Molly'})
+
+comic_list.append({
+	'name': 'mutts',
+	'page': 'http://www.kingfeatures.com/features/comics/mutts/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Mutts'})
+
+comic_list.append({
+	'name': 'fastrack',
+	'page': 'http://www.kingfeatures.com/features/comics/fastrack/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'On the Fastrack'})
+
+comic_list.append({
+	'name': 'pardonpl',
+	'page': 'http://www.kingfeatures.com/features/comics/pardonpl/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/Pardon_My_Planet\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Pardon My Planet'})
+
+comic_list.append({
+	'name': 'phantom',
+	'page': 'http://www.kingfeatures.com/features/comics/phantom/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'The Phantom'})
+
+comic_list.append({
+	'name': 'piranha',
+	'page': 'http://www.kingfeatures.com/features/comics/piranha/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Piranha Club'})
+
+comic_list.append({
+	'name': 'popeye',
+	'page': 'http://www.kingfeatures.com/features/comics/popeye/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Popeye'})
+
+comic_list.append({
+	'name': 'pvaliant',
+	'page': 'http://www.kingfeatures.com/features/comics/pvaliant/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/Prince_Valiant\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Prince Valiant'})
+
+comic_list.append({
+	'name': 'redeye',
+	'page': 'http://www.kingfeatures.com/features/comics/redeye/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Redeye'})
+
+comic_list.append({
+	'name': 'retail',
+	'page': 'http://www.kingfeatures.com/features/comics/retail/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Retail'})
+
+comic_list.append({
+	'name': 'rmorgan',
+	'page': 'http://www.kingfeatures.com/features/comics/rmorgan/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Rex Morgan, M.D.'})
+
+comic_list.append({
+	'name': 'orange',
+	'page': 'http://www.kingfeatures.com/features/comics/orange/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Rhymes with Orange'})
+
+comic_list.append({
+	'name': 'safehavn',
+	'page': 'http://www.kingfeatures.com/features/comics/safehavn/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Safe Havens'})
+
+comic_list.append({
+	'name': 'sforth',
+	'page': 'http://www.kingfeatures.com/features/comics/sforth/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Sally Forth'})
+
+comic_list.append({
+	'name': 'sam_silo',
+	'page': 'http://www.kingfeatures.com/features/comics/sam_silo/aboutMaina.php',
+	'expr': "sst\d*.gif",
+	'suff': '.gif',
+	'base': 'http://www.kingfeatures.com/features/comics/sam_silo/',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Sam and Silo'})
+
+comic_list.append({
+	'name': 'lagoon',
+	'page': 'http://www.kingfeatures.com/features/comics/lagoon/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Sherman\'s Lagoon'})
+
+comic_list.append({
+	'name': 'sixchix',
+	'page': 'http://www.kingfeatures.com/features/comics/sixchix/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Six Chix'})
+
+comic_list.append({
+	'name': 'slylock',
+	'page': 'http://www.kingfeatures.com/features/comics/slylock/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Slylock Fox and Comics for Kids'})
+
+comic_list.append({
+	'name': 'theydoit',
+	'page': 'http://www.kingfeatures.com/features/comics/theydoit/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'They\'ll Do It Every Time'})
+
+comic_list.append({
+	'name': 'tiger',
+	'page': 'http://www.kingfeatures.com/features/comics/tiger/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Tiger'})
+
+comic_list.append({
+	'name': 'tgroove',
+	'page': 'http://www.kingfeatures.com/features/comics/tgroove/aboutMaina.php',
+	'expr': "tgt\d*.gif",
+	'suff': '.gif',
+	'base': 'http://www.kingfeatures.com/features/comics/tgroove/',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Tina\'s Groove'})
+
+comic_list.append({
+	'name': 'todd',
+	'page': 'http://www.kingfeatures.com/features/comics/todd/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Todd the Dinosaur'})
+
+comic_list.append({
+	'name': 'triple',
+	'page': 'http://www.kingfeatures.com/features/comics/triple/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Triple Take'})
+
+comic_list.append({
+	'name': 'tumblewd',
+	'page': 'http://www.kingfeatures.com/features/comics/tumblewd/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Tumbleweeds'})
+
+comic_list.append({
+	'name': 'zippy',
+	'page': 'http://www.kingfeatures.com/features/comics/zippy/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Zippy the Pinhead'})
+
+comic_list.append({
+	'name': 'zits',
+	'page': 'http://www.kingfeatures.com/features/comics/zits/aboutMaina.php',
+	'expr': "http://\w*.\w*.\w*/content/\w*\?date=\d*",
+	'suff': '.gif',
+	'base': '',
+	'refr': 'http://www.kingfeatures.com',
+	'title': 'Zits'})

@@ -1,0 +1,26 @@
+Instructions for MS Visual C++ 6.0:
+
+1. Open up the PluckerCond.dsw file.
+
+2. From menu: Project>Settings. In the resulting dialog box,
+   select the top root level "Plucker Cond" in the left sidepane.
+   
+3. On the drop down menu at the top left of the dialog called 
+   "Settings for:", choose "Win32 Debug".
+
+4. Select the C/C++ tab, and at the bottom of the tab there is a 
+   "Project options" box of commandline arguments for the make. Fix 
+   the include paths to the Palm Conduit Development Kit (CDK). For
+   example, change "D:\CDK403" to "C:\palmdev\cdk403" or whatever it
+   is on your system.
+
+5. Now select the "Link" tab, and in the Project options at the 
+   bottom of this tab, also change the path to your sdk. [The palm
+   sdk path is the last one listed in this textbox].
+
+6. On the drop down menu at the top left of the dialog called 
+   "Settings for:", choose "Win32 Release", and repeat steps 4 and 5.
+
+7. Press OK to save settings.
+
+8. From menu, choose Build>Rebuild All.

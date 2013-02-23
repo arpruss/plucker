@@ -1,0 +1,35 @@
+4a5
+> #if !defined(WIN32)
+5a7,38
+> #else
+> //#include <io.h>
+> #include <direct.h>
+> #define mkstemp(a) (_mkdir(a))
+> #define        __S_IFREG        0100000
+> #define        __S_IFMT        0170000
+> #define __S_IFDIR   0040000
+> #define        __S_ISTYPE(mode, mask)        (((mode) & __S_IFMT) == (mask))
+> #define        S_ISREG(mode)         __S_ISTYPE((mode), __S_IFREG)
+> #define S_ISDIR(mode) __S_ISTYPE((mode), __S_IFDIR)
+> void link(char* filename, char* symfilename)
+> {
+>     FILE *fpw;
+>     FILE *fpr;
+>     fpw = fopen(symfilename, "wb+");
+>     fpr = fopen(filename, "rb");
+>     if (fpr && fpw) {
+>         char buffer[1024];
+>         int count;
+>         while (!feof(fpr)) {
+>             count = fread(buffer, 1, 1024, fpr);
+>             if (count > 0)
+>                 fwrite(buffer, 1, count, fpw);
+>         }
+>     }
+>     if (fpr)
+>         fclose(fpr);
+>     if (fpw)
+>         fclose(fpw);
+> }
+> #endif
+> 

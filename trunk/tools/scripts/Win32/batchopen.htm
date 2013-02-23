@@ -1,0 +1,54 @@
+
+   <html><head><title>Open URLs</title></head><body>
+
+   <script language="Javascript">
+   <!--
+      var uwinarr = Array();
+      var uwincount=0;
+
+      function batchopenup(f)
+      {
+         var i;
+         var pos;
+
+
+         var rest=f;
+         pos=rest.indexOf('\n')            
+
+         while(pos>0)
+         {
+            var line=rest.substring(0,pos-1);
+            if (line.indexOf('http:')!=0 && line.indexOf('ftp:')!=0 && line.indexOf('https:')!=0)
+            {
+               if (line.indexOf(' ') >= 0)
+               {
+                  line='http://www.google.com/search?sa=Google+Search&q=' + escape(line);
+               }
+               else {  line='http://'+line; }
+            }               
+            if (line.length>8) { window.open(line); }
+            rest=rest.substring(pos+1,rest.length);
+            pos=rest.indexOf('\n');
+         }
+         line=rest;
+         if (line.indexOf('http:')!=0 && line.indexOf('ftp:')!=0 && line.indexOf('https:')!=0)
+         {
+            if (line.indexOf(' ') >= 0)
+            {
+               line='http://www.google.com/search?sa=Google+Search&q=' + escape(line);
+            }
+            else {  line='http://'+line; }
+         }
+         if (line.length>8) { window.open(line); }
+         return false;
+      }
+   //-->
+   </script>
+
+
+
+   <form name=batchopenform onsubmit="batchopenup(this.batchdata.value);return false;">
+   <textarea rows=20 cols=40 name=batchdata></textarea>
+   <br><input type=submit value="URLs/Websuchen öffnen">
+   </form>
+</html>

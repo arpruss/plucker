@@ -1,0 +1,66 @@
+<html><head><title>Bookmarklets for extracting form data</title></head><body>
+<h1>Bookmarklets for extracting form data (e.g. for POST forms in Plucker)</h1>
+This page contains two bookmarklets.
+<p>
+Bookmarklets are little snippets of Javascript code designed to reside in your favorites or bookmarks or linklist or toolbar or whatever you call it.
+The idea is to store a bit of Javascript functionality so you can conveniently call it on a page where it is relevant.
+<p>
+<h2>Useage Scenario</h2>
+The bookmarklets contained in this file are relevant to web pages that contain forms. The useage scenario is as follows:
+<p>
+You are on a web page with a form, and you wish to automatically submit this form in the future. For example, you may wish to provide the form data to the Plucker distiller so you can "pluck" the resulting page. For forms of method GET, you could simply submit the form and get the URL of the resulting page. For POST forms, this will not solve your problem. 
+<p>
+<h2>Solution</h2>
+First, you fill in the form. Then you select the bookmarklet from your bookmark list (or doubleklick on the link in your toolbar). A new window will open which contains all the information you need to pluck the form results page. You copy-and-paste that information into your plucker file and are done.
+<p>
+In the Plucker documentation you will find information on how to pluck POST forms. 
+<p>
+<h2>Installation</h2>
+There are two versions of this bookmarklet: One for POST forms, one for GET forms. I could have put both into one bookmarklet, but Microsoft limited their length to 508 characters in MSIE 6.0, so I had to conserve space. (Earlier MSIE versions had a much larger limit.)
+<p>
+You can install them by right-clicking on the link and selecting "add to favorites" or by dragging and dropping the link onto your toolbar or whatever is appropriate for your browser. 
+<p>
+This web page also contains an example for a form, so you can test the bookmarklets. 
+
+<h2>Bugs and Features</h2>
+The bookmarklets are tested with MSIE 6, MSIE 5.5 and Opera 7.2, so I don't really know if they work on other browsers. You'll have to test for yourself. 
+<p>
+To make it work on MSIE 6, I had to trim it to less than 509 bytes (it is 507 bytes for the GET version, 504 for the POST version). Therefore, the script does no error checking. That is, if you use it with a file upload field, it will probably give you an error. There is still some slack, though: It is not strictly necessary to check for reset and button fields for most forms. (It does no harm if their values are sent to the server.)
+<p>
+Also, as is usually the case with bookmarklets, I had to obfuscate the code: It has to fit in one line, and variable names should not clash with names on the page where the bookmarklet is used. I used "jX" as a common prefix for all identifiers the bookmarklets use to avoid name clashes. 
+<p>
+For shortening the code, I have resorted to a lot of with statements, unusual loop conditions in for loops and checking the field type only by two characters, not by the whole type. Also, I put most of the field types in the default branch of the switch statement. 
+<ul>
+<li>
+
+<a  onclick="alert('Please right-click and select add to favorites - you can not properly test if it works by just clicking the link'); return false;" href="javascript:jX1=open().document;{for(jX2=-1;jX3=document.forms[++jX2];){jX='';for(jX4=-1;jX5=jX3.elements[++jX4];)with(jX5){jX6='&'+encodeURI(name)+'=';switch(type.slice(0,2)){case'se':for(jX7=-1;jX8=options[++jX7];)with(jX8)if(selected)jX=jX+jX6+encodeURI(value?value:text);case'bu':case're':break;case'ch':case'ra':if(!checked)break;default:jX=jX+jX6+encodeURI(value);break;}}jX1.write(jX3.name+':\t'+(jX9=unescape('%22'))+jX3.action+jX9+'\tPOST='+jX9+jX.slice(1,jX.length)+jX9+'<p>')}void(jX1.close())}">Create POST Request from form (bookmarklet)</a>
+
+<li>
+<a  onclick="alert('Please right-click and select add to favorites - you can not properly test if it works by just clicking the link'); return false;" href="javascript:jX1=open().document;{for(jX2=-1;jX3=document.forms[++jX2];){jX='';for(jX4=-1;jX5=jX3.elements[++jX4];)with(jX5){jX6='&'+encodeURI(name)+'=';switch(type.slice(0,2)){case'se':for(jX7=-1;jX8=options[++jX7];)with(jX8)if(selected)jX=jX+jX6+encodeURI(value?value:text);case'bu':case're':break;case'ch':case'ra':if(!checked)break;default:jX=jX+jX6+encodeURI(value);break;}}jX1.write(jX3.name+':\t<a\thref='+(jX9=unescape('%22'))+jX3.action+'?'+jX.slice(1,jX.length)+jX9+'>GET</a><p>')}void(jX1.close())}">Create GET Request from form (bookmarklet)</a>
+
+</ul>
+<hr>
+<script>
+   function domarklet()
+   {
+with(jX1=open().document){for(jX2=-1;jX3=document.forms[++jX2];){jX='';for(jX4=-1;jX5=jX3.elements[++jX4];)with(jX5){jX6='&'+encodeURI(name)+'=';switch(type.slice(0,2)){case'se':for(jX7=-1;jX8=options[++jX7];)with(jX8)if(selected)jX=jX+jX6+encodeURI(value?value:text);case'bu':case're':break;case'ch':case'ra':if(!checked)break;default:jX=jX+jX6+encodeURI(value);break;}}write(jX3.name+':\t<a\thref='+(jX9=unescape('%22'))+jX3.action+'?'+jX.slice(1,jX.length)+jX9+'>GET</a><p>')}void(close())}
+   }
+</script>
+
+<form name="dieform" action="http://127.0.0.1/" onsubmit="domarklet()">
+<textarea name=batchdata rows=20 cols=80></textarea>
+<input type=submit name=submitbutton value="ausführen">
+<input type=radio name=radio1 value=1>1
+<input type=radio checked name=radio1 value=2>2
+<input type=radio name=radio1 value=3>3
+
+<input type=text value="Jahn" name=dertext>
+<input type=password value="123" name=daspassword>
+<select multiple name=dasselect><option>1 <option>2 <option value="xxx">3
+<input type=reset name=resetbutton value="Reset">
+<input name="klickbutton" type=button value="klickmich">
+</form>
+<hr>
+<i>2003-09-10, Jahn Rentmeister, see <a href="http://www.jahns-home.de/plucker.htm">http://www.jahns-home.de/plucker.htm</a> for more info and newest version. Report problems to &lt;rentmei AT uni-muenster.de&gt; with "Bookmarklet" in the subject line. </i>
+</body>
+</html>

@@ -1,0 +1,42 @@
+Option Explicit
+' This VBA Macro is for use in MS-Outlook.
+' It will write all plucker notes to a file so you can use it,
+' You can easily change the code so the notes are deleted
+' You can also easily change the code so the notes are put
+' together into one note.
+' 
+' I use this code together with some javascript in a static web page
+' to open all the URLs when I am at my desktop computer:
+' The makro starts an editor, I use that to delete all the
+' non-URL lines, then cut-and-paste to a textarea field in the web page
+' and push a button that opens all the pages at once.
+
+Dim shellresult As Double
+Dim x As String
+Dim note As Variant
+Const outfilename = "C:\\tmp\\pluckerstuff.txt"
+Sub plucker()
+    x = ""
+    For Each note In GetNamespace("MAPI").GetDefaultFolder(olFolderNotes).Items
+        
+            If InStr(1, note.Body, "Plucker URLs", vbTextCompare) = 1 _
+                And InStr(1, note.Body, "Plucker URLs a", vbTextCompare) <> 1 Then
+                x = x & Chr(13) & Chr(10) & Chr(13) & Chr(10) & "=> " & note.Body
+                If note.Categories <> "Plucker stuff" Then
+                    note.Categories = "Plucker stuff"
+                    note.Save
+                End If
+                ' Want to delete the notes after writing?
+                ' then put this line out of comments:
+                ' note.delete
+            End If
+        
+    Next note
+    Open outfilename For Output As #1
+    Print #1, x
+    Close #1
+    ' uncomment one of these lines to open the outfile in an editor
+    ' of your choice
+    ' shellresult = Shell("gvim " & outfilename, vbNormalFocus)
+    ' shellresult = Shell("notepad " & outfilename, vbNormalFocus)
+End Sub

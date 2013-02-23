@@ -1,0 +1,1055 @@
+#
+# $Id: ucomics.com.list,v 1.7 2007/08/28 14:42:10 desrod Exp $
+# urls updated on 2004/03/12 and on 2006/01/17 by Ducem Barr
+#
+# Comics from www.gocomics.com
+#
+
+comic_list.append({
+	'name': '9to5',
+	'page': 'http://www.gocomics.com/9to5/index.phtml',
+	'expr': "images.ucomics.com/comics/tmntf/\d+/tmntf\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': '9 to 5'})
+
+comic_list.append({
+	'name': 'adamathome',
+	'page': 'http://www.gocomics.com/adamathome/index.phtml',
+	'expr': "images.ucomics.com/comics/ad/\d+/ad\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Adam@Home'})
+
+comic_list.append({
+	'name': 'agnes',
+	'page': 'http://www.gocomics.com/agnes/index.phtml',
+	'expr': "images.ucomics.com/comics/cragn/\d+/cragn\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Agnes'})
+
+comic_list.append({
+	'name': 'andycapp',
+	'page': 'http://www.gocomics.com/andycapp/index.phtml',
+	'expr': "images.ucomics.com/comics/crcap/\d+/crcap\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Andy Capp'})
+
+comic_list.append({
+	'name': 'animalcrackers',
+	'page': 'http://www.gocomics.com/animalcrackers/index.phtml',
+	'expr': "images.ucomics.com/comics/tmani/\d+/tmani\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Animal Crackers'})
+
+comic_list.append({
+	'name': 'annie',
+	'page': 'http://www.gocomics.com/annie/index.phtml',
+	'expr': "images.ucomics.com/comics/tmann/\d+/tmann\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Annie'})
+
+comic_list.append({
+	'name': 'askshagg',
+	'page': 'http://www.gocomics.com/askshagg/index.phtml',
+	'expr': "images.ucomics.com/comics/crask/\d+/crask\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Ask Shagg'})
+
+comic_list.append({
+	'name': 'badreporter',
+	'page': 'http://www.gocomics.com/badreporter/index.phtml',
+	'expr': "images.ucomics.com/comics/bad/\d+/bad\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Bad Reporter'})
+
+comic_list.append({
+	'name': 'baldo',
+	'page': 'http://www.gocomics.com/baldo/index.phtml',
+	'expr': "images.ucomics.com/comics/ba/\d+/ba\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Baldo'})
+
+comic_list.append({
+	'name': 'ballardstreet',
+	'page': 'http://www.gocomics.com/ballardstreet/index.phtml',
+	'expr': "images.ucomics.com/comics/crbal/\d+/crbal\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Ballard Street'})
+
+comic_list.append({
+	'name': 'bc',
+	'page': 'http://www.gocomics.com/bc/index.phtml',
+	'expr': "images.ucomics.com/comics/crbc/\d+/crbc\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'B.C.'})
+
+comic_list.append({
+	'name': 'bigtop',
+	'page': 'http://www.gocomics.com/bigtop/index.phtml',
+	'expr': "images.ucomics.com/comics/bt/\d+/bt\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Big Top'})
+
+comic_list.append({
+	'name': 'biographic',
+	'page': 'http://www.gocomics.com/biographic/index.phtml',
+	'expr': "images.ucomics.com/comics/biov/\d+/biov\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Biographic'})
+
+comic_list.append({
+	'name': 'bobthesquirrel',
+	'page': 'http://www.gocomics.com/bobthesquirrel/index.phtml',
+	'expr': "images.ucomics.com/comics/bob/\d+/bob\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Bob The Squirrel'})
+
+comic_list.append({
+	'name': 'boondocks',
+	'page': 'http://www.gocomics.com/boondocks/index.phtml',
+	'expr': "images.ucomics.com/comics/bo/\d+/bo\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'The Boondocks'})
+
+comic_list.append({
+	'name': 'bornlucky',
+	'page': 'http://www.gocomics.com/bornlucky/index.phtml',
+	'expr': "images.ucomics.com/comics/bol/\d+/bol\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Born Lucky'})
+
+comic_list.append({
+	'name': 'bottomliners',
+	'page': 'http://www.gocomics.com/bottomliners/index.phtml',
+	'expr': "images.ucomics.com/comics/tmbot/\d+/tmbot\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Bottom Liners'})
+
+comic_list.append({
+	'name': 'boundandgagged',
+	'page': 'http://www.gocomics.com/boundandgagged/index.phtml',
+	'expr': "images.ucomics.com/comics/tmbou/\d+/tmbou\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Bound and Gagged'})
+
+comic_list.append({
+	'name': 'brainwaves',
+	'page': 'http://www.gocomics.com/brainwaves/index.phtml',
+	'expr': "images.ucomics.com/comics/bwv/\d+/bwv\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Brainwaves'})
+
+comic_list.append({
+	'name': 'brendastarr',
+	'page': 'http://www.gocomics.com/brendastarr/index.phtml',
+	'expr': "images.ucomics.com/comics/tmbre/\d+/tmbre\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Brenda Starr'})
+
+comic_list.append({
+	'name': 'brewsterrockit',
+	'page': 'http://www.gocomics.com/brewsterrockit/index.phtml',
+	'expr': "images.ucomics.com/comics/tmrkt/\d+/tmrkt\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Brewster Rockit'})
+
+comic_list.append({
+	'name': 'broomhilda',
+	'page': 'http://www.gocomics.com/broomhilda/index.phtml',
+	'expr': "images.ucomics.com/comics/tmbro/\d+/tmbro\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Broom Hilda'})
+
+comic_list.append({
+	'name': 'calvinandhobbes',
+	'page': 'http://www.gocomics.com/calvinandhobbes/index.phtml',
+	'expr': "images.ucomics.com/comics/ch/\d+/ch\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Calvin and Hobbes'})
+
+comic_list.append({
+	'name': 'cathy',
+	'page': 'http://www.gocomics.com/cathy/index.phtml',
+	'expr': "images.ucomics.com/comics/ca/\d+/ca\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Cathy'})
+
+comic_list.append({
+	'name': 'ceodad',
+	'page': 'http://www.gocomics.com/ceodad/index.phtml',
+	'expr': "images.ucomics.com/comics/crceo/\d+/crceo\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'CEO Dad'})
+
+comic_list.append({
+	'name': 'cestlavie',
+	'page': 'http://www.gocomics.com/cestlavie/index.phtml',
+	'expr': "images.ucomics.com/comics/clv/\d+/clv\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'C\'est la Vie'})
+
+comic_list.append({
+	'name': 'citizendog',
+	'page': 'http://www.gocomics.com/citizendog/index.phtml',
+	'expr': "images.ucomics.com/comics/cd/\d+/cd\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Citizen Dog'})
+
+comic_list.append({
+	'name': 'clearbluewater',
+	'page': 'http://www.gocomics.com/clearbluewater/index.phtml',
+	'expr': "images.ucomics.com/comics/cbw/\d+/cbw\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Clear Blue Water'})
+
+comic_list.append({
+	'name': 'cleats',
+	'page': 'http://www.gocomics.com/cleats/index.phtml',
+	'expr': "images.ucomics.com/comics/cle/\d+/cle\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Cleats'})
+
+comic_list.append({
+	'name': 'closetohome',
+	'page': 'http://www.gocomics.com/closetohome/index.phtml',
+	'expr': "images.ucomics.com/comics/cl/\d+/cl\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Close to Home'})
+
+comic_list.append({
+	'name': 'compu-toon',
+	'page': 'http://www.gocomics.com/compu-toon/index.phtml',
+	'expr': "images.ucomics.com/comics/tmcom/\d+/tmcom\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Compu-toon'})
+
+comic_list.append({
+	'name': 'cornered',
+	'page': 'http://www.gocomics.com/cornered/index.phtml',
+	'expr': "images.ucomics.com/comics/co/\d+/co\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Cornered'})
+
+comic_list.append({
+	'name': 'dicktracy',
+	'page': 'http://www.gocomics.com/dicktracy/index.phtml',
+	'expr': "images.ucomics.com/comics/tmdic/\d+/tmdic\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Dick Tracy'})
+
+comic_list.append({
+	'name': 'dinetteset',
+	'page': 'http://www.gocomics.com/dinetteset/index.phtml',
+	'expr': "images.ucomics.com/comics/crdin/\d+/crdin\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'The Dinette Set'})
+
+comic_list.append({
+	'name': 'doodles',
+	'page': 'http://www.gocomics.com/doodles/index.phtml',
+	'expr': "images.ucomics.com/comics/tmdoo/\d+/tmdoo\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Doodles'})
+
+comic_list.append({
+	'name': 'dogeatdoug',
+	'page': 'http://www.gocomics.com/dogeatdoug/index.phtml',
+	'expr': "images.ucomics.com/comics/crdog/\d+/crdog\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Dog Eat Doug'})
+
+comic_list.append({
+	'name': 'doonesbury',
+	'page': 'http://www.gocomics.com/doonesbury/index.phtml',
+	'expr': "images.ucomics.com/comics/db/\d+/db\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Doonesbury'})
+
+comic_list.append({
+	'name': 'duplex',
+	'page': 'http://www.gocomics.com/duplex/index.phtml',
+	'expr': "images.ucomics.com/comics/dp/\d+/dp\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'The Duplex'})
+
+comic_list.append({
+	'name': 'theelderberries',
+	'page': 'http://www.gocomics.com/theelderberries/index.phtml',
+	'expr': "images.ucomics.com/comics/eld/\d+/eld\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'The Elderberries'})
+
+comic_list.append({
+	'name': 'thefifthwave',
+	'page': 'http://www.gocomics.com/thefifthwave/index.phtml',
+	'expr': "images.ucomics.com/comics/fw/\d+/fw\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'The 5th Wave'})
+
+comic_list.append({
+	'name': 'flightdeck',
+	'page': 'http://www.gocomics.com/flightdeck/index.phtml',
+	'expr': "images.ucomics.com/comics/crfd/\d+/crfd\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Flight Deck'})
+
+comic_list.append({
+	'name': 'floandfriends',
+	'page': 'http://www.gocomics.com/floandfriends/index.phtml',
+	'expr': "images.ucomics.com/comics/crflo/\d+/crflo\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Flo And Friends'})
+
+comic_list.append({
+	'name': 'theflyingmccoys',
+	'page': 'http://www.gocomics.com/theflyingmccoys/index.phtml',
+	'expr': "images.ucomics.com/comics/fmc/\d+/fmc\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'The Flying McCoys'})
+
+comic_list.append({
+	'name': 'forbetterorforworse',
+	'page': 'http://www.gocomics.com/forbetterorforworse/index.phtml',
+	'expr': "images.ucomics.com/comics/fb/\d+/fb\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'For Better Or For Worse'})
+
+comic_list.append({
+	'name': 'forheavenssake',
+	'page': 'http://www.gocomics.com/forheavenssake/index.phtml',
+	'expr': "images.ucomics.com/comics/crfhs/\d+/crfhs\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'For Heaven\'s Sake'})
+
+comic_list.append({
+	'name': 'foxtrot',
+	'page': 'http://www.gocomics.com/foxtrot/index.phtml',
+	'expr': "images.ucomics.com/comics/ft/\d+/ft\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'FoxTrot'})
+
+comic_list.append({
+	'name': 'frankandernest',
+	'page': 'http://www.gocomics.com/frankandernest/index.phtml',
+	'expr': "images.ucomics.com/comics/fa/\d+/fa\d+\.jpg",
+	'suff': '.jpg',
+	'base': 'http://',
+	'title': 'Frank And Ernest'})
+
+comic_list.append({
+	'name': 'fredbasset',
+	'page': 'http://www.gocomics.com/fredbasset/index.phtml',
+	'expr': "images.ucomics.com/comics/tmfba/\d+/tmfba\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Fred Basset'})
+
+comic_list.append({
+	'name': 'thefuscobrothers',
+	'page': 'http://www.gocomics.com/thefuscobrothers/index.phtml',
+	'expr': "images.ucomics.com/comics/fu/\d+/fu\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'The Fusco Brothers'})
+
+comic_list.append({
+	'name': 'garfield',
+	'page': 'http://www.gocomics.com/garfield/index.phtml',
+	'expr': "images.ucomics.com/comics/ga/\d+/ga\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Garfield'})
+
+comic_list.append({
+	'name': 'gasolinealley',
+	'page': 'http://www.gocomics.com/gasolinealley/index.phtml',
+	'expr': "images.ucomics.com/comics/tmgas/\d+/tmgas\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Gasoline Alley'})
+
+comic_list.append({
+	'name': 'gilthorp',
+	'page': 'http://www.gocomics.com/gilthorp/index.phtml',
+	'expr': "images.ucomics.com/comics/tmgil/\d+/tmgil\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Gil Thorp'})
+
+comic_list.append({
+	'name': 'gingermeggs',
+	'page': 'http://www.gocomics.com/gingermeggs/index.phtml',
+	'expr': "images.ucomics.com/comics/gin/\d+/gin\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Ginger Meggs'})
+
+comic_list.append({
+	'name': 'heartofthecity',
+	'page': 'http://www.gocomics.com/heartofthecity/index.phtml',
+	'expr': "images.ucomics.com/comics/hc/\d+/hc\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Heart of the City'})
+
+comic_list.append({
+	'name': 'heathcliff',
+	'page': 'http://www.gocomics.com/heathcliff/index.phtml',
+	'expr': "images.ucomics.com/comics/crhea/\d+/crhea\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Heathcliff'})
+
+comic_list.append({
+	'name': 'helen',
+	'page': 'http://www.gocomics.com/helen/index.phtml',
+	'expr': "images.ucomics.com/comics/tmhel/\d+/tmhel\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Helen, Sweetheart of the Internet'})
+
+comic_list.append({
+	'name': 'herbandjamaal',
+	'page': 'http://www.gocomics.com/herbandjamaal/index.phtml',
+	'expr': "images.ucomics.com/comics/crher/\d+/crher\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Herb and Jamaal'})
+
+comic_list.append({
+	'name': 'housebroken',
+	'page': 'http://www.gocomics.com/housebroken/index.phtml',
+	'expr': "images.ucomics.com/comics/tmhou/\d+/tmhou\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Housebroken'})
+
+comic_list.append({
+	'name': 'hubertandabby',
+	'page': 'http://www.gocomics.com/hubertandabby/index.phtml',
+	'expr': "images.ucomics.com/comics/haa/\d+/haa\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Hubert and Abby'})
+
+comic_list.append({
+	'name': 'idiotbox',
+	'page': 'http://www.gocomics.com/idiotbox/index.phtml',
+	'expr': "images.ucomics.com/comics/ibox/\d+/ibox\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Idiot Box '})
+
+comic_list.append({
+	'name': 'inthebleachers',
+	'page': 'http://www.gocomics.com/inthebleachers/index.phtml',
+	'expr': "images.ucomics.com/comics/bl/\d+/bl\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'In the Bleachers'})
+
+comic_list.append({
+	'name': 'inkpen',
+	'page': 'http://www.gocomics.com/inkpen/index.phtml',
+	'expr': "images.ucomics.com/comics/ink/\d+/ink\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Ink Pen'})
+
+comic_list.append({
+	'name': 'kudzu',
+	'page': 'http://www.gocomics.com/kudzu/index.phtml',
+	'expr': "images.ucomics.com/comics/tmkud/\d+/tmkud\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Kudzu'})
+
+comic_list.append({
+	'name': 'lacucaracha',
+	'page': 'http://www.gocomics.com/lacucaracha/index.phtml',
+	'expr': "images.ucomics.com/comics/lc/\d+/lc\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'La Cucaracha'})
+
+comic_list.append({
+	'name': 'libertymeadows',
+	'page': 'http://www.gocomics.com/libertymeadows/index.phtml',
+	'expr': "images.ucomics.com/comics/crlib/\d+/crlib\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Liberty Meadows'})
+
+comic_list.append({
+	'name': 'looseparts',
+	'page': 'http://www.gocomics.com/looseparts/index.phtml',
+	'expr': "images.ucomics.com/comics/tmloo/\d+/tmloo\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Loose Parts'})
+
+comic_list.append({
+	'name': 'lostsheep',
+	'page': 'http://www.gocomics.com/lostsheep/index.phtml',
+	'expr': "images.ucomics.com/comics/lost/\d+/lost\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Lost Sheep'})
+
+comic_list.append({
+	'name': 'luckycow',
+	'page': 'http://www.gocomics.com/luckycow/index.phtml',
+	'expr': "images.ucomics.com/comics/luc/\d+/luc\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Lucky Cow'})
+
+comic_list.append({
+	'name': 'meehanstreak',
+	'page': 'http://www.gocomics.com/meehanstreak/index.phtml',
+	'expr': "images.ucomics.com/comics/tmmee/\d+/tmmee\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Meehan Streak'})
+
+comic_list.append({
+	'name': 'meaningoflila',
+	'page': 'http://www.gocomics.com/meaningoflila/index.phtml',
+	'expr': "images.ucomics.com/comics/crlil/\d+/crlil\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'The Meaning of Lila'})
+
+comic_list.append({
+	'name': 'themiddletons',
+	'page': 'http://www.gocomics.com/themiddletons/index.phtml',
+	'expr': "images.ucomics.com/comics/tmmid/\d+/tmmid\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'The Middletons'})
+
+comic_list.append({
+	'name': 'mixedmedia',
+	'page': 'http://www.gocomics.com/mixedmedia/index.phtml',
+	'expr': "images.ucomics.com/comics/tmmix/\d+/tmmix\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Mixed Media'})
+
+comic_list.append({
+	'name': 'momma',
+	'page': 'http://www.gocomics.com/momma/index.phtml',
+	'expr': "images.ucomics.com/comics/crmom/\d+/crmom\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Momma'})
+
+comic_list.append({
+	'name': 'naturalselection',
+	'page': 'http://www.gocomics.com/naturalselection/index.phtml',
+	'expr': "images.ucomics.com/comics/crns/\d+/crns\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Natural Selection'})
+
+comic_list.append({
+	'name': 'neurotica',
+	'page': 'http://www.gocomics.com/neurotica/index.phtml',
+	'expr': "images.ucomics.com/comics/neu/\d+/neu\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'NEUROTICA'})
+
+comic_list.append({
+	'name': 'nonsequitur',
+	'page': 'http://www.gocomics.com/nonsequitur/index.phtml',
+	'expr': "images.ucomics.com/comics/nq/\d+/nq\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Non Sequitur'})
+
+comic_list.append({
+	'name': 'oddlyenough',
+	'page': 'http://www.gocomics.com/oddlyenough/index.phtml',
+	'expr': "images.ucomics.com/comics/oe/\d+/oe\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Oddly Enough'})
+
+comic_list.append({
+	'name': 'onebighappy',
+	'page': 'http://www.gocomics.com/onebighappy/index.phtml',
+	'expr': "images.ucomics.com/comics/crobh/\d+/crobh\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'One Big Happy'})
+
+comic_list.append({
+	'name': 'theothercoast',
+	'page': 'http://www.gocomics.com/theothercoast/index.phtml',
+	'expr': "images.ucomics.com/comics/crtoc/\d+/crtoc\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'The Other Coast'})
+
+comic_list.append({
+	'name': 'overboard',
+	'page': 'http://www.gocomics.com/overboard/index.phtml',
+	'expr': "images.ucomics.com/comics/ob/\d+/ob\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Overboard'})
+
+comic_list.append({
+	'name': 'pluggers',
+	'page': 'http://www.gocomics.com/pluggers/index.phtml',
+	'expr': "images.ucomics.com/comics/tmplu/\d+/tmplu\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Pluggers'})
+
+comic_list.append({
+	'name': 'poochcafe',
+	'page': 'http://www.gocomics.com/poochcafe/index.phtml',
+	'expr': "images.ucomics.com/comics/poc/\d+/poc\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Pooch Cafe'})
+
+comic_list.append({
+	'name': 'popculture',
+	'page': 'http://www.gocomics.com/popculture/index.phtml',
+	'expr': "images.ucomics.com/comics/pop/\d+/pop\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Pop Culture'})
+
+comic_list.append({
+	'name': 'preteena',
+	'page': 'http://www.gocomics.com/preteena/index.phtml',
+	'expr': "images.ucomics.com/comics/pr/\d+/pr\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Preteena'})
+
+comic_list.append({
+	'name': 'pricklycity',
+	'page': 'http://www.gocomics.com/pricklycity/index.phtml',
+	'expr': "images.ucomics.com/comics/prc/\d+/prc\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Prickly City'})
+
+comic_list.append({
+	'name': 'thequigmans',
+	'page': 'http://www.gocomics.com/thequigmans/index.phtml',
+	'expr': "images.ucomics.com/comics/tmqui/\d+/tmqui\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'The Quigmans'})
+
+comic_list.append({
+	'name': 'reallifeadventures',
+	'page': 'http://www.gocomics.com/reallifeadventures/index.phtml',
+	'expr': "images.ucomics.com/comics/rl/\d+/rl\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Real Life Adventures'})
+
+comic_list.append({
+	'name': 'reynoldsunwrapped',
+	'page': 'http://www.gocomics.com/reynoldsunwrapped/index.phtml',
+	'expr': "images.ucomics.com/comics/rw/\d+/rw\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Reynolds Unwrapped'})
+
+comic_list.append({
+	'name': 'rubes',
+	'page': 'http://www.gocomics.com/rubes/index.phtml',
+	'expr': "images.ucomics.com/comics/crrub/\d+/crrub\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Rubes'})
+
+comic_list.append({
+	'name': 'shoe',
+	'page': 'http://www.gocomics.com/shoe/index.phtml',
+	'expr': "images.ucomics.com/comics/tmsho/\d+/tmsho\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Shoe'})
+
+comic_list.append({
+	'name': 'speedbump',
+	'page': 'http://www.gocomics.com/speedbump/index.phtml',
+	'expr': "images.ucomics.com/comics/crspe/\d+/crspe\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Speed Bump'})
+
+comic_list.append({
+	'name': 'stateoftheunion',
+	'page': 'http://www.gocomics.com/stateoftheunion/index.phtml',
+	'expr': "images.ucomics.com/comics/crsou/\d+/crsou\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'State of the Union'})
+
+comic_list.append({
+	'name': 'stonesoup',
+	'page': 'http://www.gocomics.com/stonesoup/index.phtml',
+	'expr': "images.ucomics.com/comics/ss/\d+/ss\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Stone Soup'})
+
+comic_list.append({
+	'name': 'strangebrew',
+	'page': 'http://www.gocomics.com/strangebrew/index.phtml',
+	'expr': "images.ucomics.com/comics/crstr/\d+/crstr\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Strange Brew'})
+
+comic_list.append({
+	'name': 'suttonimpact',
+	'page': 'http://www.gocomics.com/suttonimpact/index.phtml',
+	'expr': "images.ucomics.com/comics/stn/\d+/stn\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Sutton Impact'})
+
+comic_list.append({
+	'name': 'sylvia',
+	'page': 'http://www.gocomics.com/sylvia/index.phtml',
+	'expr': "images.ucomics.com/comics/tmsyl/\d+/tmsyl\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Sylvia'})
+
+comic_list.append({
+	'name': 'tankmcnamara',
+	'page': 'http://www.gocomics.com/tankmcnamara/index.phtml',
+	'expr': "images.ucomics.com/comics/tm/\d+/tm\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Tank McNamara'})
+
+comic_list.append({
+	'name': 'tomthedancingbug',
+	'page': 'http://www.gocomics.com/tomthedancingbug/index.phtml',
+	'expr': "images.ucomics.com/comics/td/\d+/td\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Tom the Dancing Bug'})
+
+comic_list.append({
+	'name': 'weepals',
+	'page': 'http://www.gocomics.com/weepals/index.phtml',
+	'expr': "images.ucomics.com/comics/crwee/\d+/crwee\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Wee Pals'})
+
+comic_list.append({
+	'name': 'wizardofid',
+	'page': 'http://www.gocomics.com/wizardofid/index.phtml',
+	'expr': "images.ucomics.com/comics/crwiz/\d+/crwiz\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Wizard of Id'})
+
+comic_list.append({
+	'name': 'workingitout',
+	'page': 'http://www.gocomics.com/workingitout/index.phtml',
+	'expr': "images.ucomics.com/comics/crwio/\d+/crwio\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Working It Out'})
+
+comic_list.append({
+	'name': 'yenny',
+	'page': 'http://www.gocomics.com/yenny/index.phtml',
+	'expr': "images.ucomics.com/comics/yen/\d+/yen\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Yenny'})
+
+comic_list.append({
+	'name': 'zackhill',
+	'page': 'http://www.gocomics.com/zackhill/index.phtml',
+	'expr': "images.ucomics.com/comics/crzhi/\d+/crzhi\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Zack Hill'})
+
+comic_list.append({
+	'name': 'ziggy',
+	'page': 'http://www.gocomics.com/ziggy/index.phtml',
+	'expr': "images.ucomics.com/comics/zi/\d+/zi\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Ziggy'})
+
+comic_list.append({
+	'name': 'laloalcaraz',
+	'page': 'http://www.gocomics.com/laloalcaraz/index.phtml',
+	'expr': "images.ucomics.com/comics/la/\d+/la\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Lalo Alcaraz'})
+
+comic_list.append({
+	'name': 'tonyauth',
+	'page': 'http://www.gocomics.com/tonyauth/index.phtml',
+	'expr': "images.ucomics.com/comics/ta/\d+/ta\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Tony Auth'})
+
+comic_list.append({
+	'name': 'chuckasay',
+	'page': 'http://www.gocomics.com/chuckasay/index.phtml',
+	'expr': "images.ucomics.com/comics/crcas/\d+/crcas\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Chuck Asay'})
+
+comic_list.append({
+	'name': 'barbarabrandon',
+	'page': 'http://www.gocomics.com/barbarabrandon/index.phtml',
+	'expr': "images.ucomics.com/comics/bb/\d+/bb\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Where I\'m Coming From'})
+
+comic_list.append({
+	'name': 'stuartcarlson',
+	'page': 'http://www.gocomics.com/stuartcarlson/index.phtml',
+	'expr': "images.ucomics.com/comics/sc/\d+/sc\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Stuart Carlson'})
+
+comic_list.append({
+	'name': 'paulconrad',
+	'page': 'http://www.gocomics.com/paulconrad/index.phtml',
+	'expr': "images.ucomics.com/comics/tmpco/\d+/tmpco\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Paul Conrad'})
+
+comic_list.append({
+	'name': 'jeffdanziger',
+	'page': 'http://www.gocomics.com/jeffdanziger/index.phtml',
+	'expr': "images.ucomics.com/comics/jd/\d+/jd\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Jeff Danziger'})
+
+comic_list.append({
+	'name': 'mattdavies',
+	'page': 'http://www.gocomics.com/mattdavies/index.phtml',
+	'expr': "images.ucomics.com/comics/tmmda/\d+/tmmda\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Matt Davies'})
+
+comic_list.append({
+	'name': 'walthandelsman',
+	'page': 'http://www.gocomics.com/walthandelsman/index.phtml',
+	'expr': "images.ucomics.com/comics/tmwha/\d+/tmwha\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Walt Handelsman'})
+
+comic_list.append({
+	'name': 'davidhorsey',
+	'page': 'http://www.gocomics.com/davidhorsey/index.phtml',
+	'expr': "images.ucomics.com/comics/tmdho/\d+/tmdho\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'David Horsey'})
+
+comic_list.append({
+	'name': 'facesinthenews',
+	'page': 'http://www.gocomics.com/facesinthenews/index.phtml',
+	'expr': "images.ucomics.com/comics/kw/\d+/kw\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Faces in the News'})
+
+comic_list.append({
+	'name': 'dicklocher',
+	'page': 'http://www.gocomics.com/dicklocher/index.phtml',
+	'expr': "images.ucomics.com/comics/tmdlo/\d+/tmdlo\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Dick Locher'})
+
+comic_list.append({
+	'name': 'chanlowe',
+	'page': 'http://www.gocomics.com/chanlowe/index.phtml',
+	'expr': "images.ucomics.com/comics/tmclo/\d+/tmclo\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Chan Lowe'})
+
+comic_list.append({
+	'name': 'dougmarlette',
+	'page': 'http://www.gocomics.com/dougmarlette/index.phtml',
+	'expr': "images.ucomics.com/comics/tmdma/\d+/tmdma\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Doug Marlette'})
+
+comic_list.append({
+	'name': 'glennmccoy',
+	'page': 'http://www.gocomics.com/glennmccoy/index.phtml',
+	'expr': "images.ucomics.com/comics/gm/\d+/gm\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Glenn McCoy'})
+
+comic_list.append({
+	'name': 'jackohman',
+	'page': 'http://www.gocomics.com/jackohman/index.phtml',
+	'expr': "images.ucomics.com/comics/tmjoh/\d+/tmjoh\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Jack Ohman'})
+
+comic_list.append({
+	'name': 'patoliphant',
+	'page': 'http://www.gocomics.com/patoliphant/index.phtml',
+	'expr': "images.ucomics.com/comics/oa/\d+/oa\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Pat Oliphant'})
+
+comic_list.append({
+	'name': 'joelpett',
+	'page': 'http://www.gocomics.com/joelpett/index.phtml',
+	'expr': "images.ucomics.com/comics/jp/\d+/jp\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Joel Pett'})
+
+comic_list.append({
+	'name': 'tedrall',
+	'page': 'http://www.gocomics.com/tedrall/index.phtml',
+	'expr': "images.ucomics.com/comics/tr/\d+/tr\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Ted Rall'})
+
+comic_list.append({
+	'name': 'bensargent',
+	'page': 'http://www.gocomics.com/bensargent/index.phtml',
+	'expr': "images.ucomics.com/comics/bs/\d+/bs\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Ben Sargent'})
+
+comic_list.append({
+	'name': 'drewsheneman',
+	'page': 'http://www.gocomics.com/drewsheneman/index.phtml',
+	'expr': "images.ucomics.com/comics/tmdsh/\d+/tmdsh\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Drew Sheneman'})
+
+comic_list.append({
+	'name': 'waynestayskal',
+	'page': 'http://www.gocomics.com/waynestayskal/index.phtml',
+	'expr': "images.ucomics.com/comics/tmwst/\d+/tmwst\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Wayne Stayskal'})
+
+comic_list.append({
+	'name': 'danasummers',
+	'page': 'http://www.gocomics.com/danasummers/index.phtml',
+	'expr': "images.ucomics.com/comics/tmdsu/\d+/tmdsu\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Dana Summers'})
+
+comic_list.append({
+	'name': 'anntelnaes',
+	'page': 'http://www.gocomics.com/anntelnaes/index.phtml',
+	'expr': "images.ucomics.com/comics/tmate/\d+/tmate\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Ann Telnaes'})
+
+comic_list.append({
+	'name': 'tomtoles',
+	'page': 'http://www.gocomics.com/tomtoles/index.phtml',
+	'expr': "images.ucomics.com/comics/tt/\d+/tt\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Tom Toles'})
+
+comic_list.append({
+	'name': 'danwasserman',
+	'page': 'http://www.gocomics.com/danwasserman/index.phtml',
+	'expr': "images.ucomics.com/comics/tmdwa/\d+/tmdwa\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Dan Wasserman'})
+
+comic_list.append({
+	'name': 'donwright',
+	'page': 'http://www.gocomics.com/donwright/index.phtml',
+	'expr': "images.ucomics.com/comics/tmdow/\d+/tmdow\d+\.gif",
+	'suff': '.gif',
+	'base': 'http://',
+	'title': 'Don Wright'})
+
