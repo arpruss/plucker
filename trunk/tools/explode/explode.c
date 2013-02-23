@@ -1405,7 +1405,7 @@ static boolean TranscribeTextRecord
                 if ((ptr - run) > 0) {
                     /* write out any pending text */
                     int ns = HaveNonSpace(run, ptr-run);
-                    fprintf(fp, "<!--%d %d %d-->", need_line_break, paragraph_start, ns);
+//                    fprintf(fp, "<!--%d %d %d-->", need_line_break, paragraph_start, ns);
                     if (paragraph_start)
                         need_line_break = FALSE;
                     if (need_line_break && ! paragraph_start && ns) {
