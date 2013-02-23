@@ -1,0 +1,1035 @@
+%
+% $Id: Parser.tex,v 1.15 2003/07/31 15:12:06 desrod Exp $
+%
+\chapter{The Parser}\label{sec:Parser}
+
+As pointed out in the previous chapter the parser is more or less the
+workhorse of Plucker. This implies that most customizations are done to
+the parser and that the parser covers a rather big part of this manual.
+
+\section{Description file}\label{sec:Home Page}
+
+Before we take a closer look at the parser itself, we will describe
+the format of the description file also known as the Home Page document
+(default \name{home.html}, but that can be changed). On a Unix/Linux
+system this file will be stored by default in \name{\$HOME/.plucker}.
+
+OS/2 will use the environment-variable \textit{HOME} to find the
+location of your home-directory (you can also use drive letters).
+The installer should set the necessary environment variable for
+you and also add the necessary directories to your system. You
+may check the location by simply typing \code{set home} at a
+command prompt.\\
+
+The description file is a valid HTML document with extra optional
+tags added for the link references.
+
+\begin{itemize}
+ \item \longcode{description file}{MAXDEPTH=n}: This specifies how
+ deep the parser should follow the links embedded in a web page.
+ If \code{MAXDEPTH} is not given the parser will default to a depth
+ of 1, that is only download the page itself but do not follow any
+ links in it. To follow links in the current page you would use
+ \code{MAXDEPTH=2} and to follow links also in those pages you would
+ use \code{MAXDEPTH=3} and so on. Too high values without using any
+ of the available filtering mechanisms could result in an excessive
+ amount of data.
+
+ \hint{} \code{MAXDEPTH=2} can be very useful if you have a page that
+ contains only the headlines that are links to the full text version
+ of the articles. Many newstickers use this format.
+
+ \item \longcode{description file}{NOIMAGES}: If you are not interested
+ in downloading images
+ then you use this tag. If specified all images will be replaced with
+ the ALT-tag for the image if available, otherwise \textbf{[img]}.
+
+ \hint{} \code{NOIMAGES} is an effective way to decrease the size of
+ documents.
+
+ \item \longcode{description file}{STAYONHOST}: Most web sites contains
+ references to both locally stored articles and to articles stored on
+ other hosts. Using a \code{MAXDEPTH} of 2 or higher could result in a
+ lot of unwanted data.  To prevent this you may specify the \code{STAYONHOST}
+ tag for your link. The parser will now only download content that resides
+ on the same server as the one that contained the top page. Together with
+ \iname{exclusionlist.txt} this is a quite handy way to prevent the download
+ of links referred to by banners.
+
+ \item \longcode{description file}{STAYBELOW=\emph{text}}: Similar to
+ \code{STAYONHOST} this tag tells the parser to only fetch pages that
+ start with \emph{text}.  For example, it could be used if the
+ articles on a page are listed on another server in which case
+ \code{STAYONHOST} would not work properly.  Or you can grab certain
+ articles out of a large listing so you would get all headlines but
+ only articles referring to specific subjects (provided the web server
+ offering the information is set up \emph{correctly}).
+
+ \note If \emph{=text} is not given, it will default to the content
+ of the href-attribute (the URL you are pointing to).
+
+ \item \longcode{description file}{BPP=n}: This option is used to specify
+ the bit depth that should be used for images. Valid values are 0 (i.e.\
+ no images), 1, 2, 4, and 8.
+
+ \note{} \code{BPP=8} is currently only supported when the parser is used
+ on a Windows system.
+
+ \item \longcode{description file}{MAXWIDTH=width}: Used to set the maximum
+ width of images.
+
+ \item \longcode{description file}{MAXHEIGHT=height}: Used to set the maximum
+ height of images.
+
+\end{itemize}
+
+An simple example of a description file is:
+
+\begin{verbatim}
+<HTML>
+<HEAD>
+  <TITLE>Plucker Home Page</TITLE>
+</HEAD>
+<BODY>
+  <A HREF="http://www.plkr.org" MAXDEPTH=2 STAYONHOST NOIMAGES>Plucker home page</A>
+</BODY>
+</HTML>
+\end{verbatim}
+
+This would download the front page of our web site and also follow any
+links on the page if they are local to the host. No images would be
+downloaded.\\
+
+The description file (\name{home.html}) that is installed when your
+Plucker directory is set up, also contains a few examples.\\
+
+\section{Invoking the parser}
+
+As the previous section showed, you can specify several options specific
+for each reference in the description file and many times this is enough.
+But additionally, the parser provides some global control through
+powerful command-line options and also a possibility to use different
+configurations that have been set up in the config file.\\
+
+In all the examples below we will call \name{Spider.py} directly. This
+could be stored in a script or we could create a symbolic link to it,
+e.g.\ if you have installed the Linux package you would use \name{plucker-build}
+instead of \name{Spider.py} in the examples. A note for OS/2 and Windows
+users: running \name{Spider.py} as an executable program is a Unix trick
+and may not work on your platform. But do not worry, just list the
+\name{Spider.py} on an explicit \name{python} command line, that is use
+\code{python Spider.py \ldots} instead. 
+
+The synopsis of the parser look like this:\\
+
+\begin{latexonly}
+\begin{tabular}{lp{15cm}}
+  \ioption{Spider.py} & \option{\mbox{-c}\textbar \mbox{-{}-update-cache}\textbar 
+  \mbox{-f FILE}\textbar \mbox{-{}-doc-file=FILE} 
+  [\mbox{-N NAME}\textbar \mbox{-{}-doc-name=NAME}]
+  [\mbox{-h}\textbar \mbox{-{}-help}]} \\
+ & \option{[\mbox{-{}-compression=TYPE}\textbar \mbox{-{}-zlib-compression}\textbar k
+  \mbox{-{}-doc-compression}] [\mbox{-P DIR}\textbar \mbox{-{}-pluckerhome=DIR}]}\\
+ & \option{[\mbox{-v}\textbar \mbox{-V NUM}\textbar \mbox{-{}-verbosity=NUM}] 
+  [\mbox{-q}\textbar \mbox{-{}-quiet}] [\mbox{-{}-bpp=NUM}] [\mbox{-{}-noimages}] 
+  [\mbox{-p DIR}\textbar \mbox{-{}-pluckerdir=DIR}]}\\
+ & \option{[\mbox{-H URL}\textbar \mbox{-{}-home-url=URL}] 
+  [\mbox{-M DEPTH}\textbar \mbox{-{}-maxdepth=DEPTH}] 
+  [\mbox{-E FILE}\textbar \mbox{-{}-exclusion-list=FILE}]}\\
+ & \option{[\mbox{-s SECTION}\textbar \mbox{-{}-extra-section=SECTION}]
+  [\mbox{-{}-no-urlinfo}] [\mbox{-{}-stayonhost}] [\mbox{-{}-staybelow=URLPREFIX}] [\mbox{-{}-category=CATEGORY}]}
+\end{tabular}\\
+\end{latexonly}
+\begin{htmlonly}
+\index{Spider.py}
+\end{htmlonly}
+\begin{rawhtml}
+  <B>Spider.py -c | --update-cache | -f FILE | --doc-file=FILE [-N NAME | --doc-name=NAME]
+  [-h | --help] [--compression=TYPE | --zlib-compression | --doc-compression] 
+  [-P DIR | --pluckerhome=DIR] [-v | -V NUM | --verbosity=NUM] [-q | --quiet] 
+  [--bpp=NUM] [--noimages] [-p DIR | --pluckerdir=DIR] [-H URL | --home-url=URL] 
+  [-M DEPTH | --maxdepth=DEPTH] [-E FILE | --exclusion-list=FILE] 
+  [-s SECTION | --extra-section=SECTION] [--no-urlinfo] [--stayonhost]
+  [--staybelow=URLPREFIX] [--category=CATEGORY]</B>
+\end{rawhtml}
+
+Do not run away in fear of all these options, you don't have to use
+all of them\ldots actually, you only have to use \textbf{one} of them
+(and that can be reduced to none if you set the file name of the
+document in the configuration file --- more about that later).\\
+
+\begin{latexonly}
+You can always get the list of the parameters by using the \longoption{Spider.py}{-h}
+or \longoption{Spider.py}{-{}-help} option.
+\end{latexonly}
+\begin{htmlonly}
+You can always get the list of the parameters by using the \longoption{Spider.py}{-h}
+or \longoption{Spider.py}{---help} option.
+\end{htmlonly}
+
+\subsection{Control Over the Result}\label{sec:ParserOutput}
+
+\begin{latexonly}
+The \longoption{Spider.py}{-c}, \longoption{Spider.py}{-{}-update-cache}, 
+\longoption{Spider.py}{-f}, and \longoption{Spider.py}{-{}-doc-file}
+options allows you to specify if the parser should dump all records in
+a cache directory or if it shall create a document. For example, the command,
+\end{latexonly}
+\begin{htmlonly}
+The \longoption{Spider.py}{-c}, \longoption{Spider.py}{---update-cache}, 
+\longoption{Spider.py}{-f}, and \longoption{Spider.py}{---doc-file}
+options allows you to specify if the parser should dump all records in
+a cache directory or if it shall create a document. For example, the command,
+\end{htmlonly}\\
+
+\indata{\% Spider.py -c}\\
+
+\begin{latexonly}
+tells the parser to dump all records in the cache directory in \code{\$PLUCKERDIR}
+using the default description file (as you will see below it is possible
+to change the default description file in Plucker's config file). The 
+\option{-{}-update-cache} option works the same way as \option{-c}.
+\end{latexonly}
+\begin{htmlonly}
+tells the parser to dump all records in the cache directory in \code{\$PLUCKERDIR}
+using the default description file (as you will see below it is possible
+to change the default description file in Plucker's config file). The 
+\option{---update-cache} option works the same way as \option{-c}.
+\end{htmlonly}\\
+
+If we instead used the following command,\\
+
+\indata{\% Spider.py -f PluckerDB}\\
+
+\begin{latexonly}
+the parser would create a document called \name{PluckerDB.pdb} and store
+it in \code{\$PLUCKERDIR}. The \option{-{}-doc-file} option works the same
+way as \option{-f}. Either \option{-c} or \option{-f} must be given unless
+the document has been specified in the configuration file (see
+\~ref{sec:ConfigFile}).  The name of the document will default to the same
+as the name given to \option{-f}. If you want to give the document a
+different name, you can use the \longoption{Spider.py}{-N} or
+\longoption{Spider.py}{-{}-doc-name} option,
+\end{latexonly}
+\begin{htmlonly}
+the parser would create a document called \name{PluckerDB.pdb} and store
+it in \code{\$PLUCKERDIR}. The \option{---doc-file} option works the same
+way as \option{-f}. Either \option{-c} or \option{-f} must be given unless
+the document has been specified in the configuration file (see
+\~ref{sec:ConfigFile}). The name of the document will default to the same
+as the name given to \option{-f}. If you want to give the document a
+different name, you can use the \longoption{Spider.py}{-N} or
+\longoption{Spider.py}{---doc-name} option,
+\end{htmlonly}\\
+
+\indata{\% Spider.py -f PluckerDB -N "Home Page"}\\
+
+This will still create a document called \name{PluckerDB.pdb} in
+\code{\$PLUCKERDIR}, but the name of the document (i.e.\ the name you
+would see on your Palm) would now be \name{Home Page}.\\
+
+The file name given to the \option{-f} option can contain an absolute
+or relative path, so if we run,\\
+
+\indata{\% Spider.py -f /home/pilot/.plucker/DB/PluckerDB}\\
+
+a document called \name{PluckerDB.pdb} will be stored in
+\name{/home/pilot/.plucker/DB} and if we run,\\
+
+\indata{\% Spider.py -f DB/PluckerDB}\\
+
+a document called \name{PluckerDB.pdb} will be stored in
+\name{\$PLUCKERDIR/DB} (the same as above since \code{\$PLUCKERDIR}
+in this case defaults to \name{/home/pilot/.plucker/})\\
+
+To save space on the device all records are compressed and the
+parser provides two different types of compression, DOC compression
+and ZLib compression. The ZLib compression gives the best compression,
+but is only available for Palm OS 3.0 and later devices and also
+requires a shared library.\\
+
+\begin{latexonly}
+You control the compression type by using the
+\longoption{Spider.py}{-{}-compression=TYPE} option. 
+Allowable options are `doc', for Palm DOC compression, 
+or `zlib', for zlib compression. You can also use the
+\longoption{Spider.py}{-{}-zlib-compression} or the
+\longoption{Spider.py}{-{}-doc-compression} option. If
+neither is given the parser defaults to DOC compression.
+\end{latexonly}
+\begin{htmlonly}
+You control the compression type by using the
+\longoption{Spider.py}{---compression=TYPE} option. 
+Allowable options are `doc', for Palm DOC compression, 
+or `zlib', for zlib compression. You can also use the
+\longoption{Spider.py}{---zlib-compression} or the
+\longoption{Spider.py}{---doc-compression} option. If
+neither is given the parser defaults to DOC compression.
+\end{htmlonly}\\
+
+\begin{latexonly}
+To put the document in a specific category by default you can use
+the \longoption{Spider.py}{-{}-category} option. It is possible
+to give several default categories separated by ";".
+\end{latexonly}
+\begin{htmlonly}
+To put the document in a specific category by default you can use
+the \longoption{Spider.py}{---category} option. It is possible 
+to give several default categories separated by ";".
+\end{htmlonly}
+
+\subsection{Status Information and Debugging}
+
+\begin{latexonly}
+The parser normally outputs errors and progress status to your terminal,
+but by using the \longoption{Spider.py}{-q}, \longoption{Spider.py}{-{}-quiet},
+\longoption{Spider.py}{-v}, \longoption{Spider.py}{-V} or
+\longoption{Spider.py}{-{}-verbosity} option you can change this. The \option{-V}
+(and \option{-{}-verbosity}) takes an argument,
+\end{latexonly}
+\begin{htmlonly}
+The parser normally outputs errors and progress status to your terminal,
+but by using the \longoption{Spider.py}{-q}, \longoption{Spider.py}{---quiet},
+\longoption{Spider.py}{-v}, \longoption{Spider.py}{-V} or
+\longoption{Spider.py}{---verbosity} option you can change this. The \option{-V}
+(and \option{---verbosity}) takes an argument,
+\end{htmlonly}
+
+\begin{enumerate}
+\item[0] silent, except for errors.
+\item[1] progress status (default), will list the page currently being plucked
+as well as some output from the image converters.
+\item[2] produces a lot of output about the gathering and parsing process,
+used for debugging.
+\end{enumerate}
+
+\begin{latexonly}
+The \option{-v} option sets verbosity level 1, while \option{-q} and
+\option{-{}-quiet} set verbosity level 0.
+\end{latexonly}
+\begin{htmlonly}
+The \option{-v} option sets verbosity level 1, while \option{-q} and
+\option{---quiet} set verbosity level 0.
+\end{htmlonly}
+
+\subsection{Description filenames}
+
+\begin{latexonly}
+The \longoption{Spider.py}{-H} or \longoption{Spider.py}{-{}-home-url} 
+option allows you to specify a different description file than the 
+default one. For example, the command,
+\end{latexonly}
+\begin{htmlonly}
+The \longoption{Spider.py}{-H} or \longoption{Spider.py}{---home-url} 
+option allows you to specify a different description file than the 
+default one. For example, the command,
+\end{htmlonly}\\
+
+\indata{\% Spider.py -H plucker:/test.html -f TestDB}\\
+
+tells the parser to build a document called \name{TestDB.pdb} using the
+description file \name{test.html} that can be found in \code{\$PLUCKERDIR}
+(\name{plucker:} is relative to \code{\$PLUCKERDIR}). You can also use
+an absolute path,\\
+
+\indata{\% Spider.py -H file:/home/pilot/.plucker/test.html -f TestDB}\\
+
+would produce the same result as the first example.\\
+
+Instead of using a local file we can use a file at a remote location,\\
+
+\indata{\% Spider.py -H http://www.plkr.org/ -f PluckerDB}\\
+
+and the parser would use the index page for Plucker's home page as the
+description file.\\
+
+\note{} The \longoption{Spider.py}{-H} option needs a valid URL, so
+don't use, \\
+
+\indata{\% Spider.py -H file:test.html -f TestDB}\\
+
+even if you are running the spider in the same directory as the file is
+located in.
+
+\subsection{How deep should we go?}\label{sec:Depth}
+
+\begin{latexonly}
+The default operation of the parser is to parse the description file
+and any links in it, but this can be changed using the \longoption{Spider.py}{-M}
+or \longoption{Spider.py}{-{}-maxdepth} option. To make sure that we
+do not bite off more than we can chew, we can add the
+\longoption{Spider.py}{-{}-stayonhost} option to avoid following any
+external links,\\
+
+\indata{\% Spider.py -H http://www.plkr.org/ -M3 -{}-stayonhost -f PluckerDB}
+\end{latexonly}
+\begin{htmlonly}
+The default operation of the parser is to parse the description file
+and any links in it, but this can be changed using the \longoption{Spider.py}{-M}
+or \longoption{Spider.py}{---maxdepth} option. To make sure that we
+don't bite off more than we can chew, we can add the \longoption{Spider.py}{---stayonhost}
+option to avoid following any external links,\\
+
+\indata{\% Spider.py -H http://www.plkr.org/ -M3 ---stayonhost -f PluckerDB}
+\end{htmlonly}\\
+
+This would download the index page for Plucker's web site, any links
+within this page and also any links within those pages, but it would
+disregard any links outside the \name{plkr.org} host. \\
+
+These options are useful when you specify a specific host using
+-H. If you use a description file it is better to use the
+MAXDEPTH/STAYONHOST flags for each link instead.
+
+\subsection{Plucker Home and the Plucker Directory}
+
+The Plucker directory (\code{\$PLUCKERDIR}) is the current working
+directory, while Plucker Home is like your home directory. They can
+be the same directory and the default behavior is that the Plucker
+directory is set to the same as Plucker Home (default for Plucker
+Home is \name{\$HOME/.plucker}, but you can change this by using
+the environment variable \code{\$PLUCKERHOME}). \name{plucker:/XXX}
+files are first searched in \code{\$PLUCKERDIR} then Plucker Home
+and any configuration files in the \code{\$PLUCKERDIR} take precedence
+over those in the Plucker Home.\\
+
+\begin{latexonly}
+The location of Plucker Home can be changed using the \longoption{Spider.py}{-P}
+or \longoption{Spider.py}{-{}-pluckerhome} option and the location of
+the Plucker directory can be changed using the \longoption{Spider.py}{-p}
+or \longoption{Spider.py}{-{}-pluckerdir} option,
+\end{latexonly}
+\begin{htmlonly}
+The location of Plucker Home can be changed using the \longoption{Spider.py}{-P}
+or \longoption{Spider.py}{---pluckerhome} option and the location of
+the Plucker directory can be changed using the \longoption{Spider.py}{-p}
+or \longoption{Spider.py}{---pluckerdir} option,
+\end{htmlonly}\\
+
+\indata{\% Spider.py -P \. -H plucker:/test.html -f TestDB}\\
+
+would use the current directory as Plucker Home and the file \name{test.html}
+should also be in this directory.
+
+
+\subsection{Image handling}
+
+\begin{latexonly}
+The \longoption{Spider.py}{-{}-bpp} and \longoption{Spider.py}{-{}-noimages}
+options can be used to globally set the image handling. The \option{-{}-bpp}
+option takes an argument for the bits per pixels that should be used,
+0, 1 (default), 2, 4, or 8.  The \option{-{}-noimages} option sets the
+bit depth to 0. To create images in 16 colors (grayscale) you would use,
+\end{latexonly}
+\begin{htmlonly}
+The \longoption{Spider.py}{---bpp} and \longoption{Spider.py}{---noimages}
+options can be used to globally set the image handling. The \option{---bpp}
+option takes an argument for the bits per pixels that should be used,
+0, 1 (default), 2, 4, or 8.  The \option{---noimages} option sets the
+bit depth to 0. To include images in 16 colors (grayscale) you would use,
+\end{htmlonly}\\
+
+\indata{\% Spider.py ---bpp=4 -H plucker:/images.html -f Gray16DB}
+
+
+\subsection{URL handling}
+
+\begin{latexonly}
+To save space on you device you can choose to not include information
+about the URLs. This will mean that you cannot get access to the actual
+URL for documents in the document or for any external reference. Use
+the \longoption{Spider.py}{-{}-no-urlinfo} option if you don't want to
+include this information.
+\end{latexonly}
+\begin{htmlonly}
+To save space on you device you can choose to not include information
+about the URLs. This will mean that you cannot get access to the actual
+URL for documents in the document or for any external reference. Use
+the \longoption{Spider.py}{---no-urlinfo} option if you don't want to
+include this information.
+\end{htmlonly}
+
+
+\subsection{Excluding Things}
+
+\begin{latexonly}
+To add more exclusion lists than the default ones you can use the
+\longoption{Spider.py}{-E} or \longoption{Spider.py}{-{}-exclusion-list}
+option. The \name{exclusionlist.txt} files should be in a specific
+format, that is explained in section \~ref{sec:Exclusionlist}. You
+can add more than one \option{-E},
+\end{latexonly}
+\begin{htmlonly}
+To add more exclusion lists than the default ones you can use the
+\longoption{Spider.py}{-E} or \longoption{Spider.py}{---exclusion-list}
+option. The \name{exclusionlist.txt} files should be in a specific
+format, that is explained in section \~ref{sec:Exclusionlist}. You
+can add more than one \option{-E},
+\end{htmlonly}\\
+
+\indata{\% Spider.py -H plucker:/exclude.html -E Exclude/default.excl -E Exclude/extra.excl -f ExcludeDB}\\
+
+would use \name{default.excl} and \name{extra.excl} found in
+\name{\$PLUCKERDIR/Exclude} as extra exclusion lists.
+
+
+\subsection{Sections}
+
+\begin{latexonly}
+The \longoption{Spider.py}{-s} or \longoption{Spider.py}{-{}-extra-section}
+option is used to add sections to the list of searched sections in the
+config file(s). You can read more about sections in \~ref{sec:ConfigFile}
+and \~ref{sec:Examples}.
+\end{latexonly}
+\begin{htmlonly}
+The \longoption{Spider.py}{-s} or \longoption{Spider.py}{---extra-section}
+option is used to add sections to the list of searched sections in the
+config file(s). You can read more about sections in \~ref{sec:ConfigFile}
+and \~ref{sec:Examples}.
+\end{htmlonly}
+
+
+\section{The Configuration File}\label{sec:ConfigFile}
+
+The configuration file allows you to specify default values for global
+options. Under OS/2 and Windows this file should be called \name{plucker.ini}.
+For Windows, put this in Plucker Home or in the Plucker directory
+(\code{\$PLUCKERDIR}). Under Unix/Linux, this file should be called
+\name{pluckerrc} if it is the system wide config file and \name{.pluckerrc}
+if it is a user config file. It should have been installed in the correct
+place (e.g. \name{.pluckerrc} should be in your home directory.)\\
+
+Entries are \code{key = value} pairs ordered into sections. A section
+is named and begins with a line in square bracket, where the brackets
+contain the section's name. Lines starting with a \emph{;;} are considered
+comments.\\
+
+All systems search the \longoption{configuration file}{[DEFAULT]} section.
+Under Windows, the \longoption{configuration file}{[WINDOWS]} section
+is also searched, OS/2 will search both the \longoption{configuration file}{[OS2]}
+and \longoption{configuration file}{[POSIX]} section and all other systems
+will search the \option{[POSIX]} section. Using the \longoption{Spider.py}{-s}
+on the command line you can add other sections to search. The parser starts
+with the \option{[DEFAULT]} section, then the system dependent section(s)
+and last any sections defined on the command line. If a key is repeated
+the value for the last one will be used.\\
+
+The following \code{keys} are defined (check the config file that came with
+your version of Plucker, new keys might have been added after this version
+of the document was released):
+
+\subsection{[DEFAULT]}
+
+\begin{description}
+\item[verbosity] verbosity level (integer, default: 1).
+\item[bpp] default bits per pixel (integer, default: 1)
+\item[db\_name] name (on the Palm) of the DB (string, no default)
+\item[db\_file] filename for the db relative to the plucker dir
+(string, no default)
+\item[cache\_dir\_name] name of the directory where cache files will
+be stored (string, default: cache)
+\item[home\_url] the URL to home document (string, default:
+plucker:/home.html)
+\item[home\_maxdepth] max depth to spider the home document
+(integer, default: 2)
+\item[home\_stayonhost] use STAYONHOST for home\_url (boolean,
+default: false)
+\item[home\_staybelow] the url part (as STAYBELOW) for home\_url
+(string, no default)
+\item[maxwidth] max width for the images (string, default: 150)
+\item[maxheight] max height for the images (string, default: 250)
+\item[pluckerdir] path to the plucker dir (string, default:
+\$HOME/.plucker/)
+\item[image\_parser] specify which parser to use for converting
+images, possible values are \emph{windows}, \emph{netpbm2}, and \emph{imagemagick}.
+(defaults to whatever the system determines to be the default parser.)
+\item[before\_command] specify commands to be executed before spidering
+(string, no default)
+\item[after\_command] specify commands to be executed after spidering
+(string, no default)
+\item[user] hotsync user name (string, no default) (Only used on Windows)
+\item[copyprevention\_bit] set the copy prevention bit in the DB.
+(boolean, default: false)
+\item[backup\_bit] set the backup bit in the DB. (boolean, default: false)
+\item[launchable\_bit] set the launchable bit in the DB. (boolean,
+default: false)
+\item[icon] store an icon in the DBs appinfo block. (boolean, default: false)
+\item[small\_icon] path to Tbmp (15x9), if the icon key is set, use
+this bitmap for the small icon. (string, default: standard PluckerDB icon)
+\item[big\_icon] path to Tbmp (32x32), if the icon key is set, use
+this bitmap for the large icon. (string, default: standard PluckerDB icon)
+\item[zlib\_compression] a flag indicating whether to use new zlib
+compression instead of the doc compression. (boolean, default: false)
+\item[no\_image\_compression\_limit] if a Tbmp is smaller than the given
+size then it will not be compressed (integer, default 0)
+\item[category] default category for the created document, if several 
+categories should be used then separate them with ";" (string, default: Unfiled)
+
+\end{description}
+
+
+\subsection{[POSIX]}
+
+\begin{description}
+\item[ppmquant\_program] name (and maybe path) to the ppmquant program
+(string, default: `ppmquant')
+\item[ppmtoTbmp\_program] name (and maybe path) to the ppmtoTbmp program
+(string, default: '\mbox{ppmtoTbmp}')
+\item[pnmscale\_program] name (and maybe path) to the pnmscale program
+(string, default: `pnmscale')
+\item[pnmfile\_program] name (and maybe path) to the pnmfile program
+(string, default: `pnmfile')
+\item[giftopnm\_program] name (and maybe path) to the giftopnm program
+(string, default: `giftopnm')
+\item[djpeg\_program] name (and maybe path) to the djpeg program
+(string, default: `djpeg')
+\item[pngtopnm\_program] name (and maybe path) to the pngtopnm program
+(string, default: `pngtopnm')
+\item[convert\_program] name (and maybe path) to the convert program
+(string, default: `convert')
+\item[exclusion\_lists] a list of filenames specifying exclusion lists to 
+be inspected.  Names are separated by colons. (default: nothing)
+\end{description}
+
+
+\subsection{[OS2]}
+
+\begin{description}
+\item[exclusion\_lists] a list of filenames specifying exclusion lists to 
+be inspected.  Names are separated by semicolons. (default: nothing)
+
+\note OS/2 will also evaluate the \longoption{configuration
+file}{[POSIX]}. Do not add any exclusion lists there or you may run
+into trouble.
+
+\end{description}
+
+
+\subsection{[WINDOWS]}
+
+\begin{description}
+\item[exclusion\_lists] a list of filenames specifying exclusion lists to 
+be inspected.  Names are separated by semicolons. (default: nothing)
+\item[convert\_program] path and name for the ImageMagick convert tool
+with arguments\\
+ (default: \mbox{convert.exe \%type\%:\%input\% bmp:\%output\%})
+\item[bmp\_to\_tbmp] path and name for the Bmp2Tbmp tool
+(default: \mbox{Bmp2Tbmp.exe -i=\%input\% -o=\%output\%}
+ \mbox{-maxwidth=\%maxwidth\% -maxheight=\%maxheight\% -compress=\%compress\% -color=\%colors\%})
+\item[tbmp\_compression\_type] use compression (string, default: yes)
+\item[python\_program] path and name for the Python executable
+(string, no default)
+\item[group\_path] path of the Plucker program group (string, no default)
+\item[http\_proxy] proxy settings of the form, http\_proxy=http://proxy:port
+(string, no default)
+\item[use\_conduit] use conduit.exe to build PDB (boolean, default: true)
+(only for debugging)
+\item[close\_on\_exit] close the terminal window when PyPlucker is finished.
+(boolean, default: false)
+\end{description}
+
+The \option{convert\_program} and \option{bmp\_to\_tbmp} options can be
+given the following arguments:
+\begin{itemize}
+\item \%compress\%  = if compression is used it is replaced with the
+string given by the `tbmp\_compression\_type' key, otherwise `no'
+\item \%colors\%    = `M', `G4', `G16' or `C256'
+\item \%maxwidth\%  = maxwidth value
+\item \%maxheight\% = maxheight value
+\item \%input\%     = the input filename
+\item \%output\%    = the output filename
+\item \%type\%      = `JPG', `GIF' or `PNG'
+\end{itemize}
+
+\section{The Exclusion List}\label{sec:Exclusionlist}
+
+Sometimes, the \longcode{description file}{STAYONHOST} and
+\longcode{description file}{STAYBELOW} attributes do not give enough
+selection ability to include only those things that you want included.
+The parser looks for so called \name{exclusion lists} in form of text
+files. It first loads the file \name{\$HOME/.plucker/exclusionlist.txt}
+(if it exists), then it loads \iname{exclusionlist.txt} in the directory
+you specified with the \longoption{Spider.py}{-p} flag (again, only if
+it exists) and finally it loads any files specified on the command line
+using the \longoption{Spider.py}{-E} option and/or found in the
+configuration file. A default \name{exclusionlist.txt} file is included
+with Plucker.\\
+
+The filter options in the exclusion list has a very flexible format:\\
+
+\begin{latexonly}
+\code{\textless prio\textgreater:\textless action\textgreater:\textless regexp\textgreater}
+\end{latexonly}
+\begin{htmlonly}
+\code{<prio>:<action>:<regexp>}
+\end{htmlonly}\\
+
+where:
+\begin{description}
+\begin{latexonly}
+  \item[\longcode{exclusion list}{\textless prio\textgreater}] is an
+          integer (negative numbers are also valid) specifying the
+          priority. Rules with higher priorities are considered before
+          rules with lower priorities.  Rules of equal priority are
+          considered in the sequence that they appear in the file.
+  \item[\longcode{exclusion list}{\textless action\textgreater}] is
+          either a plus or a minus sign.  Plus means `include this
+          document' while minus means `do not include this document'.
+  \item[\longcode{exclusion list}{\textless regexp\textgreater}] a
+          valid regular expression (as known, e.g.\ from perl).
+\end{latexonly}
+\begin{htmlonly}
+  \item[\longcode{exclusion list}{<prio>}] is an integer (negative
+          numbers are also valid) specifying the priority. Rules with
+          higher priorities are considered before rules with lower
+          priorities.  Rules of equal priority are considered in
+          the sequence that they appear in the file.
+  \item[\longcode{exclusion list}{<action>}] is either a plus or a
+          minus sign.  Plus means `include this document' while minus
+          means `do not include this document'.
+  \item[\longcode{exclusion list}{<regexp>}] a valid regular expression
+          (as known, e.g.\ from perl).
+\end{htmlonly}
+\end{description}
+
+Leading and trailing white space is ignored and empty lines or lines
+starting with a '\#' are considered comments.\\
+
+Examples:
+
+\begin{verbatim}
+0:-:.*\.mp3$
+0:-:.*\.wav$
+
+## Ignore known advertisement sites:
+0:-:http://.*ad\.de\.doubleclick\.net/.*
+0:-:http://.*ad\.linkexchange\.com/.*
+\end{verbatim}
+
+
+\section{Use Cases}\label{sec:Examples}
+
+To give you a few examples on how to use the parser in real life
+situations we will describe a number of different use cases. We
+start with showing how you \emph{pluck} files located on your own
+system and then continues with examples for how to \emph{pluck}
+files on remote hosts.\\
+
+In all the examples we will use \name{/home/pilot/.plucker/} as
+our Plucker Home (and Plucker Directory). In this directory we
+have two subdirectories, one called \name{HTML} where we store
+all our different description files and one called \name{DB}
+used for storing the resulting documents.
+
+\subsection{Pluck local targets}
+
+The parser can handle any HTML or text document you have on your
+desktop system, whether it is simple text files or documents from
+a local web server you run on your desktop.
+
+\subsubsection{Creating an E-book}
+
+Handling E-books on your Palm is one of the things that Plucker does
+well. To create such E-books you first have to get the book in either
+text or (preferable) in HTML format --- \name{Project Gutenberg:
+\htmladdnormallink{http://www.promo.net/pg/}{http://www.promo.net/pg/}}
+is a good place to find several old classics and other \emph{free} books.
+Some books can be found in the \name{Open E-book} (OEB) format. That
+format is close enough to HTML to be usable by the parser.\\
+
+In this example we will convert Lewis Carroll's \emph{Alice's Adventures
+in Wonderland} using a copy in OEB format that we got from
+\name{\htmladdnormallink{http://www.jeffkirvin.com/writingonyourpalm/recommends.htm}
+{http://www.jeffkirvin.com/writingonyourpalm/recommends.htm}}. After
+unpacking the file in the \name{HTML} subdirectory we have one large
+OEB file called \name{alices\_adventures\_in\_wonderland.htm} and the
+procedure to convert this file into a Plucker document is very simple,\\
+
+\begin{latexonly}
+\indata{\% Spider.py -v -{}-no-urlinfo -H plucker:/HTML/alices\_adventures\_in\_wonderland.htm \textbackslash}\\
+\indata{\textgreater{} -N "Alice in Wonderland" -f DB/Wonderland}
+\end{latexonly}
+\begin{htmlonly}
+\indata{\% Spider.py -v ---no-urlinfo -H plucker:/HTML/alices\_adventures\_in\_wonderland.htm \textbackslash}\\
+\indata{> -N "Alice in Wonderland" -f DB/Wonderland}
+\end{htmlonly}\\
+\begin{verbatim}
+Working for pluckerdir /home/pilot/.plucker
+Processing plucker:/HTML/alices_adventures_in_wonderland.htm.
+           0 collected, 0 still to do
+  Retrieved ok
+
+Writing out collected data...
+Writing db 'Alice in Wonderland' to file /home/pilot/.plucker/DB/Wonderland.pdb
+Converted plucker:/HTML/alices_adventures_in_wonderland.htm
+Converted plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/1
+Converted plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/2
+Converted plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/3
+Converted plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/4
+Wrote 1 <= plucker:/~special~/index
+Wrote 2 <= plucker:/HTML/alices_adventures_in_wonderland.htm
+Wrote 11 <= plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/1
+Wrote 12 <= plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/2
+Wrote 13 <= plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/3
+Wrote 14 <= plucker:/~parts~/plucker%3a%2fHTML%2fali.....onderland.htm/4
+Done!
+
+\end{verbatim}
+
+We give it a different name than the document itself and also exclude
+the URL info (we don't need that in an E-book). From the output above
+you can also see that the document is split into several parts, since
+we for internal reasons must keep the text documents below 32 kB in size.\\
+
+The document can be found in the \name{DB} directory,
+
+\subsubsection{An Admin Guide}
+
+The previous example was only using one single file and this example
+will show you that it is just as simple when the book is divided up
+into several documents. We will use \name{The Linux System Administrators'
+Guide} by Lars Wirzenius and Joanna Oja as our test object.\\
+
+Unpacking the files in a separate directory (we will use \name{/tmp/sag/}
+for this example) we will find several HTML documents and also a bunch
+of GIF images. We are interested in the images to find out what bit
+depth we have to use and also their size so we know if they will be
+scaled down. In this case all images are black and white, so we can
+use the default bit depth of 1. A few of the images are quite large,
+so they will be scaled down to 150x250 by the parser. If we really
+want these images in full size we can either change the HTML document
+so that instead of including the image \emph{in} the document it will
+link to the image, i.e.\ instead of,
+
+\begin{verbatim}
+<IMG SRC="overview-kernel.gif">
+\end{verbatim}
+
+we would use,
+
+\begin{verbatim}
+<A HREF="overview-kernel.gif" BPP=1 MAXWIDTH=700 MAXHEIGHT=700>overview-kernel.gif</A>
+\end{verbatim}
+
+Then we can tap on the link to the image when we want to view it.
+This is something we can only do when we have access to the document
+and to support this in a more transparent way the parser should be
+able to do this automatically for you in the future.\\
+
+\begin{latexonly}
+Since we are not interested in any external documents we will use the
+\longoption{Spider.py}{-{}-stayonhost} option and a high maximum depth.
+Then we don't have to worry about exactly how deep we should follow
+links and what external links we should filter out using exclusion lists.
+Now we are ready to build the document,\\
+
+\indata{\% Spider.py -v -{}-stayonhost -M5 -H file:/tmp/sag/index.html -N "Linux Admin Guide" -f DB/SAG}
+\end{latexonly}
+\begin{htmlonly}
+Since we are not interested in any external documents we will use the
+\longoption{Spider.py}{---stayonhost} option and a high maximum depth.
+Then we don't have to worry about exactly how deep we should follow
+links and what external links we should filter out using exclusion lists.
+Now we are ready to build the document,
+
+\indata{\% Spider.py -v ---stayonhost -M5 -H file:/tmp/sag/index.html -N "Linux Admin Guide" -f DB/SAG}
+\end{htmlonly}\\
+
+\begin{verbatim}
+Working for pluckerdir /home/pilot/.plucker
+Processing file:/tmp/sag/index.html.
+           0 collected, 0 still to do
+  Retrieved ok
+
+                    :
+
+Processing file:/tmp/sag/backup-timeline.gif.
+           73 collected, 0 still to do
+  Retrieved ok
+
+Writing out collected data...
+Writing db 'Linux Admin Guide' to file /home/pilot/.plucker/SAG.pdb
+Converted file:/tmp/sag/book1.html
+
+                    :
+
+Converted file:/tmp/sag/x89.html
+Wrote 1 <= plucker:/~special~/index
+Wrote 2 <= file:/tmp/sag/index.html
+Wrote 3 <= plucker:/~special~/pluckerlinks
+Wrote 11 <= file:/tmp/sag/backup-timeline.gif
+
+                    :
+
+Wrote 83 <= mailto:gregh@sunsite.unc.edu
+Wrote 87 <= plucker:/~special~/links1
+Done!
+
+\end{verbatim}
+
+Install the document you find in \name{/home/pilot/.plucker/DB} and
+you have instant access to \emph{The Linux System Administrators' Guide}.
+
+
+\subsection{Pluck remote targets}
+
+E-books and manuals in all glory, but many times we want to get fresh
+articles that updates every day. Well, Plucker can handle that, too.
+
+\subsubsection{Daily News}
+
+To be able to get the latest news from \name{Wired} we will set up a
+special section in the configuration file, so that we only have to run,\\
+
+\indata{\% Spider.py -s wired}\\
+
+every morning to get the latest version of \name{Wired} for later perusal.\\
+
+The handheld friendly version of \name{Wired} is located at
+\name{\htmladdnormallink{http://www.wired.com/news\_drop/palmpilot/}
+{http://www.wired.com/news\_drop/palmpilot/}} and we want to pluck it
+to a depth of 3 levels. We also know that it only uses black and white
+images. This give us the following section in the configuration file
+(\name{/home/pilot/.pluckerrc}),
+
+\begin{verbatim}
+[wired]
+bpp = 1
+home_maxdepth = 3
+home_url = http://www.wired.com/news_drop/palmpilot/
+db_file = DB/Wired
+\end{verbatim}
+
+\subsubsection{Comics}
+
+We need some fun, too, so let's download a few strips for some well
+known comics. To simplify things we will use a tool called \name{netcomics}
+to get the comics and then use a local description file to build the
+document. How to install \name{netcomics} is beyond this tutorial,
+but it is a Perl script and might work on any platform that have Perl
+support (for Linux users there exists pre-built packages). After you
+have installed \name{netcomics}, you should create a small shellscript
+called \name{netcomics.sh} to be used by the parser,
+
+\begin{verbatim}
+#!/bin/sh
+
+netcomics -D -d /tmp/Comics/ -c "ch dilbert dilbertcl uf"
+
+( cd /tmp/Comics ; \
+mv Dilbert-*.gif Dilbert.gif ; \
+mv Dilbert_Classics-*.gif Dilbert_Classics.gif ; \
+mv Calvin_and_Hobbes-*.gif Calvin_and_Hobbes.gif ; \
+mv User_Friendly-*.gif User_Friendly.gif )
+\end{verbatim}
+
+On OS/2 and Windows this will look like the follwing. On OS/2 it should
+be named \code{netcomics.cmd} whereas on Windows it should be named 
+\code{netcomics.bat}:
+
+\begin{verbatim}
+perl netcomics.pl -D -d \temp\Comics\ -c "ch dilbert dilbertcl uf"
+
+cd \temp\Comics
+move Dilbert-*.gif Dilbert.gif
+move Dilbert_Classics-*.gif Dilbert_Classics.gif
+move Calvin_and_Hobbes-*.gif Calvin_and_Hobbes.gif
+move User_Friendly-*.gif User_Friendly.gif
+
+\end{verbatim}
+
+This script will download Calvin \& Hobbes, Dilbert, Dilbert Classic
+and UserFriendly to a separate directory (\name{/tmp/Comics/}) and
+rename the date specific files into a general format that can be used
+in the local description file,
+
+\begin{verbatim}
+<HTML>
+<BODY>
+
+<H1>Comics Home Page</H1>
+
+<A HREF="file:/tmp/Comics/Dilbert.gif">Dilbert</A><P>
+<A HREF="file:/tmp/Comics/Dilbert_Classics.gif">Dilbert Classic</A><P>
+<A HREF="file:/tmp/Comics/Calvin_and_Hobbes.gif">Calvin &amp; Hobbes</A><P>
+<A HREF="file:/tmp/Comics/User_Friendly.gif">UserFriendly</A><P>
+
+</BODY>
+</HTML>
+\end{verbatim}
+
+To simplify things even further we will also add a new section for the
+comics,
+
+\begin{verbatim}
+[comics]
+bpp = 4
+home_url = plucker:/HTML/comics.html
+maxwidth = 600
+maxheight = 200
+db_file = DB/Comics
+before_command = "netcomics.sh"
+\end{verbatim}
+
+\note On OS/2 or Windows you can use the before\_command to the set
+the name of your batch file.
+
+As you can see we have added the shellscript as a command that should
+be run \emph{before} the description file is parsed. Everyday (except
+on Sunday when the strips are too large for these options --- we will
+show a solution to that later in the section) we now only have to run,\\
+
+\indata{\% Spider.py -v -s comics}
+\begin{verbatim}
+Executing 'before_command': "netcomics.sh"
+Working for pluckerdir /home/pilot/.plucker
+Processing file:/home/pilot/.plucker/HTML/comics.html.
+           0 collected, 0 still to do
+  Retrieved ok
+Processing file:/tmp/Comics/Dilbert.gif.
+           1 collected, 3 still to do
+  Retrieved ok
+Processing file:/tmp/Comics/Dilbert_Classics.gif.
+           2 collected, 2 still to do
+  Retrieved ok
+Processing file:/tmp/Comics/Calvin_and_Hobbes.gif.
+           3 collected, 1 still to do
+  Retrieved ok
+Processing file:/tmp/Comics/User_Friendly.gif.
+           4 collected, 0 still to do
+  Retrieved ok
+
+Writing out collected data...
+Writing db 'Comics' to file /home/pilot/.plucker/DB/Comics.pdb
+Converted file:/home/pilot/.plucker/HTML/comics.html
+Wrote 1 <= plucker:/~special~/index
+Wrote 2 <= file:/home/pilot/.plucker/HTML/comics.html
+Wrote 3 <= plucker:/~special~/pluckerlinks
+Wrote 11 <= file:/tmp/Comics/Calvin_and_Hobbes.gif
+Wrote 12 <= file:/tmp/Comics/Dilbert.gif
+Wrote 13 <= file:/tmp/Comics/Dilbert_Classics.gif
+Wrote 14 <= file:/tmp/Comics/User_Friendly.gif
+Wrote 15 <= plucker:/~special~/links1
+Done!
+
+\end{verbatim}
+
+To be able to use it also on Sundays we add yet another section to
+the configuration file,
+
+\begin{verbatim}
+[sunday]
+bpp = 2
+maxwidth = 550
+maxheight = 400
+db_file = DB/SundayComics
+\end{verbatim}
+
+Using a lower bit depth for the images we are now able to include
+larger versions of the comics.  Each Sunday we would run,\\
+
+\indata{\% Spider.py -s comics -s sunday}\\
+
+and since the parser applies the sections in the given order the
+changed values in \name{sunday} will override the ones in \name{comics}.
+

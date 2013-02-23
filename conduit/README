@@ -1,0 +1,148 @@
+Welcome to Plucker!
+~~~~~~~~~~~~~~~~~~~
+
+Here some remarks about the currently used sync.pl. This conduit is
+written completely in Perl using the Perl-Interface of Pilot-Link
+0.9.2 (at least I tested with 0.9.2, but it may also work on other
+versions of Pilot-Link). The conduit doesn't depend much on the OS
+you're running. Currently it detects OS/2 automatically and treats all
+other OSs as Unix. This will fail if you use Plucker on DOS9x or NT.
+
+OS-dependend code:
+
+- Port to use: This is stored in a variable called $device. On OS/2
+  Plucker uses COM1 by default, on Unix it uses /dev/pilot. Please
+  remember to set up an appropriate link. If you want to change this
+  behaviour you may want to edit sync.pl and change the setting of
+  $device.
+
+- home: On OS/2 you'll have to set the "home"-environment-variable
+  manually. (On Unix this is done correctly by default.) Please insert
+  to your CONFIG.SYS a line like
+
+  SET HOME=F:\home
+
+  if you want to use F:\home as your home-directory. Home is used to
+  create a subdir called .plucker where plucker stores it's data.
+  Currently it's not that easy to change that directory, cause you'll
+  have to hack arround in the parser-awk's.
+
+Using the Conduit:
+~~~~~~~~~~~~~~~~~~
+
+This is quite easy. On Unix simply set an executable flag and call
+sync.pl from within a shell. (Note: For this to work it's
+necessary that perl exists in /usr/bin. If your distribution uses a
+diffrent path, pleas adapt the first line in sync.pl!).
+
+On OS/2 please use the call
+
+perl sync.pl or perl conduit-new.pl
+
+to invoke it. The OS/2-installation-routine will also place some
+object on your desktop (the small Tricorder) to invoke the conduit
+manually. Also at the end of the hotsync-process the conduit is called
+automatically so in normal circumstances you'll never want to call it
+yourself.
+
+That's all that has do be said about usage.
+
+Developers documentation
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+All routine names and actions are as close as possible to the C-conduit this
+perl-port is based on.
+
+The source is quite well documented and simple, so you'll find all
+infos necessary directly in the source. The following modules are
+needed:
+
+PDA::Pilot     The Perl-Interface from Pilot-Link
+Data::Dumper   Included in standard Perl-distribution
+Env            To read the environment
+
+   How it works
+   ~~~~~~~~~~~~
+
+   First of all the logo is displayed including the hint for the user
+   to press hotsync-button. That is done in the routines Logo();
+   and Connect(); Actual connection to the Palm is done via calls ot
+   PDA::Pilot::openPort() and PDA::Pilot::accept(). The variables
+   $device store the device which should be used for transfer (COM1 or
+   /dev/pilot) and $socket stores the socket created by opening the
+   port. It's used in the conduit to actually transfer data. The
+   $dlp-object is the "transfer-unit" which reads data from the pilot
+   via $socket and writes data to the Pilot or executes API-calls on
+   the Pilot through internal methods. 
+
+   Before any action takes place, the userinfo is read and the Palm is
+   set to display the work currently done. That's the purpose of
+   ShowUserInfo(). Note the calls to $dlp->getUserInfo and
+   dlp->getStatus(). The informations are displayed on screen to
+   inform the user about actions that take place. 
+
+   Now, that connection is estabilshed the database is removed. All
+   work is done to PluckerDB. Removal of old PluckerDB and recreation
+   is the easiest way to get a clean new database on the Palm. This is
+   done in OpenConduitDB(). All actions are of course displayed to the
+   user.
+
+   Ok, now the actual transfer. addConduitFile() is the routine which
+   does that. First of all the conduit opens $pcache, which is the
+   directory
+
+   $home/.plucker/cache
+
+   This is the directory where the Plucker-parser stores the files
+   that should be transfered to the Palm. At this point, sync.pl
+   differs siginifcantly from old C-conduit. I don't take a long list
+   of parameters including the files to transfer, I simply transfer
+   the whole directory. This requires that the hotsync-job removes old
+   entrys before new ones are placed there or you'll get some sort of
+   memory-leak. If the directory can't be opened the conduit dies. 
+
+   In conduit-new.pl:
+   ~~~~~~~~~~~~~~~~~
+   @files = grep !/^\./, readdir(PDir);
+   for $file (sort  {$a <=> $b} @files) {
+
+   This goes through the directory of cache files, and creates an 
+   array which is used to populate the build function below for the
+   database. It does this in a sorted fashion, so the records are
+   put into the array in order. 
+
+   In sync.pl:
+   ~~~~~~~~~~~~~
+   while (defined($file = readdir(PDir)))
+
+   Walks through all files in the plucker-cache ignoring . and .. and
+   transfers them to the pilot. It also notifies the user about which
+   files are transfered and about there sizes. Note that the parser
+   uses the record-id's in PluckerDB as filenames. All data from the
+   file is read to $data for transfer. 
+
+   $rec = $db->newRecord();
+
+   creates a new record in PluckerDB, the following lines set the
+   appropriate fields to the record,  $db->setRecord($rec); actually
+   transfers the data to the Palm. After transfer the datafile is
+   closed, and the next one is processed. 
+   
+   $syncsize count's up all filesizes transfered so sync.pl can
+   inform the user about the size of the DB just created. After the
+   whole transfer took place 
+
+   $db->close();
+    
+   closes the db on the Palm and a final call to CloseConduitDB()
+   notifies the user that the conduit is finished. Then the program
+   exits.
+   
+For comments, hints or problems with the sync.pl please 
+
+mailto:a.wagner@teamos2.de or hacker@gnu-designs.com
+
+although this conduit was written for OS/2 and developed on OS/2 it's
+tested on Linux (SuSE 6.1 Beta, Slackware 3.6, and Redhat 6.1) and
+Solaris as well and worked there perfectly (SuSE 6.1Beta). 
+

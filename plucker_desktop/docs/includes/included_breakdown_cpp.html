@@ -1,0 +1,480 @@
+<style type="text/css">
+a {text-decoration: none;}
+td { font-family: helvetica,arial,sans-serif; font-size: 8pt; font-weight: bold; background-color: rgb(255,255,128); padding: 4px }
+td.tip { font-family: helvetica,arial,sans-serif; font-size: 8pt; font-weight: bold; background-color: rgb(224,224,224); padding: 4px }
+h1 {font-family: helvetica,sans-serif; font-size: 12pt; font-weight: bold;}
+pre {font-family: courier,serif; font-size: 10pt; font-weight: normal;}
+</style>
+
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">A file comment description codeblock.<br>
+    It is formatted the same as the header file.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+/*!
+    \file       bookmark_dialog.cpp       
+    \modified                            
+    \copyright  (c) Robert O'Connor ( rob@medicalmnemonics.com )    
+    \licence    GPL
+    \brief      Describes bookmark_dialog class    
+    \author     Robert O'Connor
+    \date       2002/01/03    
+ */</font></i>  
+<i><font
+COLOR="#808080">// RCS-ID:      $Id: included_breakdown_cpp.html,v 1.2 2003/03/17 17:43:21 robertoconnor Exp $
+//----------------------------------------------------------------------------------------</font></i></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">GCC implementation codeblock.<br>
+    This is the second part of the GCC #pragma interface/implementation combo. It goes as the
+    first line. This #pragma tells the compiler that is the one and only .cpp file that should
+    hold the debug info for the class. It should be the header of this class. Turned off 
+    for APPLE, since OSX Jaguar doesn't like it (or need it).</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// GCC implementation
+//----------------------------------------------------------------------------------------
+</font></i>
+#<b><font
+COLOR="#800080">if </font></b> <font COLOR="#B8860B">defined(__GNUG__) &amp;&amp; ! defined(__APPLE__)</font>
+    #pragma implementation <b><font
+COLOR="#800080">&quot;bookmark_dialog.h&quot;</font></b>
+#<b><font COLOR="#5F9EA0">endif</font></b></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">Application setup.h codeblock:<br>
+    Include the application's setup.h file, so that we can remove everything in the next part,
+    if the feature is one that we want to compile out.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// Setup information
+//----------------------------------------------------------------------------------------
+</font></i>
+#<b><font
+COLOR="#5F9EA0">include</font></b> <b><font COLOR="#800080">&quot;setup.h&quot;</font></b></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">Start feature removal codeblock:<br>
+    Same idea as header had.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// Begin feature removal condition
+//----------------------------------------------------------------------------------------
+</font></i>
+#<b><font
+COLOR="#5F9EA0">if</font></b> ( <font COLOR="#B8860B">setupUSE_INTEGRATED_HTML_EDITOR</font> )</pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">Standard wxWindows headers codeblock:<br>
+    A block that will be the same unchanged in every single .cpp file of the project. (You can
+    skip reading through the details of it if you what if you don't care about what is going
+    on).</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// Standard wxWindows headers
+//----------------------------------------------------------------------------------------</font></i></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" class="tip">This includes the headers for the compilers that support
+    precompiled headers to increase compile speed of the application.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">// For compilers that support precompilation, includes &quot;wx/wx.h&quot;.
+</font></i>#<b><font
+COLOR="#5F9EA0">include</font></b> <b><font COLOR="#800080">&quot;wx/wxprec.h&quot;</font></b></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" class="tip">The #pragma hdrstop for BCC tells the compiler that all the
+    headers above that pragma are the same same (which they are, since BCC compiler won't see
+    the #pragma interface of GCC). BCC has precompiled headers which will greatly speed up
+    compile time, but for it to work, everything above #pragma hdrstop has to be the same for
+    all the .cpp files. Therefore put the headers that are unique to this file after this
+    #pragma hdrstop. </td>
+  </tr>
+</table>
+</center></div>
+
+<pre>#<b><font COLOR="#5F9EA0">ifdef</font></b> <font COLOR="#B8860B">__BORLANDC__</font>
+    #pragma hdrstop
+#<b><font
+COLOR="#5F9EA0">endif</font></b></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" class="tip">If it isn't a compiler that can support precompiled headers,
+    then just include a long list of the most commonly used headers in the wxWindows library,
+    like windows, strings, etc.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">// For all others, include the necessary headers (this file is usually all you
+// need because it includes almost all &quot;standard&quot; wxWindows headers)
+</font></i>#<b><font
+COLOR="#5F9EA0">ifndef</font></b> <font COLOR="#B8860B">WX_PRECOMP</font>
+    #include <b><font
+COLOR="#800080">&quot;wx/wx.h&quot;</font></b>
+#<b><font COLOR="#5F9EA0">endif</font></b></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">Header of this .cpp file codeblock</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// Header of this .cpp file
+//----------------------------------------------------------------------------------------
+</font></i>
+#<b><font
+COLOR="#5F9EA0">include</font></b> <b><font COLOR="#800080">&quot;bookmark_dialog.h&quot;</font></b></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">Remaining headers codeblock:<br>
+    These are the unique headers needed by this class. For better sourcecode organization,
+    they are always arranged in the order of first the wxWindows library headers required by
+    the class, then any wxWindows/contrib headers required (often just the XRC resources
+    header), then finally any headers of the application.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// Remaining headers: Needed wx headers, then wx/contrib headers, then application headers
+//----------------------------------------------------------------------------------------
+</font></i>
+#<b><font
+COLOR="#5F9EA0">include</font></b> <b><font COLOR="#800080">&quot;wx/xrc/xmlres.h&quot;</font></b>          // XRC XML resouces
+
+<i><font
+COLOR="#808080">//----------------------------------------------------------------------------------------
+</font></i>
+#<b><font
+COLOR="#5F9EA0">include</font></b> <b><font COLOR="#800080">&quot;utils_controls.h&quot;</font></b>
+#<b><font
+COLOR="#5F9EA0">include</font></b> <b><font COLOR="#800080">&quot;help_controller.h&quot;</font></b></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">Internal constants codeblock (some classes)<br>
+    Some classes may use some internal constants, such as id numbers for a popup menu, list
+    columns, etc. If so, these internal constants should go into this block.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><font color="#FF0000"><em>//----------------------------------------------------------------------------------------
+// Internal constants
+//----------------------------------------------------------------------------------------
+                          
+// Popup menu (PU) item IDs                           
+</em>enum {
+    PU_ADD_CHANNEL                              = wxID_HIGHEST + 2, 
+    PU_ADD_CHANNEL_WIZARD,
+    PU_CONFIGURE_CHANNEL
+};</font></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">DECLARE_DYNAMIC/ABSTRACT_CLASS codeblock:<br>
+    If the header had a DECLARE_DYNAMIC_CLASS(), then a IMPLEMENT_DYNAMIC_CLASS()&nbsp; now
+    needs to go here. If it was DECLARE_ABSTRACT_CLASS() in the header it wold be a
+    IMPLEMENT_ABSTRACT_CLASS() here instead.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><font color="#FF0000"><em>//----------------------------------------------------------------------------------------
+// wxWindows macro: implement dynamic class
+//----------------------------------------------------------------------------------------
+</em>
+IMPLEMENT_DYNAMIC_CLASS( bookmark_dialog, wxDialog )
+</font></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">Event table codeblock (classes that want to handle events):<br>
+    This is the event table for the class. This is used for you to connect a certain event to
+    a certain custom function.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// Event table: connect the events to the handler functions to process them
+//----------------------------------------------------------------------------------------
+</font></i>
+<b><font
+COLOR="#0000FF">BEGIN_EVENT_TABLE</font></b>( bookmark_dialog, wxDialog )</pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" class="tip">Entries for children of the class have 3 parts:<br>
+    -EVT_BUTTON: What type of event it is that should be connected to the custom function (a
+    button click event)<br>
+    -wxID_HELP_CONTEXT: Only events raised by buttons by that ID will be sent to the custom
+    function. wxID_HELP_CONTEXT is a special ID nubmer define for the help button. The ID
+    number of -1 would specify events raised by all buttons.<br>
+    -bookmark_dialog::on_help_button: This is the custom function that should be fired by
+    button events raised by the buttons with an ID of wxID_HELP_CONTEXT.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre>    EVT_BUTTON( wxID_HELP_CONTEXT, bookmark_dialog::on_help_button )
+    EVT_BUTTON( wxID_OK, bookmark_dialog::OnOK )</pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" class="tip">If the event is raised by a some child control in the XML
+    resources, then just specify the control with a XRCID() macro. In this hypothetical
+    example, only button click events named &quot;bookmark_dialog_preferences_button&quot; in
+    the XRC file will trigger the on_preferences_button() function.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><font color="#FF0000">    EVT_BUTTON( XRCID( &quot;bookmark_dialog_preferences_button&quot; ), bookmark_dialog::on_preferences_button ) </font></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" class="tip">An event raised by the class itself for example the event of
+    this dialog closing obviously doen't need an identifier, so just 2 parts here: <br>
+    -EVT_CLOSE: Only close events will be sent to the custom function.<br>
+    -on_close(): The custom function that should be fired. </td>
+  </tr>
+</table>
+</center></div>
+
+<pre><font color="#FF0000">    EVT_CLOSE( main_frame::on_close )  </font>  
+
+<b><font
+COLOR="#0000FF">END_EVENT_TABLE</font></b>()</pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">Public members codeblock:<br>
+    A block of what the public members of the class should do. The first member is the
+    constructor, then the destructor, then the rest.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// Public members
+//----------------------------------------------------------------------------------------
+</font></i>
+<b><font
+COLOR="#0000FF">bookmark_dialog::bookmark_dialog</font></b>( wxWindow* parent )
+{
+    <b><font
+COLOR="#5F9EA0">wxXmlResource</font></b>::Get()-&gt;LoadDialog( <b><font COLOR="#A020F0">this</font></b>, parent, <b><font
+COLOR="#800080">&quot;bookmark_dialog&quot;</font></b> );
+}
+
+
+<b><font COLOR="#0000FF">bookmark_dialog::~bookmark_dialog</font></b>()
+{
+}
+
+
+<b><font
+COLOR="#228B22">void</font></b> <b><font COLOR="#0000FF">bookmark_dialog::transfer_to</font></b>( wxString&amp; starting_text, wxString&amp; ending_text )
+{
+    starting_text = m_starting_text;
+    ending_text = m_ending_text;
+}</pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">Protected members codeblock:<br>
+    A block of what the protected members of the class should do, if there is any.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><font color="#FF0000"><i>//----------------------------------------------------------------------------------------
+// Protected members
+//----------------------------------------------------------------------------------------</i></font></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">Private members codeblock:<br>
+    A block of what the private members of the class should do.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// Private members
+//----------------------------------------------------------------------------------------
+</font></i>
+<b><font
+COLOR="#228B22">void</font></b> <b><font COLOR="#0000FF">bookmark_dialog::OnOK</font></b>( wxCommandEvent&amp; event )
+{
+    wxString output_string;
+    wxString buf;
+    
+    output_string = <b><font
+COLOR="#800080">&quot;&lt;a&quot;</font></b>;    
+
+    wxString name_string = XRCCTRL( *<b><font
+COLOR="#A020F0">this</font></b>, <b><font COLOR="#800080">&quot;bookmark_dialog_name_textctrl&quot;</font></b>, wxTextCtrl )-&gt;GetValue();
+    output_string += <b><font
+COLOR="#800080">&quot; name=\&quot;&quot;</font></b> + name_string + <b><font
+COLOR="#800080">&quot;\&quot;&gt;&quot;</font></b>;
+   
+    wxString description_string = XRCCTRL( *<b><font
+COLOR="#A020F0">this</font></b>, <b><font COLOR="#800080">&quot;bookmark_dialog_description_textctrl&quot;</font></b>, wxTextCtrl )-&gt;GetValue();
+    output_string += description_string;
+      
+    output_string += <b><font
+COLOR="#800080">&quot;&lt;/a&gt;&quot;</font></b>;
+    
+    <i><font COLOR="#808080">// Store the starting and ending strings as class members, ready to be transferred
+</font></i>    <i><font
+COLOR="#808080">// by transfer_to(...) method.
+</font></i>    m_starting_text = output_string;
+    m_ending_text = <b><font
+COLOR="#800080">&quot;&quot;</font></b>;
+    
+    <i><font COLOR="#808080">// Get rid of the modal dialog. Not transferring any info from this modal's control
+</font></i>    <i><font
+COLOR="#808080">// to a parent dialog, so don't have to bother with wxWindow::Validate or 
+</font></i>    <i><font
+COLOR="#808080">// wxWindow::TransferDataFromWindow.    
+</font></i>    EndModal( wxID_OK );
+}
+
+
+<b><font
+COLOR="#228B22">void</font></b> <b><font COLOR="#0000FF">bookmark_dialog::on_help_button</font></b>( wxCommandEvent &amp;event )
+{
+#<b><font
+COLOR="#5F9EA0">if</font></b> ( <font COLOR="#B8860B">setupUSE_ONLINE_HELP</font> )
+    <b><font
+COLOR="#5F9EA0">help_controller</font></b>::get()-&gt;show_help_topic( plkrHELP_ID_BOOKMARK_DIALOG );
+#<b><font
+COLOR="#5F9EA0">endif</font></b> 
+}</pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">Module definition block (only a few global classes): <br>
+    Not in bookmark_dialog, but in a few classes such as plucker_controller, help_controller,
+    and commandline_parser, you will see they are set up with wxModules. These wxModules
+    remove the requirement and headaches of creating and cleaning up globals. To use a
+    wxModule instead of&nbsp; a global, there is a derived class wxModule definition down at
+    the bottom of the class's .cpp file (the module doesn't need to be mentioned in any header
+    anywhere).&nbsp; <p>Before the program 'starts' any execution, it gets a list of all the
+    modules in the application and runs all of their OnInit() functions (which will do nothing
+    in this application; they just return TRUE). After the program 'ends', then all of the
+    wxModule's OnExit() functions are called, which will clean up the classes managed by the
+    wxModule. </p>
+    <p>Each of the classes managed by wxModule have a get() and set() method which gets or
+    sets the single instance. By calling some_class::get() you can create an instance on
+    demand if there isn't one yet, but retrieve the existing instance if there is one already
+    made. For example, see the call to
+    help_controller::get()-&gt;show_help_topic(plkrHELP_ID_BOOKMARK_DIALOG) in the
+    bookmark_dialog::on_help_button() above: it will get the single help_controller and call
+    its show_help_topic() method if it exists already, or else create one on demand and then
+    do its show_help_topic() method.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><font color="#FF0000"><em>//----------------------------------------------------------------------------------------
+// Module definition
+//----------------------------------------------------------------------------------------
+
+</em>class module_body_dialog : public wxModule
+{
+
+    DECLARE_DYNAMIC_CLASS( module_body_dialog )
+    
+public:
+
+    module_body_dialog() {}
+    
+    bool OnInit()
+    {
+        return TRUE;
+    }
+    
+    void OnExit()
+    {
+        wxLogDebug( &quot;Entered module_body_dialog::OnExit()&quot; );
+<em>        // We set it to null, and a pointer returns to the previous one, which we delete.
+</em>        delete body_dialog::set( NULL );
+        wxLogDebug( &quot;Completed module_body_dialog::OnExit()&quot; );
+    }
+
+};
+
+IMPLEMENT_DYNAMIC_CLASS( module_body_dialog, wxModule )</font></pre>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%">End feature removal condition codeblock:<br>
+    If this .cpp file was part of a feature that could be compiled out, then close the #if
+    compiler directive that we started way back at the top of this file. It is now visible why
+    the application's setup.h works to remove the feature: since if the define was set to
+    zero, then this whole .cpp file would pretty much collapse to zero code.</td>
+  </tr>
+</table>
+</center></div>
+
+<pre><i><font COLOR="#808080">//----------------------------------------------------------------------------------------
+// End feature removal condition
+//----------------------------------------------------------------------------------------
+</font></i>
+#<b><font
+COLOR="#800080">endif</font></b> // <font COLOR="#B8860B">setupUSE_INTEGRATED_HTML_EDITOR</font> </pre>

@@ -1,0 +1,3453 @@
+# -----------------------------------------------------------------------------------------
+# Name:        sample_po.txt
+# Purpose:     A .po file for Plucker-Desktop translation. See the file TRANSLATING in this 
+#              directory for full directions on how to add a new translation.
+# Author:      Your Name
+# Modified by:
+# Created:     2001/10/20
+# Copyright:   (c) Your Name ( you@youraddress.org )
+# Licence:     GPL
+# RCS-ID:      $Id: plucker-desktop.po,v 1.31 2004/03/30 06:51:22 robertoconnor Exp $
+# -----------------------------------------------------------------------------------------
+#
+#: channel_dialog.cpp:1582
+msgid ""
+msgstr ""
+"Project-Id-Version: Plucker Desktop\n"
+"POT-Creation-Date: 2004-03-30 02:18-0330\n"
+"PO-Revision-Date: 2003-03-16 11:31+0900\n"
+"Last-Translator: Kazu <kazutaka@dc4.so-net.ne.jp>\n"
+"Language-Team: The Plucker Team <plucker-dev@rubberchicken.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: startup_tips.cpp:106
+msgid "tip"
+msgstr ""
+
+#: html_tip_dialog.h:87 html_tip_dialog.h:133 startup_tips.cpp:125
+#: startup_tips.cpp:162
+msgid "Tip of the day"
+msgstr "今日のTips"
+
+#: processed_tip_provider.cpp:96
+msgid "Tips not available, sorry!"
+msgstr ""
+
+#: html_tip_dialog.cpp:101
+msgid "&Close"
+msgstr "閉じる(&C)"
+
+#: html_tip_dialog.cpp:103
+msgid "&Show tips at startup"
+msgstr "起動時のTipsを表\示(&S)"
+
+#: html_tip_dialog.cpp:106
+msgid "&Next Tip"
+msgstr "次のTips(&N)"
+
+#: internationalization.cpp:193
+msgid "[System default]"
+msgstr "[システム規定値]"
+
+#: internationalization.cpp:194 viewer_wizardpage.cpp:143
+#, fuzzy
+msgid "Catalan"
+msgstr "イタリア語"
+
+#: internationalization.cpp:195 viewer_wizardpage.cpp:144
+msgid "Czech"
+msgstr "チェコ語"
+
+#: internationalization.cpp:196 viewer_wizardpage.cpp:145
+msgid "Danish"
+msgstr "デンマーク語"
+
+#: internationalization.cpp:197 viewer_wizardpage.cpp:146
+msgid "German"
+msgstr "ドイツ語"
+
+#: internationalization.cpp:198 viewer_wizardpage.cpp:148
+msgid "Spanish"
+msgstr "スペイン語"
+
+#: internationalization.cpp:199 viewer_wizardpage.cpp:147
+#: viewer_wizardpage.cpp:269
+msgid "English"
+msgstr "英語"
+
+#: internationalization.cpp:200
+msgid "English (US)"
+msgstr "英語(US)"
+
+#: internationalization.cpp:201 viewer_wizardpage.cpp:149
+msgid "Faeroese"
+msgstr "フェロー語"
+
+#: internationalization.cpp:202 viewer_wizardpage.cpp:150
+msgid "French"
+msgstr "フランス語"
+
+#: internationalization.cpp:203 viewer_wizardpage.cpp:151
+msgid "Italian"
+msgstr "イタリア語"
+
+#: internationalization.cpp:204 viewer_wizardpage.cpp:152
+msgid "Japanese"
+msgstr "日本語"
+
+#: internationalization.cpp:205
+msgid "Dutch"
+msgstr "オランダ語"
+
+#: internationalization.cpp:206 viewer_wizardpage.cpp:153
+msgid "Polish"
+msgstr "ポーランド語"
+
+#: internationalization.cpp:207 viewer_wizardpage.cpp:154
+msgid "Russian"
+msgstr "ロシア語"
+
+#: internationalization.cpp:218
+msgid "Please choose language:"
+msgstr "言語を選んで下さい。"
+
+#: internationalization.cpp:219 preferences_dialog.cpp:882
+#: showcase_dialog.cpp:277 showcase_listctrl.cpp:95
+msgid "Language"
+msgstr "言語"
+
+#: handheld_dest_dialog.cpp:180 help_controller.cpp:100
+#: resource\xrc\xrc_strings_output.h:158 resource\xrc\xrc_strings_output.h:170
+#: resource\xrc\xrc_strings_output.h:260 resource\xrc\xrc_strings_output.h:276
+#: resource\xrc\xrc_strings_output.h:287 resource\xrc\xrc_strings_output.h:296
+#: resource\xrc\xrc_strings_output.h:308 resource\xrc\xrc_strings_output.h:314
+#: resource\xrc\xrc_strings_output.h:320 resource\xrc\xrc_strings_output.h:328
+#: resource\xrc\xrc_strings_output.h:336 resource\xrc\xrc_strings_output.h:342
+#: resource\xrc\xrc_strings_output.h:349 resource\xrc\xrc_strings_output.h:355
+#: resource\xrc\xrc_strings_output.h:361 resource\xrc\xrc_strings_output.h:370
+#: resource\xrc\xrc_strings_output.h:383 resource\xrc\xrc_strings_output.h:395
+#: resource\xrc\xrc_strings_output.h:404 resource\xrc\xrc_strings_output.h:602
+#: resource\xrc\xrc_strings_output.h:608
+msgid "Help"
+msgstr "ヘルプ"
+
+#: help_controller.cpp:198
+msgid "Couldn't open help file named"
+msgstr "次のヘルプファイルを開けませんでした。"
+
+#: help_controller.cpp:246
+msgid "Enter keyword to search for:"
+msgstr "ヘルプを検索するキーワードを入力"
+
+#: help_controller.cpp:247
+msgid "Search help for keyword"
+msgstr "キーワードでヘルプを検索"
+
+#: plucker_wizard_base.cpp:227
+msgid "Cancel wizard"
+msgstr "ウィザードのキャンセル"
+
+#: setup_wizard.cpp:102
+msgid "This wizard will guide you through setting up"
+msgstr "このウィザードでは、Plucker Desktopのセットアップ方法を案内します。"
+
+#: setup_wizard.cpp:106
+msgid "for your system."
+msgstr ""
+
+#: setup_wizard.cpp:108
+msgid ""
+"You can specify what handheld software you would like installed, what "
+"handhelds or directories you want channels and software installed to, and "
+"set up your proxy"
+msgstr "パームデバイスにインストールするビューワソ\フトの種類や、チャンネルやビューワをインストールするパームデバイスとディレクトリ、及びプロクシの指定ができます。"
+
+#: install_viewer_wizard.cpp:95 setup_wizard.cpp:110
+msgid "Click Next to begin, or Cancel to exit the wizard."
+msgstr "先に進む場合は'Next'を、ウィザードを終了する場合は'Cancel'をクリックして下さい。"
+
+#: setup_wizard.cpp:128
+msgid "Install software/channels to these handheld destinations"
+msgstr "次のパームデバイスにビューワソ\フト/チャンネルをインストール"
+
+#: setup_wizard.cpp:129
+msgid "Install software/channels to these directory destinations"
+msgstr "次のディレクトリにビューワソ\フト/チャンネルをインストール"
+
+#: setup_wizard.cpp:161
+msgid "You can have some default channels automatically configured."
+msgstr ""
+
+#: setup_wizard.cpp:162
+msgid "Use the checkboxes to select your desired channels."
+msgstr "チェックボックスでチャンネルを選択して下さい。"
+
+#: setup_wizard.cpp:177
+msgid "The wizard has gathered all information needed to configure"
+msgstr "ウィザードは、Plucker Desktopのセットアップに必要な情報を全て収集し終えました。"
+
+#: setup_wizard.cpp:181
+msgid "Click Finish to apply these settings and complete the wizard."
+msgstr "Finishボタンを押して設定を反映し、ウィザードを完了してください。"
+
+#: install_viewer_wizard.cpp:88 plucker_wizard_wrappers.cpp:125
+msgid "Install Handheld Software Wizard"
+msgstr "パームデバイス用ビューワのインストール ウィザード"
+
+#: install_viewer_wizard.cpp:91
+msgid "This wizard will reinstall the"
+msgstr ""
+
+#: install_viewer_wizard.cpp:91
+msgid "viewer software to your handheld."
+msgstr "このウィザードではパームデバイス用ビューワソ\フトを再インストールします。"
+
+#: install_viewer_wizard.cpp:93
+msgid ""
+"This is helpful if the software was accidentally erased from the device, and "
+"now needs to be reinstalled."
+msgstr "これは、パームデバイスのビューワソ\フトが消えてしまい、再インストールする時に役に立ちます。"
+
+#: install_viewer_wizard.cpp:114
+msgid "Install handheld software to these handheld destinations"
+msgstr "パームデバイス用ビューワを次のパームデバイスにインストール"
+
+#: install_viewer_wizard.cpp:115
+msgid "Install handheld software to these directory destinations"
+msgstr "パームデバイス用ビューワを次のディレクトリにインストール"
+
+#: install_viewer_wizard.cpp:125
+msgid ""
+"The wizard has gathered all information needed to install the handheld "
+"software."
+msgstr "ウィザードは、パームデバイス用ビューワのインストールに必要な情報を全て収集し終えました。"
+
+#: install_viewer_wizard.cpp:127
+msgid "Click Finish to perform the installation and complete the wizard."
+msgstr "Finishボタンを押してビューワをインストールし、ウィザードを完了してください"
+
+#: install_viewer_wizard.cpp:129
+msgid ""
+"After clicking Finish, the handheld software will be sent your specified "
+"destinations."
+msgstr "Finishボタンを押した後に、パームデバイス用ビューワソ\フトは指定した場所に出力されます。"
+
+#: add_channel_wizard.cpp:88
+msgid "Enter a name for the new channel."
+msgstr "新しいチャンネルの名前を入力して下さい。"
+
+#: add_channel_wizard.cpp:89
+msgid "The channel name can be up to 26 letters long."
+msgstr "チャンネル名は26文字までです。"
+
+#: add_channel_wizard.cpp:91 resource\xrc\xrc_strings_output.h:19
+msgid "Channel name:"
+msgstr "チャンネル名:"
+
+#: add_channel_wizard.cpp:117
+msgid "Enter a starting page for the channel."
+msgstr "開始ページを入力して下さい。"
+
+#: add_channel_wizard.cpp:118
+msgid "The starting page and the pages it links to will be retrieved."
+msgstr "開始ページとそのリンク先のページがダウンロードされます。"
+
+#: add_channel_wizard.cpp:119
+msgid ""
+"You can choose to start on either a website URL or a local file on your hard "
+"drive."
+msgstr "開始ページには、ホームページのURL又はローカルファイルが選択できます。"
+
+#: add_channel_wizard.cpp:121
+msgid "Start on a website URL:"
+msgstr "ホームページのURLから開始:"
+
+#: add_channel_wizard.cpp:122
+msgid "Start on a local file:"
+msgstr "ローカルファイルから開始: "
+
+#: add_channel_wizard.cpp:144
+msgid "Send channel output to these handheld destinations:"
+msgstr "チャンネルを次のパームデバイスに出力する"
+
+#: add_channel_wizard.cpp:145
+msgid "Send channel output to these directory destinations:"
+msgstr "チャンネルを次のディレクトリに出力する"
+
+#: add_channel_wizard.cpp:155
+msgid ""
+"The wizard has gathered all the information needed to create a new channel."
+msgstr "ウィザードは、チャンネルの追加に必要な情報を全て収集し終えました。"
+
+#: add_channel_wizard.cpp:156
+msgid "Click Finish to add the channel and complete the wizard."
+msgstr "Finishボタンを押してチャンネルを追加し、ウィザードを完了してください。"
+
+#: add_channel_wizard.cpp:158
+msgid "Launch a 'Configure channel' dialog when I click Finish."
+msgstr "Finishボタンを押したら、チャンネルの設定画面を表\示する。"
+
+#: destinations_wizardpage.cpp:181
+msgid ""
+"At least one destination is required. Click 'Add handheld..' or .'Add output "
+"directory...'."
+msgstr "少なくとも一つの出力先が必要です。'パームデバイスを追加'か'出力先ディレクトリを追加'ボタンを押して下さい。"
+
+#: destinations_wizardpage.cpp:182
+msgid "Destination required"
+msgstr "出力先の設定"
+
+#: viewer_wizardpage.cpp:130
+msgid "Normal resolution Palm OS device"
+msgstr "通常解像度のパームデバイス"
+
+#: viewer_wizardpage.cpp:131
+msgid "High resolution Palm OS device"
+msgstr "高解像度(ハイレゾ)のパームデバイス"
+
+#: resource\xrc\xrc_strings_output.h:105 resource\xrc\xrc_strings_output.h:251
+#: viewer_wizardpage.cpp:135
+msgid "Black and white"
+msgstr "白黒"
+
+#: resource\xrc\xrc_strings_output.h:106 resource\xrc\xrc_strings_output.h:252
+#: viewer_wizardpage.cpp:136
+msgid "4 shade grayscale"
+msgstr "グレースケール(4階調)"
+
+#: resource\xrc\xrc_strings_output.h:107 resource\xrc\xrc_strings_output.h:253
+#: viewer_wizardpage.cpp:137
+msgid "16 shade grayscale"
+msgstr "グレースケール(16階調)"
+
+#: resource\xrc\xrc_strings_output.h:108 resource\xrc\xrc_strings_output.h:254
+#: viewer_wizardpage.cpp:138
+msgid "256 colors"
+msgstr "256色"
+
+#: resource\xrc\xrc_strings_output.h:109 resource\xrc\xrc_strings_output.h:255
+#: viewer_wizardpage.cpp:139
+msgid "Thousands of colors"
+msgstr "フルカラー"
+
+#: viewer_wizardpage.cpp:155
+msgid "Thai"
+msgstr ""
+
+#: viewer_wizardpage.cpp:156
+msgid "Turkish"
+msgstr "トルコ語"
+
+#: viewer_wizardpage.cpp:157
+msgid "Simplified Chinese"
+msgstr "簡体中国語"
+
+#: viewer_wizardpage.cpp:190
+msgid "Software options"
+msgstr "ビューワソ\フトのオプション"
+
+#: viewer_wizardpage.cpp:201
+msgid "Type of handheld device:"
+msgstr "パームデバイスの種類"
+
+#: viewer_wizardpage.cpp:207
+msgid "Color depth of handheld device:"
+msgstr "パームデバイスの色数"
+
+#: viewer_wizardpage.cpp:213
+msgid "Language for handheld software:"
+msgstr "パームデバイスの言語"
+
+#: viewer_wizardpage.cpp:223
+msgid "Items to install"
+msgstr "インストール項目"
+
+#: viewer_wizardpage.cpp:227 viewer_wizardpage.cpp:237
+msgid "Install"
+msgstr "インストール"
+
+#: viewer_wizardpage.cpp:227
+msgid "Viewer"
+msgstr ""
+
+#: viewer_wizardpage.cpp:227
+msgid "(required)"
+msgstr "(必須)"
+
+#: viewer_wizardpage.cpp:232
+#, fuzzy
+msgid "Install ZLIB decompression tool"
+msgstr "ZLIB解凍ツールをインストール"
+
+#: viewer_wizardpage.cpp:232
+#, fuzzy
+msgid "(strongly recommended)"
+msgstr " (強く推奨)"
+
+#: viewer_wizardpage.cpp:237
+msgid "user's manual"
+msgstr "取扱説明書"
+
+#: viewer_wizardpage.cpp:237
+msgid "(optional)"
+msgstr "(任意)"
+
+#: textctrl_wizardpage.cpp:164
+msgid "Please enter a value in the text box to continue the wizard."
+msgstr "ウィザードを続けるには、テキストを入力して下さい。"
+
+#: textctrl_wizardpage.cpp:165
+msgid "Text required"
+msgstr "テキストが必要です。"
+
+#: resource\xrc\xrc_strings_output.h:24 resource\xrc\xrc_strings_output.h:239
+#: starting_page_wizardpage.cpp:141
+msgid "Browse showcase..."
+msgstr "ショーケースを開く"
+
+#: resource\xrc\xrc_strings_output.h:27 resource\xrc\xrc_strings_output.h:140
+#: resource\xrc\xrc_strings_output.h:142 resource\xrc\xrc_strings_output.h:242
+#: resource\xrc\xrc_strings_output.h:279 starting_page_wizardpage.cpp:153
+msgid "Choose file..."
+msgstr "ファイルを選択"
+
+#: channel_dialog.cpp:1557 starting_page_wizardpage.cpp:264
+msgid "Choose start file"
+msgstr "開始ファイルを選択"
+
+#: limits_wizardpage.cpp:102
+msgid ""
+"Enter the depth of pages that you want to retrieve (1=retrieve starting page "
+"only):"
+msgstr "収集したいページのリンク数(階層数)を入力して下さい。(1=開始ページのみ)"
+
+#: limits_wizardpage.cpp:106 resource\xrc\xrc_strings_output.h:54
+msgid "Maximum depth"
+msgstr "最大リンク数(階層数)"
+
+#: limits_wizardpage.cpp:110 resource\xrc\xrc_strings_output.h:55
+msgid "Retreive linked pages to a depth of"
+msgstr "開始ページからのリンク数が"
+
+#: limits_wizardpage.cpp:117
+msgid "from the starting page"
+msgstr "回までのページを収集する"
+
+#: limits_wizardpage.cpp:127
+msgid ""
+"Enter whether you want to exclude linked pages that are not on the server:"
+msgstr "サーバー上に無い除外したいリンク先ページを指定する"
+
+#: limits_wizardpage.cpp:132 resource\xrc\xrc_strings_output.h:57
+msgid "'Stay on host' / 'Stay on domain' filters"
+msgstr "サーバ/ドメインで制限"
+
+#: limits_wizardpage.cpp:136 resource\xrc\xrc_strings_output.h:58
+msgid "Ignore links to a server that is different from starting page's server"
+msgstr "開始ページと異なるサーバ/ドメインへのリンクを無視"
+
+#: limits_wizardpage.cpp:144
+msgid "Limit to the exact server only"
+msgstr "同一サーバー上のみに制限"
+
+#: limits_wizardpage.cpp:155
+msgid "Only restrict to domain (eg allow www.plkr.org and www2.plkr.org)"
+msgstr "同一ドメインのみに制限(例 www.plkr.org と www2.plkr.orgは含まれる)"
+
+#: proxy_wizardpage.cpp:103 resource\xrc\xrc_strings_output.h:592
+msgid "Enable proxy"
+msgstr "プロクシの使用"
+
+#: proxy_wizardpage.cpp:108
+msgid "This computer uses a proxy to access the Internet"
+msgstr "このコンピュータからインターネットに接続にプロクシを使用"
+
+#: proxy_wizardpage.cpp:111
+msgid ""
+"(If you are not sure whether or not you have a proxy, then just click 'Next')"
+msgstr ""
+
+#: proxy_wizardpage.cpp:116 resource\xrc\xrc_strings_output.h:594
+msgid "Proxy settings"
+msgstr "プロクシ設定"
+
+#: proxy_wizardpage.cpp:121 resource\xrc\xrc_strings_output.h:595
+msgid "Proxy server:"
+msgstr "プロクシ サーバ名"
+
+#: proxy_wizardpage.cpp:127 resource\xrc\xrc_strings_output.h:596
+msgid "Port:"
+msgstr "ポート番号"
+
+#: proxy_wizardpage.cpp:133 resource\xrc\xrc_strings_output.h:597
+msgid "Proxy login:"
+msgstr "ログインID"
+
+#: proxy_wizardpage.cpp:139 resource\xrc\xrc_strings_output.h:598
+msgid "Proxy password:"
+msgstr "ログイン パスワード"
+
+#: proxy_wizardpage.cpp:147 resource\xrc\xrc_strings_output.h:599
+msgid "Prompt for proxy password each time (more secure)"
+msgstr ""
+
+#: proxy_wizardpage.cpp:297
+msgid ""
+"Your proxy server is invalid. It must begin with either http:// or https://"
+msgstr "プロクシサーバが無効です。http://またはhttps://で始まる必要があります。"
+
+#: proxy_wizardpage.cpp:298
+msgid "Proxy invalid"
+msgstr "プロクシサーバが無効です。"
+
+#: plucker_wizard_wrappers.cpp:77
+msgid "The setup wizard is not complete."
+msgstr "セットアップ ウィザードは完了していません。"
+
+#: plucker_wizard_wrappers.cpp:78
+msgid "You can run this wizard again at a later time to complete the setup."
+msgstr "このウィザードは後からPlucker Desktopをセットアップする時にいつでも実行できます。"
+
+#: plucker_wizard_wrappers.cpp:79
+msgid "Exit the setup wizard?"
+msgstr "セットアップ ウィザードを終了しますか？"
+
+#: plucker_wizard_wrappers.cpp:86
+msgid "Setup Wizard"
+msgstr "Plucker Desktop セットアップ ウィザード"
+
+#: plucker_wizard_wrappers.cpp:115
+msgid "The install handheld software wizard is not complete."
+msgstr "ウィザードは完了していません。"
+
+#: plucker_wizard_wrappers.cpp:116
+msgid ""
+"You can run this wizard again at a later time to re-install the software."
+msgstr "このウィザードは後からソ\フトウェアを再インストールする時にいつでも実行できます。"
+
+#: plucker_wizard_wrappers.cpp:117 plucker_wizard_wrappers.cpp:154
+msgid "Exit the wizard?"
+msgstr "ウィザードを終了しますか？"
+
+#: plucker_wizard_wrappers.cpp:152
+msgid "The add channel wizard is not complete."
+msgstr "チャンネル追加ウィザードは完了していません。"
+
+#: plucker_wizard_wrappers.cpp:153
+msgid "You can run this wizard again at a later time to add the channel."
+msgstr "このウィザードは後からチャンネルを追加する時にいつでも実行できます。"
+
+#: plucker_wizard_wrappers.cpp:162
+msgid "Add New Channel Wizard"
+msgstr "チャンネル追加ウィザード"
+
+#: channel_check_listctrl.cpp:157
+msgid "Channel Name"
+msgstr "チャンネル名"
+
+#: editor_dialog.cpp:538
+msgid "Unable to save home.html"
+msgstr "home.htmlを保存できません"
+
+#: hyperlink_dialog.cpp:259
+msgid "Choose file to link to"
+msgstr "リンクするファイルを選択"
+
+#: image_dialog.cpp:108
+msgid "Choose image source file"
+msgstr "画像のソ\ースファイルを選択"
+
+#: exclusion_dialog.cpp:133
+msgid "File Extension"
+msgstr "ファイルの拡張子"
+
+#: exclusion_dialog.cpp:143 preferences_dialog.cpp:880 showcase_dialog.cpp:275
+#: showcase_listctrl.cpp:93
+msgid "URL"
+msgstr "URL"
+
+#: exclusion_dialog.cpp:273 exclusion_listctrl.cpp:202
+#: exclusion_listctrl.cpp:279
+msgid "Exclude"
+msgstr "除外する"
+
+#: exclusion_dialog.cpp:277 exclusion_dialog.cpp:349
+#: exclusion_listctrl.cpp:237 exclusion_listctrl.cpp:283
+msgid "Include"
+msgstr "含める"
+
+#: exclusion_listctrl.cpp:123
+msgid "Action"
+msgstr "アクション"
+
+#: exclusion_listctrl.cpp:124
+msgid "Priority"
+msgstr "優先順位"
+
+#: exclusion_listctrl.cpp:143
+msgid "Add a new exclusion..."
+msgstr "除外するアイテムを追加..."
+
+#: exclusion_listctrl.cpp:144
+msgid "Edit selected exclusion..."
+msgstr "選択したアイテムを編集"
+
+#: exclusion_listctrl.cpp:145
+msgid "Delete selected exclusion"
+msgstr "選択したアイテムを削除"
+
+#: exclusion_listctrl.cpp:307
+msgid ""
+"Are you sure you wish to delete this URL/extension from your exclusion list?"
+msgstr "選択したURL/拡張子を除外リストから本当に削除しますか？"
+
+#: exclusion_listctrl.cpp:310
+msgid "Confirm delete"
+msgstr "削除の確認"
+
+#: blocked_dialog.cpp:128
+msgid "You must enter some text in the \"Item to block\" edit box."
+msgstr "\"アイテム\"欄にテキストを入力して下さい。"
+
+#: blocked_dialog.cpp:129
+msgid "Enter exclusion"
+msgstr "除外アイテムの入力"
+
+#: hhictrl.cpp:240 hhictrl.cpp:320 showcase_dialog.cpp:209
+#: showcase_dialog.cpp:218 showcase_dialog.cpp:225 showcase_dialog.cpp:410
+#: showcase_dialog.cpp:423 showcase_dialog.cpp:430
+msgid "Yes"
+msgstr "はい"
+
+#: hhictrl.cpp:244 showcase_dialog.cpp:211 showcase_dialog.cpp:220
+#: showcase_dialog.cpp:227
+msgid "No"
+msgstr "いいえ"
+
+#: preferences_dialog.cpp:879 showcase_dialog.cpp:274 showcase_listctrl.cpp:92
+msgid "Name"
+msgstr "名前"
+
+#: preferences_dialog.cpp:881 showcase_dialog.cpp:276 showcase_listctrl.cpp:94
+msgid "Description"
+msgstr "説明"
+
+#: preferences_dialog.cpp:883 showcase_dialog.cpp:278 showcase_listctrl.cpp:96
+msgid "Category"
+msgstr "カテゴリー"
+
+#: preferences_dialog.cpp:884 showcase_dialog.cpp:279 showcase_listctrl.cpp:97
+msgid "Update Frequency"
+msgstr "更新頻度"
+
+#: preferences_dialog.cpp:885 showcase_dialog.cpp:280 showcase_listctrl.cpp:98
+msgid "Update Period"
+msgstr "更新間隔"
+
+#: preferences_dialog.cpp:886 showcase_dialog.cpp:281 showcase_listctrl.cpp:99
+msgid "Update Base"
+msgstr "更新の開始日時"
+
+#: preferences_dialog.cpp:887 showcase_dialog.cpp:282
+#: showcase_listctrl.cpp:100
+msgid "Update Enabled"
+msgstr "自動更新"
+
+#: preferences_dialog.cpp:888 showcase_dialog.cpp:283
+#: showcase_listctrl.cpp:101
+msgid "Image Depth"
+msgstr "画像の色数"
+
+#: preferences_dialog.cpp:889 showcase_dialog.cpp:284
+#: showcase_listctrl.cpp:102
+msgid "Maximum Depth"
+msgstr "リンク数(階層数)"
+
+#: preferences_dialog.cpp:890 showcase_dialog.cpp:285
+#: showcase_listctrl.cpp:103
+msgid "Stay On Host"
+msgstr "同一ホスト"
+
+#: preferences_dialog.cpp:891 showcase_dialog.cpp:286
+#: showcase_listctrl.cpp:104
+msgid "Stay On Domain"
+msgstr "同一ドメイン"
+
+#: preferences_dialog.cpp:892 showcase_dialog.cpp:287
+#: showcase_listctrl.cpp:105
+msgid "URL Pattern"
+msgstr "URLパターン"
+
+#: showcase_dialog.cpp:750
+msgid "Downloading channel preview..."
+msgstr "チャンネル プレビューをダウンロード中..."
+
+#: showcase_dialog.cpp:786 showcase_dialog.cpp:801
+msgid "Channel preview unavailable."
+msgstr "チャンネル プレビューが使用できません。"
+
+#: showcase_dialog.cpp:823
+msgid "Formatting images..."
+msgstr "画像を変換中..."
+
+#: showcase_dialog.cpp:826
+msgid "Formatting hyperlinks..."
+msgstr "ハイ-パーリンクを変換中..."
+
+#: showcase_dialog.cpp:832
+msgid "Downloading images..."
+msgstr "画像をダウンロード中..."
+
+#: plucker-desktop.cpp:84
+msgid ""
+"Another instance of the application is already running, so aborting startup "
+"of second instance."
+msgstr ""
+
+#: plucker-desktop.cpp:85
+msgid "Already running"
+msgstr ""
+
+#: main_frame.cpp:197 resource\xrc\xrc_strings_output.h:446
+msgid "&About"
+msgstr ""
+
+#: main_frame.cpp:545 resource\xrc\xrc_strings_output.h:16
+msgid "About"
+msgstr ""
+
+#: main_frame.cpp:572
+msgid "version"
+msgstr "バージョン"
+
+#: main_listctrl.cpp:183
+msgid "Channel name"
+msgstr "チャンネル名"
+
+#: main_listctrl.cpp:184
+msgid "Due"
+msgstr "更新期限"
+
+#: main_listctrl.cpp:335
+msgid "Are you sure you wish to permanently delete the selected channels?"
+msgstr "このチャンネルを削除して良いですか？"
+
+#: main_listctrl.cpp:336
+msgid "Confirm channel delete"
+msgstr "チャンネル削除の確認"
+
+#: main_listctrl.cpp:459
+msgid "No channels are currently due at this time."
+msgstr "現在期限の来たチャンネルはありません。"
+
+#: main_listctrl.cpp:460
+msgid "All due channels are updated"
+msgstr "更新期限の来たチャンネルは全て更新済みです。"
+
+#: main_listctrl.cpp:493
+msgid ""
+"You currently have no channels in your list. Would you like to add a channel "
+"now?"
+msgstr "チャンネルが一つも登録されていません。チャンネルを今追加しますか？"
+
+#: main_listctrl.cpp:494
+msgid "No channels to update"
+msgstr "更新するチャンネルが有りません。"
+
+#: main_listctrl.cpp:583
+msgid "Enter a descriptive name for the channel (maximum of 26 letters):"
+msgstr "チャンネル名を入力して下さい。(半角26文字まで)"
+
+#: main_listctrl.cpp:584 resource\xrc\xrc_strings_output.h:407
+#: resource\xrc\xrc_strings_output.h:449 resource\xrc\xrc_strings_output.h:465
+msgid "Add a new channel"
+msgstr "チャンネルを追加"
+
+#: main_listctrl.cpp:692 main_listctrl.cpp:819
+#: resource\xrc\xrc_strings_output.h:565
+msgid "Never"
+msgstr "しない"
+
+#: main_listctrl.cpp:939 resource\xrc\xrc_strings_output.h:448
+#: resource\xrc\xrc_strings_output.h:464
+msgid "Add a new channel..."
+msgstr "チャンネルを追加"
+
+#: main_listctrl.cpp:942 resource\xrc\xrc_strings_output.h:450
+#: resource\xrc\xrc_strings_output.h:466
+msgid "Add a new channel using wizard..."
+msgstr "ウィザード形式でチャンネルを追加"
+
+#: main_listctrl.cpp:945 resource\xrc\xrc_strings_output.h:452
+#: resource\xrc\xrc_strings_output.h:468
+msgid "Configure selected channel..."
+msgstr "チャンネルを設定"
+
+#: main_listctrl.cpp:946 resource\xrc\xrc_strings_output.h:454
+#: resource\xrc\xrc_strings_output.h:470
+msgid "Delete selected channels"
+msgstr "チャンネルを削除"
+
+#: main_listctrl.cpp:948 resource\xrc\xrc_strings_output.h:456
+#: resource\xrc\xrc_strings_output.h:472
+msgid "Update selected channels"
+msgstr "チャンネルを更新"
+
+#: main_listctrl.cpp:949 resource\xrc\xrc_strings_output.h:458
+#: resource\xrc\xrc_strings_output.h:474
+msgid "Update all due channels"
+msgstr "期限過ぎ全チャンネルを更新"
+
+#: main_listctrl.cpp:950 resource\xrc\xrc_strings_output.h:427
+#: resource\xrc\xrc_strings_output.h:460 resource\xrc\xrc_strings_output.h:461
+#: resource\xrc\xrc_strings_output.h:476 resource\xrc\xrc_strings_output.h:477
+msgid "Update all channels"
+msgstr "全チャンネルを更新します。"
+
+#: main_listctrl.cpp:962
+msgid "Paste URL as new channel"
+msgstr "URLを新しいチャンネルに貼\り付け"
+
+#: main_listctrl.cpp:963
+msgid "Paste files as separate new channels"
+msgstr "ファイルを別々のチャンネルとして貼\り付け"
+
+#: main_listctrl.cpp:1129
+msgid "No destinations are selected for channel '"
+msgstr "チャンネルの出力先が選択されていません。"
+
+#: main_listctrl.cpp:1130
+msgid "'. Add some destinations now?"
+msgstr "出力先を追加しますか？"
+
+#: channel_dialog.cpp:2046 main_listctrl.cpp:1137
+msgid "No destinations selected"
+msgstr "出力先が選択されていません。"
+
+#: main_listctrl.cpp:1138
+msgid "Always perform this check when about to update channels"
+msgstr "チャンネルを変更する時に常にチェックする。"
+
+#: channel_dialog.cpp:155
+msgid "Send channel output to these handhelds"
+msgstr "チャンネルを次のパームデバイスに出力"
+
+#: channel_dialog.cpp:156
+msgid "Send channel output to these directories"
+msgstr "チャンネルを次のディレクトリに出力"
+
+#: channel_dialog.cpp:1303
+msgid "The specified file could not be found. Do you wish to create it?"
+msgstr "指定したファイルが見付かりません。新たに作成しますか。"
+
+#: channel_dialog.cpp:1304
+msgid "Create new html file"
+msgstr "新しいHTMLファイルを作成"
+
+#: channel_dialog.cpp:1895
+msgid "Choose large icon"
+msgstr "アイコン(大)を選択"
+
+#: channel_dialog.cpp:1911
+msgid "Choose small icon"
+msgstr "アイコン(小)を選択"
+
+#: channel_dialog.cpp:2045
+msgid ""
+"No destinations are selected for this channel. Add some destinations now?"
+msgstr "チャンネルの出力先が選択されていません。出力先を追加しますか？"
+
+#: channel_dialog.cpp:2047
+msgid "Always perform this check when closing this dialog"
+msgstr "この画面を閉じる時に常にチェックする。"
+
+#: utils_controls.cpp:156
+msgid "Choose the colour"
+msgstr "色を選択"
+
+#: hhictrl.cpp:123
+msgid "Handheld destination"
+msgstr "出力先パームデバイス"
+
+#: hhictrl.cpp:132
+msgid "Add handheld..."
+msgstr "パームデバイスを追加"
+
+#: hhictrl.cpp:138
+msgid "Remove selected handhelds"
+msgstr "パームデバイスを削除"
+
+#: hhictrl.cpp:158
+msgid "Directory destination"
+msgstr "出力先ディレクトリ"
+
+#: hhictrl.cpp:168
+msgid "Add output directory..."
+msgstr "出力先ディレクトリを追加"
+
+#: hhictrl.cpp:174
+msgid "Remove selected directories"
+msgstr "ディレクトリを削除"
+
+#: hhictrl.cpp:222 hhictrl.cpp:305
+msgid "SD Card"
+msgstr ""
+
+#: hhictrl.cpp:226
+msgid "M.Stick"
+msgstr ""
+
+#: hhictrl.cpp:230 hhictrl.cpp:309
+msgid "CF Card"
+msgstr ""
+
+#: hhictrl.cpp:235 hhictrl.cpp:301
+msgid "RAM"
+msgstr ""
+
+#: hhictrl.cpp:545
+msgid "Select additional handheld to receive the output"
+msgstr "出力するディレクトリを選択してください"
+
+#: hhictrl.cpp:591
+msgid "Select directory in which to place the output"
+msgstr "出力するディレクトリを選択してください"
+
+#: pda_listctrl.cpp:96
+#, fuzzy
+msgid "Storage"
+msgstr "出力先"
+
+#: pda_listctrl.cpp:98
+msgid "USB"
+msgstr ""
+
+#: preferences_dialog.cpp:857
+msgid "Choose external editor"
+msgstr "外部エディタを選択"
+
+#: preferences_dialog.cpp:897
+msgid "Fields to display in details pane:"
+msgstr "詳細画面に表\示するフィールド:"
+
+#: preferences_dialog.cpp:898
+msgid "Select desired fields"
+msgstr "フィールドを選択"
+
+#: time_control.cpp:108
+msgid ":"
+msgstr ":"
+
+#: handheld_dest_dialog.cpp:96
+msgid "Handheld"
+msgstr "パームデバイス"
+
+#: handheld_dest_dialog.cpp:103
+msgid "Handheld user:"
+msgstr "パームのユーザ名:"
+
+#: handheld_dest_dialog.cpp:111
+msgid "This is a USB-connected device"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:116
+msgid "Location on handheld"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:119
+msgid "On the handheld, send the files to:"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:130
+msgid "The handheld's RAM memory"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:135
+msgid "The removable SD/MMC card"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:140
+msgid "The removable Memory Stick"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:145
+msgid "The removable CompactFlash card"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:156
+msgid "Send to the default directory on the card"
+msgstr ""
+
+#: handheld_dest_dialog.cpp:162
+msgid "Send to this specified directory on the card:"
+msgstr ""
+
+#: details_progress_dialog.cpp:431 handheld_dest_dialog.cpp:174
+#: resource\xrc\xrc_strings_output.h:15 resource\xrc\xrc_strings_output.h:17
+#: resource\xrc\xrc_strings_output.h:156 resource\xrc\xrc_strings_output.h:168
+#: resource\xrc\xrc_strings_output.h:258 resource\xrc\xrc_strings_output.h:274
+#: resource\xrc\xrc_strings_output.h:285 resource\xrc\xrc_strings_output.h:294
+#: resource\xrc\xrc_strings_output.h:306 resource\xrc\xrc_strings_output.h:312
+#: resource\xrc\xrc_strings_output.h:318 resource\xrc\xrc_strings_output.h:326
+#: resource\xrc\xrc_strings_output.h:334 resource\xrc\xrc_strings_output.h:340
+#: resource\xrc\xrc_strings_output.h:347 resource\xrc\xrc_strings_output.h:353
+#: resource\xrc\xrc_strings_output.h:359 resource\xrc\xrc_strings_output.h:368
+#: resource\xrc\xrc_strings_output.h:381 resource\xrc\xrc_strings_output.h:393
+#: resource\xrc\xrc_strings_output.h:402 resource\xrc\xrc_strings_output.h:600
+#: resource\xrc\xrc_strings_output.h:606
+msgid "OK"
+msgstr "OK"
+
+#: handheld_dest_dialog.cpp:177 resource\xrc\xrc_strings_output.h:157
+#: resource\xrc\xrc_strings_output.h:169 resource\xrc\xrc_strings_output.h:259
+#: resource\xrc\xrc_strings_output.h:275 resource\xrc\xrc_strings_output.h:286
+#: resource\xrc\xrc_strings_output.h:295 resource\xrc\xrc_strings_output.h:307
+#: resource\xrc\xrc_strings_output.h:313 resource\xrc\xrc_strings_output.h:319
+#: resource\xrc\xrc_strings_output.h:327 resource\xrc\xrc_strings_output.h:335
+#: resource\xrc\xrc_strings_output.h:341 resource\xrc\xrc_strings_output.h:348
+#: resource\xrc\xrc_strings_output.h:354 resource\xrc\xrc_strings_output.h:360
+#: resource\xrc\xrc_strings_output.h:369 resource\xrc\xrc_strings_output.h:382
+#: resource\xrc\xrc_strings_output.h:394 resource\xrc\xrc_strings_output.h:403
+#: resource\xrc\xrc_strings_output.h:601 resource\xrc\xrc_strings_output.h:607
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: plucker_controller.cpp:1322
+msgid "channel update status"
+msgstr "Plucker Channerの更新状況"
+
+#: plucker_controller.cpp:1471
+msgid "Unnamed Channel"
+msgstr "名前無しチャンネル"
+
+#: commandline_parser.cpp:169
+msgid "Commandline Interface"
+msgstr "Plucker Desktop コマンドライン インターフェース"
+
+#: commandline_parser.cpp:170 resource\xrc\xrc_strings_output.h:4
+msgid "Version"
+msgstr "バージョン"
+
+#: commandline_parser.cpp:171 resource\xrc\xrc_strings_output.h:6
+msgid "Build Date"
+msgstr "ビルド日付"
+
+#: commandline_parser.cpp:173
+msgid "(c) Copyright 1998-2003"
+msgstr ""
+
+#: commandline_parser.cpp:175
+msgid ""
+"Updates selected channels (-s), due channels (-d), or all channels (-a)."
+msgstr "選択したチャンネルの更新 (-s), 期限の来たチャンネル (-d), 全チャンネル (-a)."
+
+#: commandline_parser.cpp:176
+msgid ""
+"If updating selected channels, (-p) specifies channel by their section names"
+msgstr "選択したチャンネルを更新する際に、(-p)を指定するとplucker.ini/.pluckerrcファイル"
+
+#: commandline_parser.cpp:177
+msgid "in your plucker.ini/.pluckerrc, instead of their channel names."
+msgstr "で指定した名前でチャンネルの名前を置き換えることができます。"
+
+#: commandline_parser.cpp:178
+msgid "If you specify no options, then the application will start in GUI mode."
+msgstr "オプションを何も指定しなかった場合はGUIモードで起動します。"
+
+#: commandline_parser.cpp:179
+msgid "See online help for more information."
+msgstr "詳細はオンライン ヘルプを参照して下さい。"
+
+#: commandline_parser.cpp:181
+msgid "Summary of options"
+msgstr "オプションの概要"
+
+#: commandline_parser.cpp:200
+msgid ""
+"Syntax error: You have specified multiple commands. Choose just one of (-s), "
+"(-d), or (-a)."
+msgstr "文法間違い: 複数のコマンドを指定しています。(-s), (-d)または(-a)を一つだけ指定して下さい。"
+
+#: commandline_parser.cpp:222
+msgid "Syntax error: To use 'update selected', you must specify some channels."
+msgstr "文法間違い: 選択したチャンネルを更新するには、何れかのチャンネルを指定する必要があります。"
+
+#: commandline_parser.cpp:238
+msgid "Warning: plucker.ini/.pluckerrc has no section="
+msgstr "警告: plucker.ini/.pluckerrc に section= が存在しません。"
+
+#: commandline_parser.cpp:250
+msgid ""
+"Warning: None of those channel doc_names could be found in plucker.ini/."
+"pluckerrc."
+msgstr "警告: これらのチャンネル名が plucker.ini/.pluckerrc の中にに見付かりません。"
+
+#: commandline_parser.cpp:272
+msgid ""
+"You have no channels in your plucker.ini/.pluckerrc file. Add some channels "
+"first."
+msgstr "plucker.ini/.pluckerrc ファイルにチャンネルが有りません。最初にチャンネルを追加してください。"
+
+#: proxy_prompt.cpp:119
+msgid "Enter your proxy password:"
+msgstr ""
+
+#: proxy_prompt.cpp:120
+msgid "Enter Proxy Password"
+msgstr ""
+
+#: palm_installer_gtk.cpp:147
+msgid ""
+"Press the HotSync button on your USB handheld first. Then click OK to "
+"continue when you are ready."
+msgstr ""
+
+#: palm_installer_gtk.cpp:149
+msgid ""
+"(You can bypass this pause dialog by unchecking the USB checkbox in the "
+"handheld destination)"
+msgstr ""
+
+#: palm_installer_gtk.cpp:154
+msgid "Press HotSync Button First"
+msgstr ""
+
+#: palm_installer_msw.cpp:116 palm_installer_msw.cpp:125
+msgid ""
+"Unable to access Palm Desktop software.\n"
+"You will need to choose directories, not HotSync handhelds, as the "
+"destinations for channels."
+msgstr ""
+
+#: palm_installer_msw.cpp:117
+msgid "Palm Desktop detection warning"
+msgstr "Palm Desktopが検出した警告"
+
+#: palm_installer_msw.cpp:118
+msgid "Always perform this check in the future"
+msgstr "このチェックを常に実施"
+
+#: palm_installer_msw.cpp:136
+msgid "Error: unable to get Lastuser_name from Registry"
+msgstr "エラー：Lastuser_nameがレジストリから取得できません。"
+
+#: palm_installer_msw.cpp:141
+msgid "Error: unable to get Palm path from Registry"
+msgstr "エラー：Palmのファイルパスがレジストリから取得できません。"
+
+#: palm_installer_msw.cpp:329
+msgid "Error: unable to write update flag to Registry"
+msgstr "エラー：更新フラグがレジストリに書き込めません。"
+
+#: palm_installer_mac.cpp:164
+msgid "SecureDigital (SD) Card"
+msgstr ""
+
+#: build_progress_dialog.cpp:139
+#, c-format
+msgid "Channels updated: 0 of %d"
+msgstr "更新済みチャンネル: 0 of %d"
+
+#: build_progress_dialog.cpp:159
+msgid "Executing command before spidering channels..."
+msgstr "チャンネルのダウンロード前にコマンドを実行中..."
+
+#: build_progress_dialog.cpp:165
+msgid "Initializing"
+msgstr "初期化中"
+
+#: build_progress_dialog.cpp:166
+msgid "spidering engine"
+msgstr ""
+
+#: build_progress_dialog.cpp:198
+msgid "Updating channel: "
+msgstr "チャンネルを更新中: "
+
+#: build_progress_dialog.cpp:209
+msgid "Processing "
+msgstr "処理中 "
+
+#: build_progress_dialog.cpp:220
+msgid "Initializing channel: "
+msgstr "チャンネルを初期化中: "
+
+#: build_progress_dialog.cpp:258
+#, c-format
+msgid "Channels updated: %d of %d"
+msgstr "更新済みチャンネル: %d of %d"
+
+#: build_progress_dialog.cpp:300
+msgid "Tasks completed for all channels."
+msgstr "全ての処理が完了しました。"
+
+#: build_progress_dialog.cpp:314
+msgid "Executing command after spidering channels..."
+msgstr "チャンネルのダウンロード後にコマンドを実行中..."
+
+#: build_progress_dialog.cpp:369
+#, c-format
+msgid "Retrieving files (%ld of %ld)"
+msgstr "ファイルを収集中 (%ld of %ld)"
+
+#: build_progress_dialog.cpp:382
+msgid "Converting retrieved files...."
+msgstr "収集したファイルを変換中..."
+
+#: build_progress_dialog.cpp:388
+msgid "Conversion complete. Writing output file..."
+msgstr "変換が完了しました。出力ファイルに書き込み中..."
+
+#: build_progress_dialog.cpp:398
+msgid "All pages retrieved and parsed. Starting conversion..."
+msgstr "全てのページを収集し終わりました。変換を開始します..."
+
+#: build_progress_dialog.cpp:435
+msgid "Installing channel output to destinations..."
+msgstr "チャンネルを出力中..."
+
+#: build_progress_dialog.cpp:443
+msgid "Setting new due date..."
+msgstr ""
+
+#: details_progress_dialog.cpp:236 resource\xrc\xrc_strings_output.h:163
+msgid "<< Details"
+msgstr "<< 詳細"
+
+#: details_progress_dialog.cpp:291
+msgid "Details >>"
+msgstr "詳細 >>"
+
+#: details_progress_listbox.cpp:208
+msgid "Save details log file"
+msgstr "ログをファイルに保存"
+
+#: details_progress_listbox.cpp:299
+msgid "Copy selected"
+msgstr "選択した範囲をコピー"
+
+#: details_progress_listbox.cpp:300
+msgid "Clear all"
+msgstr "全てクリア"
+
+#: details_progress_listbox.cpp:301
+msgid "Select all"
+msgstr "全て選択"
+
+#: about_dialog.cpp:109 about_dialog.cpp:182
+msgid "Authors"
+msgstr "作者"
+
+#: about_dialog.cpp:118 about_dialog.cpp:169
+msgid "Credits"
+msgstr "協力者"
+
+#: about_dialog.cpp:121 about_dialog.cpp:172
+msgid ""
+"The following kind folks provided support, ideas or conversation as part of "
+"the"
+msgstr ""
+"次の親切な人々はPluckerプロジェクトをサポートし、\n"
+"あるいはアイデアや意見を提供してくれました。\n"
+"彼らがPluckerと友に長くあらんことを。:"
+
+#: about_dialog.cpp:122
+msgid "project. May they live long and prosper:"
+msgstr ""
+
+#: about_dialog.cpp:128
+msgid ""
+"If you feel left out, then please add yourself to the file, or send e-mail "
+"to <u>plucker-dev@rubberchicken.org</u>! "
+msgstr ""
+"もしあなたの名前が抜けていた時は、自分でファイルに\n"
+"名前を追加するか、e-mailを<u>plucker-dev@rubberchicken.org</u>までお願いします！"
+
+#: about_dialog.cpp:156
+msgid "Translators"
+msgstr "翻訳者"
+
+#: about_dialog.cpp:159
+msgid "The following kind folks brought"
+msgstr ""
+
+#: about_dialog.cpp:160
+msgid "to their speakers of their language:"
+msgstr ""
+
+#: about_dialog.cpp:173
+msgid "project. May they live long and plucker:"
+msgstr ""
+
+#: about_dialog.cpp:188
+msgid ""
+"If you feel left out, then please add yourself to the file, or send e-mail "
+"to <u>plucker-dev@rubberchicken.org</u>!"
+msgstr ""
+"もしあなたの名前が抜けていた時は、自分でファイルに\n"
+"名前を追加するか、e-mailを<u>plucker-dev@rubberchicken.org</u>までお願いします！"
+
+#: checkbox_message_dialog.h:78
+msgid "Message"
+msgstr "メッセージ"
+
+#: checkbox_message_dialog.h:81
+msgid "Don't remind me again"
+msgstr "次回から表\示しない"
+
+#: plucker_wizard_base.h:81
+msgid "Abort the wizard?"
+msgstr "ウィザードを中断しますか？"
+
+#: install_viewer_wizard.h:76 setup_wizard.h:79
+msgid "Abort the setup wizard?"
+msgstr "セットアップ ウィザードを中断しますか？"
+
+#: add_channel_wizard.h:79
+msgid "Abort the add channel wizard?"
+msgstr "チャンネル追加ウィザードを中断しますか？"
+
+#: destinations_wizardpage.h:77
+msgid "Send it to these handhelds"
+msgstr "次のパームデバイスに出力"
+
+#: destinations_wizardpage.h:79
+msgid "Sent it to these directories"
+msgstr "次のディレクトリに出力"
+
+#: utils_controls.h:227
+msgid "All files  (*.*)|*.*"
+msgstr "全ての種類 (*.*)|*.*"
+
+#: utils_controls.h:228
+msgid ""
+"Images (*.png, *.gif, *.jpg)|*.png;*.gif;*.jpg;*.jpeg|PNG files (*.png)|*."
+"png|GIF files (*.gif)|*.gif|JPG files (*.jpg,*jpeg)|*.jpg;*.jpeg|All files  "
+"(*.*)|*.*"
+msgstr "画像ファイル (*.png, *.gif, *.jpg)|*.png;*.gif;*.jpg;*.jpeg|PNG files (*.png)|*.png|GIF files (*.gif)|*.gif|JPG files (*.jpg,*jpeg)|*.jpg;*.jpeg|全ての種類 (*.*)|*.*"
+
+#: utils_controls.h:229
+msgid ""
+"Images (*.bmp, *.png, *.gif)|*.bmp;*.png;*.gif|Bitmaps (*.bmp)|*.bmp|PNG "
+"files (*.png)|*.png|GIF files (*.gif)|*.gif"
+msgstr "画像ファイル (*.bmp, *.png, *.gif)|*.bmp;*.png;*.gif|Bitmaps (*.bmp)|*.bmp|PNG files (*.png)|*.png|GIF files (*.gif)|*.gif"
+
+#: utils_controls.h:232
+msgid "Programs (*.exe)|*.exe"
+msgstr "プログラム (*.exe)|*.exe"
+
+#: utils_controls.h:234
+msgid "Programs (*.*)|*.*"
+msgstr "プログラム (*.*)|*.*"
+
+#: utils_controls.h:237
+msgid ""
+"All files  (*.*)|*.*|HTML, XML, Text files (*.html, *.htm, *.xml, *.txt)|*."
+"html;*.htm;*.xml'*.txt|Images (*.png, *.gif, *.jpg)|*.png;*.gif;*.jpg;*.jpeg"
+msgstr "全ての種類 (*.*)|*.*|HTML, XML, Text files (*.html, *.htm, *.xml, *.txt)|*.html;*.htm;*.xml'*.txt|Images (*.png, *.gif, *.jpg)|*.png;*.gif;*.jpg;*.jpeg"
+
+#: hhictrl.h:78
+msgid "Install files to these handhelds"
+msgstr "ファイルを次のパームデバイスにインストール"
+
+#: hhictrl.h:79
+msgid "Install files to these directories"
+msgstr "ファイルを次のディレクトリに出力"
+
+#: resource\xrc\xrc_strings_output.h:1
+msgid "About Plucker Desktop"
+msgstr "Plucker Desktopについて"
+
+#: resource\xrc\xrc_strings_output.h:2
+msgid "Details"
+msgstr "詳細"
+
+#: resource\xrc\xrc_strings_output.h:3
+msgid "Plucker Desktop"
+msgstr "Plucker Desktop"
+
+#: resource\xrc\xrc_strings_output.h:5
+msgid "1.2.0.0"
+msgstr "1.2.0.0"
+
+#: resource\xrc\xrc_strings_output.h:7
+msgid "Aug 30 2002"
+msgstr "Aug 30 2002"
+
+#: resource\xrc\xrc_strings_output.h:8
+msgid "This application provides visual content management for Plucker."
+msgstr "このソ\フトはPlucker用にGUIのコンテンツ管理機能\を提供します。"
+
+#: resource\xrc\xrc_strings_output.h:9
+msgid "(c) Copyright 1998-2003 The Plucker Team."
+msgstr ""
+
+#: resource\xrc\xrc_strings_output.h:10
+msgid "This application is Free Software under the conditions of the "
+msgstr "このソ\フトはFree Software FoundationのGeneral Public License"
+
+#: resource\xrc\xrc_strings_output.h:11
+msgid "Free Software Foundation's General Public License."
+msgstr "に基づくフリーソ\フトウェアです。"
+
+#: resource\xrc\xrc_strings_output.h:12
+msgid "www.plkr.org"
+msgstr "www.plkr.org"
+
+#: resource\xrc\xrc_strings_output.h:13
+msgid "Plucker Desktop credits"
+msgstr "Plucker Desktop クレジット"
+
+#: resource\xrc\xrc_strings_output.h:14
+msgid "Plucker credits"
+msgstr "Plucker クレジット"
+
+#: resource\xrc\xrc_strings_output.h:18
+msgid "Configure Channel"
+msgstr "チャンネルの設定"
+
+#: resource\xrc\xrc_strings_output.h:20
+msgid "Starting page"
+msgstr "開始ページ"
+
+#: resource\xrc\xrc_strings_output.h:21
+msgid "Start with"
+msgstr "ここから開始"
+
+#: resource\xrc\xrc_strings_output.h:22
+msgid "A website URL:"
+msgstr "ホームページのURL"
+
+#: resource\xrc\xrc_strings_output.h:23 resource\xrc\xrc_strings_output.h:238
+msgid "http://"
+msgstr "http://"
+
+#: resource\xrc\xrc_strings_output.h:25
+msgid "A local file:"
+msgstr "ローカルファイル"
+
+#: resource\xrc\xrc_strings_output.h:26 resource\xrc\xrc_strings_output.h:241
+msgid "file://"
+msgstr "file://"
+
+#: resource\xrc\xrc_strings_output.h:28
+msgid "Edit file..."
+msgstr "ファイルを編集"
+
+#: resource\xrc\xrc_strings_output.h:29
+msgid "A list of my links:"
+msgstr "My Linkリスト"
+
+#: resource\xrc\xrc_strings_output.h:30
+msgid "Edit my list of links with HTML editor..."
+msgstr "HTMLエディタでMy Linkリストを編集"
+
+#: resource\xrc\xrc_strings_output.h:31 resource\xrc\xrc_strings_output.h:557
+msgid "Spidering"
+msgstr "ダウンロード"
+
+#: resource\xrc\xrc_strings_output.h:32
+msgid "Retrieval order"
+msgstr "検索順序"
+
+#: resource\xrc\xrc_strings_output.h:33
+msgid "Retrieve files by following links:"
+msgstr "次の順序でファイルを検索: "
+
+#: resource\xrc\xrc_strings_output.h:34
+msgid "Breadth first"
+msgstr "広がりを優先"
+
+#: resource\xrc\xrc_strings_output.h:35
+msgid "Depth first"
+msgstr "階層を優先"
+
+#: resource\xrc\xrc_strings_output.h:36
+msgid "Spidering status"
+msgstr "転送状況"
+
+#: resource\xrc\xrc_strings_output.h:37
+msgid "Progress message detail level:"
+msgstr "進行状況の詳細レベル"
+
+#: resource\xrc\xrc_strings_output.h:38
+msgid "Minimum (no progress information, only error messages)"
+msgstr "最小(進行状況無し、エラーメッセージのみ)"
+
+#: resource\xrc\xrc_strings_output.h:39
+msgid "Medium (page being spidered, pages remaining in queue)"
+msgstr "中間(ダウンロード済みページ、残りページ)"
+
+#: resource\xrc\xrc_strings_output.h:40
+msgid "Maximum (full information, most useful for debugging)"
+msgstr "最大(全ての情報を出力、デバッグ時に有効)"
+
+#: resource\xrc\xrc_strings_output.h:41
+msgid "Truncate URLs displayed in the progress window to:"
+msgstr "進行状況ウィンドウに表\示されるURLを "
+
+#: resource\xrc\xrc_strings_output.h:42
+msgid "letters"
+msgstr "文字で詰める。"
+
+#: resource\xrc\xrc_strings_output.h:43
+msgid "Referrers and browser identification"
+msgstr "Referrer(参照元)及びブラウザ名(User-Agent)"
+
+#: resource\xrc\xrc_strings_output.h:44
+msgid "Specify a referrer URL:"
+msgstr "Referrer URLを指定"
+
+#: resource\xrc\xrc_strings_output.h:45
+msgid "When retrieving files from this channel's web server, identify as:"
+msgstr "サーバからチャンネルをダウンロードする時に以下のブラウザ名を使用する:"
+
+#: resource\xrc\xrc_strings_output.h:46
+msgid "This browser type:"
+msgstr "ブラウザの種類"
+
+#: resource\xrc\xrc_strings_output.h:47
+msgid "Plucker (recommended)"
+msgstr "Plucker (推奨)"
+
+#: resource\xrc\xrc_strings_output.h:48
+msgid "AvantGo"
+msgstr "AvantGo"
+
+#: resource\xrc\xrc_strings_output.h:49
+msgid "This custom user-agent:"
+msgstr "カスタム User-Agent"
+
+#: resource\xrc\xrc_strings_output.h:50 resource\xrc\xrc_strings_output.h:566
+msgid "Command executions"
+msgstr "コマンドの実行"
+
+#: resource\xrc\xrc_strings_output.h:51
+msgid "Execute a command before spidering this channel:"
+msgstr "チャンネルのダウンロード前にコマンドを実行"
+
+#: resource\xrc\xrc_strings_output.h:52
+msgid "Execute a command after spidering this channel:"
+msgstr "チャンネルのダウンロード後にコマンドを実行"
+
+#: resource\xrc\xrc_strings_output.h:53
+msgid "Limits"
+msgstr "制限"
+
+#: resource\xrc\xrc_strings_output.h:56
+msgid "from the starting page (1=retrieve starting page only)"
+msgstr "回までのページを収集する (1=開始ページのみ)"
+
+#: resource\xrc\xrc_strings_output.h:59
+msgid ""
+"Limit to the exact server only: if started on www.plkr.org, only allow www."
+"plkr.org"
+msgstr "同一サーバーのみ: www.plkr.orgから開始した場合、www.plkr.orgのみが対象"
+
+#: resource\xrc\xrc_strings_output.h:60
+msgid ""
+"Only restrict to domain: if started on www.plkr.org, allow www.plkr.org and "
+"www2.plkr.org"
+msgstr "同一ドメインのみ: www.plkr.orgから開始した場合、www.plkr.orgとwww2.plkr.orgの両方が対象"
+
+#: resource\xrc\xrc_strings_output.h:61
+msgid "'URL pattern' filter"
+msgstr "URLパターンで制限"
+
+#: resource\xrc\xrc_strings_output.h:62
+msgid "Only follow URLs that match this regular expression pattern:"
+msgstr "次の正規表\現に合致したURLのみを対象とする"
+
+#: resource\xrc\xrc_strings_output.h:63
+msgid "Channel-specific inclusion/exclusion list filter"
+msgstr "チャンネル専用の除外リスト"
+
+#: resource\xrc\xrc_strings_output.h:64
+msgid ""
+"In addition to the shared inclusion/exclusion list, also follow/ignore links "
+"pointing to these file types or servers:"
+msgstr "共有の除外リストに加えて、次に指定したファイル/サーバーを無視する"
+
+#: resource\xrc\xrc_strings_output.h:65
+msgid "Edit channel-specific inclusion/exclusion list..."
+msgstr "チャンネル用除外リストを編集"
+
+#: resource\xrc\xrc_strings_output.h:66
+msgid "Formatting"
+msgstr "書式"
+
+#: resource\xrc\xrc_strings_output.h:67
+msgid "Character set encoding"
+msgstr "文字セット"
+
+#: resource\xrc\xrc_strings_output.h:68
+msgid "Specify a default character set to use for this channel:"
+msgstr "このチャンネルで使用するデフォルトの文字セットを指定"
+
+#: resource\xrc\xrc_strings_output.h:69
+msgid "ASCII"
+msgstr "ASCII"
+
+#: resource\xrc\xrc_strings_output.h:70
+msgid "Big5"
+msgstr "Big5"
+
+#: resource\xrc\xrc_strings_output.h:71
+msgid "EBCDIC-INT"
+msgstr "EBCDIC-INT"
+
+#: resource\xrc\xrc_strings_output.h:72
+msgid "eucCN"
+msgstr "eucCN"
+
+#: resource\xrc\xrc_strings_output.h:73
+msgid "eucJP"
+msgstr "eucJP"
+
+#: resource\xrc\xrc_strings_output.h:74
+msgid "eucKR"
+msgstr "eucKR"
+
+#: resource\xrc\xrc_strings_output.h:75
+msgid "eucTW"
+msgstr "eucTW"
+
+#: resource\xrc\xrc_strings_output.h:76
+msgid "GB2312"
+msgstr "GB2312"
+
+#: resource\xrc\xrc_strings_output.h:77
+msgid "ISO-2022-CN"
+msgstr "ISO-2022-CN"
+
+#: resource\xrc\xrc_strings_output.h:78
+msgid "ISO-2022-CN-EXT"
+msgstr "ISO-2022-CN-EXT"
+
+#: resource\xrc\xrc_strings_output.h:79
+msgid "ISO-2022-JP"
+msgstr "ISO-2022-JP"
+
+#: resource\xrc\xrc_strings_output.h:80
+msgid "ISO-646DK"
+msgstr "ISO-646DK"
+
+#: resource\xrc\xrc_strings_output.h:81
+msgid "ISO-8859-1"
+msgstr "ISO-8859-1"
+
+#: resource\xrc\xrc_strings_output.h:82
+msgid "ISO-8859-2"
+msgstr "ISO-8859-2"
+
+#: resource\xrc\xrc_strings_output.h:83
+msgid "ISO-8859-3"
+msgstr "ISO-8859-3"
+
+#: resource\xrc\xrc_strings_output.h:84
+msgid "ISO-8859-4"
+msgstr "ISO-8859-4"
+
+#: resource\xrc\xrc_strings_output.h:85
+msgid "ISO-8859-5"
+msgstr "ISO-8859-5"
+
+#: resource\xrc\xrc_strings_output.h:86
+msgid "ISO-8859-6"
+msgstr "ISO-8859-6"
+
+#: resource\xrc\xrc_strings_output.h:87
+msgid "ISO-8859-7"
+msgstr "ISO-8859-7"
+
+#: resource\xrc\xrc_strings_output.h:88
+msgid "ISO8859-15"
+msgstr "ISO8859-15"
+
+#: resource\xrc\xrc_strings_output.h:89
+msgid "JIS7"
+msgstr "JIS7"
+
+#: resource\xrc\xrc_strings_output.h:90
+msgid "macintosh"
+msgstr "macintosh"
+
+#: resource\xrc\xrc_strings_output.h:91
+msgid "SJIS"
+msgstr "SJIS"
+
+#: resource\xrc\xrc_strings_output.h:92
+msgid "TACTIS"
+msgstr "TACTIS"
+
+#: resource\xrc\xrc_strings_output.h:93
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: resource\xrc\xrc_strings_output.h:94 resource\xrc\xrc_strings_output.h:172
+msgid "Hyperlinks"
+msgstr "ハイバーリンク"
+
+#: resource\xrc\xrc_strings_output.h:95
+msgid "Specify a default color for hyperlinks:"
+msgstr "ハイバーリンクのデフォルトの色を指定"
+
+#: resource\xrc\xrc_strings_output.h:96 resource\xrc\xrc_strings_output.h:273
+#: resource\xrc\xrc_strings_output.h:283 resource\xrc\xrc_strings_output.h:293
+#: resource\xrc\xrc_strings_output.h:311 resource\xrc\xrc_strings_output.h:317
+#: resource\xrc\xrc_strings_output.h:331 resource\xrc\xrc_strings_output.h:333
+msgid "Choose color..."
+msgstr "色を選択"
+
+#: resource\xrc\xrc_strings_output.h:97
+msgid "Paragraph style"
+msgstr "段落の形式"
+
+#: resource\xrc\xrc_strings_output.h:98
+msgid "Indent the first line of each new paragraph"
+msgstr "段落の最初の行を字下げする"
+
+#: resource\xrc\xrc_strings_output.h:99 resource\xrc\xrc_strings_output.h:216
+msgid "Tables"
+msgstr "テーブル"
+
+#: resource\xrc\xrc_strings_output.h:100
+msgid "Use enhanced table support (currently experimental)"
+msgstr ""
+
+#: resource\xrc\xrc_strings_output.h:101
+msgid "Images"
+msgstr "画像"
+
+#: resource\xrc\xrc_strings_output.h:102
+msgid "Basic image handling"
+msgstr "基本的な画像の取り扱い"
+
+#: resource\xrc\xrc_strings_output.h:103
+msgid "Include images"
+msgstr "画像を含める"
+
+#: resource\xrc\xrc_strings_output.h:104
+msgid "Color depth:"
+msgstr "色数:"
+
+#: resource\xrc\xrc_strings_output.h:110
+msgid "Show alternative text tags for images not included in output"
+msgstr "出力しない画像の代替テキストを表\示"
+
+#: resource\xrc\xrc_strings_output.h:111
+msgid "Advanced image handling"
+msgstr "高度な画像の取り扱い"
+
+#: resource\xrc\xrc_strings_output.h:112
+msgid ""
+"To fit on handheld screen, use a thumbnail for any image that is larger than:"
+msgstr "パームデバイスの画面に合わせる為に、次のサイズより大きい画像にはサムネールを使用: "
+
+#: resource\xrc\xrc_strings_output.h:113 resource\xrc\xrc_strings_output.h:119
+msgid "pixels wide by"
+msgstr "ピクセル(幅) X"
+
+#: resource\xrc\xrc_strings_output.h:114 resource\xrc\xrc_strings_output.h:120
+msgid "pixels high"
+msgstr "ピクセル(高さ)"
+
+#: resource\xrc\xrc_strings_output.h:115
+msgid "If a thumbnail is used for an image, then:"
+msgstr "サムネールを使用した場合は: "
+
+#: resource\xrc\xrc_strings_output.h:116
+msgid "Always link the thumbnail to a second, full-size copy"
+msgstr "常にサムネールからフルサイズのコピーにリンク"
+
+#: resource\xrc\xrc_strings_output.h:117
+#, fuzzy
+msgid ""
+"Only use the thumbnail, don't include a second, larger copy in the channel's "
+"output"
+msgstr "サムネールのみ、フルサイズのコピーを含めない。"
+
+#: resource\xrc\xrc_strings_output.h:118
+#, fuzzy
+msgid ""
+"Link the thumbnail to a second, larger copy, but keep the larger copy less "
+"than:"
+msgstr "画像が次のサイズを超えない場合のみ、サムネールからフルサイズのコピーにリンク"
+
+#: resource\xrc\xrc_strings_output.h:121
+#, fuzzy
+msgid "Maximum storage:"
+msgstr "最大リンク数(階層数)"
+
+#: resource\xrc\xrc_strings_output.h:122
+#, fuzzy
+msgid "Allow a converted image to exceed 60kb (recommended)"
+msgstr "変換後に60kbを超えた画像を再変換:"
+
+#: resource\xrc\xrc_strings_output.h:123
+#, fuzzy
+msgid "Keep a converted image under 60kb by reducing image dimensions"
+msgstr "変換後に60kbを超えた画像を再変換:"
+
+#: resource\xrc\xrc_strings_output.h:124
+#, fuzzy
+msgid "Keep a converted image under 60kb by reducing color depth"
+msgstr "変換後に60kbを超えた画像を再変換:"
+
+#: resource\xrc\xrc_strings_output.h:125
+msgid "Output options"
+msgstr "出力オプション"
+
+#: resource\xrc\xrc_strings_output.h:126
+msgid "Compression options"
+msgstr "圧縮オプション"
+
+#: resource\xrc\xrc_strings_output.h:127
+msgid "To compress the output file, use"
+msgstr "次の手法で出力ファイルを圧縮 "
+
+#: resource\xrc\xrc_strings_output.h:128
+msgid "DOC compression"
+msgstr "DOC圧縮"
+
+#: resource\xrc\xrc_strings_output.h:129
+msgid "ZLIB compression (recommended)"
+msgstr "ZLIB圧縮(推奨)"
+
+#: resource\xrc\xrc_strings_output.h:130
+msgid "Only compress images that are larger than"
+msgstr "画像のサイズが"
+
+#: resource\xrc\xrc_strings_output.h:131
+msgid "bytes"
+msgstr "byteを超えたら圧縮"
+
+#: resource\xrc\xrc_strings_output.h:132
+msgid "Advanced output options"
+msgstr "高度な出力オプション"
+
+#: resource\xrc\xrc_strings_output.h:133
+msgid ""
+"Specify the category in which to list the channel in the viewer's library:"
+msgstr "パームデバイスに転送したチャンネルのカテゴリーを指定"
+
+#: resource\xrc\xrc_strings_output.h:134
+msgid "Include the original URL of each page in the output file"
+msgstr "各ページのURLを出力ファイルに含める"
+
+#: resource\xrc\xrc_strings_output.h:135
+msgid "Specify a security 'owner ID' password needed to open the output file:"
+msgstr "出力ファイルにパスワードを設定(出力ファイルを開く為に必要): "
+
+#: resource\xrc\xrc_strings_output.h:136
+msgid "Allow the channel output file to be beamed among handhelds"
+msgstr "チャンネルの赤外線での送受信を許可する"
+
+#: resource\xrc\xrc_strings_output.h:137
+msgid ""
+"Signal backup bit (marks the file as one to backup to the desktop computer)"
+msgstr "バックアップビットを設定(デスクトップにバックアップする場合に設定)"
+
+#: resource\xrc\xrc_strings_output.h:138
+msgid ""
+"The channel can be started directly from an icon in handheld's main launcher"
+msgstr "チャンネルをパームデバイスのランチャーから直接起動できるようにする。"
+
+#: resource\xrc\xrc_strings_output.h:139
+msgid "Replace default large icon with a custom icon:"
+msgstr "標準のアイコン(大)を置き換える:"
+
+#: resource\xrc\xrc_strings_output.h:141
+msgid "Replace default small icon with a custom icon:"
+msgstr "標準のアイコン(小)を置き換える:"
+
+#: resource\xrc\xrc_strings_output.h:143
+msgid "Destination"
+msgstr "出力先"
+
+#: resource\xrc\xrc_strings_output.h:144
+msgid "Scheduling"
+msgstr "予\定"
+
+#: resource\xrc\xrc_strings_output.h:145
+msgid "Enable scheduling"
+msgstr "予\定の設定"
+
+#: resource\xrc\xrc_strings_output.h:146
+msgid "Mark this channel as due for updates at a certain interval"
+msgstr "このチャンネルを定期的に更新する"
+
+#: resource\xrc\xrc_strings_output.h:147
+msgid "Update interval"
+msgstr "更新間隔"
+
+#: resource\xrc\xrc_strings_output.h:148
+msgid "This channel is due for an update every:"
+msgstr "このチャンネルを次の間隔で更新"
+
+#: resource\xrc\xrc_strings_output.h:149
+msgid "hours"
+msgstr "時間"
+
+#: resource\xrc\xrc_strings_output.h:150
+msgid "days"
+msgstr "日"
+
+#: resource\xrc\xrc_strings_output.h:151
+msgid "weeks"
+msgstr "週間"
+
+#: resource\xrc\xrc_strings_output.h:152
+msgid "months"
+msgstr "月"
+
+#: resource\xrc\xrc_strings_output.h:153
+msgid "years"
+msgstr "年"
+
+#: resource\xrc\xrc_strings_output.h:154
+msgid "Starting on:"
+msgstr "開始日時"
+
+#: resource\xrc\xrc_strings_output.h:155
+msgid "Now"
+msgstr "現在の日時"
+
+#: resource\xrc\xrc_strings_output.h:159
+msgid "Channel Update Progress"
+msgstr "チャンネルの更新状況"
+
+#: resource\xrc\xrc_strings_output.h:160
+msgid "Channels updated"
+msgstr "更新済みチャンネル"
+
+#: resource\xrc\xrc_strings_output.h:161
+msgid "Progress for this channel"
+msgstr "チャンネルの進行状況"
+
+#: resource\xrc\xrc_strings_output.h:162
+msgid "Stop"
+msgstr "停止"
+
+#: resource\xrc\xrc_strings_output.h:164
+msgid "Export details..."
+msgstr "詳細をファイルに出力"
+
+#: resource\xrc\xrc_strings_output.h:165 resource\xrc\xrc_strings_output.h:571
+#: resource\xrc\xrc_strings_output.h:572
+msgid "HTML editor"
+msgstr "HTMLエディタ"
+
+#: resource\xrc\xrc_strings_output.h:166
+msgid "Edit"
+msgstr "編集"
+
+#: resource\xrc\xrc_strings_output.h:167
+msgid "Preview"
+msgstr "プレビュー"
+
+#: resource\xrc\xrc_strings_output.h:171
+msgid "Insert a hyperlink..."
+msgstr "ハイパーリンクを挿入"
+
+#: resource\xrc\xrc_strings_output.h:173
+msgid "Insert hyperlink <a href= ...></a>"
+msgstr "ハイパーリンクを挿入 <a href= ...></a>"
+
+#: resource\xrc\xrc_strings_output.h:174
+msgid "Insert email link <a href=mailto: ...></a>"
+msgstr "eメールリンクを挿入 <a href=mailto: ...></a>"
+
+#: resource\xrc\xrc_strings_output.h:175
+msgid "Insert named bookmark <a name= ...></a>"
+msgstr "名前付きアンカーを挿入 <a name= ...></a>"
+
+#: resource\xrc\xrc_strings_output.h:176
+msgid "Insert popup alert <a href=javascript:alert( ...)></a>"
+msgstr "ポップアップ アラートを挿入 <a href=javascript:alert( ...)></a>"
+
+#: resource\xrc\xrc_strings_output.h:177
+msgid "Common"
+msgstr "共通"
+
+#: resource\xrc\xrc_strings_output.h:178
+msgid "Insert default-aligned paragraph <p></p>"
+msgstr "標準の配置の段落を挿入 <p></p>"
+
+#: resource\xrc\xrc_strings_output.h:179
+msgid "Insert left-aligned paragraph <p align=left></p>"
+msgstr "左揃えの段落を挿入 <p align=left></p>"
+
+#: resource\xrc\xrc_strings_output.h:180
+msgid "Insert center-aligned paragraph <p align=center></p>"
+msgstr "中央揃えの段落を挿入 <p align=center></p>"
+
+#: resource\xrc\xrc_strings_output.h:181
+msgid "Insert right-aligned paragraph <p align=right></p>"
+msgstr "右揃えの段落を挿入 <p align=right></p>"
+
+#: resource\xrc\xrc_strings_output.h:182
+msgid "Insert full-aligned paragraph <p align=justify></p>"
+msgstr "両端揃えの段落を挿入 <p align=justify></p>"
+
+#: resource\xrc\xrc_strings_output.h:183
+msgid "Insert line break <br>"
+msgstr "改行を挿入 <br>"
+
+#: resource\xrc\xrc_strings_output.h:184
+msgid "Insert image <img src= ...>"
+msgstr "画像を挿入 <img src= ...>"
+
+#: resource\xrc\xrc_strings_output.h:185
+msgid "Insert horizontal rule <hr ...>"
+msgstr "水平方向の罫線を挿入 <hr ...>"
+
+#: resource\xrc\xrc_strings_output.h:186
+msgid "Insert non-breaking space"
+msgstr "空白の挿入"
+
+#: resource\xrc\xrc_strings_output.h:187
+msgid "Layout"
+msgstr "レイアウト"
+
+#: resource\xrc\xrc_strings_output.h:188
+msgid "Insert a span <span ...></span>"
+msgstr "Spanの挿入 <span ...></span>"
+
+#: resource\xrc\xrc_strings_output.h:189
+msgid "Insert a left-aligned content block <div align=left></div>"
+msgstr "左揃えのDivブロック要素を挿入 <div align=left></div>"
+
+#: resource\xrc\xrc_strings_output.h:190
+msgid "Insert a center-aligned content block <div align=center></div>"
+msgstr "中央揃えのDivブロック要素を挿入 <div align=center></div>"
+
+#: resource\xrc\xrc_strings_output.h:191
+msgid "Insert a right-aligned block <div align=right></div>"
+msgstr "右揃えのDivブロック要素を挿入 <div align=right></div>"
+
+#: resource\xrc\xrc_strings_output.h:192
+msgid "Insert a center-aligned block using center <center></center>"
+msgstr "中央揃えのCenterブロック要素を挿入 <center></center>"
+
+#: resource\xrc\xrc_strings_output.h:193
+#, fuzzy
+msgid "Insert a blockquote <blockquote></blockquote>"
+msgstr "引用範囲の挿入 <quote></quote>"
+
+#: resource\xrc\xrc_strings_output.h:194
+#, fuzzy
+msgid "Insert a quotation <q></q>"
+msgstr "引用範囲の挿入 <quote></quote>"
+
+#: resource\xrc\xrc_strings_output.h:195
+msgid "Insert a citation <cite></cite>"
+msgstr "引用の挿入 <cite></cite>"
+
+#: resource\xrc\xrc_strings_output.h:196
+msgid "Fonts"
+msgstr "フォント"
+
+#: resource\xrc\xrc_strings_output.h:197
+msgid "Insert a font change <font ...></font>"
+msgstr "フォント指定を挿入 <font ...></font>"
+
+#: resource\xrc\xrc_strings_output.h:198
+msgid "Insert bolded text <b></b>"
+msgstr "太字のテキストを挿入 <b></b>"
+
+#: resource\xrc\xrc_strings_output.h:199
+msgid "Insert strongly bolded text <strong></strong>"
+msgstr "強調した太字のテキストを挿入 <strong></strong>"
+
+#: resource\xrc\xrc_strings_output.h:200
+msgid "Insert italic text <i></i>"
+msgstr "斜体のテキストを挿入 <i></i>"
+
+#: resource\xrc\xrc_strings_output.h:201
+msgid "Insert emphasized text <em></em>"
+msgstr "強調したテキストを挿入 <em></em>"
+
+#: resource\xrc\xrc_strings_output.h:202
+msgid "Insert underline text <u></u>"
+msgstr "下線付きテキストを挿入 <u></u>"
+
+#: resource\xrc\xrc_strings_output.h:203
+msgid "Insert strikethrough text <strike></strike>"
+msgstr "見え消し線付きテキストを挿入 <strike></strike>"
+
+#: resource\xrc\xrc_strings_output.h:204
+msgid "Insert typewriter text <tt></tt>"
+msgstr "等幅活字体を挿入 <u></u>"
+
+#: resource\xrc\xrc_strings_output.h:205
+msgid "Insert superscript text <sup></sup>"
+msgstr "上付きテキストを挿入 <u></u>"
+
+#: resource\xrc\xrc_strings_output.h:206
+msgid "Insert subscript text <sub></sub>"
+msgstr "下付きテキストを挿入 <u></u>"
+
+#: resource\xrc\xrc_strings_output.h:207
+msgid "Insert preformatted text <pre></pre>"
+msgstr "整形済みテキストを挿入 <pre></pre>"
+
+#: resource\xrc\xrc_strings_output.h:208
+msgid "Insert coded text <code></code>"
+msgstr "コードテキストを挿入 <code></code>"
+
+#: resource\xrc\xrc_strings_output.h:209
+msgid "Insert heading 1 text <h1></h1>"
+msgstr "レベル1の見出しを挿入 <h1></h1>"
+
+#: resource\xrc\xrc_strings_output.h:210
+msgid "Insert heading 2 text <h2></h2>"
+msgstr "レベル2の見出しを挿入 <h2></h2>"
+
+#: resource\xrc\xrc_strings_output.h:211
+msgid "Insert heading 3 text <h3></h3>"
+msgstr "レベル3の見出しを挿入 <h3></h3>"
+
+#: resource\xrc\xrc_strings_output.h:212
+msgid "Insert heading 4 text <h4></h4>"
+msgstr "レベル4の見出しを挿入 <h4></h4>"
+
+#: resource\xrc\xrc_strings_output.h:213
+msgid "Insert heading 5 text <h5></h5>"
+msgstr "レベル5の見出しを挿入 <h5></h5>"
+
+#: resource\xrc\xrc_strings_output.h:214
+msgid "Insert heading 6 text <h6></h6>"
+msgstr "レベル6の見出しを挿入 <h6></h6>"
+
+#: resource\xrc\xrc_strings_output.h:215
+msgid "Insert small text <small></small>"
+msgstr "斜体のテキストを挿入 <i></i>"
+
+#: resource\xrc\xrc_strings_output.h:217
+msgid "Insert a table <table></table>"
+msgstr "テーブルを挿入 <table></table>"
+
+#: resource\xrc\xrc_strings_output.h:218
+msgid "Insert a table row <tr></tr>"
+msgstr "行を挿入"
+
+#: resource\xrc\xrc_strings_output.h:219
+msgid "Insert a table header cell <th ...></th>"
+msgstr "見出しセルを挿入 <th ...></th>"
+
+#: resource\xrc\xrc_strings_output.h:220
+msgid "Insert a table cell <td ...></td>"
+msgstr "セルを挿入 <td ...></td>"
+
+#: resource\xrc\xrc_strings_output.h:221
+msgid "Lists"
+msgstr "リスト"
+
+#: resource\xrc\xrc_strings_output.h:222
+msgid "Insert an ordered list <ol ...></ol>"
+msgstr "順序付きリストを挿入 <ol ...></ol>"
+
+#: resource\xrc\xrc_strings_output.h:223
+msgid "Insert an unordered list <ul ...></ul>"
+msgstr "順序無しリストを挿入 <ul ...></ul>"
+
+#: resource\xrc\xrc_strings_output.h:224
+msgid "Insert a list element <li></li>"
+msgstr "リストの項目を挿入 <li></li>"
+
+#: resource\xrc\xrc_strings_output.h:225
+msgid "Insert a menu <menu ...></menu>"
+msgstr "メニューを挿入 <menu ...></menu>"
+
+#: resource\xrc\xrc_strings_output.h:226
+msgid "Insert a definition list <dl></dl>"
+msgstr "定義リストの挿入 list <dl></dl>"
+
+#: resource\xrc\xrc_strings_output.h:227
+msgid "Insert a definition term <dt></dt>"
+msgstr "定義語の挿入 <dt></dt>"
+
+#: resource\xrc\xrc_strings_output.h:228
+msgid "Insert a definition description <dd></dd>"
+msgstr "定義の説明を挿入 <dd></dd>"
+
+#: resource\xrc\xrc_strings_output.h:229
+msgid "Other"
+msgstr "その他"
+
+#: resource\xrc\xrc_strings_output.h:230
+msgid "Insert html tag <html></html>"
+msgstr "HTMLタグを挿入 <html></html>"
+
+#: resource\xrc\xrc_strings_output.h:231
+msgid ""
+"Insert handheldfriendly meta tag (informs handheld browsers that page is "
+"light) <meta...></meta>"
+msgstr "パームデバイスに優しいメタ タグを挿入(ブラウザにこのページが正しいことを伝える) <meta...></meta>"
+
+#: resource\xrc\xrc_strings_output.h:232
+msgid "Insert body tag (also sets document's text colors) <body...></body>"
+msgstr "Bodyタグを挿入(同時にテキストの色を設定) <body...></body>"
+
+#: resource\xrc\xrc_strings_output.h:233
+msgid "Insert hidden comment <!--- --->"
+msgstr "隠しコメントを挿入 <!--- --->"
+
+#: resource\xrc\xrc_strings_output.h:234
+msgid "Insert Hyperlink"
+msgstr "ハイ-パーリンクを挿入"
+
+#: resource\xrc\xrc_strings_output.h:235
+msgid "Required hyperlink properties"
+msgstr "ハイパーリンクのプロパティ"
+
+#: resource\xrc\xrc_strings_output.h:236 resource\xrc\xrc_strings_output.h:357
+msgid "Link description:"
+msgstr "リンクの説明"
+
+#: resource\xrc\xrc_strings_output.h:237
+msgid "Website URL:"
+msgstr "ホームページのURL"
+
+#: resource\xrc\xrc_strings_output.h:240
+msgid "File name:"
+msgstr "ファイル名"
+
+#: resource\xrc\xrc_strings_output.h:243
+msgid "Optional hyperlink settings"
+msgstr "ハイパーリンクのオプション設定"
+
+#: resource\xrc\xrc_strings_output.h:244
+msgid ""
+"Use 'stay on host' filter: ignore links pointing to an external server that "
+"is different from the starting page's server"
+msgstr "'同一ホストのみ'に制限: 開始ページのサーバーと異なる外部のサーバーへのリンクを無視する。"
+
+#: resource\xrc\xrc_strings_output.h:245
+msgid ""
+"Use 'stay on domain' filter: ignore links pointing to a server on a "
+"different domain from the starting page's server"
+msgstr "'同一ドメイン'に制限: 開始ページのサーバーと異なるドメインのサーバーへのリンクを無視する。"
+
+#: resource\xrc\xrc_strings_output.h:246
+msgid "Use 'maximum depth' filter: only retreive pages up to"
+msgstr "'最大リンク数'を制限: 開始ページからのリンク数が"
+
+#: resource\xrc\xrc_strings_output.h:247
+msgid "links down from the starting page"
+msgstr "回までのページを収集する。"
+
+#: resource\xrc\xrc_strings_output.h:248
+msgid ""
+"Use 'url pattern' filter: only follow URLs having this regular expression:"
+msgstr "'URLパターン'で制限: 次の正規表\現に合致したURLのみを対象とする。"
+
+#: resource\xrc\xrc_strings_output.h:249
+msgid "Specify image inclusion / color depth:"
+msgstr "画像を含める / 色数: "
+
+#: resource\xrc\xrc_strings_output.h:250
+msgid "No images"
+msgstr "画像無し"
+
+#: resource\xrc\xrc_strings_output.h:256
+msgid "Specify image maximum width:"
+msgstr "画像の最大の幅を指定: "
+
+#: resource\xrc\xrc_strings_output.h:257
+msgid "Specify image maximum height:"
+msgstr "画像の最大の高さを指定: "
+
+#: resource\xrc\xrc_strings_output.h:261
+msgid "Insert Horizontal Rule"
+msgstr "水平方向の罫線を挿入"
+
+#: resource\xrc\xrc_strings_output.h:262
+msgid "Width:"
+msgstr "幅: "
+
+#: resource\xrc\xrc_strings_output.h:263
+msgid "percent"
+msgstr "パーセント"
+
+#: resource\xrc\xrc_strings_output.h:264 resource\xrc\xrc_strings_output.h:266
+msgid "pixels"
+msgstr "ピクセル"
+
+#: resource\xrc\xrc_strings_output.h:265
+msgid "Height:"
+msgstr "高さ: "
+
+#: resource\xrc\xrc_strings_output.h:267 resource\xrc\xrc_strings_output.h:298
+msgid "Alignment:"
+msgstr "配置"
+
+#: resource\xrc\xrc_strings_output.h:268 resource\xrc\xrc_strings_output.h:299
+msgid "Default"
+msgstr "デフォルト"
+
+#: resource\xrc\xrc_strings_output.h:269 resource\xrc\xrc_strings_output.h:300
+#: resource\xrc\xrc_strings_output.h:323
+msgid "Left"
+msgstr "左"
+
+#: resource\xrc\xrc_strings_output.h:270 resource\xrc\xrc_strings_output.h:302
+#: resource\xrc\xrc_strings_output.h:324
+msgid "Right"
+msgstr "右"
+
+#: resource\xrc\xrc_strings_output.h:271 resource\xrc\xrc_strings_output.h:301
+#: resource\xrc\xrc_strings_output.h:325
+msgid "Center"
+msgstr "中央"
+
+#: resource\xrc\xrc_strings_output.h:272 resource\xrc\xrc_strings_output.h:282
+msgid "Color:"
+msgstr "色: "
+
+#: resource\xrc\xrc_strings_output.h:277
+msgid "Insert Image"
+msgstr "画像を挿入"
+
+#: resource\xrc\xrc_strings_output.h:278
+msgid "Image source:"
+msgstr "画像のソ\ース: "
+
+#: resource\xrc\xrc_strings_output.h:280
+msgid "Image is relative to page location"
+msgstr "ページの場所から相対リンク"
+
+#: resource\xrc\xrc_strings_output.h:281
+msgid "Alternative text:"
+msgstr "代替テキスト: "
+
+#: resource\xrc\xrc_strings_output.h:284
+msgid "Hyperlink:"
+msgstr "ハイパーリンク: "
+
+#: resource\xrc\xrc_strings_output.h:288
+msgid "Insert Table"
+msgstr "表\を挿入"
+
+#: resource\xrc\xrc_strings_output.h:289
+msgid "Rows:"
+msgstr "行数: "
+
+#: resource\xrc\xrc_strings_output.h:290
+msgid "Columns:"
+msgstr "列数: "
+
+#: resource\xrc\xrc_strings_output.h:291
+msgid "Border:"
+msgstr "枠線: "
+
+#: resource\xrc\xrc_strings_output.h:292
+msgid "Border color:"
+msgstr "枠線の色: "
+
+#: resource\xrc\xrc_strings_output.h:297
+msgid "Insert Table Cell"
+msgstr "表\のセルを挿入"
+
+#: resource\xrc\xrc_strings_output.h:303
+msgid "Justified"
+msgstr ""
+
+#: resource\xrc\xrc_strings_output.h:304
+msgid "Column span:"
+msgstr "列数: "
+
+#: resource\xrc\xrc_strings_output.h:305
+msgid "Row span:"
+msgstr "行数: "
+
+#: resource\xrc\xrc_strings_output.h:309 resource\xrc\xrc_strings_output.h:315
+msgid "Insert Font"
+msgstr "フォント指定を挿入"
+
+#: resource\xrc\xrc_strings_output.h:310 resource\xrc\xrc_strings_output.h:316
+msgid "Font color:"
+msgstr "フォントの色: "
+
+#: resource\xrc\xrc_strings_output.h:321
+msgid "Insert Span"
+msgstr "Spanの挿入"
+
+#: resource\xrc\xrc_strings_output.h:322
+msgid "Align:"
+msgstr "配置:"
+
+#: resource\xrc\xrc_strings_output.h:329
+msgid "Insert Body"
+msgstr "Bodyタグの挿入"
+
+#: resource\xrc\xrc_strings_output.h:330
+msgid "Text color:"
+msgstr "テキストの色: "
+
+#: resource\xrc\xrc_strings_output.h:332
+msgid "Link color:"
+msgstr "リンクの色: "
+
+#: resource\xrc\xrc_strings_output.h:337
+msgid "Insert Bookmark"
+msgstr "名前付きアンカーを挿入"
+
+#: resource\xrc\xrc_strings_output.h:338 resource\xrc\xrc_strings_output.h:344
+msgid "Description:"
+msgstr "説明: "
+
+#: resource\xrc\xrc_strings_output.h:339
+msgid "Anchor name:"
+msgstr "アンカー名: "
+
+#: resource\xrc\xrc_strings_output.h:343
+msgid "Insert Email"
+msgstr "eメールを挿入"
+
+#: resource\xrc\xrc_strings_output.h:345
+msgid "Email address:"
+msgstr "eメール アドレス: "
+
+#: resource\xrc\xrc_strings_output.h:346
+msgid "plucker-dev@rubberchicken.org"
+msgstr "plucker-dev@rubberchicken.org"
+
+#: resource\xrc\xrc_strings_output.h:350
+msgid "Insert Symbol / Character"
+msgstr "シンボル/キャラクタを挿入"
+
+#: resource\xrc\xrc_strings_output.h:351
+msgid "Select a symbol and press OK:"
+msgstr "シンボルを選択してOKを押して下さい: "
+
+#: resource\xrc\xrc_strings_output.h:352
+msgid "Symbol:"
+msgstr "シンボル"
+
+#: resource\xrc\xrc_strings_output.h:356
+msgid "Insert Javascrip Popup"
+msgstr "Java Scriptのポップアップを挿入"
+
+#: resource\xrc\xrc_strings_output.h:358
+msgid "Popup message:"
+msgstr "ポップアップ メッセージ: "
+
+#: resource\xrc\xrc_strings_output.h:362
+msgid "Insert Unordered List"
+msgstr "順序無しリストを挿入"
+
+#: resource\xrc\xrc_strings_output.h:363
+msgid "Bullet type:"
+msgstr "記号の種類"
+
+#: resource\xrc\xrc_strings_output.h:364
+msgid "Disc (default)"
+msgstr "黒丸(標準)"
+
+#: resource\xrc\xrc_strings_output.h:365
+msgid "Square"
+msgstr "四角"
+
+#: resource\xrc\xrc_strings_output.h:366
+msgid "Circle"
+msgstr "白丸"
+
+#: resource\xrc\xrc_strings_output.h:367 resource\xrc\xrc_strings_output.h:380
+msgid "Compact:"
+msgstr "コンパクト"
+
+#: resource\xrc\xrc_strings_output.h:371
+msgid "Insert Ordered List"
+msgstr "順序付きリストを挿入"
+
+#: resource\xrc\xrc_strings_output.h:372
+msgid "Enumeration type:"
+msgstr "項目番号の種類"
+
+#: resource\xrc\xrc_strings_output.h:373
+msgid "1   arabic (default)"
+msgstr "1   数字(標準)"
+
+#: resource\xrc\xrc_strings_output.h:374
+msgid "A   uppercase alpha"
+msgstr "A   英大文字"
+
+#: resource\xrc\xrc_strings_output.h:375
+msgid "a   lowercase alpha"
+msgstr "a   英小文字"
+
+#: resource\xrc\xrc_strings_output.h:376
+msgid "I   uppercase roman"
+msgstr "I   ギリシャ数字(大文字)"
+
+#: resource\xrc\xrc_strings_output.h:377
+msgid "i   lowecase roman"
+msgstr "i   ギリシャ数字(小文字)"
+
+#: resource\xrc\xrc_strings_output.h:378
+msgid "Specifiy start number:"
+msgstr "開始番号を指定: "
+
+#: resource\xrc\xrc_strings_output.h:379
+msgid "Starting at:"
+msgstr "開始番号: "
+
+#: resource\xrc\xrc_strings_output.h:384
+msgid "Inclusion/Exclusion Lists"
+msgstr "追加/除外リスト"
+
+#: resource\xrc\xrc_strings_output.h:385
+msgid "Website URLs"
+msgstr "ウェブページのURL"
+
+#: resource\xrc\xrc_strings_output.h:386 resource\xrc\xrc_strings_output.h:390
+msgid "Add.."
+msgstr "追加.."
+
+#: resource\xrc\xrc_strings_output.h:387 resource\xrc\xrc_strings_output.h:391
+msgid "Edit..."
+msgstr "編集..."
+
+#: resource\xrc\xrc_strings_output.h:388 resource\xrc\xrc_strings_output.h:392
+msgid "Delete"
+msgstr "削除"
+
+#: resource\xrc\xrc_strings_output.h:389
+msgid "File extensions"
+msgstr "ファイルの拡張子"
+
+#: resource\xrc\xrc_strings_output.h:396
+msgid "Edit inclusion/exclusion list item"
+msgstr "追加/除外リスト要素の編集"
+
+#: resource\xrc\xrc_strings_output.h:397
+msgid "Item:"
+msgstr "要素:"
+
+#: resource\xrc\xrc_strings_output.h:398
+msgid "Action:"
+msgstr "アクション"
+
+#: resource\xrc\xrc_strings_output.h:399
+msgid "Exclude this item"
+msgstr "このアイテムを除外"
+
+#: resource\xrc\xrc_strings_output.h:400
+msgid "Include this item"
+msgstr "このアイテムを含む"
+
+#: resource\xrc\xrc_strings_output.h:401
+msgid "Priority:"
+msgstr "優先度"
+
+#: resource\xrc\xrc_strings_output.h:405
+msgid "&File"
+msgstr "ファイル(&F)"
+
+#: resource\xrc\xrc_strings_output.h:406
+msgid "&Add a new channel..."
+msgstr "チャンネルを追加(&A)"
+
+#: resource\xrc\xrc_strings_output.h:408
+msgid "Add a new channel using &wizard..."
+msgstr "ウィザード形式でチャンネルを追加(&W)"
+
+#: resource\xrc\xrc_strings_output.h:409 resource\xrc\xrc_strings_output.h:451
+#: resource\xrc\xrc_strings_output.h:467
+msgid "Add a new channel using the Add New Channel Wizard"
+msgstr "チャンネル追加ウィザードを使ってチャンネルを追加します。"
+
+#: resource\xrc\xrc_strings_output.h:410
+msgid "&Configure selected channel..."
+msgstr "チャンネルを設定(&C)"
+
+#: resource\xrc\xrc_strings_output.h:411 resource\xrc\xrc_strings_output.h:453
+#: resource\xrc\xrc_strings_output.h:469
+msgid "Configure channel settings for the selected channel"
+msgstr "選択したチャンネルの設定を変更します。"
+
+#: resource\xrc\xrc_strings_output.h:412
+msgid "&Delete selected channels"
+msgstr "チャンネルを削除(&D)"
+
+#: resource\xrc\xrc_strings_output.h:413 resource\xrc\xrc_strings_output.h:455
+#: resource\xrc\xrc_strings_output.h:471
+msgid "Delete the selected channels"
+msgstr "選択したチャンネルを削除します。"
+
+#: resource\xrc\xrc_strings_output.h:414
+msgid "E&xit"
+msgstr "終了(&E)"
+
+#: resource\xrc\xrc_strings_output.h:415
+#, fuzzy
+msgid "Exit the application"
+msgstr "ウィザードを終了しますか？"
+
+#: resource\xrc\xrc_strings_output.h:416
+msgid "&Import/Export"
+msgstr "インポート/エクスポート(&I)"
+
+#: resource\xrc\xrc_strings_output.h:417
+msgid "Paste &URL as new channel..."
+msgstr "URLを新しいチャンネルに貼\り付け(&U)"
+
+#: resource\xrc\xrc_strings_output.h:418
+msgid "Paste a URL from the clipboard as a new channel"
+msgstr "クリップボード上のURLを新しいチャンネルとして貼\り付けます。"
+
+#: resource\xrc\xrc_strings_output.h:419
+msgid "Paste files as &separate new channels..."
+msgstr "ファイルを個々にチャンネルに貼\り付け(&S)"
+
+#: resource\xrc\xrc_strings_output.h:420
+msgid "Paste files from the clipboard using a new channel for each file"
+msgstr "クリップボード上のファイルを個々に新しいチャンネルとして貼\付けします。"
+
+#: resource\xrc\xrc_strings_output.h:421
+msgid "&Update"
+msgstr "更新(&U)"
+
+#: resource\xrc\xrc_strings_output.h:422
+msgid "Update &selected channels"
+msgstr "チャンネルを更新(&S)"
+
+#: resource\xrc\xrc_strings_output.h:423 resource\xrc\xrc_strings_output.h:457
+#: resource\xrc\xrc_strings_output.h:473
+msgid "Update the selected channels"
+msgstr "選択したチャンネルを更新します。"
+
+#: resource\xrc\xrc_strings_output.h:424
+msgid "Update all &due channels"
+msgstr "期限過ぎ全チャンネルを更新(&D)"
+
+#: resource\xrc\xrc_strings_output.h:425 resource\xrc\xrc_strings_output.h:459
+#: resource\xrc\xrc_strings_output.h:475
+msgid "Update all channels that are currently due"
+msgstr "更新期限を過ぎたチャンネルを全て更新します。"
+
+#: resource\xrc\xrc_strings_output.h:426
+msgid "Update &all channels"
+msgstr "全チャンネルを更新(&A)"
+
+#: resource\xrc\xrc_strings_output.h:428
+msgid "&Options"
+msgstr "オプション(&O)"
+
+#: resource\xrc\xrc_strings_output.h:429
+msgid "&Preferences..."
+msgstr "環境設定(&P)"
+
+#: resource\xrc\xrc_strings_output.h:430 resource\xrc\xrc_strings_output.h:463
+#: resource\xrc\xrc_strings_output.h:479
+msgid "Set interface, autoupdate, proxy, spidering, and other behaviours"
+msgstr "インターフェース、自動更新、プロクシ、ダウンロード等の設定を行います。"
+
+#: resource\xrc\xrc_strings_output.h:431
+msgid "Set &default configuration for new channels..."
+msgstr "新しいチャンネル用のデフォルト値を設定(&D)"
+
+#: resource\xrc\xrc_strings_output.h:432
+msgid "Change the default values used in newly created channels"
+msgstr "新しいチャンネルを登録する時のデフォルト値を変更します。"
+
+#: resource\xrc\xrc_strings_output.h:433
+msgid "&Install handheld viewer software..."
+msgstr "パームデバイス用ビューワーをインストール(&I)"
+
+#: resource\xrc\xrc_strings_output.h:434
+msgid "Reinstall the viewer software and manual to the handheld"
+msgstr "Plucker ビューワーとマニュアルをパーム本体に再インストールします。"
+
+#: resource\xrc\xrc_strings_output.h:435
+msgid "Rerun &setup wizard..."
+msgstr "セットアップ ウィザードを実行(&S)"
+
+#: resource\xrc\xrc_strings_output.h:436
+msgid "Runs the first-start setup wizard to set up the proxy, etc"
+msgstr "初回起動時のセットアップ ウィザードを実行します。"
+
+#: resource\xrc\xrc_strings_output.h:437
+msgid "&Help"
+msgstr "ヘルプ(&H)"
+
+#: resource\xrc\xrc_strings_output.h:438
+msgid "&Help contents..."
+msgstr "ヘルプ(&H)"
+
+#: resource\xrc\xrc_strings_output.h:439
+msgid "Display contents of the help"
+msgstr ""
+
+#: resource\xrc\xrc_strings_output.h:440
+msgid "Help on using &this dialog..."
+msgstr "この画面のヘルプを表\示(&T)"
+
+#: resource\xrc\xrc_strings_output.h:441
+msgid "Display help on how to use this main dialog"
+msgstr "メイン画面の使い方を表\示します。"
+
+#: resource\xrc\xrc_strings_output.h:442
+msgid "&Search help..."
+msgstr "ヘルプを検索(&S)"
+
+#: resource\xrc\xrc_strings_output.h:443
+msgid "Search the help for a keyword"
+msgstr "キーワードでヘルプを検索"
+
+#: resource\xrc\xrc_strings_output.h:444
+msgid "&Tip of the day"
+msgstr "今日のTips(&T)"
+
+#: resource\xrc\xrc_strings_output.h:445
+msgid "Show a tip of the day"
+msgstr "今日のTips"
+
+#: resource\xrc\xrc_strings_output.h:447
+msgid "Display version number and copyright notice"
+msgstr "Version番号とコピーライトを表\示します。"
+
+#: resource\xrc\xrc_strings_output.h:462 resource\xrc\xrc_strings_output.h:478
+msgid "Preferences..."
+msgstr "環境設定"
+
+#: resource\xrc\xrc_strings_output.h:480
+msgid "Preferences"
+msgstr "環境設定"
+
+#: resource\xrc\xrc_strings_output.h:481
+msgid "Interface"
+msgstr "表\示"
+
+#: resource\xrc\xrc_strings_output.h:482
+msgid "Internationalization"
+msgstr "国際化"
+
+#: resource\xrc\xrc_strings_output.h:483
+msgid "Translate interface into the local language"
+msgstr "地域別の言語で表\示"
+
+#: resource\xrc\xrc_strings_output.h:484
+msgid "Autodetect language (recommended)"
+msgstr "自動で検出(推奨)"
+
+#: resource\xrc\xrc_strings_output.h:485
+msgid "Force a specific language:"
+msgstr "手動で設定:"
+
+#: resource\xrc\xrc_strings_output.h:486
+msgid "Choose language..."
+msgstr "言語を選択"
+
+#: resource\xrc\xrc_strings_output.h:487
+msgid "Look and feel"
+msgstr "ウィンドウ"
+
+#: resource\xrc\xrc_strings_output.h:488
+msgid "Show toolbar:"
+msgstr "ツールバーを表\示:"
+
+#: resource\xrc\xrc_strings_output.h:489
+msgid "Default style"
+msgstr "標準"
+
+#: resource\xrc\xrc_strings_output.h:490
+msgid "Default high-colour style"
+msgstr "標準(ハイカラー)"
+
+#: resource\xrc\xrc_strings_output.h:491
+msgid "Show statusbar"
+msgstr "ステータスバーを表\示"
+
+#: resource\xrc\xrc_strings_output.h:492
+msgid "Dialog placement:"
+msgstr "ダイアログの表\示位置:"
+
+#: resource\xrc\xrc_strings_output.h:493
+msgid "Center on screen"
+msgstr "画面の中央"
+
+#: resource\xrc\xrc_strings_output.h:494
+msgid "Center on parent dialog"
+msgstr "親画面の中央"
+
+#: resource\xrc\xrc_strings_output.h:495
+msgid "My previous location"
+msgstr "前回と同じ位置"
+
+#: resource\xrc\xrc_strings_output.h:496
+msgid "Startup"
+msgstr "起動"
+
+#: resource\xrc\xrc_strings_output.h:497
+msgid "Show daily tips on startup:"
+msgstr "今日のTipsを起動時に表\示:"
+
+#: resource\xrc\xrc_strings_output.h:498
+msgid "Show splash screen on startup"
+msgstr "スプラッシュスクリーンを起動時に表\示"
+
+#: resource\xrc\xrc_strings_output.h:499
+msgid "Autoupdate"
+msgstr "自動更新"
+
+#: resource\xrc\xrc_strings_output.h:500
+msgid "Channel autoupdate mode"
+msgstr "自動更新モード"
+
+#: resource\xrc\xrc_strings_output.h:501
+msgid ""
+"Never autoupdate. Only update when I click one of the 'Update Channels' "
+"buttons"
+msgstr "手動更新: 自分でチャンネルの更新ボタンを押して更新"
+
+#: resource\xrc\xrc_strings_output.h:502
+msgid "Autoupdate any channel as soon as it becomes due"
+msgstr "自動更新: チャンネルの更新期限が来たらすぐに自動更新"
+
+#: resource\xrc\xrc_strings_output.h:503
+msgid "Off-peak mode: defer autoupdates until the current time is between:"
+msgstr "オフピークモード: 次の時間帯になるまで自動更新を延期"
+
+#: resource\xrc\xrc_strings_output.h:504 resource\xrc\xrc_strings_output.h:529
+msgid "0000 / 12:00 AM"
+msgstr "0000 / 12:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:505 resource\xrc\xrc_strings_output.h:530
+msgid "0100 / 1:00 AM"
+msgstr "0100 / 1:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:506 resource\xrc\xrc_strings_output.h:531
+msgid "0200 / 2:00 AM"
+msgstr "0200 / 2:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:507 resource\xrc\xrc_strings_output.h:532
+msgid "0300 / 3:00 AM"
+msgstr "0300 / 3:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:508 resource\xrc\xrc_strings_output.h:533
+msgid "0400 / 4:00 AM"
+msgstr "0400 / 4:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:509 resource\xrc\xrc_strings_output.h:534
+msgid "0500 / 5:00 AM"
+msgstr "0500 / 5:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:510 resource\xrc\xrc_strings_output.h:535
+msgid "0600 / 6:00 AM"
+msgstr "0600 / 6:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:511 resource\xrc\xrc_strings_output.h:536
+msgid "0700 / 7:00 AM"
+msgstr "0700 / 7:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:512 resource\xrc\xrc_strings_output.h:537
+msgid "0800 / 8:00 AM"
+msgstr "0800 / 8:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:513 resource\xrc\xrc_strings_output.h:538
+msgid "0900 / 9:00 AM"
+msgstr "0900 / 9:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:514 resource\xrc\xrc_strings_output.h:539
+msgid "1000 / 10:00 AM"
+msgstr "1000 / 10:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:515 resource\xrc\xrc_strings_output.h:540
+msgid "1100 / 11:00 AM"
+msgstr "1100 / 11:00 AM"
+
+#: resource\xrc\xrc_strings_output.h:516 resource\xrc\xrc_strings_output.h:541
+msgid "1200 / 12:00 PM"
+msgstr "1200 / 12:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:517 resource\xrc\xrc_strings_output.h:542
+msgid "1300 / 1:00 PM"
+msgstr "1300 / 1:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:518 resource\xrc\xrc_strings_output.h:543
+msgid "1400 / 2:00 PM"
+msgstr "1400 / 2:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:519 resource\xrc\xrc_strings_output.h:544
+msgid "1500 / 3:00 PM"
+msgstr "1500 / 3:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:520 resource\xrc\xrc_strings_output.h:545
+msgid "1600 / 4:00 PM"
+msgstr "1600 / 4:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:521 resource\xrc\xrc_strings_output.h:546
+msgid "1700 / 5:00 PM"
+msgstr "1700 / 5:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:522 resource\xrc\xrc_strings_output.h:547
+msgid "1800 / 6:00 PM"
+msgstr "1800 / 6:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:523 resource\xrc\xrc_strings_output.h:548
+msgid "1900 / 7:00 PM"
+msgstr "1900 / 7:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:524 resource\xrc\xrc_strings_output.h:549
+msgid "2000 / 8:00 PM"
+msgstr "2000 / 8:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:525 resource\xrc\xrc_strings_output.h:550
+msgid "2100 / 9:00 PM"
+msgstr "2100 / 9:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:526 resource\xrc\xrc_strings_output.h:551
+msgid "2200 / 10:00 PM"
+msgstr "2200 / 10:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:527 resource\xrc\xrc_strings_output.h:552
+msgid "2300 / 11:00 PM"
+msgstr "2300 / 11:00 PM"
+
+#: resource\xrc\xrc_strings_output.h:528
+msgid "and"
+msgstr "そして"
+
+#: resource\xrc\xrc_strings_output.h:553
+msgid "Autoupdate any due channels each time I press my handheld's sync button"
+msgstr "ホットシンクと同時に更新期限の来たチャンネルを自動更新"
+
+#: resource\xrc\xrc_strings_output.h:554
+msgid "Advanced"
+msgstr "高度な設定"
+
+#: resource\xrc\xrc_strings_output.h:555
+msgid "Precision: compare current time to channels' due time every "
+msgstr "現在の時刻とチャンネルの更新期限を"
+
+#: resource\xrc\xrc_strings_output.h:556
+msgid "minutes"
+msgstr "分ごとに比較"
+
+#: resource\xrc\xrc_strings_output.h:558
+msgid "Spidering status display"
+msgstr "ダウンロード状況の表\示"
+
+#: resource\xrc\xrc_strings_output.h:559
+msgid "Show spider progress with:"
+msgstr "進行状況の表\示: "
+
+#: resource\xrc\xrc_strings_output.h:560
+msgid "A console window"
+msgstr "コンソ\ールウィンドウ"
+
+#: resource\xrc\xrc_strings_output.h:561
+msgid "A progress dialog"
+msgstr "ダイアログ"
+
+#: resource\xrc\xrc_strings_output.h:562
+msgid "Auto-close progress when done:"
+msgstr "進行状況の自動クローズ"
+
+#: resource\xrc\xrc_strings_output.h:563
+msgid "Always"
+msgstr "常にする"
+
+#: resource\xrc\xrc_strings_output.h:564
+msgid "If no errors occurred"
+msgstr "エラーが無かった場合のみ"
+
+#: resource\xrc\xrc_strings_output.h:567
+msgid "Execute command before spidering a group of channels:"
+msgstr "チャンネルのダウンロード前にコマンドを実行"
+
+#: resource\xrc\xrc_strings_output.h:568
+msgid "Execute command after spidering a group of channels:"
+msgstr "チャンネルのダウンロード後にコマンドを実行"
+
+#: resource\xrc\xrc_strings_output.h:569
+msgid "Inclusion/exclusion lists"
+msgstr "追加/除外リスト"
+
+#: resource\xrc\xrc_strings_output.h:570
+msgid "Edit shared inclusion/exclusion list (used by all channels)..."
+msgstr "共有された追加/除外リストを編集(全チャンネルで使用)"
+
+#: resource\xrc\xrc_strings_output.h:573
+msgid "Use the application's built-in HTML editor"
+msgstr "Plucker Desktopに組み込まれたHTMLエディタを使用"
+
+#: resource\xrc\xrc_strings_output.h:574
+msgid "Use an external HTML editor:"
+msgstr "外部のHTMLエディタを使用"
+
+#: resource\xrc\xrc_strings_output.h:575
+msgid "Choose..."
+msgstr "選択"
+
+#: resource\xrc\xrc_strings_output.h:576
+msgid "Built-in editor options"
+msgstr "組み込みのエディタ"
+
+#: resource\xrc\xrc_strings_output.h:577
+msgid "Toolbar complexity:"
+msgstr "ツールバーの設定"
+
+#: resource\xrc\xrc_strings_output.h:578
+msgid "Basic (insert hyperlink only)"
+msgstr "基本(ハイパーリンクの挿入のみ)"
+
+#: resource\xrc\xrc_strings_output.h:579
+msgid "Complete (full toolbar set)"
+msgstr "完全(全てのツールバーセット)"
+
+#: resource\xrc\xrc_strings_output.h:580
+msgid "Insert linefeeds after text generated by toolbar buttons"
+msgstr "ツールバーのボタンでテキストを追加した後に行送り(LF)を挿入する。"
+
+#: resource\xrc\xrc_strings_output.h:581 resource\xrc\xrc_strings_output.h:603
+msgid "Showcase"
+msgstr "ショーケース"
+
+#: resource\xrc\xrc_strings_output.h:582
+msgid "Showcase options"
+msgstr "ビューワソ\フトのオプション"
+
+#: resource\xrc\xrc_strings_output.h:583
+msgid "Showcase dialog layout:"
+msgstr "ショーケースダイアログ オプション"
+
+#: resource\xrc\xrc_strings_output.h:584
+msgid "Horizontal layout"
+msgstr "横に配置"
+
+#: resource\xrc\xrc_strings_output.h:585
+msgid "Vertical layout"
+msgstr "縦に配置"
+
+#: resource\xrc\xrc_strings_output.h:586
+msgid "Fields to use in my channel:"
+msgstr "チャンネルで使用するフィールド"
+
+#: resource\xrc\xrc_strings_output.h:587
+msgid "Name and URL only"
+msgstr "名前とURLのみ"
+
+#: resource\xrc\xrc_strings_output.h:588
+msgid "All possible fields"
+msgstr "全ての使用可能\なフィールド"
+
+#: resource\xrc\xrc_strings_output.h:589
+msgid "Choose fields to display in details pane..."
+msgstr "詳細画面に表\示するフィールドを選択"
+
+#: resource\xrc\xrc_strings_output.h:590
+msgid "Include images in channel previews (takes a longer time)"
+msgstr "チャンネルのプレビューに画像を含める(時間が掛かる)"
+
+#: resource\xrc\xrc_strings_output.h:591
+msgid "Proxy"
+msgstr "プロクシ"
+
+#: resource\xrc\xrc_strings_output.h:593
+msgid "Use a proxy to access the Internet"
+msgstr "インターネット接続にプロクシを使用"
+
+#: resource\xrc\xrc_strings_output.h:604
+msgid "Show live preview"
+msgstr "プレビューを表\示"
+
+#: resource\xrc\xrc_strings_output.h:605
+msgid "Show details"
+msgstr "詳細を表\示"
+
+#: resource\xrc\xrc_strings_output.h:609
+msgid "Launching..."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:16
+msgid ""
+"<b>plkrAPPLICATION_SUITE_NAME</b> is a software suite that saves websites of "
+"your choice on your handheld. <b>plkrAPPLICATION_DESKTOP_NAME</b> is the "
+"program that handles the selection of websites that you want sent when you "
+"HotSync. You can then use the <b>plkrAPPLICATION_SUITE_NAME Viewer</b> to "
+"browse on your handheld."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:17
+msgid ""
+"You can get help in plkrAPPLICATION_DESKTOP_NAME by selecting <b>Help &gt; "
+"Help contents...</b> from the menubar. All other dialogs have a <b>Help</b> "
+"button in the lower left-corner, which can be clicked to learn about the "
+"current options on that dialog. You can also hover over toobar buttons and "
+"menuitems in the main dialog, and a short help message will be displayed in "
+"the bottom status bar area."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:18
+msgid ""
+"If you missed something during the installation, you can always get it back "
+"by clicking the <b>Options</b> menu, then on <b>Rerun setup wizard</b>."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:19
+msgid ""
+"If your handheld doesn't have the plkrAPPLICATION_SUITE_NAME Viewer program "
+"installed on it, is missing the manual, or if the plkrAPPLICATION_SUITE_NAME "
+"Viewer program stops working, you can reinstall it all by clicking the "
+"<b>Options</b> menu, then on <b>Install handheld viewer software</b>."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:20
+msgid ""
+"You can add a website by creating a <b>channel</b>. Channels contain "
+"information such as the home page of the website, the number of links that "
+"you will be able to click on, and the number of colors shown in pictures."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:21
+msgid ""
+"You can configure a channel by <b>right</b>-clicking on it in your list of "
+"channels, then selecting <b>Configure selected channel</b>."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:22
+msgid ""
+"You can change how often a channel is updated by selecting a channel in the "
+"list, clicking the <b>Configure selected channel</b> toolbutton or menuitem, "
+"and setting the controls on the <b>Scheduling</b> tab."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:23
+msgid ""
+"plkrAPPLICATION_DESKTOP_NAME's job is often referred to as <b>spidering</b> "
+"a website. That is why when you update a channel it says that it is "
+"\"Initializing plkrAPPLICATION_SUITE_NAME spidering engine.\""
+msgstr ""
+
+#: resource\strings_tips\tips.txt:24
+msgid ""
+"Many of the most-commonly used dialogs are resizable.  If you have a high "
+"resolution monitor, drag the dialog corner to increase the dialog size. Your "
+"new size will be saved automatically."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:25
+msgid ""
+"If you are using a proxy to access to the internet, don't forget to include "
+"the <b><tt>http:</tt></b> at the start of the proxy address setting. For "
+"example it should be something like <b><tt>http://proxy.aol.com</tt></b>. If "
+"you put just <b><tt>proxy.aol.com</tt></b>, it won't work."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:26
+msgid ""
+"You can add a new channel quickly by clicking the <b>Add Channel Wizard</b> "
+"button."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:27
+msgid ""
+"A <b>channel name</b> has a maximum length of <b>26</b> characters (a PalmOS "
+"restriction)."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:28
+msgid ""
+"There is a showcase of ready-to-go plkrAPPLICATION_SUITE_NAME channels.  "
+"When adding a channel just click the <b>Browse showcase...</b> button and "
+"you can pick one out."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:29
+msgid ""
+"There is a version of the handheld veiwer specially built for high "
+"resolution devices.  If you have a high resolution device, you can choose to "
+"install the high resolution viewer. To install the high resolution viewer, "
+"from the menu select <b>Options &gt; Install Handheld Software</b>, and "
+"enter it in the <b>Type of Handheld Device</b>."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:30
+msgid ""
+"Want to download some literature to read in plkrAPPLICATION_SUITE_NAME "
+"format? Visit <b><u>www.pluckerbooks.com</u></b> and browse the hundreds of "
+"selections by title or author."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:31
+msgid ""
+"plkrAPPLICATION_SUITE_NAME is available in many translations. At any time, "
+"you can switch the language of the plkrAPPLICATION_DESKTOP_NAME program, and "
+"also install a different language for the handheld's Viewer."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:32
+msgid ""
+"Using exclusion lists can remove unwanted banners ads and unwanted filetypes "
+"from being downloaded onto your handheld."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:33
+msgid ""
+"Have a special photo you want to view on your handheld? You can use "
+"plkrAPPLICATION_SUITE_NAME to convert it to your handheld. "
+"plkrAPPLICATION_SUITE_NAME supports images in .jpg, .gif, .bmp and .png "
+"formats."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:34
+msgid ""
+"Need some assistance from fellow plkrAPPLICATION_SUITE_NAME users, or wish "
+"to help others out? Read and search our mailing lists at <b><u>http://lists."
+"rubberchicken.org</u></b>. To ask a question to the mailing list, subscribe "
+"to the list (when you subscribe you can opt to not have the messages sent to "
+"you). Once subscribed, you can ask and answer questions on <b><u>plucker-"
+"list@rubberchicken.org</u></b>."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:35
+msgid ""
+"Looking for some more handheld-friendly sites, beyond what is in the "
+"showcase? You can look through a Wiki-based listing at <b><u>http://openurls."
+"plkr.org</u></b>."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:36
+msgid ""
+"Under Linux/GTK, the help window is modal. Close the help window to return "
+"to your dialog."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:37
+msgid ""
+"You can run plkrAPPLICATION_DESKTOP_NAME with commandline parameters. This "
+"allows you to set up a job whereby plkrAPPLICATION_DESKTOP_NAME starts, "
+"update channels, and then automatically ends. See the online help for "
+"details, or execute the program with a <b>--help</b> for a short usage "
+"summary"
+msgstr ""
+
+#: resource\strings_tips\tips.txt:38
+msgid ""
+"If you are using a url pattern limit or an exclusion of a url that has a <b>?"
+"</b> in the URL, then you need to properly escape the <b>?</b> as it is a "
+"special character in regular expressions. For example, you need to escape "
+"the URL <b>http://mysite.org/index.shtml?login=tjohnston</b> as <b>http://"
+"mysite\\.org/index\\.shtml?login=tjohnston</b>"
+msgstr ""
+
+#: resource\strings_tips\tips.txt:39
+msgid ""
+"If you are unfamiliar with using regular expressions (for exclusions), in "
+"the online help, there is a short, one page summary of regular expression "
+"syntax that is most relevant to plkrAPPLICATION_SUITE_NAME."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:40
+msgid ""
+"You can switch on a full toolset for the built-in HTML editor to have one-"
+"click access to all plkrAPPLICATION_SUITE_NAME-supported HTML tags and "
+"parameters. Turn it on in <b>Preferences dialog &gt; HTML editor tab &gt; "
+"Toolbar complexity</b>."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:41
+msgid ""
+"There is two sets of exclusion lists: an exclusion that applies to all "
+"channels <b>Preferences dialog &gt; Spidering tab</b> and the exclusion list "
+"specifically for that channel <b>Configure channel dialog &gt; Limits tab</"
+"b>."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:42
+msgid ""
+"You can use plkrAPPLICATION_SUITE_NAME to retrieve a password protected site "
+"(ie one where your webbrowser pop ups up a dialog prompting for username and "
+"password) by including your username/password in the starting url. The "
+"format is: <b><tt>http://myusername:mypassword@www.somewebsite.com</tt></b>. "
+"Be aware that your username and password will now be included in the "
+"referring page if you go offsite, so to maintain security, be sure that "
+"stayonhost or stayondomain is switched on."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:43
+msgid ""
+"You can switch between displaying channel update progress in a console "
+"window or an update dialog. It can be changed in the <b>Preferences dialog "
+"&gt; Spidering tab</b>."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:44
+msgid ""
+"The <b><tt>plucker://</tt></b> protocol specifies a file location in "
+"relation to the home plucker directory."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:45
+msgid ""
+"There are two ways of securing a document: you can turn off beaming, and you "
+"can encode the file with an ID that must match the handheld's owner id, in "
+"order to be read."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:46
+msgid ""
+"In the HTML editor, if using the advanced toolbar, you can select a portion "
+"of text and then hit the desired toolbar button and the tags will be "
+"inserted on either side of the selected text."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:47
+msgid ""
+"By unchecking the <b>Include original URL of each page in output file</b> "
+"checkbox, you can slightly reduce the size of the output file, as well as "
+"protect private internet addresses or file paths."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:48
+msgid ""
+"Most complex-formatted media articles online have a \"Printable format\" "
+"link that you want to use as a starting URL, as an easy way to strip out the "
+"unneeded text."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:49
+msgid ""
+"In the Online Help, you can click the <b>A</b> button in the help's toolbar "
+"to set the fonts. You can also mark an important page, using the <b>Add "
+"bookmark</b> icon."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:50
+msgid ""
+"You can make a plkrAPPLICATION_SUITE_NAME channel into multiple categories "
+"in the viewer, by entering multiple category names separated by semicolons."
+msgstr ""
+
+#: resource\strings_tips\tips.txt:51
+msgid ""
+"You can join the plkrAPPLICATION_SUITE_NAME programming effort! It doesn't "
+"matter if you can't code. There are many different ways to help."
+msgstr ""
+
+#~ msgid "Card Directory"
+#~ msgstr "カードのディレクトリ"
+
+#~ msgid "Image dimensions"
+#~ msgstr "画像サイズ"
+
+#~ msgid "Color depth"
+#~ msgstr "色数"
+
+#~ msgid "Blocked website URLs"
+#~ msgstr "除外するURL"
+
+#~ msgid "Item to block:"
+#~ msgstr "アイテム"
+
+#~ msgid "Basic Plucker tip"
+#~ msgstr "基本的なPlucker Tips"
+
+#~ msgid "Advanced Plucker tip"
+#~ msgstr "高度なPlucker Tips"
+
+#~ msgid "Rubber chicken trivia"
+#~ msgstr "Rubber chickenのTips"
+
+#~ msgid "Plucker Desktop Help: %s"
+#~ msgstr "Plucker Desktopのヘルプ: %s"
+
+#~ msgid "Plucker Desktop Setup Wizard"
+#~ msgstr "Plucker Desktop セットアップ ウィザード"
+
+#~ msgid "Install Plucker Viewer  (required)"
+#~ msgstr "Pluckerビューワをインストール (必須)"
+
+#~ msgid "Install Plucker user's manual  (optional)"
+#~ msgstr "Plucker ユーザーマニュアルのインストール (任意)"
+
+#~ msgid "Exit Plucker Desktop"
+#~ msgstr "Plucker Desktopを終了します。"
+
+#~ msgid "Display the Plucker Desktop help contents"
+#~ msgstr "Plucker Desktopのヘルプを表\示"
+
+#~ msgid "Search Plucker Desktop help"
+#~ msgstr "Plucker Desktopヘルプ内を検索します。"
+
+#~ msgid "&Basic Plucker Desktop tip..."
+#~ msgstr "基本的なPlucker DesktopのTips(&B)"
+
+#~ msgid "Show a tip on how to get around Plucker Desktop"
+#~ msgstr "Plucker Desktopの色々なTipsを表\示します。"
+
+#~ msgid "&Advanced Plucker Desktop tip..."
+#~ msgstr "高度なPlucker Tips(&A)"
+
+#~ msgid "Show how to become a power users of Plucker Desktop"
+#~ msgstr "Plucker Desktopを使いこなす為のTipsを表\示します。"
+
+#~ msgid "&Rubber chicken trivia tip..."
+#~ msgstr "Rubber chickenのTips(&R)"
+
+#~ msgid "Show fundamental knowledge about rubber chickens"
+#~ msgstr "Rubber chickenに関する基本的な知識を表\示します。"
+
+#~ msgid "&About Plucker Desktop"
+#~ msgstr "Plucker Desktopについて(&A)"
+
+#~ msgid "Basic Plucker tips"
+#~ msgstr "基本的なPlucker Tips"
+
+#~ msgid "Advanced Plucker tips"
+#~ msgstr "高度なPlucker Tips"
+
+#~ msgid "Plucker showcase options"
+#~ msgstr "Plucker ショーケース オプション"
+
+#~ msgid "Plucker Showcase"
+#~ msgstr "Plucker ショーケース"
+
+#~ msgid ""
+#~ "Unable to access Palm Desktop software. HotSync manager syncing will be "
+#~ "disabled."
+#~ msgstr "Palm Desktopにアクセスできません。HotSyncマネージャが無効になっています。"
+
+#~ msgid ""
+#~ "Unable to access Palm Desktop software.\n"
+#~ "HotSync manager syncing will be disabled."
+#~ msgstr ""
+#~ "Palm Desktopにアクセスできません。\n"
+#~ "HotSyncマネージャが無効になっています。"
+
+#~ msgid "Initializing Plucker spidering engine..."
+#~ msgstr "Pluckerダウンロードエンジンを初期化中..."
+
+#~ msgid ""
+#~ "The following kind folks brought Plucker Desktop to their speakers of "
+#~ "their language:"
+#~ msgstr ""
+#~ "次の親切な人々はPlucker Desktopを彼らと同じ言語を\n"
+#~ "話す人達に提供してくれました。:"
+
+#~ msgid ""
+#~ "The following kind folks provided support, ideas or conversation as part "
+#~ "of the Plucker Desktop project. May they live long and plucker:"
+#~ msgstr ""
+#~ "次の親切な人々はPluckerプロジェクトをサポートし、\n"
+#~ "あるいはアイデアや意見を提供してくれました。\n"
+#~ "彼らがPluckerと友に長くあらんことを。:"
+
+#~ msgid ""
+#~ "If you feel left out, then please add yourself to the file, or send e-"
+#~ "mail to <u>plucker_desktop-dev@rubberchicken.org</u>! "
+#~ msgstr ""
+#~ "もしあなたの名前が抜けていた時は、自分でファイルに\n"
+#~ "名前を追加するか、e-mailを<u>plucker_desktop-dev@rubberchicken.org</u>までお願いします！"
+
+#~ msgid "Insert Dialog"
+#~ msgstr "テーブルの挿入"
+
+#~ msgid "Blocked file extensions"
+#~ msgstr "除外するファイルの種類(拡張子)"

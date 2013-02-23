@@ -1,0 +1,1099 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		405DD1B0063CD57F00F579EE /* Build All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1842CAB008565A280032BCF7 /* Build configuration list for PBXAggregateTarget "Build All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				405DD1C2063CD5B500F579EE /* PBXTargetDependency */,
+			);
+			name = "Build All";
+			productName = "Build All";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		1842CAFB085664390032BCF7 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842CAF7085664390032BCF7 /* AGL.framework */; };
+		1842CAFC085664390032BCF7 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842CAF8085664390032BCF7 /* IOKit.framework */; };
+		1842CAFD085664390032BCF7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842CAF9085664390032BCF7 /* OpenGL.framework */; };
+		1842CAFE085664390032BCF7 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842CAFA085664390032BCF7 /* WebKit.framework */; };
+		4086D0E9063BBC5B00D4CD53 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+		4086D0EC063BBC5B00D4CD53 /* System.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA60173504D423C000000080 /* System.framework */; };
+		409F03A10977B97B00D1030F /* libwx_mac_static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 409F039A0977B96200D1030F /* libwx_mac_static.a */; };
+		40F017470A306CAD00AC9076 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F017460A306CAD00AC9076 /* AppKit.framework */; };
+		D4EC0EEF0C34AC5F00A15736 /* about_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E2A0C34AC5F00A15736 /* about_dialog.cpp */; };
+		D4EC0EF00C34AC5F00A15736 /* about_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E2B0C34AC5F00A15736 /* about_dialog.h */; };
+		D4EC0EF10C34AC5F00A15736 /* add_channel_wizard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E2C0C34AC5F00A15736 /* add_channel_wizard.cpp */; };
+		D4EC0EF20C34AC5F00A15736 /* add_channel_wizard.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E2D0C34AC5F00A15736 /* add_channel_wizard.h */; };
+		D4EC0EF30C34AC5F00A15736 /* art_provider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E2E0C34AC5F00A15736 /* art_provider.cpp */; };
+		D4EC0EF40C34AC5F00A15736 /* art_provider.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E2F0C34AC5F00A15736 /* art_provider.h */; };
+		D4EC0EF50C34AC5F00A15736 /* blocked_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E300C34AC5F00A15736 /* blocked_dialog.cpp */; };
+		D4EC0EF60C34AC5F00A15736 /* blocked_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E310C34AC5F00A15736 /* blocked_dialog.h */; };
+		D4EC0EF70C34AC5F00A15736 /* body_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E320C34AC5F00A15736 /* body_dialog.cpp */; };
+		D4EC0EF80C34AC5F00A15736 /* body_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E330C34AC5F00A15736 /* body_dialog.h */; };
+		D4EC0EF90C34AC5F00A15736 /* bookmark_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E340C34AC5F00A15736 /* bookmark_dialog.cpp */; };
+		D4EC0EFA0C34AC5F00A15736 /* bookmark_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E350C34AC5F00A15736 /* bookmark_dialog.h */; };
+		D4EC0EFB0C34AC5F00A15736 /* build_progress_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E360C34AC5F00A15736 /* build_progress_dialog.cpp */; };
+		D4EC0EFC0C34AC5F00A15736 /* build_progress_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E370C34AC5F00A15736 /* build_progress_dialog.h */; };
+		D4EC0EFD0C34AC5F00A15736 /* build_progress_wrappers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E380C34AC5F00A15736 /* build_progress_wrappers.cpp */; };
+		D4EC0EFE0C34AC5F00A15736 /* build_progress_wrappers.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E390C34AC5F00A15736 /* build_progress_wrappers.h */; };
+		D4EC0EFF0C34AC5F00A15736 /* channel_check_listctrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E3A0C34AC5F00A15736 /* channel_check_listctrl.cpp */; };
+		D4EC0F000C34AC5F00A15736 /* channel_check_listctrl.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E3B0C34AC5F00A15736 /* channel_check_listctrl.h */; };
+		D4EC0F010C34AC5F00A15736 /* channel_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E3C0C34AC5F00A15736 /* channel_dialog.cpp */; };
+		D4EC0F020C34AC5F00A15736 /* channel_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E3D0C34AC5F00A15736 /* channel_dialog.h */; };
+		D4EC0F030C34AC5F00A15736 /* channel_list_wizardpage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E3E0C34AC5F00A15736 /* channel_list_wizardpage.cpp */; };
+		D4EC0F040C34AC5F00A15736 /* channel_list_wizardpage.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E3F0C34AC5F00A15736 /* channel_list_wizardpage.h */; };
+		D4EC0F050C34AC5F00A15736 /* channel_listctrl_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E400C34AC5F00A15736 /* channel_listctrl_base.cpp */; };
+		D4EC0F060C34AC5F00A15736 /* channel_listctrl_base.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E410C34AC5F00A15736 /* channel_listctrl_base.h */; };
+		D4EC0F070C34AC5F00A15736 /* channel_type.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E420C34AC5F00A15736 /* channel_type.cpp */; };
+		D4EC0F080C34AC5F00A15736 /* channel_type.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E430C34AC5F00A15736 /* channel_type.h */; };
+		D4EC0F090C34AC5F00A15736 /* checkbox_message_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E440C34AC5F00A15736 /* checkbox_message_dialog.cpp */; };
+		D4EC0F0A0C34AC5F00A15736 /* checkbox_message_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E450C34AC5F00A15736 /* checkbox_message_dialog.h */; };
+		D4EC0F0B0C34AC5F00A15736 /* checkbox_wizardpage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E460C34AC5F00A15736 /* checkbox_wizardpage.cpp */; };
+		D4EC0F0C0C34AC5F00A15736 /* checkbox_wizardpage.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E470C34AC5F00A15736 /* checkbox_wizardpage.h */; };
+		D4EC0F0D0C34AC5F00A15736 /* commandline_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E480C34AC5F00A15736 /* commandline_parser.cpp */; };
+		D4EC0F0E0C34AC5F00A15736 /* commandline_parser.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E490C34AC5F00A15736 /* commandline_parser.h */; };
+		D4EC0F0F0C34AC5F00A15736 /* configuration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E4A0C34AC5F00A15736 /* configuration.cpp */; };
+		D4EC0F100C34AC5F00A15736 /* configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E4B0C34AC5F00A15736 /* configuration.h */; };
+		D4EC0F150C34AC5F00A15736 /* destinations_wizardpage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E510C34AC5F00A15736 /* destinations_wizardpage.cpp */; };
+		D4EC0F160C34AC5F00A15736 /* destinations_wizardpage.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E520C34AC5F00A15736 /* destinations_wizardpage.h */; };
+		D4EC0F170C34AC5F00A15736 /* details_progress_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E530C34AC5F00A15736 /* details_progress_dialog.cpp */; };
+		D4EC0F180C34AC5F00A15736 /* details_progress_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E540C34AC5F00A15736 /* details_progress_dialog.h */; };
+		D4EC0F190C34AC5F00A15736 /* details_progress_listbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E550C34AC5F00A15736 /* details_progress_listbox.cpp */; };
+		D4EC0F1A0C34AC5F00A15736 /* details_progress_listbox.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E560C34AC5F00A15736 /* details_progress_listbox.h */; };
+		D4EC0F380C34AC5F00A15736 /* editor_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E760C34AC5F00A15736 /* editor_dialog.cpp */; };
+		D4EC0F390C34AC5F00A15736 /* editor_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E770C34AC5F00A15736 /* editor_dialog.h */; };
+		D4EC0F3A0C34AC5F00A15736 /* email_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E780C34AC5F00A15736 /* email_dialog.cpp */; };
+		D4EC0F3B0C34AC5F00A15736 /* email_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E790C34AC5F00A15736 /* email_dialog.h */; };
+		D4EC0F3C0C34AC5F00A15736 /* exclusion_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E7A0C34AC5F00A15736 /* exclusion_dialog.cpp */; };
+		D4EC0F3D0C34AC5F00A15736 /* exclusion_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E7B0C34AC5F00A15736 /* exclusion_dialog.h */; };
+		D4EC0F3E0C34AC5F00A15736 /* exclusion_listctrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E7C0C34AC5F00A15736 /* exclusion_listctrl.cpp */; };
+		D4EC0F3F0C34AC5F00A15736 /* exclusion_listctrl.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E7D0C34AC5F00A15736 /* exclusion_listctrl.h */; };
+		D4EC0F400C34AC5F00A15736 /* font_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E7E0C34AC5F00A15736 /* font_dialog.cpp */; };
+		D4EC0F410C34AC5F00A15736 /* font_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E7F0C34AC5F00A15736 /* font_dialog.h */; };
+		D4EC0F420C34AC5F00A15736 /* handheld_dest_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E800C34AC5F00A15736 /* handheld_dest_dialog.cpp */; };
+		D4EC0F430C34AC5F00A15736 /* handheld_dest_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E810C34AC5F00A15736 /* handheld_dest_dialog.h */; };
+		D4EC0F440C34AC5F00A15736 /* handheld_dest_type.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E820C34AC5F00A15736 /* handheld_dest_type.cpp */; };
+		D4EC0F450C34AC5F00A15736 /* handheld_dest_type.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E830C34AC5F00A15736 /* handheld_dest_type.h */; };
+		D4EC0F460C34AC5F00A15736 /* handheld_dest_wrappers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E840C34AC5F00A15736 /* handheld_dest_wrappers.cpp */; };
+		D4EC0F470C34AC5F00A15736 /* handheld_dest_wrappers.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E850C34AC5F00A15736 /* handheld_dest_wrappers.h */; };
+		D4EC0F480C34AC5F00A15736 /* help_controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E860C34AC5F00A15736 /* help_controller.cpp */; };
+		D4EC0F490C34AC5F00A15736 /* help_controller.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E870C34AC5F00A15736 /* help_controller.h */; };
+		D4EC0F4A0C34AC5F00A15736 /* hhictrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E880C34AC5F00A15736 /* hhictrl.cpp */; };
+		D4EC0F4B0C34AC5F00A15736 /* hhictrl.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E890C34AC5F00A15736 /* hhictrl.h */; };
+		D4EC0F4C0C34AC5F00A15736 /* hr_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E8A0C34AC5F00A15736 /* hr_dialog.cpp */; };
+		D4EC0F4D0C34AC5F00A15736 /* hr_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E8B0C34AC5F00A15736 /* hr_dialog.h */; };
+		D4EC0F4E0C34AC5F00A15736 /* html_tip_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E8C0C34AC5F00A15736 /* html_tip_dialog.cpp */; };
+		D4EC0F4F0C34AC5F00A15736 /* html_tip_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E8D0C34AC5F00A15736 /* html_tip_dialog.h */; };
+		D4EC0F500C34AC5F00A15736 /* hyperlink_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E8E0C34AC5F00A15736 /* hyperlink_dialog.cpp */; };
+		D4EC0F510C34AC5F00A15736 /* hyperlink_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E8F0C34AC5F00A15736 /* hyperlink_dialog.h */; };
+		D4EC0F520C34AC5F00A15736 /* image_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E900C34AC5F00A15736 /* image_dialog.cpp */; };
+		D4EC0F530C34AC5F00A15736 /* image_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E910C34AC5F00A15736 /* image_dialog.h */; };
+		D4EC0F540C34AC5F00A15736 /* image_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E920C34AC5F00A15736 /* image_list.cpp */; };
+		D4EC0F550C34AC5F00A15736 /* image_list.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E930C34AC5F00A15736 /* image_list.h */; };
+		D4EC0F560C34AC5F00A15736 /* import_controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E940C34AC5F00A15736 /* import_controller.cpp */; };
+		D4EC0F570C34AC5F00A15736 /* import_controller.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E950C34AC5F00A15736 /* import_controller.h */; };
+		D4EC0F580C34AC5F00A15736 /* install_viewer_wizard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E960C34AC5F00A15736 /* install_viewer_wizard.cpp */; };
+		D4EC0F590C34AC5F00A15736 /* install_viewer_wizard.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E970C34AC5F00A15736 /* install_viewer_wizard.h */; };
+		D4EC0F5A0C34AC5F00A15736 /* internationalization.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E980C34AC5F00A15736 /* internationalization.cpp */; };
+		D4EC0F5B0C34AC5F00A15736 /* internationalization.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E990C34AC5F00A15736 /* internationalization.h */; };
+		D4EC0F5C0C34AC5F00A15736 /* limits_wizardpage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E9A0C34AC5F00A15736 /* limits_wizardpage.cpp */; };
+		D4EC0F5D0C34AC5F00A15736 /* limits_wizardpage.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E9B0C34AC5F00A15736 /* limits_wizardpage.h */; };
+		D4EC0F5E0C34AC5F00A15736 /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E9C0C34AC5F00A15736 /* main_frame.cpp */; };
+		D4EC0F5F0C34AC5F00A15736 /* main_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E9D0C34AC5F00A15736 /* main_frame.h */; };
+		D4EC0F600C34AC5F00A15736 /* main_listctrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0E9E0C34AC5F00A15736 /* main_listctrl.cpp */; };
+		D4EC0F610C34AC5F00A15736 /* main_listctrl.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0E9F0C34AC5F00A15736 /* main_listctrl.h */; };
+		D4EC0F620C34AC5F00A15736 /* message_wizardpage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EA00C34AC5F00A15736 /* message_wizardpage.cpp */; };
+		D4EC0F630C34AC5F00A15736 /* message_wizardpage.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EA10C34AC5F00A15736 /* message_wizardpage.h */; };
+		D4EC0F640C34AC5F00A15736 /* ol_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EA20C34AC5F00A15736 /* ol_dialog.cpp */; };
+		D4EC0F650C34AC5F00A15736 /* ol_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EA30C34AC5F00A15736 /* ol_dialog.h */; };
+		D4EC0F660C34AC5F00A15736 /* os_msw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EA40C34AC5F00A15736 /* os_msw.cpp */; };
+		D4EC0F670C34AC5F00A15736 /* os_msw.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EA50C34AC5F00A15736 /* os_msw.h */; };
+		D4EC0F680C34AC5F00A15736 /* palm_installer_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EA60C34AC5F00A15736 /* palm_installer_base.cpp */; };
+		D4EC0F690C34AC5F00A15736 /* palm_installer_base.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EA70C34AC5F00A15736 /* palm_installer_base.h */; };
+		D4EC0F6A0C34AC5F00A15736 /* palm_installer_gtk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EA80C34AC5F00A15736 /* palm_installer_gtk.cpp */; };
+		D4EC0F6B0C34AC5F00A15736 /* palm_installer_gtk.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EA90C34AC5F00A15736 /* palm_installer_gtk.h */; };
+		D4EC0F6C0C34AC5F00A15736 /* palm_installer_mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EAA0C34AC5F00A15736 /* palm_installer_mac.cpp */; };
+		D4EC0F6D0C34AC5F00A15736 /* palm_installer_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EAB0C34AC5F00A15736 /* palm_installer_mac.h */; };
+		D4EC0F6E0C34AC5F00A15736 /* palm_installer_msw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EAC0C34AC5F00A15736 /* palm_installer_msw.cpp */; };
+		D4EC0F6F0C34AC5F00A15736 /* palm_installer_msw.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EAD0C34AC5F00A15736 /* palm_installer_msw.h */; };
+		D4EC0F700C34AC5F00A15736 /* palm_installer.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EAE0C34AC5F00A15736 /* palm_installer.h */; };
+		D4EC0F710C34AC5F00A15736 /* pda_listctrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EAF0C34AC5F00A15736 /* pda_listctrl.cpp */; };
+		D4EC0F720C34AC5F00A15736 /* pda_listctrl.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EB00C34AC5F00A15736 /* pda_listctrl.h */; };
+		D4EC0F730C34AC5F00A15736 /* piped_process.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EB10C34AC5F00A15736 /* piped_process.cpp */; };
+		D4EC0F740C34AC5F00A15736 /* piped_process.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EB20C34AC5F00A15736 /* piped_process.h */; };
+		D4EC0F750C34AC5F00A15736 /* plucker_controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EB30C34AC5F00A15736 /* plucker_controller.cpp */; };
+		D4EC0F760C34AC5F00A15736 /* plucker_controller.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EB40C34AC5F00A15736 /* plucker_controller.h */; };
+		D4EC0F770C34AC5F00A15736 /* plucker_defines.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EB50C34AC5F00A15736 /* plucker_defines.h */; };
+		D4EC0F780C34AC5F00A15736 /* plucker_wizard_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EB60C34AC5F00A15736 /* plucker_wizard_base.cpp */; };
+		D4EC0F790C34AC5F00A15736 /* plucker_wizard_base.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EB70C34AC5F00A15736 /* plucker_wizard_base.h */; };
+		D4EC0F7A0C34AC5F00A15736 /* plucker_wizard_wrappers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EB80C34AC5F00A15736 /* plucker_wizard_wrappers.cpp */; };
+		D4EC0F7B0C34AC5F00A15736 /* plucker_wizard_wrappers.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EB90C34AC5F00A15736 /* plucker_wizard_wrappers.h */; };
+		D4EC0F7C0C34AC5F00A15736 /* plucker-desktop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EBA0C34AC5F00A15736 /* plucker-desktop.cpp */; };
+		D4EC0F7D0C34AC5F00A15736 /* plucker-desktop.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EBB0C34AC5F00A15736 /* plucker-desktop.h */; };
+		D4EC0F7E0C34AC5F00A15736 /* popup_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EBC0C34AC5F00A15736 /* popup_dialog.cpp */; };
+		D4EC0F7F0C34AC5F00A15736 /* popup_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EBD0C34AC5F00A15736 /* popup_dialog.h */; };
+		D4EC0F800C34AC5F00A15736 /* preferences_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EBE0C34AC5F00A15736 /* preferences_dialog.cpp */; };
+		D4EC0F810C34AC5F00A15736 /* preferences_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EBF0C34AC5F00A15736 /* preferences_dialog.h */; };
+		D4EC0F820C34AC5F00A15736 /* process_progress_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EC00C34AC5F00A15736 /* process_progress_dialog.cpp */; };
+		D4EC0F830C34AC5F00A15736 /* process_progress_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EC10C34AC5F00A15736 /* process_progress_dialog.h */; };
+		D4EC0F840C34AC5F00A15736 /* processed_tip_provider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EC20C34AC5F00A15736 /* processed_tip_provider.cpp */; };
+		D4EC0F850C34AC5F00A15736 /* processed_tip_provider.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EC30C34AC5F00A15736 /* processed_tip_provider.h */; };
+		D4EC0F860C34AC5F00A15736 /* proxy_prompt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EC40C34AC5F00A15736 /* proxy_prompt.cpp */; };
+		D4EC0F870C34AC5F00A15736 /* proxy_prompt.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EC50C34AC5F00A15736 /* proxy_prompt.h */; };
+		D4EC0F880C34AC5F00A15736 /* proxy_wizardpage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EC60C34AC5F00A15736 /* proxy_wizardpage.cpp */; };
+		D4EC0F890C34AC5F00A15736 /* proxy_wizardpage.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EC70C34AC5F00A15736 /* proxy_wizardpage.h */; };
+		D4EC0F8A0C34AC5F00A15736 /* setup_wizard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EC80C34AC5F00A15736 /* setup_wizard.cpp */; };
+		D4EC0F8B0C34AC5F00A15736 /* setup_wizard.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EC90C34AC5F00A15736 /* setup_wizard.h */; };
+		D4EC0F8C0C34AC5F00A15736 /* setup.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0ECA0C34AC5F00A15736 /* setup.h */; };
+		D4EC0F8D0C34AC5F00A15736 /* showcase_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0ECB0C34AC5F00A15736 /* showcase_dialog.cpp */; };
+		D4EC0F8E0C34AC5F00A15736 /* showcase_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0ECC0C34AC5F00A15736 /* showcase_dialog.h */; };
+		D4EC0F8F0C34AC5F00A15736 /* showcase_listctrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0ECD0C34AC5F00A15736 /* showcase_listctrl.cpp */; };
+		D4EC0F900C34AC5F00A15736 /* showcase_listctrl.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0ECE0C34AC5F00A15736 /* showcase_listctrl.h */; };
+		D4EC0F910C34AC5F00A15736 /* showcase_splitterwindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0ECF0C34AC5F00A15736 /* showcase_splitterwindow.cpp */; };
+		D4EC0F920C34AC5F00A15736 /* showcase_splitterwindow.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0ED00C34AC5F00A15736 /* showcase_splitterwindow.h */; };
+		D4EC0F930C34AC5F00A15736 /* span_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0ED10C34AC5F00A15736 /* span_dialog.cpp */; };
+		D4EC0F940C34AC5F00A15736 /* span_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0ED20C34AC5F00A15736 /* span_dialog.h */; };
+		D4EC0F950C34AC5F00A15736 /* splashscreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0ED30C34AC5F00A15736 /* splashscreen.cpp */; };
+		D4EC0F960C34AC5F00A15736 /* splashscreen.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0ED40C34AC5F00A15736 /* splashscreen.h */; };
+		D4EC0F970C34AC5F00A15736 /* starting_page_wizardpage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0ED50C34AC5F00A15736 /* starting_page_wizardpage.cpp */; };
+		D4EC0F980C34AC5F00A15736 /* starting_page_wizardpage.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0ED60C34AC5F00A15736 /* starting_page_wizardpage.h */; };
+		D4EC0F990C34AC5F00A15736 /* startup_tips.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0ED70C34AC5F00A15736 /* startup_tips.cpp */; };
+		D4EC0F9A0C34AC5F00A15736 /* startup_tips.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0ED80C34AC5F00A15736 /* startup_tips.h */; };
+		D4EC0F9B0C34AC5F00A15736 /* table_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0ED90C34AC5F00A15736 /* table_dialog.cpp */; };
+		D4EC0F9C0C34AC5F00A15736 /* table_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EDA0C34AC5F00A15736 /* table_dialog.h */; };
+		D4EC0F9D0C34AC5F00A15736 /* td_th_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EDB0C34AC5F00A15736 /* td_th_dialog.cpp */; };
+		D4EC0F9E0C34AC5F00A15736 /* td_th_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EDC0C34AC5F00A15736 /* td_th_dialog.h */; };
+		D4EC0F9F0C34AC5F00A15736 /* textctrl_wizardpage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EDD0C34AC5F00A15736 /* textctrl_wizardpage.cpp */; };
+		D4EC0FA00C34AC5F00A15736 /* textctrl_wizardpage.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EDE0C34AC5F00A15736 /* textctrl_wizardpage.h */; };
+		D4EC0FA10C34AC5F00A15736 /* time_control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EDF0C34AC5F00A15736 /* time_control.cpp */; };
+		D4EC0FA20C34AC5F00A15736 /* time_control.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EE00C34AC5F00A15736 /* time_control.h */; };
+		D4EC0FA30C34AC5F00A15736 /* ul_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EE10C34AC5F00A15736 /* ul_dialog.cpp */; };
+		D4EC0FA40C34AC5F00A15736 /* ul_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EE20C34AC5F00A15736 /* ul_dialog.h */; };
+		D4EC0FA50C34AC5F00A15736 /* utils_clipboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EE30C34AC5F00A15736 /* utils_clipboard.cpp */; };
+		D4EC0FA60C34AC5F00A15736 /* utils_clipboard.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EE40C34AC5F00A15736 /* utils_clipboard.h */; };
+		D4EC0FA70C34AC5F00A15736 /* utils_controls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EE50C34AC5F00A15736 /* utils_controls.cpp */; };
+		D4EC0FA80C34AC5F00A15736 /* utils_controls.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EE60C34AC5F00A15736 /* utils_controls.h */; };
+		D4EC0FA90C34AC5F00A15736 /* utils_datetime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EE70C34AC5F00A15736 /* utils_datetime.cpp */; };
+		D4EC0FAA0C34AC5F00A15736 /* utils_datetime.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EE80C34AC5F00A15736 /* utils_datetime.h */; };
+		D4EC0FAB0C34AC5F00A15736 /* utils_execute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EE90C34AC5F00A15736 /* utils_execute.cpp */; };
+		D4EC0FAC0C34AC5F00A15736 /* utils_execute.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EEA0C34AC5F00A15736 /* utils_execute.h */; };
+		D4EC0FAD0C34AC5F00A15736 /* utils_string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EEB0C34AC5F00A15736 /* utils_string.cpp */; };
+		D4EC0FAE0C34AC5F00A15736 /* utils_string.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EEC0C34AC5F00A15736 /* utils_string.h */; };
+		D4EC0FAF0C34AC5F00A15736 /* viewer_wizardpage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4EC0EED0C34AC5F00A15736 /* viewer_wizardpage.cpp */; };
+		D4EC0FB00C34AC5F00A15736 /* viewer_wizardpage.h in Headers */ = {isa = PBXBuildFile; fileRef = D4EC0EEE0C34AC5F00A15736 /* viewer_wizardpage.h */; };
+		D4EC0FB90C34ADBD00A15736 /* application.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4EC0FB80C34ADBD00A15736 /* application.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		405DD1C1063CD5B500F579EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20286C28FDCF999611CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4086D0E2063BBC5B00D4CD53;
+			remoteInfo = StaticDebug;
+		};
+		409F03990977B96200D1030F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 409F03930977B96200D1030F /* wxWindows.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4086C8CB063AB30000D4CD53;
+			remoteInfo = static;
+		};
+		40F017220A3067FE00AC9076 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 409F03930977B96200D1030F /* wxWindows.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4086CBE1063AB30000D4CD53;
+			remoteInfo = dynamic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1842CAF7085664390032BCF7 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
+		1842CAF8085664390032BCF7 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		1842CAF9085664390032BCF7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		1842CAFA085664390032BCF7 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		4086D0EF063BBC5B00D4CD53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Info.plist; path = installer/osx/application_bundle_files/Info.plist; sourceTree = "<group>"; };
+		409F03930977B96200D1030F /* wxWindows.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wxWindows.xcodeproj; path = ../../src/wxWindows.xcodeproj; sourceTree = SOURCE_ROOT; };
+		40F017460A306CAD00AC9076 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		CA60173504D423C000000080 /* System.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = System.framework; path = /System/Library/Frameworks/System.framework; sourceTree = "<absolute>"; };
+		D4EC0E2A0C34AC5F00A15736 /* about_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = about_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E2B0C34AC5F00A15736 /* about_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = about_dialog.h; sourceTree = "<group>"; };
+		D4EC0E2C0C34AC5F00A15736 /* add_channel_wizard.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = add_channel_wizard.cpp; sourceTree = "<group>"; };
+		D4EC0E2D0C34AC5F00A15736 /* add_channel_wizard.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = add_channel_wizard.h; sourceTree = "<group>"; };
+		D4EC0E2E0C34AC5F00A15736 /* art_provider.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = art_provider.cpp; sourceTree = "<group>"; };
+		D4EC0E2F0C34AC5F00A15736 /* art_provider.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = art_provider.h; sourceTree = "<group>"; };
+		D4EC0E300C34AC5F00A15736 /* blocked_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = blocked_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E310C34AC5F00A15736 /* blocked_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = blocked_dialog.h; sourceTree = "<group>"; };
+		D4EC0E320C34AC5F00A15736 /* body_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = body_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E330C34AC5F00A15736 /* body_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = body_dialog.h; sourceTree = "<group>"; };
+		D4EC0E340C34AC5F00A15736 /* bookmark_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = bookmark_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E350C34AC5F00A15736 /* bookmark_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = bookmark_dialog.h; sourceTree = "<group>"; };
+		D4EC0E360C34AC5F00A15736 /* build_progress_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = build_progress_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E370C34AC5F00A15736 /* build_progress_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = build_progress_dialog.h; sourceTree = "<group>"; };
+		D4EC0E380C34AC5F00A15736 /* build_progress_wrappers.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = build_progress_wrappers.cpp; sourceTree = "<group>"; };
+		D4EC0E390C34AC5F00A15736 /* build_progress_wrappers.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = build_progress_wrappers.h; sourceTree = "<group>"; };
+		D4EC0E3A0C34AC5F00A15736 /* channel_check_listctrl.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = channel_check_listctrl.cpp; sourceTree = "<group>"; };
+		D4EC0E3B0C34AC5F00A15736 /* channel_check_listctrl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = channel_check_listctrl.h; sourceTree = "<group>"; };
+		D4EC0E3C0C34AC5F00A15736 /* channel_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = channel_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E3D0C34AC5F00A15736 /* channel_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = channel_dialog.h; sourceTree = "<group>"; };
+		D4EC0E3E0C34AC5F00A15736 /* channel_list_wizardpage.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = channel_list_wizardpage.cpp; sourceTree = "<group>"; };
+		D4EC0E3F0C34AC5F00A15736 /* channel_list_wizardpage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = channel_list_wizardpage.h; sourceTree = "<group>"; };
+		D4EC0E400C34AC5F00A15736 /* channel_listctrl_base.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = channel_listctrl_base.cpp; sourceTree = "<group>"; };
+		D4EC0E410C34AC5F00A15736 /* channel_listctrl_base.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = channel_listctrl_base.h; sourceTree = "<group>"; };
+		D4EC0E420C34AC5F00A15736 /* channel_type.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = channel_type.cpp; sourceTree = "<group>"; };
+		D4EC0E430C34AC5F00A15736 /* channel_type.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = channel_type.h; sourceTree = "<group>"; };
+		D4EC0E440C34AC5F00A15736 /* checkbox_message_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = checkbox_message_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E450C34AC5F00A15736 /* checkbox_message_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = checkbox_message_dialog.h; sourceTree = "<group>"; };
+		D4EC0E460C34AC5F00A15736 /* checkbox_wizardpage.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = checkbox_wizardpage.cpp; sourceTree = "<group>"; };
+		D4EC0E470C34AC5F00A15736 /* checkbox_wizardpage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = checkbox_wizardpage.h; sourceTree = "<group>"; };
+		D4EC0E480C34AC5F00A15736 /* commandline_parser.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = commandline_parser.cpp; sourceTree = "<group>"; };
+		D4EC0E490C34AC5F00A15736 /* commandline_parser.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = commandline_parser.h; sourceTree = "<group>"; };
+		D4EC0E4A0C34AC5F00A15736 /* configuration.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = configuration.cpp; sourceTree = "<group>"; };
+		D4EC0E4B0C34AC5F00A15736 /* configuration.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = configuration.h; sourceTree = "<group>"; };
+		D4EC0E510C34AC5F00A15736 /* destinations_wizardpage.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = destinations_wizardpage.cpp; sourceTree = "<group>"; };
+		D4EC0E520C34AC5F00A15736 /* destinations_wizardpage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = destinations_wizardpage.h; sourceTree = "<group>"; };
+		D4EC0E530C34AC5F00A15736 /* details_progress_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = details_progress_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E540C34AC5F00A15736 /* details_progress_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = details_progress_dialog.h; sourceTree = "<group>"; };
+		D4EC0E550C34AC5F00A15736 /* details_progress_listbox.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = details_progress_listbox.cpp; sourceTree = "<group>"; };
+		D4EC0E560C34AC5F00A15736 /* details_progress_listbox.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = details_progress_listbox.h; sourceTree = "<group>"; };
+		D4EC0E760C34AC5F00A15736 /* editor_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = editor_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E770C34AC5F00A15736 /* editor_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = editor_dialog.h; sourceTree = "<group>"; };
+		D4EC0E780C34AC5F00A15736 /* email_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = email_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E790C34AC5F00A15736 /* email_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = email_dialog.h; sourceTree = "<group>"; };
+		D4EC0E7A0C34AC5F00A15736 /* exclusion_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = exclusion_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E7B0C34AC5F00A15736 /* exclusion_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = exclusion_dialog.h; sourceTree = "<group>"; };
+		D4EC0E7C0C34AC5F00A15736 /* exclusion_listctrl.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = exclusion_listctrl.cpp; sourceTree = "<group>"; };
+		D4EC0E7D0C34AC5F00A15736 /* exclusion_listctrl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = exclusion_listctrl.h; sourceTree = "<group>"; };
+		D4EC0E7E0C34AC5F00A15736 /* font_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = font_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E7F0C34AC5F00A15736 /* font_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = font_dialog.h; sourceTree = "<group>"; };
+		D4EC0E800C34AC5F00A15736 /* handheld_dest_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = handheld_dest_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E810C34AC5F00A15736 /* handheld_dest_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = handheld_dest_dialog.h; sourceTree = "<group>"; };
+		D4EC0E820C34AC5F00A15736 /* handheld_dest_type.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = handheld_dest_type.cpp; sourceTree = "<group>"; };
+		D4EC0E830C34AC5F00A15736 /* handheld_dest_type.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = handheld_dest_type.h; sourceTree = "<group>"; };
+		D4EC0E840C34AC5F00A15736 /* handheld_dest_wrappers.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = handheld_dest_wrappers.cpp; sourceTree = "<group>"; };
+		D4EC0E850C34AC5F00A15736 /* handheld_dest_wrappers.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = handheld_dest_wrappers.h; sourceTree = "<group>"; };
+		D4EC0E860C34AC5F00A15736 /* help_controller.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = help_controller.cpp; sourceTree = "<group>"; };
+		D4EC0E870C34AC5F00A15736 /* help_controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = help_controller.h; sourceTree = "<group>"; };
+		D4EC0E880C34AC5F00A15736 /* hhictrl.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = hhictrl.cpp; sourceTree = "<group>"; };
+		D4EC0E890C34AC5F00A15736 /* hhictrl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = hhictrl.h; sourceTree = "<group>"; };
+		D4EC0E8A0C34AC5F00A15736 /* hr_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = hr_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E8B0C34AC5F00A15736 /* hr_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = hr_dialog.h; sourceTree = "<group>"; };
+		D4EC0E8C0C34AC5F00A15736 /* html_tip_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = html_tip_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E8D0C34AC5F00A15736 /* html_tip_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = html_tip_dialog.h; sourceTree = "<group>"; };
+		D4EC0E8E0C34AC5F00A15736 /* hyperlink_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = hyperlink_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E8F0C34AC5F00A15736 /* hyperlink_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = hyperlink_dialog.h; sourceTree = "<group>"; };
+		D4EC0E900C34AC5F00A15736 /* image_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = image_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0E910C34AC5F00A15736 /* image_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = image_dialog.h; sourceTree = "<group>"; };
+		D4EC0E920C34AC5F00A15736 /* image_list.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = image_list.cpp; sourceTree = "<group>"; };
+		D4EC0E930C34AC5F00A15736 /* image_list.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = image_list.h; sourceTree = "<group>"; };
+		D4EC0E940C34AC5F00A15736 /* import_controller.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = import_controller.cpp; sourceTree = "<group>"; };
+		D4EC0E950C34AC5F00A15736 /* import_controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = import_controller.h; sourceTree = "<group>"; };
+		D4EC0E960C34AC5F00A15736 /* install_viewer_wizard.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = install_viewer_wizard.cpp; sourceTree = "<group>"; };
+		D4EC0E970C34AC5F00A15736 /* install_viewer_wizard.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = install_viewer_wizard.h; sourceTree = "<group>"; };
+		D4EC0E980C34AC5F00A15736 /* internationalization.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = internationalization.cpp; sourceTree = "<group>"; };
+		D4EC0E990C34AC5F00A15736 /* internationalization.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = internationalization.h; sourceTree = "<group>"; };
+		D4EC0E9A0C34AC5F00A15736 /* limits_wizardpage.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = limits_wizardpage.cpp; sourceTree = "<group>"; };
+		D4EC0E9B0C34AC5F00A15736 /* limits_wizardpage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = limits_wizardpage.h; sourceTree = "<group>"; };
+		D4EC0E9C0C34AC5F00A15736 /* main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = main_frame.cpp; sourceTree = "<group>"; };
+		D4EC0E9D0C34AC5F00A15736 /* main_frame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = main_frame.h; sourceTree = "<group>"; };
+		D4EC0E9E0C34AC5F00A15736 /* main_listctrl.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = main_listctrl.cpp; sourceTree = "<group>"; };
+		D4EC0E9F0C34AC5F00A15736 /* main_listctrl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = main_listctrl.h; sourceTree = "<group>"; };
+		D4EC0EA00C34AC5F00A15736 /* message_wizardpage.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = message_wizardpage.cpp; sourceTree = "<group>"; };
+		D4EC0EA10C34AC5F00A15736 /* message_wizardpage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = message_wizardpage.h; sourceTree = "<group>"; };
+		D4EC0EA20C34AC5F00A15736 /* ol_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = ol_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0EA30C34AC5F00A15736 /* ol_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ol_dialog.h; sourceTree = "<group>"; };
+		D4EC0EA40C34AC5F00A15736 /* os_msw.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = os_msw.cpp; sourceTree = "<group>"; };
+		D4EC0EA50C34AC5F00A15736 /* os_msw.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = os_msw.h; sourceTree = "<group>"; };
+		D4EC0EA60C34AC5F00A15736 /* palm_installer_base.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = palm_installer_base.cpp; sourceTree = "<group>"; };
+		D4EC0EA70C34AC5F00A15736 /* palm_installer_base.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = palm_installer_base.h; sourceTree = "<group>"; };
+		D4EC0EA80C34AC5F00A15736 /* palm_installer_gtk.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = palm_installer_gtk.cpp; sourceTree = "<group>"; };
+		D4EC0EA90C34AC5F00A15736 /* palm_installer_gtk.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = palm_installer_gtk.h; sourceTree = "<group>"; };
+		D4EC0EAA0C34AC5F00A15736 /* palm_installer_mac.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = palm_installer_mac.cpp; sourceTree = "<group>"; };
+		D4EC0EAB0C34AC5F00A15736 /* palm_installer_mac.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = palm_installer_mac.h; sourceTree = "<group>"; };
+		D4EC0EAC0C34AC5F00A15736 /* palm_installer_msw.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = palm_installer_msw.cpp; sourceTree = "<group>"; };
+		D4EC0EAD0C34AC5F00A15736 /* palm_installer_msw.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = palm_installer_msw.h; sourceTree = "<group>"; };
+		D4EC0EAE0C34AC5F00A15736 /* palm_installer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = palm_installer.h; sourceTree = "<group>"; };
+		D4EC0EAF0C34AC5F00A15736 /* pda_listctrl.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = pda_listctrl.cpp; sourceTree = "<group>"; };
+		D4EC0EB00C34AC5F00A15736 /* pda_listctrl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = pda_listctrl.h; sourceTree = "<group>"; };
+		D4EC0EB10C34AC5F00A15736 /* piped_process.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = piped_process.cpp; sourceTree = "<group>"; };
+		D4EC0EB20C34AC5F00A15736 /* piped_process.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = piped_process.h; sourceTree = "<group>"; };
+		D4EC0EB30C34AC5F00A15736 /* plucker_controller.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = plucker_controller.cpp; sourceTree = "<group>"; };
+		D4EC0EB40C34AC5F00A15736 /* plucker_controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = plucker_controller.h; sourceTree = "<group>"; };
+		D4EC0EB50C34AC5F00A15736 /* plucker_defines.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = plucker_defines.h; sourceTree = "<group>"; };
+		D4EC0EB60C34AC5F00A15736 /* plucker_wizard_base.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = plucker_wizard_base.cpp; sourceTree = "<group>"; };
+		D4EC0EB70C34AC5F00A15736 /* plucker_wizard_base.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = plucker_wizard_base.h; sourceTree = "<group>"; };
+		D4EC0EB80C34AC5F00A15736 /* plucker_wizard_wrappers.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = plucker_wizard_wrappers.cpp; sourceTree = "<group>"; };
+		D4EC0EB90C34AC5F00A15736 /* plucker_wizard_wrappers.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = plucker_wizard_wrappers.h; sourceTree = "<group>"; };
+		D4EC0EBA0C34AC5F00A15736 /* plucker-desktop.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = "plucker-desktop.cpp"; sourceTree = "<group>"; };
+		D4EC0EBB0C34AC5F00A15736 /* plucker-desktop.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "plucker-desktop.h"; sourceTree = "<group>"; };
+		D4EC0EBC0C34AC5F00A15736 /* popup_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = popup_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0EBD0C34AC5F00A15736 /* popup_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = popup_dialog.h; sourceTree = "<group>"; };
+		D4EC0EBE0C34AC5F00A15736 /* preferences_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = preferences_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0EBF0C34AC5F00A15736 /* preferences_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = preferences_dialog.h; sourceTree = "<group>"; };
+		D4EC0EC00C34AC5F00A15736 /* process_progress_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = process_progress_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0EC10C34AC5F00A15736 /* process_progress_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = process_progress_dialog.h; sourceTree = "<group>"; };
+		D4EC0EC20C34AC5F00A15736 /* processed_tip_provider.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = processed_tip_provider.cpp; sourceTree = "<group>"; };
+		D4EC0EC30C34AC5F00A15736 /* processed_tip_provider.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = processed_tip_provider.h; sourceTree = "<group>"; };
+		D4EC0EC40C34AC5F00A15736 /* proxy_prompt.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = proxy_prompt.cpp; sourceTree = "<group>"; };
+		D4EC0EC50C34AC5F00A15736 /* proxy_prompt.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = proxy_prompt.h; sourceTree = "<group>"; };
+		D4EC0EC60C34AC5F00A15736 /* proxy_wizardpage.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = proxy_wizardpage.cpp; sourceTree = "<group>"; };
+		D4EC0EC70C34AC5F00A15736 /* proxy_wizardpage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = proxy_wizardpage.h; sourceTree = "<group>"; };
+		D4EC0EC80C34AC5F00A15736 /* setup_wizard.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = setup_wizard.cpp; sourceTree = "<group>"; };
+		D4EC0EC90C34AC5F00A15736 /* setup_wizard.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = setup_wizard.h; sourceTree = "<group>"; };
+		D4EC0ECA0C34AC5F00A15736 /* setup.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = setup.h; sourceTree = "<group>"; };
+		D4EC0ECB0C34AC5F00A15736 /* showcase_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = showcase_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0ECC0C34AC5F00A15736 /* showcase_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = showcase_dialog.h; sourceTree = "<group>"; };
+		D4EC0ECD0C34AC5F00A15736 /* showcase_listctrl.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = showcase_listctrl.cpp; sourceTree = "<group>"; };
+		D4EC0ECE0C34AC5F00A15736 /* showcase_listctrl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = showcase_listctrl.h; sourceTree = "<group>"; };
+		D4EC0ECF0C34AC5F00A15736 /* showcase_splitterwindow.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = showcase_splitterwindow.cpp; sourceTree = "<group>"; };
+		D4EC0ED00C34AC5F00A15736 /* showcase_splitterwindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = showcase_splitterwindow.h; sourceTree = "<group>"; };
+		D4EC0ED10C34AC5F00A15736 /* span_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = span_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0ED20C34AC5F00A15736 /* span_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = span_dialog.h; sourceTree = "<group>"; };
+		D4EC0ED30C34AC5F00A15736 /* splashscreen.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = splashscreen.cpp; sourceTree = "<group>"; };
+		D4EC0ED40C34AC5F00A15736 /* splashscreen.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = splashscreen.h; sourceTree = "<group>"; };
+		D4EC0ED50C34AC5F00A15736 /* starting_page_wizardpage.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = starting_page_wizardpage.cpp; sourceTree = "<group>"; };
+		D4EC0ED60C34AC5F00A15736 /* starting_page_wizardpage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = starting_page_wizardpage.h; sourceTree = "<group>"; };
+		D4EC0ED70C34AC5F00A15736 /* startup_tips.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = startup_tips.cpp; sourceTree = "<group>"; };
+		D4EC0ED80C34AC5F00A15736 /* startup_tips.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = startup_tips.h; sourceTree = "<group>"; };
+		D4EC0ED90C34AC5F00A15736 /* table_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = table_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0EDA0C34AC5F00A15736 /* table_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = table_dialog.h; sourceTree = "<group>"; };
+		D4EC0EDB0C34AC5F00A15736 /* td_th_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = td_th_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0EDC0C34AC5F00A15736 /* td_th_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = td_th_dialog.h; sourceTree = "<group>"; };
+		D4EC0EDD0C34AC5F00A15736 /* textctrl_wizardpage.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = textctrl_wizardpage.cpp; sourceTree = "<group>"; };
+		D4EC0EDE0C34AC5F00A15736 /* textctrl_wizardpage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = textctrl_wizardpage.h; sourceTree = "<group>"; };
+		D4EC0EDF0C34AC5F00A15736 /* time_control.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = time_control.cpp; sourceTree = "<group>"; };
+		D4EC0EE00C34AC5F00A15736 /* time_control.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = time_control.h; sourceTree = "<group>"; };
+		D4EC0EE10C34AC5F00A15736 /* ul_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = ul_dialog.cpp; sourceTree = "<group>"; };
+		D4EC0EE20C34AC5F00A15736 /* ul_dialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ul_dialog.h; sourceTree = "<group>"; };
+		D4EC0EE30C34AC5F00A15736 /* utils_clipboard.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = utils_clipboard.cpp; sourceTree = "<group>"; };
+		D4EC0EE40C34AC5F00A15736 /* utils_clipboard.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = utils_clipboard.h; sourceTree = "<group>"; };
+		D4EC0EE50C34AC5F00A15736 /* utils_controls.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = utils_controls.cpp; sourceTree = "<group>"; };
+		D4EC0EE60C34AC5F00A15736 /* utils_controls.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = utils_controls.h; sourceTree = "<group>"; };
+		D4EC0EE70C34AC5F00A15736 /* utils_datetime.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = utils_datetime.cpp; sourceTree = "<group>"; };
+		D4EC0EE80C34AC5F00A15736 /* utils_datetime.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = utils_datetime.h; sourceTree = "<group>"; };
+		D4EC0EE90C34AC5F00A15736 /* utils_execute.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = utils_execute.cpp; sourceTree = "<group>"; };
+		D4EC0EEA0C34AC5F00A15736 /* utils_execute.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = utils_execute.h; sourceTree = "<group>"; };
+		D4EC0EEB0C34AC5F00A15736 /* utils_string.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = utils_string.cpp; sourceTree = "<group>"; };
+		D4EC0EEC0C34AC5F00A15736 /* utils_string.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = utils_string.h; sourceTree = "<group>"; };
+		D4EC0EED0C34AC5F00A15736 /* viewer_wizardpage.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = viewer_wizardpage.cpp; sourceTree = "<group>"; };
+		D4EC0EEE0C34AC5F00A15736 /* viewer_wizardpage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = viewer_wizardpage.h; sourceTree = "<group>"; };
+		D4EC0FB80C34ADBD00A15736 /* application.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = application.icns; path = resource/icons_application/application.icns; sourceTree = "<group>"; };
+		D4EC0FC10C34ADDF00A15736 /* plucker-desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "plucker-desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4086D0E8063BBC5B00D4CD53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409F03A10977B97B00D1030F /* libwx_mac_static.a in Frameworks */,
+				4086D0E9063BBC5B00D4CD53 /* Carbon.framework in Frameworks */,
+				4086D0EC063BBC5B00D4CD53 /* System.framework in Frameworks */,
+				1842CAFB085664390032BCF7 /* AGL.framework in Frameworks */,
+				1842CAFC085664390032BCF7 /* IOKit.framework in Frameworks */,
+				1842CAFD085664390032BCF7 /* OpenGL.framework in Frameworks */,
+				1842CAFE085664390032BCF7 /* WebKit.framework in Frameworks */,
+				40F017470A306CAD00AC9076 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1864B4F608566CB300E32E9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4EC0FC10C34ADDF00A15736 /* plucker-desktop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* ¬´PROJECTNAME¬ª */ = {
+			isa = PBXGroup;
+			children = (
+				409F03930977B96200D1030F /* wxWindows.xcodeproj */,
+				20286C2AFDCF999611CA2CEA /* Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				4086D0EF063BBC5B00D4CD53 /* Info.plist */,
+				1864B4F608566CB300E32E9B /* Products */,
+			);
+			name = "¬´PROJECTNAME¬ª";
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D4EC0E2A0C34AC5F00A15736 /* about_dialog.cpp */,
+				D4EC0E2B0C34AC5F00A15736 /* about_dialog.h */,
+				D4EC0E2C0C34AC5F00A15736 /* add_channel_wizard.cpp */,
+				D4EC0E2D0C34AC5F00A15736 /* add_channel_wizard.h */,
+				D4EC0E2E0C34AC5F00A15736 /* art_provider.cpp */,
+				D4EC0E2F0C34AC5F00A15736 /* art_provider.h */,
+				D4EC0E300C34AC5F00A15736 /* blocked_dialog.cpp */,
+				D4EC0E310C34AC5F00A15736 /* blocked_dialog.h */,
+				D4EC0E320C34AC5F00A15736 /* body_dialog.cpp */,
+				D4EC0E330C34AC5F00A15736 /* body_dialog.h */,
+				D4EC0E340C34AC5F00A15736 /* bookmark_dialog.cpp */,
+				D4EC0E350C34AC5F00A15736 /* bookmark_dialog.h */,
+				D4EC0E360C34AC5F00A15736 /* build_progress_dialog.cpp */,
+				D4EC0E370C34AC5F00A15736 /* build_progress_dialog.h */,
+				D4EC0E380C34AC5F00A15736 /* build_progress_wrappers.cpp */,
+				D4EC0E390C34AC5F00A15736 /* build_progress_wrappers.h */,
+				D4EC0E3A0C34AC5F00A15736 /* channel_check_listctrl.cpp */,
+				D4EC0E3B0C34AC5F00A15736 /* channel_check_listctrl.h */,
+				D4EC0E3C0C34AC5F00A15736 /* channel_dialog.cpp */,
+				D4EC0E3D0C34AC5F00A15736 /* channel_dialog.h */,
+				D4EC0E3E0C34AC5F00A15736 /* channel_list_wizardpage.cpp */,
+				D4EC0E3F0C34AC5F00A15736 /* channel_list_wizardpage.h */,
+				D4EC0E400C34AC5F00A15736 /* channel_listctrl_base.cpp */,
+				D4EC0E410C34AC5F00A15736 /* channel_listctrl_base.h */,
+				D4EC0E420C34AC5F00A15736 /* channel_type.cpp */,
+				D4EC0E430C34AC5F00A15736 /* channel_type.h */,
+				D4EC0E440C34AC5F00A15736 /* checkbox_message_dialog.cpp */,
+				D4EC0E450C34AC5F00A15736 /* checkbox_message_dialog.h */,
+				D4EC0E460C34AC5F00A15736 /* checkbox_wizardpage.cpp */,
+				D4EC0E470C34AC5F00A15736 /* checkbox_wizardpage.h */,
+				D4EC0E480C34AC5F00A15736 /* commandline_parser.cpp */,
+				D4EC0E490C34AC5F00A15736 /* commandline_parser.h */,
+				D4EC0E4A0C34AC5F00A15736 /* configuration.cpp */,
+				D4EC0E4B0C34AC5F00A15736 /* configuration.h */,
+				D4EC0E510C34AC5F00A15736 /* destinations_wizardpage.cpp */,
+				D4EC0E520C34AC5F00A15736 /* destinations_wizardpage.h */,
+				D4EC0E530C34AC5F00A15736 /* details_progress_dialog.cpp */,
+				D4EC0E540C34AC5F00A15736 /* details_progress_dialog.h */,
+				D4EC0E550C34AC5F00A15736 /* details_progress_listbox.cpp */,
+				D4EC0E560C34AC5F00A15736 /* details_progress_listbox.h */,
+				D4EC0E760C34AC5F00A15736 /* editor_dialog.cpp */,
+				D4EC0E770C34AC5F00A15736 /* editor_dialog.h */,
+				D4EC0E780C34AC5F00A15736 /* email_dialog.cpp */,
+				D4EC0E790C34AC5F00A15736 /* email_dialog.h */,
+				D4EC0E7A0C34AC5F00A15736 /* exclusion_dialog.cpp */,
+				D4EC0E7B0C34AC5F00A15736 /* exclusion_dialog.h */,
+				D4EC0E7C0C34AC5F00A15736 /* exclusion_listctrl.cpp */,
+				D4EC0E7D0C34AC5F00A15736 /* exclusion_listctrl.h */,
+				D4EC0E7E0C34AC5F00A15736 /* font_dialog.cpp */,
+				D4EC0E7F0C34AC5F00A15736 /* font_dialog.h */,
+				D4EC0E800C34AC5F00A15736 /* handheld_dest_dialog.cpp */,
+				D4EC0E810C34AC5F00A15736 /* handheld_dest_dialog.h */,
+				D4EC0E820C34AC5F00A15736 /* handheld_dest_type.cpp */,
+				D4EC0E830C34AC5F00A15736 /* handheld_dest_type.h */,
+				D4EC0E840C34AC5F00A15736 /* handheld_dest_wrappers.cpp */,
+				D4EC0E850C34AC5F00A15736 /* handheld_dest_wrappers.h */,
+				D4EC0E860C34AC5F00A15736 /* help_controller.cpp */,
+				D4EC0E870C34AC5F00A15736 /* help_controller.h */,
+				D4EC0E880C34AC5F00A15736 /* hhictrl.cpp */,
+				D4EC0E890C34AC5F00A15736 /* hhictrl.h */,
+				D4EC0E8A0C34AC5F00A15736 /* hr_dialog.cpp */,
+				D4EC0E8B0C34AC5F00A15736 /* hr_dialog.h */,
+				D4EC0E8C0C34AC5F00A15736 /* html_tip_dialog.cpp */,
+				D4EC0E8D0C34AC5F00A15736 /* html_tip_dialog.h */,
+				D4EC0E8E0C34AC5F00A15736 /* hyperlink_dialog.cpp */,
+				D4EC0E8F0C34AC5F00A15736 /* hyperlink_dialog.h */,
+				D4EC0E900C34AC5F00A15736 /* image_dialog.cpp */,
+				D4EC0E910C34AC5F00A15736 /* image_dialog.h */,
+				D4EC0E920C34AC5F00A15736 /* image_list.cpp */,
+				D4EC0E930C34AC5F00A15736 /* image_list.h */,
+				D4EC0E940C34AC5F00A15736 /* import_controller.cpp */,
+				D4EC0E950C34AC5F00A15736 /* import_controller.h */,
+				D4EC0E960C34AC5F00A15736 /* install_viewer_wizard.cpp */,
+				D4EC0E970C34AC5F00A15736 /* install_viewer_wizard.h */,
+				D4EC0E980C34AC5F00A15736 /* internationalization.cpp */,
+				D4EC0E990C34AC5F00A15736 /* internationalization.h */,
+				D4EC0E9A0C34AC5F00A15736 /* limits_wizardpage.cpp */,
+				D4EC0E9B0C34AC5F00A15736 /* limits_wizardpage.h */,
+				D4EC0E9C0C34AC5F00A15736 /* main_frame.cpp */,
+				D4EC0E9D0C34AC5F00A15736 /* main_frame.h */,
+				D4EC0E9E0C34AC5F00A15736 /* main_listctrl.cpp */,
+				D4EC0E9F0C34AC5F00A15736 /* main_listctrl.h */,
+				D4EC0EA00C34AC5F00A15736 /* message_wizardpage.cpp */,
+				D4EC0EA10C34AC5F00A15736 /* message_wizardpage.h */,
+				D4EC0EA20C34AC5F00A15736 /* ol_dialog.cpp */,
+				D4EC0EA30C34AC5F00A15736 /* ol_dialog.h */,
+				D4EC0EA40C34AC5F00A15736 /* os_msw.cpp */,
+				D4EC0EA50C34AC5F00A15736 /* os_msw.h */,
+				D4EC0EA60C34AC5F00A15736 /* palm_installer_base.cpp */,
+				D4EC0EA70C34AC5F00A15736 /* palm_installer_base.h */,
+				D4EC0EA80C34AC5F00A15736 /* palm_installer_gtk.cpp */,
+				D4EC0EA90C34AC5F00A15736 /* palm_installer_gtk.h */,
+				D4EC0EAA0C34AC5F00A15736 /* palm_installer_mac.cpp */,
+				D4EC0EAB0C34AC5F00A15736 /* palm_installer_mac.h */,
+				D4EC0EAC0C34AC5F00A15736 /* palm_installer_msw.cpp */,
+				D4EC0EAD0C34AC5F00A15736 /* palm_installer_msw.h */,
+				D4EC0EAE0C34AC5F00A15736 /* palm_installer.h */,
+				D4EC0EAF0C34AC5F00A15736 /* pda_listctrl.cpp */,
+				D4EC0EB00C34AC5F00A15736 /* pda_listctrl.h */,
+				D4EC0EB10C34AC5F00A15736 /* piped_process.cpp */,
+				D4EC0EB20C34AC5F00A15736 /* piped_process.h */,
+				D4EC0EB30C34AC5F00A15736 /* plucker_controller.cpp */,
+				D4EC0EB40C34AC5F00A15736 /* plucker_controller.h */,
+				D4EC0EB50C34AC5F00A15736 /* plucker_defines.h */,
+				D4EC0EB60C34AC5F00A15736 /* plucker_wizard_base.cpp */,
+				D4EC0EB70C34AC5F00A15736 /* plucker_wizard_base.h */,
+				D4EC0EB80C34AC5F00A15736 /* plucker_wizard_wrappers.cpp */,
+				D4EC0EB90C34AC5F00A15736 /* plucker_wizard_wrappers.h */,
+				D4EC0EBA0C34AC5F00A15736 /* plucker-desktop.cpp */,
+				D4EC0EBB0C34AC5F00A15736 /* plucker-desktop.h */,
+				D4EC0EBC0C34AC5F00A15736 /* popup_dialog.cpp */,
+				D4EC0EBD0C34AC5F00A15736 /* popup_dialog.h */,
+				D4EC0EBE0C34AC5F00A15736 /* preferences_dialog.cpp */,
+				D4EC0EBF0C34AC5F00A15736 /* preferences_dialog.h */,
+				D4EC0EC00C34AC5F00A15736 /* process_progress_dialog.cpp */,
+				D4EC0EC10C34AC5F00A15736 /* process_progress_dialog.h */,
+				D4EC0EC20C34AC5F00A15736 /* processed_tip_provider.cpp */,
+				D4EC0EC30C34AC5F00A15736 /* processed_tip_provider.h */,
+				D4EC0EC40C34AC5F00A15736 /* proxy_prompt.cpp */,
+				D4EC0EC50C34AC5F00A15736 /* proxy_prompt.h */,
+				D4EC0EC60C34AC5F00A15736 /* proxy_wizardpage.cpp */,
+				D4EC0EC70C34AC5F00A15736 /* proxy_wizardpage.h */,
+				D4EC0EC80C34AC5F00A15736 /* setup_wizard.cpp */,
+				D4EC0EC90C34AC5F00A15736 /* setup_wizard.h */,
+				D4EC0ECA0C34AC5F00A15736 /* setup.h */,
+				D4EC0ECB0C34AC5F00A15736 /* showcase_dialog.cpp */,
+				D4EC0ECC0C34AC5F00A15736 /* showcase_dialog.h */,
+				D4EC0ECD0C34AC5F00A15736 /* showcase_listctrl.cpp */,
+				D4EC0ECE0C34AC5F00A15736 /* showcase_listctrl.h */,
+				D4EC0ECF0C34AC5F00A15736 /* showcase_splitterwindow.cpp */,
+				D4EC0ED00C34AC5F00A15736 /* showcase_splitterwindow.h */,
+				D4EC0ED10C34AC5F00A15736 /* span_dialog.cpp */,
+				D4EC0ED20C34AC5F00A15736 /* span_dialog.h */,
+				D4EC0ED30C34AC5F00A15736 /* splashscreen.cpp */,
+				D4EC0ED40C34AC5F00A15736 /* splashscreen.h */,
+				D4EC0ED50C34AC5F00A15736 /* starting_page_wizardpage.cpp */,
+				D4EC0ED60C34AC5F00A15736 /* starting_page_wizardpage.h */,
+				D4EC0ED70C34AC5F00A15736 /* startup_tips.cpp */,
+				D4EC0ED80C34AC5F00A15736 /* startup_tips.h */,
+				D4EC0ED90C34AC5F00A15736 /* table_dialog.cpp */,
+				D4EC0EDA0C34AC5F00A15736 /* table_dialog.h */,
+				D4EC0EDB0C34AC5F00A15736 /* td_th_dialog.cpp */,
+				D4EC0EDC0C34AC5F00A15736 /* td_th_dialog.h */,
+				D4EC0EDD0C34AC5F00A15736 /* textctrl_wizardpage.cpp */,
+				D4EC0EDE0C34AC5F00A15736 /* textctrl_wizardpage.h */,
+				D4EC0EDF0C34AC5F00A15736 /* time_control.cpp */,
+				D4EC0EE00C34AC5F00A15736 /* time_control.h */,
+				D4EC0EE10C34AC5F00A15736 /* ul_dialog.cpp */,
+				D4EC0EE20C34AC5F00A15736 /* ul_dialog.h */,
+				D4EC0EE30C34AC5F00A15736 /* utils_clipboard.cpp */,
+				D4EC0EE40C34AC5F00A15736 /* utils_clipboard.h */,
+				D4EC0EE50C34AC5F00A15736 /* utils_controls.cpp */,
+				D4EC0EE60C34AC5F00A15736 /* utils_controls.h */,
+				D4EC0EE70C34AC5F00A15736 /* utils_datetime.cpp */,
+				D4EC0EE80C34AC5F00A15736 /* utils_datetime.h */,
+				D4EC0EE90C34AC5F00A15736 /* utils_execute.cpp */,
+				D4EC0EEA0C34AC5F00A15736 /* utils_execute.h */,
+				D4EC0EEB0C34AC5F00A15736 /* utils_string.cpp */,
+				D4EC0EEC0C34AC5F00A15736 /* utils_string.h */,
+				D4EC0EED0C34AC5F00A15736 /* viewer_wizardpage.cpp */,
+				D4EC0EEE0C34AC5F00A15736 /* viewer_wizardpage.h */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D4EC0FB80C34ADBD00A15736 /* application.icns */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				40F017460A306CAD00AC9076 /* AppKit.framework */,
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+				CA60173504D423C000000080 /* System.framework */,
+				1842CAF7085664390032BCF7 /* AGL.framework */,
+				1842CAF8085664390032BCF7 /* IOKit.framework */,
+				1842CAF9085664390032BCF7 /* OpenGL.framework */,
+				1842CAFA085664390032BCF7 /* WebKit.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		409F03940977B96200D1030F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				409F039A0977B96200D1030F /* libwx_mac_static.a */,
+				40F017230A3067FE00AC9076 /* libwx_mac.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4086D0E3063BBC5B00D4CD53 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4EC0EF00C34AC5F00A15736 /* about_dialog.h in Headers */,
+				D4EC0EF20C34AC5F00A15736 /* add_channel_wizard.h in Headers */,
+				D4EC0EF40C34AC5F00A15736 /* art_provider.h in Headers */,
+				D4EC0EF60C34AC5F00A15736 /* blocked_dialog.h in Headers */,
+				D4EC0EF80C34AC5F00A15736 /* body_dialog.h in Headers */,
+				D4EC0EFA0C34AC5F00A15736 /* bookmark_dialog.h in Headers */,
+				D4EC0EFC0C34AC5F00A15736 /* build_progress_dialog.h in Headers */,
+				D4EC0EFE0C34AC5F00A15736 /* build_progress_wrappers.h in Headers */,
+				D4EC0F000C34AC5F00A15736 /* channel_check_listctrl.h in Headers */,
+				D4EC0F020C34AC5F00A15736 /* channel_dialog.h in Headers */,
+				D4EC0F040C34AC5F00A15736 /* channel_list_wizardpage.h in Headers */,
+				D4EC0F060C34AC5F00A15736 /* channel_listctrl_base.h in Headers */,
+				D4EC0F080C34AC5F00A15736 /* channel_type.h in Headers */,
+				D4EC0F0A0C34AC5F00A15736 /* checkbox_message_dialog.h in Headers */,
+				D4EC0F0C0C34AC5F00A15736 /* checkbox_wizardpage.h in Headers */,
+				D4EC0F0E0C34AC5F00A15736 /* commandline_parser.h in Headers */,
+				D4EC0F100C34AC5F00A15736 /* configuration.h in Headers */,
+				D4EC0F160C34AC5F00A15736 /* destinations_wizardpage.h in Headers */,
+				D4EC0F180C34AC5F00A15736 /* details_progress_dialog.h in Headers */,
+				D4EC0F1A0C34AC5F00A15736 /* details_progress_listbox.h in Headers */,
+				D4EC0F390C34AC5F00A15736 /* editor_dialog.h in Headers */,
+				D4EC0F3B0C34AC5F00A15736 /* email_dialog.h in Headers */,
+				D4EC0F3D0C34AC5F00A15736 /* exclusion_dialog.h in Headers */,
+				D4EC0F3F0C34AC5F00A15736 /* exclusion_listctrl.h in Headers */,
+				D4EC0F410C34AC5F00A15736 /* font_dialog.h in Headers */,
+				D4EC0F430C34AC5F00A15736 /* handheld_dest_dialog.h in Headers */,
+				D4EC0F450C34AC5F00A15736 /* handheld_dest_type.h in Headers */,
+				D4EC0F470C34AC5F00A15736 /* handheld_dest_wrappers.h in Headers */,
+				D4EC0F490C34AC5F00A15736 /* help_controller.h in Headers */,
+				D4EC0F4B0C34AC5F00A15736 /* hhictrl.h in Headers */,
+				D4EC0F4D0C34AC5F00A15736 /* hr_dialog.h in Headers */,
+				D4EC0F4F0C34AC5F00A15736 /* html_tip_dialog.h in Headers */,
+				D4EC0F510C34AC5F00A15736 /* hyperlink_dialog.h in Headers */,
+				D4EC0F530C34AC5F00A15736 /* image_dialog.h in Headers */,
+				D4EC0F550C34AC5F00A15736 /* image_list.h in Headers */,
+				D4EC0F570C34AC5F00A15736 /* import_controller.h in Headers */,
+				D4EC0F590C34AC5F00A15736 /* install_viewer_wizard.h in Headers */,
+				D4EC0F5B0C34AC5F00A15736 /* internationalization.h in Headers */,
+				D4EC0F5D0C34AC5F00A15736 /* limits_wizardpage.h in Headers */,
+				D4EC0F5F0C34AC5F00A15736 /* main_frame.h in Headers */,
+				D4EC0F610C34AC5F00A15736 /* main_listctrl.h in Headers */,
+				D4EC0F630C34AC5F00A15736 /* message_wizardpage.h in Headers */,
+				D4EC0F650C34AC5F00A15736 /* ol_dialog.h in Headers */,
+				D4EC0F670C34AC5F00A15736 /* os_msw.h in Headers */,
+				D4EC0F690C34AC5F00A15736 /* palm_installer_base.h in Headers */,
+				D4EC0F6B0C34AC5F00A15736 /* palm_installer_gtk.h in Headers */,
+				D4EC0F6D0C34AC5F00A15736 /* palm_installer_mac.h in Headers */,
+				D4EC0F6F0C34AC5F00A15736 /* palm_installer_msw.h in Headers */,
+				D4EC0F700C34AC5F00A15736 /* palm_installer.h in Headers */,
+				D4EC0F720C34AC5F00A15736 /* pda_listctrl.h in Headers */,
+				D4EC0F740C34AC5F00A15736 /* piped_process.h in Headers */,
+				D4EC0F760C34AC5F00A15736 /* plucker_controller.h in Headers */,
+				D4EC0F770C34AC5F00A15736 /* plucker_defines.h in Headers */,
+				D4EC0F790C34AC5F00A15736 /* plucker_wizard_base.h in Headers */,
+				D4EC0F7B0C34AC5F00A15736 /* plucker_wizard_wrappers.h in Headers */,
+				D4EC0F7D0C34AC5F00A15736 /* plucker-desktop.h in Headers */,
+				D4EC0F7F0C34AC5F00A15736 /* popup_dialog.h in Headers */,
+				D4EC0F810C34AC5F00A15736 /* preferences_dialog.h in Headers */,
+				D4EC0F830C34AC5F00A15736 /* process_progress_dialog.h in Headers */,
+				D4EC0F850C34AC5F00A15736 /* processed_tip_provider.h in Headers */,
+				D4EC0F870C34AC5F00A15736 /* proxy_prompt.h in Headers */,
+				D4EC0F890C34AC5F00A15736 /* proxy_wizardpage.h in Headers */,
+				D4EC0F8B0C34AC5F00A15736 /* setup_wizard.h in Headers */,
+				D4EC0F8C0C34AC5F00A15736 /* setup.h in Headers */,
+				D4EC0F8E0C34AC5F00A15736 /* showcase_dialog.h in Headers */,
+				D4EC0F900C34AC5F00A15736 /* showcase_listctrl.h in Headers */,
+				D4EC0F920C34AC5F00A15736 /* showcase_splitterwindow.h in Headers */,
+				D4EC0F940C34AC5F00A15736 /* span_dialog.h in Headers */,
+				D4EC0F960C34AC5F00A15736 /* splashscreen.h in Headers */,
+				D4EC0F980C34AC5F00A15736 /* starting_page_wizardpage.h in Headers */,
+				D4EC0F9A0C34AC5F00A15736 /* startup_tips.h in Headers */,
+				D4EC0F9C0C34AC5F00A15736 /* table_dialog.h in Headers */,
+				D4EC0F9E0C34AC5F00A15736 /* td_th_dialog.h in Headers */,
+				D4EC0FA00C34AC5F00A15736 /* textctrl_wizardpage.h in Headers */,
+				D4EC0FA20C34AC5F00A15736 /* time_control.h in Headers */,
+				D4EC0FA40C34AC5F00A15736 /* ul_dialog.h in Headers */,
+				D4EC0FA60C34AC5F00A15736 /* utils_clipboard.h in Headers */,
+				D4EC0FA80C34AC5F00A15736 /* utils_controls.h in Headers */,
+				D4EC0FAA0C34AC5F00A15736 /* utils_datetime.h in Headers */,
+				D4EC0FAC0C34AC5F00A15736 /* utils_execute.h in Headers */,
+				D4EC0FAE0C34AC5F00A15736 /* utils_string.h in Headers */,
+				D4EC0FB00C34AC5F00A15736 /* viewer_wizardpage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4086D0E2063BBC5B00D4CD53 /* static */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1842CAA008565A280032BCF7 /* Build configuration list for PBXNativeTarget "static" */;
+			buildPhases = (
+				4086D0E3063BBC5B00D4CD53 /* Headers */,
+				4086D0E4063BBC5B00D4CD53 /* Resources */,
+				4086D0E6063BBC5B00D4CD53 /* Sources */,
+				4086D0E8063BBC5B00D4CD53 /* Frameworks */,
+				4086D0ED063BBC5B00D4CD53 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = static;
+			productInstallPath = "$(HOME)/Applications";
+			productName = minimalStaticDebug;
+			productReference = D4EC0FC10C34ADDF00A15736 /* plucker-desktop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1842CAB408565A280032BCF7 /* Build configuration list for PBXProject "plucker-desktop" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 20286C29FDCF999611CA2CEA /* ¬´PROJECTNAME¬ª */;
+			productRefGroup = 20286C29FDCF999611CA2CEA /* ¬´PROJECTNAME¬ª */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 409F03940977B96200D1030F /* Products */;
+					ProjectRef = 409F03930977B96200D1030F /* wxWindows.xcodeproj */;
+				},
+			);
+			targets = (
+				4086D0E2063BBC5B00D4CD53 /* static */,
+				405DD1B0063CD57F00F579EE /* Build All */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		409F039A0977B96200D1030F /* libwx_mac_static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libwx_mac_static.a;
+			remoteRef = 409F03990977B96200D1030F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40F017230A3067FE00AC9076 /* libwx_mac.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libwx_mac.dylib;
+			remoteRef = 40F017220A3067FE00AC9076 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4086D0E4063BBC5B00D4CD53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4EC0FB90C34ADBD00A15736 /* application.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		4086D0ED063BBC5B00D4CD53 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4086D0E6063BBC5B00D4CD53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4EC0EEF0C34AC5F00A15736 /* about_dialog.cpp in Sources */,
+				D4EC0EF10C34AC5F00A15736 /* add_channel_wizard.cpp in Sources */,
+				D4EC0EF30C34AC5F00A15736 /* art_provider.cpp in Sources */,
+				D4EC0EF50C34AC5F00A15736 /* blocked_dialog.cpp in Sources */,
+				D4EC0EF70C34AC5F00A15736 /* body_dialog.cpp in Sources */,
+				D4EC0EF90C34AC5F00A15736 /* bookmark_dialog.cpp in Sources */,
+				D4EC0EFB0C34AC5F00A15736 /* build_progress_dialog.cpp in Sources */,
+				D4EC0EFD0C34AC5F00A15736 /* build_progress_wrappers.cpp in Sources */,
+				D4EC0EFF0C34AC5F00A15736 /* channel_check_listctrl.cpp in Sources */,
+				D4EC0F010C34AC5F00A15736 /* channel_dialog.cpp in Sources */,
+				D4EC0F030C34AC5F00A15736 /* channel_list_wizardpage.cpp in Sources */,
+				D4EC0F050C34AC5F00A15736 /* channel_listctrl_base.cpp in Sources */,
+				D4EC0F070C34AC5F00A15736 /* channel_type.cpp in Sources */,
+				D4EC0F090C34AC5F00A15736 /* checkbox_message_dialog.cpp in Sources */,
+				D4EC0F0B0C34AC5F00A15736 /* checkbox_wizardpage.cpp in Sources */,
+				D4EC0F0D0C34AC5F00A15736 /* commandline_parser.cpp in Sources */,
+				D4EC0F0F0C34AC5F00A15736 /* configuration.cpp in Sources */,
+				D4EC0F150C34AC5F00A15736 /* destinations_wizardpage.cpp in Sources */,
+				D4EC0F170C34AC5F00A15736 /* details_progress_dialog.cpp in Sources */,
+				D4EC0F190C34AC5F00A15736 /* details_progress_listbox.cpp in Sources */,
+				D4EC0F380C34AC5F00A15736 /* editor_dialog.cpp in Sources */,
+				D4EC0F3A0C34AC5F00A15736 /* email_dialog.cpp in Sources */,
+				D4EC0F3C0C34AC5F00A15736 /* exclusion_dialog.cpp in Sources */,
+				D4EC0F3E0C34AC5F00A15736 /* exclusion_listctrl.cpp in Sources */,
+				D4EC0F400C34AC5F00A15736 /* font_dialog.cpp in Sources */,
+				D4EC0F420C34AC5F00A15736 /* handheld_dest_dialog.cpp in Sources */,
+				D4EC0F440C34AC5F00A15736 /* handheld_dest_type.cpp in Sources */,
+				D4EC0F460C34AC5F00A15736 /* handheld_dest_wrappers.cpp in Sources */,
+				D4EC0F480C34AC5F00A15736 /* help_controller.cpp in Sources */,
+				D4EC0F4A0C34AC5F00A15736 /* hhictrl.cpp in Sources */,
+				D4EC0F4C0C34AC5F00A15736 /* hr_dialog.cpp in Sources */,
+				D4EC0F4E0C34AC5F00A15736 /* html_tip_dialog.cpp in Sources */,
+				D4EC0F500C34AC5F00A15736 /* hyperlink_dialog.cpp in Sources */,
+				D4EC0F520C34AC5F00A15736 /* image_dialog.cpp in Sources */,
+				D4EC0F540C34AC5F00A15736 /* image_list.cpp in Sources */,
+				D4EC0F560C34AC5F00A15736 /* import_controller.cpp in Sources */,
+				D4EC0F580C34AC5F00A15736 /* install_viewer_wizard.cpp in Sources */,
+				D4EC0F5A0C34AC5F00A15736 /* internationalization.cpp in Sources */,
+				D4EC0F5C0C34AC5F00A15736 /* limits_wizardpage.cpp in Sources */,
+				D4EC0F5E0C34AC5F00A15736 /* main_frame.cpp in Sources */,
+				D4EC0F600C34AC5F00A15736 /* main_listctrl.cpp in Sources */,
+				D4EC0F620C34AC5F00A15736 /* message_wizardpage.cpp in Sources */,
+				D4EC0F640C34AC5F00A15736 /* ol_dialog.cpp in Sources */,
+				D4EC0F660C34AC5F00A15736 /* os_msw.cpp in Sources */,
+				D4EC0F680C34AC5F00A15736 /* palm_installer_base.cpp in Sources */,
+				D4EC0F6A0C34AC5F00A15736 /* palm_installer_gtk.cpp in Sources */,
+				D4EC0F6C0C34AC5F00A15736 /* palm_installer_mac.cpp in Sources */,
+				D4EC0F6E0C34AC5F00A15736 /* palm_installer_msw.cpp in Sources */,
+				D4EC0F710C34AC5F00A15736 /* pda_listctrl.cpp in Sources */,
+				D4EC0F730C34AC5F00A15736 /* piped_process.cpp in Sources */,
+				D4EC0F750C34AC5F00A15736 /* plucker_controller.cpp in Sources */,
+				D4EC0F780C34AC5F00A15736 /* plucker_wizard_base.cpp in Sources */,
+				D4EC0F7A0C34AC5F00A15736 /* plucker_wizard_wrappers.cpp in Sources */,
+				D4EC0F7C0C34AC5F00A15736 /* plucker-desktop.cpp in Sources */,
+				D4EC0F7E0C34AC5F00A15736 /* popup_dialog.cpp in Sources */,
+				D4EC0F800C34AC5F00A15736 /* preferences_dialog.cpp in Sources */,
+				D4EC0F820C34AC5F00A15736 /* process_progress_dialog.cpp in Sources */,
+				D4EC0F840C34AC5F00A15736 /* processed_tip_provider.cpp in Sources */,
+				D4EC0F860C34AC5F00A15736 /* proxy_prompt.cpp in Sources */,
+				D4EC0F880C34AC5F00A15736 /* proxy_wizardpage.cpp in Sources */,
+				D4EC0F8A0C34AC5F00A15736 /* setup_wizard.cpp in Sources */,
+				D4EC0F8D0C34AC5F00A15736 /* showcase_dialog.cpp in Sources */,
+				D4EC0F8F0C34AC5F00A15736 /* showcase_listctrl.cpp in Sources */,
+				D4EC0F910C34AC5F00A15736 /* showcase_splitterwindow.cpp in Sources */,
+				D4EC0F930C34AC5F00A15736 /* span_dialog.cpp in Sources */,
+				D4EC0F950C34AC5F00A15736 /* splashscreen.cpp in Sources */,
+				D4EC0F970C34AC5F00A15736 /* starting_page_wizardpage.cpp in Sources */,
+				D4EC0F990C34AC5F00A15736 /* startup_tips.cpp in Sources */,
+				D4EC0F9B0C34AC5F00A15736 /* table_dialog.cpp in Sources */,
+				D4EC0F9D0C34AC5F00A15736 /* td_th_dialog.cpp in Sources */,
+				D4EC0F9F0C34AC5F00A15736 /* textctrl_wizardpage.cpp in Sources */,
+				D4EC0FA10C34AC5F00A15736 /* time_control.cpp in Sources */,
+				D4EC0FA30C34AC5F00A15736 /* ul_dialog.cpp in Sources */,
+				D4EC0FA50C34AC5F00A15736 /* utils_clipboard.cpp in Sources */,
+				D4EC0FA70C34AC5F00A15736 /* utils_controls.cpp in Sources */,
+				D4EC0FA90C34AC5F00A15736 /* utils_datetime.cpp in Sources */,
+				D4EC0FAB0C34AC5F00A15736 /* utils_execute.cpp in Sources */,
+				D4EC0FAD0C34AC5F00A15736 /* utils_string.cpp in Sources */,
+				D4EC0FAF0C34AC5F00A15736 /* viewer_wizardpage.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		405DD1C2063CD5B500F579EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4086D0E2063BBC5B00D4CD53 /* static */;
+			targetProxy = 405DD1C1063CD5B500F579EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1842CAA108565A280032BCF7 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ../../include/wx/wxprec.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NO_GCC_PRAGMA,
+					__WXMAC__,
+					"wxUSE_BASE=1",
+					"_FILE_OFFSET_BITS=64",
+					_LARGE_FILES,
+					"__WXMAC_XCODE__=1",
+					"WX_PRECOMP=1",
+					MACOS_CLASSIC,
+					"__WXDEBUG__=1",
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../src/build/Development";
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				OTHER_LDFLAGS = (
+					"-liconv",
+					"-lz",
+				);
+				UNSTRIPPED_PRODUCT = "<Multiple values>";
+				USER_HEADER_SEARCH_PATHS = "${SYMROOT}/include ../../include ../../src/build/include .";
+				USE_SEPARATE_HEADERMAPS = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		1842CAA208565A280032BCF7 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ../../include/wx/wxprec.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NO_GCC_PRAGMA,
+					__WXMAC__,
+					"wxUSE_BASE=1",
+					"_FILE_OFFSET_BITS=64",
+					_LARGE_FILES,
+					"__WXMAC_XCODE__=1",
+					"WX_PRECOMP=1",
+					MACOS_CLASSIC,
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../src/build/Deployment";
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				OTHER_LDFLAGS = (
+					"-liconv",
+					"-lz",
+				);
+				UNSTRIPPED_PRODUCT = "<Multiple values>";
+				USER_HEADER_SEARCH_PATHS = "${SYMROOT}/include ../../include ../../src/build/include .";
+				USE_SEPARATE_HEADERMAPS = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Deployment;
+		};
+		1842CAB108565A280032BCF7 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Build All";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		1842CAB208565A280032BCF7 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Build All";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		1842CAB508565A280032BCF7 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = __WXDEBUG__;
+				INFOPLIST_FILE = installer/osx/application_bundle_files/Info.plist;
+				LIBRARY_SEARCH_PATHS = ../../src/;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = "plucker-desktop";
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		1842CAB608565A280032BCF7 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+				);
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DynamicLibName = libwx_mac.dylib;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				INFOPLIST_FILE = installer/osx/application_bundle_files/Info.plist;
+				LIBRARY_SEARCH_PATHS = ../../src/build/Deployment;
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				PRODUCT_NAME = "plucker-desktop";
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1842CAA008565A280032BCF7 /* Build configuration list for PBXNativeTarget "static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1842CAA108565A280032BCF7 /* Development */,
+				1842CAA208565A280032BCF7 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		1842CAB008565A280032BCF7 /* Build configuration list for PBXAggregateTarget "Build All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1842CAB108565A280032BCF7 /* Development */,
+				1842CAB208565A280032BCF7 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		1842CAB408565A280032BCF7 /* Build configuration list for PBXProject "plucker-desktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1842CAB508565A280032BCF7 /* Development */,
+				1842CAB608565A280032BCF7 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}

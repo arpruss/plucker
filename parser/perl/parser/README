@@ -1,0 +1,41 @@
+2000-07-29  David A. Desrosiers  <hacker@gnu-designs.com>
+
+	Ok, after a long hiatus of me not working on the parser, here
+        lies yet another complete rewrite from the ground up. This one
+        is very *VERY* fast, has some new little tricks in it, and works
+        very well. It's much faster in the gather process than the
+        current Python parser is.
+
+	###################
+	**** WARNING ******
+	###################
+
+	Although this parser is 100% stable, do not expect this to do
+        everything the python parser does right now. My local copy does,
+        but that one is not stable enough for production work. Basically
+        this one will allow you to bring down web content and images up
+        to --maxdepth, and then you can use the python parser with the
+        file:/foo syntax to build you a proper database.
+
+	Run it like this: 
+
+        perl ./plucke-rget.pl http://www.freshmeat.net/ --maxdepth=1 --verbose
+
+        Feedback (and help fixing some of the buglets) is greatly
+        appreciated.
+
+1999-12-12  David A. Desrosiers  <hacker@gnu-designs.com>
+
+	I've added two copies of the parser here, so please feel free to
+        help use fix them, and roll them into production use. They
+        both have slightly different scanning/gathering engines, so try
+        them both.
+
+
+1999-07-24  David A. Desrosiers  <hacker@gnu-designs.com>
+
+	Ok, this is where the parser is going to make it's home. I'm
+        going to be cleaning up the code very soon, just spending a lot
+        of time porting some tools over, so I could build the viewer,
+        and making the cvs server a tad more stable, and adding a web
+        page for the cvs server.

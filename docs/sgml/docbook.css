@@ -1,0 +1,57 @@
+body {
+	margin: 0 10% 0 10%;
+	font: 1.1em Verdana, Arial, Helvetica, San-Serif;
+}
+
+h1 {
+	border: 1px solid #8fa3ff;
+	background: #b0c1ff; 
+	text-indent: 10px;
+	padding: 2px;
+	-moz-border-radius: 10px;
+}
+
+h1.sect1, h2.sect2, h3.sect3 {
+	border: 1px solid #8fa3ff;
+	background: #b0c1ff; 
+	text-indent: 10px;
+	padding: 2px;
+	-moz-border-radius: 10px;
+}
+
+div.sect2, div.sect3 {
+	padding-left: 20px;
+}
+
+.programlisting {
+	font: 1.1em Courier New;
+}
+
+table {
+	border-collapse: collapse;
+	width: 95%
+	margin: 2px 5px 2px 5px;
+}
+
+div.sect2 p {
+	margin-left: 10px;
+}
+
+div.sect2 table, div.sect1 table {
+	width: 95%;
+	margin-left: 30px;
+}
+
+ul, dl, ol {
+        text-align:             left;
+        list-style-type:        square;
+	list-style-position:	outside;
+}
+
+td {
+	padding: 5px;
+}
+
+thead {
+	background: #e5e5e5;
+}

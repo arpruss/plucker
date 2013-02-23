@@ -1,0 +1,124 @@
+BUILDING PLUCKER DESKTOP ON OSX, AS A STANDALONE APPLICATION BUNDLE
+
+----------------------------------
+Setting up your system to develop:
+----------------------------------
+
+1) If you don't have a shortcut (alias) to the Terminal in your Dock yet, I recommend adding it. Open up /Applications/Utilties/ and drag the "Terminal" icon onto the dock.
+
+2) You need to be able to do superuser things in the Terminal. This isn't on by default on OSX. Turn it on in the "NetInfo Manager" Utility, which is at /Applications/Utilites/NetInfo.What I did in this utility was "Security>Authenticate" and entering my user password to "log in" to make changes. Then it was Security>Enable Superuser, which asked my to type in a superuser password and confirm it. It then automatically logs out, and you can quit this utility.
+
+3) Install the developer tools if you haven't already. It might be on your OSXZ harddisk, ready for you to install, otherwise you can get it from apple.com (200megs download--Ouch!) It is very much recommended to download the one from apple.com, since it will be the newest one. If you don't have access to broadband, and you therefore have to use the older one already on your harddrive, open the folder /Applications/Installers/Developer Tools/ and click the file Developer.mpkg . Ran the installer with defaults. The Developer.mpkg is a master installer that automatically installs all the relevant packages in /Applications/Installers/Developer Tools/Packages/. 
+
+----------------------------------
+Setting up wxWindows:
+----------------------------------
+
+4) Download wxWindows. I recommend the wxAll package.
+Unzip this wxWindows zipfile and place the folder somewhere you want to work with it (for example ~/Documents/wxWindows).
+
+5) Install wxWindows. You may wish to refer to your  <wxdir>/docs/mac/install.txt under the section "Apple Developer Tools".
+
+5A) Click on your "Terminal" icon in the Dock, and do the following commands at the commandline.
+
+5A) cd into the base dir (like ~/Documents/wxWindows or whatever you unzipped to in step 4).
+5B) mkdir build-debug-version
+5C) cd build-debug-version
+5D) ../configure --disable-shared --enable-debug --enable-mac --enable-unicode  
+Note the ../ at the start of the configure, since you are doing it from within your build dir.
+(Note: if/when changing your ../configure options, I am pretty sure that you need to do a make cleanall to get rid of the setup.h files that have settings in them, otherwise you will be still using your old settings from the previous configure run.
+Note: As of wxMac 2.4.0, you can't configure out some things yet like --disable-printarch, so just roll them all in for now.)
+
+5E) make
+
+Note: You need a superuser password setup by now. If you don't, go back up to step 2 and do it.
+5F) su
+5G) <YOUR PASSWORD>
+5H) make install
+5I) exit
+
+6) Now need to make the XmlResource Library:
+6A) cd contrib
+6B) cd src
+6C) cd xrc
+6D) make
+6E) su
+5F) <YOUR PASSWORD>
+6G) make install
+6H) exit
+
+7) Now make the wxStyledTextCtrl Library:
+7A) cd ..
+7B) cd stc
+7C) make
+6D) su
+5E) <YOUR PASSWORD>
+7F) make install
+7G) exit
+
+8) You need to have /usr/local/bin in the path, so unless you have already done so earlier, type this:
+set path=($path /usr/local/bin). 
+This will only last for that terminal session. You need to retype that each time unless you make it permanent somewhere in the bowels of OSX (or I add it to the osx makefile). 
+Let me repeat that: You need to type 
+set path=($path /usr/local/bin)
+every time to open a new terminal window and you want to compile plucker-desktop.
+
+----------------------------------
+Building Plucker Desktop:
+----------------------------------
+
+9) Now you are ready to compile plucker-desktop.
+9A) Download the plucker sourcecode either via CVS or as a CVS snapshot download from www.plkr.org. If you are using a CVS snapshot, then extract the zip file to a directory of your choosing (for example ~/Documents/wxwindows_projects/plucker)
+9B) In your terminal window, cd to the *main* plucker directory (not the plucker_desktop directory)
+9C) Type this: sh autogen.sh
+9D) Some autodetection scripts will scroll by and plucker will configure itself for your OSX box. The configure script will likely quit when it gets to the viewer, since you may not have all the Palm SDKs, but that doesn't matter, as you aren't going to build the viewer anyways. Note you could have
+passed --disable-palmosbuild to the configure script and it would exit
+properly.
+9E) cd plucker_desktop 
+9F) make
+
+10) Now you can make the plucker-desktop OSX bundle. From the plucker_desktop directory:
+10A) cd installer
+10B) cd osx
+10C) make
+
+Now you have a Plucker.app in the plucker/plucker_desktop/installer/osx dir. It has a little icon. Double click it in the Finder to start.
+
+------------------------------------------------
+Notes on building Plucker python parser for OS X:
+------------------------------------------------
+
+Should specify the configure option for default image parser to be pil2, so that this appears in the /PyPlucker/__init.py__
+
+Might as well use configure for the version number too (also appears in /PyPlucker/__init.py__), so that spider will report it correctly to websites.
+
+------------------------------------------------
+BUILDING ON XCODE
+------------------------------------------------
+
+Use the wxWindows xcodeproj to build windows.
+
+Open <wxdir>/samples/minimal/minimal.xcodeproj to ensure things are working well.
+
+Open <plucker_desktop_dir>/plucker-desktop.xcodeproj
+
+Click build. A package will be built. When you run it, it will cough when it tries to load the xml resources which don't exist. 
+You need the resources (like the xrc, etc) inside the bundle.
+I right-clicked on the created app bundle, and selected "Show Package Contents". 
+In the /Contents/Resources, I dropped in everything from the last release of Plucker Desktop (Plucker.app), 
+and dropped in the current matching folder into /Contents/Resources
+
+------------------------------------------------
+Running from the commandline
+------------------------------------------------
+
+Since need to locate the xml resource files, etc, and I think that these are calculated based on a "where are we approach" here is how it can be run from the commandline in OSX. 
+
+If there were no resouces to be found, then could have cd'ed to the dir where have the .app file. In example, the app is called minimal.app, and program inside is called minimal:
+./minimal.app/Contents/MacOS/minimal
+
+However, to properly find the resources, we need to specify the full path. Eg to update all channels (the -a flag), if
+if Plucker is in the /Applications directory, we need to run:
+/Applications/Plucker.app//Contents/MacOS/plucker-desktop -a
+
+Put the above command as a cron task and have some fun.

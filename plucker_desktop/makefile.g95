@@ -1,0 +1,32 @@
+#-----------------------------------------------------------------------------------------
+# Name:        makefile.g95
+# Purpose:     Makefile for Plucker Desktop for GNU C++ (Cygwin/Mingw32)
+# Author:      Robert O'Connor
+# Modified by:
+# Created:     2001/10/20
+# Copyright:   (c) Robert O'Connor ( rob@medicalmnemonics.com )
+# Licence:     GPL
+# RCS-ID:      $Id: makefile.g95,v 1.26 2002/08/27 05:06:04 robertoconnor Exp $
+#-----------------------------------------------------------------------------------------
+
+#Set WXDIR to ../.. or ../../.. depending on where your wx dir is relative to this one.
+WXDIR = ../../../..
+
+TARGET = plucker-desktop
+
+# Include the list of .cpp files of the progrect as a SOURCES variable.
+include makefile_filelist.lst
+
+# Build a list of objects, based on the list of sources.
+OBJECTS=${SOURCES:.cpp=.o}
+          
+EXTRAINC = -I$(WXDIR)/contrib/include
+
+# Use line with/without stc library if using the STYLED_TEXT_CTRL or not
+EXTRALIBS = -lwxxrc
+# EXTRALIBS = -lwxxrc -lstc
+
+include $(WXDIR)/src/makeprog.g95
+
+
+

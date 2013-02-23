@@ -1,0 +1,956 @@
+/* $Id: da.rcp,v 1.100 2006/11/12 16:23:45 prussar Exp $ */
+
+/*********************************************************
+ * Danish resources - Claus Hindsgaul <claus_h@image.dk> *
+ *********************************************************/
+
+TRANSLATION "da"
+BEGIN
+
+
+"$$LANG"                    =   "da"
+
+
+/*************************************************************
+ *                      MENU OPTIONS                         *
+ *************************************************************/
+
+"$$ABOUT PLUCKER"           =   "Om Plucker"
+"$$ADD BOOKMARK..."         =   "Tilføj bogmærke..."
+"$$AUTOSCROLL FASTER"       =   "Rul hurtigere"
+"$$AUTOSCROLL SLOWER"       =   "Rul langsommere"
+"$$BACK"                    =   "Tilbage"
+"$$BOOKMARKS..."            =   "Bogmærker..."
+"$$BOTTOM"                  =   "Nederst"
+"$$CONTACT DEVELOPERS"      =   "Kontakt udviklerne"
+"$$COPY TO MEMO"            =   "Eksportér til memo"
+"$$DELETE ALL..."           =   "Slet alle..."
+"$$DELETE READ..."          =   "Slet læste dokumenter..."
+"$$DELETE DOC..."           =   "Slet dokument..."
+"$$DETAILS..."              =   "Detaljer..."
+"$$FIND AGAIN"              =   "Søg igen"
+"$$FIND..."                 =   "Søg..."
+"$$FORWARD"                 =   "Frem"
+"$$GO"                      =   "Gå"
+"$$HOME"                    =   "Hjem"
+"$$LIBRARY..."              =   "Bibliotek..."
+"$$OPTIONS"                 =   "Valg"
+"$$PREFERENCES..."          =   "Indstillinger..."
+"$$START AUTOSCROLL"        =   "Start rulning"
+"$$STOP AUTOSCROLL"         =   "Stop rulning"
+"$$TOP"                     =   "Øverst"
+"$$VIEW"                    =   "Vis"
+"$$SYNC LIST"               =   "Opdatér listen"
+"$$SHOWHIDE"                =   "Skjul/vis"
+"$$TYPE"                    =   "Type"
+"$$DATE"                    =   "Dato"
+"$$SIZE"                    =   "Størrelse"
+"$$SELECT FONT..."          =   "Skrift..."
+"$$TOGGLE FULLSCREEN"       =   "Fuldskærm"
+"$$LOOKUP WORD"             =   "Slå ord op"
+"$$SET KEYBOARD/GRAFFITI..."   =   "Sæt tastatur/grafitti..."
+"$$SORT"                    =   "Sortér"
+"$$NAME"                    =   "Navn"
+"$$CATEGORY"                =   "Kategori"
+
+
+/*************************************************************
+ *                        SHORTCUTS                          *
+ *************************************************************/
+
+"$$SC ADD BOOKMARK"         =   "+"
+"$$SC DELETE ALL"           =   "A"
+"$$SC BOOKMARKS"            =   "B"
+"$$SC COPY TO MEMO"         =   "C"
+"$$SC DETAILS"              =   "D"
+"$$SC DELETE DOC"           =   "E"
+"$$SC FORWARD"              =   "F"
+"$$SC FIND AGAIN"           =   "G"
+"$$SC HOME"                 =   "H"
+"$$SC PREFERENCES"          =   "I"
+"$$SC LOOKUP WORD"          =   "J"
+"$$SC LIBRARY"              =   "L"
+"$$SC BOTTOM"               =   "N"
+"$$SC TOP"                  =   "O"
+"$$SC SELECT FONT"          =   "P"
+"$$SC STOP AUTOSCROLL"      =   "Q"
+"$$SC START AUTOSCROLL"     =   "R"
+"$$SC FIND"                 =   "S"
+"$$SC BACK"                 =   "T"
+"$$SC TOGGLE FULLSCREEN"    =   "U"
+"$$SC AUTOSCROLL SLOWER"    =   "V"
+"$$SC SYNC LIST"            =   "W"
+"$$SC SET KEYBOARD/GRAFFITI"   =   "X"
+"$$SC AUTOSCROLL FASTER"    =   "Z"
+
+
+/*************************************************************
+ *                         FORMS                             *
+ *************************************************************/
+
+/*** MAIN ***/
+
+"$$MAIN: ADD BOOKMARK"              =   "Tilføj bogmærke"
+"$$MAIN: BOTTOM"                    =   "Nederst"
+"$$MAIN: FOLLOW LINK"               =   "Følg henvisning"
+"$$MAIN: OPEN IMAGE"                =   "Åbn billede"
+"$$MAIN: TOP"                       =   "Øverst"
+"$$MAIN: VIEW BOOKMARKS"            =   "Se bogmærker"
+"$$MAIN: 10%"                       =   "10%"
+"$$MAIN: 20%"                       =   "20%"
+"$$MAIN: 30%"                       =   "30%"
+"$$MAIN: 40%"                       =   "40%"
+"$$MAIN: 50%"                       =   "50%"
+"$$MAIN: 60%"                       =   "60%"
+"$$MAIN: 70%"                       =   "70%"
+"$$MAIN: 80%"                       =   "80%"
+"$$MAIN: 90%"                       =   "90%"
+/************************************************************/
+"$$MAIN: ADD ANNOTATION"            =   "Add annotation"
+/************************************************************/
+
+/*** ABOUT ***/
+
+"$$ABOUT: BODY1"                    =   "Plucker er en programsamling der"
+"$$ABOUT: BODY2"                    =   "udgør en uforbundet browser til"
+"$$ABOUT: BODY3"                    =   "PalmOS-systemer. Plucker er"
+"$$ABOUT: BODY4"                    =   "Frit Programmel, udgivet under"
+"$$ABOUT: BODY5"                    =   "betingelserne i Free Software"
+"$$ABOUT: BODY6"                    =   "Foundations's Public License (GPL)."
+"$$ABOUT: WEBSITE"                  =   "www.plkr.org"
+"$$ABOUT: OK"                       =   "O.k."
+"$$ABOUT: TITLE"                    =   "Om Plucker"
+
+
+/*** DOCUMENT LIBRARY ***/
+
+"$$LIBRARY: BEAM"                   =   "Beam"
+"$$LIBRARY: CATEGORIZE"             =   "Kategorisér"
+"$$LIBRARY: CATEGORY"               =   "Kategori"
+"$$LIBRARY: DATE"                   =   "Dato"
+"$$LIBRARY: DELETE"                 =   "Slet"
+"$$LIBRARY: NAME"                   =   "Navn"
+"$$LIBRARY: NO DOCUMENTS"           =   "Fandt ingen dokumenter"
+"$$LIBRARY: OPEN"                   =   "Åbn"
+"$$LIBRARY: RENAME"                 =   "Omdøb"
+"$$LIBRARY: SHOW:"                  =   "Vis:"
+"$$LIBRARY: SIZE"                   =   "Størr."
+"$$LIBRARY: TITLE"                  =   "Bibliotek"
+"$$LIBRARY: UNREAD"                 =   "Ulæst"
+"$$LIBRARY: HELP"                   =
+    " Her vil du kunne udvælge de Plucker-dokumenter, du vil læse."\  
+    "\n\n"\
+    " Et tryk på dit dokuments ikon vil give dig en liste over "\
+    "forskellige handlinger, du kan udføre med det aktuelle dokument "\
+    "(Åbn, kategorisér, slet, omdøb og beam)."\
+    "\n\n"\
+    " Du kan sortere dokumenterne efter navn, dato eller størrelse i "\
+    "både stigende og faldende rækkefølge."
+
+
+/*** RENAME DOCUMENT ***/
+
+"$$RENAME: CANCEL"                  =   "Annullér"
+"$$RENAME: NAME:"                   =   "Angiv nyt navn:"
+"$$RENAME: RENAME"                  =   "Omdøb"
+"$$RENAME: TITLE"                   =   "Omdøb"
+
+
+/*** PREFERENCES ***/
+
+"$$PREFS: TITLE"                    =   "Indstillinger"
+"$$PREFS: OK"                       =   "O.k."
+"$$PREFS: CANCEL"                   =   "Annullér"
+"$$PREFS: LIBRARY"                  =   "Bibliotek"
+"$$PREFS: AUTOSCROLL"               =   "Rulning"
+"$$PREFS: BUTTON"                   =   "Knapfunktioner"
+"$$PREFS: CONTROL"                  =   "Prikfunktioner"
+"$$PREFS: GESTURE"                  =   "Graffitifunktioner"
+"$$PREFS: GENERAL"                  =   "Generelt"
+"$$PREFS: LAYOUT"                   =   "Layout"
+"$$PREFS: HARDCOPY"                 =   "Eksport"
+"$$PREFS: JOGDIAL"                  =   "JogDial"
+"$$PREFS: LOOKUP"                   =   "Ordopslag"
+/*************************************************************/
+"$$PREFS: COLOR"                    =   "Color"
+"$$PREFS: FONT"                     =   "Font"
+/*************************************************************/
+
+
+/*** GENERAL PREFERENCES ***/
+
+"$$PREFSGENERAL: ADD BOOKMARK..."          =   "Tilføj bogmærke..."
+"$$PREFSGENERAL: BOTTOM TOOLBAR"           =   "Nederst"
+"$$PREFSGENERAL: BOTTOM"                   =   "Nederst"
+"$$PREFSGENERAL: BUTTON ACTION..."         =   "Knapfunktioner..."
+"$$PREFSGENERAL: COMMAND BUTTON:"          =   "Kommandoknap:"
+"$$PREFSGENERAL: COPY TO MEMO"             =   "Eksportér til memo"
+"$$PREFSGENERAL: DELETE DOC..."            =   "Slet dokument..."
+"$$PREFSGENERAL: DETAILS..."               =   "Detaljer..."
+"$$PREFSGENERAL: LEFT"                     =   "Venstre"
+"$$PREFSGENERAL: NO TOOLBAR"               =   "Ingen"
+"$$PREFSGENERAL: NONE"                     =   "Ingen"
+"$$PREFSGENERAL: NONE"                     =   "Ingen"
+"$$PREFSGENERAL: PREFERENCES..."           =   "Indstillinger..."
+"$$PREFSGENERAL: RIGHT"                    =   "Højre"
+"$$PREFSGENERAL: SCREEN DEPTH:"            =   "Skærmdybde:"
+"$$PREFSGENERAL: SCROLLBAR:"               =   "Rullebjælke:"
+"$$PREFSGENERAL: SILK TOOLBAR"             =   "I silk"
+"$$PREFSGENERAL: TAP ACTION..."            =   "Prikfunktioner..."
+"$$PREFSGENERAL: TOOLBAR:"                 =   "Værktøjslinje:"
+"$$PREFSGENERAL: TOP TOOLBAR"              =   "Øverst"
+"$$PREFSGENERAL: TOP"                      =   "Øverst"
+/****************************************************************/
+"$$PREFSGENERAL: ALWAYS DELETE ANNOTATIONS"    = "Delete notes/marks with doc"
+"$$PREFSGENERAL: ANNOTATIONS IN BOOKMARK LIST" = "List annotations with bookmarks"
+/****************************************************************/
+"$$PREFSGENERAL: HELP"                     =
+    " På enheder, der kører PalmOS 3.5 eller bedre, kan du bruge en af "\
+    "knapperne til kommando-værktøjslinjen. Det er uden effekt på ældre "\
+    "PalmOS-versioner."\
+    "\n\n"\
+    " Du kan angive den dybde, skærmen skal benytte som standard."\
+    "\n\n"\
+    " Du kan placere værktøjslinjen øverst, nederst eller helt fjerne den."\
+    "\n\n"\
+    " Du kan enten have venstre, højre eller ingen rullebjælke."
+
+
+/*** LAYOUT PREFERENCES ***/
+
+"$$PREFSLAYOUT: ENABLE SOFT-HYPHENS"     =   "Brug bløde bindestreger"
+"$$PREFSLAYOUT: UNDERLINE"               =   "Aktivér understregning"
+"$$PREFSLAYOUT: ALIGNMENT:"              =   "Justering"
+"$$PREFSLAYOUT: AS IN DOC"               =   "Som i dokument"
+"$$PREFSLAYOUT: FORCE LEFT"              =   "Tving venstre"
+"$$PREFSLAYOUT: FORCE RIGHT"             =   "Tving højre"
+"$$PREFSLAYOUT: FORCE CENTER"            =   "Tving centreret"
+"$$PREFSLAYOUT: FORCE JUSTIFY"           =   "Tving justeret"
+"$$PREFSLAYOUT: CONNECT PARTS WITH PAGING"
+                                           =   "Forbind sidedele"
+"$$PREFSLAYOUT: HELP"                    =
+    " Når du aktiverer understregning, vil alle lænker "\
+    "blive markeret med en punkteret linje, mens HTML-understregning "\
+    "(<U>) bliver markeret med fuldt optrukne linjer. Du kan "\
+    "stadig skelne mellem besøgte og ikke-besøgte lænker, "\
+    "hvis du aktiverer overstregning."\
+    "\n\n"\
+    " Du kan forbinde multipart-dokumenter med sidestyring, så du med "\
+    "hel (eller halv) side ned på den sidens sidste skærm kan komme til "\
+    "den sidste viste henvisning. Tilsvarende gælder hel (eller halv) "\
+    "side op på sidens første skærm."\
+    "\n\n"\
+    " Du kan tillade rulning en smule under filens slutning, således at "\
+    "sidestyringsknapper altid flytter dig den samme afstand."\
+    "\n\n"\
+    " Du kan overtrumfe dokumentets justeringsindstillinger."
+/*************************************************************/
+"$$PREFSLAYOUT: ENABLE MARGINS"          =   "Enable margins"
+/*************************************************************/
+
+
+/*** FONT PREFERENCES ***/
+/*************************************************************/
+"$$PREFSFONT: LIBRARY"      =   "Library"
+"$$PREFSFONT: MAIN"         =   "Main"
+/*************************************************************/
+
+/*** COLOR PREFERENCES ***/
+
+"$$PREFSCOLOR: STRIKE-THROUGH"          =   "Aktivér overstregning"
+"$$PREFSCOLOR: FORCE DEFAULT TEXT COLORS" =  "Tving standard-tekstfarver"
+"$$PREFSCOLOR: HELP"                    =
+    " Hvis du synes, det svært at se, om en lænke er "\
+    "besøgt eller ej, kan du aktivere "\
+    "overstregning. Det vil overstrege alle besøgte "\
+    "lænker."\
+    "\n\n"\
+    " Du kan tvinge teksten til at være sort og henvisninger til at være "\
+    "blå"
+
+
+/*** LIBRARY PREFERENCES ***/
+
+"$$PREFSLIBRARY: UPDATE DOCLIST"           =   "Opdatér liste:"
+"$$PREFSLIBRARY: AUTOMATIC"                =   "Automatisk"
+"$$PREFSLIBRARY: MANUAL"                   =   "Manuel"
+"$$PREFSLIBRARY: IGNORE CARD"              =   "Ignorér kort"
+"$$PREFSLIBRARY: ADVANCED"                 =   "Avanceret"
+"$$PREFSLIBRARY: ASCENDING"                =   "Stigende"
+"$$PREFSLIBRARY: CATEGORY STYLE:"          =   "Kategorityper:"
+"$$PREFSLIBRARY: CLASSIC"                  =   "Klassisk"
+"$$PREFSLIBRARY: DATE"                     =   "Dato"
+"$$PREFSLIBRARY: DESCENDING"               =   "Faldende"
+"$$PREFSLIBRARY: NAME"                     =   "Navn"
+"$$PREFSLIBRARY: SHOW DATE COLUMN"         =   "Vis datosøjle"
+"$$PREFSLIBRARY: SHOW SIZE COLUMN"         =   "Vis størrelse"
+"$$PREFSLIBRARY: SHOW TYPE COLUMN"         =   "Vis typesøjle"
+"$$PREFSLIBRARY: INDICATE OPENED"          =   "Aktivér gennemstregning"
+"$$PREFSLIBRARY: SIZE"                     =   "Størrelse"
+"$$PREFSLIBRARY: SORT BY:"                 =   "Sortér efter:"
+"$$PREFSLIBRARY: SORT ORDER:"              =   "Sorteringsrækkefølge:"
+"$$PREFSLIBRARY: TYPE"                     =   "Type"
+"$$PREFSLIBRARY: DATE/TIME"                =   "Brug dato/tid ved datosortering"
+"$$PREFSLIBRARY: CATEGORY"                 =   "Kategori"
+"$$PREFSLIBRARY: HELP"                     =
+    " Da det på nogle enheder kan være tage lang tid at opdatere "\
+    "listen over dokumenter, kan du vælge om listen skal opdateres "\
+    "automatisk (både RAM og eksterne kort), automatisk (kun RAM) eller "\
+    "manuelt."\
+    "\n\n"\
+    " Du kan sortere dokumenterne efter navn, dato eller størrelse i "\
+    "både stigende og faldende rækkefølge."\
+    "\n\n"\
+    " Det er muligt at vælge om datosortering kun skal benytte datoen "\
+    "eller om både dato og tidspunkt skal bruges (det sidste er hurtigere, "\
+    "men kan få listen til at fremstå mere rodet)."
+
+
+/*** AUTOSCROLL PREFERENCES ***/
+
+"$$PREFSAUTOSCROLL: AUTOSCROLL DELAY:"       =   "Rulleforsinkelse:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL DIRECTION:"   =   "Rulleretning:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL JUMP:"        =   "Rullespring:"
+"$$PREFSAUTOSCROLL: DOWN"                    =   "Nedad"
+"$$PREFSAUTOSCROLL: MILLISECONDS"            =   "msek"
+"$$PREFSAUTOSCROLL: PAGE(S)"                 =   "Side(r)"
+"$$PREFSAUTOSCROLL: PIXEL(S)"                =   "Piksle(r)"
+"$$PREFSAUTOSCROLL: STAY ON"                 =   "Forbliv tændt under rulning"
+"$$PREFSAUTOSCROLL: UP"                      =   "Opad"
+"$$PREFSAUTOSCROLL: HELP"                    =
+    " På denne side indstilles rullefunktionen."\
+    "\n\n"\
+    " Du kan automatisk rulle et bestemt antal piksler eller sider."\
+    "\n\n"\
+    " Du kan sætte rulleretningen til enten opad eller nedad."\
+    "\n\n"\
+    " Du kan indstille tidsforsinkelsen mellem hvert rulleskridt. "\
+    "Forsinkelsen måles i millisekunder."\
+    "\n\n"\
+    " Du kan forhindre enheden i at slukke under rulningen. "\
+    "Enheden vil fortsætte med at rulle indtil den når sidens bund, "\
+    "batteriet er ved at løbe tør, du prikker et sted på skærmen "\
+    "eller selv slukker for enheden."\
+    "\n\n"\
+    " Bemærk at du kan styre rulningens hastighed undervejs med "\
+    "knapperne på værktøjslinjen samt med alle de knapper, der normalt "\
+    "bruges til at rulle en hel eller halv side ad gangen."
+
+
+
+/*** HARDCOPY PREFERENCES ***/
+
+"$$PREFSHARDCOPY: TITLE"            =   "Eksport-handlinger"
+"$$PREFSHARDCOPY: ACTION:"          =   "Handling:"
+"$$PREFSHARDCOPY: DIALOG"           =   "Vindue"
+"$$PREFSHARDCOPY: IMMEDIATE"        =   "Direkte"
+"$$PREFSHARDCOPY: RANGE:"           =   "Område:"
+"$$PREFSHARDCOPY: IN VIEW AREA"     =   "Det viste"
+"$$PREFSHARDCOPY: VISIBLE PARAGRAPHS" = "Synlige afsnit"
+"$$PREFSHARDCOPY: LINK:"            =   "Henvisninger:"
+"$$PREFSHARDCOPY: BOTTOM"           =   "I bunden"
+"$$PREFSHARDCOPY: INLINE"           =   "Indlejret"
+"$$PREFSHARDCOPY: NONE"             =   "Ingen"
+"$$PREFSHARDCOPY: HELP"             =
+    " Her kan du bestemme hvordan 'Eksportér til memo' skal opføre sig. Funktionen giver dig mulighed for at klippe, redigere og eksportere den viste tekst til Palms indbyggede 'memopad'."\
+    "\n\n"\
+    " Kopieret tekst kan redigeres i et vindue eller kopieres direkte til memopad."\
+    "\n\n"\
+    " Du kan kopiere den viste tekst eller de de synlige afsnit i fuld længde."\
+    "\n\n"\
+    " URL'er fra henvisninger kan enten vises i bunden, indlejres i teksten eller ignoreres."
+
+
+/*** EXTERNALLINK PREFERENCES ***/
+
+"$$PREFSEXTERNALLINK: TITLE"            =   "Eksterne henvisninger"
+"$$PREFSEXTERNALLINK: ACTION:"          =   "Handling:"
+"$$PREFSEXTERNALLINK: DIALOG"           =   "Vindue"
+"$$PREFSEXTERNALLINK: TO MEMO"          =   "Direkte til memopad"
+"$$PREFSEXTERNALLINK: BROWSE"           =   "Gennemse"
+
+
+/*** BUTTON PREFERENCES ***/
+
+"$$PREFSBUTTONS: HARD KEYS"              =   "Knapper til navigation"
+"$$PREFSBUTTONS: ARROW KEYS"             =   "Aktivér brugerdefinerede piletaster"
+"$$PREFSBUTTONS: HELP"                   =
+    " Ved at aktivere knapfunktionen, kan du bruge de fysiske knapper til at "\
+    "udføre de angivne funktioner."\
+    "\n\n"\
+    " Du kan vælge forskellige funktioner for hver af de fire fysiske knapper."
+
+
+/*** CONTROL PREFERENCES ***/
+
+"$$PREFSTAP: MODE 1"                     =   "Type 1"
+"$$PREFSTAP: MODE 2"                     =   "Type 2"
+"$$PREFSTAP: MODE 3"                     =   "Type 3"
+"$$PREFSTAP: PEN SCROLL MSG1"            =   "Tryk på skærmen og"
+"$$PREFSTAP: PEN SCROLL MSG2"            =   "træk pennen op eller"
+"$$PREFSTAP: PEN SCROLL MSG3"            =   "ned for at rulle"
+"$$PREFSTAP: PEN SCROLL MSG4"            =   "siden."
+"$$PREFSTAP: REGION ACTION:"             =   "Områdefunktion:"
+"$$PREFSTAP: HELP"                       =
+    " Med prikfunktionen kan du angive, hvilken effekt, et prik på skærmen "\
+    "skal have. Der findes tre forskellige typer:"\
+    "\n\n"\
+    " De første to typer inddeler skærmen i områder, som du kan tildele "\
+    "forskellige funktioner (f.eks. rul en hel side op, gå en "\
+    "side tilbage) for hvert område."\
+    "\n\n"\
+    " Den tredie type gør det muligt at rulle teksten ved at trække pennen "\
+    "rundt på skærmen."
+
+
+/*** GESTURE PREFERENCES ***/
+
+"$$PREFSGESTURES: USE GESTURES"          =   "Graffitistreger som navigation"
+"$$PREFSGESTURES: HELP"                  =
+    " Ved at aktivere graffitifunktioner, kan du ved hjælp af tegn i "\
+    "graffitiområdet udføre de angivne funktioner."\
+    "\n\n"\
+    " Fem tegn kan benyttes: højre, venstre, op, ned og en graffiti "\
+    "prik."\
+    "\n\n"\
+    " Du kan vælge forskellige funktioner for hver af de fem tegn."
+
+
+/*** JOGDIAL PREFERENCES ***/
+
+"$$PREFSJOGDIAL: USE JOGDIALS"  =     "Aktivér JogDial-navigering"
+"$$PREFSJOGDIAL: HELP"  =
+    " Hvis du har en Palm med JogDial, kan du tillægge det forskellige " \
+    "funktioner i Plucker."\
+    "\n\n"\
+    " Der er seks handlinger: rul op, rul ned, tryk ind og op, tryk ind " \
+    "og ned og tilbage. Afhængig af din JogDial kan enkelte af disse  "\
+    "handlinger mangle."\
+    "\n\n"\
+    " Du kan vælge forskellige hændelser for hver af disse fem "\
+    "Jogdial-handlinger."
+
+
+/*** WORD LOOKUP PREFERENCES ***/
+
+"$$PREFSLOOKUP: ALWAYS ACTIVE"         = "Ordopslag altid aktiv"
+"$$PREFSLOOKUP: ACTION:"               = "Handling:"
+"$$PREFSLOOKUP: SEARCH FORM"           = "Indsæt i søgefelt"
+"$$PREFSLOOKUP: PPI"                   = "Slå op i PPI"
+"$$PREFSLOOKUP: TO CLIPBOARD"          = "Kopier til klippebord"
+"$$PREFSLOOKUP: ANNOTATE"              = "Notat"
+"$$PREFSLOOKUP: HELP"                  =
+    " Plucker har en ordopslags-funktion. Når den er aktiv, "\
+    "udføres en handling, når du prikker på et ord. "\
+    "\n\n"\
+    " Hvis ordopslag er aktiveret, vil et ord udenfor en henvisning "\
+    "altid blive valgt, når du prikker på det."\
+    "\n\n"\
+    " Ellers kan du bruge funktionen 'Slå ord op' i 'Gå'-menuen "\
+    "til at slå funktionen til for det næste prik. Denne funktion kan "\
+    "også tillægges en knap eller anden styrefunktion."\
+    "\n\n"\
+    " Tip: Hvis du vil vælge et ord, der indeholder andet end bogstaver "\
+    "og tal, såsom en apostrof eller bindestreg, kan du ved at prikke på "\
+    "dette tegn få alle forekomster af dette tegn til at blive håndteret "\
+    "som bogstaver."
+
+
+/*** FONT SELECT ***/
+
+"$$FONTS: FONT:"                    =   "Skrift:"
+"$$FONTS: OK"                       =   "O.k."
+"$$FONTS: CANCEL"                   =   "Annullér"
+"$$FONTS: LINE SPACING:"            =   "Linjeafstand:"
+"$$FONTS: PARAGRAPH SPACING:"       =   "Afsnitsafstand:"
+/************************************************************/
+"$$FONTS: RTL"                      =   "RTL"
+/************************************************************/
+"$$FONTS: SELECT FONT"              =   "Vælg skrift"
+"$$FONTS: ROTATE:"                  =   "Rotér tekst: "
+"$$FONTS: NONE"                     =   "Ingen"
+"$$FONTS: COUNTERCLOCKWISE"         =   "Mod uret"
+"$$FONTS: CLOCKWISE"                =   "Med uret"
+"$$FONTS: BUILT-IN FONTS:"          =   "Indbyggede skrifter:"
+"$$FONTS: USER-LOADED FONT:"        =   "Brugerskrifter:"
+"$$FONTS: VARY WITH DOCUMENT"       =   "Variér med dokument"
+"$$FONTS: ALSO SET AS DEFAULT"      =   "Angiv som standard"
+"$$FONTS: HELP"                     =
+    " Du kan vælge en af de almindelige Palm-skrifter eller en "\
+    "af de indbyggede Plucker-skrifter."\
+    "\n\n"\
+    " Hvis du har indlæst en Plucker-skriftpakke, kan du vælge "\
+    "den i stedet, hvis den understøttes af din enhed."\
+    "\n\n"\
+    " Du kan ændre linje- og afsnitsafstand i dokumentet. "\
+    "Sættes linjeafstanden til en negativ værdi, kan der optræde "\
+    "mindre visuelle fejl, såsom linjer, der forsvinder."\
+    "\n\n"\
+    " Du kan rotere skærmen med 90 grader. Endnu vil kun tekst dog "\
+    "kunne vises roteret. Tabeller og billeder såvel som henvisninger "\
+    "til disse, udelades helt."\
+    "\n\n"\
+    " Du kan tillade at skriftindstillingerne varierer dokumenterne "\
+    "imellem. Hvis du gør dette, vil du også have mulighed for at gøre "\
+    "de aktuelle indstillinger til standardindstillingerne for nye "\
+    "dokumenter."
+
+
+/*** KEYBOARD CUSTOMIZATION ***/
+
+"$$KEYBOARD: SET KEYBOARD / GRAFFITI"   =   "Sæt tastatur / graffiti"
+"$$KEYBOARD: KEYBOARD OR GRAFFITI"  =   "Tastatur eller graffiti"
+"$$KEYBOARD: SPECIAL KEYS"          =   "Specielle taster"
+"$$KEYBOARD: OK"                    =   "O.k."
+"$$KEYBOARD: CANCEL"                =   "Annullér"
+"$$KEYBOARD: DEFAULT"               =   "Standard"
+"$$KEYBOARD: CLEAR"                 =   "Nulstil"
+"$$KEYBOARD: INTERFERENCE MSG1"     =   "Visse indstillinger kan være inkompatible"
+"$$KEYBOARD: INTERFERENCE MSG2"     =   "med streger eller Graffiti 2."
+"$$KEYBOARD: HELP"                  =
+    " Hvis du har et tastatur, kan du styre Plucker med det. "\
+    "Du kan også styre Plucker ved at bruge Graffiti til at skrive "\
+    "visse tegn."\
+    "\n\n"\
+    " Skrevne tegn såsom 'a' eller '$' kan skrives eller tegnes med "\
+    "Graffiti direkte i feltet, hvorefter du kan vælge en passende "\
+    "tilhørende handling."\
+    "\n\n"\
+    " Specielle taster som 'Retur' eller piletaster skal vælges fra "\
+    "en rullemenu, hvorefter du kan vælge en passende tilhørende handling."\
+    "\n\n"\
+    " Visse tegn/taster vil ikke fungere hvis du har aktiveret "\
+    "Graffiti-tegn i Pluckers indstillinger. Specielt vil tegnene "\
+    "i, I, 1, l, L, punktum og slet samt visse store graffiti-bogstaver "\
+    "ikke kunne bruges medmindre du har deaktiveret Graffiti-tegn."\
+    "\n\n"\
+    " Hvisse tegn er inkompatible med Graffiti 2. Hvis du vil styre "\
+    "Plucker med Graffiti 2, skal du ikke knytte handlinger til tegn, "\
+    "som kræver flere streger. Desuden vil det føre til uventede "\
+    "resultater, hvis du bruger Graffiti 2-tegn med flere streger "\
+    "mens der er knyttet en handling til l, mellemrum, apostrof, minus "\
+    "eller slette-tegnet."
+
+"$$KEY: RETURN"                     =   "Retur"
+"$$KEY: TAB"                        =   "Tab"
+"$$KEY: UP"                         =   "Op"
+"$$KEY: DOWN"                       =   "Ned"
+"$$KEY: LEFT"                       =   "Venstre"
+"$$KEY: RIGHT"                      =   "Højre"
+"$$KEY: BACKSPACE"                  =   "Slet"
+
+
+/*** SELECTION ***/
+
+"$$SELECT: ADD BOOKMARK..."        =   "Tilføj bogmærke..."
+"$$SELECT: AUTOSCROLL FASTER"      =   "Rul hurtigere"
+"$$SELECT: AUTOSCROLL SLOWER"      =   "Rul langsommere"
+"$$SELECT: BOOKMARKS..."           =   "Bogmærker..."
+"$$SELECT: BUTTON ACTION..."       =   "Knapfunktioner..."
+"$$SELECT: COPY TO MEMO"           =   "Eksportér til memo"
+"$$SELECT: DELETE DOC..."          =   "Slet dokument..."
+"$$SELECT: DETAILS..."             =   "Detaljer..."
+"$$SELECT: FIND AGAIN"             =   "Søg igen"
+"$$SELECT: FIND..."                =   "Søg..."
+"$$SELECT: FULL PAGE DOWN"         =   "Hel side ned"
+"$$SELECT: FULL PAGE UP"           =   "Hel side op"
+"$$SELECT: GESTURE ACTION..."      =   "Graffitifunktioner..."
+"$$SELECT: GO BACK"                =   "Gå tilbage"
+"$$SELECT: GO FORWARD"             =   "Gå frem"
+"$$SELECT: GO HOME"                =   "Gå hjem"
+"$$SELECT: GO TO BOTTOM"           =   "Gå til bund"
+"$$SELECT: GO TO LINK"             =   "Gå til henvisning"
+"$$SELECT: GO TO TOP"              =   "Gå til top"
+"$$SELECT: HALF PAGE DOWN"         =   "Halv side ned"
+"$$SELECT: HALF PAGE UP"           =   "Halv side op"
+"$$SELECT: LIBRARY..."             =   "Bibliotek..."
+"$$SELECT: NEXT ANCHOR"            =   "Næste mål"
+"$$SELECT: NONE"                   =   "Ingen"
+"$$SELECT: PREFERENCES..."         =   "Indstillinger..."
+"$$SELECT: PREV ANCHOR"            =   "Forrige mål"
+"$$SELECT: SELECT FONT..."         =   "Font and layout..."
+"$$SELECT: TAP ACTION..."          =   "Prikfunktioner..."
+"$$SELECT: TOGGLE AUTOSCROLL"      =   "(De-)aktivér rulning"
+"$$SELECT: COMMAND STROKE"         =   "Kommando-tegn"
+"$$SELECT: MENU..."                =   "Menu..."
+"$$SELECT: TOGGLE TOOLBAR"         =   "(De-)aktivér værktøjslinje"
+"$$SELECT: TOGGLE FULLSCREEN"      =   "(De-)aktivér fuldskærm"
+"$$SELECT: ONE LINE UP"            =   "En linje op"
+"$$SELECT: ONE LINE DOWN"          =   "En linje ned"
+"$$SELECT: ADJUST BRIGHTNESS"      =   "Lysstyrke..."
+"$$SELECT: ADJUST CONTRAST"        =   "Kontrast..."
+"$$SELECT: TOGGLE BACKLIGHT"       =   "(De-)aktivér baglys"
+"$$SELECT: ROTATE RIGHT"           =   "Rotér med uret"
+"$$SELECT: ROTATE LEFT"            =   "Rotér mod uret"
+"$$SELECT: SAVE POSITION"          =   "Gem placering"
+"$$SELECT: LOOKUP WORD IN PPI"     =   "Udvalgt ord til PPI"
+"$$SELECT: LOOKUP TO SEARCH FORM"  =   "Søg udvalgt ord"
+"$$SELECT: LOOKUP TO CLIPBOARD"    =   "Udvalgt ord til klippebord"
+"$$SELECT: LOOKUP TO ANNOTATE"     =   "Udvalgt ord til notat"
+"$$UNSUPPORTED"                    =   "Ikke-understøttet handling"
+
+
+/*** DETAILS ***/
+
+"$$DETAILS: CANCEL"                 =   "Annullér"
+"$$DETAILS: COPY URL"               =   "Kopiér URL"
+"$$DETAILS: OK"                     =   "O.k."
+"$$DETAILS: READ"                   =   "Læst"
+"$$DETAILS: SHOW IMAGES"            =   "Vis billeder"
+"$$DETAILS: STATUS:"                =   "Status:"
+"$$DETAILS: TITLE"                  =   "Detaljer"
+"$$DETAILS: UNREAD"                 =   "Ulæst"
+"$$DETAILS: URL:"                   =   "URL:"
+"$$DETAILS: HELP"                   =
+    " Du kan ændre et dokuments status, så det vises som ulæst "\
+    "(dvs. med fuldt optrukken understregning)."\
+    "\n\n"\
+    " Deaktivér Vis billeder, for at skjule alle sidens billeder."
+
+
+/*** SEARCH ***/
+
+"$$FIND: CANCEL"                    =   "Annullér"
+"$$FIND: CASE SENSITIVE"            =   "Versalfølsomt"
+"$$FIND: FIND:"                     =   "Søg:"
+"$$FIND: IN ALL PAGES"              =   "I alle sider"
+"$$FIND: IN PAGE"                   =   "I siden"
+"$$FIND: OK"                        =   "O.k."
+"$$FIND: TITLE"                     =   "Plucker søgning"
+"$$FIND: SUB PAGES"                 =   "Undersider"
+"$$FIND: DOWN IN DOC"               =   "Ned i dokument"
+"$$FIND: PHRASE"                    =   "Frase"
+"$$FIND: NO TRANSLITERATION"        =   "Ingen tegnoversættelse"
+"$$FIND: NON-ASCII TO PERIOD"       =   "Ikke-ASCII til punktum"
+"$$FIND: DROP LATIN 1 ACCENTS"      =   "Fjern Latin 1-accenter"
+"$$FIND: HELP"                      =
+    " Hvis du trykker på ikonet til højre for søgefeltet, får du "\
+    "en liste over de seneste søgestrenge, som du kan vælge."\
+    "\n\n"\
+    " Du kan søge i den aktuelle side, hele dokumentet, hele "\
+    "dokumentet fra den aktuelle position eller undersider."\
+    "\n\n"\
+    " Du kan gøre din søgning versal-ufølsom."\
+    "\n\n"\
+    " I en frasesøgning, skal hele søgestrengen svare fuldstændigt til "\
+    "det søgte sted, herunder mellemrum."\
+    "\n\n"\
+    " Hvis du deaktiverer frasesøgning, skal alle strengene (adskilt af "\
+    "mellemrum) optræde i samme afsnit. Så hvis du angiver søgestrengen "\
+    "'Store Stygge Ulv'(uden apostrofferne), vil du finde alle afsnit, der "\
+    "indeholder strengene 'Store', 'Stygge' og 'Ulv' - men ikke nødvendigvis "\
+    "som hele ord eller i den nævnte rækkefølge. "\
+    "\n\n"\
+    " Kun det først fundne ord bliver markeret i teksten, når du ser "\
+    "resultatet."\
+    "\n\n"\
+    " Hvis du har deaktiveret frasesøgning og har flere end ti "\
+    "søgestrenge, bliver de efterfølgende strenge ignoreret.."\
+    "\n\n"\
+    " Put den mindst almindelige streng først, hvis du har deaktiveret "\
+    "frasesøgning, så vil du opnå den hurtigste søgning."\
+    "\n\n"\
+    " Du kan vælge at oversætte tegnene i tekst og søgestreng før søgning. "\
+    "Du kan f.eks. vælge at erstatte alle ikke-ASCII-tegn (såsom 'ü') med "\
+    "punktummer. Eller du kan vælge at fjerne accenter på alle Latin "\
+    "1-tegn, så f.eks. 'é' ændres til 'e'. Dette ændrer også andre "\
+    "ikke-ASCII-tegn såsom specielle gåseøjne til den nærmeste "\
+    "ASCII-ækvivalent. Da din søgestreng ændres tilsvarende før søgning, "\
+    "giver dette i sidste ende en søgning, der ikke afhænger af accenter."
+
+
+/*** SEARCH RESULT ***/
+
+"$$RESULT: CANCEL"                  =   "Annullér"
+"$$RESULT: FINDMORE"                =   "Søg videre"
+"$$RESULT: MATCHES"                 =   "Fundne for"
+"$$RESULT: NOMATCHES"               =   "Ingen fundne for"
+"$$RESULT: SEARCHING..."            =   "Søger..."
+"$$RESULT: STOP"                    =   "Stop"
+"$$RESULT: TITLE"                   =   "Plucker søgning"
+
+
+/*** EMAIL ***/
+
+"$$EMAIL: CANCEL"                   =   "Annullér"
+"$$EMAIL: CC:"                      =   "Cc:"
+"$$EMAIL: SEND"                     =   "Send e-post"
+"$$EMAIL: SUBJECT:"                 =   "Emne:"
+"$$EMAIL: TITLE"                    =   "Plucker e-post"
+"$$EMAIL: TO:"                      =   "Til:"
+
+
+/*** ADD BOOKMARK ***/
+
+"$$ADD BOOKMARK: ADD"               =   "Tilføj"
+"$$ADD BOOKMARK: CANCEL"            =   "Annullér"
+"$$ADD BOOKMARK: NAME:"             =   "Navn:"
+"$$ADD BOOKMARK: TITLE"             =   "Tilføj bogmærke"
+
+
+/*** BOOKMARK ***/
+
+"$$BOOKMARKS: DELETE"               =   "Slet"
+"$$BOOKMARKS: DONE"                 =   "Færdig"
+"$$BOOKMARKS: GO TO"                =   "Gå"
+"$$BOOKMARKS: TITLE"                =   "Bogmærker"
+
+
+/*** EXTERNAL LINKS ***/
+
+"$$EXTERN: BACK"                    =   "Tilbage"
+"$$EXTERN: COPY URL"                =   "Kopiér URL"
+"$$EXTERN: LABEL1"                  =   "Beklager. Den lænke, du valgte er"
+"$$EXTERN: LABEL2"                  =   "ikke hjemtaget af Plucker."
+"$$EXTERN: LABEL3"                  =   "Det er sikkert en ekstern side,"
+"$$EXTERN: LABEL4"                  =   "eller overskrider den maksimale"
+"$$EXTERN: LABEL5"                  =   "dybde, som programmet blev bedt"
+"$$EXTERN: LABEL6"                  =   "om at hente."
+"$$EXTERN: NO URL"                  =   "Ingen tilgængelige URL-oplysninger."
+"$$EXTERN: TITLE"                   =   "Ekstern lænke"
+"$$EXTERN: URL:"                    =   "URL:"
+"$$EXTERN: BROWSE ONLINE"           =   "Gå online"
+
+
+/*** CATEGORY ***/
+
+"$$CATEGORY: ALL"                   =   "Alle"
+"$$CATEGORY: AND"                   =   "OG"
+"$$CATEGORY: CANCEL"                =   "Annullér"
+"$$CATEGORY: DELETE"                =   "Slet"
+"$$CATEGORY: MULTIPLE SELECT"       =   "Flere ad gangen"
+"$$CATEGORY: NONE"                  =   "Ingen"
+"$$CATEGORY: OK"                    =   "O.k."
+"$$CATEGORY: OR"                    =   "ELLER"
+"$$CATEGORY: RENAME"                =   "Omdøb"
+"$$CATEGORY: TITLE"                 =   "Kategorier"
+"$$CATEGORY: UNFILED"               =   "Uden kategori"
+"$$CATEGORY: HELP"                  =
+    " Tryk på knappen med kategorinavnet for at skjule/vise kategoriens "\
+    "dokumenter."\
+    "\n\n"\
+    " Aktivér FLERE VALG for at vise flere kategorier "\
+    "ad gangen."\
+    "\n\n"\
+    " Tryk på en tom knap for at tilføje en ny kategori. Dokumentikonet "\
+    "giver adgang til at slette og omdøbe en kategori."\
+    "\n\n"\
+    " Hvis du sletter et kategorinavn, vil dokumenter i denne kategori "\
+    "blive markeret som Uden kategori."\
+    "\n\n"\
+    " Du kan sammensmelte kategorier ved at omdøbe en kategori til samme "\
+    "navn, som en anden kategori."
+
+
+/*** NEW CATEGORY ***/
+
+"$$EDIT CATEGORIES: CANCEL"         =   "Annullér"
+"$$EDIT CATEGORIES: NAME:"          =   "Angiv nyt kategorinavn:"
+"$$EDIT CATEGORIES: OK"             =   "O.k."
+"$$EDIT CATEGORIES: TITLE"          =   "Redigér kategorier"
+
+
+/*** INITIALIZING CATEGORY ***/
+
+"$$INITDOC: SYNCHRONIZING"          =   "Synkroniserer dokumenter"
+"$$INITDOC: OPEN DOC LIST"          =   "Åbner dokumentlisten"
+
+
+/*** SORT DOCUMENTS ***/
+
+"$$SORTDOC: SORTING..."             =   "Sorterer..."
+
+
+/*** HARDCOPY ***/
+
+"$$HARDCOPY: TITLE"                 =   "Eksportér til memo"
+"$$HARDCOPY: CANCEL"                =   "Annullér"
+"$$HARDCOPY: EXPORT"                =   "Eksportér"
+"$$HARDCOPY: ROT13"                 =   "Rot13"
+
+
+/*** ANNOTATION ***/
+
+"$$ANNOTATION: TITLE"                 =   "Notat"
+"$$ANNOTATION: OK"                    =   "O.k."
+"$$ANNOTATION: CANCEL"                =   "Afbryd"
+"$$ANNOTATION: DELETE"                =   "Slet"
+
+
+/*** EXPORT LINK TO MEMO ***/
+
+"$$EXPORT: EXPORTING LINK..."       =   "Eksporterer henvisning..."
+
+
+/*************************************************************
+ *                         ALERTS                            *
+ *************************************************************/
+
+/*** COMMON STRINGS ***/
+
+"$$CANCEL"                  =   "Annullér"
+"$$DELETE"                  =   "Slet"
+"$$EXIT"                    =   "Afslut"
+"$$LEAVE"                   =   "Undlad"
+"$$NO"                      =   "Nej"
+"$$OK"                      =   "O.k."
+"$$YES"                     =   "Ja"
+"$$NEXT"                    =   "Næste side"
+"$$RESTART"                 =   "Genstart"
+
+
+/*** INFORMATION ***/
+
+"$$SYSTEM INCOMPATIBLE"     =   "Inkompatibelt system"
+"$$SYSTEM MSG"              =   "Der kræves systemversion 2.0 eller højere for"\
+                                "at køre dette program."
+
+"$$HIGH BITDEPTH"           =   "Kan ikke vise billede"
+"$$HIGH BITDEPTH MSG"       =   "Denne dybde er for stor til denne skærm."
+
+"$$EMPTY PATTERNS"          =   "Ingen søgemønstre"
+"$$EMPTY PATTERNS MSG"      =   "Der er ingen tidligere søgemønstre."
+
+"$$NO BEAM SUPPORT"         =   "Ingen beam-understøttelse"
+"$$NO BEAM SUPPORT MSG"     =   "Denne enhed understøtter ikke beaming"
+
+"$$COPY PROTECTED"          =   "Kan ikke beame"
+"$$COPY PROTECTED MSG"      =   "Kopibeskyttede dokumenter kan ikke beames."
+
+
+/*** CONFIRMATION ***/
+
+/*******************************************************************************/
+"$$DELETE OLD ANNOTATIONS"  =   "Out of date annotations"
+"$$DELETE OLD ANNOTATIONS MSG" =  "The annotations / bookmarks are older than "\
+                                  "the document.  Do you want to delete them now to "\
+                                  "prevent possible problems?"
+"$$DO NOT ASK"                 =  "Never"
+"$$DELETE ANNOTATIONS"         = "Delete annotations"
+"$$DELETE ANNOTATIONS MSG"     = "Do you want to delete the annotations and bookmarks for ^1?"
+"$$ALWAYS"                     = "Always delete"
+/*******************************************************************************/
+
+"$$CONFIRM DELETE"          =   "Bekræft sletning"
+"$$DELETE MSG"              =   "Slet ^1 permanent?"
+
+"$$CONFIRM DELETE METADOC"  =   "Sletning af oplysninger"
+"$$DELETE METADOC MSG"      =   "Skal oplysningerne om ^1 slettes?"
+
+"$$CONFIRM DELETE ALL"      =   "Bekræft sletning af alle"
+"$$DELETE ALL MSG"          =   "Slet alle dokumenter i de valgte kategorier "\
+                                "permanent?"
+
+"$$CONFIRM DELETE READ"     =   "Bekræft sletning af læste"
+"$$DELETE READ MSG"         =   "Skal læste dokumenter i de valgte kategorier "\
+                                "slettes?"
+
+"$$MERGE CATEGORY"          =   "Sammensmelt kategorier"
+"$$MERGE CATEGORY MSG"      =   "Du har omdøbt en kategori til et navn, "\
+                                "der allerede eksisterer. Det vil sammensmelte "\
+                                "disse to kategorier. Vil du fortsætte?"
+
+"$$END OF PAGE MSG"          =  "Nåede sidens slutning. Søg i næste side eller fortsæt "\
+                                "fra søgningens begyndelse?"
+
+"$$END OF DOC MSG"          =   "Nåede dokumentets afslutning. Fortsæt fra søgningens begyndelse?"
+
+
+/*** WARNING ***/
+
+"$$BROKEN DOCUMENT"         =   "Ødelagt dokument!"
+"$$BROKEN MSG"              =   "Vigtige poster mangler i ^1.\nSynkronisér "\
+                                "venligst et nyt dokument."
+
+"$$INSUFFICIENT MEMORY"     =   "Ikke nok hukommelse"
+"$$INSUFFICIENT MSG"        =   "Mangler hukommelse til at dekomprimere siden. "\
+                                "Du er nødt til at frigøre RAM-hukommelse."
+
+"$$LOW MEMORY"              =   "Mangler hukommelse"
+"$$EMAIL MEMORY MSG"        =   "Du har muligvis ikke hukommelse til at oprette "\
+                                "en epostbesked. Frigør mere RAM-hukommelse eller "\
+                                "gør din besked meget kort."
+"$$IMAGE MEMORY MSG"        =   "Der er ikke nok dynamisk hukommelse til at vise billedet."
+
+"$$NO TOADDR"               =   "Ingen adresse i Til:-feltet"
+"$$NO TOADDR MSG"           =   "Du skal angive en adresse i Til:-feltet."
+
+"$$ZLIB NOT SUPPORTED"      =   "ZLib ikke understøttet"
+"$$ZLIB MSG"                =   "Denne enhed kan ikke håndtere Zlib-komprimerede dokumenter"
+
+"$$IMAGE COMPRESSION"       =   "Komprimering ikke understøttet"
+"$$COMPRESSION MSG"         =   "Denne enhed kan ikke håndtere PalmOS billedkomprimering. "\
+                                "billedvisning bliver slået fra for denne database."
+
+"$$AUTOSCROLL STAY ON"     =    "Forbliv tændt ved rulning"
+"$$STAY ON MSG"            =    "Denne funktion forhindrer enheden i "\
+                                "automatisk at slukke under rulning. "\
+                                "Den automatiske slukning vil være "\
+                                "slået fra indtil du trykker på skærmen, "\
+                                "tænd/sluk-knappen eller når bunden af "\
+                                "siden."
+
+"$$INVALID OWNER"           =   "Ugyldig dokumentejer!"
+"$$INVALID OWNER MSG"       =   "Din enheds brugernavn svarer ikke til den"\
+                                "registrerede ejer af '^1'.  Dokumentet kan "\
+                                "kun åbnes i dette navn."
+
+"$$MANUAL SYNC"             =   "Opdatering af dokumentlisten"
+"$$MANUAL SYNC MSG"         =   "Hvis du vælge dette, vil Plucker undlade "\
+                                "automatisk opdatering af dokumentlisten. "\
+                                "Brug menupunktet 'Opdatér listen' "\
+                                "i biblioteket for selv at opdatere listen."
+
+
+/*** ERROR ***/
+
+"$$NO CATEGORY"             =   "Ingen valgt kategori"
+"$$NO CATEGORY MSG"         =   "Du skal vælge mindst én kategori."
+
+"$$CATEGORY NAME"           =   "Kategorinavn"
+"$$CATEGORY NAME MSG"       =   "Kategorien ^1 eksisterer allerede. "\
+                                "Brug et andet navn."
+
+"$$CANNOT DELETE"           =   "Kan ikke slette"
+"$$CANNOT DELETE MSG"       =   "Kan ikke slette dokument!"
+
+"$$CANNOT DELETE ALL"       =   "Kan ikke slette alle"
+"$$CANNOT DELETE ALL MSG"   =   "Kan ikke slette alle dokumenter!"
+
+"$$CANNOT DELETE READ"      =   "Kan ikke slette læste"
+"$$CANNOT DELETE READ MSG"  =   "Kan ikke slette læste dokumenter!"
+
+"$$BAD MAILTO"              =   "Mailto-fejl"
+"$$BAD MAILTO MSG"          =   "Mailto-posten er ødelagt. E-postadressen "\
+                                "blev ikke fundet!"\
+                                "\n\n"\
+                                "Informér venligst Plucker-udviklerne."
+
+"$$ALREADY EXISTS"          =   "Der er allerede et dokument med navnet ^1."
+
+"$$READ ONLY"               =   "Skrivebeskyttet dokument"
+"$$READ ONLY MSG"           =   "Dokumentet er skrivebeskyttet og kan ikke omdøbes."
+
+"$$UNKNOWN TYPE"            =   "Ukendt type"
+"$$UNKNOWN TYPE MSG"        =   "Ukendt dokumenttype"
+
+"$$CANNOT RENAME DOC"       =   "Kan ikke omdøbe dokument!"
+
+"$$CANNOT FIND DOC"         =   "Kan ikke finde dokument"
+"$$CANNOT FIND DOC MSG"     =   "Kan ikke finde dokument i RAM eller eksternt kort!"
+
+"$$UNHANDLED EXCEPTION"     =   "Ukendt undtagelse"
+"$$UNHANDLED EXCEPTION MSG" =   "Ukendt undtagelse, fejlkode = ^1"
+
+"$$CANNOT ADD BOOKMARK"     =   "Kan ikke tilføje bogmærke"
+"$$CANNOT ADD BOOKMARK MSG" =   "Kunne ikke tilføje '^1'"
+
+"$$CANNOT DELETE BOOKMARK"     =   "Kan ikke slette bogmærke"
+"$$CANNOT DELETE BOOKMARK MSG" =   "Kan ikke slette '^1'"
+
+"$$IMAGE ERROR"             =   "Billedfejl"
+"$$IMAGE ERROR MSG"         =   "Det lykkedes ikke at vise billedet. "\
+                                "Måske er Plucker løbet tør for hukommelse."
+
+END
+

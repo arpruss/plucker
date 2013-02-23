@@ -1,0 +1,13 @@
+This is a viewer for the Plucker document format which uses the GTK+2
+graphics toolkit, and POSIX system calls.  It should run on any
+platform which provides those two items.
+
+To build, first install GTK+, version 2.0 or later.  Build and install
+the libunpluck.a library from the tools/unpluck subdirectory of the
+Plucker source distribution.  Then edit the Makefile in this directory
+to point to the location of GTK+, and the location of unpluck.  If you
+have freetype2, edit the location of it.  Otherwise remove all
+references to the freetype2 library.  Finally, edit the location of
+the X11 home, if different from the normal Linux value.
+
+Type "make" to build the viewer.

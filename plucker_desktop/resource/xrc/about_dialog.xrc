@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<resource xmlns="http://www.wxwidgets.org/wxxrc" version="2.5.3.0">
+    
+<object class="wxDialog" name="about_dialog">
+    <style>wxCAPTION|wxSYSTEM_MENU|wxRESIZE_BORDER</style>
+    <title>About Plucker Desktop</title>
+    <centered>1</centered>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>0</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxNotebook" name="about_dialog_notebook">
+                <usenotebooksizer>1</usenotebooksizer>
+                <object class="notebookpage">
+                    <label>Details</label>
+                    <object class="wxPanel" name="about_dialog_details_tab">
+                        <object class="wxFlexGridSizer">
+                            <cols>1</cols>
+                            <rows>0</rows>
+                            <vgap>0</vgap>
+                            <hgap>0</hgap>
+                            <growablecols>0</growablecols>
+                            <growablerows>5,6</growablerows>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                <border>10</border>
+                                <object class="wxStaticBitmap" name="about_dialog_details_tab_staticbitmap">
+                                    <bitmap>../icons_application/application_64x64.xpm</bitmap>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>10</border>
+                                <object class="wxStaticText" name="about_dialog_details_tab_application_name">
+                                    <label>Plucker Desktop</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL</flag>
+                                <object class="wxFlexGridSizer">
+                                    <cols>4</cols>
+                                    <rows>0</rows>
+                                    <vgap>0</vgap>
+                                    <hgap>0</hgap>
+                                    <growablecols>2</growablecols>
+                                    <growablerows>0</growablerows>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="about_dialog_details_tab_version_label_statictext">
+                                            <label>Version</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="about_dialog_details_tab_version_value_statictext">
+                                            <label>1.9.0.0</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL</flag>
+                                <object class="wxFlexGridSizer">
+                                    <cols>4</cols>
+                                    <rows>0</rows>
+                                    <vgap>0</vgap>
+                                    <hgap>0</hgap>
+                                    <growablecols>2</growablecols>
+                                    <growablerows>0</growablerows>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="about_dialog_details_tab_build_date_label_statictext">
+                                            <label>Build Date</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="about_dialog_details_tab_build_date_value_statictext">
+                                            <label>Aug 30 2002</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                <border>10</border>
+                                <object class="wxStaticText" name="about_dialog_details_tab_description_statictext">
+                                    <label>This application provides visual content management for Plucker.</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxFlexGridSizer">
+                                    <cols>1</cols>
+                                    <rows>0</rows>
+                                    <vgap>0</vgap>
+                                    <hgap>0</hgap>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTRE|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="about_dialog_details_tab_copyright_statictext">
+                                            <label>(c) Copyright 1998-2007 The Plucker Team.</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="about_dialog_details_tab_free1_statictext">
+                                            <label>This application is Free Software under the conditions of the </label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="about_dialog_details_tab_free2_statictext">
+                                            <label>Free Software Foundation's General Public License.</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                <border>10</border>
+                                <object class="wxStaticText" name="about_dialog_details_tab_url_statictext">
+                                    <style>wxALIGN_CENTRE</style>
+                                    <label>www.plkr.org</label>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Plucker Desktop credits</label>
+                    <object class="wxPanel" name="about_dialog_desktop_credits_tab">
+                        <object class="wxFlexGridSizer">
+                            <cols>1</cols>
+                            <rows>0</rows>
+                            <vgap>0</vgap>
+                            <hgap>0</hgap>
+                            <growablecols>0</growablecols>
+                            <growablerows>0</growablerows>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxHtmlWindow" name="about_dialog_desktop_credits_tab_htmlwindow">
+                                <size platform="unix">400,100</size>
+                                <size platform="os2|mac|win">100,100</size>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>  
+                <object class="notebookpage">
+                    <label>Plucker credits</label>
+                    <object class="wxPanel" name="about_dialog_plucker_credits_tab">
+                        <object class="wxFlexGridSizer">
+                            <cols>1</cols>
+                            <rows>0</rows>
+                            <vgap>0</vgap>
+                            <hgap>0</hgap>
+                            <growablecols>0</growablecols>
+                            <growablerows>0</growablerows>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxHtmlWindow" name="about_dialog_plucker_credits_tab_htmlwindow">
+                                <size>100,100</size>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_CENTRE|wxALL</flag>
+            <border>5</border>
+            <object class="wxButton" name="wxID_OK">
+                <label>OK</label>
+            </object>
+        </object>
+    </object>
+</object>
+        
+</resource>

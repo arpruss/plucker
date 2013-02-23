@@ -1,0 +1,132 @@
+#
+# $Id: Makefile.in,v 1.44 2007/06/30 14:55:43 robertoconnor Exp $
+#
+
+.SUFFIXES:  .o .cpp
+
+.cpp.o :
+	$(CXX) -c -o $@ $<
+
+
+SHELL           = @SHELL@
+
+top_builddir    = ..
+subdir          = plucker_desktop
+srcdir          =   @srcdir@
+VPATH           =   @srcdir@
+
+DESTDIR	=
+# This is stopping rpm from making a package, since it goes to /usr/local/bin
+# Solution is probably to put %{bindir} as part of the ./config script in the 
+# spec file
+# BINDIR          = $(DESTDIR)@bindir@
+BINDIR			= $(DESTDIR)/usr/bin
+
+
+# The original one. Return to this later, when support non-hard-coded dir locations.
+#DATADIR        = $(DESTDIR)@PLUCKERDIR@
+
+# The temp ones, for now
+DATADIR         = $(DESTDIR)/usr/share/plucker-desktop
+LOCALEDIR       = $(DESTDIR)/usr/share/locale
+DOCSDIR         = $(DESTDIR)/usr/share/doc/packages/plucker-desktop
+
+MKINSTALLDIRS   = $(top_builddir)/mkinstalldirs
+
+TARGET          = plucker-desktop
+
+CXXFLAGS        = @CXXFLAGS@ `wx-config --cxxflags`
+
+WX_LIBRARY_BASENAME	= `wx-config --basename`
+WX_RELEASE	= `wx-config --release`
+
+# Use with/without the stc depending on whether want to use styled text control ('stc')
+# Note the order of libs is vital. Since the xrc and stc libs depend on the main wx library
+# the xrc and stc have to come first. If you switch them around, you will get weird 
+# reference errors.
+LDLIBS          = `wx-config --libs` 
+   
+CXX             = @CXX@ $(CXXFLAGS)
+CTAGS           = @CTAGS@
+
+# Include the list of .cpp files of the progect as a SOURCES variable.
+include makefile_filelist.lst
+
+# Build a list of objects, based on the list of sources
+OBJECTS         = ${SOURCES:.cpp=.o}
+
+all: $(TARGET)
+
+Makefile: Makefile.in $(top_builddir)/config.status
+	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ $(SHELL) ./config.status
+
+$(TARGET): $(OBJECTS)
+	$(CXX) -o $@ $(OBJECTS) $(LDLIBS) 
+
+depend: $(SOURCES)
+	$(CXX) -MM $(SOURCES) >.depend
+
+.depend: $(SOURCES)
+	$(CXX) -MM $(SOURCES) >.depend
+
+tags: $(SOURCES) *.h
+	$(CTAGS) $(SOURCES) *.h
+
+
+install:
+	$(MKINSTALLDIRS) $(BINDIR)
+	-cp $(TARGET) $(BINDIR)
+	$(MKINSTALLDIRS) $(DATADIR)
+	$(MKINSTALLDIRS) $(LOCALEDIR)
+	$(MKINSTALLDIRS) $(DOCSDIR)
+	-cp $(COPYFLAGS) resource/docs/*.htb $(DOCSDIR)
+	-cp $(COPYFLAGS) *.txt $(DOCSDIR)
+	-cp $(COPYFLAGS) docs/*.txt $(DOCSDIR)
+	$(MKINSTALLDIRS) $(DATADIR)/resource
+	$(MKINSTALLDIRS) $(DATADIR)/resource/graphics_dialog
+	-cp $(COPYFLAGS) resource/graphics_dialog/*.* $(DATADIR)/resource/graphics_dialog/
+	$(MKINSTALLDIRS) $(DATADIR)/resource/graphics_misc
+	-cp $(COPYFLAGS) resource/graphics_misc/*.* $(DATADIR)/resource/graphics_misc/
+	$(MKINSTALLDIRS) $(DATADIR)/resource/graphics_wizard
+	-cp $(COPYFLAGS) resource/graphics_wizard/*.* $(DATADIR)/resource/graphics_wizard/
+	$(MKINSTALLDIRS) $(DATADIR)/resource/icons_application
+	-cp $(COPYFLAGS) resource/icons_application/*.* $(DATADIR)/resource/icons_application/
+	$(MKINSTALLDIRS) $(DATADIR)/resource/icons_dialog
+	-cp $(COPYFLAGS) resource/icons_dialog/*.* $(DATADIR)/resource/icons_dialog/
+	$(MKINSTALLDIRS) $(DATADIR)/resource/icons_image_list
+	-cp $(COPYFLAGS) resource/icons_image_list/*.* $(DATADIR)/resource/icons_image_list/
+	$(MKINSTALLDIRS) $(DATADIR)/resource/icons_art_provider
+	-cp $(COPYFLAGS) resource/icons_art_provider/*.* $(DATADIR)/resource/icons_art_provider/
+	$(MKINSTALLDIRS) $(DATADIR)/resource/launcher_icons_large
+	-cp $(COPYFLAGS) resource/launcher_icons_large/*.* $(DATADIR)/resource/launcher_icons_large
+	$(MKINSTALLDIRS) $(DATADIR)/resource/launcher_icons_small
+	-cp $(COPYFLAGS) resource/launcher_icons_small/*.* $(DATADIR)/resource/launcher_icons_small
+	$(MKINSTALLDIRS) $(DATADIR)/resource/plkrdata_installation
+	-cp $(COPYFLAGS) resource/plkrdata_installation/*.plkrdata $(DATADIR)/resource/plkrdata_installation/
+	$(MKINSTALLDIRS) $(DATADIR)/resource/plkrdata_setup_wizard
+	-cp $(COPYFLAGS) resource/plkrdata_setup_wizard/*.* $(DATADIR)/resource/plkrdata_setup_wizard/
+	$(MKINSTALLDIRS) $(DATADIR)/resource/plkrdata_showcase
+	-cp $(COPYFLAGS) resource/plkrdata_showcase/*.* $(DATADIR)/resource/plkrdata_showcase/
+	$(MKINSTALLDIRS) $(DATADIR)/resource/strings_tips
+	-cp $(COPYFLAGS) resource/strings_tips/*.txt $(DATADIR)/resource/strings_default_exclusion_list/
+	$(MKINSTALLDIRS) $(DATADIR)/resource/strings_default_exclusion_list
+	-cp $(COPYFLAGS) resource/strings_tips/*.txt $(DATADIR)/resource/strings_tips/
+	$(MKINSTALLDIRS) $(DATADIR)/resource/xrc
+	-cp $(COPYFLAGS) resource/xrc/*.xrc $(DATADIR)/resource/xrc/
+	$(MKINSTALLDIRS) $(DATADIR)/resource/html_about
+	-cp $(COPYFLAGS) resource/html_about/*.htm $(DATADIR)/resource/html_about/
+
+clean:
+	rm -f *.o core .depend $(TARGET)
+
+distclean: clean
+	rm -f Makefile
+
+maintainer-clean: distclean
+	@echo "------------------------------------------------------------"
+	@echo "This command is intended for maintainers to use..."
+	@echo "it deletes files that may require special tools to rebuild."
+	@echo "------------------------------------------------------------"
+
+
+

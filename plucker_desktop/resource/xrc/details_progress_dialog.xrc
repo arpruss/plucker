@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<resource xmlns="http://www.wxwidgets.org/wxxrc" version="2.5.3.0">
+
+<object class="wxDialog" name="details_progress_dialog">
+    <title>Channel Update Progress</title>
+    <style>wxCAPTION|wxRESIZE_BORDER</style>
+    <centered>1</centered>
+    <object class="wxBoxSizer">
+        <orient>wxVERTICAL</orient>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxBOTTOM</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>3</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>0</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticBitmap" name="details_progress_dialog_staticbitmap">
+                        <bitmap>../icons_dialog/progress_dialog.xpm</bitmap>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxFlexGridSizer">
+                        <cols>0</cols>
+                        <rows>4</rows>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <growablecols>0</growablecols>
+                        <object class="sizeritem">
+                            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxStaticText" name="details_progress_dialog_total_statictext">
+                                <size>350,-1</size>
+                                <style>wxST_NO_AUTORESIZE</style>
+                                <label>Channels updated</label>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxGROW|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxGauge" name="details_progress_dialog_total_gauge">
+                                <style>wxGA_SMOOTH</style>
+                                <size>350,17</size>
+                                <max>1000</max>
+                                <value>0</value>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxStaticText" name="details_progress_dialog_subtask_statictext">
+                                <size>350,-1</size>
+                                <style>wxST_NO_AUTORESIZE</style>
+                                <label>Progress for this channel</label>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxGauge" name="details_progress_dialog_subtask_gauge">
+                                <style>wxGA_SMOOTH</style>
+                                <size>350,17</size>
+                                <max>1000</max>
+                                <value>0</value>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxTOP|wxBOTTOM</flag>
+                    <border>5</border>
+                    <object class="wxFlexGridSizer">
+                        <cols>1</cols>
+                        <rows>0</rows>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <object class="sizeritem">
+                            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxButton" name="details_progress_dialog_stop_button">
+                                <label>Stop</label>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxButton" name="details_progress_dialog_export_button">
+                                <label>Export details...</label>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+
+        <object class="sizeritem">
+            <flag>wxGROW|wxALL</flag>
+            <border>5</border>
+            <option>1</option>
+            <object class="wxCollapsiblePane" name="details_progress_dialog_collapsiblepane">
+                <label>Details</label>
+                <collapsed>0</collapsed>
+                <object class="panewindow">
+                    <object class="wxFlexGridSizer">
+                        <cols>1</cols>
+                        <rows>1</rows>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <growablecols>0</growablecols>
+                        <growablerows>0</growablerows>
+                        <object class="sizeritem">
+                            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                            <border>5</border>
+                            <object class="unknown" name="details_progress_dialog_listbox">
+                                <size>300,300</size>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+        
+    </object>
+</object>
+
+</resource>

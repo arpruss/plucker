@@ -1,0 +1,310 @@
+'\" t
+.\" $Id: cpluck.1,v 1.4 2005/05/22 23:20:21 chrish Exp $
+.\"
+.\" man page for cpluck -- an HTML-to-Plucker converter
+.\" Copyright 2005 (c) Christopher R. Hawks <chawks@dls.net>
+.\" 
+.\" This man page is free software; you can redistribute it and/or
+.\" modify it under the terms of the GNU General Public License
+.\" as published by the Free Software Foundation; either version 2
+.\" of the License, or (at your option) any later version.
+.\" 
+.\" This man page is distributed in the hope that it will be useful,
+.\" but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public License
+.\" along with this man page; if not, write to the Free Software
+.\" Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+.\"
+.\" cpluck.1
+.TH CPLUCK 1 "Plucker 1.8 - http://plkr.org/"
+.SH NAME
+cpluck \- generate a document (e-book) in Plucker format
+.SH SYNOPSIS
+\fBcpluck\fR
+[--alt-maxheight=\fIpixel-height\fR]
+[--alt-maxwidth=\fIpixel-width\fR]
+[--author=\fIstring\fR]
+[--backup]
+[--beamable]
+[--bpp=\fIimage-depth\fR]
+[--category=\fIdefault-category-name\fR]
+[--compression=\fIcompression-type\fR]
+[--doc-file=\fIname-prefix\fR]
+[--doc-name=\fIdocument-name\fR]
+[--exclusion-list=\fIfilename\fR]
+[--extra-section=\fIsection-name\fR]
+[--help]
+[--home-url=\fIbase-URL\fR]
+[--launchable]
+[--maxdepth=\fIdepth\fR]
+[--maxheight=\fIpixel-height\fR]
+[--maxwidth=\fIpixel-width\fR]
+[--no-backup]
+[--noimages]
+[--not-beamable]
+[--not-launchable]
+[--no-urlinfo]
+[--pluckerdir=\fIoutput-directory\fR]
+[--pluckerhome=\fIplucker-home-directory\fR]
+[--quiet]
+[--stayondomain]
+[--stayonhost]
+[--tables]
+[--title=\fIstring\fR]
+[--user-agent=\fIstring\fR]
+[--verbosity=\fIverbosity-level\fR]
+[--version]
+[--zlib-compression]
+[--wait-time=\fImilli-seconds\fR]
+
+.SH DESCRIPTION
+.B cpluck
+creates a Plucker binary document, which is a kind of e-book, from a URL.  This document is formatted for the Plucker viewer program, which currently runs on Palm devices.  The normal mode of operation is to take a \fIhome URL\fR and 'pluck' it to produce a Plucker document specified by \fI--doc-file\fR.  The Plucker document format is specified at \fBhttp://www.plkr.org/index.pl/cvs/docs/DBFormat.html?rev=HEAD.\fR
+.SH OPTIONS
+Many options are also available as parameters in the configuration file \fC$HOME/.pluckerrc\fR, or in the default configuration file.  Where applicable, the name of the configuration file parameter is shown after the documentation on the option.  An option given on the command line will override any configuration file parameter.  For more on configuration files, see below.
+.TP
+\fB--alt-maxheight=\fIpixel-height\fR
+Specifies the maximum height, in pixels, of the \fIalternate rendition\fR of an image.  (When inline images are too large to be included full-size, they are converted into smaller versions, with sizes governed by the MAXHEIGHT and MAXWIDTH parameters, and are linked to larger renditions of the images, called the \fIalternate rendition\fR.)  [\fCalt_maxheight\fR]
+.TP
+\fB--alt-maxwidth=\fIpixel-width\fR
+Specifies the maximum width, in pixels, of the \fIalternate rendition\fR of an image.  (When inline images are too large to be included full-size, they are converted into smaller versions, with sizes governed by the MAXHEIGHT and MAXWIDTH parameters, and are linked to larger renditions of the images, called the \fIalternate rendition\fR.)  [\fCalt_maxwidth\fR]
+.TP
+\fB--author=\fIstring\fR
+Sets the author of the document to \fIstring\fR, which is assumed to be in the charset of the document (see \fB--charset\fR), or ASCII if no charset is specified.  [\fCauthor_md\fR]
+.TP
+\fB--backup\fR
+Sets the bit in the output file that causes the document to be backed up on Palm HotSync.  By default, the document is backed up.  [\fCbackup_bit\fR]
+.TP
+\fB--beamable\fR
+Sets the bit in the output file that allows the document to be beamed.  By default, the document is beamable.  [\fCcopyprevention_bit\fR]
+.TP
+\fB--bpp=\fIimage-depth\fR
+Specifies the number of bits-per-pixel to be used for images.  Valid values as of Plucker 1.1 are 0, 1 (the default), 2, 4, or 8.  If 0 is specified, no images will be included in the document.  See also \fB--noimages\fR.  [\fCbpp\fR]
+.TP
+\fB--category=\fIdefault-category-name\fR
+Specifies a default Plucker category or categories to include in the document.  If more than one category is specified, the category names should be separated by semicolons.  [\fCcategory\fR]
+.TP
+\fB--compression=\fIcompression-type\fR
+Specifies the type of compression to use in the document.  There is only one choice for \fIcompression-type\fR: \fCzlib\fR.  The default is \fCno\fR compression.  \fCzlib\fR compression results in smaller documents.  See also \fB--zlib-compression\fR.  [\fCcompression\fR]
+.TP
+\fB--doc-file=\fIname-prefix\fR (or \fB-f \fIname-prefix\fR)
+also as \fB-f \fIname-prefix\fR.  Specifies the name of the document output file, without the directory or extension (always .pdb).  [\fCdoc_file\fR]
+.TP
+\fB--doc-name=\fIdocument-name\fR (or \fB-N \fIdocument-name\fR)
+Specifies the short name by which the document will be identified in the viewer.  Defaults to value of \fI--doc-file\fR.  If \fI--doc-file\fR is not specified, the document name defaults to the home URL.  This name should be limited to 26 characters.  [\fCdoc_name\fR]
+.TP
+\fB--exclusion-list=\fIfilename\fR (or \fB-E \fIfilename\fR)
+Used to add additional files to the the \fIexclusion list\fR, a list of files containing information on URLs to exclude from the document.  See the User's Guide for more information on exclusion lists.  [\fCexclusion_lists\fR]
+.TP
+\fB--extra-section=\fIsection-name\fR (or \fB-s \fIsection-name\fR)
+Used to add additional sections to the list to searched sections in the configuration files.  A section is a named set of configuration information.  By default, the \fBDEFAULT\fR section will be searched, then any operating-system-specific sections, then any sections specified on the command line.
+.TP
+\fB--help\fR (or \fB-h\fR)
+Outputs help on command-line parameters.
+.TP
+\fB--home-url=\fIbase-url\fR (or \fB-H \fIbase-URL\fR)
+Specifies the URL from which the document is to be constructed.  This may also be specified as a single argument on the command line.  If a home URL is not specified, it will default to file:/$HOME/.plucker/home.html.  This default may be changed in your .pluckerrc file.  Note that this value must be a valid absolute URL.  A special URL scheme is supported, \fBplucker:\fR.  This specifies files on the Plucker search path, which consists of \fIPluckerDir\fR (the Plucker current working  directory) followed  by   \fIPluckerHome\fR (the Plucker home directory).  [\fChome_url\fR]
+.TP
+\fB--launchable\fR
+Specifies that the output document should be shown as an icon in the system launcher.  Clicking on the icon will start Plucker and select this document.  By default, documents are not launchable.  [\fClaunchable_bit\fR]
+.TP
+\fB--maxdepth=\fIdepth\fR (or \fB-M \fIdepth\fR)
+This specifies the number of levels of links the parser will traverse when converting the input.  It is best to keep this value small, or the size of your document can get very large.  If you want just a page, but none of the pages pointed to by that page, use a value of 1.  [\fChome_maxdepth\fR]
+.TP
+\fB--maxheight=\fIpixel-height\fR
+Specifies the maximum height, in pixels, for an inline image.  Overrides the MAXHEIGHT parameter in the configuration file, but is in turn overridden by any height specification in the image link itself.  [\fCmaxheight\fR]
+.TP
+\fB--maxwidth=\fIpixel-width\fR
+Specifies the maximum width, in pixels, for an inline image.  Overrides the MAXWIDTH parameter in the configuration file, but is in turn overridden by any width specification in the image link itself.  [\fCmaxwidth\fR]
+.TP
+\fB--no-backup\fR
+Clears the bit in the output file that causes the document to be backed up on Palm HotSync.  By default, the document is backed up.  [\fCbackup_bit\fR]
+.TP
+\fB--noimages\fR
+Specifies that no images will be included.  Identical to --bpp=0.  See also \fB--bpp\fR.
+.TP
+\fB--no-urlinfo\fR
+Specifies that no URL information will be included in the document.  When links are included in documents, the information about the actual URL is included by default.  This is often handy for external references (links to documents not included in the document).  Use of this option may result in a slightly smaller document.  [\fCno_urlinfo\fR]
+.TP
+\fB--pluckerdir=\fIoutput-directory\fR (or \fB-p \fIoutput-directory\fR)
+Overrides the default value for \fIPluckerDir\fR, which defaults to \fIPluckerHome\fR (see  \fB--pluckerhome\fR).  PluckerDir is the default directory to which output documents  will  be  written,  and  which  will  be searched for input files if the plucker: URL scheme is used.  [\fCpluckerdir\fR]
+
+.TP
+\fB--pluckerhome=\fIplucker-home-directory\fR (or \fB-P \fIplucker-home-directory\fR)
+Overrides the default value for \fIPluckerHome\fR, which is $HOME/.plucker/.  Can also be specified by setting the environment variable PLUCKERHOME.  An explicit value for \fB--pluckerhome\fR overrides any setting of PLUCKERHOME.  [\fCpluckerhome\fR]
+.TP
+\fB--quiet\fR (or \fB-q\fR)
+Same as --verbosity=0.
+.TP
+\fB--referrer=\fIstring\fR
+When using HTTP to gather input, send \fIstring\fR as the value of the Referrer HTTP header.  Default is to send no referrer header.  [\fCreferrer\fR]
+.TP
+\fB--stayondomain\fR
+Specifies that no web domains other than that named in the original base URL will be visited for parts of the document.  [\fChome_stayondomain\fR]
+.TP
+\fB--stayonhost\fR
+Specifies that no web hosts other than that named in the original base URL will be visited for parts of the document.  [\fChome_stayonhost\fR]
+.TP
+\fB--tables\fR
+Generate real tables instead of vertical lists of cells [\fCtables\fr]
+.TP
+\fB--title=\fIstring\fR
+Sets the title of the document to \fIstring\fR.  This is different from the name of the document (see \fB--doc-name=\fR) in that it may be relatively long.  [\fCtitle_md\fR]
+.TP
+\fB--user-agent=\fIstring\fR
+When using HTTP to gather input, send \fIstring\fR as the value of the User-Agent HTTP header.  [\fCuser_agent\fR]
+.TP
+\fB-v\fR)
+Set verbosity to 1.
+.TP
+\fB--verbosity=\fIverbosity-level\fR (or \fB-V \fIverbosity-level\fR)
+Sets the level of status information output to the value specified by \fIverbosity-level\fR.  Appropriate values are 0, for total silence, 1, for standard progress status (the default value), and 2, for lots of output about gathering and parsing the input (usually reserved for debugging).  Values larger than 2 will also work, but tend to give profuse output that's only useful to developers.  See also \fB--quiet\fR.  [\fCverbosity\fR]
+.TP
+\fB--version\fR
+Print out the version of Plucker that is being run and then exit.
+.TP
+\fB--zlib-compression\fR
+Specifies that Zlib compression should be used for the parts of this document.  This is considerably more efficient than the default compression format, Doc compression.  See also \fB--doc-compression\fR and \fB--compression\fR.
+.TP
+\fB--wait-time=\fImilli-seconds\fR (or \fB-W \fImilli-seconds\fR)
+Wait this many thousandths of a second between http requests.
+.SH EXAMPLES
+To build a mobile version of the weekly online cafeteria menu at example.com, available on the Web at http://www.example.com/ops/cafe/weeklymenu.html, without following any links, and without including any images, and naming the document "Cafeteria Menu", and putting the document in a file named /tmp/Menu.pdb, one would run the following command:
+.sp
+\fC% cpluck -H http://www.example.com/cafe/weeklymenu.html -B 0 -M 0 -n "Cafeteria Menu" -f Menu\fR
+.sp
+Or alternatively,
+.sp
+\fC% cpluck  --doc-name="Cafeteria Menu" \\
+.br
+     --doc-file=Menu \\
+.br
+     --home-url="http://www.example.com/cafe/weeklymenu.html" \\
+.br
+     --maxdepth=0 \\
+.br
+     --bpp=0
+.br
+---- 0 collected, 1 to do ----
+.br
+Processing http://www.example.com/cafe/weeklymenu.html...
+.br
+  Retrieved ok.
+.br
+  Parsed ok.
+.br
+---- all pages retrieved and parsed ----
+.sp
+Writing out collected data...
+.br
+Writing document 'Cafeteria Menu' to file Menu.pdb
+.br
+Converting http://www.example.com/cafe/weeklymenu.html...
+.br
+Wrote 1 <= plucker:/~special~/index
+.br
+Wrote 2 <= http://www.example.com/cafe/weeklymenu.html
+.br
+Wrote 3 <= plucker:/~special~/pluckerlinks
+.br
+Wrote 5 <= plucker:/~special~/metadata
+.br
+Wrote 11 <= plucker:/~special~/links1
+.br
+Done!
+.br
+% ls -l Menu.pdb
+.br 
+-rw-rw-r--   1 user  somegroup    2646 Nov  2 21:19 Menu.pdb
+.br
+% \fR
+.sp
+.SH "CONFIGURATION FILES"
+Two configuration files are examined for customized settings of the various \fIcpluck\fR parameters.  The first is a system-wide configuration file, by default \fC/usr/local/etc/pluckerrc\fR.  Any settings in this may be overridden with a personal configuration file, \fC$HOME/.pluckerrc\fR.  Both files contain any number of \fIsections\fR, each of which may contain any number of configuration parameter settings.  Each section has a name, which is enclosed in square brackets, followed by parameter settings.  Normally, only the section called "default" will be examined.  Extra sections may be specified with the \fI--extra-section\fR option to cpluck; settings in these sections will override values in the default section.
+.PP
+Parameter settings have the form form \fIname = value\fR, where name is the name of a cpluck parameter, and value is a string, integer, floating-point, or boolean value.  A colon character (:) may be used instead of the equals sign to separate name and value.  Comments may be expressed by starting any line with the characters "rem", or with the character "#", or with the character ";".  Boolean values of True may be expressed with "TRUE", "true", "True", "on", or "1".  Boolean values of False may be expressed with "FALSE", "false", "False", "off", or "0".
+.PP
+Configuration sections are often useful for specific often-used groups of options.  It's possible to define these options in a section of the configuration file, and then just specify the section as the argument to \fCcpluck\fR; the other options can all be drawn from the section.
+.PP
+The following parameters are understood:
+.TP
+\fBalt_maxheight\fR
+See option \fI--alt-maxheight\fR.
+.TP
+\fBalt_maxwidth\fR
+See option \fI--alt-maxwidth\fR.
+.TP
+\fBauthor_md\fR
+See option \fI--author\fR.
+.TP
+\fBbackup_bit\fR
+See option \fI--backup\fR.
+.TP
+\fBbpp\fR
+See option \fI--bpp\fR.
+.TP
+\fBcategory\fR
+See option \fI--category\fR.
+.TP
+\fBcompression\fR
+See option \fI--compression\fR.
+.TP
+\fBcopyprevention_bit\fR
+See option \fI--beamable\fR.
+.TP
+\fBdoc_file\fR
+See option \fI--doc-file\fR.
+.TP
+\fBdoc_name\fR
+See option \fI--doc-name\fR.
+.TP
+\fBexclusion_lists\fR
+See option \fI--exclusion-list\fR.  If multiple files are specified here, they should be separated by the appropriate separator character for your operating system (a colon on Unix platforms, a semicolon on Windows platforms).
+.TP
+\fBhome_maxdepth\fR
+See option \fI--maxdepth\fR.
+.TP
+\fBhome_stayondomain\fR
+See option \fI--stayondomain\fR.
+.TP
+\fBhome_stayonhost\fR
+See option \fI--stayonhost\fR.
+.TP
+\fBhome_url\fR
+See option \fI--home-url\fR.
+.TP
+\fBlaunchable_bit\fR
+See option \fI--launchable\fR.
+.TP
+\fBmaxheight\fR
+See option \fI--maxheight\fR.
+.TP
+\fBmaxwidth\fR
+See option \fI--maxwidth\fR.
+.TP
+\fBpluckerdir\fR
+See option \fI--pluckerdir\fR.
+.TP
+\fBpluckerhome\fR
+See option \fI--pluckerhome\fR.
+.TP
+\fBtitle_md\fR
+See option \fI--title\fR.
+.TP
+\fBverbosity\fR
+See option \fI--verbosity\fR.
+.TP
+\fBzlib_compression\fR
+Specifies that zlib compression should be used.  Deprecated in favor of \fIcompression\fR.
+.TP
+\fBwait_time\fR
+See option \fI--wait-time\fR.
+.SH "SEE ALSO"
+\fBThe Plucker User's Guide\fR, at \fChttp://plkr.org/docs/\fR.
+.SH "BUGS"
+Report bugs to http://bugs.plkr.org/ or <plucker-bugs@rubberchicken.org>
+.SH "AUTHOR"
+Christopher R. Hawks <chawks@dls.net>

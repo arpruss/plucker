@@ -1,0 +1,20 @@
+--- PalmUserData.pas	Sun Mar 03 00:13:52 2002
++++ PalmUserData.pas.new	Wed Feb 20 23:42:36 2002
+@@ -23,7 +23,7 @@
+ 	PUsers = ^TPalmUsers;
+ 
+ 	TPalmUsers = record
+-		Magic: Word;
++		Magic: DWord;
+ 		Name: Array[0..31] of Char;
+ 		SubDir: Array[0..31] of Char;
+ 	end;
+@@ -148,7 +148,7 @@
+ 
+ 					// Read the user's magic number
+ 					Seek(UserData, Offset);
+-					BlockRead(UserData, ListItemP^.Magic, 2);
++					BlockRead(UserData, ListItemP^.Magic, 4);
+ 
+ 					// Read the user's name
+ 					Inc(Offset,4);

@@ -1,0 +1,57 @@
+'\" t
+.\" $Id: explode.1,v 1.1 2002/08/15 22:36:55 janssen Exp $
+.\"
+.\" man page for explode -- a Plucker-to-HTML converter
+.\" Copyright 2002 (c) Bill Janssen, <bill@janssen.org>
+.\" 
+.\" This man page is free software; you can redistribute it and/or
+.\" modify it under the terms of the GNU General Public License
+.\" as published by the Free Software Foundation; either version 2
+.\" of the License, or (at your option) any later version.
+.\" 
+.\" This man page is distributed in the hope that it will be useful,
+.\" but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public License
+.\" along with this man page; if not, write to the Free Software
+.\" Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+.\"
+.\" explode.1
+.TH EXPLODE 1 "Plucker 1.2 - http://plkr.org/"
+.SH NAME
+explode \- convert a Plucker document to a set of HTML pages and image files
+.SH SYNOPSIS
+\fBexplode\fR
+[--directory=\fIDIR\fR]
+[--verbose]
+\fIDOCUMENT-FILENAME\fR
+.SH DESCRIPTION
+.B explode
+converts a Plucker binary document specified by \fIDOCUMENT-FILENAME\fR to a set of HTML pages and JPEG image files in a directory.  The directory used may be explicitly specified, or automatically created by \fBexplode\fR; if automatically created, the pathname of the directory will be output to stdout.  After \fBexplode\fR terminates, the directory will contain a file called "default.html" which contains a transliteration of the root page of the Plucker document, as well as other HTML and image files.
+.SH OPTIONS
+.TP
+\fB--directory=\fIDIR\fR
+Specify, as \fIDIR\fR, the full pathname of the directory in which to create the converted version of the document.
+.TP
+\fB--verbose\fR
+Output various debugging messages to stderr while performing the document conversion.
+.SH EXAMPLES
+To invoke a browser called \fIwebbrowser\fR on a Plucker document called \fIMenu.pdb\fR, one might say
+.sp
+\fC% webbrowser file:`explode Menu.pdb`/default.html
+.sp
+Or alternatively,
+.sp
+\fC% explode --directory=/tmp/Menu Menu.pdb
+.br
+% webbrowser file:/tmp/Menu/default.html\fR
+.SH "SEE ALSO"
+\fBThe Plucker User's Guide\fR, at \fChttp://plkr.org/docs/\fR.
+.SH "BUGS"
+As of Plucker release 1.2, there are no provisions for handling margins or colored text.
+.sp
+Report bugs to http://bugs.plkr.org/ or <plucker-bugs@rubberchicken.org>
+.SH "AUTHOR"
+Bill Janssen, <bill@janssen.org>

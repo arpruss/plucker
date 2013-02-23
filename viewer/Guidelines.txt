@@ -1,0 +1,95 @@
+================================
+Coding Guidelines for the viewer
+================================
+
+Plucker is distributed under and protected by the GNU GENERAL PUBLIC 
+LICENSE (the full copy of which is found in COPYING). We make the 
+source code available so that others can alter it for their own needs.  
+All we ask in return is that you submit your changes back to us so that 
+we can merge them into the main version of the product. Changes can be 
+submitted to plucker-team@rubberchicken.org
+
+The following guidelines describes the style I want the viewer code to
+follow and if any code sent to me is written in this style it will be
+much easier for me to add it to the main version.
+
+Try to follow the programming conventions you already find in the source
+code and remember that common sense is never wrong ;-)
+
+*   Naming conventions:
+
+    Use descriptive names for all variables, function names, constants,
+    and other identifiers. Still, try to keep local variables short and
+    to the point, e.g. some random loop variable should be called "i"
+    not "loop_counter".
+
+    Function names begin with upper case letters (e.g. ViewDocument).
+    Variables begin with lower case letters (e.g. documentPtr).
+    Capitalize all defines.
+
+*   Variables should be declared on separate lines.
+
+*   Indentation is 4 characters deep (use spaces instead of tabs).
+
+*   Braces go like this:
+
+        if (...) {
+            ...
+        }
+        else {
+            ...
+        }
+
+*   All functions should have a short description (one or two sentences) at
+    the top. If you can't describe the function in a short sentence or two,
+    then it's probably a sign that the the design isn't as good as it should
+    be. Arguments should be on separate lines, e.g.
+
+    /* Set position and length of find pattern */
+    void SetFindPatternData
+        (
+        const Int16 pos,    /* position of find pattern */
+        const Int16 len     /* length of find pattern */
+        )
+    {
+        findPatternPos = pos;
+        findPatternLen = len;
+    }
+
+*   Comments should explain the intent of the code.
+
+*   Write program with sufficient spacing so that they don't appear
+    "crowded". Three blank lines between every function.
+
+*   Not more than 80 chars/line.
+
+
+Other minor details:
+
+*   no C++ style comments, i.e. only /* */ not //
+
+*   try to write numeric expressions in number-line order, so that you
+    have comparisons like,
+
+    MinVal <= i && i <= MaxVal
+
+    <----------------|====================================|--------------->
+                              valid values for i
+
+
+    i < MinVal || MaxVal < i
+
+                 MinVal                               MaxVal
+    <================|------------------------------------|===============>
+
+    valid values for i                                    valid values for i
+
+    This approach gives you a visual image of the comparison.
+
+*   in pointer declarations, the pointer indicator * is placed
+    immediately after the type identifier, that is, the asterisk
+    is associated with the type, not the variable, e.g. 
+
+    Char* text;
+
+

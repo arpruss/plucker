@@ -1,0 +1,115 @@
+
+==================
+Installing Plucker
+==================
+
+Basically there are only a few simple steps to get this running for
+yourself. First check the file REQUIREMENTS to make sure you have the tools
+required to run Plucker. Then depending on the OS you use do the following:
+
+-----------
+Unix/Linux:
+-----------
+
+  For more detailed information, please see README files in the
+  'parser/python' subdirectory for their usage and additional parameters.
+
+  1. If you have downloaded a binary package of Plucker, it is not necessary
+     to "build" the package, you simply set up your environment and install
+     the Plucker viewer application by running the 'install-plucker' script
+     found in the 'unix' subdirectory.  This will create a few directories
+     on your system and install the parser components into them and also
+     install the default configuration files that allow Plucker to run on
+     your system.
+
+     If you have downloaded a source package of Plucker, first running
+     'autoreconf' and then 'configure' with your parameters from the
+     top-level directory will first build all the different parts of Plucker
+     using the proper development tools and SDK installs (see the README
+     file in the viewer directory for more detailed instructions describing
+     how to build the viewer and shared library).
+
+     With the binary package all these files are already included and the
+     script will just install them into their proper locations.
+
+  2. Edit and change the home page (which links to all other pages) by
+     changing the ~/.plucker/home.html file found underneath your home
+     directory. You can edit the other files too. You can also edit
+     ~/.pluckerrc (also in your home directory), to set up the default
+     behavior of the parser.
+
+  3. Run 'plucker-build' to download the web pages to your system and build
+     the .pdb files which you can transfer to your Palm handheld device and
+     view with Plucker.
+
+-----
+OS/2:
+-----
+  for more info see README.OS2.
+
+  1. You set up your environment and install the viewer application
+     by running:
+
+     install_os2 <path> <port>
+
+     <path> represents the path to which you want to install
+            the plucker package.
+            e.g. E:\PalmPilot\Plucker
+
+     <port> represents the COM-Port you Palm is connected to.
+            If no port is specified COM1 is assumed by default.
+            e.g. COM1
+
+  2. After creating a suitable HOME.HTML (found in $Home\.plucker) you 
+     may want to retrieve the data. Open a connection to the internet 
+     using OS/2's dial-function, and simply start "Plucker Hotsync". 
+     If your environment is set up correctly Plucker starts to retrieve 
+     the pages you mentioned in HOME.HTML.
+
+  NOTE: Maybe you'll need to set HOME-environment-variable in your CONFIG.SYS
+  prior to calling install_os2. To do this simply add a line like
+
+  SET HOME=F:/home
+
+  and create the directory F:/home by
+
+  F:
+  md home
+
+  if you want to place your HOME on drive F: If you already use Unix-style
+  software (GNU-tools, XFree86/2 etc.) this variable may be already set.
+  If you've any problems with this stuff, feel free to mailto:a.wagner@teamos2.de.
+  (You may also use write in German)
+
+--------
+Windows:
+--------
+
+  On Windows we encurage you to use the graphical installer we provide. It will
+  take care about all steps necessary to set up Plucker correctly.
+  
+  The following steps are necessary to get Plucker running on Windows using
+  this installer:
+
+   * Download the Installer package for Windows from our web page and run it.
+   * Follow the on-screen instructions.
+
+--------
+Mac OS X
+--------
+  
+  On OS X, your best bet is a graphical package that has all the 
+  image parsers, etc. It requires OS X 10.2 or higher. Just open the .dmg
+  and drag the 'Plucker' icon to your /Applications folder. Double click
+  to start.
+
+  You can also download source and run stuff from a terminal. See
+  http://www.macosxhints.com/article.php?story=20020312222959415 for more
+  information.
+
+==========================================================================
+See the FAQ for more information, including email addresses and web pages.
+==========================================================================
+
+Have fun! And if you feel like helping out, then please contact
+plucker-team@rubberchicken.org to avoid duplicating any work.

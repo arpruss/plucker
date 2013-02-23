@@ -1,0 +1,38 @@
+/* XPM */
+static char *small_radio_options_icon_xpm[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 16 1",
+"  s None c None",
+"W c gray0",
+". c #800000",
+"X c #008000",
+"o c #808000",
+"O c #000080",
+"+ c #800080",
+"@ c #008080",
+"$ c #808080",
+"% c red",
+"* c yellow",
+"= c blue",
+"- c magenta",
+"; c cyan",
+": c white",
+"U c #C0C0C0",
+/* pixels */
+" $$$$$$$$$$$    ",
+" $:::::::::$W   ",
+" $:::::::::$:W  ",
+" $:::::::::WWWW ",
+" $:UWWU:::::UUW ",
+" $:WWWW::::::UW ",
+" $:WW$W:W:WWWUW ",
+" $:UWWU::::::UW ",
+" $:::::::::::UW ",
+" $:UWWU::::::UW ",
+" $:W:UW::::::UW ",
+" $:WU$W:W:WWWUW ",
+" $:UWWU::::::UW ",
+" $:::::::::::UW ",
+" $UUUUUUUUUUUUW ",
+" $WWWWWWWWWWWWW "
+};

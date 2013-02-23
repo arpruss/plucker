@@ -1,0 +1,52 @@
+
+
+TRANSLATION "no"
+BEGIN
+
+
+"$$LANG"                    =   "no"
+
+
+"$$TITLE"                   = "Plucker Plugins"
+
+"$$LOOKUP"                  = "Slå opp ord i"
+"$$NONE"                    = "Ingen"
+"$$CUSTOM"                  = "Egendefinert"
+"$$NAME"                    = "Navn: "
+"$$CLIPBOARD"               = "Utklippstavle"
+"$$DESKTOP ACCESSORY"       = "DA"
+"$$COMMAND"                 = "Kommando: CustomBase + "
+"$$SAVE"                    = "Lagre"
+"$$CANCEL"                  = "Avbryt"
+"$$TIPS"                    = "Tips"
+
+"$$STRTIPS"                 =
+    "Grensesnittet for Plucker Plugins (PPI) blir brukt av Plucker for å starte "\
+    "eksterne programmer (plugins).\n\n" \
+    "'Slå opp ord i' forteller PPI hvilken plugin Plucker skal bruke ved "\
+    "ordoppslag. "\
+    "Velg en plugin fra nedtrekksmenyen.\n\n" \
+    "Hvis du velger 'Egendefinert' må du skrive inn navnet på programmet og velge "\
+    "om ordet som skal slås opp skal kopieres til utklippstavlen, og om det er et "\
+    "'Desk Accessory'. Velg også oppstartskommandoen om det ikke er et "\
+    "Desk Accessory.\n\n" \
+    "Trykk 'Lagre' for å lagre dine valg, eller 'Avbryt' for å beholde "\
+    "de originale innstillingene"
+
+"$$HELP"                    = "Hjelp"
+"$$ABOUT"                   = "Om"
+
+"$$ABOUTT"  = "Om Plucker Plugin grensesnittet"
+
+"$$ABOUT1"  = "PPI er en del av programsamlingen "
+"$$ABOUT2"  = "Plucker. Plucker er Fri Programvare, "
+"$$ABOUT3"  = "utgitt under betingelsene i Free "
+"$$ABOUT4"  = "Software Foundation's General"
+"$$ABOUT5"  = "Public License."
+
+"$$ABOUTW"  = "www.plkr.org"
+
+"$$OK"      = "OK"
+
+END
+

@@ -1,0 +1,38 @@
+/* XPM */
+static char *application_16x16_xpm[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 16 1",
+"  s None c None",
+"D c black",
+"X c #008000",
+"o c #808000",
+"O c #000080",
+"+ c #800080",
+"@ c #008080",
+"# c #CCCCCC",
+"$ c #808080",
+"% c red",
+"& c green",
+"* c yellow",
+"= c blue",
+"- c magenta",
+"; c cyan",
+": c white",
+/* pixels */
+"      %         ",
+"     %          ",
+"  %  % %        ",
+"   % %%         ",
+"    %%          ",
+"    %%DDD       ",
+"   D*D:::DD     ",
+"  D*D::%:D:D    ",
+"  D*D::::D:D    ",
+"DD**D::::DDDD   ",
+"*****DDDD:*:*D  ",
+"DD*****D:*:*:*D ",
+"  DD***D*D*:*:*D",
+"    D**D:DDDDDDD",
+"     DD*D:*:*:D ",
+"       DDDDDDD  "
+};

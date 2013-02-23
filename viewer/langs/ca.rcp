@@ -1,0 +1,972 @@
+/* $Id: ca.rcp,v 1.22 2006/11/12 16:23:45 prussar Exp $ */
+
+/******************************************************
+ * Catalan resources - Albert Cuesta albertcuesta at thesaurus dot es    *
+ ******************************************************/
+
+TRANSLATION "ca"
+BEGIN
+
+
+"$$LANG"                    =  "ca"
+
+
+/*************************************************************
+ *                      MENU OPTIONS                         *
+ *************************************************************/
+
+"$$ABOUT PLUCKER"           =   "Sobre Plucker"
+"$$ADD BOOKMARK..."         =   "Afegir marcador..."
+"$$AUTOSCROLL FASTER"       =   "Autodesplaçament més ràpid"
+"$$AUTOSCROLL SLOWER"       =   "Autodesplaçament més lent"
+"$$BACK"                    =   "Endarrera"
+"$$BOOKMARKS..."            =   "Marcadors..."
+"$$BOTTOM"                  =   "Final"
+"$$CONTACT DEVELOPERS"      =   "Contactar amb els creadors"
+"$$COPY TO MEMO"            =   "Exportar a Memo"
+"$$DELETE ALL..."           =   "Esborrar tot..."
+"$$DELETE READ..."          =   "Esborrar documents llegits..."
+"$$DELETE DOC..."           =   "Esborrar document..."
+"$$DETAILS..."              =   "Detalls..."
+"$$FIND AGAIN"              =   "Cercar més"
+"$$FIND..."                 =   "Cercar..."
+"$$FORWARD"                 =   "Endavant"
+"$$GO"                      =   "Anar"
+"$$HOME"                    =   "Inici"
+"$$LIBRARY..."              =   "Biblioteca..."
+"$$OPTIONS"                 =   "Opcions"
+"$$PREFERENCES..."          =   "Preferències..."
+"$$SELECT FONT..."          =   "Tipus i disposició..."
+"$$START AUTOSCROLL"        =   "Iniciar autodesplaçament"
+"$$STOP AUTOSCROLL"         =   "Aturar autodesplaçament"
+"$$SYNC LIST"               =   "Renovar llista documents"
+"$$TOP"                     =   "Començament"
+"$$VIEW"                    =   "Veure"
+"$$SHOWHIDE"                =   "Veure/Amagar"
+/**************************************************/
+"$$SORT"                    =   "Sort"
+"$$CATEGORY"                =   "Category"
+"$$LOOKUP WORD"             =   "Lookup word"
+/**************************************************/
+"$$NAME"                    =   "Nom"
+"$$TYPE"                    =   "Tipus"
+"$$DATE"                    =   "Data"
+"$$SIZE"                    =   "Mida"
+"$$TOGGLE FULLSCREEN"       =   "Alternar pantalla completa"
+"$$SET KEYBOARD/GRAFFITI..."   =   "Config. teclat/graffiti..."
+
+
+/*************************************************************
+ *                        SHORTCUTS                          *
+ *************************************************************/
+
+"$$SC ADD BOOKMARK"         =   "+"
+"$$SC FIND AGAIN"           =   "A"
+"$$SC BACK"                 =   "B"
+"$$SC COPY TO MEMO"         =   "C"
+"$$SC DELETE ALL"           =   "D"
+"$$SC DELETE DOC"           =   "D"
+"$$SC BOOKMARKS"            =   "E"
+"$$SC FIND"                 =   "F"
+"$$SC HOME"                 =   "H"
+"$$SC DETAILS"              =   "I"
+"$$SC START AUTOSCROLL"     =   "J"
+"$$SC STOP AUTOSCROLL"      =   "K"
+"$$SC LIBRARY"              =   "L"
+"$$SC AUTOSCROLL FASTER"    =   "M"
+"$$SC AUTOSCROLL SLOWER"    =   "N"
+"$$SC SELECT FONT"          =   "O"
+"$$SC PREFERENCES"          =   "P"
+"$$SC LOOKUP WORD"          =   "Q"
+"$$SC SYNC LIST"            =   "R"
+"$$SC SET KEYBOARD/GRAFFITI"   =   "S"
+"$$SC TOGGLE FULLSCREEN"    =   "U"
+"$$SC FORWARD"              =   "W"
+"$$SC BOTTOM"               =   "Y"
+"$$SC TOP"                  =   "Z"
+
+
+/*************************************************************
+ *                         FORMS                             *
+ *************************************************************/
+
+/*** MAIN ***/
+
+"$$MAIN: ADD BOOKMARK"              =   "Afegir marcador"
+"$$MAIN: BOTTOM"                    =   "Final"
+"$$MAIN: FOLLOW LINK"               =   "Seguir enllaç"
+"$$MAIN: OPEN IMAGE"                =   "Obrir imatge"
+"$$MAIN: TOP"                       =   "Començament"
+"$$MAIN: VIEW BOOKMARKS"            =   "Veure marcadors"
+"$$MAIN: 10%"                       =   "10%"
+"$$MAIN: 20%"                       =   "20%"
+"$$MAIN: 30%"                       =   "30%"
+"$$MAIN: 40%"                       =   "40%"
+"$$MAIN: 50%"                       =   "50%"
+"$$MAIN: 60%"                       =   "60%"
+"$$MAIN: 70%"                       =   "70%"
+"$$MAIN: 80%"                       =   "80%"
+"$$MAIN: 90%"                       =   "90%"
+/************************************************************/
+"$$MAIN: ADD ANNOTATION"            =   "Add annotation"
+/************************************************************/
+
+/*** ABOUT ***/
+
+"$$ABOUT: BODY1"                    =   "Plucker és un conjunt de programes que"
+"$$ABOUT: BODY2"                    =   "proporcionen un navegador web off-line per a"
+"$$ABOUT: BODY3"                    =   "sistemes PalmOS. Es tracta de Software Lliure"
+"$$ABOUT: BODY4"                    =   "subjecte a les condicions de la"
+"$$ABOUT: BODY5"                    =   "Llicència Pública General de la"
+"$$ABOUT: BODY6"                    =   "Free Software Foundation."
+"$$ABOUT: WEBSITE"                  =   "www.plkr.org"
+"$$ABOUT: OK"                       =   "D'acord"
+"$$ABOUT: TITLE"                    =   "Sobre Plucker"
+
+
+/*** DOCUMENT LIBRARY ***/
+
+"$$LIBRARY: BEAM"                   =   "Transmetre"
+"$$LIBRARY: CATEGORIZE"             =   "Categoritzar"
+"$$LIBRARY: CATEGORY"               =   "Categoria"
+"$$LIBRARY: DATE"                   =   "Data"
+"$$LIBRARY: DELETE"                 =   "Esborrar"
+"$$LIBRARY: NAME"                   =   "Nom"
+"$$LIBRARY: NO DOCUMENTS"           =   "No s'ha trobat cap document"
+"$$LIBRARY: OPEN"                   =   "Obrir"
+"$$LIBRARY: RENAME"                 =   "Canviar nom"
+"$$LIBRARY: SHOW:"                  =   "Veure:"
+"$$LIBRARY: SIZE"                   =   "Mida"
+"$$LIBRARY: TITLE"                  =   "Biblioteca"
+"$$LIBRARY: UNREAD"                 =   "Per llegir"
+"$$LIBRARY: HELP"                   =
+    "• Des d'aquí podeu gestionar els vostres documents Plucker "\
+    "només triant quin voleu veure."\   
+    "\n\n"\
+    "• Tocant la icona que hi ha al davant de cada document s'obrirà "\
+    "una llista desplegable amb diferents opcions per al document  "\
+    "triat (Obrir, Categoritzar, Esborrar, Canviar nom i Transmetre)."\
+    "\n\n"\
+    "• Podeu ordenar els documents pel nom, la data o la mida "\
+    "ja sigui en ordre ascendent o descendent."
+
+
+/*** RENAME DOCUMENT ***/
+
+"$$RENAME: CANCEL"                  =   "Anular"
+"$$RENAME: NAME:"                   =   "Indicar nom nou:"
+"$$RENAME: RENAME"                  =   "Canviar nom"
+"$$RENAME: TITLE"                   =   "Canviar nom"
+
+
+/*** PREFERENCES ***/
+
+"$$PREFS: TITLE"                    =   "Preferències"
+"$$PREFS: OK"                       =   "D'acord"
+"$$PREFS: CANCEL"                   =   "Anular"
+"$$PREFS: GENERAL"                  =   "General"
+"$$PREFS: LAYOUT"                   =   "Navegació"
+"$$PREFS: LIBRARY"                  =   "Biblioteca"
+"$$PREFS: AUTOSCROLL"               =   "Autodesplaçament"
+"$$PREFS: HARDCOPY"                 =   "Exportar"
+"$$PREFS: BUTTON"                   =   "Botons"
+"$$PREFS: CONTROL"                  =   "Control"
+"$$PREFS: GESTURE"                  =   "Gestos"
+"$$PREFS: JOGDIAL"                  =   "JogDial"
+"$$PREFS: LOOKUP"                   =   "Lookup"
+/*************************************************************/
+"$$PREFS: COLOR"                    =   "Color"
+"$$PREFS: FONT"                     =   "Font"
+/*************************************************************/
+
+
+/*** GENERAL PREFERENCES ***/
+
+"$$PREFSGENERAL: ADD BOOKMARK..."          =   "Afegir marcador..."
+"$$PREFSGENERAL: BOTTOM TOOLBAR"           =   "A baix"
+"$$PREFSGENERAL: BOTTOM"                   =   "A baix"
+"$$PREFSGENERAL: BUTTON ACTION..."         =   "Acció botó..."
+"$$PREFSGENERAL: COMMAND BUTTON:"          =   "Botó barra d'ordres:"
+"$$PREFSGENERAL: COPY TO MEMO"             =   "Exportar a Memo"
+"$$PREFSGENERAL: DELETE DOC..."            =   "Esborrar Doc..."
+"$$PREFSGENERAL: DETAILS..."               =   "Detalls..."
+"$$PREFSGENERAL: LEFT"                     =   "Esquerra"
+"$$PREFSGENERAL: NO TOOLBAR"               =   "Cap"
+"$$PREFSGENERAL: NONE"                     =   "Cap"
+"$$PREFSGENERAL: PREFERENCES..."           =   "Preferències..."
+"$$PREFSGENERAL: RIGHT"                    =   "Dreta"
+"$$PREFSGENERAL: SCREEN DEPTH:"            =   "Colors en pantalla:"
+"$$PREFSGENERAL: SCROLLBAR:"               =   "Barra desplaçament:"
+"$$PREFSGENERAL: SILK TOOLBAR"             =   "In silk"
+"$$PREFSGENERAL: TAP ACTION..."            =   "Acció en tocar..."
+"$$PREFSGENERAL: TOOLBAR:"                 =   "Barra eines:"
+"$$PREFSGENERAL: TOP TOOLBAR"              =   "A dalt"
+"$$PREFSGENERAL: TOP"                      =   "A dalt"
+/****************************************************************/
+"$$PREFSGENERAL: ALWAYS DELETE ANNOTATIONS"    = "Delete notes/marks with doc"
+"$$PREFSGENERAL: ANNOTATIONS IN BOOKMARK LIST" = "List annotations with bookmarks"
+/****************************************************************/
+"$$PREFSGENERAL: HELP"                     =
+    "• En els dispositius amb Palm OS 3.5 o posterior, podeu configurar "\
+    "un dels botons per activar la barra d'eines. En les versions anteriors "\
+    "de Palm OS no té cap efecte."\
+    "\n\n"\
+    "• Podeu configurar la quantitat de colors en pantalla per omissió. "\
+    "\n\n"\
+    "• Podeu posar la barra d'eines a dalt de la pantalla, a baix o bé desactivar-la del tot."\
+    "\n\n"\
+    "• Podeu posar la barra de desplaçament a l'esquerra, a la dreta o bé desactivar-la del tot ."
+
+
+/*** LAYOUT PREFERENCES ***/
+
+"$$PREFSLAYOUT: ENABLE SOFT-HYPHENS"     =   "Activar guions tous"
+"$$PREFSLAYOUT: UNDERLINE"               =   "Activar subratllat"
+"$$PREFSLAYOUT: CONNECT PARTS WITH PAGING"
+                                           =   "Connectar parts amb paginació"
+"$$PREFSLAYOUT: ALIGNMENT:"              =   "Aliniació"
+"$$PREFSLAYOUT: AS IN DOC"               =   "Com el document"
+"$$PREFSLAYOUT: FORCE LEFT"              =   "Forçar esquerra"
+"$$PREFSLAYOUT: FORCE RIGHT"             =   "Forçar dreta"
+"$$PREFSLAYOUT: FORCE CENTER"            =   "Forçar centre"
+"$$PREFSLAYOUT: FORCE JUSTIFY"           =   "Forçar justificat"
+"$$PREFSLAYOUT: HELP"                    =
+    "• Activant l'opció de subratllat, tots els enllaços es veuran "\
+    "indicats amb una línia de punts, mentre que la línia contínua "\
+    "es reservarà per a la marca de subratllat de HTML (<U>). Si voleu "\
+    "continuar diferenciant els enllaços visitats dels no visitats, "\
+    "feu servir l'opció de ratllat."\
+    "\n\n"\
+    "• Podeu connectar documents de més d'una part amb els controls "\
+    "de paginació, de manera que baixar una pàgina (o mitja pàgina) "\
+    "a la darrera pantalla d'una pàgina us portarà al "\
+    "darrer enllaç, i igualment pujar una pàgina o "\
+    "mitja a la primera pantalla."\
+    "\n\n"\
+    "• Podeu ignorar l'aliniació pre-establerta del document."
+/*************************************************************/
+"$$PREFSLAYOUT: ENABLE MARGINS"          =   "Enable margins"
+/*************************************************************/
+
+
+/*** FONT PREFERENCES ***/
+/*************************************************************/
+"$$PREFSFONT: LIBRARY"      =   "Library"
+"$$PREFSFONT: MAIN"         =   "Main"
+/*************************************************************/
+
+
+/*** COLOR PREFERENCES ***/
+
+"$$PREFSCOLOR: STRIKE-THROUGH"          =   "Activar ratllat"
+"$$PREFSCOLOR: FORCE DEFAULT TEXT COLORS" =  "Forçar colors text per omissió"
+"$$PREFSCOLOR: HELP"                    =
+    "• Si trobeu difícil veure si ja heu visitat o no "\
+    "un enllaç, podeu provar a activar el "\
+    "ratllat. Amb això, cada enllaç que hagueu "\
+    "visitat apareixerà ratllat."\
+    "• Podeu forçar que el text sigui negre i els enllaços blaus."
+
+
+/*** LIBRARY PREFERENCES ***/
+
+"$$PREFSLIBRARY: UPDATE DOCLIST"           =   "Actualitzar llista:"
+"$$PREFSLIBRARY: AUTOMATIC"                =   "Automàtic"
+"$$PREFSLIBRARY: MANUAL"                   =   "Manual"
+"$$PREFSLIBRARY: IGNORE CARD"              =   "Ignorar targeta"
+"$$PREFSLIBRARY: CATEGORY STYLE:"          =   "Estil categories:"
+"$$PREFSLIBRARY: CLASSIC"                  =   "Clàssic"
+"$$PREFSLIBRARY: ADVANCED"                 =   "Avançat"
+"$$PREFSLIBRARY: SORT BY:"                 =   "Ordenar documents per:"
+"$$PREFSLIBRARY: TYPE"                     =   "Tipus"
+"$$PREFSLIBRARY: NAME"                     =   "Nom"
+"$$PREFSLIBRARY: DATE"                     =   "Data"
+"$$PREFSLIBRARY: SIZE"                     =   "Mida"
+"$$PREFSLIBRARY: SORT ORDER:"              =   "Ordre:"
+"$$PREFSLIBRARY: ASCENDING"                =   "Ascendent"
+"$$PREFSLIBRARY: DESCENDING"               =   "Descendent"
+"$$PREFSLIBRARY: SHOW TYPE COLUMN"         =   "Veure columna Tipus"
+"$$PREFSLIBRARY: SHOW DATE COLUMN"         =   "Veure columna Data"
+"$$PREFSLIBRARY: SHOW SIZE COLUMN"         =   "Veure columna Mida"
+"$$PREFSLIBRARY: INDICATE OPENED"          =   "Activar ratllat"
+/*************************************************************/
+"$$PREFSLIBRARY: CATEGORY"                 =   "Category"
+"$$PREFSLIBRARY: DATE/TIME"                =   "Use date/time for sort by date"
+/*************************************************************/
+"$$PREFSLIBRARY: HELP"                     =
+    "• Com que l'actualització de la llista de documents por ser un procés lent "\
+    "en alguns dispositius, teniu l'opció de triar si la llista s'ha "\
+    "d'actualitzar automàticament (a la RAM i a les targetes externes), actualizar "\
+    "automàticament (només a la RAM), o bé manualment."\
+    "\n\n"\
+    "• Podeu ordenar els documents pel nom, la data o la mida "\
+    "ja sigui en ordre ascendent o descendent."\
+    "\n\n"\
+/*************************************************************/
+    "• It is possible to select whether the sort by date should use only the "\
+    "date or if it should use both date and time (faster, but could make the "\
+    "list look 'unsorted')."
+/*************************************************************/
+
+
+/*** AUTOSCROLL PREFERENCES ***/
+
+"$$PREFSAUTOSCROLL: AUTOSCROLL DELAY:"       =   "Retard autodesplaçament:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL DIRECTION:"   =   "Direcció autodesplaçament:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL JUMP:"        =   "Salt autodesplaçament:"
+"$$PREFSAUTOSCROLL: DOWN"                    =   "Cap avall"
+"$$PREFSAUTOSCROLL: MILLISECONDS"            =   "msec"
+"$$PREFSAUTOSCROLL: PAGE(S)"                 =   "Pàgine(s)"
+"$$PREFSAUTOSCROLL: PIXEL(S)"                =   "Píxel(s)"
+"$$PREFSAUTOSCROLL: STAY ON"                 =   "Continuar encès durant autodesplaçament"
+"$$PREFSAUTOSCROLL: UP"                      =   "Cap amunt"
+"$$PREFSAUTOSCROLL: HELP"                    =
+    "• Aquest formulari personalitza el funcionament de l'autodesplaçament."\
+    "\n\n"\
+    "• El document es pot desplaçar automáticament una quantitat determinada de píxels o de pàgines."\
+    "\n\n"\
+    "• Aquest desplaçament pot ser cap amunt o cap avall." \
+    "\n\n"\
+    "• També podeu establir quant temps ha de passar entre cada salt automàtic. El retard"\
+    "s'indica en milisegons."\
+    "\n\n"\
+    "• Podeu evitar que el dispositiu s'apagui durant l'autodesplaçament. "\
+    "El dispositiu continuarà recorrent el document fins arribar al final de la "\
+    "pàgina, o fins que s'exhaureixi la bateria (o fins que toqueu en algun lloc de la "\
+    "pantalla, o fins que l'apagueu físicament.)"\
+    "\n\n"\
+    "• Tingueu en compte que durant l'autodesplaçament, podeu controlar-ne "\
+    "la velocitat amb els botons de la barra d'eines, o bé amb els mateixos controls "\
+    "(com són les tecles de Pujar/Baixar pàgina) que normalment faríeu servir per "\
+    "pujar o baixar una o mitja pantalla."
+
+/*** HARDCOPY PREFERENCES ***/
+
+"$$PREFSHARDCOPY: TITLE"            =   "Accions de còpia impresa"
+"$$PREFSHARDCOPY: ACTION:"          =   "Acció:"
+"$$PREFSHARDCOPY: DIALOG"           =   "Diàleg"
+"$$PREFSHARDCOPY: IMMEDIATE"        =   "Immediat"
+"$$PREFSHARDCOPY: RANGE:"           =   "Marge:"
+"$$PREFSHARDCOPY: IN VIEW AREA"     =   "Dins área visible"
+"$$PREFSHARDCOPY: VISIBLE PARAGRAPHS" = "Paràgrafs visibles"
+"$$PREFSHARDCOPY: LINK:"            =   "Enllaç:"
+"$$PREFSHARDCOPY: BOTTOM"           =   "Final"
+"$$PREFSHARDCOPY: INLINE"           =   "Incrustat"
+"$$PREFSHARDCOPY: NONE"             =   "Cap"
+"$$PREFSHARDCOPY: HELP"             =
+    "• En aquest formulari podeu triar la funció de 'exportar a memo'. Aquesta acció serveix per retallar, editar i exportar text de l'àrea visible al Bloc de Notes estàndar de Palm."\
+    "\n\n"\
+    "• El text retallat pot ser editat en el diàleg, o bé copiat immediatament al Bloc de Notes."\
+    "\n\n"\
+    "• El text que es retalla és el de la zona visible o el dels paràgrafs visibles."\
+    "\n\n"\
+    "• Les adreces URL dels enllaços s'agrupen al final, es deixen insertats en el text, o senzillament s'ignoren."
+
+
+/*** EXTERNALLINK PREFERENCES ***/
+
+"$$PREFSEXTERNALLINK: TITLE"            =   "Tractament enllaços externs"
+"$$PREFSEXTERNALLINK: ACTION:"          =   "Acció:"
+"$$PREFSEXTERNALLINK: DIALOG"           =   "Diàleg"
+"$$PREFSEXTERNALLINK: TO MEMO"          =   "Adreçar al bloc de notes"
+"$$PREFSEXTERNALLINK: BROWSE"           =   "Navegar"
+
+
+/*** BUTTON PREFERENCES ***/
+
+"$$PREFSBUTTONS: HARD KEYS"              =   "Activar tecles HW personalitzades"
+"$$PREFSBUTTONS: ARROW KEYS"             =   "Activar tecles cursor personalitzades"
+"$$PREFSBUTTONS: HELP"                   =
+    "• Activant l'opció de les tecles de hard, podeu usar els botons del dispositiu per realitzar "\
+    "les accions especificades."\
+    "\n\n"\
+    "• Podeu triar accions diferents per cadascun dels quatre botons de l'aparell."
+
+
+/*** CONTROL PREFERENCES ***/
+
+"$$PREFSTAP: MODE 1"                     =   "Mod. 1"
+"$$PREFSTAP: MODE 2"                     =   "Mod. 2"
+"$$PREFSTAP: MODE 3"                     =   "Mod. 3"
+"$$PREFSTAP: PEN SCROLL MSG1"            =   "Tocar la pantalla i arrossegar"
+"$$PREFSTAP: PEN SCROLL MSG2"            =   "el llapis amunt o avall"
+"$$PREFSTAP: PEN SCROLL MSG3"            =   "per desplaçar la pàgina"
+"$$PREFSTAP: PEN SCROLL MSG4"            =   ""
+"$$PREFSTAP: REGION ACTION:"             =   "Acció en cada zona:"
+"$$PREFSTAP: HELP"                       =
+    "• L'acció de tocar la pantalla permet especificar l'efecte dels clics del llapis "\
+    "sobre la pantalla. Es pot fer servir de tres maneres diferents."\
+    "\n\n"\
+    "• Les dues primeres modalitats divideixen la pantalla en diverses zones, per "\
+    "cadascuna de les quals podeu especificar accions diferents (p.ex. pujar una pàgina, "\
+    "tornar enrere una pàgina) ."\
+    "\n\n"\
+    "• La tercera modalitat permet arrossegar el llapis per "\
+    "desplaçar el text."
+
+
+/*** GESTURE PREFERENCES ***/
+
+"$$PREFSGESTURES: USE GESTURES"          =   "Gestos Graffiti de navegació"
+"$$PREFSGESTURES: HELP"                  =
+    "• Activant l'opció dels gestos, podeu fer servir gestos a l'àrea de graffiti "\
+    "per realizar les accions especificades."\
+    "\n\n"\
+    "• Hi ha cinc gestos possibles: ratlla a la dreta, ratlla a l'esquerra, ratlla amunt, ratlla avall, "\
+    "i toc de graffiti."\
+    "\n\n"\
+    "• Per cadascun d'aquest gestos podeu triar accions diferents."
+
+
+/*** JOGDIAL PREFERENCES ***/
+
+"$$PREFSJOGDIAL: USE JOGDIALS"            =  "Habilitar navegació amb JogDial"
+"$$PREFSJOGDIAL: HELP"                    =
+    "• Si el vostre Palm disposa de JogDial, podeu assignar-li diferents " \
+    "accions per executar certes funcions de Plucker."\
+    "\n\n"\
+    "• Hi ha sis accions: desplaçar amunt, desplaçar avall, prèmer, prèmer i " \
+    "amunt, prèmer i avall i enrere. Pot ser que no totes les accions siguin possibles, "\
+    "segons el dispositiu."\
+    "\n\n"\
+    "• Podeu triar diferents funcions per cadascuna de les cinc accions del JogDial."
+
+
+/*** WORD LOOKUP PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSLOOKUP: ALWAYS ACTIVE"         = "Word lookup always active"
+"$$PREFSLOOKUP: ACTION:"               = "Action:"
+"$$PREFSLOOKUP: SEARCH FORM"           = "Insert into search form"
+"$$PREFSLOOKUP: PPI"                   = "Look up in PPI"
+"$$PREFSLOOKUP: TO CLIPBOARD"          = "Copy to the clipboard"
+"$$PREFSLOOKUP: ANNOTATE"              = "Annotate"
+"$$PREFSLOOKUP: HELP"                  =
+    "• Plucker has a word-lookup function.  When the function is active, "\
+    "tapping on a word selects that word and performs an action. "\
+    "\n\n"\
+    "• If word lookup is set to be always active, then tapping on a word "\
+    "not inside a link always selects a word."\
+    "\n\n"\
+    "• Otherwise, you can use the 'Lookup word' function in the 'Go' menu "\
+    "to turn on a temporary tap-selection mode for the next tap.  That "\
+    "function can also be assigned to a hard key or any other "\
+    "configurable control."\
+    "\n\n"\
+    "• Hint: To select a word that contains a non-alphanumeric character such "\
+    "as an apostrophe or a dash, tap on that character when selecting and all "\
+    "instances of that character will be treated as letters."
+/*************************************************************/
+
+
+/*** FONT SELECT ***/
+
+"$$FONTS: FONT:"                    =   "Tipus de lletra:"
+"$$FONTS: SELECT FONT"              =   "Triar tipus i disposició"
+"$$FONTS: OK"                       =   "D'acord"
+"$$FONTS: CANCEL"                   =   "Cancel·lar"
+"$$FONTS: BUILT-IN FONTS:"          =   "Tipus incorporats:"
+"$$FONTS: USER-LOADED FONT:"        =   "Tipus de l'usuari:"
+"$$FONTS: LINE SPACING:"            =   "Interlínia:"
+"$$FONTS: PARAGRAPH SPACING:"       =   "Entre paràgrafs:"
+/************************************************************/
+"$$FONTS: RTL"                      =   "RTL"
+/************************************************************/
+"$$FONTS: VARY WITH DOCUMENT"       =   "Segons el document"
+"$$FONTS: ALSO SET AS DEFAULT"      =   "Establir per omissió"
+"$$FONTS: ROTATE:"                  =   "Rotació: "
+"$$FONTS: NONE"                     =   "Cap"
+"$$FONTS: COUNTERCLOCKWISE"         =   "Antihorària"
+"$$FONTS: CLOCKWISE"                =   "Horària"
+"$$FONTS: HELP"                     =
+    "• Podeu triar un dels tipus de lletra estàndar de Palm o bé "\
+    "un dels tipus de lletra que porta Plucker."\
+    "\n\n"\
+    "• Si teniu carregat un dels paquets tipogràfics de Plucker, també "\
+    "podeu triar-lo, si el vostre dispositiu ho permet."\
+    "\n\n"\
+    "• Podeu ajustar l'interlínia i l'espai entre paràgrafs del document. "\
+    "Si poseu un valor negatiu de l'interlínia, pot ser que algunes "\
+    "línies no es vegin bé."\
+    "\n\n"\
+    "• Podeu girar la pantalla 90 graus.  Amb OS 3.5, les imatges"\
+    "seran ignorades."\
+    "\n\n"\
+    "• Podeu fer que la configuració de tipus de lletra varii d'un document a l'altre "\
+    "i si ho feu així, també tindreu l'opció de fer que la nova configuració"\
+    "s'apliqui per omissió als documents nous."
+
+
+/*** KEYBOARD CUSTOMIZATION ***/
+
+"$$KEYBOARD: SET KEYBOARD / GRAFFITI"        =   "Config. teclat / graffiti"
+"$$KEYBOARD: KEYBOARD OR GRAFFITI"         =   "Teclat o graffiti"
+"$$KEYBOARD: SPECIAL KEYS"          =   "Tecles especials"
+"$$KEYBOARD: OK"                    =   "D'acord"
+"$$KEYBOARD: CANCEL"                =   "Cancel·lar"
+"$$KEYBOARD: DEFAULT"               =   "Per omissió"
+"$$KEYBOARD: CLEAR"                 =   "Esborrar"
+"$$KEYBOARD: INTERFERENCE MSG1"     =   "Alguns valors poden ser incompatibles"
+"$$KEYBOARD: INTERFERENCE MSG2"     =   "amb els gestos i/o amb Graffiti 2."
+"$$KEYBOARD: HELP"                  =
+    "• Si disposeu d'un teclat, podeu controlar Plucker amb ell. "\
+    "També podeu controlar Plucker escrivint determinats "\
+    "caracters amb Graffiti."\
+    "\n\n"\
+    "• Els caracters imprimibles, com 'a' o '$', es poden teclejar "\
+    "o escriure amb Graffiti directament en el formulari de personalització "\
+    "i triar tot seguit l'acció desitjada."\
+    "\n\n"\
+    "• Les tecles especials, com la de 'Retorn' o les de cursor, s'han de "\
+    "triar de la llista desplegable, i a continuació escollir "\
+    "l'acció desitjada."\
+    "\n\n"\
+    "• Alguns caracters/tecles no funcionaran si teniu els gestos de "\
+    "Graffiti activats en les preferències de Plucker.  En concret, "\
+    "les tecles/caracters i, I, 1, l, L, punt i retrocès i "\
+    "alguns caracters de Graffiti en majúscules "\
+    "no funcionaran mentre tingueu els gestos activats."\
+    "\n\n"\
+    "• Alguns caracters són incompatibles amb Graffiti 2.  Si "\
+    "voleu controlar Plucker amb Graffiti 2 mitjançant aquesta "\
+    "opció de personalització, no assigneu "\
+    "accions als caracters formats per més d'un traç.  A més, escriure un "\
+    "caracter de Graffiti 2 amb més d'un traç a Plucker mentre hi hagi accions "\
+    "assignades als caracters l, espai, cometa, menys o retrocés "\
+    "pot produïr resultats inesperats."
+
+
+"$$KEY: RETURN"                     =   "Retorn"
+"$$KEY: TAB"                        =   "Tab"
+"$$KEY: UP"                         =   "Amunt"
+"$$KEY: DOWN"                       =   "Avall"
+"$$KEY: LEFT"                       =   "Esquerra"
+"$$KEY: RIGHT"                      =   "Dreta"
+"$$KEY: BACKSPACE"                  =   "Retrocés"
+
+
+
+/*** SELECTION ***/
+
+"$$SELECT: ADD BOOKMARK..."        =   "Afegir marcador..."
+"$$SELECT: AUTOSCROLL FASTER"      =   "Autodesplaçament més ràpid"
+"$$SELECT: AUTOSCROLL SLOWER"      =   "Autodesplaçament més lent"
+"$$SELECT: BOOKMARKS..."           =   "Marcadors..."
+"$$SELECT: BUTTON ACTION..."       =   "Acció botó..."
+"$$SELECT: COPY TO MEMO"           =   "Exportar a Memo"
+"$$SELECT: DELETE DOC..."          =   "Esborrar Doc..."
+"$$SELECT: DETAILS..."             =   "Detalls..."
+"$$SELECT: FIND AGAIN"             =   "Cercar més"
+"$$SELECT: FIND..."                =   "Cercar..."
+"$$SELECT: FULL PAGE DOWN"         =   "Baixar una pàgina" 
+"$$SELECT: FULL PAGE UP"           =   "Pujar una pàgina" 
+"$$SELECT: GESTURE ACTION..."      =   "Acció gestual..."
+"$$SELECT: GO BACK"                =   "Retrocedir" 
+"$$SELECT: GO FORWARD"             =   "Avançar" 
+"$$SELECT: GO HOME"                =   "Anar a pàgina inicial"
+"$$SELECT: GO TO BOTTOM"           =   "Anar al final"
+"$$SELECT: GO TO TOP"              =   "Anar al principi"
+"$$SELECT: HALF PAGE DOWN"         =   "Baixar mitja pàgina" 
+"$$SELECT: HALF PAGE UP"           =   "Pujar mitja pàgina" 
+"$$SELECT: LIBRARY..."             =   "Biblioteca..."
+"$$SELECT: NONE"                   =   "Cap"
+"$$SELECT: PREFERENCES..."         =   "Preferències..."
+"$$SELECT: SELECT FONT..."         =   "Tipus i disposició..."
+"$$SELECT: TAP ACTION..."          =   "Acció de tocar..."
+"$$SELECT: TOGGLE AUTOSCROLL"      =   "Autodesplaçament"
+"$$SELECT: NEXT ANCHOR"            =   "Marca següent"
+"$$SELECT: PREV ANCHOR"            =   "Marca anterior"
+"$$SELECT: GO TO LINK"             =   "Anar a l'enllaç"
+"$$SELECT: COMMAND STROKE"         =   "Traç d'ordre"
+"$$SELECT: MENU..."                =   "Menú..."
+"$$SELECT: TOGGLE TOOLBAR"         =   "Barra d'eines"
+"$$SELECT: TOGGLE FULLSCREEN"      =   "Pantalla completa"
+"$$SELECT: ONE LINE UP"            =   "Pujar una línia"
+"$$SELECT: ONE LINE DOWN"          =   "Baixar una línia"
+"$$SELECT: ADJUST BRIGHTNESS"      =   "Brillantor..."
+"$$SELECT: ADJUST CONTRAST"        =   "Contrast..."
+"$$SELECT: TOGGLE BACKLIGHT"       =   "Retroiluminació"
+"$$SELECT: ROTATE RIGHT"           =   "Girar a la dreta"
+"$$SELECT: ROTATE LEFT"            =   "Girar a l'esquerra"
+/**************************************************************************/
+"$$SELECT: SAVE POSITION"          =   "Save position"
+"$$SELECT: LOOKUP WORD IN PPI"     =   "PPI select word"
+"$$SELECT: LOOKUP TO SEARCH FORM"  =   "Search select word"
+"$$SELECT: LOOKUP TO CLIPBOARD"    =   "Clipboard select word"
+"$$SELECT: LOOKUP TO ANNOTATE"     =   "Annotate select word"
+"$$UNSUPPORTED"                    =   "Unsupported action"
+/**************************************************************************/
+
+
+/*** DETAILS ***/
+
+"$$DETAILS: CANCEL"                 =   "Cancel·lar"
+"$$DETAILS: COPY URL"               =   "Copiar URL"
+"$$DETAILS: OK"                     =   "D'acord"
+"$$DETAILS: READ"                   =   "Llegit"
+"$$DETAILS: SHOW IMAGES"            =   "Veure imatges"
+"$$DETAILS: STATUS:"                =   "Situació:"
+"$$DETAILS: TITLE"                  =   "Detalls"
+"$$DETAILS: UNREAD"                 =   "Per llegir"
+"$$DETAILS: URL:"                   =   "URL:"
+"$$DETAILS: HELP"                   =
+    "• Podeu canviar l'estat d'un document de manera que aparegui com "\
+    "pendent de llegir (és a dir, amb un enllaç continu)."\
+    "\n\n"\
+    "• Si desactiveu les imatges, totes les imatges desapareixeran de la pàgina."
+
+
+/*** SEARCH ***/
+
+"$$FIND: CANCEL"                    =   "Cancel·lar"
+"$$FIND: CASE SENSITIVE"            =   "Majúsc. i minúsc."
+"$$FIND: FIND:"                     =   "Cercar:"
+"$$FIND: IN ALL PAGES"              =   "A totes les pàgines"
+"$$FIND: DOWN IN DOC"               =   "Cap avall dins doc"
+"$$FIND: IN PAGE"                   =   "Dins la pàgina"
+"$$FIND: SUB PAGES"                 =   "Sub pàgines"
+"$$FIND: OK"                        =   "D'acord"
+"$$FIND: TITLE"                     =   "Cercar amb Plucker"
+"$$FIND: PHRASE"                    =   "Frase"
+"$$FIND: NO TRANSLITERATION"        =   "Sense transliteració"
+"$$FIND: NON-ASCII TO PERIOD"       =   "No-ASCII a punt"
+"$$FIND: DROP LATIN 1 ACCENTS"      =   "Ignorar accents Latin 1"
+"$$FIND: HELP"                      =
+    "• Tocant la icona de la dreta del camp de cerca "\
+    "obtindreu una llista de les cerques més recents, entre les quals podeu triar."\
+    "\n\n"\
+    "• Podeu Cercar en la pàgina actual, en tot el document, en tot el "\
+    "document a partir de la posició actual, o bé en sub-pàgines (recorregut "\
+    "començant per l'amplada)."\
+    "\n\n"\
+    "• Podeu fer que la cerca no distingeixi entre majúscules i minúscules."\
+    "\n\n"\
+    "• Si cerqueu una frase, la coincidència amb el text "\
+    "de la cerca haurà de ser exacta, inclosos els espais."\
+    "\n\n"\
+    "• Si desactiveu la cerca per frase, cadascun dels textos separats per espais "\
+    "haurà de ser present en el mateix paràgraf.  Així, si "\
+    "indiqueu com text a cercar 'hi havia setze jutges' (sense les cometes), "\
+    "trobareu tots els paràgrafs que continguin les cadenes 'hi', 'havia' "\
+    "'setze' i 'jutges' en algun punt, malgrat que "\
+    "no necessàriament com paraules senceres i tampoc necessàriament en aquest ordre. "\
+    "\n\n"\
+    "• En veure els resultats, només apareixerà destacat en el text "\
+    "el primer dels termes cercats."\
+    "\n\n"\
+    "• Si heu desactivat la cerca per frase, i indiqueu més de deu termes a cercar, "\
+    "només es cercaràn els deu primers."\
+    "\n\n"\
+    "• Per accelerar les cerques, poseu primer el terme menys comú "\
+    "si heu desactivat la cerca per frase."\
+    "\n\n"\
+    "• Podeu triar transliterar el text i la cadena a cercar abans de "\
+    "fer la cerca.  Per exemple, podeu decidir canviar tots els caracters "\
+    "no-ASCII (com la 'ú') per punts.  O també ignorar els "\
+    "accents de tots els caracters Latin 1 , per exemple, canviant la 'ú' "\
+    "per 'u'.  Això també canvia altres caracters no-ASCII "\
+    "con les cometes estranyes, pel seu equivalent ASCII més proper.  Com que "\
+    "la cadena a cercar també es translitera abans de fer la cerca, en la pràctica"\
+    "es tracta bàsicament d'una cerca que no té en compte els accents."
+
+/*** SEARCH RESULT ***/
+
+"$$RESULT: CANCEL"                  =   "Cancel·lar"
+"$$RESULT: FINDMORE"                =   "Cercar més"
+"$$RESULT: MATCHES"                 =   "Coincidències amb"       /* MAX 20 CHARACTERS */
+"$$RESULT: NOMATCHES"               =   "Cap coincidència amb"    /* MAX 20 CHARACTERS */
+"$$RESULT: SEARCHING..."            =   "Cercant..."      /* MAX 20 CHARACTERS */
+"$$RESULT: STOP"                    =   "Aturar"
+"$$RESULT: TITLE"                   =   "Cercar amb Plucker"
+
+
+/*** EMAIL ***/
+
+"$$EMAIL: CANCEL"                   =   "Cancel·lar"
+"$$EMAIL: CC:"                      =   "Cc:"
+"$$EMAIL: SEND"                     =   "Enviar missatge"
+"$$EMAIL: SUBJECT:"                 =   "Assumpte:"
+"$$EMAIL: TITLE"                    =   "Correu Plucker"
+"$$EMAIL: TO:"                      =   "A:"
+
+
+/*** ADD BOOKMARK ***/
+
+"$$ADD BOOKMARK: ADD"               =   "Afegir"
+"$$ADD BOOKMARK: CANCEL"            =   "Cancel·lar"
+"$$ADD BOOKMARK: NAME:"             =   "Nom:"
+"$$ADD BOOKMARK: TITLE"             =   "Afegir marcador"
+
+
+/*** BOOKMARK ***/
+
+"$$BOOKMARKS: DELETE"               =   "Esborrar"
+"$$BOOKMARKS: DONE"                 =   "Fet"
+"$$BOOKMARKS: GO TO"                =   "Anar"
+"$$BOOKMARKS: TITLE"                =   "Marcadors"
+
+
+/*** EXTERNAL LINKS ***/
+
+"$$EXTERN: BACK"                    =   "Tornar"
+"$$EXTERN: COPY URL"                =   "Copiar URL"
+"$$EXTERN: LABEL1"                  =   "Plucker no ha descarregat"
+"$$EXTERN: LABEL2"                  =   "l'enllaç que heu triat."
+"$$EXTERN: LABEL3"                  =   "Probablement sigui una web externa,"
+"$$EXTERN: LABEL4"                  =   "o superi la fondaria màxima"
+"$$EXTERN: LABEL5"                  =   "que s'havíeu demanat"
+"$$EXTERN: LABEL6"                  =   "de la pàgina original."
+"$$EXTERN: NO URL"                  =   "No hi ha informació d'aquesta URL."
+"$$EXTERN: TITLE"                   =   "Enllaç extern"
+"$$EXTERN: URL:"                    =   "URL:"
+"$$EXTERN: BROWSE ONLINE"           =   "Connectar-se"
+
+
+/*** CATEGORY ***/
+
+"$$CATEGORY: ALL"                   =   "Totes"
+"$$CATEGORY: AND"                   =   "I"
+"$$CATEGORY: CANCEL"                =   "Cancel·lar"
+"$$CATEGORY: DELETE"                =   "Esborrar"
+"$$CATEGORY: MULTIPLE SELECT"       =   "Selecció múltiple"
+"$$CATEGORY: NONE"                  =   "Cap"
+"$$CATEGORY: OK"                    =   "D'acord"
+"$$CATEGORY: OR"                    =   "O"
+"$$CATEGORY: RENAME"                =   "Canviar nom"
+"$$CATEGORY: TITLE"                 =   "Categories"
+"$$CATEGORY: UNFILED"               =   "Sense arxivar"
+"$$CATEGORY: HELP"                  =
+    "• Toqueu el botó que conté el nom de cada categoria per alternar entre "\
+    "mostrar i amagar la categoria."\
+    "\n\n"\
+    "• Marqueu la casella SELECCIÓ MÚLTIPLE per permetre que es vegi "\
+    "més d'una categoria a la vegada."\
+    "\n\n"\
+    "• Per afegir una categoria, toqueu un dels botons buits. La icona de document "\
+    "ofereix les opcions d'esborrar i canviar el nom de les categories."\
+    "\n\n"\
+    "• Si esborreu un nom de categoria, els documents que contenia passaran a ser "\
+    "documents sense arxivar."\
+    "\n\n"\
+    "• Per combinar documents de diferents categories, canvieu el nom d'una de les categories "\
+    "pel nom de l'altra."
+
+
+/*** NEW CATEGORY ***/
+
+"$$EDIT CATEGORIES: CANCEL"         =   "Cancel·lar"
+"$$EDIT CATEGORIES: NAME:"          =   "Nou nom de la categoria:"
+"$$EDIT CATEGORIES: OK"             =   "D'acord"
+"$$EDIT CATEGORIES: TITLE"          =   "Edició de categories"
+
+
+/*** INITIALIZING CATEGORY ***/
+
+"$$INITDOC: SYNCHRONIZING"          =   "Sincronitzant documents"
+"$$INITDOC: OPEN DOC LIST"          =   "Obrint llista de documents"
+
+
+/*** SORT DOCUMENTS ***/
+
+"$$SORTDOC: SORTING..."             =   "Ordenant..."
+
+
+/*** HARDCOPY ***/
+
+"$$HARDCOPY: TITLE"                 =   "Exportar a Memo"
+"$$HARDCOPY: CANCEL"                =   "Cancel·lar"
+"$$HARDCOPY: EXPORT"                =   "Exportar"
+"$$HARDCOPY: ROT13"                 =   "Rot13"
+
+
+/*** ANNOTATION ***/
+
+/*************************************************************/
+"$$ANNOTATION: TITLE"                 =   "Annotate"
+"$$ANNOTATION: OK"                    =   "OK"
+"$$ANNOTATION: CANCEL"                =   "Cancel"
+"$$ANNOTATION: DELETE"                =   "Delete"
+/*************************************************************/
+
+
+/*** EXPORT LINK TO MEMO ***/
+
+"$$EXPORT: EXPORTING LINK..."       =   "Exportant enllaç..."
+
+
+/*************************************************************
+ *                         ALERTS                            *
+ *************************************************************/
+
+/*** COMMON STRINGS ***/
+
+"$$CANCEL"                  =   "Cancel·lar"
+"$$DELETE"                  =   "Esborrar"
+"$$EXIT"                    =   "Sortir"
+"$$LEAVE"                   =   "Abandonar"
+"$$NO"                      =   "No"
+"$$OK"                      =   "D'acord"
+"$$YES"                     =   "Sí"
+/*************************************************************/
+"$$NEXT"                    =   "Next page"
+"$$RESTART"                 =   "Restart"
+/*************************************************************/
+
+
+/*** INFORMATION ***/
+
+"$$SYSTEM INCOMPATIBLE"     =   "Incompatible amb el sistema"
+"$$SYSTEM MSG"              =   "Per executar aquesta aplicació cal la versió 2.0 "\
+                                "o posterior del sistema."
+
+"$$HIGH BITDEPTH"           =   "No es pot mostrar la imatge"
+"$$HIGH BITDEPTH MSG"       =   "La quantitat de bits per píxel és massa alta per aquest dispositiu."
+
+"$$EMPTY PATTERNS"          =   "Cap cerca anterior"
+"$$EMPTY PATTERNS MSG"      =   "No hi ha cerques anteriors."
+
+"$$NO BEAM SUPPORT"         =   "No es pot transmetre"
+"$$NO BEAM SUPPORT MSG"     =   "Aquest dispositiu no permet la transmissió."
+
+"$$COPY PROTECTED"          =   "No es pot transmetre"
+"$$COPY PROTECTED MSG"      =   "Els documents protegits contra còpia no es poden transmetre."
+
+
+/*** CONFIRMATION ***/
+
+/*******************************************************************************/
+"$$DELETE OLD ANNOTATIONS"  =   "Out of date annotations"
+"$$DELETE OLD ANNOTATIONS MSG" =  "The annotations / bookmarks are older than "\
+                                  "the document.  Do you want to delete them now to "\
+                                  "prevent possible problems?"
+"$$DO NOT ASK"                 =  "Never"
+"$$DELETE ANNOTATIONS"         = "Delete annotations"
+"$$DELETE ANNOTATIONS MSG"     = "Do you want to delete the annotations and bookmarks for ^1?"
+"$$ALWAYS"                     = "Always delete"
+/*******************************************************************************/
+
+"$$CONFIRM DELETE"          =   "Confirmar esborrar"
+"$$DELETE MSG"              =   "Esborrar ^1 permanentment?"
+
+"$$CONFIRM DELETE METADOC"  =   "Confirmar esborrat del metadoc"
+"$$DELETE METADOC MSG"      =   "Esborrar també el meta document de ^1?"
+
+"$$CONFIRM DELETE ALL"      =   "Confirmar esborrar tots"
+"$$DELETE ALL MSG"          =   "Esborrar permanentment tots els documents de la "\
+                                "categoria/categories seleccionades?"
+
+"$$CONFIRM DELETE READ"     =   "Confirmar esborrar llegits"
+"$$DELETE READ MSG"         =   "Esborrar els documents llegits de la "\
+                                "categoria/categories seleccionades?"
+
+"$$MERGE CATEGORY"          =   "Combinar categoria"
+"$$MERGE CATEGORY MSG"      =   "Heu canviat el nom de la categoria per un altre "\
+                                "que ja existeix. Això combinarà les "\
+                                "dues categories. Voleu continuar?"
+
+/*************************************************************/
+"$$END OF PAGE MSG"          =  "End of page reached.  Search next page or restart from "\
+                                "beginning of search?"
+
+"$$END OF DOC MSG"          =   "End of document reached.  Restart from beginning of search?"
+/*************************************************************/
+
+
+/*** WARNING ***/
+
+"$$BROKEN DOCUMENT"         =   "Document Plucker defectuós!"
+"$$BROKEN MSG"              =   "A ^1 hi manquen registres importants.\nCarregueu "\
+                                "una nova versió d'aquest document."
+
+"$$INSUFFICIENT MEMORY"     =   "No hi ha prou memòria"
+"$$INSUFFICIENT MSG"        =   "No hi ha prou memòria per descomprimir la pàgina. "\
+                                "Heu de deixar lliure més memòria RAM."
+
+"$$LOW MEMORY"              =   "Manca memòria"
+"$$EMAIL MEMORY MSG"        =   "Pot ser que no tingueu prou memòria per redactar un "\
+                                "missatge de correu. Heu de deixar lliure més memòria RAM "\
+                                "o escriure un missatge molt breu."
+"$$IMAGE MEMORY MSG"        =   "No hi ha prou memòria dinàmica per mostrar la imatge."
+
+"$$NO TOADDR"               =   "Manca el destinatari"
+"$$NO TOADDR MSG"           =   "Heu d'indicar una adreça en el camp A:."
+
+"$$ZLIB NOT SUPPORTED"      =   "ZLib no suportat"
+"$$ZLIB MSG"                =   "Aquest dispositiu no admet documents comprimits amb ZLib"
+
+"$$IMAGE COMPRESSION"       =   "Compressió no suportada"
+"$$COMPRESSION MSG"         =   "Aquest dispositiu no admet la compressió d'imatges de Palm OS. "\
+                                "Es desactivarà la presentació d'imatges per a aquest document."
+
+"$$AUTOSCROLL STAY ON"      =   "Encès durant l'autodesplaçament "
+"$$STAY ON MSG"             =   "Aquesta opció evita que el dispositiu "\
+                                "s'apagui automàticament durant l' "\
+                                "autodesplaçament. L'apagat automàtic romandrà "\
+                                "desactivat fins que toqueu la pantalla, "\
+                                "l'interruptor, o arribeu al final de la pàgina."
+
+"$$INVALID OWNER"           =   "No sou propietari d'aquest document!"
+"$$INVALID OWNER MSG"       =   "El nom d'usuari del vostre dispositiu no correspon "\
+                                "amb el del propietari de '^1'.  El "\
+                                "document només es pot obrir amb aquest "\
+                                "nom."
+
+"$$MANUAL SYNC"             =   "Actualització de la llista de documents"
+"$$MANUAL SYNC MSG"         =   "Aquesta opció evita que el visor "\
+                                "actualitzi automàticament la llista de documents. "\
+                                "Feu servir l'opció de menú 'Actualitzar llista de documents' "\
+                                "de la biblioteca de documents per actualitzar manualment "\
+                                "la llista."
+
+
+/*** ERROR ***/
+
+"$$NO CATEGORY"             =   "No heu triat cap categoria"
+"$$NO CATEGORY MSG"         =   "Heu de triar al menys una categoria."
+
+"$$CATEGORY NAME"           =   "Nom de categoria"
+"$$CATEGORY NAME MSG"       =   "La categoria ^1 ja existeix. "\
+                                "Trieu un altre nom."
+
+"$$CANNOT DELETE"           =   "No es pot esborrar"
+"$$CANNOT DELETE MSG"       =   "No es pot esborrar aquest document!"
+
+"$$CANNOT DELETE ALL"       =   "No es poden esborrar tots"
+"$$CANNOT DELETE ALL MSG"   =   "No es poden esborrar tots els documents!"
+
+"$$CANNOT DELETE READ"      =   "No es poden esborrar els llegits"
+"$$CANNOT DELETE READ MSG"  =   "No es poden esborrar els documents llegits!"
+
+"$$BAD MAILTO"              =   "Error de correu"
+"$$BAD MAILTO MSG"          =   "El registre mailto és incorrecte. No es troba "\
+                                "l'adreça de correu-e!"\
+                                "\n\n"\
+                                "Si us plau, comuniqueu-ho a l'equip de desenvolupament de Plucker."
+
+"$$ALREADY EXISTS"          =   "Ja existeix un document anomenat ^1."
+
+"$$CANNOT RENAME DOC"       =   "No es pot canviar el nom d'aquest document!"
+
+"$$READ ONLY"               =   "Document només de lectura"
+"$$READ ONLY MSG"           =   "El document es només de lectura i no se li pot canviar el nom."
+
+"$$UNKNOWN TYPE"            =   "Tipus desconegut"
+"$$UNKNOWN TYPE MSG"        =   "Tipus de document desconegut"
+
+"$$CANNOT FIND DOC"         =   "No es troba el document"
+"$$CANNOT FIND DOC MSG"     =   "No es troba el document a la RAM ni a la targeta externa!"
+
+"$$UNHANDLED EXCEPTION"     =   "Excepció desconeguda"
+"$$UNHANDLED EXCEPTION MSG" =   "Excepció desconeguda, codi d'error = ^1"
+
+"$$CANNOT ADD BOOKMARK"     =   "No es pot afegir el marcador"
+"$$CANNOT ADD BOOKMARK MSG" =   "No s'ha pogut afegir '^1'"
+
+"$$CANNOT DELETE BOOKMARK"     =   "No es pot esborrar el marcador"
+"$$CANNOT DELETE BOOKMARK MSG" =   "No s'ha pogut esborrar '^1'"
+
+"$$IMAGE ERROR"             =   "Error d'imatge"
+"$$IMAGE ERROR MSG"         =   "Hi ha hagut un problema per mostrar la imatge. "\
+                                "Pot ser que Plucker s'estigui quedant sense memòria."
+END
+

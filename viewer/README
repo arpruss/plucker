@@ -1,0 +1,70 @@
+
+NO WARRANTY - WARNING!
+----------------------
+This software is supplied free of charge under the terms of the GNU GPL;
+see the file "COPYING" for details. BE WARNED that while I hope this 
+software works properly, it comes with NO WARRANTY. Use it only if
+you'll accept personal responsibility for the loss of all the data in
+your pilot, should plucker fail.
+
+
+INTRODUCTION
+------------
+This README talks about how to compile the viewer for Plucker, a free
+(GPL) offline HTML reader for the Palm Computing Platform.
+
+
+UPGRADE
+-------
+Please be aware that Plucker documents from pre-1.0 versions of Plucker 
+won't work in this version.
+
+
+TOOLS
+-----
+The source code requires the latest PalmOS5 SDK to compile, but the 
+binary will also run on PalmOS 4.x, 3.x and PalmOS 2.0.3 devices. 
+
+To support hardware specific devices like the Handera330 or the
+Sony Clie, you will need the specific third-party SDK as well.
+
+The Makefile only works with GNU's make.
+
+Only prc-tools 2.x is supported, but it might be possible to build
+it using Code Warrior, too.
+
+
+LANGUAGE SUPPORT
+----------------
+See the file langs/TRANSLATING for adding support of other languages.
+
+
+COMPILING
+---------
+There's nothing clever about compiling.
+
+After running './configure' in the top directory you can either run 
+'make palmos_client' from that directory or just enter the viewer directory 
+and type 'make' to build the PRC files, i.e. if you are running a Linux 
+system. It should work just fine on Unix systems using GNU's make. Other 
+platforms would probably require some changes to the Makefile and scripts.
+
+It is also possible to build the viewer in a separate build directory.
+
+By including the DEBUG and DEBUG_LOG flags you can get debug info written
+to a memo when running the viewer on a PalmOS device and to a file on the
+desktop when running it in POSE by adding calls to the macros MSG and
+MSG_IF. You can either change this manually in the Makefile, specify it
+on the command line when running make or select --enable-debug-log when
+running configure. The PLUCKERLOG environment variable can be used to
+specify where the log info should be written when running the viewer in
+POSE, otherwise it is written to POSE's log file.
+
+When compiling without these flags all such calls are excluded from the
+resulting binary.
+
+The flag ERROR_CHECK_LEVEL decides if the ErrDisplay macros should be 
+included or not. All development binaries are compiled with ERROR_CHECK_FULL, 
+i.e. all macros are included. You can change this in the Makefile to either 
+ERROR_CHECK_PARTIAL or ERROR_CHECK_NONE.
+

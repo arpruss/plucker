@@ -1,0 +1,115 @@
+% Format:  Latex Orientation:  Portrait
+%
+% This Document was created using International Codepage 850!
+% To use this Document with \nfindex{Unix}-Style systems you've to convert all
+% german "Umlaute" to there TEX-Equivalent "a "o "u etc.!
+%
+% Created using emTeX for OS/2
+%
+% $Id: Plucker_Doc.tex,v 1.9 2004/03/20 15:51:38 prussar Exp $
+%
+\documentclass[draft]{report}
+% \documentclass[titlepage]{report}
+\usepackage{makeidx}
+\usepackage{html}
+\usepackage{epsf}
+%\usepackage{hyperref}
+%\usepackage[cp850]{inputenc}
+\makeindex
+
+% Seitengr”áen definieren
+\textheight24cm
+\textwidth16.5cm
+\topmargin-1.5cm
+\oddsidemargin0cm
+\evensidemargin0cm
+\parindent0cm
+
+
+
+% special declarations for this doc:
+
+\newcommand{\viewerram}{98 kB}
+\newcommand{\libram}{30 kB}
+
+\newcommand{\ioption}[1]{{\textbf{#1}}\index{#1 option}}
+\newcommand{\iname}[1]{{\textit{#1}}\index{#1}}
+\newcommand{\icode}[1]{{\texttt{#1}}\index{#1}}
+
+\newcommand{\longoption}[2]{{\textbf{#2}}\index{#1! #2}}
+\newcommand{\longcode}[2]{{\texttt{#2}}\index{#1! #2}}
+
+\newcommand{\option}[1]{{\textbf{#1}}}
+\newcommand{\name}[1]{{\textit{#1}}}
+\newcommand{\code}[1]{{\texttt{#1}}}
+% Only the HTML version will give you a constant bold font
+\newcommand{\indata}[1]{{\textbf{\texttt{#1}}}}
+
+\newcommand{\devaddress}{\htmladdnormallink{plucker-team@rubberchicken.org}{mailto:plucker-team@rubberchicken.org}}
+
+\newcommand{\note}{\textbf{NOTE}: }
+\newcommand{\hint}{\textbf{Hint}: }
+\newcommand{\warning}{\large \textbf{WARNING}: }
+
+\title{Plucker for PalmOS}
+\author{Alexander Wagner}
+\date{23. July 1999}
+
+% Seitengr”áen definieren
+
+\begin{document}
+
+\begin{center}
+
+\vspace*{4cm}
+
+\begin{figure} [h]
+\centerline{\epsffile{chicken-head.eps}}
+\end{figure}
+
+{\Huge \bf \it Plucker}\\
+\vspace*{1cm}
+{\Large A free multiplatform tool for reading}\\
+{\Large web pages on Palm OS\textsuperscript{\tiny \textregistered} handhelds}\\
+\vspace*{2cm}
+{\Huge User's Guide}
+\vspace*{8cm}
+\end{center}
+
+\pagebreak
+
+Copyright \copyright{} 2000 The Plucker Team \devaddress. All rights reserved.\\
+
+This software is supplied free of charge under the terms of the GNU
+General Public License (see appendix for details).\\
+
+The following are trademarks or registered trademarks of Palm Inc:
+Graffiti, Palm Computing, Palm, PalmPilot, Palm III, Palm V, Palm Vx,
+Palm OS\. All other product names used in this document are trademarks
+or registered trademarks of their respective owners.
+
+\pagebreak
+
+\tableofcontents
+
+%============== Dokument Begin =====================================
+
+\include{Introduction}
+\include{Quickstart}
+\include{Viewer}
+\include{PPI}
+\include{Parser}
+\include{Advanced}
+
+\appendix
+
+\include{Links}
+\include{PluckerDB}
+\include{Credits}
+\include{GPL}
+
+%===============Dokument Ende ======================================
+
+\printindex
+
+\end{document}

@@ -1,0 +1,138 @@
+ --------------------------------------------------------
+	 TPalmUserData Class for Delphi
+	 A Delphi class to auto-install Palm .PDB and .PRC files.
+
+	 Copyright © 1997-2000 by Art Dahm
+	 All rights reserved
+
+	 Web:     http://palm.dahm.com
+	 E-mail:  palm@dahm.com
+ --------------------------------------------------------
+	 Based loosely on the C++ TPalmUserData class
+	 created by Mark Pierce (MakeDocW)
+ --------------------------------------------------------
+
+ CONTENTS
+
+ 1. General
+ 2. Using this class
+ 3. Support, feedback and bugs
+ 4. Revision History
+
+
+ 1. General
+ ----------
+
+ This class has been tested under Delphi 2, 3, 4 and 5 with
+ the Palm Desktop version 2.0 and higher.  TPalmUserData has
+ the following public functions:
+
+    constructor	Create;
+		destructor Destroy; override;
+		function GetLastUserNumber: Integer;
+		function GetNumUsers: Integer;
+		function GetPalmDesktopPath: String;
+		function GetUserMagic(User: Integer): Integer;
+		function GetUserName(User: Integer): String;
+		function GetUserSubDir(User: Integer): String;
+		function InstallUser(User: Integer; FileName: String): Boolean;
+
+
+ 2. Using this unit
+ ------------------
+
+ To use this class in your applications:
+
+ A. Add the 'PalmUserData' unit to your project
+ -------------------------------------------
+
+ Copy the file 'PalmUserData.pas' into your project's directory.
+
+ Add 'PalmUserData' to your project's USES clause.
+
+
+ B. Create an instance of TPalmUserData
+ -------------------------------------------
+
+ Create a variable of type TPalmUserData:
+
+		var
+      UserData: TPalmUserData;
+
+
+ Create an instance if the variable:
+
+		UserData := TPalmUserData.Create;
+
+
+ Don't forget to clean up when you're done:
+
+		UserData.Free;
+
+
+ C. Fill a TComboBox with the list of users
+ -------------------------------------------
+
+ This section of code fills a TComboBox with the list of users
+ available on the Palm desktop.  The selected item in the
+ TComboBox is initialized to the most recent user to use the
+ Palm Desktop.  If there are no users (the Palm Desktop is
+ not installed), the TComboBox is disabled.
+
+		if UserData.GetNumUsers <> 0 then
+		begin
+			AutoInstallComboBox.Enabled := True;
+			AutoInstallComboBox.Clear;
+			for Count := 0 to UserData.GetNumUsers-1 do
+				AutoInstallComboBox.Items.Add(UserData.GetUserName(Count));
+			AutoInstallComboBox.ItemIndex := UserData.GetLastUserNumber;
+		end
+		else
+			AutoInstallComboBox.Enabled := False;
+
+ D. Install the .PRC or .PDB file
+ -------------------------------------------
+
+ After creating a .PRC or .PDB file, the following line
+ of code will auto-install the file.  The file will be
+ transferred during the next HotSync operation.
+
+		UserData.InstallUser(AutoInstallComboBox.ItemIndex, FilePathAndName);
+
+
+ 3. Support, feedback and bugs
+ -----------------------------
+
+ I do not "oficially" provide support for this
+ software.  However, if you have any questions about
+ it, please feel free to write to me at:
+
+	 palm@dahm.com
+
+ I will try to answer your questions promptly.  If you
+ have any suggestions for improvement, please let me
+ know also, as I will be more than happy to hear your
+ opinions!
+
+ If you find a bug in this class, please let me
+ know by sending a description of the bug to:
+
+	 palm@dahm.com
+
+ I will correct all reported bugs as soon as possible.
+
+
+ 4. Revision History
+ -------------------
+
+ 2/9/2000: Version 1.2
+	- Renamed file to PalmUserData.pas from autoinst.pas
+	- Renamed unit to PalmUserData from AutoInstall
+	- Reformatted code
+
+ 12/11/97: Version 1.1
+	- Removed several useless units from the Uses clause, potentially
+		decreasing the size of the executable by about 130k.
+
+ 11/15/97: Version 1.0
+	- Initial Release.

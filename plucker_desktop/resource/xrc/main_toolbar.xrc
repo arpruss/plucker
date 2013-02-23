@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<resource xmlns="http://www.wxwidgets.org/wxxrc" version="2.5.3.0">
+  
+<object class="wxToolBar" name="main_toolbar">
+    <style platform="win">wxTB_FLAT|wxTB_DOCKABLE</style>    
+    <bitmapsize>32,32</bitmapsize>
+    <margins platform="win">2,2</margins>
+    <margins platform="unix">5,5</margins>
+    <packing platform="win">3</packing>
+    <packing platform="unix">3</packing>
+    <separation>5</separation>
+    <object class="tool" name="wxID_NEW">
+        <bitmap>../icons_dialog/main_frame_toolbar_add_channel.xpm</bitmap>
+        <tooltip>Add a new channel...</tooltip>
+        <longhelp>Add a new channel</longhelp>
+    </object>
+        <object class="tool" name="main_frame_add_channel_wizard_tool_or_menuitem">
+        <bitmap>../icons_dialog/main_frame_toolbar_add_channel_wizard.xpm</bitmap>
+        <tooltip>Add a new channel using wizard...</tooltip>
+        <longhelp>Add a new channel using the Add New Channel Wizard</longhelp>
+    </object>
+    <object class="tool" name="wxID_PROPERTIES">
+        <bitmap>../icons_dialog/main_frame_toolbar_configure_channel.xpm</bitmap>
+        <tooltip>Configure selected channel...</tooltip>
+        <longhelp>Configure channel settings for the selected channel</longhelp>
+    </object>
+    <object class="tool" name="wxID_DELETE">
+        <bitmap>../icons_dialog/main_frame_toolbar_delete_channel.xpm</bitmap>
+        <tooltip>Delete selected channels</tooltip>
+        <longhelp>Delete the selected channels</longhelp>
+    </object>
+    <object class="separator">
+    </object>
+    <object class="tool" name="main_frame_update_selected_tool_or_menuitem">
+        <bitmap>../icons_dialog/main_frame_toolbar_update_selected.xpm</bitmap>
+        <tooltip>Update selected channels</tooltip>
+        <longhelp>Update the selected channels</longhelp>
+    </object>
+    <object class="tool" name="main_frame_update_due_tool_or_menuitem">
+        <bitmap>../icons_dialog/main_frame_toolbar_update_due.xpm</bitmap>
+        <tooltip>Update all due channels</tooltip>
+        <longhelp>Update all channels that are currently due</longhelp>
+    </object>
+    <object class="tool" name="main_frame_update_all_tool_or_menuitem">
+        <bitmap>../icons_dialog/main_frame_toolbar_update_all.xpm</bitmap>
+        <tooltip>Update all channels</tooltip>
+        <longhelp>Update all channels</longhelp>
+    </object>  
+    <object class="separator">
+    </object>
+    <object class="tool" name="wxID_PREFERENCES">
+        <bitmap>../icons_dialog/main_frame_toolbar_preferences.xpm</bitmap>
+        <tooltip>Preferences...</tooltip>
+        <longhelp>Set interface, autoupdate, proxy, spidering, and other behaviours</longhelp>
+    </object>   
+</object>  
+
+<object class="wxToolBar" name="main_toolbar_high">
+    <style platform="win">wxTB_FLAT|wxTB_DOCKABLE</style>
+    <bitmapsize>32,32</bitmapsize>
+    <margins platform="win">2,2</margins>
+    <margins platform="unix">5,5</margins>
+    <packing platform="win">3</packing>
+    <packing platform="unix">3</packing>
+    <separation>5</separation>
+    <object class="tool" name="wxID_ADD">
+        <bitmap>../icons_dialog/main_frame_toolbar_add_channel_high.xpm</bitmap>
+        <tooltip>Add a new channel...</tooltip>
+        <longhelp>Add a new channel</longhelp>
+    </object>
+        <object class="tool" name="main_frame_add_channel_wizard_tool_or_menuitem">
+        <bitmap>../icons_dialog/main_frame_toolbar_add_channel_wizard_high.xpm</bitmap>
+        <tooltip>Add a new channel using wizard...</tooltip>
+        <longhelp>Add a new channel using the Add New Channel Wizard</longhelp>
+    </object>
+    <object class="tool" name="wxID_PROPERTIES">
+        <bitmap>../icons_dialog/main_frame_toolbar_configure_channel_high.xpm</bitmap>
+        <tooltip>Configure selected channel...</tooltip>
+        <longhelp>Configure channel settings for the selected channel</longhelp>
+    </object>
+    <object class="tool" name="wxID_DELETE">
+        <bitmap>../icons_dialog/main_frame_toolbar_delete_channel_high.xpm</bitmap>
+        <tooltip>Delete selected channels</tooltip>
+        <longhelp>Delete the selected channels</longhelp>
+    </object>
+    <object class="separator">
+    </object>
+    <object class="tool" name="main_frame_update_selected_tool_or_menuitem">
+        <bitmap>../icons_dialog/main_frame_toolbar_update_selected_high.xpm</bitmap>
+        <tooltip>Update selected channels</tooltip>
+        <longhelp>Update the selected channels</longhelp>
+    </object>
+    <object class="tool" name="main_frame_update_due_tool_or_menuitem">
+        <bitmap>../icons_dialog/main_frame_toolbar_update_due_high.xpm</bitmap>
+        <tooltip>Update all due channels</tooltip>
+        <longhelp>Update all channels that are currently due</longhelp>
+    </object>
+    <object class="tool" name="main_frame_update_all_tool_or_menuitem">
+        <bitmap>../icons_dialog/main_frame_toolbar_update_all_high.xpm</bitmap>
+        <tooltip>Update all channels</tooltip>
+        <longhelp>Update all channels</longhelp>
+    </object>  
+    <object class="separator">
+    </object>
+    <object class="tool" name="wxID_PREFERENCES">
+        <bitmap>../icons_dialog/main_frame_toolbar_preferences_high.xpm</bitmap>
+        <tooltip>Preferences...</tooltip>
+        <longhelp>Set interface, autoupdate, proxy, spidering, and other behaviours</longhelp>
+    </object>   
+</object>  
+
+</resource>

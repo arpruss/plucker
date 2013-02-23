@@ -1,0 +1,2276 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<resource xmlns="http://www.wxwidgets.org/wxxrc" version="2.5.3.0">
+
+<object class="wxDialog" name="editor_dialog">
+    <style>wxCAPTION|wxSYSTEM_MENU|wxRESIZE_BORDER</style>
+    <title>HTML editor</title>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>0</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+            <border>5</border>
+            <object class="wxNotebook" name="editor_dialog_notebook">
+                <usenotebooksizer>1</usenotebooksizer>
+                <style>wxNB_BOTTOM</style>
+                <object class="notebookpage">
+                    <label>Edit</label>
+                    <object class="wxPanel" name="editor_dialog_edit_tab">
+                        <object class="wxFlexGridSizer">
+                            <cols>1</cols>
+                            <rows>0</rows>
+                            <vgap>0</vgap>
+                            <hgap>0</hgap>
+                            <growablecols>0</growablecols>
+                            <growablerows>1</growablerows>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                <border>5</border>
+                                <object class="wxFlexGridSizer">
+                                    <cols>2</cols>
+                                    <rows>0</rows>
+                                    <vgap>0</vgap>
+                                    <hgap>0</hgap>
+                                    <growablecols>0</growablecols>
+                                    <growablerows>0</growablerows>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="unknown" name="editor_dialog_toolbar_panel">
+                                        <size>80,75</size>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="unknown" name="editor_dialog_stc_or_textctrl">
+                                    <size>600,230</size>
+                                    <value></value>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Preview</label>
+                    <object class="wxPanel" name="editor_dialog_preview_tab">
+                        <object class="wxFlexGridSizer">
+                            <cols>1</cols>
+                            <rows>0</rows>
+                            <vgap>0</vgap>
+                            <hgap>0</hgap>
+                            <growablecols>0</growablecols>
+                            <growablerows>0</growablerows>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxHtmlWindow" name="editor_dialog_preview_tab_htmlwindow">
+                                    <size>600,230</size>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+            <object class="wxFlexGridSizer">
+                <cols>0</cols>
+                <rows>1</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>0</growablecols>
+                <growablerows>0</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+
+<object class="wxPanel" name="editor_dialog_basic_panel">
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>0</growablerows>
+        <object class="sizeritem">
+            <flag>wxALIGN_CENTRE|wxALL</flag>
+            <border>10</border>
+            <object class="wxButton" name="editor_dialog_basic_panel_hyperlink_button">
+                <label>Insert a hyperlink...</label>
+            </object>
+        </object>
+    </object>
+</object>
+
+<object class="wxPanel" name="editor_dialog_advanced_panel">
+    <object class="wxFlexGridSizer">
+        <cols>2</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>0</growablerows>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxNotebook" name="editor_dialog_advanced_panel_notebook">
+                <usenotebooksizer>1</usenotebooksizer>
+                <object class="notebookpage">
+                    <label>Hyperlinks</label>
+                    <object class="wxPanel" name="editor_dialog_advanced_panel_hyperlinks_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_hyperlink_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_hyperlink.xpm</bitmap>
+                                    <tooltip>Insert hyperlink &lt;a href= ...&gt;&lt;/a&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_mailto_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_mailto.xpm</bitmap>
+                                    <tooltip>Insert email link &lt;a href=mailto: ...&gt;&lt;/a&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_bookmark_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_bookmark.xpm</bitmap>
+                                    <tooltip>Insert named bookmark &lt;a name= ...&gt;&lt;/a&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_popup_button">                                    
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_popup.xpm</bitmap>
+                                    <tooltip>Insert popup alert &lt;a href=javascript:alert( ...)&gt;&lt;/a&gt;</tooltip>                                   
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Common</label>
+                    <object class="wxPanel" name="editor_dialog_advanced_panel_common_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_paragraph_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_paragraph.xpm</bitmap>
+                                    <tooltip>Insert default-aligned paragraph &lt;p&gt;&lt;/p&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_paragraph_left_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_paragraph_left.xpm</bitmap>
+                                    <tooltip>Insert left-aligned paragraph &lt;p align=left&gt;&lt;/p&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_paragraph_center_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_paragraph_center.xpm</bitmap>
+                                    <tooltip>Insert center-aligned paragraph &lt;p align=center&gt;&lt;/p&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_paragraph_right_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_paragraph_right.xpm</bitmap>
+                                    <tooltip>Insert right-aligned paragraph &lt;p align=right&gt;&lt;/p&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_paragraph_full_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_paragraph_full.xpm</bitmap>
+                                    <tooltip>Insert full-aligned paragraph &lt;p align=justify&gt;&lt;/p&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_break_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_break.xpm</bitmap>
+                                    <tooltip>Insert line break &lt;br&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_image_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_image.xpm</bitmap>
+                                    <tooltip>Insert image &lt;img src= ...&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_hr_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_hr.xpm</bitmap>
+                                    <tooltip>Insert horizontal rule &lt;hr ...&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_nbsp_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_nbsp.xpm</bitmap>
+                                    <tooltip>Insert non-breaking space</tooltip>
+                                </object>
+                            </object>                            
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Layout</label>
+                    <object class="wxPanel" name="editor_dialog_advanced_panel_layout_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_span_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_span.xpm</bitmap>
+                                    <tooltip>Insert a span &lt;span ...&gt;&lt;/span&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_div_left_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_div_left.xpm</bitmap>
+                                    <tooltip>Insert a left-aligned content block &lt;div align=left&gt;&lt;/div&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_div_center_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_div_center.xpm</bitmap>
+                                    <tooltip>Insert a center-aligned content block &lt;div align=center&gt;&lt;/div&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_div_right_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_div_right.xpm</bitmap>
+                                    <tooltip>Insert a right-aligned block &lt;div align=right&gt;&lt;/div&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_center_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_center.xpm</bitmap>
+                                    <tooltip>Insert a center-aligned block using center &lt;center&gt;&lt;/center&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_blockquote_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_blockquote.xpm</bitmap>
+                                    <tooltip>Insert a blockquote &lt;blockquote&gt;&lt;/blockquote&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_q_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_q.xpm</bitmap>
+                                    <tooltip>Insert a quotation &lt;q&gt;&lt;/q&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_cite_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_cite.xpm</bitmap>
+                                    <tooltip>Insert a citation &lt;cite&gt;&lt;/cite&gt;</tooltip>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Fonts</label>
+                    <object class="wxPanel" name="editor_dialog_advanced_panel_fonts_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_font_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_font.xpm</bitmap>
+                                    <tooltip>Insert a font change &lt;font ...&gt;&lt;/font&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_bold_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_bold.xpm</bitmap>
+                                    <tooltip>Insert bolded text &lt;b&gt;&lt;/b&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_strong_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_strong.xpm</bitmap>
+                                    <tooltip>Insert strongly bolded text &lt;strong&gt;&lt;/strong&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_italic_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_italic.xpm</bitmap>
+                                    <tooltip>Insert italic text &lt;i&gt;&lt;/i&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_em_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_em.xpm</bitmap>
+                                    <tooltip>Insert emphasized text &lt;em&gt;&lt;/em&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_underline_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_underline.xpm</bitmap>
+                                    <tooltip>Insert underline text &lt;u&gt;&lt;/u&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_strike_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_strike.xpm</bitmap>
+                                    <tooltip>Insert strikethrough text &lt;strike&gt;&lt;/strike&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_tt_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_tt.xpm</bitmap>
+                                    <tooltip>Insert typewriter text &lt;tt&gt;&lt;/tt&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_sup_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_sup.xpm</bitmap>
+                                    <tooltip>Insert superscript text &lt;sup&gt;&lt;/sup&gt;</tooltip>
+                                </object>
+                            </object>
+                             <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_sub_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_sub.xpm</bitmap>
+                                    <tooltip>Insert subscript text &lt;sub&gt;&lt;/sub&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_preformatted_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_preformatted.xpm</bitmap>
+                                    <tooltip>Insert preformatted text &lt;pre&gt;&lt;/pre&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_code_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_code.xpm</bitmap>
+                                    <tooltip>Insert coded text &lt;code&gt;&lt;/code&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_h1_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_h1.xpm</bitmap>
+                                    <tooltip>Insert heading 1 text &lt;h1&gt;&lt;/h1&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_h2_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_h2.xpm</bitmap>
+                                    <tooltip>Insert heading 2 text &lt;h2&gt;&lt;/h2&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_h3_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_h3.xpm</bitmap>
+                                    <tooltip>Insert heading 3 text &lt;h3&gt;&lt;/h3&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_h4_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_h4.xpm</bitmap>
+                                    <tooltip>Insert heading 4 text &lt;h4&gt;&lt;/h4&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_h5_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_h5.xpm</bitmap>
+                                    <tooltip>Insert heading 5 text &lt;h5&gt;&lt;/h5&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_h6_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_h6.xpm</bitmap>
+                                    <tooltip>Insert heading 6 text &lt;h6&gt;&lt;/h6&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_small_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_small.xpm</bitmap>
+                                    <tooltip>Insert small text &lt;small&gt;&lt;/small&gt;</tooltip>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Tables</label>
+                    <object class="wxPanel" name="editor_dialog_advanced_panel_tables_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_table_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_table.xpm</bitmap>
+                                    <tooltip>Insert a table &lt;table&gt;&lt;/table&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_tr_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_tr.xpm</bitmap>
+                                    <tooltip>Insert a table row &lt;tr&gt;&lt;/tr&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_th_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_th.xpm</bitmap>
+                                    <tooltip>Insert a table header cell &lt;th ...&gt;&lt;/th&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_td_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_td.xpm</bitmap>
+                                    <tooltip>Insert a table cell &lt;td ...&gt;&lt;/td&gt;</tooltip>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Lists</label>
+                    <object class="wxPanel" name="editor_dialog_advanced_panel_lists_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_ordered_list_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_ordered_list.xpm</bitmap>
+                                    <tooltip>Insert an ordered list &lt;ol ...&gt;&lt;/ol&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_unordered_list_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_unordered_list.xpm</bitmap>
+                                    <tooltip>Insert an unordered list &lt;ul ...&gt;&lt;/ul&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_list_element_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_list_element.xpm</bitmap>
+                                    <tooltip>Insert a list element &lt;li&gt;&lt;/li&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_menu_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_menu.xpm</bitmap>
+                                    <tooltip>Insert a menu &lt;menu ...&gt;&lt;/menu&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_dl_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_dl.xpm</bitmap>
+                                    <tooltip>Insert a definition list &lt;dl&gt;&lt;/dl&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_dt_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_dt.xpm</bitmap>
+                                    <tooltip>Insert a definition term &lt;dt&gt;&lt;/dt&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_dd_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_dd.xpm</bitmap>
+                                    <tooltip>Insert a definition description &lt;dd&gt;&lt;/dd&gt;</tooltip>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>                
+                <object class="notebookpage">
+                    <label>Other</label>
+                    <object class="wxPanel" name="editor_dialog_advanced_panel_other_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_html_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_html.xpm</bitmap>
+                                    <tooltip>Insert html tag &lt;html&gt;&lt;/html&gt;</tooltip>                                
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_meta_handheldfriendly_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_meta_handheldfriendly.xpm</bitmap>
+                                    <tooltip>Insert handheldfriendly meta tag (informs handheld browsers that page is light) &lt;meta...&gt;&lt;/meta&gt;</tooltip>                                
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_body_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_body.xpm</bitmap>
+                                    <tooltip>Insert body tag (also sets document's text colors) &lt;body...&gt;&lt;/body&gt;</tooltip>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxBitmapButton" name="editor_dialog_toolbar_comment_button">
+                                    <bitmap>../icons_dialog/editor_dialog_toolbar_comment.xpm</bitmap>
+                                    <tooltip>Insert hidden comment &lt;!--- ---&gt;</tooltip>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+<object class="wxDialog" name="hyperlink_dialog">
+    <title>Insert Hyperlink</title>
+    <centered>1</centered>
+    <object class="wxBoxSizer">
+        <orient>wxVERTICAL</orient>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxStaticBoxSizer">
+                <orient>wxVERTICAL</orient>
+                <label>Required hyperlink properties</label>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                    <border>5</border>
+                    <object class="wxFlexGridSizer">
+                        <cols>2</cols>
+                        <rows>0</rows>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <growablecols>1</growablecols>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxStaticText" name="hyperlink_dialog_description_statictext">
+                                <label>Link description:</label>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxTextCtrl" name="hyperlink_dialog_description_textctrl">
+                                <size>80,-1</size>
+                                <style>wxTE_PROCESS_ENTER</style>
+                                <value></value>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <object class="wxFlexGridSizer">
+                        <cols>3</cols>
+                        <rows>0</rows>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <growablecols>0,2</growablecols>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxRadioButton" name="hyperlink_dialog_url_radiobutton">
+                                <style>wxRB_GROUP</style>
+                                <label>Website URL:</label>
+                                <value>1</value>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxTextCtrl" name="hyperlink_dialog_url_textctrl">
+                                <size>300,-1</size>
+                                <value>http://</value>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxButton" name="hyperlink_dialog_url_button">
+                                <label>Browse showcase...</label>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxRadioButton" name="hyperlink_dialog_file_radiobutton">
+                                <label>File name:</label>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxTextCtrl" name="hyperlink_dialog_file_textctrl">
+                                <size>300,-1</size>
+                                <value>file://</value>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxButton" name="hyperlink_dialog_file_button">
+                                <label>Choose file...</label>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxStaticBoxSizer">
+                <orient>wxVERTICAL</orient>
+                <label>Optional hyperlink settings</label>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxTOP|wxBOTTOM</flag>
+                            <border>5</border>
+                            <object class="wxCheckBox" name="hyperlink_dialog_stayonhost_checkbox">
+                                <label>Use 'stay on host' filter: ignore links pointing to an external server that is different from the starting page's server</label>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxTOP|wxBOTTOM</flag>
+                            <border>5</border>
+                            <object class="wxCheckBox" name="hyperlink_dialog_stayondomain_checkbox">
+                                <label>Use 'stay on domain' filter: ignore links pointing to a server on a different domain from the starting page's server</label>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxCheckBox" name="hyperlink_dialog_maxdepth_checkbox">
+                                <label>Use 'maximum depth' filter: only retreive pages up to</label>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxSpinCtrl" name="hyperlink_dialog_maxdepth_spinctrl">
+                                <size>70,-1</size>
+                                <min>1</min>
+                                <max>1000000</max>
+                                <value>2</value>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxStaticText" name="hyperlink_dialog_maxdepth_statictext">
+                                <label>links down from the starting page</label>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxCheckBox" name="hyperlink_dialog_url_pattern_checkbox">
+                                <label>Use 'url pattern' filter: only follow URLs having this regular expression:</label>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxTextCtrl" name="hyperlink_dialog_url_pattern_textctrl">
+                                <size>170,-1</size>
+                                <value></value>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                    <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxCheckBox" name="hyperlink_dialog_images_depth_checkbox">
+                                <label>Specify image inclusion / color depth:</label>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxChoice" name="hyperlink_dialog_images_depth_choice">
+                                <size>160,-1</size>
+                                <content>
+                                    <item>No images</item>
+                                    <item>Black and white</item>
+                                    <item>4 shade grayscale</item>
+                                    <item>16 shade grayscale</item>
+                                    <item>256 colors</item>
+                                    <item>Thousands of colors</item>
+                                </content>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                    <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxCheckBox" name="hyperlink_dialog_images_maximum_width_checkbox">
+                                <label>Specify image maximum width:</label>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxSpinCtrl" name="hyperlink_dialog_images_maximum_width_spinctrl">
+                                <size>100,-1</size>
+                                <max>1000000</max>
+                                <value>300</value>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                    <object class="wxBoxSizer">
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxCheckBox" name="hyperlink_dialog_images_maximum_height_checkbox">
+                                <label>Specify image maximum height:</label>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxALL</flag>
+                            <border>5</border>
+                            <object class="wxSpinCtrl" name="hyperlink_dialog_images_maximum_height_spinctrl">
+                                <size>100,-1</size>
+                                <max>1000000</max>
+                                <value>800</value>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_BOTTOM</flag>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+
+<object class="wxDialog" name="hr_dialog">
+    <title>Insert Horizontal Rule</title>
+    <centered>1</centered>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>1</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>3</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>0,1,2</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="hr_dialog_width_statictext">
+                        <label>Width:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxSpinCtrl" name="hr_dialog_width_spinctrl">
+                        <size>100,-1</size>
+                        <max>500</max>
+                        <value>100</value>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxChoice" name="hr_dialog_width_choice">
+                        <size>100,-1</size>
+                        <content>
+                            <item>percent</item>
+                            <item>pixels</item>
+                        </content>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="hr_dialog_size_statictext">
+                        <label>Height:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxSpinCtrl" name="hr_dialog_size_spinctrl">
+                        <size>100,-1</size>
+                        <min>1</min>
+                        <max>500</max>
+                        <value>1</value>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="hr_dialog_size2_statictext">
+                        <label>pixels</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="hr_dialog_alignment_statictext">
+                        <label>Alignment:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxChoice" name="hr_dialog_alignment_choice">
+                        <size>130,-1</size>
+                        <content>
+                            <item>Default</item>
+                            <item>Left</item>
+                            <item>Right</item>
+                            <item>Center</item>
+                        </content>
+                    </object>
+                </object>
+                <object class="spacer">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                        <size>3,3</size>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="hr_dialog_color_statictext">
+                        <label>Color:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="hr_dialog_color_textctrl">
+                        <size>130,-1</size>
+                        <value></value>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="hr_dialog_color_button">
+                        <label>Choose color...</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_BOTTOM|wxALL</flag>
+            <border>5</border>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+<object class="wxDialog" name="image_dialog">
+    <title>Insert Image</title>
+    <centered>1</centered>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>1</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>2</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>0,1</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="image_dialog_src_statictext">
+                        <label>Image source:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                    <border>5</border>
+                    <object class="wxFlexGridSizer">
+                        <cols>2</cols>
+                        <rows>0</rows>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <growablecols>0</growablecols>
+                        <growablerows>0</growablerows>
+                        <object class="sizeritem">
+                            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxTOP|wxBOTTOM</flag>
+                            <border>5</border>
+                            <object class="wxTextCtrl" name="image_dialog_src_textctrl">
+                                <size>80,-1</size>
+                                <value></value>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                            <border>5</border>
+                            <object class="wxButton" name="image_dialog_src_button">
+                                <label>Choose file...</label>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="spacer">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                        <size>4,4</size>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxCheckBox" name="image_dialog_relative_src_checkbox">
+                        <label>Image is relative to page location</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="image_dialog_alt_statictext">
+                        <label>Alternative text:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="image_dialog_alt_textctrl">
+                        <size>300,-1</size>
+                        <value></value>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="image_dialog_color_statictext">
+                        <label>Color:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                    <border>5</border>
+                    <object class="wxFlexGridSizer">
+                        <cols>2</cols>
+                        <rows>0</rows>
+                        <vgap>0</vgap>
+                        <hgap>0</hgap>
+                        <growablecols>0</growablecols>
+                        <growablerows>0</growablerows>
+                        <object class="sizeritem">
+                            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxTOP|wxBOTTOM</flag>
+                            <border>5</border>
+                            <object class="wxTextCtrl" name="image_dialog_color_textctrl">
+                                <size>80,-1</size>
+                                <value></value>
+                            </object>
+                        </object>
+                        <object class="sizeritem">
+                            <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                            <border>5</border>
+                            <object class="wxButton" name="image_dialog_color_button">
+                                <label>Choose color...</label>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="image_dialog_href_statictext">
+                        <label>Hyperlink:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="image_dialog_href_textctrl">
+                        <size>300,-1</size>
+                        <value></value>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_BOTTOM|wxALL</flag>
+            <border>5</border>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+<object class="wxDialog" name="table_dialog">
+    <title>Insert Table</title>
+    <centered>1</centered>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>1</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>3</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>0,1,2</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="table_dialog_rows_statictext">
+                        <label>Rows:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxSpinCtrl" name="table_dialog_rows_spinctrl">
+                        <size>100,-1</size>
+                        <min>1</min>
+                        <max>500</max>
+                        <value>2</value>
+                    </object>
+                </object>
+                <object class="spacer">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                        <size>4,4</size>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="table_dialog_columns_statictext">
+                        <label>Columns:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxSpinCtrl" name="table_dialog_columns_spinctrl">
+                        <size>100,-1</size>
+                        <min>1</min>
+                        <max>100</max>
+                        <value>2</value>
+                    </object>
+                </object>
+                <object class="spacer">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                        <size>4,4</size>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="table_dialog_border_statictext">
+                        <label>Border:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxCheckBox" name="table_dialog_border_checkbox">
+                        <label></label>
+                        <checked>1</checked>
+                    </object>
+                </object>
+                <object class="spacer">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                        <size>4,4</size>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="table_dialog_border_color_statictext">
+                        <label>Border color:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="table_dialog_border_color_textctrl">
+                        <size>150,-1</size>
+                        <value></value>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="table_dialog_border_color_button">
+                        <label>Choose color...</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_BOTTOM|wxALL</flag>
+            <border>5</border>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+
+<object class="wxDialog" name="td_th_dialog">
+    <title>Insert Table Cell</title>
+    <centered>1</centered>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>1</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>2</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>0,1,2</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="td_th_dialog_alignment_statictext">
+                        <label>Alignment:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxChoice" name="td_th_dialog_alignment_choice">
+                        <size>180,-1</size>
+                        <content>
+                            <item>Default</item>
+                            <item>Left</item>
+                            <item>Center</item>
+                            <item>Right</item>
+                            <item>Justified</item>
+                        </content>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="td_th_dialog_colspan_statictext">
+                        <label>Column span:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxSpinCtrl" name="td_th_dialog_colspan_spinctrl">
+                        <size>100,-1</size>
+                        <min>1</min>
+                        <value>1</value>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="td_th_dialog_rowspan_statictext">
+                        <label>Row span:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxSpinCtrl" name="td_th_dialog_rowspan_spinctrl">
+                        <size>100,-1</size>
+                        <min>1</min>
+                        <value>1</value>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_BOTTOM|wxALL</flag>
+            <border>5</border>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+<object class="wxDialog" name="font_dialog">
+    <title>Insert Font</title>
+    <centered>1</centered>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>1</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>3</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>0,1,2</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="font_dialog_color_statictext">
+                        <label>Font color:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="font_dialog_color_textctrl">
+                        <size>150,-1</size>
+                        <value></value>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="font_dialog_color_button">
+                        <label>Choose color...</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_BOTTOM|wxALL</flag>
+            <border>5</border>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+<object class="wxDialog" name="span_dialog">
+    <title>Insert Span</title>
+    <centered>1</centered>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>1</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>2</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>0,1,2</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="span_dialog_alignment_statictext">
+                        <label>Align:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxChoice" name="span_dialog_alignment_choice">
+                        <size>130,-1</size>
+                        <content>
+                            <item>Left</item>
+                            <item>Right</item>
+                            <item>Center</item>
+                        </content>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_BOTTOM|wxALL</flag>
+            <border>5</border>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+<object class="wxDialog" name="body_dialog">
+    <title>Insert Body</title>
+    <centered>1</centered>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>1</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>3</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>0,1,2</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="body_dialog_text_color_statictext">
+                        <label>Text color:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="body_dialog_text_color_textctrl">
+                        <size>150,-1</size>
+                        <value></value>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="body_dialog_text_color_button">
+                        <label>Choose color...</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="body_dialog_link_color_statictext">
+                        <label>Link color:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="body_dialog_link_color_textctrl">
+                        <size>150,-1</size>
+                        <value></value>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="body_dialog_link_color_button">
+                        <label>Choose color...</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_BOTTOM|wxALL</flag>
+            <border>5</border>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+<object class="wxDialog" name="bookmark_dialog">
+    <title>Insert Bookmark</title>
+    <centered>1</centered>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>1</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>2</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>0,1,2</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="bookmark_dialog_description_statictext">
+                        <label>Description:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="bookmark_dialog_description_textctrl">
+                        <size>250,-1</size>
+                        <value></value>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="bookmark_dialog_name_statictext">
+                        <label>Anchor name:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="bookmark_dialog_name_textctrl">
+                        <size>250,-1</size>
+                        <value></value>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_BOTTOM|wxALL</flag>
+            <border>5</border>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+<object class="wxDialog" name="email_dialog">
+    <title>Insert Email</title>
+    <centered>1</centered>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>1</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>2</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>0,1,2</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="email_dialog_descripton_statictext">
+                        <label>Description:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="email_dialog_description_textctrl">
+                        <size>250,-1</size>
+                        <value></value>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="email_dialog_address_statictext">
+                        <label>Email address:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="email_dialog_address_textctrl">
+                        <size>250,-1</size>
+                        <value>plucker-dev@rubberchicken.org</value>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_BOTTOM|wxALL</flag>
+            <border>5</border>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+<object class="wxDialog" name="symbol_dialog">
+    <title>Insert Symbol / Character</title>
+    <centered>1</centered>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>1</growablerows>
+        <object class="sizeritem">
+            <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>10</border>
+            <object class="wxStaticText" name="symbol_dialog_instructions_statictext">
+                <label>Select a symbol and press OK:</label>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+            <border>10</border>
+            <object class="unknown" name="symbol_dialog_graphic_htmlwindow">
+                <size>358,127</size>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>2</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>0</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="symbol_dialog_edit_statictext">
+                        <label>Symbol:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="symbol_dialog_edit_textctrl">
+                        <size>80,-1</size>
+                        <value></value>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_BOTTOM|wxALL</flag>
+            <border>5</border>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+<object class="wxDialog" name="popup_dialog">
+    <title>Insert Javascrip Popup</title>
+    <centered>1</centered>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>1</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>2</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>0,1,2</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="popup_dialog_description_statictext">
+                        <label>Link description:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="popup_dialog_description_textctrl">
+                        <size>250,-1</size>
+                        <value></value>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="popup_dialog_message_statictext">
+                        <label>Popup message:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="popup_dialog_message_textctrl">
+                        <size>250,-1</size>
+                        <value></value>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_BOTTOM|wxALL</flag>
+            <border>5</border>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+<object class="wxDialog" name="ul_dialog">
+    <title>Insert Unordered List</title>
+    <centered>1</centered>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>1</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>2</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>0,1,2</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="ul_dialog_bullet_statictext">
+                        <label>Bullet type:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxChoice" name="ul_dialog_bullet_choice">
+                        <size>100,-1</size>
+                        <content>
+                            <item>Disc (default)</item>
+                            <item>Square</item>
+                            <item>Circle</item>
+                        </content>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="ul_dialog_compact_statictext">
+                        <label>Compact:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxCheckBox" name="ul_dialog_compact_checkbox">
+                        <label></label>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_BOTTOM|wxALL</flag>
+            <border>5</border>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+<object class="wxDialog" name="ol_dialog">
+    <title>Insert Ordered List</title>
+    <centered>1</centered>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>1</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>2</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>1</growablecols>
+                <growablerows>0,1,2</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="ol_dialog_enumeration_statictext">
+                        <label>Enumeration type:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxChoice" name="ol_dialog_enumeration_choice">
+                        <size>180,-1</size>
+                        <content>
+                            <item>1   arabic (default)</item>
+                            <item>A   uppercase alpha</item>
+                            <item>a   lowercase alpha</item>
+                            <item>I   uppercase roman</item>
+                            <item>i   lowecase roman</item>
+                        </content>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="ol_dialog_specify_start_statictext">
+                        <label>Specifiy start number:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxCheckBox" name="ol_dialog_specify_start_checkbox">
+                        <label></label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="ol_dialog_start_at_statictext">
+                        <label>Starting at:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxSpinCtrl" name="ol_dialog_start_at_spinctrl">
+                        <size>100,-1</size>
+                        <min>1</min>
+                        <value>1</value>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="ol_dialog_compact_statictext">
+                        <label>Compact:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxCheckBox" name="ol_dialog_compact_checkbox">
+                        <label></label>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_BOTTOM|wxALL</flag>
+            <border>5</border>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+</resource>

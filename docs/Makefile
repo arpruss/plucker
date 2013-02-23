@@ -1,0 +1,137 @@
+#
+# $Id: Makefile.in,v 1.22 2005/04/29 02:33:11 chrish Exp $
+#
+
+SHELL           =   /bin/sh
+
+prefix          =   /usr/local
+top_builddir    =   ..
+subdir          =   docs
+srcdir          =   .
+
+
+DESTDIR         =
+
+PLUCKERDOC      =   Plucker_Doc
+USERGUIDE       =   PluckerUserGuide.pdb
+
+MANUALDIR       =   $(DESTDIR)${prefix}/share/plucker/doc/manual
+MANPAGEDIR      =   $(DESTDIR)${prefix}/share/man
+DATADIR         =   $(DESTDIR)${prefix}/share/plucker
+
+IMGDIR          =   $(srcdir)/images
+
+IMGTYPE         =   gif
+
+L2HFLAGS        =   -image_type $(IMGTYPE) -short_index -show_section_numbers -local_icons -address "The Plucker Team" # -split 0, to create a single doc
+
+PYTHON		    =	/usr/bin/python
+LATEX		    =	
+L2H		        =	
+MKINSTALLDIRS	=	$(top_builddir)/mkinstalldirs
+PYBUILD		    =	$(PYTHON) $(top_builddir)/parser/python/PyPlucker/Spider.py
+SED		        =	/usr/bin/sed
+GIFTOPNM	    =	/usr/bin/giftopnm
+PNMTOPS		    =	/usr/bin/pnmtops
+
+TEXFILES = $(PLUCKERDOC).tex Advanced.tex Credits.tex GPL.tex Introduction.tex \
+           Parser.tex Quickstart.tex Viewer.tex Links.tex PluckerDB.tex PPI.tex
+
+IMAGES      = Bookmarks Category CopyURL DBMgr EditBookmarks Find \
+              Mail MainScreen Prefs Result TapAction \
+              chicken-head Autoscroll Gestures HWButtons 
+
+
+all: $(PLUCKERDOC) $(USERGUIDE)
+
+Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
+	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ $(SHELL) ./config.status
+
+$(PLUCKERDOC): $(TEXFILES)
+	@if test -x $(L2H) && test -x $(LATEX) && test -x $(PNMTOPS) && test -x $(GIFTOPNM) ; then \
+		echo "Converting images..." ; \
+		for img in $(IMAGES) ; do $(GIFTOPNM) $(IMGDIR)/$${img}.gif | $(PNMTOPS) > $${img}.eps ; done ; \
+		$(LATEX) $(PLUCKERDOC).tex ; \
+		$(LATEX) $(PLUCKERDOC).tex ; \
+		$(LATEX) $(PLUCKERDOC).tex ; \
+		$(L2H) $(L2HFLAGS) $(PLUCKERDOC).tex ; \
+		cp DBFormat.html $(PLUCKERDOC) ; \
+	fi
+	@if test -d $(PLUCKERDOC) ; then \
+		echo "Changing GIF images..." ; \
+		for img in $(IMAGES) ; do rm -f $(PLUCKERDOC)/$${img}.gif ; done ; \
+		cp $(IMGDIR)/*.gif $(PLUCKERDOC) ; \
+		echo "Converting HTML documents..." ; \
+		cd $(PLUCKERDOC) ; \
+		echo "# First we remove all the WIDTH and HEIGHT attributes for images" > .sedscr ; \
+		echo "s/^ WIDTH=\".*\" HEIGHT=\".*\" BORDER=\"0\"/ BORDER=\"0\"/" >> .sedscr ; \
+		echo "# and then we replace the converted eps images with the original gif image" >> .sedscr ; \
+		echo "/^ SRC=\".*\.gif\"/ {" >> .sedscr ; \
+		echo "N" >> .sedscr ; \
+		echo "N" >> .sedscr ; \
+		echo "N" >> .sedscr ; \
+		echo "s/SRC=\".*\.gif\"\n.*\\epsffile{\(.*\)\.eps.*\">\(.*\)/SRC=\"\1.gif\" ALT=\"\">\2/" >> .sedscr ; \
+		echo "}" >> .sedscr ; \
+		for file in *.html; do \
+			$(SED) -f .sedscr $$file > .$$file ; \
+			mv -f .$$file $$file ; \
+		done ; \
+		echo "# Fix the superscript in the title page" > .sedscr2 ; \
+		echo "s/Palm OS\(<.*<\/FONT>\) handhelds/Palm OS<SUP>\1<\/SUP> handhelds/" >> .sedscr2 ; \
+		for file in $(PLUCKERDOC).html index.html; do \
+			$(SED) -f .sedscr2 $$file > .$$file ; \
+			mv -f .$$file $$file ; \
+		done ; \
+		echo "BODY { background: #ffffff }" > .css ; \
+		cat .css $(PLUCKERDOC).css > .$(PLUCKERDOC).css ; \
+		mv -f .$(PLUCKERDOC).css $(PLUCKERDOC).css ; \
+	fi
+
+$(USERGUIDE): $(PLUCKERDOC)
+	@echo "0:-:.*chicken-head.gif" > .exclude
+	@echo "0:-:.*.png" >> .exclude
+	@echo "0:-:.*prev.gif" >> .exclude
+	@echo "0:-:.*prev_g.gif" >> .exclude
+	@echo "0:-:.*up.gif" >> .exclude
+	@echo "0:-:.*up_g.gif" >> .exclude
+	@echo "0:-:.*next.gif" >> .exclude
+	@echo "0:-:.*next_g.gif" >> .exclude
+	@echo "0:-:.*contents.gif" >> .exclude
+	@echo "0:-:.*index.gif" >> .exclude
+	$(PYBUILD) -v -H `pwd`/$(PLUCKERDOC)/index.html -M3 --stayonhost --zlib-compression --bpp=2 --maxwidth=150 --maxheight=250 --alt-maxwidth=500 --alt-maxheight=500 -p. -f $(USERGUIDE:.pdb=) --exclusion-list=.exclude
+	@rm -f .exclude
+
+mostlyclean:
+	rm -f *.log *.dvi *.toc *.idx *.eps *.ilg *.ind core
+
+clean: mostlyclean
+	rm -f *.aux
+	rm -fr $(PLUCKERDOC) $(USERGUIDE)
+
+distclean: clean
+	rm -f Makefile
+
+maintainer-clean: distclean
+	@echo "------------------------------------------------------------"
+	@echo "This command is intended for maintainers to use..."
+	@echo "it deletes files that may require special tools to rebuild."
+	@echo "------------------------------------------------------------"
+
+install:
+	@if test -d $(PLUCKERDOC) ; then \
+		$(MKINSTALLDIRS) $(MANUALDIR); \
+		cp $(PLUCKERDOC)/$(PLUCKERDOC).css $(MANUALDIR); \
+		cp $(PLUCKERDOC)/*.html $(MANUALDIR); \
+		cp $(PLUCKERDOC)/*.png $(MANUALDIR); \
+		cp $(PLUCKERDOC)/*.gif $(MANUALDIR); \
+		echo "HTML documentation installed in $(MANUALDIR)"; \
+	fi
+	$(MKINSTALLDIRS) $(MANPAGEDIR)/man1
+	cp $(srcdir)/plucker-build.1 $(MANPAGEDIR)/man1
+	cp $(srcdir)/plucker-decode.1 $(MANPAGEDIR)/man1
+	cp $(srcdir)/plucker-dump.1 $(MANPAGEDIR)/man1
+	cp $(srcdir)/plucker-setup.1 $(MANPAGEDIR)/man1
+	cp $(srcdir)/pluck-comics.1 $(MANPAGEDIR)/man1
+	cp $(srcdir)/cpluck.1 $(MANPAGEDIR)/man1
+	$(MKINSTALLDIRS) $(DATADIR)/palm
+	-cp $(USERGUIDE) $(DATADIR)/palm

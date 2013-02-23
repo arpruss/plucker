@@ -1,0 +1,114 @@
+README for OS/2 $Id: README.OS2,v 1.5 2001/02/12 17:59:53 nordstrom Exp $
+
+               Welcome to Plucker!
+               ===================
+
+This files contains instructions appropriate to the OS/2-Version of
+Plucker. It would help you to read it carefully. 
+
+Please NOTE: This software is BETA. That means that it may contain
+errors or may not work as you expected in your environment, although
+it's tested quite carefully till now. In case of errors please send us
+mail so we'll have the chance to correct them immediatly. It's up to
+you how fast errors get discovered. So please help!
+
+Requirements
+~~~~~~~~~~~~
+OS/2 or OS/2 Warp (tested on Warp 4.0 but should work on older
+versions downto at least 2.0 and newer versions too)
+
+Pilot-Link (including the Perl-interface!)
+Perl
+Python
+
+Installation
+~~~~~~~~~~~~
+Obviously you've allready unpacked the distribution to some directory.
+So just start install_os2.cmd, which will create the necessary program
+objects on your desktop an invoke the installation of the viewer to
+your Palm. To do this you'll have to tell the install tool where
+Plucker should reside and which COM-Port you want to use for
+installing the viewer. Invoke Install_OS2 like:
+
+install_os2 E:\PalmPilot\Plucker COM1
+
+--> NOTE: Maybe you'll need to set HOME-environment-variable in you
+CONFIG.SYS prior to calling install_os2. To do this simply add a line like
+
+     SET HOME=F:/home
+
+and create the directory F:/home by
+
+F:
+md home
+
+if you want to place your HOME on drive F: If you allready use Unix-style 
+software (GNU-tools, XFree86/2 etc.) this variable may be allready set. 
+Please be aware that some other tools may be casedependend, which OS/2
+normally is not. So use the same case for the directory name as for
+the SET-statement. (That is don't set HOME=F:/HOME, when you make a md
+home).
+
+If you've any problems with this stuff, feel free to
+mailto:a.wagner@teamos2.de.
+(You may also use german language.)
+
+Usage
+~~~~~
+Is quite simple. The webpages you want to retrieve using Plucker are
+specified in HOME.HTML residing in you $Home\.plucker directory. The
+installation script has placed an object on your desktop inside the
+"Plucker for OS/2"-folder for easy access to that file. It's the one
+with the newspaper ;) As hte name implies HOME.HTML is pure HTML. For
+details about the format of that file consult the documentation
+included in this package.
+
+After creating a suitable HOME.HTML you may want to retrieve the data.
+Open a connection to the internet using OS/2's dial-function, and
+simply start "Plucker Hotsync". If your environment is set up
+correctly Plucker starts to retrieve the pages you mentioned in
+HOME.HTML.
+
+Current work
+~~~~~~~~~~~~
+
+- Pure Perl, no AWK: On the way expected soon
+- Improvements in the Viewer: On continued progress
+
+NOTE: Plucker is an open source project under GPL. If you want to
+contribute feel free to contact us at via rubberchicken.org. See our
+webpage for details!
+
+Errors
+~~~~~~
+- Did you install Perl correctly?
+- Does Python work correclty? (Set the environemnt etc. See Python
+  Docs.)
+- Did you install Pilot-Link including the perl interface? (Note:
+  Perl-interface is not included in normal binary distributions of
+  Pilot-Link. Maybe you'll need to compile it yourself!)
+- To which COM-port is your Palm connected? If any other than COM1
+  you'll need to edit <plucker_install_dir>\conduit\sync.pl
+  manually and place the correct COM-port in the header of the file.
+- Did the sites you want to retrieve contain frames? This doesn't
+  currently work due to limitations within wget.
+
+Still any problems with the OS/2-Version?
+mailto:a.wagner@teamos2.de
+
+or have a look at our webpage at 
+
+http://www.rubberchicken.org/products/plucker
+
+or at our german mirror at
+
+http://cip.physik.uni-wuerzburg.de/~arwagner/products/plucker
+
+where you'll allways find the latest OS/2-binaries for download too.
+
+
+                                       WÅrzburg, 30.6.1999
+				       
+				       Earth
+				       (Europe/Germany)
+

@@ -1,0 +1,3506 @@
+# -----------------------------------------------------------------------------------------
+# Name:        sample_po.txt
+# Purpose:     A .po file for Plucker-Desktop translation. See the file TRANSLATING in this 
+#              directory for full directions on how to add a new translation.
+# Author:      Your Name
+# Modified by:
+# Created:     2001/10/20
+# Copyright:   (c) Your Name ( you@youraddress.org )
+# Licence:     GPL
+# RCS-ID:      $Id: plucker-desktop.po,v 1.4 2004/03/30 07:14:23 robertoconnor Exp $
+# -----------------------------------------------------------------------------------------
+#
+#: channel_dialog.cpp:1582
+msgid ""
+msgstr ""
+"Project-Id-Version: Plucker Desktop\n"
+"POT-Creation-Date: 2004-03-30 03:43-0330\n"
+"PO-Revision-Date: 2003-08-12 01:19+0100\n"
+"Last-Translator: Paco Rivière <friviere@wanadoo.es>\n"
+"Language-Team: The Plucker Team <plucker-dev@rubberchicken.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: startup_tips.cpp:106
+msgid "tip"
+msgstr "consell"
+
+#: html_tip_dialog.h:87 html_tip_dialog.h:133 startup_tips.cpp:125
+#: startup_tips.cpp:162
+msgid "Tip of the day"
+msgstr "Consell del dia"
+
+#: processed_tip_provider.cpp:96
+msgid "Tips not available, sorry!"
+msgstr "Els consells no es troben disponibles!"
+
+#: processed_tip_provider.cpp:134
+msgid "My \"global\" tip text"
+msgstr "Text del meu consell \"global\""
+
+#: html_tip_dialog.cpp:101
+msgid "&Close"
+msgstr "&Tanca"
+
+#: html_tip_dialog.cpp:103
+msgid "&Show tips at startup"
+msgstr "&Mostra els consells al començar"
+
+#: html_tip_dialog.cpp:106
+msgid "&Next Tip"
+msgstr "&Següent Consell"
+
+#: internationalization.cpp:193
+msgid "[System default]"
+msgstr "[Opció per omisió]"
+
+#: internationalization.cpp:194 viewer_wizardpage.cpp:143
+#, fuzzy
+msgid "Catalan"
+msgstr "Italià"
+
+#: internationalization.cpp:195 viewer_wizardpage.cpp:144
+msgid "Czech"
+msgstr "Txec"
+
+#: internationalization.cpp:196 viewer_wizardpage.cpp:145
+msgid "Danish"
+msgstr "Danès"
+
+#: internationalization.cpp:197 viewer_wizardpage.cpp:146
+msgid "German"
+msgstr "Alemany"
+
+#: internationalization.cpp:198 viewer_wizardpage.cpp:148
+msgid "Spanish"
+msgstr "Castellà"
+
+#: internationalization.cpp:199 viewer_wizardpage.cpp:147
+#: viewer_wizardpage.cpp:269
+msgid "English"
+msgstr "Anglès"
+
+#: internationalization.cpp:200
+msgid "English (US)"
+msgstr "Anglès (Estats Units)"
+
+#: internationalization.cpp:201 viewer_wizardpage.cpp:149
+msgid "Faeroese"
+msgstr "Feroès"
+
+#: internationalization.cpp:202 viewer_wizardpage.cpp:150
+msgid "French"
+msgstr "Francès"
+
+#: internationalization.cpp:203 viewer_wizardpage.cpp:151
+msgid "Italian"
+msgstr "Italià"
+
+#: internationalization.cpp:204 viewer_wizardpage.cpp:152
+msgid "Japanese"
+msgstr "Japonès"
+
+#: internationalization.cpp:205
+msgid "Dutch"
+msgstr "Holandès"
+
+#: internationalization.cpp:206 viewer_wizardpage.cpp:153
+msgid "Polish"
+msgstr "Polonès"
+
+#: internationalization.cpp:207 viewer_wizardpage.cpp:154
+msgid "Russian"
+msgstr "Rus"
+
+#: internationalization.cpp:218
+msgid "Please choose language:"
+msgstr "Si us plau, trieu el llenguatge"
+
+#: internationalization.cpp:219 preferences_dialog.cpp:882
+#: showcase_dialog.cpp:277 showcase_listctrl.cpp:95
+msgid "Language"
+msgstr "Idioma"
+
+#: handheld_dest_dialog.cpp:180 help_controller.cpp:100
+#: xrc_strings_output.h:158 xrc_strings_output.h:170 xrc_strings_output.h:260
+#: xrc_strings_output.h:276 xrc_strings_output.h:287 xrc_strings_output.h:296
+#: xrc_strings_output.h:308 xrc_strings_output.h:314 xrc_strings_output.h:320
+#: xrc_strings_output.h:328 xrc_strings_output.h:336 xrc_strings_output.h:342
+#: xrc_strings_output.h:349 xrc_strings_output.h:355 xrc_strings_output.h:361
+#: xrc_strings_output.h:370 xrc_strings_output.h:383 xrc_strings_output.h:395
+#: xrc_strings_output.h:404 xrc_strings_output.h:602 xrc_strings_output.h:608
+msgid "Help"
+msgstr "Ajuda"
+
+#: help_controller.cpp:198
+msgid "Couldn't open help file named"
+msgstr "No es pot obrir l'arxiu d'ajuda anomenat"
+
+#: help_controller.cpp:246
+msgid "Enter keyword to search for:"
+msgstr "Introduiu la paraula clau que voleu cercar:"
+
+#: help_controller.cpp:247
+msgid "Search help for keyword"
+msgstr "Cerca ajuda per la paraula clau"
+
+#: plucker_wizard_base.cpp:227
+msgid "Cancel wizard"
+msgstr "Cancel·la l'auxilar"
+
+#: setup_wizard.cpp:102
+msgid "This wizard will guide you through setting up"
+msgstr "Aquest auxiliar us guiarà en la configuració"
+
+#: setup_wizard.cpp:106
+msgid "for your system."
+msgstr "del vostre sistema"
+
+#: setup_wizard.cpp:108
+msgid ""
+"You can specify what handheld software you would like installed, what "
+"handhelds or directories you want channels and software installed to, and "
+"set up your proxy"
+msgstr ""
+"Podeu indicar quin programario de l'ordinador de mà voleu instal·lar, quins "
+"ordinadors de mà i a quines carpetes voleu instal·lar els canals, i "
+"configurar el vostre servidor intermediari"
+
+#: install_viewer_wizard.cpp:95 setup_wizard.cpp:110
+msgid "Click Next to begin, or Cancel to exit the wizard."
+msgstr "Feu clic a Segûent, o Cancel·la per sortir de l'auxiliar"
+
+#: setup_wizard.cpp:128
+msgid "Install software/channels to these handheld destinations"
+msgstr "Instal·la programari o canals a aquests ordinadors de mà"
+
+#: setup_wizard.cpp:129
+msgid "Install software/channels to these directory destinations"
+msgstr "Instal·la programari o canals a aquestes carpetes"
+
+#: setup_wizard.cpp:161
+msgid "You can have some default channels automatically configured."
+msgstr "Es poden configurar automàticament alguns canals per omisió"
+
+#: setup_wizard.cpp:162
+msgid "Use the checkboxes to select your desired channels."
+msgstr "Feu servir els quadres de verificació per triar els canals."
+
+#: setup_wizard.cpp:177
+msgid "The wizard has gathered all information needed to configure"
+msgstr ""
+"L'auxiliar ha obtingut tota l'informació necessària per la configuració"
+
+#: setup_wizard.cpp:181
+msgid "Click Finish to apply these settings and complete the wizard."
+msgstr ""
+"Feu clic a Finalitza per desar aquests paràmetres i sortir de l'auxiliar."
+
+#: install_viewer_wizard.cpp:88 plucker_wizard_wrappers.cpp:125
+msgid "Install Handheld Software Wizard"
+msgstr "Instal·la l'auxiliar de programari de l'ordinador de mà"
+
+#: install_viewer_wizard.cpp:91
+msgid "This wizard will reinstall the"
+msgstr "Aquest auxiliar tornarà a instal·lar la"
+
+#: install_viewer_wizard.cpp:91
+msgid "viewer software to your handheld."
+msgstr "programari de visualització al vostre ordinador de mà."
+
+#: install_viewer_wizard.cpp:93
+msgid ""
+"This is helpful if the software was accidentally erased from the device, and "
+"now needs to be reinstalled."
+msgstr ""
+"Això és útil si el programari s'ha esborrat accidentalment del dispositiu, i "
+"ara s'ha de reinstal·lar."
+
+#: install_viewer_wizard.cpp:114
+msgid "Install handheld software to these handheld destinations"
+msgstr "Instal·la programari a aquests ordinadors de mà"
+
+#: install_viewer_wizard.cpp:115
+msgid "Install handheld software to these directory destinations"
+msgstr "Instal·la programari a aquests ordinadors de mà"
+
+#: install_viewer_wizard.cpp:125
+msgid ""
+"The wizard has gathered all information needed to install the handheld "
+"software."
+msgstr ""
+"L'auxiliar ha obtingut tota la informació necessària per instal·lar el "
+"programari de l'ordinador de mà."
+
+#: install_viewer_wizard.cpp:127
+msgid "Click Finish to perform the installation and complete the wizard."
+msgstr "Feu clic a Finalitza per instal·lar i completar l'auxiliar."
+
+#: install_viewer_wizard.cpp:129
+msgid ""
+"After clicking Finish, the handheld software will be sent your specified "
+"destinations."
+msgstr ""
+"Quant feu clic a Finalitza, el programari de l'ordinador de mà s'enviarà a "
+"on heu indicat."
+
+#: add_channel_wizard.cpp:88
+msgid "Enter a name for the new channel."
+msgstr "Introduïu un nom per nou canal."
+
+#: add_channel_wizard.cpp:89
+msgid "The channel name can be up to 26 letters long."
+msgstr "El nom del canal pot tenir una llargada de fins a 26 caràcters."
+
+#: add_channel_wizard.cpp:91 xrc_strings_output.h:19
+msgid "Channel name:"
+msgstr "Nom del canal:"
+
+#: add_channel_wizard.cpp:117
+msgid "Enter a starting page for the channel."
+msgstr "Introduïu una pàgina inicial per al canal."
+
+#: add_channel_wizard.cpp:118
+msgid "The starting page and the pages it links to will be retrieved."
+msgstr "Es carregarà la pàgina inicial i les que hi enllaçen."
+
+#: add_channel_wizard.cpp:119
+msgid ""
+"You can choose to start on either a website URL or a local file on your hard "
+"drive."
+msgstr ""
+"Podeu començar a la URL d'una pàgina web o a un arxiu local del vostre disc "
+"dur."
+
+#: add_channel_wizard.cpp:121
+msgid "Start on a website URL:"
+msgstr "Inicia a l'adreça d'una pàgina (URL):"
+
+#: add_channel_wizard.cpp:122
+msgid "Start on a local file:"
+msgstr "Inicia des d'un fitxer del disc"
+
+#: add_channel_wizard.cpp:144
+msgid "Send channel output to these handheld destinations:"
+msgstr "Envia la sortida del canal a aquests ordinadors de mà:"
+
+#: add_channel_wizard.cpp:145
+msgid "Send channel output to these directory destinations:"
+msgstr "Envia la sortida del canal a aquests directoris destí::"
+
+#: add_channel_wizard.cpp:155
+msgid ""
+"The wizard has gathered all the information needed to create a new channel."
+msgstr ""
+"L'auxiliar ha obtingut tota l'informació necessària per crear un nou canal."
+
+#: add_channel_wizard.cpp:156
+msgid "Click Finish to add the channel and complete the wizard."
+msgstr "Feu clic a Finalitza per afegir el canal i sortir de l'auxiliar."
+
+#: add_channel_wizard.cpp:158
+msgid "Launch a 'Configure channel' dialog when I click Finish."
+msgstr "Executa una diàleg 'Configura el canal' en clicar Fi."
+
+#: destinations_wizardpage.cpp:181
+msgid ""
+"At least one destination is required. Click 'Add handheld..' or .'Add output "
+"directory...'."
+msgstr ""
+"Cal al menys un destí. Cliqueu 'Afegir ordinador de mà...' o bé 'Afegir "
+"carpeta de sortida...'"
+
+#: destinations_wizardpage.cpp:182
+msgid "Destination required"
+msgstr "Es necessita un destí"
+
+#: viewer_wizardpage.cpp:130
+msgid "Normal resolution Palm OS device"
+msgstr "Resolució Normal del dispositiu amb sistema operatiu Palm"
+
+#: viewer_wizardpage.cpp:131
+msgid "High resolution Palm OS device"
+msgstr "Resolució Alta del dispositiu amb sistema operatiu Palm"
+
+#: viewer_wizardpage.cpp:135 xrc_strings_output.h:105 xrc_strings_output.h:251
+msgid "Black and white"
+msgstr "Blanc i negre"
+
+#: viewer_wizardpage.cpp:136 xrc_strings_output.h:106 xrc_strings_output.h:252
+msgid "4 shade grayscale"
+msgstr "Escala de 4 grisos"
+
+#: viewer_wizardpage.cpp:137 xrc_strings_output.h:107 xrc_strings_output.h:253
+msgid "16 shade grayscale"
+msgstr "Escala de 16 grisos"
+
+#: viewer_wizardpage.cpp:138 xrc_strings_output.h:108 xrc_strings_output.h:254
+msgid "256 colors"
+msgstr "256 colors"
+
+#: viewer_wizardpage.cpp:139 xrc_strings_output.h:109 xrc_strings_output.h:255
+msgid "Thousands of colors"
+msgstr "Milers de colors"
+
+#: viewer_wizardpage.cpp:155
+msgid "Thai"
+msgstr "Tai"
+
+#: viewer_wizardpage.cpp:156
+msgid "Turkish"
+msgstr "Turc"
+
+#: viewer_wizardpage.cpp:157
+msgid "Simplified Chinese"
+msgstr "Xinès simplificat"
+
+#: viewer_wizardpage.cpp:190
+msgid "Software options"
+msgstr "Opcions de programari"
+
+#: viewer_wizardpage.cpp:201
+msgid "Type of handheld device:"
+msgstr "Tipus d'ordinador de mà"
+
+#: viewer_wizardpage.cpp:207
+msgid "Color depth of handheld device:"
+msgstr "Profunditat del color a l'ordinador de mà:"
+
+#: viewer_wizardpage.cpp:213
+msgid "Language for handheld software:"
+msgstr "Idioma del programari de l'ordinador de mà:"
+
+#: viewer_wizardpage.cpp:223
+msgid "Items to install"
+msgstr "Elements que cal instal·lar"
+
+#: viewer_wizardpage.cpp:227 viewer_wizardpage.cpp:237
+msgid "Install"
+msgstr "Instal·la"
+
+#: viewer_wizardpage.cpp:227
+msgid "Viewer"
+msgstr "Visualitzador"
+
+#: viewer_wizardpage.cpp:227
+msgid "(required)"
+msgstr "(necessari)"
+
+#: viewer_wizardpage.cpp:232
+msgid "Install ZLIB decompression tool"
+msgstr "Instal·la l'eina de descompresió ZLIB"
+
+#: viewer_wizardpage.cpp:232
+msgid "(strongly recommended)"
+msgstr "(molt recomanat)"
+
+#: viewer_wizardpage.cpp:237
+msgid "user's manual"
+msgstr "manual d'usuari"
+
+#: viewer_wizardpage.cpp:237
+msgid "(optional)"
+msgstr "(opcional)"
+
+#: textctrl_wizardpage.cpp:164
+msgid "Please enter a value in the text box to continue the wizard."
+msgstr "Si us plau, esciviu un texte a la casella per a continuar l'auxilar."
+
+#: textctrl_wizardpage.cpp:165
+msgid "Text required"
+msgstr "Es necessita un text"
+
+#: starting_page_wizardpage.cpp:141 xrc_strings_output.h:24
+#: xrc_strings_output.h:239
+msgid "Browse showcase..."
+msgstr "Explora l'aparador..."
+
+#: starting_page_wizardpage.cpp:153 xrc_strings_output.h:27
+#: xrc_strings_output.h:140 xrc_strings_output.h:142 xrc_strings_output.h:242
+#: xrc_strings_output.h:279
+msgid "Choose file..."
+msgstr "Seleccioneu un fitxer..."
+
+#: channel_dialog.cpp:1557 starting_page_wizardpage.cpp:264
+msgid "Choose start file"
+msgstr "Trieu el fitxer per començar"
+
+#: limits_wizardpage.cpp:102
+msgid ""
+"Enter the depth of pages that you want to retrieve (1=retrieve starting page "
+"only):"
+msgstr ""
+"Indiqueu la profunditat de pàgines que voleu recuperar (1=recuperar només la "
+"pàgina inicial):"
+
+#: limits_wizardpage.cpp:106 xrc_strings_output.h:54
+msgid "Maximum depth"
+msgstr "Profunditat màxima"
+
+#: limits_wizardpage.cpp:110 xrc_strings_output.h:55
+msgid "Retreive linked pages to a depth of"
+msgstr "Recupera les pàgines enllaçades fins a una profunditat de"
+
+#: limits_wizardpage.cpp:117
+msgid "from the starting page"
+msgstr "des de la pàgina inicial"
+
+#: limits_wizardpage.cpp:127
+msgid ""
+"Enter whether you want to exclude linked pages that are not on the server:"
+msgstr ""
+"Indiqueu si voleu excloure las pàgines enllaçades que no són al servidor:"
+
+#: limits_wizardpage.cpp:132 xrc_strings_output.h:57
+msgid "'Stay on host' / 'Stay on domain' filters"
+msgstr "Filtres \"No surtis de l'hostatge\" / \"No surtis del domini\""
+
+#: limits_wizardpage.cpp:136 xrc_strings_output.h:58
+msgid "Ignore links to a server that is different from starting page's server"
+msgstr "Ignora els enllaços a un servidor diferent del de la pàgina inicial"
+
+#: limits_wizardpage.cpp:144
+msgid "Limit to the exact server only"
+msgstr "Només al mateix servidor"
+
+#: limits_wizardpage.cpp:155
+msgid "Only restrict to domain (eg allow www.plkr.org and www2.plkr.org)"
+msgstr ""
+"Limita't només al domini (per exemple permet www.plkr.org i www2.plkr.org)"
+
+#: proxy_wizardpage.cpp:103 xrc_strings_output.h:592
+msgid "Enable proxy"
+msgstr "Habilita el servidor intermediari"
+
+#: proxy_wizardpage.cpp:108
+msgid "This computer uses a proxy to access the Internet"
+msgstr ""
+"Aquesy ordinador fa servir un servidor intermediari per accedir a Internet"
+
+#: proxy_wizardpage.cpp:111
+msgid ""
+"(If you are not sure whether or not you have a proxy, then just click 'Next')"
+msgstr ""
+"(Si no esteu segur si teniu un servidor intermediari o no, feu clic a "
+"'Següent')"
+
+#: proxy_wizardpage.cpp:116 xrc_strings_output.h:594
+msgid "Proxy settings"
+msgstr "Paràmetres del servidor intermediari"
+
+#: proxy_wizardpage.cpp:121 xrc_strings_output.h:595
+msgid "Proxy server:"
+msgstr "Servidor intermediari:"
+
+#: proxy_wizardpage.cpp:127 xrc_strings_output.h:596
+msgid "Port:"
+msgstr "Port:"
+
+#: proxy_wizardpage.cpp:133 xrc_strings_output.h:597
+msgid "Proxy login:"
+msgstr "Entrada al servidor intermediari:"
+
+#: proxy_wizardpage.cpp:139 xrc_strings_output.h:598
+msgid "Proxy password:"
+msgstr "Contrassenya del servidor intermediari:"
+
+#: proxy_wizardpage.cpp:147 xrc_strings_output.h:599
+msgid "Prompt for proxy password each time (more secure)"
+msgstr "Demana cada cop la contrassenya del servidor intermediari (més segur)"
+
+#: proxy_wizardpage.cpp:297
+msgid ""
+"Your proxy server is invalid. It must begin with either http:// or https://"
+msgstr ""
+"El vostre servidor intermediari no és vàlid. Ha de començar per http:// o "
+"https://"
+
+#: proxy_wizardpage.cpp:298
+msgid "Proxy invalid"
+msgstr "El servidor intermediari no és vàlid"
+
+#: plucker_wizard_wrappers.cpp:77
+msgid "The setup wizard is not complete."
+msgstr "No s'ha completat l'auxiliar de configuració"
+
+#: plucker_wizard_wrappers.cpp:78
+msgid "You can run this wizard again at a later time to complete the setup."
+msgstr ""
+"Més tard podeu tornar a executar aquest auxiliar per completar la "
+"configuració"
+
+#: plucker_wizard_wrappers.cpp:79
+msgid "Exit the setup wizard?"
+msgstr "Voleu Sortir de l'auxiliar de configuració..."
+
+#: plucker_wizard_wrappers.cpp:86
+msgid "Setup Wizard"
+msgstr "Auxiliar de Configuració"
+
+#: plucker_wizard_wrappers.cpp:115
+msgid "The install handheld software wizard is not complete."
+msgstr ""
+"L'auxiliar d'instal·lació del programri de l'ordinador de mà encara no ha "
+"acabat"
+
+#: plucker_wizard_wrappers.cpp:116
+msgid ""
+"You can run this wizard again at a later time to re-install the software."
+msgstr ""
+"Més tard podeu tornar a executar aquest auxiliar per tornar a instal·lar el "
+"programari."
+
+#: plucker_wizard_wrappers.cpp:117 plucker_wizard_wrappers.cpp:154
+msgid "Exit the wizard?"
+msgstr "Sortir de l'auxiliar?"
+
+#: plucker_wizard_wrappers.cpp:152
+msgid "The add channel wizard is not complete."
+msgstr "No s'ha completat l'Auxiliar per Afegir Canals"
+
+#: plucker_wizard_wrappers.cpp:153
+msgid "You can run this wizard again at a later time to add the channel."
+msgstr "Més tard podeu tornar a executar aquest auxiliar per afegir un canal"
+
+#: plucker_wizard_wrappers.cpp:162
+msgid "Add New Channel Wizard"
+msgstr "Auxiliar per Afegir Canals"
+
+#: channel_check_listctrl.cpp:157
+msgid "Channel Name"
+msgstr "Nom del Canal"
+
+#: editor_dialog.cpp:538
+msgid "Unable to save home.html"
+msgstr "No s'ha pogut desar homr.html"
+
+#: hyperlink_dialog.cpp:259
+msgid "Choose file to link to"
+msgstr "Escolliu un fitxer a enllaçar"
+
+#: image_dialog.cpp:108
+msgid "Choose image source file"
+msgstr "Tria l'orígen de la imatge"
+
+#: exclusion_dialog.cpp:133
+msgid "File Extension"
+msgstr "Extensió del fitxer"
+
+#: exclusion_dialog.cpp:143 preferences_dialog.cpp:880 showcase_dialog.cpp:275
+#: showcase_listctrl.cpp:93
+msgid "URL"
+msgstr "URL"
+
+#: exclusion_dialog.cpp:273 exclusion_listctrl.cpp:202
+#: exclusion_listctrl.cpp:279
+msgid "Exclude"
+msgstr "Exclou"
+
+#: exclusion_dialog.cpp:277 exclusion_dialog.cpp:349
+#: exclusion_listctrl.cpp:237 exclusion_listctrl.cpp:283
+msgid "Include"
+msgstr "Inclou"
+
+#: exclusion_listctrl.cpp:123
+msgid "Action"
+msgstr "Acció"
+
+#: exclusion_listctrl.cpp:124
+msgid "Priority"
+msgstr "Prioritat"
+
+#: exclusion_listctrl.cpp:143
+msgid "Add a new exclusion..."
+msgstr "Afegeix una nova exclusiió"
+
+#: exclusion_listctrl.cpp:144
+msgid "Edit selected exclusion..."
+msgstr "Edita l'exclusió seleccionada"
+
+#: exclusion_listctrl.cpp:145
+msgid "Delete selected exclusion"
+msgstr "Suprimeix l'exclusió seleccionada"
+
+#: exclusion_listctrl.cpp:307
+msgid ""
+"Are you sure you wish to delete this URL/extension from your exclusion list?"
+msgstr ""
+"Esteu segur que voleu suprimir aquesta URL o extensió de la vostra llistra "
+"d'exclusió?"
+
+#: exclusion_listctrl.cpp:310
+msgid "Confirm delete"
+msgstr "Confirma la supressió"
+
+#: blocked_dialog.cpp:128
+msgid "You must enter some text in the \"Item to block\" edit box."
+msgstr "Heu d'entrar algun text al quadre d'edició \"Element a bloquejar\"."
+
+#: blocked_dialog.cpp:129
+msgid "Enter exclusion"
+msgstr "Introduïu l'exclusió"
+
+#: hhictrl.cpp:240 hhictrl.cpp:320 showcase_dialog.cpp:209
+#: showcase_dialog.cpp:218 showcase_dialog.cpp:225 showcase_dialog.cpp:410
+#: showcase_dialog.cpp:423 showcase_dialog.cpp:430
+msgid "Yes"
+msgstr "Sí"
+
+#: hhictrl.cpp:244 showcase_dialog.cpp:211 showcase_dialog.cpp:220
+#: showcase_dialog.cpp:227
+msgid "No"
+msgstr "No"
+
+#: preferences_dialog.cpp:879 showcase_dialog.cpp:274 showcase_listctrl.cpp:92
+msgid "Name"
+msgstr "Nom"
+
+#: preferences_dialog.cpp:881 showcase_dialog.cpp:276 showcase_listctrl.cpp:94
+msgid "Description"
+msgstr "Descripció"
+
+#: preferences_dialog.cpp:883 showcase_dialog.cpp:278 showcase_listctrl.cpp:96
+msgid "Category"
+msgstr "Categoria"
+
+#: preferences_dialog.cpp:884 showcase_dialog.cpp:279 showcase_listctrl.cpp:97
+msgid "Update Frequency"
+msgstr "Actualiyza la freqüència"
+
+#: preferences_dialog.cpp:885 showcase_dialog.cpp:280 showcase_listctrl.cpp:98
+msgid "Update Period"
+msgstr "Actualitza el període"
+
+#: preferences_dialog.cpp:886 showcase_dialog.cpp:281 showcase_listctrl.cpp:99
+msgid "Update Base"
+msgstr "Actualitza al base"
+
+#: preferences_dialog.cpp:887 showcase_dialog.cpp:282
+#: showcase_listctrl.cpp:100
+msgid "Update Enabled"
+msgstr "S'ha habilitat l'actualització"
+
+#: preferences_dialog.cpp:888 showcase_dialog.cpp:283
+#: showcase_listctrl.cpp:101
+msgid "Image Depth"
+msgstr "Profunditat de la imatge"
+
+#: preferences_dialog.cpp:889 showcase_dialog.cpp:284
+#: showcase_listctrl.cpp:102
+msgid "Maximum Depth"
+msgstr "Profunditat màxima"
+
+#: preferences_dialog.cpp:890 showcase_dialog.cpp:285
+#: showcase_listctrl.cpp:103
+msgid "Stay On Host"
+msgstr "No surtis de l'hostatge"
+
+#: preferences_dialog.cpp:891 showcase_dialog.cpp:286
+#: showcase_listctrl.cpp:104
+msgid "Stay On Domain"
+msgstr "No surtis del domini"
+
+#: preferences_dialog.cpp:892 showcase_dialog.cpp:287
+#: showcase_listctrl.cpp:105
+msgid "URL Pattern"
+msgstr "Patró d'enllaç (URL)"
+
+#: showcase_dialog.cpp:750
+msgid "Downloading channel preview..."
+msgstr "Carregant la visualització prèvia del canal..."
+
+#: showcase_dialog.cpp:786 showcase_dialog.cpp:801
+msgid "Channel preview unavailable."
+msgstr "No és disponible la visualització prèvia del canal."
+
+#: showcase_dialog.cpp:823
+msgid "Formatting images..."
+msgstr "S'estan composant les imatges..."
+
+#: showcase_dialog.cpp:826
+msgid "Formatting hyperlinks..."
+msgstr "Formatant el hiperenllaços..."
+
+#: showcase_dialog.cpp:832
+msgid "Downloading images..."
+msgstr "Carregant imatges..."
+
+#: plucker-desktop.cpp:84
+msgid ""
+"Another instance of the application is already running, so aborting startup "
+"of second instance."
+msgstr ""
+"Ja s'està executant una altre instància de l'aplicació, per això s'avorta "
+"l'inici de la segina instància."
+
+#: plucker-desktop.cpp:85
+msgid "Already running"
+msgstr "Ja s'està executant"
+
+#: main_frame.cpp:197 xrc_strings_output.h:446
+msgid "&About"
+msgstr "&Quant a"
+
+#: main_frame.cpp:545 xrc_strings_output.h:16
+msgid "About"
+msgstr "Quant a"
+
+#: main_frame.cpp:572
+msgid "version"
+msgstr "versió"
+
+#: main_listctrl.cpp:183
+msgid "Channel name"
+msgstr "Nom del canal"
+
+#: main_listctrl.cpp:184
+msgid "Due"
+msgstr "Data de venciment"
+
+#: main_listctrl.cpp:335
+msgid "Are you sure you wish to permanently delete the selected channels?"
+msgstr "Segur que voleu eliminar permanentment els canals seleccionats?"
+
+#: main_listctrl.cpp:336
+msgid "Confirm channel delete"
+msgstr "Confirmeu la supresió del canal"
+
+#: main_listctrl.cpp:459
+msgid "No channels are currently due at this time."
+msgstr "En aquest moment no hi ha cap canal vençut."
+
+#: main_listctrl.cpp:460
+msgid "All due channels are updated"
+msgstr "Actualitza tots els canals estan vençuts"
+
+#: main_listctrl.cpp:493
+msgid ""
+"You currently have no channels in your list. Would you like to add a channel "
+"now?"
+msgstr "No teniu cap canal a la vostra llista. Voleu afegir-ne ara?"
+
+#: main_listctrl.cpp:494
+msgid "No channels to update"
+msgstr "No hi ha cap canal per actualitzar"
+
+#: main_listctrl.cpp:583
+msgid "Enter a descriptive name for the channel (maximum of 26 letters):"
+msgstr "Introduiu un nom que descrigui el canal (com a màxim 26 lletres):"
+
+#: main_listctrl.cpp:584 xrc_strings_output.h:407 xrc_strings_output.h:449
+#: xrc_strings_output.h:465
+msgid "Add a new channel"
+msgstr "Afegeix un canal alfa"
+
+#: main_listctrl.cpp:692 main_listctrl.cpp:819 xrc_strings_output.h:565
+msgid "Never"
+msgstr "Mai"
+
+#: main_listctrl.cpp:939 xrc_strings_output.h:448 xrc_strings_output.h:464
+msgid "Add a new channel..."
+msgstr "Afegeix un nou canal..."
+
+#: main_listctrl.cpp:942 xrc_strings_output.h:450 xrc_strings_output.h:466
+msgid "Add a new channel using wizard..."
+msgstr "Afefeix un nou canal amb l'auxiliar..."
+
+#: main_listctrl.cpp:945 xrc_strings_output.h:452 xrc_strings_output.h:468
+msgid "Configure selected channel..."
+msgstr "Configura el canal seleccionat..."
+
+#: main_listctrl.cpp:946 xrc_strings_output.h:454 xrc_strings_output.h:470
+msgid "Delete selected channels"
+msgstr "Suprimeix els canals seleccionats"
+
+#: main_listctrl.cpp:948 xrc_strings_output.h:456 xrc_strings_output.h:472
+msgid "Update selected channels"
+msgstr "Actualitza els canals &seleccionats"
+
+#: main_listctrl.cpp:949 xrc_strings_output.h:458 xrc_strings_output.h:474
+msgid "Update all due channels"
+msgstr "Actualitza tots els canals vençuts"
+
+#: main_listctrl.cpp:950 xrc_strings_output.h:427 xrc_strings_output.h:460
+#: xrc_strings_output.h:461 xrc_strings_output.h:476 xrc_strings_output.h:477
+msgid "Update all channels"
+msgstr "Actualitza tots els canals"
+
+#: main_listctrl.cpp:962
+msgid "Paste URL as new channel"
+msgstr "Enganxa l'adreça com a un nou canal"
+
+#: main_listctrl.cpp:963
+msgid "Paste files as separate new channels"
+msgstr "Enganxa els fitxers com a canals separats"
+
+#: main_listctrl.cpp:1129
+msgid "No destinations are selected for channel '"
+msgstr "No hi ha llibretes d'adreces seleccionades per importar."
+
+#: main_listctrl.cpp:1130
+msgid "'. Add some destinations now?"
+msgstr "'. Afegir alguns destins ara?"
+
+#: channel_dialog.cpp:2046 main_listctrl.cpp:1137
+msgid "No destinations selected"
+msgstr "No s'ha seleccionat cap destí"
+
+#: main_listctrl.cpp:1138
+msgid "Always perform this check when about to update channels"
+msgstr "Fer sempre aquesta comprovació, abans d'actualitzar els canals"
+
+#: channel_dialog.cpp:155
+msgid "Send channel output to these handhelds"
+msgstr "Envia la sortida del canal a aquests ordinadors de mà:"
+
+#: channel_dialog.cpp:156
+msgid "Send channel output to these directories"
+msgstr "Envia la sortida del canal a aquestes carpetes"
+
+#: channel_dialog.cpp:1303
+msgid "The specified file could not be found. Do you wish to create it?"
+msgstr "No es pot trobat el fitxer indicat. Voleu crear-lo?"
+
+#: channel_dialog.cpp:1304
+msgid "Create new html file"
+msgstr "Crea un nou fitxer html"
+
+#: channel_dialog.cpp:1895
+msgid "Choose large icon"
+msgstr "Tria una icona petita"
+
+#: channel_dialog.cpp:1911
+msgid "Choose small icon"
+msgstr "Tria una icona petita"
+
+#: channel_dialog.cpp:2045
+msgid ""
+"No destinations are selected for this channel. Add some destinations now?"
+msgstr "No s'han triat destins per aquest canal. Voleu afegir-ne alguns ara?"
+
+#: channel_dialog.cpp:2047
+msgid "Always perform this check when closing this dialog"
+msgstr "Fes sempre aquesta comprovació al tancar aquest diàleg"
+
+#: utils_controls.cpp:156
+msgid "Choose the colour"
+msgstr "Trieu el color"
+
+#: hhictrl.cpp:123
+msgid "Handheld destination"
+msgstr "Ordinadoir de destinació"
+
+#: hhictrl.cpp:132
+msgid "Add handheld..."
+msgstr "Afegir un ordinador de mà..."
+
+#: hhictrl.cpp:138
+msgid "Remove selected handhelds"
+msgstr "Suprimeix els ordinadors seleccionats"
+
+#: hhictrl.cpp:158
+msgid "Directory destination"
+msgstr "Directori de destinació"
+
+#: hhictrl.cpp:168
+msgid "Add output directory..."
+msgstr "Afegeix un directori de sortida..."
+
+#: hhictrl.cpp:174
+msgid "Remove selected directories"
+msgstr "Suprimeix les carpetes seleccionats"
+
+#: hhictrl.cpp:222 hhictrl.cpp:305
+msgid "SD Card"
+msgstr "Targeta SD"
+
+#: hhictrl.cpp:226
+#, fuzzy
+msgid "M.Stick"
+msgstr "MemoryStick"
+
+#: hhictrl.cpp:230 hhictrl.cpp:309
+#, fuzzy
+msgid "CF Card"
+msgstr "Targeta SD"
+
+#: hhictrl.cpp:235 hhictrl.cpp:301
+msgid "RAM"
+msgstr "RAM"
+
+#: hhictrl.cpp:545
+msgid "Select additional handheld to receive the output"
+msgstr "Trieu altres ordinadors de mà que hagin de rebre la sortida"
+
+#: hhictrl.cpp:591
+msgid "Select directory in which to place the output"
+msgstr "arpeta a on voleu la sortida"
+
+#: pda_listctrl.cpp:96
+msgid "Storage"
+msgstr "Emmagatzemament"
+
+#: pda_listctrl.cpp:97
+msgid "Card Directory"
+msgstr "Directori de la targeta"
+
+#: pda_listctrl.cpp:98
+msgid "USB"
+msgstr "USB"
+
+#: preferences_dialog.cpp:857
+msgid "Choose external editor"
+msgstr "'Seleccioneu l'editor"
+
+#: preferences_dialog.cpp:897
+msgid "Fields to display in details pane:"
+msgstr "Trieu el camps que s'han de mostrar al panell de detall:"
+
+#: preferences_dialog.cpp:898
+msgid "Select desired fields"
+msgstr "Trieu els camps desitjats"
+
+#: time_control.cpp:108
+msgid ":"
+msgstr ":"
+
+#: handheld_dest_dialog.cpp:96
+msgid "Handheld"
+msgstr "Ordinador de mà"
+
+#: handheld_dest_dialog.cpp:103
+msgid "Handheld user:"
+msgstr "Usuari de l'ordinador de mà"
+
+#: handheld_dest_dialog.cpp:111
+msgid "This is a USB-connected device"
+msgstr "Aquest és un dispositiu connectat amb USB"
+
+#: handheld_dest_dialog.cpp:116
+msgid "Location on handheld"
+msgstr "Situació a l'ordinador de mà"
+
+#: handheld_dest_dialog.cpp:119
+msgid "On the handheld, send the files to:"
+msgstr "A l'ordinador de mà,envieu el arxius a:"
+
+#: handheld_dest_dialog.cpp:130
+msgid "The handheld's RAM memory"
+msgstr "La memòria RAM de l'ordinador de mà"
+
+#: handheld_dest_dialog.cpp:135
+msgid "The removable SD/MMC card"
+msgstr "La targeta extraible SD/MMC"
+
+#: handheld_dest_dialog.cpp:140
+#, fuzzy
+msgid "The removable Memory Stick"
+msgstr "El MemoriStick extraïble"
+
+#: handheld_dest_dialog.cpp:145
+#, fuzzy
+msgid "The removable CompactFlash card"
+msgstr "La targeta extraible SD/MMC"
+
+#: handheld_dest_dialog.cpp:156
+msgid "Send to the default directory on the card"
+msgstr "Envia'l al directori per omisió de la targeta"
+
+#: handheld_dest_dialog.cpp:162
+msgid "Send to this specified directory on the card:"
+msgstr "envia la carpeta indicada a la targeta:"
+
+#: details_progress_dialog.cpp:431 handheld_dest_dialog.cpp:174
+#: xrc_strings_output.h:15 xrc_strings_output.h:17 xrc_strings_output.h:156
+#: xrc_strings_output.h:168 xrc_strings_output.h:258 xrc_strings_output.h:274
+#: xrc_strings_output.h:285 xrc_strings_output.h:294 xrc_strings_output.h:306
+#: xrc_strings_output.h:312 xrc_strings_output.h:318 xrc_strings_output.h:326
+#: xrc_strings_output.h:334 xrc_strings_output.h:340 xrc_strings_output.h:347
+#: xrc_strings_output.h:353 xrc_strings_output.h:359 xrc_strings_output.h:368
+#: xrc_strings_output.h:381 xrc_strings_output.h:393 xrc_strings_output.h:402
+#: xrc_strings_output.h:600 xrc_strings_output.h:606
+msgid "OK"
+msgstr "D'acord"
+
+#: handheld_dest_dialog.cpp:177 xrc_strings_output.h:157
+#: xrc_strings_output.h:169 xrc_strings_output.h:259 xrc_strings_output.h:275
+#: xrc_strings_output.h:286 xrc_strings_output.h:295 xrc_strings_output.h:307
+#: xrc_strings_output.h:313 xrc_strings_output.h:319 xrc_strings_output.h:327
+#: xrc_strings_output.h:335 xrc_strings_output.h:341 xrc_strings_output.h:348
+#: xrc_strings_output.h:354 xrc_strings_output.h:360 xrc_strings_output.h:369
+#: xrc_strings_output.h:382 xrc_strings_output.h:394 xrc_strings_output.h:403
+#: xrc_strings_output.h:601 xrc_strings_output.h:607
+msgid "Cancel"
+msgstr "Anul·la"
+
+#: plucker_controller.cpp:1322
+msgid "channel update status"
+msgstr "Estat de l'actualització del canal"
+
+#: plucker_controller.cpp:1471
+msgid "Unnamed Channel"
+msgstr "Canal sense nom"
+
+#: commandline_parser.cpp:169
+msgid "Commandline Interface"
+msgstr "Interfície de línia d'ordres"
+
+#: commandline_parser.cpp:170 xrc_strings_output.h:4
+msgid "Version"
+msgstr "Versió"
+
+#: commandline_parser.cpp:171 xrc_strings_output.h:6
+msgid "Build Date"
+msgstr "Data de muntatge"
+
+#: commandline_parser.cpp:173
+msgid "(c) Copyright 1998-2003"
+msgstr "(c) Copyright 1998-2003"
+
+#: commandline_parser.cpp:175
+msgid ""
+"Updates selected channels (-s), due channels (-d), or all channels (-a)."
+msgstr ""
+"Actualitza tots els canals seleccionats (-s), vençuts (-d), o tots els cansl "
+"(-a)."
+
+#: commandline_parser.cpp:176
+msgid ""
+"If updating selected channels, (-p) specifies channel by their section names"
+msgstr ""
+"En actualitzar els canals seleccionats, (-p) indica els canals pels seus "
+"noms de secció"
+
+#: commandline_parser.cpp:177
+msgid "in your plucker.ini/.pluckerrc, instead of their channel names."
+msgstr "a plucker.ini ni .pluckerrc, enlloc dels noms dels canals."
+
+#: commandline_parser.cpp:178
+msgid "If you specify no options, then the application will start in GUI mode."
+msgstr "Si no indiqueu cap opció, l'aplicació començara en mode interactiu."
+
+#: commandline_parser.cpp:179
+msgid "See online help for more information."
+msgstr "trobareu més informació a l'ajuda en l´inea"
+
+#: commandline_parser.cpp:181
+msgid "Summary of options"
+msgstr "Resum de les opcions"
+
+#: commandline_parser.cpp:200
+msgid ""
+"Syntax error: You have specified multiple commands. Choose just one of (-s), "
+"(-d), or (-a)."
+msgstr ""
+"Error de sintaxi:  Heu indicat diverses ordres. trieu-ne només una de (-s), "
+"(-d), o (-a)."
+
+#: commandline_parser.cpp:222
+msgid "Syntax error: To use 'update selected', you must specify some channels."
+msgstr ""
+"Error de sintaxi: Per triar 'actualitza els seleccionats', heu d'indicar "
+"alguns canals."
+
+#: commandline_parser.cpp:238
+msgid "Warning: plucker.ini/.pluckerrc has no section="
+msgstr "Avís: plucker.ini i .pluckerrc no tenen cap secció="
+
+#: commandline_parser.cpp:250
+msgid ""
+"Warning: None of those channel doc_names could be found in "
+"plucker.ini/.pluckerrc."
+msgstr ""
+"Avís: No es pot trobar cap d'aquests canal doc_names a plucker.ini ni "
+".pluckerrc"
+
+#: commandline_parser.cpp:272
+msgid ""
+"You have no channels in your plucker.ini/.pluckerrc file. Add some channels "
+"first."
+msgstr ""
+"No hi han canals als fitxer plucker.ini o pluckerrc. Primer afegiu alguns "
+"canals."
+
+#: proxy_prompt.cpp:119
+msgid "Enter your proxy password:"
+msgstr "Entreu la contrassenya del vostre servidor intermediari:"
+
+#: proxy_prompt.cpp:120
+msgid "Enter Proxy Password"
+msgstr "Entreu la contrassenya del servidor intermediari"
+
+#: palm_installer_gtk.cpp:147
+msgid ""
+"Press the HotSync button on your USB handheld first. Then click OK to "
+"continue when you are ready."
+msgstr ""
+"Premeu el botó de Sincronització del vostre ordinador de mà. Quant acabeu "
+"cliqueu D'acord per continuar"
+
+#: palm_installer_gtk.cpp:149
+msgid ""
+"(You can bypass this pause dialog by unchecking the USB checkbox in the "
+"handheld destination)"
+msgstr ""
+"(podeu saltar aquest diàled de pausa desactivant la casella de verificació "
+"USB a l'ordinador de mà destí)"
+
+#: palm_installer_gtk.cpp:154
+msgid "Press HotSync Button First"
+msgstr "Primer premeu el botó Hotsync"
+
+#: palm_installer_msw.cpp:116 palm_installer_msw.cpp:125
+msgid ""
+"Unable to access Palm Desktop software.\n"
+"You will need to choose directories, not HotSync handhelds, as the "
+"destinations for channels."
+msgstr ""
+"No es pot trobar el programari de l'Escriptori Palm. \n"
+" Heu de triar destins per als canals, que siguin carpetes, no ordinadors de "
+"mà."
+
+#: palm_installer_msw.cpp:117
+msgid "Palm Desktop detection warning"
+msgstr "Avís de la detecció de l'Escriptori Palm"
+
+#: palm_installer_msw.cpp:118
+msgid "Always perform this check in the future"
+msgstr "Fer sempre aquesta comprovació en el futur"
+
+#: palm_installer_msw.cpp:136
+msgid "Error: unable to get Lastuser_name from Registry"
+msgstr "Error: El Registre no indica el nom del darrer usuari"
+
+#: palm_installer_msw.cpp:141
+msgid "Error: unable to get Palm path from Registry"
+msgstr "Error: El Registre no proporcina la ruta de la carpeta Palm"
+
+#: palm_installer_msw.cpp:329
+msgid "Error: unable to write update flag to Registry"
+msgstr "Error: El Registre no permet actualitza la bandera d'escriptura"
+
+#: palm_installer_mac.cpp:164
+msgid "SecureDigital (SD) Card"
+msgstr ""
+
+#: build_progress_dialog.cpp:139
+#, c-format
+msgid "Channels updated: 0 of %d"
+msgstr "S'han actualitzat els canals: %d of %d"
+
+#: build_progress_dialog.cpp:159
+msgid "Executing command before spidering channels..."
+msgstr "Executant l'ordre abans de rastrejar els canals..."
+
+#: build_progress_dialog.cpp:165
+msgid "Initializing"
+msgstr "S'està inicialitzant"
+
+#: build_progress_dialog.cpp:166
+msgid "spidering engine"
+msgstr "motor de rastreig"
+
+#: build_progress_dialog.cpp:198
+msgid "Updating channel: "
+msgstr "S'està actualitzant el canal"
+
+#: build_progress_dialog.cpp:209
+msgid "Processing "
+msgstr "S'està processant"
+
+#: build_progress_dialog.cpp:220
+msgid "Initializing channel: "
+msgstr "S'està iniciant el canal:"
+
+#: build_progress_dialog.cpp:258
+#, c-format
+msgid "Channels updated: %d of %d"
+msgstr "S'han actualitzat els canals: %d of %d"
+
+#: build_progress_dialog.cpp:300
+msgid "Tasks completed for all channels."
+msgstr "S'han acabat les tasques de tots els canals."
+
+#: build_progress_dialog.cpp:314
+msgid "Executing command after spidering channels..."
+msgstr "Executant l'ordre després de rastrejar els canals..."
+
+#: build_progress_dialog.cpp:369
+#, c-format
+msgid "Retrieving files (%ld of %ld)"
+msgstr "S'està recuperant arxius (%ld de %ld)"
+
+#: build_progress_dialog.cpp:382
+msgid "Converting retrieved files...."
+msgstr "S'estan convertint els fitxers recuperats..."
+
+#: build_progress_dialog.cpp:388
+msgid "Conversion complete. Writing output file..."
+msgstr "S'ha acabat la conversió. Escribint el fitxer de sortida..."
+
+#: build_progress_dialog.cpp:398
+msgid "All pages retrieved and parsed. Starting conversion..."
+msgstr "S'han obtingut i analitzat totes les pàgines"
+
+#: build_progress_dialog.cpp:435
+msgid "Installing channel output to destinations..."
+msgstr "Instal·lant la sortida dels canal al seu destí..."
+
+#: build_progress_dialog.cpp:443
+msgid "Setting new due date..."
+msgstr "Establint nou venciment..."
+
+#: details_progress_dialog.cpp:236 xrc_strings_output.h:163
+msgid "<< Details"
+msgstr "<< Detalls"
+
+#: details_progress_dialog.cpp:291
+msgid "Details >>"
+msgstr "Detalls >>"
+
+#: details_progress_listbox.cpp:208
+msgid "Save details log file"
+msgstr "Desa els continguts del registre al fitxer"
+
+#: details_progress_listbox.cpp:299
+msgid "Copy selected"
+msgstr "Copia el text seleccionat"
+
+#: details_progress_listbox.cpp:300
+msgid "Clear all"
+msgstr "Elimina-ho &tot"
+
+#: details_progress_listbox.cpp:301
+msgid "Select all"
+msgstr "Selecciona-ho tot"
+
+#: about_dialog.cpp:109 about_dialog.cpp:182
+msgid "Authors"
+msgstr "Autors"
+
+#: about_dialog.cpp:118 about_dialog.cpp:169
+msgid "Credits"
+msgstr "Crèdits"
+
+#: about_dialog.cpp:121 about_dialog.cpp:172
+msgid ""
+"The following kind folks provided support, ideas or conversation as part of "
+"the"
+msgstr ""
+"Les següents persones van ser tan amables de recolçar, aportar ideas o "
+"conversa com a part de"
+
+#: about_dialog.cpp:122
+msgid "project. May they live long and prosper:"
+msgstr "projecte: Que visquin molt i amb prosperitat."
+
+#: about_dialog.cpp:128
+msgid ""
+"If you feel left out, then please add yourself to the file, or send e-mail "
+"to <u>plucker-dev@rubberchicken.org</u>! "
+msgstr ""
+"Si creieu que us han deixat fora, afegiu-vos a l'arxiu o envieu un correu "
+"a<u>plucker-dev@rubberchicken.org</u>!"
+
+#: about_dialog.cpp:156
+msgid "Translators"
+msgstr "Traductors"
+
+#: about_dialog.cpp:159
+msgid "The following kind folks brought"
+msgstr "Les següents persones van ser tan amables de proporcionar"
+
+#: about_dialog.cpp:160
+msgid "to their speakers of their language:"
+msgstr "als parleants del seu idioma:"
+
+#: about_dialog.cpp:173
+msgid "project. May they live long and plucker:"
+msgstr "projecte: Que visquin molt i plucker:"
+
+#: about_dialog.cpp:188
+msgid ""
+"If you feel left out, then please add yourself to the file, or send e-mail "
+"to <u>plucker-dev@rubberchicken.org</u>!"
+msgstr ""
+"Si creieu que us han deixat fora, afegiu-vos a l'arxiu o envieu un correu "
+"a<u>plucker-dev@rubberchicken.org</u>!"
+
+#: checkbox_message_dialog.h:78
+msgid "Message"
+msgstr "Missatge"
+
+#: checkbox_message_dialog.h:81
+msgid "Don't remind me again"
+msgstr "No m'ho tornis a preguntar"
+
+#: plucker_wizard_base.h:81
+msgid "Abort the wizard?"
+msgstr "Cancel·la l'auxilar"
+
+#: install_viewer_wizard.h:76 setup_wizard.h:79
+msgid "Abort the setup wizard?"
+msgstr "Avortar l'auxiliar de configració?"
+
+#: add_channel_wizard.h:79
+msgid "Abort the add channel wizard?"
+msgstr "Cancel·lar l'Auxiliar per Afegir Canals"
+
+#: destinations_wizardpage.h:77
+msgid "Send it to these handhelds"
+msgstr "Envia a aquests ordinadors de mà"
+
+#: destinations_wizardpage.h:79
+msgid "Sent it to these directories"
+msgstr "Envia a aquestes carpetes"
+
+#: hhictrl.h:78
+msgid "Install files to these handhelds"
+msgstr "Instal·la a aquests ordinadors de mà"
+
+#: hhictrl.h:79
+msgid "Install files to these directories"
+msgstr "Instal·la a aquestes carpetes"
+
+#: xrc_strings_output.h:1
+msgid "About Plucker Desktop"
+msgstr "Quant a l'Escriptori Plucker"
+
+#: xrc_strings_output.h:2
+msgid "Details"
+msgstr "Detalls"
+
+#: xrc_strings_output.h:3
+msgid "Plucker Desktop"
+msgstr "Escriptori Plucker"
+
+#: xrc_strings_output.h:5
+msgid "1.2.0.0"
+msgstr "1.2.0.0"
+
+#: xrc_strings_output.h:7
+msgid "Aug 30 2002"
+msgstr "Ago 30 2002"
+
+#: xrc_strings_output.h:8
+msgid "This application provides visual content management for Plucker."
+msgstr ""
+"Aquesta aplicació proporciona una gestió visual de continguts per Plucker."
+
+#: xrc_strings_output.h:9
+msgid "(c) Copyright 1998-2003 The Plucker Team."
+msgstr "(c) Copyright 1998-2003 The Plucker Team."
+
+#: xrc_strings_output.h:10
+msgid "This application is Free Software under the conditions of the "
+msgstr "Aquesta aplicació és Software lliure sota les condicions de la"
+
+#: xrc_strings_output.h:11
+msgid "Free Software Foundation's General Public License."
+msgstr "Llicència General Pública de la Fundació de Programari Lliure"
+
+#: xrc_strings_output.h:12
+msgid "www.plkr.org"
+msgstr "www.plkr.org"
+
+#: xrc_strings_output.h:13
+msgid "Plucker Desktop credits"
+msgstr "Crèdits de l'Escriptori Plucker"
+
+#: xrc_strings_output.h:14
+msgid "Plucker credits"
+msgstr "Crèdits de Plucker"
+
+#: xrc_strings_output.h:18
+msgid "Configure Channel"
+msgstr "Configura el canal"
+
+#: xrc_strings_output.h:20
+msgid "Starting page"
+msgstr "Pàgina inicial"
+
+#: xrc_strings_output.h:21
+msgid "Start with"
+msgstr "Comença amb"
+
+#: xrc_strings_output.h:22
+msgid "A website URL:"
+msgstr "L'adreça d'una pàgina (URL):"
+
+#: xrc_strings_output.h:23 xrc_strings_output.h:238
+msgid "http://"
+msgstr "http://"
+
+#: xrc_strings_output.h:25
+msgid "A local file:"
+msgstr "Un fitxer local..."
+
+#: xrc_strings_output.h:26 xrc_strings_output.h:241
+msgid "file://"
+msgstr "file://"
+
+#: xrc_strings_output.h:28
+msgid "Edit file..."
+msgstr "Edita el fitxer"
+
+#: xrc_strings_output.h:29
+msgid "A list of my links:"
+msgstr "Una llista dels meus enllaços:"
+
+#: xrc_strings_output.h:30
+msgid "Edit my list of links with HTML editor..."
+msgstr "Edita la meva llista d'enllaços amb l'editor HTML..."
+
+#: xrc_strings_output.h:31 xrc_strings_output.h:557
+msgid "Spidering"
+msgstr "Rastreig"
+
+#: xrc_strings_output.h:32
+msgid "Retrieval order"
+msgstr "Ordre de recuperació"
+
+#: xrc_strings_output.h:33
+msgid "Retrieve files by following links:"
+msgstr "Recupera els fitxers seguint els enllaços:"
+
+#: xrc_strings_output.h:34
+msgid "Breadth first"
+msgstr "Primer l'amplada"
+
+#: xrc_strings_output.h:35
+msgid "Depth first"
+msgstr "Profunditat primer"
+
+#: xrc_strings_output.h:36
+msgid "Spidering status"
+msgstr "Estat de rastreig"
+
+#: xrc_strings_output.h:37
+msgid "Progress message detail level:"
+msgstr "Nivell de detall dels missatges de progrès:"
+
+#: xrc_strings_output.h:38
+msgid "Minimum (no progress information, only error messages)"
+msgstr "Mínim (sense informació del progrés, només missatges d'errors)"
+
+#: xrc_strings_output.h:39
+msgid "Medium (page being spidered, pages remaining in queue)"
+msgstr "Mitjà (pàgina que s'està rastrejant, pàgines que falten a la cua)"
+
+#: xrc_strings_output.h:40
+msgid "Maximum (full information, most useful for debugging)"
+msgstr "Màxim (tota la informació, el més útil per depuració)"
+
+#: xrc_strings_output.h:41
+msgid "Truncate URLs displayed in the progress window to:"
+msgstr "Retalla les adreces que es visualitzaràn a la barra de progrés a:"
+
+#: xrc_strings_output.h:42
+msgid "letters"
+msgstr "lletres"
+
+#: xrc_strings_output.h:43
+msgid "Referrers and browser identification"
+msgstr "Identificació del navegador i referèncieds"
+
+#: xrc_strings_output.h:44
+msgid "Specify a referrer URL:"
+msgstr "Indica una URL de referència:"
+
+#: xrc_strings_output.h:45
+msgid "When retrieving files from this channel's web server, identify as:"
+msgstr "En recuperar fitxers del servidor d'aquest canal, identifica't com a:"
+
+#: xrc_strings_output.h:46
+msgid "This browser type:"
+msgstr "Aquest tipus de navegador:"
+
+#: xrc_strings_output.h:47
+msgid "Plucker (recommended)"
+msgstr "Plucker (recomanat)"
+
+#: xrc_strings_output.h:48
+msgid "AvantGo"
+msgstr "AvantGo"
+
+#: xrc_strings_output.h:49
+msgid "This custom user-agent:"
+msgstr "Aquest agent de l'usuari a mida:"
+
+#: xrc_strings_output.h:50 xrc_strings_output.h:566
+msgid "Command executions"
+msgstr "Execució d'ordres"
+
+#: xrc_strings_output.h:51
+msgid "Execute a command before spidering this channel:"
+msgstr "Executa aquesta ordre abans de rastrejar aquest canal:"
+
+#: xrc_strings_output.h:52
+msgid "Execute a command after spidering this channel:"
+msgstr "Executa aquesta ordre després de rastrejar aquest canal:"
+
+#: xrc_strings_output.h:53
+msgid "Limits"
+msgstr "Límits"
+
+#: xrc_strings_output.h:56
+msgid "from the starting page (1=retrieve starting page only)"
+msgstr "enllaços sota la pàgina inicial (1=només la pàgina inicial)"
+
+#: xrc_strings_output.h:59
+msgid ""
+"Limit to the exact server only: if started on www.plkr.org, only allow "
+"www.plkr.org"
+msgstr ""
+"Limita't només al mateix servidor: si comenceu a www.plkr.org, permet només "
+"www.plkr.org"
+
+#: xrc_strings_output.h:60
+msgid ""
+"Only restrict to domain: if started on www.plkr.org, allow www.plkr.org and "
+"www2.plkr.org"
+msgstr ""
+"Limita't només al domini: si començes a www.plkr.org, permet www.plkr.org "
+"and www2.plkr.org"
+
+#: xrc_strings_output.h:61
+msgid "'URL pattern' filter"
+msgstr "Filtre de 'patró URL'"
+
+#: xrc_strings_output.h:62
+msgid "Only follow URLs that match this regular expression pattern:"
+msgstr ""
+"Segueix només els enllaços que coincideixen amb aquest patró d'expressió "
+"habitual:"
+
+#: xrc_strings_output.h:63
+msgid "Channel-specific inclusion/exclusion list filter"
+msgstr "Llista d'inclusió i exclusió per aquest canal"
+
+#: xrc_strings_output.h:64
+msgid ""
+"In addition to the shared inclusion/exclusion list, also follow/ignore links "
+"pointing to these file types or servers:"
+msgstr ""
+"A més de la llista compartida d'inclusió i exclusió, segueix o ignora també "
+"els enllaços que apunten a aquests tipus de fitxers o servidors:"
+
+#: xrc_strings_output.h:65
+msgid "Edit channel-specific inclusion/exclusion list..."
+msgstr "Edita la llista d'inclusió i exclusió per aquest canal..."
+
+#: xrc_strings_output.h:66
+msgid "Formatting"
+msgstr "Formatatge"
+
+#: xrc_strings_output.h:67
+msgid "Character set encoding"
+msgstr "Joc de caràcters"
+
+#: xrc_strings_output.h:68
+msgid "Specify a default character set to use for this channel:"
+msgstr "Indica un joc de caràcters per omissió per aquest canal:"
+
+#: xrc_strings_output.h:69
+msgid "ASCII"
+msgstr "ASCII"
+
+#: xrc_strings_output.h:70
+msgid "Big5"
+msgstr "BIG5"
+
+#: xrc_strings_output.h:71
+msgid "EBCDIC-INT"
+msgstr "EBCDIC-INT"
+
+#: xrc_strings_output.h:72
+msgid "eucCN"
+msgstr "eucCN"
+
+#: xrc_strings_output.h:73
+msgid "eucJP"
+msgstr "eucJP"
+
+#: xrc_strings_output.h:74
+msgid "eucKR"
+msgstr "eucKR"
+
+#: xrc_strings_output.h:75
+msgid "eucTW"
+msgstr "eucTW"
+
+#: xrc_strings_output.h:76
+msgid "GB2312"
+msgstr "GB2312"
+
+#: xrc_strings_output.h:77
+msgid "ISO-2022-CN"
+msgstr "ISO-2022-CN"
+
+#: xrc_strings_output.h:78
+msgid "ISO-2022-CN-EXT"
+msgstr "ISO-2022-CN-EXT"
+
+#: xrc_strings_output.h:79
+msgid "ISO-2022-JP"
+msgstr "ISO-2022-JP"
+
+#: xrc_strings_output.h:80
+msgid "ISO-646DK"
+msgstr "ISO-646DK"
+
+#: xrc_strings_output.h:81
+msgid "ISO-8859-1"
+msgstr "ISO-8859-1"
+
+#: xrc_strings_output.h:82
+msgid "ISO-8859-2"
+msgstr "ISO-8859-2"
+
+#: xrc_strings_output.h:83
+msgid "ISO-8859-3"
+msgstr "ISO-8859-3"
+
+#: xrc_strings_output.h:84
+msgid "ISO-8859-4"
+msgstr "ISO-8859-4"
+
+#: xrc_strings_output.h:85
+msgid "ISO-8859-5"
+msgstr "ISO-8859-5"
+
+#: xrc_strings_output.h:86
+msgid "ISO-8859-6"
+msgstr "ISO-8859-6"
+
+#: xrc_strings_output.h:87
+msgid "ISO-8859-7"
+msgstr "ISO-8859-7"
+
+#: xrc_strings_output.h:88
+msgid "ISO8859-15"
+msgstr "ISO8859-15"
+
+#: xrc_strings_output.h:89
+msgid "JIS7"
+msgstr "JIS7"
+
+#: xrc_strings_output.h:90
+msgid "macintosh"
+msgstr "macintosh"
+
+#: xrc_strings_output.h:91
+msgid "SJIS"
+msgstr "SJIS"
+
+#: xrc_strings_output.h:92
+msgid "TACTIS"
+msgstr "TACTIS"
+
+#: xrc_strings_output.h:93
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: xrc_strings_output.h:94 xrc_strings_output.h:172
+msgid "Hyperlinks"
+msgstr "Hiperenllaços"
+
+#: xrc_strings_output.h:95
+msgid "Specify a default color for hyperlinks:"
+msgstr "Especifica un color per o,isió per als hiperenllaços:"
+
+#: xrc_strings_output.h:96 xrc_strings_output.h:273 xrc_strings_output.h:283
+#: xrc_strings_output.h:293 xrc_strings_output.h:311 xrc_strings_output.h:317
+#: xrc_strings_output.h:331 xrc_strings_output.h:333
+msgid "Choose color..."
+msgstr "Trieu el color personalitzat"
+
+#: xrc_strings_output.h:97
+msgid "Paragraph style"
+msgstr "Estil de paràgraf"
+
+#: xrc_strings_output.h:98
+msgid "Indent the first line of each new paragraph"
+msgstr "Retira la primera línea de cada nou paràgraf"
+
+#: xrc_strings_output.h:99 xrc_strings_output.h:216
+msgid "Tables"
+msgstr "Taules"
+
+#: xrc_strings_output.h:100
+msgid "Use enhanced table support (currently experimental)"
+msgstr "Permet l'us de taules millorades (en fase d'experimentació)"
+
+#: xrc_strings_output.h:101
+msgid "Images"
+msgstr "Imatges"
+
+#: xrc_strings_output.h:102
+msgid "Basic image handling"
+msgstr "Gestió bàsica d'imatges"
+
+#: xrc_strings_output.h:103
+msgid "Include images"
+msgstr "Mostra les imatges"
+
+#: xrc_strings_output.h:104
+msgid "Color depth:"
+msgstr "Intensitat del _color:"
+
+#: xrc_strings_output.h:110
+msgid "Show alternative text tags for images not included in output"
+msgstr ""
+"Mostra marcadors alternatius per les imatges que no s'incloguin a al sortida"
+
+#: xrc_strings_output.h:111
+msgid "Advanced image handling"
+msgstr "Gestió avançada d'imatges"
+
+#: xrc_strings_output.h:112
+msgid ""
+"To fit on handheld screen, use a thumbnail for any image that is larger than:"
+msgstr ""
+"Fes servir una miniatura per que càpiga a la pantalla de l'ordinador de mà, "
+"per qualsevol imatge més gran de:"
+
+#: xrc_strings_output.h:113 xrc_strings_output.h:119
+msgid "pixels wide by"
+msgstr "amplada en pixels"
+
+#: xrc_strings_output.h:114 xrc_strings_output.h:120
+msgid "pixels high"
+msgstr "alçada en pixels"
+
+#: xrc_strings_output.h:115
+msgid "If a thumbnail is used for an image, then:"
+msgstr "Si es fa servir un miniatura per a una imatge, llavors:"
+
+#: xrc_strings_output.h:116
+msgid "Always link the thumbnail to a second, full-size copy"
+msgstr "Enllaça sempre la miniatura a una segona còpia, de mida sencera"
+
+#: xrc_strings_output.h:117
+#, fuzzy
+msgid ""
+"Only use the thumbnail, don't include a second, larger copy in the channel's "
+"output"
+msgstr ""
+"Fes servir només la miniatura, no incloguis la versió sencera a la sortida "
+"del canal"
+
+#: xrc_strings_output.h:118
+#, fuzzy
+msgid ""
+"Link the thumbnail to a second, larger copy, but keep the larger copy less "
+"than:"
+msgstr ""
+"Només enllacis la miniatura a una segona còpia sencera, si la versió sencera "
+"no passa de:"
+
+#: xrc_strings_output.h:121
+#, fuzzy
+msgid "Maximum storage:"
+msgstr "Profunditat màxima"
+
+#: xrc_strings_output.h:122
+#, fuzzy
+msgid "Allow a converted image to exceed 60kb (recommended)"
+msgstr "Torna a formatar les imatges convertides que passen de 60kb reduïnt:"
+
+#: xrc_strings_output.h:123
+#, fuzzy
+msgid "Keep a converted image under 60kb by reducing image dimensions"
+msgstr "Torna a formatar les imatges convertides que passen de 60kb reduïnt:"
+
+#: xrc_strings_output.h:124
+#, fuzzy
+msgid "Keep a converted image under 60kb by reducing color depth"
+msgstr "Torna a formatar les imatges convertides que passen de 60kb reduïnt:"
+
+#: xrc_strings_output.h:125
+msgid "Output options"
+msgstr "Opcions del fitxer de sortida:"
+
+#: xrc_strings_output.h:126
+msgid "Compression options"
+msgstr "Estableix les opcions de compressió"
+
+#: xrc_strings_output.h:127
+msgid "To compress the output file, use"
+msgstr "Per a comprimir el fitxer de sortida, feu"
+
+#: xrc_strings_output.h:128
+msgid "DOC compression"
+msgstr "Compressió DOC"
+
+#: xrc_strings_output.h:129
+msgid "ZLIB compression (recommended)"
+msgstr "compressió ZLIB (recomanat)"
+
+#: xrc_strings_output.h:130
+msgid "Only compress images that are larger than"
+msgstr "Comprimeix només les imatges més grans de"
+
+#: xrc_strings_output.h:131
+msgid "bytes"
+msgstr "bytes"
+
+#: xrc_strings_output.h:132
+msgid "Advanced output options"
+msgstr "Opcions avançades del fitxer de sortida:"
+
+#: xrc_strings_output.h:133
+msgid ""
+"Specify the category in which to list the channel in the viewer's library:"
+msgstr ""
+"Indiqueu la categoria en la qual es llistarà el canal a la llibreria del "
+"visualitzador:"
+
+#: xrc_strings_output.h:134
+msgid "Include the original URL of each page in the output file"
+msgstr "Inclou la URL original a acda pàgina de la sortida"
+
+#: xrc_strings_output.h:135
+msgid "Specify a security 'owner ID' password needed to open the output file:"
+msgstr ""
+"Indica que cal una contrasenya de segiretat 'Identificador de l'usuari' per "
+"obrir el fitxer de sortida:"
+
+#: xrc_strings_output.h:136
+msgid "Allow the channel output file to be beamed among handhelds"
+msgstr ""
+"Permet que l'arxiu de sortida es pugui enviar a altres ordinadors de mà"
+
+#: xrc_strings_output.h:137
+msgid ""
+"Signal backup bit (marks the file as one to backup to the desktop computer)"
+msgstr ""
+"señala el bit de còpia de seguretat (marca el fitxer per tal que es faci un "
+"còpia a l'escriptori)"
+
+#: xrc_strings_output.h:138
+msgid ""
+"The channel can be started directly from an icon in handheld's main launcher"
+msgstr ""
+"El canal es pot iniciar directament des d'una icona de l'explorador de "
+"l'ordinador de mà"
+
+#: xrc_strings_output.h:139
+msgid "Replace default large icon with a custom icon:"
+msgstr "Substitueix l'icona gran per omissió amb un altre:"
+
+#: xrc_strings_output.h:141
+msgid "Replace default small icon with a custom icon:"
+msgstr "Substitueix l'icona petita per omissió amb un altre:"
+
+#: xrc_strings_output.h:143
+msgid "Destination"
+msgstr "Destí"
+
+#: xrc_strings_output.h:144
+msgid "Scheduling"
+msgstr "Planificador de tasques"
+
+#: xrc_strings_output.h:145
+msgid "Enable scheduling"
+msgstr "Habilita la planificació"
+
+#: xrc_strings_output.h:146
+msgid "Mark this channel as due for updates at a certain interval"
+msgstr "Marca aquest canal per que s''actualitzi a intervals"
+
+#: xrc_strings_output.h:147
+msgid "Update interval"
+msgstr "Actualitza l'interval"
+
+#: xrc_strings_output.h:148
+msgid "This channel is due for an update every:"
+msgstr "Aquest canal s'ha d'actualitzar cada:"
+
+#: xrc_strings_output.h:149
+msgid "hours"
+msgstr "hores"
+
+#: xrc_strings_output.h:150
+msgid "days"
+msgstr "dies"
+
+#: xrc_strings_output.h:151
+msgid "weeks"
+msgstr "setmanes"
+
+#: xrc_strings_output.h:152
+msgid "months"
+msgstr "mesos"
+
+#: xrc_strings_output.h:153
+msgid "years"
+msgstr "anys"
+
+#: xrc_strings_output.h:154
+msgid "Starting on:"
+msgstr "Comença amb :"
+
+#: xrc_strings_output.h:155
+msgid "Now"
+msgstr "Ara"
+
+#: xrc_strings_output.h:159
+msgid "Channel Update Progress"
+msgstr "Estat de l'actualització del canal"
+
+#: xrc_strings_output.h:160
+msgid "Channels updated"
+msgstr "S'han actualitzat els canals"
+
+#: xrc_strings_output.h:161
+msgid "Progress for this channel"
+msgstr "Progrés per aquest canal"
+
+#: xrc_strings_output.h:162
+msgid "Stop"
+msgstr "Atura"
+
+#: xrc_strings_output.h:164
+msgid "Export details..."
+msgstr "Exporta els detalls"
+
+#: xrc_strings_output.h:165 xrc_strings_output.h:571 xrc_strings_output.h:572
+msgid "HTML editor"
+msgstr "Editor HTML"
+
+#: xrc_strings_output.h:166
+msgid "Edit"
+msgstr "Edita"
+
+#: xrc_strings_output.h:167
+msgid "Preview"
+msgstr "Vista prèvia"
+
+#: xrc_strings_output.h:171
+msgid "Insert a hyperlink..."
+msgstr "Insereix un hiperenllaç"
+
+#: xrc_strings_output.h:173
+msgid "Insert hyperlink <a href= ...></a>"
+msgstr "Insereix un hiperenllaç <a href= ...></a>"
+
+#: xrc_strings_output.h:174
+msgid "Insert email link <a href=mailto: ...></a>"
+msgstr "Insereix un enllaç de correu <a href=mailto: ...></a>"
+
+#: xrc_strings_output.h:175
+msgid "Insert named bookmark <a name= ...></a>"
+msgstr "Insereix una adreça a preferits <a name= ...></a>"
+
+#: xrc_strings_output.h:176
+msgid "Insert popup alert <a href=javascript:alert( ...)></a>"
+msgstr "Insereix un avís emergent <a href=javascript:alert( ...)></a>"
+
+#: xrc_strings_output.h:177
+msgid "Common"
+msgstr "Comú"
+
+#: xrc_strings_output.h:178
+msgid "Insert default-aligned paragraph <p></p>"
+msgstr "Insereix un paràgraf amb l'alineació per omisió <p></p>"
+
+#: xrc_strings_output.h:179
+msgid "Insert left-aligned paragraph <p align=left></p>"
+msgstr "Insereix un paràgraf alineat al marge esquerra <p align=left></p>"
+
+#: xrc_strings_output.h:180
+msgid "Insert center-aligned paragraph <p align=center></p>"
+msgstr "Insereix un paràgraf alineat al centre <p align=center></p>"
+
+#: xrc_strings_output.h:181
+msgid "Insert right-aligned paragraph <p align=right></p>"
+msgstr "Insereix un paràgraf al marge dret <p align=right></p>"
+
+#: xrc_strings_output.h:182
+msgid "Insert full-aligned paragraph <p align=justify></p>"
+msgstr "Insereix un paràgraf totalment alineat <p align=justify></p>"
+
+#: xrc_strings_output.h:183
+msgid "Insert line break <br>"
+msgstr "Inserta salt de línea <br>"
+
+#: xrc_strings_output.h:184
+msgid "Insert image <img src= ...>"
+msgstr "Insereix imatge <img src= ...>"
+
+#: xrc_strings_output.h:185
+msgid "Insert horizontal rule <hr ...>"
+msgstr "Insereix línia horitzontal <hr ...>"
+
+#: xrc_strings_output.h:186
+msgid "Insert non-breaking space"
+msgstr "Insereix un espai no separable"
+
+#: xrc_strings_output.h:187
+msgid "Layout"
+msgstr "Format"
+
+#: xrc_strings_output.h:188
+msgid "Insert a span <span ...></span>"
+msgstr "Insereix unaa separació <span ...></span>"
+
+#: xrc_strings_output.h:189
+msgid "Insert a left-aligned content block <div align=left></div>"
+msgstr ""
+"Insereix un bloc de contingut alineat a l'esquerra, <div align=left></div>"
+
+#: xrc_strings_output.h:190
+msgid "Insert a center-aligned content block <div align=center></div>"
+msgstr "Insereix un bloc de contingut centrat, <div align=center></div>"
+
+#: xrc_strings_output.h:191
+msgid "Insert a right-aligned block <div align=right></div>"
+msgstr "Insereix un bloc alineat a la dreta <div align=right></div>"
+
+#: xrc_strings_output.h:192
+msgid "Insert a center-aligned block using center <center></center>"
+msgstr "Insereix un bloc alineat al centre amb centre<center></center>"
+
+#: xrc_strings_output.h:193
+msgid "Insert a blockquote <blockquote></blockquote>"
+msgstr "Insereix un bloc de cites <blockquote></blockquote>"
+
+#: xrc_strings_output.h:194
+msgid "Insert a quotation <q></q>"
+msgstr "Insereix una cita <q></q>"
+
+#: xrc_strings_output.h:195
+msgid "Insert a citation <cite></cite>"
+msgstr "Insereix una cita <cite></cite>"
+
+#: xrc_strings_output.h:196
+msgid "Fonts"
+msgstr "Tipus de lletra"
+
+#: xrc_strings_output.h:197
+msgid "Insert a font change <font ...></font>"
+msgstr "Insereix un canvi del color de la lletra <font...></font>"
+
+#: xrc_strings_output.h:198
+msgid "Insert bolded text <b></b>"
+msgstr "Insereix text en negreta <i></i>"
+
+#: xrc_strings_output.h:199
+msgid "Insert strongly bolded text <strong></strong>"
+msgstr "Insereix un text en doble negreta<strong></strong>"
+
+#: xrc_strings_output.h:200
+msgid "Insert italic text <i></i>"
+msgstr "Insereix text en cursiva <i></i>"
+
+#: xrc_strings_output.h:201
+msgid "Insert emphasized text <em></em>"
+msgstr "Insereix un text destacat <em></em>"
+
+#: xrc_strings_output.h:202
+msgid "Insert underline text <u></u>"
+msgstr "Insereix text subrratllat <u></u>"
+
+#: xrc_strings_output.h:203
+msgid "Insert strikethrough text <strike></strike>"
+msgstr "Insereix un text tatxat <strike></strike>"
+
+#: xrc_strings_output.h:204
+msgid "Insert typewriter text <tt></tt>"
+msgstr "Insereix un text typewriter <tt></tt>"
+
+#: xrc_strings_output.h:205
+msgid "Insert superscript text <sup></sup>"
+msgstr "Insereix un superíndex<sup></sup>"
+
+#: xrc_strings_output.h:206
+msgid "Insert subscript text <sub></sub>"
+msgstr "Insereix un subíndex <sub></sub>"
+
+#: xrc_strings_output.h:207
+msgid "Insert preformatted text <pre></pre>"
+msgstr "Insereix un text amb format <pre></pre>"
+
+#: xrc_strings_output.h:208
+msgid "Insert coded text <code></code>"
+msgstr "Insereix un text en codi <code></code>"
+
+#: xrc_strings_output.h:209
+msgid "Insert heading 1 text <h1></h1>"
+msgstr "Insereix una capçalera 1 <h1> </h1>"
+
+#: xrc_strings_output.h:210
+msgid "Insert heading 2 text <h2></h2>"
+msgstr "Insereix una capçalera 2 <h2> </h2>"
+
+#: xrc_strings_output.h:211
+msgid "Insert heading 3 text <h3></h3>"
+msgstr "Insereix una capçalera  3 <h3> </h3>"
+
+#: xrc_strings_output.h:212
+msgid "Insert heading 4 text <h4></h4>"
+msgstr "Insereix una capçalera 4 <h4> </h4>"
+
+#: xrc_strings_output.h:213
+msgid "Insert heading 5 text <h5></h5>"
+msgstr "Insereix una capçalera 5 <h5> </h5>"
+
+#: xrc_strings_output.h:214
+msgid "Insert heading 6 text <h6></h6>"
+msgstr "Insereix una capçalera 6 <h6> </h6>"
+
+#: xrc_strings_output.h:215
+msgid "Insert small text <small></small>"
+msgstr "Insereix un text petit <small></small>"
+
+#: xrc_strings_output.h:217
+msgid "Insert a table <table></table>"
+msgstr "Insereix una taula <table></table>"
+
+#: xrc_strings_output.h:218
+msgid "Insert a table row <tr></tr>"
+msgstr "Insereix una fila a la taula <tr> </tr>"
+
+#: xrc_strings_output.h:219
+msgid "Insert a table header cell <th ...></th>"
+msgstr "Insereix una cel·la de capçalera de taula  <th ...></th>"
+
+#: xrc_strings_output.h:220
+msgid "Insert a table cell <td ...></td>"
+msgstr "Insereix una cel·la de taula <td ...></td>"
+
+#: xrc_strings_output.h:221
+msgid "Lists"
+msgstr "Llistes"
+
+#: xrc_strings_output.h:222
+msgid "Insert an ordered list <ol ...></ol>"
+msgstr "Insereix una llista ordenada <ol ...></ol>"
+
+#: xrc_strings_output.h:223
+msgid "Insert an unordered list <ul ...></ul>"
+msgstr "Insereix una llista desordenad <ul ...></ul>"
+
+#: xrc_strings_output.h:224
+msgid "Insert a list element <li></li>"
+msgstr "Insereix un element de llista <li></li>"
+
+#: xrc_strings_output.h:225
+msgid "Insert a menu <menu ...></menu>"
+msgstr "Insereix un menú <menu ...></menu>"
+
+#: xrc_strings_output.h:226
+msgid "Insert a definition list <dl></dl>"
+msgstr "Insereix una defnició de llista <dl></dl>"
+
+#: xrc_strings_output.h:227
+msgid "Insert a definition term <dt></dt>"
+msgstr "Insereix un terme de defnició <dt></dt>"
+
+#: xrc_strings_output.h:228
+msgid "Insert a definition description <dd></dd>"
+msgstr "Insereix una descripció de la defnició <dd></dd>"
+
+#: xrc_strings_output.h:229
+msgid "Other"
+msgstr "Altres"
+
+#: xrc_strings_output.h:230
+msgid "Insert html tag <html></html>"
+msgstr "Insereix un marcador <html></html>"
+
+#: xrc_strings_output.h:231
+msgid ""
+"Insert handheldfriendly meta tag (informs handheld browsers that page is "
+"light) <meta...></meta>"
+msgstr ""
+"Insereix una meta etiquetat d'ordinador de mà (indica al nvegador que "
+"aquesta pàgina és per un dispositiu de capacitat limitada) <meta...></meta>"
+
+#: xrc_strings_output.h:232
+msgid "Insert body tag (also sets document's text colors) <body...></body>"
+msgstr ""
+"Insereix una etiqueta de cos del document (també defineix els colors del "
+"text) <body...></body>"
+
+#: xrc_strings_output.h:233
+msgid "Insert hidden comment <!--- --->"
+msgstr "Escriure comentari amagat <!--- --->"
+
+#: xrc_strings_output.h:234
+msgid "Insert Hyperlink"
+msgstr "Insereix un hiperenllaç"
+
+#: xrc_strings_output.h:235
+msgid "Required hyperlink properties"
+msgstr "Calen les propietats de l'hiperenllaç"
+
+#: xrc_strings_output.h:236 xrc_strings_output.h:357
+msgid "Link description:"
+msgstr "Descripció de l'enllaç"
+
+#: xrc_strings_output.h:237
+msgid "Website URL:"
+msgstr "L'adreça d'una pàgina (URL):"
+
+#: xrc_strings_output.h:240
+msgid "File name:"
+msgstr "Nom del fitxer:"
+
+#: xrc_strings_output.h:243
+msgid "Optional hyperlink settings"
+msgstr "Paràmetres opcionals de l'enllaç"
+
+#: xrc_strings_output.h:244
+msgid ""
+"Use 'stay on host' filter: ignore links pointing to an external server that "
+"is different from the starting page's server"
+msgstr ""
+"Fes servir el filtres 'No surtis de l'hostatge': ignora els enllaços a un "
+"servidor extern diferent del de la pàgina inicial"
+
+#: xrc_strings_output.h:245
+msgid ""
+"Use 'stay on domain' filter: ignore links pointing to a server on a "
+"different domain from the starting page's server"
+msgstr ""
+"Fes servir el filtre 'No surtis del domini': ignora els enllaços que apunten "
+"a un servirdor de domini diferents del de la pàgina inicial"
+
+#: xrc_strings_output.h:246
+msgid "Use 'maximum depth' filter: only retreive pages up to"
+msgstr ""
+"Fes servir el filtre 'profunditat màxima': recupera només les pàgines fins a"
+
+#: xrc_strings_output.h:247
+msgid "links down from the starting page"
+msgstr "enllaços sota la pàgina inicial i les que hi enllaçen."
+
+#: xrc_strings_output.h:248
+msgid ""
+"Use 'url pattern' filter: only follow URLs having this regular expression:"
+msgstr ""
+"Fes servir un filtre de 'patró url': segueix només els enllaços que "
+"compleixen aquesta expresió habitual:"
+
+#: xrc_strings_output.h:249
+msgid "Specify image inclusion / color depth:"
+msgstr "Indiqueu la profunditat de la imatge o la seva inclusió:"
+
+#: xrc_strings_output.h:250
+msgid "No images"
+msgstr "No hi han imatges disponibles"
+
+#: xrc_strings_output.h:256
+msgid "Specify image maximum width:"
+msgstr "Indiqueu la'mplada màxima permesa de la imatge"
+
+#: xrc_strings_output.h:257
+msgid "Specify image maximum height:"
+msgstr "Indiqueu l'alçada màxima de la imatge:"
+
+#: xrc_strings_output.h:261
+msgid "Insert Horizontal Rule"
+msgstr "Insereix Línia Horitzontal"
+
+#: xrc_strings_output.h:262
+msgid "Width:"
+msgstr "Amplada:"
+
+#: xrc_strings_output.h:263
+msgid "percent"
+msgstr "per cent"
+
+#: xrc_strings_output.h:264 xrc_strings_output.h:266
+msgid "pixels"
+msgstr "píxels"
+
+#: xrc_strings_output.h:265
+msgid "Height:"
+msgstr "Alçada"
+
+#: xrc_strings_output.h:267 xrc_strings_output.h:298
+msgid "Alignment:"
+msgstr "Alineació"
+
+#: xrc_strings_output.h:268 xrc_strings_output.h:299
+msgid "Default"
+msgstr "Per oimisió"
+
+#: xrc_strings_output.h:269 xrc_strings_output.h:300 xrc_strings_output.h:323
+msgid "Left"
+msgstr "Esquerra"
+
+#: xrc_strings_output.h:270 xrc_strings_output.h:302 xrc_strings_output.h:324
+msgid "Right"
+msgstr "Dreta"
+
+#: xrc_strings_output.h:271 xrc_strings_output.h:301 xrc_strings_output.h:325
+msgid "Center"
+msgstr "Centrada"
+
+#: xrc_strings_output.h:272 xrc_strings_output.h:282
+msgid "Color:"
+msgstr "Color:"
+
+#: xrc_strings_output.h:277
+msgid "Insert Image"
+msgstr "Insereix una imatge"
+
+#: xrc_strings_output.h:278
+msgid "Image source:"
+msgstr "Origen de la imatge"
+
+#: xrc_strings_output.h:280
+msgid "Image is relative to page location"
+msgstr "L'URL és relatiu a la ubicació de la pàgina"
+
+#: xrc_strings_output.h:281
+msgid "Alternative text:"
+msgstr "Text alternatiu:"
+
+#: xrc_strings_output.h:284
+msgid "Hyperlink:"
+msgstr "Hiperenllaç"
+
+#: xrc_strings_output.h:288
+msgid "Insert Table"
+msgstr "Insereix una taula"
+
+#: xrc_strings_output.h:289
+msgid "Rows:"
+msgstr "Files:"
+
+#: xrc_strings_output.h:290
+msgid "Columns:"
+msgstr "Columnes:"
+
+#: xrc_strings_output.h:291
+msgid "Border:"
+msgstr "Contorn:"
+
+#: xrc_strings_output.h:292
+msgid "Border color:"
+msgstr "Color de la vora"
+
+#: xrc_strings_output.h:297
+msgid "Insert Table Cell"
+msgstr "Insereix cel·la de taula"
+
+#: xrc_strings_output.h:303
+msgid "Justified"
+msgstr "Justificat"
+
+#: xrc_strings_output.h:304
+msgid "Column span:"
+msgstr "Abast de la columna:"
+
+#: xrc_strings_output.h:305
+msgid "Row span:"
+msgstr "Abast de la fila:"
+
+#: xrc_strings_output.h:309 xrc_strings_output.h:315
+msgid "Insert Font"
+msgstr "Insereix Tipus de lletra"
+
+#: xrc_strings_output.h:310 xrc_strings_output.h:316
+msgid "Font color:"
+msgstr "Color de la lletra"
+
+#: xrc_strings_output.h:321
+msgid "Insert Span"
+msgstr "Insereix abast"
+
+#: xrc_strings_output.h:322
+msgid "Align:"
+msgstr "&Alineació"
+
+#: xrc_strings_output.h:329
+msgid "Insert Body"
+msgstr "Insereix Cos del text"
+
+#: xrc_strings_output.h:330
+msgid "Text color:"
+msgstr "Color del text:"
+
+#: xrc_strings_output.h:332
+msgid "Link color:"
+msgstr "Color de l'enllaç"
+
+#: xrc_strings_output.h:337
+msgid "Insert Bookmark"
+msgstr "Insereix una adreça d'interès"
+
+#: xrc_strings_output.h:338 xrc_strings_output.h:344
+msgid "Description:"
+msgstr "Descripció:"
+
+#: xrc_strings_output.h:339
+msgid "Anchor name:"
+msgstr "Nom de l'objectiu:"
+
+#: xrc_strings_output.h:343
+msgid "Insert Email"
+msgstr "Insereix una adreça electrònica"
+
+#: xrc_strings_output.h:345
+msgid "Email address:"
+msgstr "Adreça electrònica"
+
+#: xrc_strings_output.h:346
+msgid "plucker-dev@rubberchicken.org"
+msgstr "plucker-dev@rubberchicken.org"
+
+#: xrc_strings_output.h:350
+msgid "Insert Symbol / Character"
+msgstr "Insereix símbol o caràcter"
+
+#: xrc_strings_output.h:351
+msgid "Select a symbol and press OK:"
+msgstr "Trieu un símbol i premeu D'acord:"
+
+#: xrc_strings_output.h:352
+msgid "Symbol:"
+msgstr "Símbol"
+
+#: xrc_strings_output.h:356
+msgid "Insert Javascrip Popup"
+msgstr "Insereix una finestre emergent en Javasscrip"
+
+#: xrc_strings_output.h:358
+msgid "Popup message:"
+msgstr "Missatge emergent:"
+
+#: xrc_strings_output.h:362
+msgid "Insert Unordered List"
+msgstr "Insereix una Llista Ordenada"
+
+#: xrc_strings_output.h:363
+msgid "Bullet type:"
+msgstr "Tipus pic:"
+
+#: xrc_strings_output.h:364
+msgid "Disc (default)"
+msgstr "Disc (per omisió)"
+
+#: xrc_strings_output.h:365
+msgid "Square"
+msgstr "Quadrat"
+
+#: xrc_strings_output.h:366
+msgid "Circle"
+msgstr "Cercle"
+
+#: xrc_strings_output.h:367 xrc_strings_output.h:380
+msgid "Compact:"
+msgstr "Mínima"
+
+#: xrc_strings_output.h:371
+msgid "Insert Ordered List"
+msgstr "Defineix l'estil de Llista ordenada Llista ordenada"
+
+#: xrc_strings_output.h:372
+msgid "Enumeration type:"
+msgstr "Tipus enumeració:"
+
+#: xrc_strings_output.h:373
+msgid "1   arabic (default)"
+msgstr "1   aràbic (per omisió)"
+
+#: xrc_strings_output.h:374
+msgid "A   uppercase alpha"
+msgstr "A   majúscules alfa"
+
+#: xrc_strings_output.h:375
+msgid "a   lowercase alpha"
+msgstr "a   minúscules alfa"
+
+#: xrc_strings_output.h:376
+msgid "I   uppercase roman"
+msgstr "Majúscules romanes"
+
+#: xrc_strings_output.h:377
+msgid "i   lowecase roman"
+msgstr "i   minúscules roman"
+
+#: xrc_strings_output.h:378
+msgid "Specifiy start number:"
+msgstr "Nombre de caràcters per al text d'inici."
+
+#: xrc_strings_output.h:379
+msgid "Starting at:"
+msgstr "Comença a:"
+
+#: xrc_strings_output.h:384
+msgid "Inclusion/Exclusion Lists"
+msgstr "Llistes d'inclusió i exclusiió"
+
+#: xrc_strings_output.h:385
+msgid "Website URLs"
+msgstr "URLs d'Internet"
+
+#: xrc_strings_output.h:386 xrc_strings_output.h:390
+msgid "Add.."
+msgstr "Afegeix..."
+
+#: xrc_strings_output.h:387 xrc_strings_output.h:391
+msgid "Edit..."
+msgstr "Edita..."
+
+#: xrc_strings_output.h:388 xrc_strings_output.h:392
+msgid "Delete"
+msgstr "Suprimeix"
+
+#: xrc_strings_output.h:389
+msgid "File extensions"
+msgstr "Extensions de noms de fitxer"
+
+#: xrc_strings_output.h:396
+msgid "Edit inclusion/exclusion list item"
+msgstr "Edita l'element de la llista d'inclusió i exclusió"
+
+#: xrc_strings_output.h:397
+msgid "Item:"
+msgstr "Ítem"
+
+#: xrc_strings_output.h:398
+msgid "Action:"
+msgstr "Acció:"
+
+#: xrc_strings_output.h:399
+msgid "Exclude this item"
+msgstr "Suprimeix aquest ítem"
+
+#: xrc_strings_output.h:400
+msgid "Include this item"
+msgstr "Inclou aquest ítem"
+
+#: xrc_strings_output.h:401
+msgid "Priority:"
+msgstr "Prioritat:"
+
+#: xrc_strings_output.h:405
+msgid "&File"
+msgstr "&Fitxer"
+
+#: xrc_strings_output.h:406
+msgid "&Add a new channel..."
+msgstr "Afegeix un nou canal..."
+
+#: xrc_strings_output.h:408
+msgid "Add a new channel using &wizard..."
+msgstr "Afefeix un nou canal amb l'&auxiliar..."
+
+#: xrc_strings_output.h:409 xrc_strings_output.h:451 xrc_strings_output.h:467
+msgid "Add a new channel using the Add New Channel Wizard"
+msgstr "Afefeix un nou canal amb l'Auxiliar per Afegir Canals"
+
+#: xrc_strings_output.h:410
+msgid "&Configure selected channel..."
+msgstr "Configura el canal seleccionat..."
+
+#: xrc_strings_output.h:411 xrc_strings_output.h:453 xrc_strings_output.h:469
+msgid "Configure channel settings for the selected channel"
+msgstr "Paràmetres per a l'usuari i grup seleccionats"
+
+#: xrc_strings_output.h:412
+msgid "&Delete selected channels"
+msgstr "Suprimeix el canal seleccionat"
+
+#: xrc_strings_output.h:413 xrc_strings_output.h:455 xrc_strings_output.h:471
+msgid "Delete the selected channels"
+msgstr "Suprimeix els canals seleccionats"
+
+#: xrc_strings_output.h:414
+msgid "E&xit"
+msgstr "&Surt"
+
+#: xrc_strings_output.h:415
+msgid "Exit the application"
+msgstr "Surt de l'aplicació"
+
+#: xrc_strings_output.h:416
+msgid "&Import/Export"
+msgstr "Importa/Exporta"
+
+#: xrc_strings_output.h:417
+msgid "Paste &URL as new channel..."
+msgstr "Enganxa l'&adreça com a un nou canal"
+
+#: xrc_strings_output.h:418
+msgid "Paste a URL from the clipboard as a new channel"
+msgstr "Enganxa un enllaç del porta-retalls com un  nou canal"
+
+#: xrc_strings_output.h:419
+msgid "Paste files as &separate new channels..."
+msgstr "Enganxa els fitxers com a nous canals $separats..."
+
+#: xrc_strings_output.h:420
+msgid "Paste files from the clipboard using a new channel for each file"
+msgstr ""
+"Enganxa els fitxers des del porta-retalls fent servir un nou canal per a "
+"cada fitxer"
+
+#: xrc_strings_output.h:421
+msgid "&Update"
+msgstr "&Actualitza"
+
+#: xrc_strings_output.h:422
+msgid "Update &selected channels"
+msgstr "Actualitza els canals &seleccionats"
+
+#: xrc_strings_output.h:423 xrc_strings_output.h:457 xrc_strings_output.h:473
+msgid "Update the selected channels"
+msgstr "Suprimeix el canal seleccionat"
+
+#: xrc_strings_output.h:424
+msgid "Update all &due channels"
+msgstr "Actualitza tots els canals &vençuts"
+
+#: xrc_strings_output.h:425 xrc_strings_output.h:459 xrc_strings_output.h:475
+msgid "Update all channels that are currently due"
+msgstr "Actualitza tots els canals estan vençuts"
+
+#: xrc_strings_output.h:426
+msgid "Update &all channels"
+msgstr "Actualitza &tots els canals"
+
+#: xrc_strings_output.h:428
+msgid "&Options"
+msgstr "&Opcions"
+
+#: xrc_strings_output.h:429
+msgid "&Preferences..."
+msgstr "&Preferències..."
+
+#: xrc_strings_output.h:430 xrc_strings_output.h:463 xrc_strings_output.h:479
+msgid "Set interface, autoupdate, proxy, spidering, and other behaviours"
+msgstr ""
+"Definir la intefície, actualització automàtica, servidor intermediari, "
+"rasterig, i altres paràmetres"
+
+#: xrc_strings_output.h:431
+msgid "Set &default configuration for new channels..."
+msgstr "Defineix la comfiguració per &omisió perals canals nous..."
+
+#: xrc_strings_output.h:432
+msgid "Change the default values used in newly created channels"
+msgstr "Canvia els valors per omisió als canals creats de nou"
+
+#: xrc_strings_output.h:433
+msgid "&Install handheld viewer software..."
+msgstr "&Instal·la el visualitzador de l'ordinador de mà:"
+
+#: xrc_strings_output.h:434
+msgid "Reinstall the viewer software and manual to the handheld"
+msgstr "Torna a instal·lar el programari i el manual a l'ordinador de mà"
+
+#: xrc_strings_output.h:435
+msgid "Rerun &setup wizard..."
+msgstr "Torna a executar l'&auxiliar de configuració..."
+
+#: xrc_strings_output.h:436
+msgid "Runs the first-start setup wizard to set up the proxy, etc"
+msgstr ""
+"Excuta l'auxiliar de la primera configuració per configurar el servidor "
+"intermediari, etc."
+
+#: xrc_strings_output.h:437
+msgid "&Help"
+msgstr "&Ajuda"
+
+#: xrc_strings_output.h:438
+msgid "&Help contents..."
+msgstr "Contingut de l'ajuda"
+
+#: xrc_strings_output.h:439
+msgid "Display contents of the help"
+msgstr "Mostra el contingut de l'ajuda"
+
+#: xrc_strings_output.h:440
+msgid "Help on using &this dialog..."
+msgstr "Ajuda per $aquest diàleg..."
+
+#: xrc_strings_output.h:441
+msgid "Display help on how to use this main dialog"
+msgstr "Mostra l'ajuda per aquest diàleg principal"
+
+#: xrc_strings_output.h:442
+msgid "&Search help..."
+msgstr "Ajuda de la cerca"
+
+#: xrc_strings_output.h:443
+msgid "Search the help for a keyword"
+msgstr "Cerca ajuda per la paraula clau"
+
+#: xrc_strings_output.h:444
+msgid "&Tip of the day"
+msgstr "&Consell del dia"
+
+#: xrc_strings_output.h:445
+msgid "Show a tip of the day"
+msgstr "Mostra un consell del dia"
+
+#: xrc_strings_output.h:447
+msgid "Display version number and copyright notice"
+msgstr "Mostra informació del programa, versió i drets d'autor"
+
+#: xrc_strings_output.h:462 xrc_strings_output.h:478
+msgid "Preferences..."
+msgstr "Preferències..."
+
+#: xrc_strings_output.h:480
+msgid "Preferences"
+msgstr "Preferències"
+
+#: xrc_strings_output.h:481
+msgid "Interface"
+msgstr "Interfície:"
+
+#: xrc_strings_output.h:482
+msgid "Internationalization"
+msgstr "idiomes"
+
+#: xrc_strings_output.h:483
+msgid "Translate interface into the local language"
+msgstr "Tradueix la intefície a l'idioma local"
+
+#: xrc_strings_output.h:484
+msgid "Autodetect language (recommended)"
+msgstr "detectar automàticament l'idioma (recomanat)"
+
+#: xrc_strings_output.h:485
+msgid "Force a specific language:"
+msgstr "triar un idioma"
+
+#: xrc_strings_output.h:486
+msgid "Choose language..."
+msgstr "Si us plau, trieu el llenguatge"
+
+#: xrc_strings_output.h:487
+msgid "Look and feel"
+msgstr "Aspecte i sensació"
+
+#: xrc_strings_output.h:488
+msgid "Show toolbar:"
+msgstr "Mostra la barra d'eines"
+
+#: xrc_strings_output.h:489
+msgid "Default style"
+msgstr "Estil de marc predeterminat:"
+
+#: xrc_strings_output.h:490
+msgid "Default high-colour style"
+msgstr "Stil de molts colors per omisió"
+
+#: xrc_strings_output.h:491
+msgid "Show statusbar"
+msgstr "Mostra la barra d'estat"
+
+#: xrc_strings_output.h:492
+msgid "Dialog placement:"
+msgstr "Emplaçament de la finestra"
+
+#: xrc_strings_output.h:493
+msgid "Center on screen"
+msgstr "Centra dins de la pàgina"
+
+#: xrc_strings_output.h:494
+msgid "Center on parent dialog"
+msgstr "Centra a la finestra superior"
+
+#: xrc_strings_output.h:495
+msgid "My previous location"
+msgstr "Va a la meva ubicació anterior"
+
+#: xrc_strings_output.h:496
+msgid "Startup"
+msgstr "Inici"
+
+#: xrc_strings_output.h:497
+msgid "Show daily tips on startup:"
+msgstr "Mostra els consells al començar"
+
+#: xrc_strings_output.h:498
+msgid "Show splash screen on startup"
+msgstr "Mostra la pantalla de presentació a l'entrar"
+
+#: xrc_strings_output.h:499
+msgid "Autoupdate"
+msgstr "Actualitza automàticament"
+
+#: xrc_strings_output.h:500
+msgid "Channel autoupdate mode"
+msgstr "Mode d'actualització automàtica dels canals"
+
+#: xrc_strings_output.h:501
+msgid ""
+"Never autoupdate. Only update when I click one of the 'Update Channels' "
+"buttons"
+msgstr ""
+"No actualitzis mai automàticament. Només actualitzis quan cliqui un botó "
+"'Actualitza Canals'"
+
+#: xrc_strings_output.h:502
+msgid "Autoupdate any channel as soon as it becomes due"
+msgstr "Actualitza un canal automàticament quan venci"
+
+#: xrc_strings_output.h:503
+msgid "Off-peak mode: defer autoupdates until the current time is between:"
+msgstr ""
+"Mode sense puntes: no actualitzis automàticament fins a que l'hora actual "
+"sigui:"
+
+#: xrc_strings_output.h:504 xrc_strings_output.h:529
+msgid "0000 / 12:00 AM"
+msgstr "0000 / 12:00 AM"
+
+#: xrc_strings_output.h:505 xrc_strings_output.h:530
+msgid "0100 / 1:00 AM"
+msgstr "0100 / 1:00 AM"
+
+#: xrc_strings_output.h:506 xrc_strings_output.h:531
+msgid "0200 / 2:00 AM"
+msgstr "0200 / 2:00 AM"
+
+#: xrc_strings_output.h:507 xrc_strings_output.h:532
+msgid "0300 / 3:00 AM"
+msgstr "0300 / 3:00 AM"
+
+#: xrc_strings_output.h:508 xrc_strings_output.h:533
+msgid "0400 / 4:00 AM"
+msgstr "0400 / 4:00 AM"
+
+#: xrc_strings_output.h:509 xrc_strings_output.h:534
+msgid "0500 / 5:00 AM"
+msgstr "0500 / 5:00 AM"
+
+#: xrc_strings_output.h:510 xrc_strings_output.h:535
+msgid "0600 / 6:00 AM"
+msgstr "0600 / 6:00 AM"
+
+#: xrc_strings_output.h:511 xrc_strings_output.h:536
+msgid "0700 / 7:00 AM"
+msgstr "0700 / 7:00 AM"
+
+#: xrc_strings_output.h:512 xrc_strings_output.h:537
+msgid "0800 / 8:00 AM"
+msgstr "0800 / 8:00 AM"
+
+#: xrc_strings_output.h:513 xrc_strings_output.h:538
+msgid "0900 / 9:00 AM"
+msgstr "0900 / 9:00 AM"
+
+#: xrc_strings_output.h:514 xrc_strings_output.h:539
+msgid "1000 / 10:00 AM"
+msgstr "1000 / 10:00 AM"
+
+#: xrc_strings_output.h:515 xrc_strings_output.h:540
+msgid "1100 / 11:00 AM"
+msgstr "1100 / 11:00 AM"
+
+#: xrc_strings_output.h:516 xrc_strings_output.h:541
+msgid "1200 / 12:00 PM"
+msgstr "1200 / 12:00 PM"
+
+#: xrc_strings_output.h:517 xrc_strings_output.h:542
+msgid "1300 / 1:00 PM"
+msgstr "1300 / 1:00 PM"
+
+#: xrc_strings_output.h:518 xrc_strings_output.h:543
+msgid "1400 / 2:00 PM"
+msgstr "1400 / 2:00 PM"
+
+#: xrc_strings_output.h:519 xrc_strings_output.h:544
+msgid "1500 / 3:00 PM"
+msgstr "1500 / 3:00 PM"
+
+#: xrc_strings_output.h:520 xrc_strings_output.h:545
+msgid "1600 / 4:00 PM"
+msgstr "1600 / 4:00 PM"
+
+#: xrc_strings_output.h:521 xrc_strings_output.h:546
+msgid "1700 / 5:00 PM"
+msgstr "1700 / 5:00 PM"
+
+#: xrc_strings_output.h:522 xrc_strings_output.h:547
+msgid "1800 / 6:00 PM"
+msgstr "1800 / 6:00 PM"
+
+#: xrc_strings_output.h:523 xrc_strings_output.h:548
+msgid "1900 / 7:00 PM"
+msgstr "1900 / 7:00 PM"
+
+#: xrc_strings_output.h:524 xrc_strings_output.h:549
+msgid "2000 / 8:00 PM"
+msgstr "2000 / 8:00 PM"
+
+#: xrc_strings_output.h:525 xrc_strings_output.h:550
+msgid "2100 / 9:00 PM"
+msgstr "2100 / 9:00 PM"
+
+#: xrc_strings_output.h:526 xrc_strings_output.h:551
+msgid "2200 / 10:00 PM"
+msgstr "2200 / 10:00 PM"
+
+#: xrc_strings_output.h:527 xrc_strings_output.h:552
+msgid "2300 / 11:00 PM"
+msgstr "2300 / 11:00 PM"
+
+#: xrc_strings_output.h:528
+msgid "and"
+msgstr "i"
+
+#: xrc_strings_output.h:553
+msgid "Autoupdate any due channels each time I press my handheld's sync button"
+msgstr ""
+"Actualitza automàticament els canals vençuts cada cop que premi el botó de "
+"sincronització"
+
+#: xrc_strings_output.h:554
+msgid "Advanced"
+msgstr "Avançades"
+
+#: xrc_strings_output.h:555
+msgid "Precision: compare current time to channels' due time every "
+msgstr ""
+"Precisió: comprara el temps actual amb el de venciment dels canals cada:"
+
+#: xrc_strings_output.h:556
+msgid "minutes"
+msgstr "minuts"
+
+#: xrc_strings_output.h:558
+msgid "Spidering status display"
+msgstr "Mostra l'estat de rastreig"
+
+#: xrc_strings_output.h:559
+msgid "Show spider progress with:"
+msgstr "Mostra el progrés de rastreig anb:"
+
+#: xrc_strings_output.h:560
+msgid "A console window"
+msgstr "Una finestra de cónsola"
+
+#: xrc_strings_output.h:561
+msgid "A progress dialog"
+msgstr "Un diàleg de progrés"
+
+#: xrc_strings_output.h:562
+msgid "Auto-close progress when done:"
+msgstr "Tanca automàticament el control de progrés quan acabi:"
+
+#: xrc_strings_output.h:563
+msgid "Always"
+msgstr "Sempre"
+
+#: xrc_strings_output.h:564
+msgid "If no errors occurred"
+msgstr "Si no hi han hagut errors"
+
+#: xrc_strings_output.h:567
+msgid "Execute command before spidering a group of channels:"
+msgstr "Executa aquesta ordre abans de rastrejar aquest grup de canals:"
+
+#: xrc_strings_output.h:568
+msgid "Execute command after spidering a group of channels:"
+msgstr "Executa aquesta ordre després de rastrejar aquest grup de canals:"
+
+#: xrc_strings_output.h:569
+msgid "Inclusion/exclusion lists"
+msgstr "llistes d'inclusió i exclusiió"
+
+#: xrc_strings_output.h:570
+msgid "Edit shared inclusion/exclusion list (used by all channels)..."
+msgstr ""
+"Edita la llista d'inclusió i exclusió compartida (la que fan servir tots els "
+"canals)..."
+
+#: xrc_strings_output.h:573
+msgid "Use the application's built-in HTML editor"
+msgstr "Fes servir l'editor HTML inclòs"
+
+#: xrc_strings_output.h:574
+msgid "Use an external HTML editor:"
+msgstr "Fes servir un editor HTML extern."
+
+#: xrc_strings_output.h:575
+msgid "Choose..."
+msgstr "Selecciona..."
+
+#: xrc_strings_output.h:576
+msgid "Built-in editor options"
+msgstr "Opcions de l'editor de textos inclòs"
+
+#: xrc_strings_output.h:577
+msgid "Toolbar complexity:"
+msgstr "Complexitat de la barra d'eines"
+
+#: xrc_strings_output.h:578
+msgid "Basic (insert hyperlink only)"
+msgstr "Bàsica (només inserta enllaç)"
+
+#: xrc_strings_output.h:579
+msgid "Complete (full toolbar set)"
+msgstr "Completa (tota la barra d'eines)"
+
+#: xrc_strings_output.h:580
+msgid "Insert linefeeds after text generated by toolbar buttons"
+msgstr ""
+"Insereix retorns de línea després dels textos generats pels botons de la "
+"barra d'eines"
+
+#: xrc_strings_output.h:581 xrc_strings_output.h:603
+msgid "Showcase"
+msgstr "Aparador"
+
+#: xrc_strings_output.h:582
+msgid "Showcase options"
+msgstr "Opcions d'aparador"
+
+#: xrc_strings_output.h:583
+msgid "Showcase dialog layout:"
+msgstr "Format de la finestra aparador"
+
+#: xrc_strings_output.h:584
+msgid "Horizontal layout"
+msgstr "Format horitzontal"
+
+#: xrc_strings_output.h:585
+msgid "Vertical layout"
+msgstr "Format vertical"
+
+#: xrc_strings_output.h:586
+msgid "Fields to use in my channel:"
+msgstr "Fes servir aquests camps al meu canal:"
+
+#: xrc_strings_output.h:587
+msgid "Name and URL only"
+msgstr "Només nom i adreça URL"
+
+#: xrc_strings_output.h:588
+msgid "All possible fields"
+msgstr "Tots els camps possibles"
+
+#: xrc_strings_output.h:589
+msgid "Choose fields to display in details pane..."
+msgstr "Trieu el camps que s'han de mostrar al panell..."
+
+#: xrc_strings_output.h:590
+msgid "Include images in channel previews (takes a longer time)"
+msgstr "lnclou imatges a les visualitzacions del canal (triga més)"
+
+#: xrc_strings_output.h:591
+msgid "Proxy"
+msgstr "Servidor intermediari"
+
+#: xrc_strings_output.h:593
+msgid "Use a proxy to access the Internet"
+msgstr "Fes servir un servidor intermediari per accedir a Internet"
+
+#: xrc_strings_output.h:604
+msgid "Show live preview"
+msgstr "Mostra la visualització prèvia"
+
+#: xrc_strings_output.h:605
+msgid "Show details"
+msgstr "Mostra detalls"
+
+#: xrc_strings_output.h:609
+msgid "Launching..."
+msgstr "Executant..."
+
+#: tips.txt:16
+msgid ""
+"<b>plkrAPPLICATION_SUITE_NAME</b> is a software suite that saves websites of "
+"your choice on your handheld. <b>plkrAPPLICATION_DESKTOP_NAME</b> is the "
+"program that handles the selection of websites that you want sent when you "
+"HotSync. You can then use the <b>plkrAPPLICATION_SUITE_NAME Viewer</b> to "
+"browse on your handheld."
+msgstr ""
+"<b>plkrAPPLICATION_SUITE_NAME</b> és un conjunt de programes que guarden les "
+"pàgines pàgines web que volgueu al vostre ordinador de mà. "
+"<b>plkrAPPLICATION_DESKTOP_NAME</b> és un program uqe permet triar quines "
+"pàgines web voleu enviar quan sincronitzeu el vostre ordinador de mà. "
+"Llavors les podeu veure amb el visualitzar (Viewer) "
+"<b>plkrAPPLICATION_SUITE_NAME Viewer</b> al vostre ordinador de mà."
+
+#: tips.txt:17
+msgid ""
+"You can get help in plkrAPPLICATION_DESKTOP_NAME by selecting <b>Help &gt; "
+"Help contents...</b> from the menubar. All other dialogs have a <b>Help</b> "
+"button in the lower left-corner, which can be clicked to learn about the "
+"current options on that dialog. You can also hover over toobar buttons and "
+"menuitems in the main dialog, and a short help message will be displayed in "
+"the bottom status bar area."
+msgstr ""
+"You can get help in plkrAPPLICATION_DESKTOP_NAME by selecting <b>Help &gt; "
+"Help contents...</b> from the menubar. All other dialogs have a <b>Help</b> "
+"button in the lower left-corner, which can be clicked to learn about the "
+"current options on that dialog. You can also hover over toobar buttons and "
+"menuitems in the main dialog, and a short help message will be displayed in "
+"the bottom status bar area."
+
+#: tips.txt:18
+msgid ""
+"If you missed something during the installation, you can always get it back "
+"by clicking the <b>Options</b> menu, then on <b>Rerun setup wizard</b>."
+msgstr ""
+"Si us heu deixat algun punt durant la instal·lació, sempre podeu tornar "
+"enrera, clicant el menu <b>Opcions</b>, llavors <b>Torna a executar "
+"l'auxiliar</b>"
+
+#: tips.txt:19
+msgid ""
+"If your handheld doesn't have the plkrAPPLICATION_SUITE_NAME Viewer program "
+"installed on it, is missing the manual, or if the plkrAPPLICATION_SUITE_NAME "
+"Viewer program stops working, you can reinstall it all by clicking the "
+"<b>Options</b> menu, then on <b>Install handheld viewer software</b>."
+msgstr ""
+"If your handheld doesn't have the plkrAPPLICATION_SUITE_NAME Viewer program "
+"installed on it, is missing the manual, or if the plkrAPPLICATION_SUITE_NAME "
+"Viewer program stops working, you can reinstall it all by clicking the "
+"<b>Options</b> menu, then on <b>Install handheld viewer software</b>."
+
+#: tips.txt:20
+msgid ""
+"You can add a website by creating a <b>channel</b>. Channels contain "
+"information such as the home page of the website, the number of links that "
+"you will be able to click on, and the number of colors shown in pictures."
+msgstr ""
+"Podeu afegir una pàgina web creant un <b>canal</b>. Els canals contenen "
+"informació com ara la pàgina inicial, el nombre d'enllaços que es baixaran, "
+"i el nombre de colors de les imatges."
+
+#: tips.txt:21
+msgid ""
+"You can configure a channel by <b>right</b>-clicking on it in your list of "
+"channels, then selecting <b>Configure selected channel</b>."
+msgstr ""
+"You can configure a channel by <b>right</b>-clicking on it in your list of "
+"channels, then selecting <b>Configure selected channel</b>."
+
+#: tips.txt:22
+msgid ""
+"You can change how often a channel is updated by selecting a channel in the "
+"list, clicking the <b>Configure selected channel</b> toolbutton or menuitem, "
+"and setting the controls on the <b>Scheduling</b> tab."
+msgstr ""
+"You can change how often a channel is updated by selecting a channel in the "
+"list, clicking the <b>Configure selected channel</b> toolbutton or menuitem, "
+"and setting the controls on the <b>Scheduling</b> tab."
+
+#: tips.txt:23
+msgid ""
+"plkrAPPLICATION_DESKTOP_NAME's job is often referred to as <b>spidering</b> "
+"a website. That is why when you update a channel it says that it is "
+"\"Initializing plkrAPPLICATION_SUITE_NAME spidering engine.\""
+msgstr ""
+"plkrAPPLICATION_DESKTOP_NAME's job is often referred to as <b>spidering</b> "
+"a website. That is why when you update a channel it says that it is "
+"\"Initializing plkrAPPLICATION_SUITE_NAME spidering engine.\""
+
+#: tips.txt:24
+msgid ""
+"Many of the most-commonly used dialogs are resizable.  If you have a high "
+"resolution monitor, drag the dialog corner to increase the dialog size. Your "
+"new size will be saved automatically."
+msgstr ""
+"Many of the most-commonly used dialogs are resizable.  If you have a high "
+"resolution monitor, drag the dialog corner to increase the dialog size. Your "
+"new size will be saved automatically."
+
+#: tips.txt:25
+msgid ""
+"If you are using a proxy to access to the internet, don't forget to include "
+"the <b><tt>http:</tt></b> at the start of the proxy address setting. For "
+"example it should be something like <b><tt>http://proxy.aol.com</tt></b>. If "
+"you put just <b><tt>proxy.aol.com</tt></b>, it won't work."
+msgstr ""
+"If you are using a proxy to access to the internet, don't forget to include "
+"the <b><tt>http:</tt></b> at the start of the proxy address setting. For "
+"example it should be something like <b><tt>http://proxy.aol.com</tt></b>. If "
+"you put just <b><tt>proxy.aol.com</tt></b>, it won't work."
+
+#: tips.txt:26
+msgid ""
+"You can add a new channel quickly by clicking the <b>Add Channel Wizard</b> "
+"button."
+msgstr ""
+"Podeu afegir un nou canal ràpidament cliquant el botó <b>Auxiliar per Afegir "
+"Canals</b>."
+
+#: tips.txt:27
+msgid ""
+"A <b>channel name</b> has a maximum length of <b>26</b> characters (a PalmOS "
+"restriction)."
+msgstr ""
+"A <b>channel name</b> has a maximum length of <b>26</b> characters (a PalmOS "
+"restriction)."
+
+#: tips.txt:28
+msgid ""
+"There is a showcase of ready-to-go plkrAPPLICATION_SUITE_NAME channels.  "
+"When adding a channel just click the <b>Browse showcase...</b> button and "
+"you can pick one out."
+msgstr "Hi ha un aparador de"
+
+#: tips.txt:29
+msgid ""
+"There is a version of the handheld veiwer specially built for high "
+"resolution devices.  If you have a high resolution device, you can choose to "
+"install the high resolution viewer. To install the high resolution viewer, "
+"from the menu select <b>Options &gt; Install Handheld Software</b>, and "
+"enter it in the <b>Type of Handheld Device</b>."
+msgstr ""
+"There is a version of the handheld veiwer specially built for high "
+"resolution devices.  If you have a high resolution device, you can choose to "
+"install the high resolution viewer. To install the high resolution viewer, "
+"from the menu select <b>Options &gt; Install Handheld Software</b>, and "
+"enter it in the <b>Type of Handheld Device</b>."
+
+#: tips.txt:30
+msgid ""
+"Want to download some literature to read in plkrAPPLICATION_SUITE_NAME "
+"format? Visit <b><u>www.pluckerbooks.com</u></b> and browse the hundreds of "
+"selections by title or author."
+msgstr ""
+"Want to download some literature to read in plkrAPPLICATION_SUITE_NAME "
+"format? Visit <b><u>www.pluckerbooks.com</u></b> and browse the hundreds of "
+"selections by title or author."
+
+#: tips.txt:31
+msgid ""
+"plkrAPPLICATION_SUITE_NAME is available in many translations. At any time, "
+"you can switch the language of the plkrAPPLICATION_DESKTOP_NAME program, and "
+"also install a different language for the handheld's Viewer."
+msgstr ""
+"plkrAPPLICATION_SUITE_NAME is available in many translations. At any time, "
+"you can switch the language of the plkrAPPLICATION_DESKTOP_NAME program, and "
+"also install a different language for the handheld's Viewer."
+
+#: tips.txt:32
+msgid ""
+"Using exclusion lists can remove unwanted banners ads and unwanted filetypes "
+"from being downloaded onto your handheld."
+msgstr ""
+"Using exclusion lists can remove unwanted banners ads and unwanted filetypes "
+"from being downloaded onto your handheld."
+
+#: tips.txt:33
+msgid ""
+"Have a special photo you want to view on your handheld? You can use "
+"plkrAPPLICATION_SUITE_NAME to convert it to your handheld. "
+"plkrAPPLICATION_SUITE_NAME supports images in .jpg, .gif, .bmp and .png "
+"formats."
+msgstr ""
+"Have a special photo you want to view on your handheld? You can use "
+"plkrAPPLICATION_SUITE_NAME to convert it to your handheld. "
+"plkrAPPLICATION_SUITE_NAME supports images in .jpg, .gif, .bmp and .png "
+"formats."
+
+#: tips.txt:34
+msgid ""
+"Need some assistance from fellow plkrAPPLICATION_SUITE_NAME users, or wish "
+"to help others out? Read and search our mailing lists at "
+"<b><u>http://lists.rubberchicken.org</u></b>. To ask a question to the "
+"mailing list, subscribe to the list (when you subscribe you can opt to not "
+"have the messages sent to you). Once subscribed, you can ask and answer "
+"questions on <b><u>plucker-list@rubberchicken.org</u></b>."
+msgstr ""
+"Need some assistance from fellow plkrAPPLICATION_SUITE_NAME users, or wish "
+"to help others out? Read and search our mailing lists at "
+"<b><u>http://lists.rubberchicken.org</u></b>. To ask a question to the "
+"mailing list, subscribe to the list (when you subscribe you can opt to not "
+"have the messages sent to you). Once subscribed, you can ask and answer "
+"questions on <b><u>plucker-list@rubberchicken.org</u></b>."
+
+#: tips.txt:35
+msgid ""
+"Looking for some more handheld-friendly sites, beyond what is in the "
+"showcase? You can look through a Wiki-based listing at "
+"<b><u>http://openurls.plkr.org</u></b>."
+msgstr ""
+"Looking for some more handheld-friendly sites, beyond what is in the "
+"showcase? You can look through a Wiki-based listing at "
+"<b><u>http://openurls.plkr.org</u></b>."
+
+#: tips.txt:36
+msgid ""
+"Under Linux/GTK, the help window is modal. Close the help window to return "
+"to your dialog."
+msgstr ""
+"Under Linux/GTK, the help window is modal. Close the help window to return "
+"to your dialog."
+
+#: tips.txt:37
+msgid ""
+"You can run plkrAPPLICATION_DESKTOP_NAME with commandline parameters. This "
+"allows you to set up a job whereby plkrAPPLICATION_DESKTOP_NAME starts, "
+"update channels, and then automatically ends. See the online help for "
+"details, or execute the program with a <b>--help</b> for a short usage "
+"summary"
+msgstr ""
+"You can run plkrAPPLICATION_DESKTOP_NAME with commandline parameters. This "
+"allows you to set up a job whereby plkrAPPLICATION_DESKTOP_NAME starts, "
+"update channels, and then automatically ends. See the online help for "
+"details, or execute the program with a <b>--help</b> for a short usage "
+"summary"
+
+#: tips.txt:38
+msgid ""
+"If you are using a url pattern limit or an exclusion of a url that has a "
+"<b>?</b> in the URL, then you need to properly escape the <b>?</b> as it is "
+"a special character in regular expressions. For example, you need to escape "
+"the URL <b>http://mysite.org/index.shtml?login=tjohnston</b> as "
+"<b>http://mysite\\.org/index\\.shtml?login=tjohnston</b>"
+msgstr ""
+"If you are using a url pattern limit or an exclusion of a url that has a "
+"<b>?</b> in the URL, then you need to properly escape the <b>?</b> as it is "
+"a special character in regular expressions. For example, you need to escape "
+"the URL <b>http://mysite.org/index.shtml?login=tjohnston</b> as "
+"<b>http://mysite\\.org/index\\.shtml?login=tjohnston</b>"
+
+#: tips.txt:39
+msgid ""
+"If you are unfamiliar with using regular expressions (for exclusions), in "
+"the online help, there is a short, one page summary of regular expression "
+"syntax that is most relevant to plkrAPPLICATION_SUITE_NAME."
+msgstr ""
+"If you are unfamiliar with using regular expressions (for exclusions), in "
+"the online help, there is a short, one page summary of regular expression "
+"syntax that is most relevant to plkrAPPLICATION_SUITE_NAME."
+
+#: tips.txt:40
+msgid ""
+"You can switch on a full toolset for the built-in HTML editor to have "
+"one-click access to all plkrAPPLICATION_SUITE_NAME-supported HTML tags and "
+"parameters. Turn it on in <b>Preferences dialog &gt; HTML editor tab &gt; "
+"Toolbar complexity</b>."
+msgstr ""
+"You can switch on a full toolset for the built-in HTML editor to have "
+"one-click access to all plkrAPPLICATION_SUITE_NAME-supported HTML tags and "
+"parameters. Turn it on in <b>Preferences dialog &gt; HTML editor tab &gt; "
+"Toolbar complexity</b>."
+
+#: tips.txt:41
+msgid ""
+"There is two sets of exclusion lists: an exclusion that applies to all "
+"channels <b>Preferences dialog &gt; Spidering tab</b> and the exclusion list "
+"specifically for that channel <b>Configure channel dialog &gt; Limits "
+"tab</b>."
+msgstr ""
+"There is two sets of exclusion lists: an exclusion that applies to all "
+"channels <b>Preferences dialog &gt; Spidering tab</b> and the exclusion list "
+"specifically for that channel <b>Configure channel dialog &gt; Limits "
+"tab</b>."
+
+#: tips.txt:42
+msgid ""
+"You can use plkrAPPLICATION_SUITE_NAME to retrieve a password protected site "
+"(ie one where your webbrowser pop ups up a dialog prompting for username and "
+"password) by including your username/password in the starting url. The "
+"format is: <b><tt>http://myusername:mypassword@www.somewebsite.com</tt></b>. "
+"Be aware that your username and password will now be included in the "
+"referring page if you go offsite, so to maintain security, be sure that "
+"stayonhost or stayondomain is switched on."
+msgstr ""
+"You can use plkrAPPLICATION_SUITE_NAME to retrieve a password protected site "
+"(ie one where your webbrowser pop ups up a dialog prompting for username and "
+"password) by including your username/password in the starting url. The "
+"format is: <b><tt>http://myusername:mypassword@www.somewebsite.com</tt></b>. "
+"Be aware that your username and password will now be included in the "
+"referring page if you go offsite, so to maintain security, be sure that "
+"stayonhost or stayondomain is switched on."
+
+#: tips.txt:43
+msgid ""
+"You can switch between displaying channel update progress in a console "
+"window or an update dialog. It can be changed in the <b>Preferences dialog "
+"&gt; Spidering tab</b>."
+msgstr ""
+"You can switch between displaying channel update progress in a console "
+"window or an update dialog. It can be changed in the <b>Preferences dialog "
+"&gt; Spidering tab</b>."
+
+#: tips.txt:44
+msgid ""
+"The <b><tt>plucker://</tt></b> protocol specifies a file location in "
+"relation to the home plucker directory."
+msgstr ""
+"The <b><tt>plucker://</tt></b> protocol specifies a file location in "
+"relation to the home plucker directory."
+
+#: tips.txt:45
+msgid ""
+"There are two ways of securing a document: you can turn off beaming, and you "
+"can encode the file with an ID that must match the handheld's owner id, in "
+"order to be read."
+msgstr ""
+"There are two ways of securing a document: you can turn off beaming, and you "
+"can encode the file with an ID that must match the handheld's owner id, in "
+"order to be read."
+
+#: tips.txt:46
+msgid ""
+"In the HTML editor, if using the advanced toolbar, you can select a portion "
+"of text and then hit the desired toolbar button and the tags will be "
+"inserted on either side of the selected text."
+msgstr ""
+"In the HTML editor, if using the advanced toolbar, you can select a portion "
+"of text and then hit the desired toolbar button and the tags will be "
+"inserted on either side of the selected text."
+
+#: tips.txt:47
+msgid ""
+"By unchecking the <b>Include original URL of each page in output file</b> "
+"checkbox, you can slightly reduce the size of the output file, as well as "
+"protect private internet addresses or file paths."
+msgstr ""
+"By unchecking the <b>Include original URL of each page in output file</b> "
+"checkbox, you can slightly reduce the size of the output file, as well as "
+"protect private internet addresses or file paths."
+
+#: tips.txt:48
+msgid ""
+"Most complex-formatted media articles online have a \"Printable format\" "
+"link that you want to use as a starting URL, as an easy way to strip out the "
+"unneeded text."
+msgstr ""
+"Most complex-formatted media articles online have a \"Printable format\" "
+"link that you want to use as a starting URL, as an easy way to strip out the "
+"unneeded text."
+
+#: tips.txt:49
+msgid ""
+"In the Online Help, you can click the <b>A</b> button in the help's toolbar "
+"to set the fonts. You can also mark an important page, using the <b>Add "
+"bookmark</b> icon."
+msgstr ""
+"In the Online Help, you can click the <b>A</b> button in the help's toolbar "
+"to set the fonts. You can also mark an important page, using the <b>Add "
+"bookmark</b> icon."
+
+#: tips.txt:50
+msgid ""
+"You can make a plkrAPPLICATION_SUITE_NAME channel into multiple categories "
+"in the viewer, by entering multiple category names separated by semicolons."
+msgstr ""
+"You can make a plkrAPPLICATION_SUITE_NAME channel into multiple categories "
+"in the viewer, by entering multiple category names separated by semicolons."
+
+#: tips.txt:51
+msgid ""
+"You can join the plkrAPPLICATION_SUITE_NAME programming effort! It doesn't "
+"matter if you can't code. There are many different ways to help."
+msgstr ""
+"You can join the plkrAPPLICATION_SUITE_NAME programming effort! It doesn't "
+"matter if you can't code. There are many different ways to help."
+
+#~ msgid "Image dimensions"
+#~ msgstr "Dimensions de la imatge"
+
+#~ msgid "Color depth"
+#~ msgstr "Intensitat del _color:"

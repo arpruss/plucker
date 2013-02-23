@@ -1,0 +1,940 @@
+/* $Id: zh_CN.rcp,v 1.84 2006/11/12 16:23:45 prussar Exp $ */
+
+/*****************************************************************
+ * Simplified Chinese resources - Danny Zeng <danny@zeng.com.cn> *
+ *****************************************************************/
+
+TRANSLATION "zh_CN"
+BEGIN
+
+
+"$$LANG"                    =   "zh_CN"
+
+
+/*************************************************************
+ *                      MENU OPTIONS                         *
+ *************************************************************/
+
+"$$ABOUT PLUCKER"           =   "╧ьсз Plucker"
+"$$ADD BOOKMARK..."         =   "лМ╪сйИг╘..."
+"$$AUTOSCROLL FASTER"       =   "╪с©Лвт╤╞╥╜╧Ж"
+"$$AUTOSCROLL SLOWER"       =   "╪У╩╨вт╤╞╥╜╧Ж"
+"$$BACK"                    =   "╨Смк"
+"$$BOOKMARKS..."            =   "йИг╘..."
+"$$BOTTOM"                  =   "╣в╡©"
+"$$CONTACT DEVELOPERS"      =   "а╙о╣©╙╥╒уъ"
+"$$LIBRARY..."              =   "йИ©Б..."
+"$$DELETE ALL..."           =   "х╚╡©и╬ЁЩ..."
+"$$DELETE READ..."          =   "и╬ЁЩ╤а╧Щ╣днд╣╣..."
+"$$DETAILS..."              =   "оЙо╦..."
+"$$FIND AGAIN"              =   "╪лпЬя╟ур"
+"$$FIND..."                 =   "я╟ур..."
+"$$FORWARD"                 =   "г╟╫Ь"
+"$$GO"                      =   "в╙╣╫"
+"$$HOME"                    =   "жВрЁ"
+"$$OPTIONS"                 =   "я║оН"
+"$$PREFERENCES..."          =   "ф╚╟╝иХжц..."
+"$$START AUTOSCROLL"        =   "©╙й╪вт╤╞╧Жфа"               
+"$$STOP AUTOSCROLL"         =   "мёж╧вт╤╞╧Жфа"
+"$$TOP"                     =   "╤╔╡©"
+"$$VIEW"                    =   "╡И©╢"
+"$$DELETE DOC..."           =   "и╬ЁЩнд╣╣..."
+"$$SELECT FONT..."          =   "вжлЕ╨м╟ФцФ..."
+"$$COPY TO MEMO"            =   "╣╪ЁЖ╣╫╪гйб╠╬"
+"$$SYNC LIST"               =   "╦Эпбнд╣╣гЕ╣╔"
+"$$SHOWHIDE"                =   "отй╬/рЧ╡ь"
+"$$TYPE"                    =   "юЮпм"
+"$$DATE"                    =   "хуфз"
+"$$SIZE"                    =   "╢Сп║"
+"$$TOGGLE FULLSCREEN"       =   "гп╩╩х╚фа"
+"$$SET KEYBOARD/GRAFFITI..."   =   "иХжц╪Эел/йжп╢..."
+"$$LOOKUP WORD"             =   "╡Иур╣╔╢й"
+/******************************************/
+"$$SORT"                    =   "Sort"
+"$$NAME"                    =   "Name"
+"$$CATEGORY"                =   "Category"
+/******************************************/
+
+
+/*************************************************************
+ *                        SHORTCUTS                          *
+ *************************************************************/
+
+"$$SC ADD BOOKMARK"         =   "+"
+"$$SC FIND AGAIN"           =   "A"
+"$$SC BACK"                 =   "B"
+"$$SC COPY TO MEMO"         =   "C"
+"$$SC DELETE ALL"           =   "D"
+"$$SC DELETE DOC"           =   "D"
+"$$SC BOOKMARKS"            =   "E"
+"$$SC FIND"                 =   "F"
+"$$SC HOME"                 =   "H"
+"$$SC DETAILS"              =   "I"
+"$$SC START AUTOSCROLL"     =   "J"
+"$$SC STOP AUTOSCROLL"      =   "K"
+"$$SC LIBRARY"              =   "L"
+"$$SC AUTOSCROLL FASTER"    =   "M"
+"$$SC AUTOSCROLL SLOWER"    =   "N"
+"$$SC SELECT FONT"          =   "O"
+"$$SC LOOKUP WORD"          =   "Q"
+"$$SC PREFERENCES"          =   "R"
+"$$SC SET KEYBOARD/GRAFFITI"   =   "S"
+"$$SC TOGGLE FULLSCREEN"    =   "T"
+"$$SC SYNC LIST"            =   "U"
+"$$SC FORWARD"              =   "W"
+"$$SC BOTTOM"               =   "Y"
+"$$SC TOP"                  =   "Z"
+
+
+/*************************************************************
+ *                         FORMS                             *
+ *************************************************************/
+
+/*** MAIN ***/
+
+"$$MAIN: ADD BOOKMARK"              =   "лМ╪сйИг╘"
+"$$MAIN: BOTTOM"                    =   "╣в╡©"
+"$$MAIN: FOLLOW LINK"               =   "╦ЗкФа╢╫с"
+"$$MAIN: OPEN IMAGE"                =   "╢Р©╙м╪оЯ"
+"$$MAIN: TOP"                       =   "╤╔╡©"
+"$$MAIN: VIEW BOOKMARKS"            =   "╡И©╢йИг╘"
+"$$MAIN: 10%"                       =   "10%"
+"$$MAIN: 20%"                       =   "20%"
+"$$MAIN: 30%"                       =   "30%"
+"$$MAIN: 40%"                       =   "40%"
+"$$MAIN: 50%"                       =   "50%"
+"$$MAIN: 60%"                       =   "60%"
+"$$MAIN: 70%"                       =   "70%"
+"$$MAIN: 80%"                       =   "80%"
+"$$MAIN: 90%"                       =   "90%"
+/************************************************************/
+"$$MAIN: ADD ANNOTATION"            =   "Add annotation"
+/************************************************************/
+
+/*** ABOUT ***/
+
+"$$ABOUT: BODY1"                    =   " Plucker йг PalmOS о╣мЁио"
+"$$ABOUT: BODY2"                    =   "╣дюКоъ web Д╞ююфВ. уБйгр╩╦Ж"
+"$$ABOUT: BODY3"                    =   "втсихМ╪Ч, рюуувтсихМ╪Ч╩Ы╫П╩А"
+"$$ABOUT: BODY4"                    =   "╣дм╗сц╧╚жзйзх╗п╜рИ GPL╥ж╥╒."
+"$$ABOUT: BODY5"                    =   "жВрЁтз www.plkr.org"
+"$$ABOUT: BODY6"                    =   " Danny Zeng н╙дЗвЖжпнд╫ГцФ"
+"$$ABOUT: WEBSITE"                  =   "www.plkr.org"
+"$$ABOUT: OK"                       =   "п╩п╩"
+"$$ABOUT: TITLE"                    =   "╧ьсз Plucker"
+
+
+/*** DOCUMENT LIBRARY ***/
+
+"$$LIBRARY: BEAM"                   =   "╥╒иД"
+"$$LIBRARY: CATEGORIZE"             =   "╥жюЮ"
+"$$LIBRARY: CATEGORY"               =   "юЮ╠П"
+"$$LIBRARY: DATE"                   =   "хуфз"
+"$$LIBRARY: DELETE"                 =   "и╬ЁЩ"
+"$$LIBRARY: NAME"                   =   "╠ЙлБ"
+"$$LIBRARY: OPEN"                   =   "╢Р©╙"
+"$$LIBRARY: RENAME"                 =   "╦дцШ"
+"$$LIBRARY: SHOW:"                  =   "апЁЖ:"
+"$$LIBRARY: SIZE"                   =   "╢Сп║"
+"$$LIBRARY: TITLE"                  =   "м╪йИ©Б"
+"$$LIBRARY: NO DOCUMENTS"           =   "ц╩спур╣╫нд╣╣..."
+"$$LIBRARY: UNREAD"                 =   "н╢╤а"
+"$$LIBRARY: HELP"                   =
+    "?дЗтзуБюО╪Р╣╔╣д╧эюМдЗ╣д╦Вжж Plucker нд╣╣, "\
+    "ж╩р╙я║тЯоК©╢дд╦Ж."\
+    "\n\n"\
+    "?╣Ц╩Внд╣╣цШг╟цФ╣дм╪╠Й╩А╢Р©╙р╩╦Жобю╜ап╠М "\
+    "╟Э╨╛ак©ирт╤тя║жп╣днд╣╣╫Ьпп╣д╦Вжж╡ывВ "\
+    " (╢Р©╙, ╥жюЮ, и╬ЁЩ, ╦дцШ ╪╟╥╒иД)."\
+    "\n\n"\
+    "?дЗ©ирт╟╢уунд╣╣╣дцШЁф, хуфз, ╩Р╢Сп║╫ЬппеепР, "\
+    "©иртя║тЯуЩ╥╢кЁпР."
+
+
+/*** RENAME DOCUMENT ***/
+
+"$$RENAME: CANCEL"                  =   "х║оШ"
+"$$RENAME: NAME:"                   =   "йДхКпбцШвж:"
+"$$RENAME: RENAME"                  =   "╦дцШ"
+"$$RENAME: TITLE"                   =   "╦дцШ"
+
+
+/*** PREFERENCES ***/
+
+"$$PREFS: TITLE"                    =   "ф╚╟╝иХ╤╗"
+"$$PREFS: OK"                       =   "х╥хо"
+"$$PREFS: CANCEL"                   =   "х║оШ"
+"$$PREFS: LIBRARY"                  =   "м╪йИ©Б"
+"$$PREFS: AUTOSCROLL"               =   "вт╤╞╧Жфа"
+"$$PREFS: BUTTON"                   =   "╟╢е╔"
+"$$PREFS: CONTROL"                  =   "╣Ц╩В"
+"$$PREFS: GESTURE"                  =   "╠й╩╜"
+"$$PREFS: GENERAL"                  =   "м╗сц"
+"$$PREFS: LAYOUT"                   =   "Д╞юю"
+"$$PREFS: HARDCOPY"                 =   "╣╪ЁЖ"
+"$$PREFS: JOGDIAL"                  =   "╧Жбж"
+/*************************************************************/
+"$$PREFS: LOOKUP"                   =     "Lookup"
+"$$PREFS: COLOR"                    =   "Color"
+"$$PREFS: FONT"                     =   "Font"
+/*************************************************************/
+
+
+/*** GENERAL PREFERENCES ***/
+
+"$$PREFSGENERAL: ADD BOOKMARK..."          =   "лМ╪сйИг╘..."
+"$$PREFSGENERAL: BOTTOM"                   =   "╣в╡©"
+"$$PREFSGENERAL: BOTTOM TOOLBAR"           =   "╣в╡©"
+"$$PREFSGENERAL: BUTTON ACTION..."         =   "╟╢е╔╤╞вВ..."
+"$$PREFSGENERAL: COMMAND BUTTON:"          =   "╤╗жфцЭаН╧╓╬ълУ:"
+"$$PREFSGENERAL: DELETE DOC..."            =   "и╬ЁЩнд╣╣..."
+"$$PREFSGENERAL: DETAILS..."               =   "оЙо╦пео╒..."
+"$$PREFSGENERAL: NO TOOLBAR"               =   "ц╩сп"
+"$$PREFSGENERAL: NONE"                     =   "ц╩сп"
+"$$PREFSGENERAL: PREFERENCES..."           =   "ф╚╟╝иХ╤╗..."
+"$$PREFSGENERAL: TAP ACTION..."            =   "╣Ц╩В╤╞вВ..."
+"$$PREFSGENERAL: TOOLBAR:"                 =   "╧╓╬ълУ:"
+"$$PREFSGENERAL: TOP"                      =   "╤╔╡©"
+"$$PREFSGENERAL: TOP TOOLBAR"              =   "╤╔╡©"
+"$$PREFSGENERAL: LEFT"                     =   "вС╠ъ"
+"$$PREFSGENERAL: NONE"                     =   "ц╩сп"
+"$$PREFSGENERAL: RIGHT"                    =   "ср╠ъ"
+"$$PREFSGENERAL: SCREEN DEPTH:"            =   "яуи╚иН╤х:"
+"$$PREFSGENERAL: SCROLLBAR:"               =   "╧Ж╬МлУ:"
+"$$PREFSGENERAL: COPY TO MEMO"             =   "╣╪ЁЖ╣╫╪гйб╠╬"
+"$$PREFSGENERAL: SILK TOOLBAR"             =   "тзйжп╢гЬдз"
+/****************************************************************/
+"$$PREFSGENERAL: ALWAYS DELETE ANNOTATIONS"    = "Delete notes/marks with doc"
+"$$PREFSGENERAL: ANNOTATIONS IN BOOKMARK LIST" = "List annotations with bookmarks"
+/****************************************************************/
+"$$PREFSGENERAL: HELP"                     =
+    "?тзткпп Palm OS 3.5 рт╨С╟Ф╠╬╣до╣мЁио, дЗ©ирт╤╗жф"\
+    "цЭаН╧╓╬ълУио╣др╩╦Ж╟╢е╔.  "\
+    "тз╬и╟Ф╠╬╣д Palm OS иоц╩спп╖╧Ш."\
+    "\n\n"\
+    "?дЗ©иртиХ╤╗х╠й║╣дфад╩и╚╡й╩Р╩р╤хиН╤х. "\
+    "\n\n"\
+    "∙ дЗ©иртя║тЯио╠ъ╣д╧Ж╬МлУ, об╠ъ╣д╧Ж╬МлУ, ╩РуъмЙх╚ц╩сп╧Ж╬МлУ."\
+    "\n\n"\
+    "?дЗ©иртя║тЯвС╠ъ╣д╧Ж╬МлУ, ср╠ъ╣д╧Ж╬МлУ, ╩РуъмЙх╚ц╩сп╧Ж╬МлУ."
+
+
+/*** LAYOUT PREFERENCES ***/
+
+"$$PREFSLAYOUT: UNDERLINE"               =   "╡исцоб╩╝оъ╠Й╪г"
+"$$PREFSLAYOUT: ALIGNMENT:"              =   "╤тфК"
+"$$PREFSLAYOUT: AS IN DOC"               =   "╟╢уунд╣╣╦Яй╫"
+"$$PREFSLAYOUT: ENABLE SOFT-HYPHENS"     =   "╡исцхМ╥жвж╨е"
+"$$PREFSLAYOUT: FORCE LEFT"              =   "р╩би©©вС"
+"$$PREFSLAYOUT: FORCE RIGHT"             =   "р╩би©©ср"
+"$$PREFSLAYOUT: FORCE CENTER"            =   "р╩би╬сжп"
+"$$PREFSLAYOUT: FORCE JUSTIFY"           =   "р╩биЁДбЗ"
+"$$PREFSLAYOUT: CONNECT PARTS WITH PAGING"
+                                           =   "╤Ю╡©╥жнд╣╣а╛пЬ╥╜рЁ"
+"$$PREFSLAYOUT: HELP"                    =
+    "?╣╠╡исцоб╩╝оъ╠Й╪гй╠, кЫсп╣да╢╫с╫╚сц╣ЦоътзобцФ╠Мй╬, "\
+    "╤Ьй╣оъсцю╢╠Мй╬ HTML жп╣доб╩╝оъ╠Й╪г (<U>). "\
+    "╢кй╠н╙акгЬ╥жр╩╦Жа╢╫сйг╥Яря╬╜╡И©╢╧Щ, "\
+    "©иртя║тЯ╡исцжп╩╝оъ."\
+    "\n\n"\
+    "~U дЗ©ирттз╤Ю╡©╥ж╣днд╣╣жпсц╥╜рЁ©ьжфа╛╫с╦В╦Ж╡©╥жё╛ "\
+    "уБяЫтздЁрЁцФ╣двН╨Ср╩фаоРоб╥╜рЁ(╩РоРоб╥╜╟КрЁ)й╠ё╛ "\
+    "дЗ╩Авт╤╞╫ЬхКрЁцФвН╨Ср╩╦Жа╢╫сж╦оР╣днд╣╣ё╩ "\
+    "тздЁрЁцФ╣д╣зр╩фаоРио╥╜рЁ(╩РоРио╥╜╟КрЁ)й╠п╖╧ШюЮкфё╛"\
+    "дЗ╩Авт╤╞╫ЬхКрЁцФвНг╟р╩╦Жа╢╫сж╦оР╣днд╣╣║ё"\
+    "\n\n"\
+    "~U дЗ©иртт╫╧Щнд╣╣жп╣д╤тфК╥╫й╫║ё"
+
+
+/*************************************************************/
+"$$PREFSLAYOUT: ENABLE MARGINS"     =   "Enable margins"
+/*************************************************************/
+
+/*** FONT PREFERENCES ***/
+/*************************************************************/
+"$$PREFSFONT: LIBRARY"      =   "Library"
+"$$PREFSFONT: MAIN"         =   "Main"
+/*************************************************************/
+
+
+/*** COLOR PREFERENCES ***/
+"$$PREFSCOLOR: STRIKE-THROUGH"          =   "╡исцжп╩╝оъ"
+"$$PREFSCOLOR: FORCE DEFAULT TEXT COLORS" =  "р╩бий╧сцд╛хондвжяуи╚"
+"$$PREFSCOLOR: HELP"                    =
+    "?хГ╧ШдЗ╥╒ождяртгЬ╥жр╩╦Жа╢╫сйг╥Яря╬╜╡И©╢╧Щ, "\
+    "дЗ©иртЁ╒йт╡исцжп╩╝оъ.  "\
+    "кЭ╩Атзц©╦Жря╬╜╡И©╢╣да╢╫сиолМ╪сжп╩╝оъ. "\
+    "\n\n"\
+    "~U дЗ©ирт╧Ф╤╗уЩндр╩бийг╨зи╚ё╛а╢╫ср╩бийгю╤и╚║ё"
+
+
+/*** LIBRARY PREFERENCES ***/
+
+"$$PREFSLIBRARY: UPDATE DOCLIST"           =   "╦ЭпбгЕ╣╔:"
+"$$PREFSLIBRARY: AUTOMATIC"                =   "вт╤╞"
+"$$PREFSLIBRARY: MANUAL"                   =   "йж╤╞"
+"$$PREFSLIBRARY: IGNORE CARD"              =   "╨Жбт╢Ф╢╒©╗"
+"$$PREFSLIBRARY: ADVANCED"                 =   "╦ъ╪╤"
+"$$PREFSLIBRARY: ASCENDING"                =   "иЩпР"
+"$$PREFSLIBRARY: CATEGORY STYLE:"          =   "╥жюЮ╥Г╦Я:"
+"$$PREFSLIBRARY: CLASSIC"                  =   "╧е╣Д"
+"$$PREFSLIBRARY: DATE"                     =   "хуфз"
+"$$PREFSLIBRARY: DESCENDING"               =   "╫╣пР"
+"$$PREFSLIBRARY: NAME"                     =   "цШЁф"
+"$$PREFSLIBRARY: SHOW DATE COLUMN"         =   "отй╬хуфзю╦"
+"$$PREFSLIBRARY: SHOW SIZE COLUMN"         =   "отй╬╢Сп║ю╦"
+"$$PREFSLIBRARY: SHOW TYPE COLUMN"         =   "отй╬юЮпмю╦"
+"$$PREFSLIBRARY: SIZE"                     =   "╢Сп║"
+"$$PREFSLIBRARY: SORT BY:"                 =   "нд╣╣еепР:"
+"$$PREFSLIBRARY: SORT ORDER:"              =   "ееап╢нпР:"
+"$$PREFSLIBRARY: TYPE"                     =   "юЮпм"
+"$$PREFSLIBRARY: INDICATE OPENED"          =   "╡исцжп╩╝оъ"
+/*************************************************************/
+"$$PREFSLIBRARY: CATEGORY"                 =   "Category"
+"$$PREFSLIBRARY: DATE/TIME"                =   "Use date/time for sort by date"
+/*************************************************************/
+"$$PREFSLIBRARY: HELP"                     = 
+    "∙ рРн╙тздЁп╘иХ╠╦ио╦Эпбнд╣╣гЕ╣╔╣д╡ывВ©идэ╨эбЩ,  "\
+    "уБюОспр╩п╘я║оН, хцдЗ╬Ж╤╗йг╥Явт╤╞╦Эпб(дз╢Ф╨мю╘у╧©╗),  "\
+    "ж╩вт╤╞╦Эпбдз╢Ф, ╩Рйж╤╞╦Эпб. "
+
+
+/*** AUTOSCROLL PREFERENCES ***/
+
+"$$PREFSAUTOSCROLL: AUTOSCROLL DELAY:"       =   "вт╤╞╧ЖрЁясЁы:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL DIRECTION:"   =   "вт╤╞╧ЖрЁ╥╫оР:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL JUMP:"        =   "вт╤╞╧ЖрЁлЬ╤╞:"
+"$$PREFSAUTOSCROLL: DOWN"                    =   "оРоб"
+"$$PREFSAUTOSCROLL: MILLISECONDS"            =   "╨ацК"
+"$$PREFSAUTOSCROLL: PAGE(S)"                 =   "рЁ"
+"$$PREFSAUTOSCROLL: PIXEL(S)"                =   "оЯ╣Ц"
+"$$PREFSAUTOSCROLL: STAY ON"                 =   "вт╤╞╧ЖрЁй╠╡╩╧ь╩З"
+"$$PREFSAUTOSCROLL: UP"                      =   "оРио"
+"$$PREFSAUTOSCROLL: HELP"                    =
+    "?дЗтзуБюОиХ╤╗вт╤╞╧ЖрЁ."\
+    "\n\n"\
+    "?дЗ©иртиХ╤╗ц©╢н╧Ж╤╞╣д╣ЦйЩ╩РрЁйЩ."\
+    "\n\n"\
+    "?©иртж╦╤╗оРио╩РоРоб╧Ж╤╞." \
+    "\n\n"\
+    "?©иртиХ╤╗ц©╢н╧Ж╤╞╣х╢Щ╣дй╠╪Д. "\
+    "уБ╦ЖясЁырт.г╖╥жж╝р╩цК╪фкЦ."\
+    "\n\n"\
+    "?й╧сцвт╤╞╧ЖрЁй╠, дЗ©иртхциХ╠╦╡╩дэвт╤╞╧ь╩З. "\
+    "вт╤╞╧ЖрЁ╫╚р╩ж╠ткпп, ж╠╣╫ндуб╫АйЬ, "\
+    "╩Руъ╣ГЁь╣мя╧╠╗╬╞ (дЗ©ирт╣Ц╩Вфад╩ю╢мёж╧,  "\
+    "╩Руъ╟╢╣Гт╢е╔╧ь╠уиХ╠╦.)"\
+    "\n\n"\
+    "∙ в╒рБтзвт╤╞╧Жфафз╪Д, дЗр╙©ьжфкы╤х©иртсц╧╓╬ълУио╣д╟╢е╔, "\
+    "р╡©иртй╧сцф╫Ёё©ьжф╥╜рЁ╣д╦Вжж©ьжф (хГиооб╥╜рЁ╪Э)"
+
+
+/*** HARDCOPY PREFERENCES ***/
+
+"$$PREFSHARDCOPY: TITLE"            =   "╣╪ЁЖ╥╫й╫"
+"$$PREFSHARDCOPY: ACTION:"          =   "╥╫й╫:"
+"$$PREFSHARDCOPY: DIALOG"           =   "╤т╩╟©Р"
+"$$PREFSHARDCOPY: IMMEDIATE"        =   "а╒╪╢"
+"$$PREFSHARDCOPY: RANGE:"           =   "╥╤н╖:"
+"$$PREFSHARDCOPY: IN VIEW AREA"     =   "©и╪ШгЬсР"
+"$$PREFSHARDCOPY: VISIBLE PARAGRAPHS" = "©и╪Ш╤нбД"
+"$$PREFSHARDCOPY: LINK:"            =   "а╢╫с:"
+"$$PREFSHARDCOPY: BOTTOM"           =   "╣в╡©"
+"$$PREFSHARDCOPY: INLINE"           =   "пп╪Д"
+"$$PREFSHARDCOPY: NONE"             =   "нч"
+"$$PREFSHARDCOPY: HELP"             =
+    "∙ дЗ©ирттзуБюОя║тЯ '╣╪ЁЖ╣╫╪гйб╠╬' ╡ывВ╣д╥╫й╫║ёдЗ©иртюШсцуБ╦Ж╧╕дэ╟я╣╠г╟отй╬╣дндвж╪ТлЫ╣╫╠Йв╪╣д Palm ╪гйб╠╬ЁлпРжп╫Ьпп╠Ю╪╜║ё"\
+    "\n\n"\
+    "∙ дЗ©иртохтзр╩╦Ж╤т╩╟©РюО╠Ю╪╜р╙╪ТлЫ╤Цндвжё╛ ╩Яуъж╠╫с╪ТлЫ╣╫╪гйб╠╬║ё"\
+    "\n\n"\
+    "∙ ©иртя║тЯ╪ТлЫ╣╠г╟йсм╪╣дндвжё╛╩Руъ©и╪Ш╤нбД╣дх╚╡©║ё"\
+    "\n\n"\
+    "∙ а╢╫с╣д URL ©ирт╪╞жпаптз╨СцФё╛аптзпп╪Дё╛╩Р╨Жбт║ё"
+
+
+/*** EXTERNALLINK PREFERENCES ***/
+
+"$$PREFSEXTERNALLINK: TITLE"            =   "мБ╡©а╢╫с╢╕юМ"
+"$$PREFSEXTERNALLINK: ACTION:"          =   "╥╫й╫:"
+"$$PREFSEXTERNALLINK: DIALOG"           =   "╤т╩╟©Р"
+"$$PREFSEXTERNALLINK: TO MEMO"          =   "ж╠╫с╣╫╪гйб╠╬"
+"$$PREFSEXTERNALLINK: BROWSE"           =   "Д╞юю"
+
+
+/*** BUTTON PREFERENCES ***/
+
+"$$PREFSBUTTONS: HARD KEYS"              =   "сцс╡╪Ч╟╢е╔╡ывщ"
+"$$PREFSBUTTONS: ARROW KEYS"             =   "тйпМ╤╗жф╥╫оР╪Э"
+"$$PREFSBUTTONS: HELP"                   =
+    "?╣╠╡исцс╡╟╢е╔я║оНй╠, дЗ©иртм╗╧Щс╡╪Ч╟╢е╔ю╢ "\
+    "╡ывВль╤╗╣д╧╕дэ."\
+    "\n\n"\
+    "?дЗ©ирт╟я╡╩м╛╣д╧╕дэиХ╤╗тзкд╦Жс╡╪Ч╟╢е╔ио."
+
+
+/*** CONTROL PREFERENCES ***/
+
+"$$PREFSTAP: MODE 1"                     =   "дёй╫ 1"
+"$$PREFSTAP: MODE 2"                     =   "дёй╫ 2"
+"$$PREFSTAP: MODE 3"                     =   "дёй╫ 3"
+"$$PREFSTAP: PEN SCROLL MSG1"            =   "╣Цжпфад╩╡╒иообмо╤╞╠й╪Б"
+"$$PREFSTAP: PEN SCROLL MSG2"            =   "©ирт╧Ж╤╞рЁцФ"
+"$$PREFSTAP: PEN SCROLL MSG3"            =   ""
+"$$PREFSTAP: PEN SCROLL MSG4"            =   ""
+"$$PREFSTAP: REGION ACTION:"             =   "гЬсР╤╞вВ:"
+"$$PREFSTAP: HELP"                       =
+    "?╣Ц╩В╡ывВтйпМдЗж╦╤╗╠й╪Б╣Ц╩Вфад╩╤тс╕╣д╡ывВ."\
+    "кЭ©иртспхЩжж╡ывВдёй╫."\
+    "\n\n"\
+    "?г╟а╫жждёй╫╟яфад╩╩╝╥жЁи╡╩м╛╣дгЬсР, "\
+    "дЗн╙ц©╦ЖгЬсРж╦╤╗╡╩м╛╣д╤╞вВ(юЩхГ,  уШрЁоРио╧Ж╬М, "\
+    "╨Смкр╩рЁ, ╣х)."\
+    "\n\n"\
+    "?╣зхЩжждёй╫тйпМтзфад╩иомо╤╞╪Б╠йю╢╧Ж╬Мндвж. "
+
+
+/*** GESTURE PREFERENCES ***/
+
+"$$PREFSGESTURES: USE GESTURES"          =   "сц╠й╩╜╡ывщ"
+"$$PREFSGESTURES: HELP"                  =
+    "?╣╠╡исцйжп╢╠й╩╜я║оНй╠, дЗ©ирттзйжп╢гЬп╢╠й╩╜"\
+    "ю╢╡ывВль╤╗╣д╧╕дэ."\
+    "\n\n"\
+    "?©иртй╧сцнЕжж╠й╩╜: оРср╩╝, оРвС╩╝, оРио╩╝, оРоб╩╝, "\
+    "╨мсц╠й╣Ц."\
+    "\n\n"\
+    "?дЗ©ирт╦ЬуБнЕжж╠й╩╜ж╦╤╗╡╩м╛╣д╧╕дэ."
+
+
+/*** JOGDIAL PREFERENCES ***/
+
+"$$PREFSJOGDIAL: USE JOGDIALS"  =     "╡исц╧Жбж╡ывщ"
+"$$PREFSJOGDIAL: HELP"  =
+    "∙ хГ╧ШдЗ╣д Palm иХ╠╦╬ъсп╧Жбжё╛ дЗ©ирт╤╗рЕ╧Жбж " \
+    "╣д╤╞вВ╤тс╕ Plucker ╣дль╤╗╧╕дэ."\
+    "\n\n"\
+    "∙ спаЫжж╤╞вВ: ио╧Жё╛об╧Жё╛мф╫Ьё╛ мф╫ЬоРиоё╛мф╫ЬоРобё╛╨м╨Смк║ё " \
+    "╡╩м╛╣диХ╠╦ио╡╩йгкЫсп╤╞вВ╤╪©исц║ё "\
+    "\n\n"\
+    "∙ дЗ©иртн╙нЕжж╧Жбж╤╞вВж╦╤╗╧╕дэ║ё"
+
+
+/*** WORD LOOKUP PREFERENCES ***/
+
+"$$PREFSLOOKUP: ALWAYS ACTIVE"         = "р╩ж╠╢Р©╙╣╔╢й╡Иур"
+"$$PREFSLOOKUP: ACTION:"               = "╥╫й╫:"
+"$$PREFSLOOKUP: SEARCH FORM"           = "╡ЕхК╣╫кякВ╠М╣╔"
+/********************************************************/
+"$$PREFSLOOKUP: PPI"                   = "Look up in PPI"
+"$$PREFSLOOKUP: TO CLIPBOARD"          = "Copy to the clipboard"
+"$$PREFSLOOKUP: ANNOTATE"              = "Annotate"
+/********************************************************/
+"$$PREFSLOOKUP: HELP"                  =
+    "∙ Plucker ╬ъсп╣╔╢й╡Иур╧╕дэ║ё уБ╦Ж╧╕дэ╢Р©╙й╠ё╛тзр╩╦Ж╣╔╢й "\
+    "ио╣Ц╩В╩Ая║жпуБ╦Ж╣╔╢йё╛╡╒╤ткЭ╫Ьппр╩╦Ж╡ывВ║ё "\
+    "\n\n"\
+    "∙ хГ╧ШиХжцр╩ж╠╢Р©╙╣╔╢й╡Иурё╛ дгц╢╣Ц╩Вр╩╦Ж╡╩╟Эю╗тза╢╫сжп╣д╣╔╢йвэйг "\
+    "╩Ая║жпуБ╦Ж╣╔╢й║ё"\
+    "\n\n"\
+    "∙ дЗ©иртй╧сц 'Go' ╡к╣╔╣д '╡Иур╣╔╢й' ╧╕дэё╛ ╫ЬхКаый╠╣д╣Ця║дёй╫ё╛"\
+    "ж╩спобр╩╢н╣Ц╩В╩Ая║жп╣╔╢й║ё"\
+    "╩╧©ирт╟яуБ╦Ж╧╕дэиХжц╣╫р╩╦Жс╡╪Ч╟╢╪Эё╛ ╩Руъхн╨нфДкШ©иеДжц╣д "\
+    "©ьжф║ё"\
+    "\n\n"\
+    "∙ лАй╬: р╙я║тЯр╩╦Ж╟Эю╗╥гвжд╦вж╥Ш╣д╣╔╢йё╛ юЩхГспй║бт╨е╩Р╨Аоъ╣д╣╔╢йё╛  "\
+    "дЗ╠ьпК╣Цтздг╦Ж╥гвжд╦вж╥Шиоё╛ уБяЫуБ╦Жвж╥Ш╬м╩А╠╩хон╙йг╣╔╢й╣др╩╡©╥ж║ё"
+
+
+/*** FONT SELECT ***/
+
+"$$FONTS: FONT:"                    =   "вжлЕ:"
+"$$FONTS: OK"                       =   "х╥хо"
+"$$FONTS: CANCEL"                   =   "х║оШ"
+"$$FONTS: SELECT FONT"              =   "лТя║вжлЕ╨м╟Фй╫"
+"$$FONTS: BUILT-IN FONTS:"          =   "дз╫╗вжлЕ:"
+"$$FONTS: USER-LOADED FONT:"        =   "сц╩╖╪сть╣двжлЕ:"
+"$$FONTS: LINE SPACING:"            =   "пп╪Д©у╟в:"
+"$$FONTS: PARAGRAPH SPACING:"       =   "╤н╪Д©у╟в:"
+/************************************************************/
+"$$FONTS: RTL"                      =   "RTL"
+/************************************************************/
+"$$FONTS: VARY WITH DOCUMENT"       =   "╦Внд╣╣╡╩м╛"
+"$$FONTS: ALSO SET AS DEFAULT"      =   "иХн╙д╛хож╣"
+"$$FONTS: ROTATE:"                  =   "пЩв╙: "
+"$$FONTS: NONE"                     =   "нч"
+"$$FONTS: COUNTERCLOCKWISE"         =   "дФй╠уК"
+"$$FONTS: CLOCKWISE"                =   "кЁй╠уК"
+"$$FONTS: HELP"                     =
+    "∙ дЗ©иртлТя║р╩╦Ждз╫╗вжлЕ║ё дз╫╗вжлЕ╟Эю╗╠Йв╪╣д Palm вжлЕ"\
+    "╩Р Plucker ╣ддз╫╗вжлЕ║ё\n\n"\
+    "∙ хГ╧ШдЗ╟╡в╟акр╩╦Ж Plucker вжлЕ╟Эё╛дЗр╡©иртя║тЯкЭ║ё "\
+    "ж╩р╙дЗ╣диХ╠╦ж╖ЁжмБ╪свжлЕ║ё"\
+    "\n\n"\
+    "∙ дЗ©иртн╙╦В╦Жнд╣╣иХжц╡╩м╛╣дпп╪Д╬Юё╛╤н╪Д╬Ю║ё "\
+    "╟япп╪Д╬ЮиХЁи╦╨ж╣╩АрЩфПр╩п╘нйлБё╛хГспп╘ппнч╥╗©╢╣╫║ё "\
+    "\n\n"\
+    "∙ дЗ©ирт╟яфад╩пЩв╙ 90 ╤х║ётз OS 3.5 ио, м╪оЯ"\
+    "╩А╠╩╨Жбт║ё"\
+    "\n\n"\
+    "∙ дЗ©иртн╙╦В╦Жнд╣╣иХжц╡╩м╛╣двжлЕ║ё хГ╧ШдЗя║тЯуБяЫё╛ "\
+    "дЗ╩╧©ирт╟я╣╠г╟╣диХжц╠ё╢Фн╙д╛хож╣ё╛с╕сцтзпб╣днд╣╣ио║ё "
+
+
+/*** KEYBOARD CUSTOMIZATION ***/
+
+"$$KEYBOARD: SET KEYBOARD / GRAFFITI"        =   "иХжц╪Эел / йжп╢"
+"$$KEYBOARD: KEYBOARD OR GRAFFITI"         =   "╪Эел╩Рйжп╢йДхК"
+"$$KEYBOARD: SPECIAL KEYS"          =   "льйБ╪Э"
+"$$KEYBOARD: OK"                    =   "х╥╤╗"
+"$$KEYBOARD: CANCEL"                =   "х║оШ"
+"$$KEYBOARD: DEFAULT"               =   "д╛хо"
+"$$KEYBOARD: CLEAR"                 =   "гЕЁЩ"
+"$$KEYBOARD: INTERFERENCE MSG1"     =   "дЁп╘иХжц©идэ"
+"$$KEYBOARD: INTERFERENCE MSG2"     =   "сК╠й╩╜╩Р Graffiti 2╡╩╪Фхщ"
+"$$KEYBOARD: HELP"                  =
+    "∙ хГ╧ШдЗспр╩╦Ж╪Эелё╛дЗ©иртй╧сцкЭ©ьжф Plucker║ё "\
+    "дЗ╩╧©иртм╗╧Щйжп╢ Graffiti вж╥Ш©ьжф Plucker║ё"\
+    "\n\n"\
+    "∙ ©и╢Рс║вж╥Шё╛хГ 'a' ╩Р '$' ©иртм╗╧Щ╪Эел╩Рйжп╢ "\
+    "ж╠╫сйДхК╣╫╤╗жф╠М╣╔ё╛ х╩╨СдЗ╬м©иртя║тЯоЮс╕╣д╡ывВ║ё"\
+    "\n\n"\
+    "∙ льйБ╪ЭхГ 'Return' ╩Р╥╫оР╪Щм╥пХр╙╢собю╜ап╠Мжп "\
+    "лТя║ё╛ х╩╨СдЗ╬м©иртя║тЯоЮс╕╣д╡ывВ║ё"\
+    "\n\n"\
+    "∙ хГ╧ШдЗря╬╜тз Plucker ╣дф╚╨циХ╤╗жп╡исцак╠й╩╝©ьжф"\ 
+    "спп╘вж╥Ш/╟╢╪Э╫╚╡╩фПвВсц║ё "\
+    "ль╠Пйг i, I, 1, l, L, ╣Ц╨е╨ммк╦Я╪Э/вж╥Шрт╪╟р╩п╘ Graffiti в╙рЕвж╥Ш "\
+    "хГ╧Ш╡╩╫Шж╧╠й╩╝©ьжф╬мнч╥╗й╧сц║ё"\
+    "\n\n"\
+    "∙ дЁп╘вж╥ШсК Graffiti 2 йДхК╥╗╡╩╪Фхщ║ё  хГ╧ШдЗоёмШ"\
+    "тзуБюО╤╗жфсц Graffiti 2 йДхК©ьжф Pluckerё╛гК╡╩р╙ "\
+    "╟я╤╞вВ╤╗рЕтз╤Ю╠й╩╝╣двж╥Шио║ё аМмБё╛ хГ╧Шсц Graffiti 2 "\
+    "тз Plucker юОйДхК╤Ю╠й╩╝╣двж╥Шё╛ ╤Ьl, ©у╦Я, ╣╔рЩ╨е, ╪У╨е╩Рмк╦Я╪Эио "\
+    "ря╬╜╤╗рЕак©ьжф╡ывВй╠ё╛ ©идэ╥╒иЗрБмБ╣д╫А╧Ш║ё"
+
+
+"$$KEY: RETURN"                     =   "Return"
+"$$KEY: TAB"                        =   "Tab"
+"$$KEY: UP"                         =   "ио"
+"$$KEY: DOWN"                       =   "об"
+"$$KEY: LEFT"                       =   "вС"
+"$$KEY: RIGHT"                      =   "ср"
+"$$KEY: BACKSPACE"                  =   "Backspace"
+
+
+/*** SELECTION ***/
+
+"$$SELECT: ADD BOOKMARK..."        =   "лМ╪сйИг╘..."
+"$$SELECT: AUTOSCROLL FASTER"      =   "вт╤╞╧ЖрЁ╪с©Л"
+"$$SELECT: AUTOSCROLL SLOWER"      =   "вт╤╞╧ЖрЁ╪У╩╨"
+"$$SELECT: BOOKMARKS..."           =   "╡И©╢йИг╘..."
+"$$SELECT: BUTTON ACTION..."       =   "╟╢е╔╤╞вВ..."
+"$$SELECT: DELETE DOC..."          =   "и╬ЁЩнд╣╣..."
+"$$SELECT: DETAILS..."             =   "оЙо╦пео╒..."
+"$$SELECT: FIND AGAIN"             =   "ты╢ня╟ур"
+"$$SELECT: FIND..."                =   "я╟ур..."
+"$$SELECT: FULL PAGE DOWN"         =   "оРобуШрЁ"
+"$$SELECT: FULL PAGE UP"           =   "оРиоуШрЁ"
+"$$SELECT: GESTURE ACTION..."      =   "╠й╩╜╤╞вВ..."
+"$$SELECT: GO BACK"                =   "╨Смк"
+"$$SELECT: GO FORWARD"             =   "г╟╫Ь"
+"$$SELECT: GO HOME"                =   "╣╫жВрЁ"
+"$$SELECT: GO TO BOTTOM"           =   "╣╫д╘н╡"
+"$$SELECT: GO TO TOP"              =   "╣╫©╙м╥"
+"$$SELECT: HALF PAGE DOWN"         =   "оРоб╟КрЁ"
+"$$SELECT: HALF PAGE UP"           =   "оРоб╟КрЁ"
+"$$SELECT: LIBRARY..."             =   "м╪йИ©Б..."
+"$$SELECT: NONE"                   =   "ц╩сп"
+"$$SELECT: PREFERENCES..."         =   "ф╚╨циХ╤╗..."
+"$$SELECT: TAP ACTION..."          =   "╣Ц╩В╤╞вВ..."
+"$$SELECT: TOGGLE AUTOSCROLL"      =   "©╙╧ьвт╤╞╧ЖрЁ"
+"$$SELECT: COPY TO MEMO"           =   "╣╪ЁЖ╣╫╪гйб╠╬"
+"$$SELECT: GO TO LINK"             =   "╫ЬхКа╢╫с"
+"$$SELECT: NEXT ANCHOR"            =   "обр╩╦Жц╙н╩"
+"$$SELECT: PREV ANCHOR"            =   "г╟р╩╦Жц╙н╩"
+"$$SELECT: SELECT FONT..."         =   "вжлЕ╨м╟Фй╫..."
+"$$SELECT: COMMAND STROKE"         =   "цЭаН╠й╩╝"
+"$$SELECT: MENU..."                =   "╡к╣╔..."
+"$$SELECT: TOGGLE TOOLBAR"         =   "©╙╧ь╧╓╬ълУ"
+"$$SELECT: TOGGLE FULLSCREEN"      =   "©╙╧ьх╚фад╩"
+"$$SELECT: ONE LINE UP"            =   "оРиор╩пп"
+"$$SELECT: ONE LINE DOWN"          =   "оРобр╩пп"
+"$$SELECT: ADJUST BRIGHTNESS"      =   "аа╤х..."
+"$$SELECT: ADJUST CONTRAST"        =   "╤т╠х..."
+"$$SELECT: TOGGLE BACKLIGHT"       =   "©╙╧ь╠Ё╧Б"
+"$$SELECT: ROTATE RIGHT"           =   "оРсрпЩв╙"
+"$$SELECT: ROTATE LEFT"            =   "оРвСпЩв╙"
+"$$SELECT: SAVE POSITION"          =   "╠ё╢Фн╩жц"
+"$$UNSUPPORTED"                    =   "нчж╖Ёж╣д╤╞вВ"
+/*********************************************************************/
+"$$SELECT: LOOKUP WORD IN PPI"     =   "PPI select word"
+"$$SELECT: LOOKUP TO SEARCH FORM"  =   "Search select word"
+"$$SELECT: LOOKUP TO CLIPBOARD"    =   "Clipboard select word"
+"$$SELECT: LOOKUP TO ANNOTATE"     =   "Annotate select word"
+/*********************************************************************/
+
+
+/*** DETAILS ***/
+
+"$$DETAILS: CANCEL"                 =   "х║оШ"
+"$$DETAILS: COPY URL"               =   "╦╢жф URL"
+"$$DETAILS: OK"                     =   "х╥хо"
+"$$DETAILS: READ"                   =   "╤а╧Щ"
+"$$DETAILS: SHOW IMAGES"            =   "отй╬м╪оЯ"
+"$$DETAILS: STATUS:"                =   "в╢л╛:"
+"$$DETAILS: TITLE"                  =   "оЙо╦пео╒"
+"$$DETAILS: UNREAD"                 =   "н╢╤а"
+"$$DETAILS: URL:"                   =   "URL:"
+"$$DETAILS: HELP"                   =
+    "?дЗ©ирт╦д╠Др╩╦Жнд╣╣╣дв╢л╛, хцкЭотй╬Ёи "\
+    "ц╩сп╤а╧Щ (╪╢сцй╣оъ╠Мй╬)."\
+    "\n\n"\
+    "?хГ╧Ш╧ь╠ум╪оЯ, рЁцФиокЫсп╣дм╪оЯ╫╚╡╩отй╬."
+
+
+/*** SEARCH ***/
+
+"$$FIND: CANCEL"                    =   "х║оШ"
+"$$FIND: CASE SENSITIVE"            =   "гЬ╥ж╢Сп║п╢"
+"$$FIND: FIND:"                     =   "╡Иур:"
+"$$FIND: IN ALL PAGES"              =   "тзкЫспрЁ"
+"$$FIND: IN PAGE"                   =   "тзж╦╤╗рЁ"
+"$$FIND: OK"                        =   "х╥хо"
+"$$FIND: TITLE"                     =   "Plucker ╡Иур"
+"$$FIND: DOWN IN DOC"               =   "тзнджпоРоб"
+"$$FIND: SUB PAGES"                 =   "всрЁцФ"
+"$$FIND: PHRASE"                    =   "╤лсО"
+"$$FIND: NO TRANSLITERATION"        =   "╡╩рТрК"
+"$$FIND: NON-ASCII TO PERIOD"       =   "╥г-ASCII ╠Д╬Д╨е"
+"$$FIND: DROP LATIN 1 ACCENTS"      =   "евфЗ Latin 1 жьрТ╥Ш"
+"$$FIND: HELP"                      =
+    "∙ ╣Ц╟╢кякВгЬср╠ъ╣дм╪╠Йё╛ дЗ╩А╥╒ожвН╫ЭкякВ╧Щ╣двж╥Ш╢╝ё╛ "\
+    "дЗ©ирт╢сфДжпя║тЯр╩╦Ж║ё"\
+    "\n\n"\
+    "∙ дЗ©иртж╦╤╗кякВ╥╤н╖ё╨╣╠г╟рЁё╛ уШ╦Жнд╣╣ё╛ ╢с╣╠г╟н╩жц╣╫нд╣╣╫АйЬё╛ "\
+    "╩РвсрЁцФ (©М╤хсеох╠ИюЗ)."\
+    "\n\n"\
+    "∙ хГ╧ШдЗ╣дсОятсп╢Сп║п╢ё╛ дЗ©иртя║тЯйг╥ЯтзкякВжпгЬ╥ж╢Сп║п╢║ё"\
+    "\n\n"\
+    "∙ хГ╧Шя║╤╗╤лсОкякВё╛ кякВ╫А╧Ш╠ьпКв╪х╥╣дф╔еДкякВвж╥Ш╢╝╣д "\
+    "х╚╡©дзхщё╛ ╟Эю╗©у╦Я║ё"\
+    "\n\n"\
+    "∙ хГ╧Ш╧ь╠у╤лсОкякВё╛ кякВвж╥Ш╢╝жп©у╦Я╥ж╦Т╣д╦В╦Ж╡©╥жё╛ ╠ьпК"\
+    "х╚ЁЖожтзм╛р╩╤нбДжп║ё  рР╢кё╛╪ыиХ "\
+    "дЗ╣дкякВвж╥Ш╢╝йг  'Big bad wolf' (ц╩спрЩ╨е), "\
+    "дЗ╬м╩Аур╣╫фДжп╟Эю╗ 'Big', 'bad' ╨м 'wolf' ╣дкЫсп╤нбДё╛ "\
+    "╣╚╡╩р╩╤╗йг╟╢уууБяЫ╣д╢нпРё╛ р╡©идэйгфДкШ╣╔╢й╣др╩╡©╥ж║ё"\
+    "\n\n"\
+    "∙ ╣╠дЗ╡Л©╢╫А╧Шй╠ё╛ ж╩сп╣зр╩╦Жф╔еД╣длУ╪Ч╩Ам╩ЁЖотй╬║ё"\
+    "\n\n"\
+    "∙ хГ╧Ш╧ь╠у╤лсОкякВё╛дЗйДхК╣дкякВлУ╪Чж╩спг╟й╝╦Жспсцё╛ "\
+    "╤ЮсЮ╣длУ╪Ч╩А╠╩╨Жбт║ё"\
+    "\n\n"\
+    "∙ н╙аквН©Л╣дкякВё╛╧ь╠у╤лсОкякВй╠гК╟явНль╠П╣длУ╪Ч╥етз╣зр╩н╩║ё "\
+    "\n\n"\
+    "∙ кякВж╝г╟ё╛дЗ©иртя║тЯйг╥Я╤т╥гс╒нднд╠╬╫ЬппрТрК║ё"\
+    "юЩхГё╛дЗ©ирт╟якЫсп╥г-ASCII вж╥Ш (хГ 'Э') в╙╩╩Ёи╬Д╨е║ё дЗ©ирт "\
+    "х║оШ Latin 1вж╥Ш╣джьрТ╥Ш╨е║ёуБяЫ 'u-umlaut'╩А╠ДЁи 'u'║ё"\
+    "уБр╡╩Ас╟оЛфДкШ╥г-ASCII хГ╩╗й╫рЩ╨её╛╟якЭ╠ДЁивН╫с╫Э╣д ASCII ╤тс╕║ё "\
+    "сисздЗ╣дкякВлУ╪Чтзй╧сцг╟р╡╬╜╧ЩрТрКё╛уБ╦Ж╧╕дэ╩Ы╠╬иой╣ожак"\
+    "╡╩гЬ╥жжьрТ╥Ш╨е╣дкякВ║ё"
+
+
+/*** SEARCH RESULT ***/
+
+"$$RESULT: CANCEL"                  =   "х║оШ"
+"$$RESULT: FINDMORE"                =   "╪лпЬ╡Иур"
+"$$RESULT: MATCHES"                 =   "ф╔еД"
+"$$RESULT: NOMATCHES"               =   "ц╩спф╔еД"
+"$$RESULT: SEARCHING..."            =   "уЩтз╡Иур..."
+"$$RESULT: STOP"                    =   "мёж╧"
+"$$RESULT: TITLE"                   =   "Plucker ╡Иур"
+
+
+/*** EMAIL ***/
+
+"$$EMAIL: CANCEL"                   =   "х║оШ"
+"$$EMAIL: CC:"                      =   "Cc:"
+"$$EMAIL: SEND"                     =   "╥╒кмсй╪Ч"
+"$$EMAIL: SUBJECT:"                 =   "жВлБ:"
+"$$EMAIL: TITLE"                    =   "Plucker Email"
+"$$EMAIL: TO:"                      =   "To:"
+
+
+/*** ADD BOOKMARK ***/
+
+"$$ADD BOOKMARK: ADD"               =   "лМ╪с"
+"$$ADD BOOKMARK: CANCEL"            =   "х║оШ"
+"$$ADD BOOKMARK: NAME:"             =   "цШЁф:"
+"$$ADD BOOKMARK: TITLE"             =   "лМ╪сйИг╘"
+
+
+/*** BOOKMARK ***/
+
+"$$BOOKMARKS: DELETE"               =   "и╬ЁЩ"
+"$$BOOKMARKS: DONE"                 =   "мЙЁи"
+"$$BOOKMARKS: GO TO"                =   "в╙╣╫"
+"$$BOOKMARKS: TITLE"                =   "йИг╘"
+
+
+/*** EXTERNAL LINKS ***/
+
+"$$EXTERN: BACK"                    =   "╥╣╩ь"
+"$$EXTERN: COPY URL"                =   "╦╢жф URL"
+"$$EXTERN: LABEL1"                  =   "╠╖г╦, Plucker н╢дэобть"
+"$$EXTERN: LABEL2"                  =   "дЗя║тЯ╣да╛╫с."
+"$$EXTERN: LABEL3"                  =   "кЭсп©идэйгр╩╦ЖмБ╡©╣дмЬу╬,"
+"$$EXTERN: LABEL4"                  =   "╩Руъ,"
+"$$EXTERN: LABEL5"                  =   "Ё╛╧ЩакдЗж╦╤╗╣добтьиН╤х"
+"$$EXTERN: LABEL6"                  =   "╣дочжф."
+"$$EXTERN: TITLE"                   =   "мБ╡©а╛╫с"
+"$$EXTERN: NO URL"                  =   "ц╩сп URL пео╒"
+"$$EXTERN: URL:"                    =   "URL:"
+"$$EXTERN: BROWSE ONLINE"           =   "тзоъД╞юю"
+
+
+/*** CATEGORY ***/
+
+"$$CATEGORY: ALL"                   =   "х╚╡©"
+"$$CATEGORY: AND"                   =   "AND"
+"$$CATEGORY: CANCEL"                =   "х║оШ"
+"$$CATEGORY: DELETE"                =   "и╬ЁЩ"
+"$$CATEGORY: MULTIPLE SELECT"       =   "╤Южья║тЯ"
+"$$CATEGORY: NONE"                  =   "ц╩сп"
+"$$CATEGORY: OK"                    =   "х╥хо"
+"$$CATEGORY: OR"                    =   "OR"
+"$$CATEGORY: RENAME"                =   "╦дцШ"
+"$$CATEGORY: TITLE"                 =   "юЮ╠П"
+"$$CATEGORY: UNFILED"               =   "н╢╥жюЮ"
+"$$CATEGORY: HELP"                  =
+    "?╣Ц╩ВспюЮ╠ПцШЁф╣д╟╢╪Э, ©иртгп╩╩рЧ╡ь╩Руъотй╬ "\
+    "уБ╦ЖюЮ╠П."\
+    "\n\n"\
+    "?я║жп╤ЮоНя║тЯ╥╫©И╫╚тйпМм╛й╠отй╬ "\
+    "Ё╛╧Щр╩╦ЖюЮ╠П."\
+    "\n\n"\
+    "?р╙лМ╪спбюЮ╠П, ╣Ц╩Вр╩╦Ж©у╣д╟╢╪Э.  "\
+    "йИпнм╪╠Йсцсзи╬ЁЩюЮ╠П╩Р╦ЬюЮ╠П╦дцШ."\
+    "\n\n"\
+    "?хГ╧ШдЗи╬ЁЩакр╩╦ЖюЮ╠ПцШвж, т╜ю╢╥жюЮтзуБ╦ЖюЮ╠Пжп╣днд╣╣ "\
+    "╫╚╠ДЁинч╥жюЮ╣днд╣╣."\
+    "\n\n"\
+    "?р╙╨о╡╒╡╩м╛юЮ╠Пжп╣днд╣╣. ╬м╟яфДжпр╩╦ЖюЮ╠П╦дцШЁи╨м "\
+    "аМмБ╣дюЮ╠ПоЮм╛."
+
+
+/*** NEW CATEGORY ***/
+
+"$$EDIT CATEGORIES: CANCEL"         =   "х║оШ"
+"$$EDIT CATEGORIES: NAME:"          =   "йДхКпбюЮ╠П:"
+"$$EDIT CATEGORIES: OK"             =   "х╥хо"
+"$$EDIT CATEGORIES: TITLE"          =   "╠Ю╪╜юЮ╠П"
+
+
+/*** INITIALIZING CATEGORY ***/
+
+"$$INITDOC: SYNCHRONIZING"          =   "м╛╡╫нд╣╣"
+"$$INITDOC: OPEN DOC LIST"          =   "╢Р©╙нд╣╣гЕ╣╔"
+
+
+/*** SORT DOCUMENTS ***/
+
+"$$SORTDOC: SORTING..."             =   "уЩтзеепР..."
+
+
+/*** HARDCOPY ***/
+
+"$$HARDCOPY: TITLE"                 =   "╣╪ЁЖ╣╫╪гйб╠╬"
+"$$HARDCOPY: CANCEL"                =   "х║оШ"
+"$$HARDCOPY: EXPORT"                =   "╣╪ЁЖ"
+"$$HARDCOPY: ROT13"                 =   "Rot13"
+
+/*** ANNOTATION ***/
+
+/*************************************************************/
+"$$ANNOTATION: TITLE"                 =   "Annotate"
+"$$ANNOTATION: OK"                    =   "OK"
+"$$ANNOTATION: CANCEL"                =   "Cancel"
+"$$ANNOTATION: DELETE"                =   "Delete"
+/*************************************************************/
+
+
+
+/*** EXPORT LINK TO MEMO ***/
+
+"$$EXPORT: EXPORTING LINK..."       =   "уЩтз╣╪ЁЖа╢╫с..."
+
+
+/*************************************************************
+ *                         ALERTS                            *
+ *************************************************************/
+
+/*** COMMON STRINGS ***/
+
+"$$CANCEL"                  =   "х║оШ"
+"$$DELETE"                  =   "и╬ЁЩ"
+"$$NO"                      =   "╥Я"
+"$$OK"                      =   "х╥╤╗"
+"$$YES"                     =   "йг"
+"$$EXIT"                    =   "мкЁЖ"
+"$$LEAVE"                   =   "юК©╙"
+"$$NEXT"                    =   "обр╩рЁ"
+"$$RESTART"                 =   "жьпб©╙й╪"
+
+
+/*** INFORMATION ***/
+
+"$$SYSTEM INCOMPATIBLE"     =   "╡╩╪Фхщ╣до╣мЁ"
+"$$SYSTEM MSG"              =   "пХр╙ PalmOS 2.0 ртио╡едэ "\
+                                "ткппуБ╦ЖЁлпР."
+
+"$$HIGH BITDEPTH"           =   "╡╩дэотй╬м╪пн"
+"$$HIGH BITDEPTH MSG"       =   "уБ╦ЖиХ╠╦╡╩ж╖ЁжпХр╙╣ди╚╡йиН╤х."
+
+"$$EMPTY PATTERNS"          =   "ц╩сп╡ИуроН"
+"$$EMPTY PATTERNS MSG"      =   "ртг╟╣д╡ИуроН╡╩╢Фтз."
+
+"$$NO BEAM SUPPORT"         =   "╡╩ж╖Ёж╥╒иД"
+"$$NO BEAM SUPPORT MSG"     =   "иХ╠╦╡╩ж╖Ёж╨ЛмБ╥╒иД"
+
+"$$COPY PROTECTED"          =   "нч╥╗╥╒иД"
+"$$COPY PROTECTED MSG"      =   "╡╩дэ╥╒иДсп╦╢жф╠ё╩╓╣днд╣╣."
+
+
+/*** CONFIRMATION ***/
+
+/*******************************************************************************/
+"$$DELETE OLD ANNOTATIONS"  =   "Out of date annotations"
+"$$DELETE OLD ANNOTATIONS MSG" =  "The annotations / bookmarks are older than "\
+                                  "the document.  Do you want to delete them now to "\
+                                  "prevent possible problems?"
+"$$DO NOT ASK"                 =  "Never"
+"$$DELETE ANNOTATIONS"         = "Delete annotations"
+"$$DELETE ANNOTATIONS MSG"     = "Do you want to delete the annotations and bookmarks for ^1?"
+"$$ALWAYS"                     = "Always delete"
+/*******************************************************************************/
+
+"$$CONFIRM DELETE"          =   "х╥хои╬ЁЩ"
+"$$DELETE MSG"              =   "сю╬ц╣ди╬ЁЩ ^1?"
+
+"$$CONFIRM DELETE METADOC"  =   "х╥хои╬ЁЩт╙нд╣╣"
+"$$DELETE METADOC MSG"      =   "м╛й╠и╬ЁЩ ^1 ╣дт╙нд╣╣?"
+
+"$$CONFIRM DELETE ALL"      =   "х╥хох╚╡©и╬ЁЩ"
+"$$DELETE ALL MSG"          =   "я║жп╣дюЮ╠Пжп╣дх╚╡©нд╣╣╫╚╠╩"\
+                                "сю╬ци╬ЁЩ, р╙╪лпЬбП?"
+
+"$$CONFIRM DELETE READ"     =   "х╥хои╬ЁЩ╤а╧Щнд╣╣"
+"$$DELETE READ MSG"         =   "тзя║жп╣дюЮ╠Пжпи╬ЁЩ "\
+                                "╤а╧Щ╣днд╣╣?"
+
+"$$MERGE CATEGORY"          =   "╨о╡╒юЮ╠П"
+"$$MERGE CATEGORY MSG"      =   "дЗр╙гС╟яюЮ╠П╦дцШн╙аМр╩╦Ж "\
+                                "ря╬╜╢Фтз╣дюЮ╠П. уБ╫╚╨о╡╒ "\
+                                "а╫╦ЖюЮ╠П. р╙╪лпЬбП?"
+
+"$$END OF PAGE MSG"          =  "╣╫╢ОрЁцФ╫Ан╡║ё кякВобр╩рЁ╩╧йг "\
+                                "╩ь╣╫©╙й╪╪лпЬкякВ?"
+
+"$$END OF DOC MSG"          =   "╣╫╢ОрЁцФ╫Ан╡║ё ╩ь╣╫©╙й╪╪лпЬкякВ?"
+
+
+/*** WARNING ***/
+
+"$$BROKEN DOCUMENT"         =   "╢МнС╣д Plucker нд╣╣!"
+"$$BROKEN MSG"              =   "нд╣╣ ^1 жпх╠иыжьр╙╣д╪гб╪.\n"\
+                                "гКжьпбм╛╡╫уБ╦Жнд╣╣."
+
+"$$INSUFFICIENT MEMORY"     =   "дз╢Ф╡╩вЦ"
+"$$INSUFFICIENT MSG"        =   "ц╩спвЦ╧╩дз╢Фю╢у╧©╙я╧кИнд╪Ч. "\
+                                "дЗпХр╙йм╥е╦Э╤Ю╣д RAM ©у╪Д."
+
+"$$LOW MEMORY"              =   "дз╢Ф╣м"
+"$$EMAIL MEMORY MSG"        =   "дЗ©идэц╩спвЦ╧╩╣ддз╢Фю╢п╢пб╣д "\
+                                "e-mail. гКйм╥ер╩п╘ RAM ©у╪Д "\
+                                "╩Руъ╟ядЗ╣дсй╪Чп╢╣ц╬║а©╪Р╤л."
+"$$IMAGE MEMORY MSG"        =   "ц╩спвЦ╧╩╣д╤╞л╛дз╢Фю╢отй╬м╪оЯ."
+
+"$$NO TOADDR"               =   "тзTo: ю╦д©юОц╩сп╣ьж╥"
+"$$NO TOADDR MSG"           =   "дЗ╠ьпКтзTo: ю╦д©юОлНп╢р╩╦Ж╣Гвссй╪Ч╣ьж╥"
+
+"$$ZLIB NOT SUPPORTED"      =   "╡╩ж╖Ёж ZLib"
+"$$ZLIB MSG"                =   "уБ╦ЖиХ╠╦╡╩дэ╢╕юМ ZLib я╧кУ╣днд╣╣"
+
+"$$IMAGE COMPRESSION"       =   "╡╩ж╖Ёжя╧кУ"
+"$$COMPRESSION MSG"         =   "уБ╦ЖиХ╠╦╡╩дэ╢╕юМ Palm OS м╪оЯя╧кУ. "\
+                                "нч╥╗отй╬уБ╦Жнд╣╣жп╣дм╪оЯ."
+
+"$$AUTOSCROLL STAY ON"      =   "вт╤╞╧ЖрЁ╡╩╧ь╩З"
+"$$STAY ON MSG"             =   "уБ╦Жя║оНвХж╧вт╤╞╧ь╩З,  "\
+                                "й╧вт╤╞╧ЖрЁ©иртр╩ж╠ткпп, "\
+                                "ж╠╣╫дЗ╣Ц╩Вфад╩,  ╟╢об╣Гт╢е╔, "\
+                                "╩Р╣╫╢ОрЁцФ╫Ан╡╡е╩ж╦╢вт╤╞╧ь╩З "\
+                                "иХжц."
+
+"$$INVALID OWNER"           =   "дЗ╡╩йгуБ╦Жнд╣╣╣джВхк!"
+"$$INVALID OWNER MSG"       =   "иХ╠╦╣дсц╩╖цШсКнд╣╣ '^1'"\
+                                "╣г╪г╣джВхк╡╩╥Ш.  "\
+                                "ж╩сп╣г╪г╣дсц╩╖╡едэ╢Р©╙уБ╦Ж"\
+                                "нд╣╣."
+
+"$$MANUAL SYNC"             =   "╦Эпбнд╣╣гЕ╣╔"
+"$$MANUAL SYNC MSG"         =   "уБ╦Жя║оН╫Шж╧вт╤╞╦Эпбнд╣╣гЕ╣╔║ё "\
+                                "тзм╪йИ©БюОя║тЯ '╦Эпбнд╣╣гЕ╣╔' ╧╕дэ "\
+                                "©иртйж╤╞╦Эпбнд╣╣гЕ╣╔║ё"
+
+
+
+/*** ERROR ***/
+
+"$$NO CATEGORY"             =   "ц╩спя║тЯюЮ╠П"
+"$$NO CATEGORY MSG"         =   "гКжаиыя║тЯр╩╦ЖюЮ╠П"
+
+"$$CATEGORY NAME"           =   "юЮ╠ПцЭцШ"
+"$$CATEGORY NAME MSG"       =   "цШн╙ ^1 ╣дюЮ╠Пря╬╜╢Фтз. "\
+                                "гК╡исц╡╩м╛╣дцЭцШ."
+
+"$$CANNOT DELETE"           =   "╡╩дэи╬ЁЩ"
+"$$CANNOT DELETE MSG"       =   "╡╩дэи╬ЁЩнд╣╣!"
+
+"$$CANNOT DELETE ALL"       =   "╡╩дэх╚╡©и╬ЁЩ"
+"$$CANNOT DELETE ALL MSG"   =   "╡╩дэи╬ЁЩх╚╡©нд╣╣!"
+
+"$$CANNOT DELETE READ"      =   "╡╩дэи╬ЁЩря╤анд╣╣"
+"$$CANNOT DELETE READ MSG"  =   "╡╩дэи╬ЁЩря╬╜╤а╧Щ╣днд╣╣!"
+
+"$$BAD MAILTO"              =   "Mailto ╢МнС"
+"$$BAD MAILTO MSG"          =   "уБ╦Ж mailto ╪гб╪сп╢МнС. "\
+                                "нч╥╗ур╣╫ж╦╤╗╣д e-mail ╣ьж╥!"\
+                                "\n\n"\
+                                "гКм╗ж╙ Plucker ©╙╥╒вИ\."
+
+"$$ALREADY EXISTS"          =   "цШн╙ ^1 ╣днд╣╣ря╬╜╢Фтз."
+
+"$$READ ONLY"               =   "ж╩╤а╣днд╣╣"
+"$$READ ONLY MSG"           =   "нд╣╣йгж╩╤а╣д, ╡╩дэ╦дцШ."
+
+"$$UNKNOWN TYPE"            =   "н╢ж╙юЮпм"
+"$$UNKNOWN TYPE MSG"        =   "нд╣╣жп╣дн╢ж╙юЮпм"
+
+"$$CANNOT RENAME DOC"       =   "╡╩дэ╦Э╦днд╣╣цШЁф!"
+
+"$$CANNOT FIND DOC"         =   "╡╩дэур╣╫нд╣╣"
+"$$CANNOT FIND DOC MSG"     =   "тздз╢Ф╨мю╘у╧©╗жп╤╪ц╩спур╣╫нд╣╣!"
+
+"$$UNHANDLED EXCEPTION"     =   "нч╥╗╢╕юМ╣дрЛЁё"
+"$$UNHANDLED EXCEPTION MSG" =   "Unhandled exception, error code = ^1"
+
+"$$CANNOT ADD BOOKMARK"     =   "╡╩дэлМ╪сйИг╘"
+"$$CANNOT ADD BOOKMARK MSG" =   "лМ╪с '^1'й╖╟э"
+
+"$$CANNOT DELETE BOOKMARK"     =   "╡╩дэи╬ЁЩйИг╘"
+"$$CANNOT DELETE BOOKMARK MSG" =   "и╬ЁЩ '^1' й╖╟э"
+
+"$$IMAGE ERROR"             =   "м╪оЯ╢МнС"
+"$$IMAGE ERROR MSG"         =   "отй╬м╪оЯй╠╥╒иЗ╢МнС║ё"\
+                                "©идэ Plucker ╟ядз╢ФсцмЙак║ё"
+
+
+END
+

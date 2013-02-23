@@ -1,0 +1,91 @@
+
+             Plucker Bug Report Form
+             =======================
+
+If you think you have found a bug please fill out this 
+form and send it to plucker-bugs@rubberchicken.org 
+
+- or -
+
+Go to http://bugs.plkr.org and file a bug report.
+
+
+1. Before reporting this bug I did:
+[ ] read the NEWS, README, INSTALL and FAQ files
+[ ] downloaded and tried the latest version of Plucker
+
+
+2. What happened:
+[ ] could not compile
+[ ] could not install
+[ ] crashed
+[ ] cosmetic
+[ ] others: ...................................
+
+
+3. Detailed description of what happened:
+
+
+4. How to reproduce the bug, if known (if you have a PDB 
+   that can be used then that can be very helpful for 
+   tracking down errors in the Palm application):
+
+
+5. Configure options you specified:
+[ ] --with-docdir=.....
+[ ] --with-pluckerdir=.....
+[ ] --with-pypluckerdir=.....
+[ ] --enable-java-distiller
+[ ] --with-classpath=.....
+[ ] --with-comicsdir=.....
+[ ] --with-nlsdir=.....
+[ ] --disable-docbuild
+[ ] --disable-palmosbuild
+[ ] --with-category=.....
+[ ] --with-thought-bubble
+[ ] --with-errorchecklevel=.....
+[ ] --enable-gesture-debug
+[ ] --enable-debug-log
+[ ] --disable-scroll-to-bottom
+[ ] --with-handera=.....
+[ ] --with-sony=.....
+[ ] --with-zlib=.....
+[ ] --disable-desktopbuild
+[ ] --disable-unpluck
+[ ] --disable-explode
+[ ] --disable-gtkviewer
+
+[ ] others:.............
+
+
+6. The error occurred during:
+[ ] configuration
+[ ] compilation
+[ ] installation
+[ ] parsing of a web page (URL: .......)
+[ ] use of Palm application
+
+
+7a. Changes made to the configuration file (.pluckerrc/plucker.ini), 
+    if the error occurred during parsing of web pages:
+
+
+7b. Changes made to the Preference, if the error occurred during use 
+    of Palm application:
+
+
+8. Error messages output:
+
+
+9. Fix, if known:
+
+
+10. Other Notes:
+
+Operating System: .................. Version: .......
+Distribution (if applicable): ..................... Version:..........
+
+Palm OS version: .....................
+Plucker version: .....................
+Python version: ...................... 
+

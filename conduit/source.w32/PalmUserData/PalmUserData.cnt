@@ -1,0 +1,18 @@
+:Base PalmUserData.hlp
+:Title TPalmUserData
+1 Overview
+2 Introduction=Introduction
+2 Using TPalmUserData=Using
+2 Revision History=History
+2 Copyright Information=Copyright
+1 TPalmUserData
+2 TPalmUserData=TPalmUserData
+2 Create=Create
+2 Destroy=Destroy
+2 GetLastUserNumber=GetlastUserNumber
+2 GetNumUsers=GetNumUsers
+2 GetPalmDesktopPath=GetPalmDesktopPath
+2 GetUserMagic=GetUserMagic
+2 GetUserName=GetUserName
+2 GetUserSubDir=GetUserSubDir
+2 InstallUser=InstallUser

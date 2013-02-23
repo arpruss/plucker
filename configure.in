@@ -1,0 +1,501 @@
+dnl
+dnl $Id: configure.in,v 1.115 2007/06/28 18:16:24 desrod Exp $
+dnl
+dnl Plucker autoconf input
+dnl
+dnl
+
+AC_PREREQ(2.13)
+AC_INIT(unix/install-plucker)
+
+PACKAGE=plucker
+
+VERSION="2005-02-07-cvs"
+
+AC_SUBST(PACKAGE)
+AC_SUBST(VERSION)
+
+
+
+dnl ================
+dnl Setup the prefix
+dnl ================
+if test "X${prefix}" = "XNONE"; then
+    prefix=/usr/local
+fi
+if test "X${exec_prefix}" = "XNONE"; then
+    exec_prefix=$prefix
+fi
+bindir=`eval echo $bindir`
+libdir=`eval echo $libdir`
+datadir=`eval echo $datadir`
+sysconfdir=`eval echo $sysconfdir`
+
+
+dnl ===============================
+dnl        Build options
+dnl ===============================
+BUILD_MANUAL=yes
+BUILD_DESKTOP=yes
+BUILD_GTKVIEWER=yes
+
+OUTPUT_FILES="Makefile unix/setup.py parser/Makefile parser/python/Makefile parser/python/PyPlucker/Makefile parser/python/PyPlucker/__init__.py docs/Makefile tools/Makefile tools/pluck-comics/Makefile tools/pluck-comics/pluck-comics.py viewer-GTK+2-POSIX/Makefile"
+
+dnl ===============================
+dnl        General programs
+dnl ===============================
+
+AC_PROG_RANLIB
+AC_PROG_INSTALL
+AC_PROG_CC
+AC_PROG_CXX
+
+dnl ===============================
+dnl      Python Distiller Section
+dnl ===============================
+
+AC_PATH_PROG(PYTHON, python)
+if test "X$PYTHON" = "X"; then
+    AC_MSG_ERROR("Unable to find python")
+fi
+AC_MSG_CHECKING("Python version")
+PYTHON_MAJOR_LIBVER=[`$PYTHON -c "\
+import sys, string
+print string.splitfields(string.splitfields(sys.version, ' ')[0], '.')[0]"`]
+PYTHON_MINOR_LIBVER=[`$PYTHON -c "\
+import sys, string
+print string.splitfields(string.splitfields(sys.version, ' ')[0], '.')[1]"`]
+PYTHON_MINOR_MINOR_VER=[`$PYTHON -c "\
+import sys, string
+fields = string.splitfields(string.splitfields(sys.version, ' ')[0], '.')
+if (len(fields) > 2) and (fields[2][0] in '0123456789'):
+  print fields[2][0]
+else:
+  print '0'"`]
+AC_MSG_RESULT("$PYTHON_MAJOR_LIBVER.$PYTHON_MINOR_LIBVER.$PYTHON_MINOR_MINOR_VER")
+if test $PYTHON_MAJOR_LIBVER -gt 1 -o $PYTHON_MINOR_LIBVER -gt 5 -o \( $PYTHON_MINOR_LIBVER -eq 5 -a $PYTHON_MINOR_MINOR_VER -ge 2 \); then
+  PYTHON_LIBDIR=[`$PYTHON -c "import sys, os; print os.path.join(os.path.join(sys.prefix, 'lib'),'python%s.%s' % ($PYTHON_MAJOR_LIBVER, $PYTHON_MINOR_LIBVER))"`]
+else
+  AC_MSG_ERROR(["Python version too low -- at least 1.5.2 is required."])
+fi
+AC_SUBST(PYTHON_LIBDIR)
+
+dnl ===============================
+dnl     Java Distiller Section
+dnl ===============================
+
+AC_ARG_ENABLE(java-distiller, [  --enable-java-distiller build the Java version of the distiller [yes]], build_java_distiller=$enableval, build_java_distiller=yes)
+
+JAVA_DISTILLER_TARGET=
+JAVA_HOME=
+: ${CLASSPATH=.}
+
+if test "$build_java_distiller" = "no" ; then
+  AC_MSG_RESULT([Java distiller will not be built, by request])
+else
+  AC_ARG_WITH(classpath, [  --with-classpath=CLASSPATH], JAVA_CLASSPATH=$with_classpath, JAVA_CLASSPATH=$CLASSPATH)
+  AC_PATH_PROG(JAVA, java)
+  AC_PATH_PROG(JAVAC, javac)
+  AC_PATH_PROG(JYTHON, jython)
+  AC_PATH_PROG(JYTHONC, jythonc)
+  AC_PATH_PROG(JAR, jar)
+  if test "x$JAVA" = "x" -o "x$JAVAC" = "x" -o "x$JYTHON" = "x" -o "x$JYTHONC" = "x" -o "x$JAR" = "x" ; then
+    AC_MSG_RESULT([Java and/or Jython not available])
+  else
+    # test for JIU with PalmCodec support
+    if test "x$JAVA_CLASSPATH" = x ; then
+       AC_MSG_RESULT(Using empty CLASSPATH)
+    else
+       AC_MSG_RESULT(Using CLASSPATH of $JAVA_CLASSPATH)
+    fi
+    AC_MSG_CHECKING(for Java Imaging Utilities with Palm support)
+    CLASSPATH=$JAVA_CLASSPATH $JYTHON - <<EOF >/tmp/jiu-test.$$ 2>/dev/null
+import sys
+try:
+   import net.sourceforge.jiu.codecs
+   if 'PalmCodec' in dir(net.sourceforge.jiu.codecs):
+      sys.stdout.write('1\n')
+   else:
+      sys.stdout.write('0\n')
+except:
+   sys.stdout.write('0\n')
+EOF
+    jiutest=`cat /tmp/jiu-test.$$`
+    if test "$jiutest" = "1"; then
+      AC_MSG_RESULT(available)
+      JAVA_DISTILLER_TARGET=plucker-build.jar
+      # Apple insists you use /Library/Java/Home for their JAVAHOME, so check for that
+      if test -d /Library/Java/Home ; then
+          JAVA_HOME="/Library/Java/Home"
+      else
+          JAVA_HOME="`$JYTHON -c \"import java; print java.lang.System.getProperty('java.home')\"`"
+      fi
+    else
+      AC_MSG_RESULT(not available)
+    fi
+    rm -rf /tmp/jiu-test.$$
+  fi
+fi
+AC_SUBST(JAVA_DISTILLER_TARGET)
+AC_SUBST(JAVA_HOME)
+AC_SUBST(JAVA_CLASSPATH)
+
+dnl ================================
+dnl         Image processing
+dnl
+dnl  First, check for pnmtopalm.  If we have that, we have color support.
+dnl  If we have pnmtopalm:
+dnl     Check also for ppmquant (netpbm). If found, use "netpbm2".
+dnl  If no pnmtopalm:
+dnl     First check for PIL.  If found, configure to use it via "pil2".
+dnl     If no PIL, check for ppmtoTbmp.  If not found, error out.
+dnl     Check for netpbm and imagemagick (check for "mogrify"), and configure
+dnl     to use one of them in conjunction with ppmtoTbmp.
+dnl ================================
+AC_PATH_PROG(PNMTOPALM, pnmtopalm)
+AC_PATH_PROG(PPMQUANT, ppmquant)
+AC_PATH_PROG(PPMTOTBMP, ppmtoTbmp)
+AC_PATH_PROG(MOGRIFY, mogrify)
+AC_MSG_CHECKING("for PIL")
+[$PYTHON -c 'import Image' >/dev/null 2>&1
+if test $? = "0"; then
+  HAS_PIL=yes
+else
+  HAS_PIL=no
+fi]
+AC_MSG_RESULT($HAS_PIL)
+
+dnl  Now figure out the default setting for image_parser
+
+AC_MSG_CHECKING("what to use for image transformation")
+AC_SUBST(IMAGEHACKING)
+IMAGEHACKING=""
+if test "X$PNMTOPALM" != "X" ; then
+  if test "X$PPMQUANT" != "X" ; then
+    IMAGEHACKING="netpbm2"
+  fi
+elif test "$HAS_PIL" = "yes" ; then
+  IMAGEHACKING="pil2"
+elif test "X$PPMTOTBMP" != "X" ; then
+  if test "X$PPMQUANT" != "X" ; then
+    IMAGEHACKING="netpbm"
+  elif test "X$MOGRIFY" != "X" ; then
+    IMAGEHACKING="imagemagick"
+  fi
+fi
+if test "X$IMAGEHACKING" = "X" ; then
+  AC_MSG_RESULT("nothing available")
+else
+  AC_MSG_RESULT($IMAGEHACKING)
+fi
+
+dnl ================================
+dnl         General apps
+dnl ================================
+AC_PATH_PROG(AUTOCONF, autoconf, autoconf)
+
+
+dnl =======================================
+dnl                OPTIONS
+dnl =======================================
+AC_ARG_WITH(pypluckerdir,
+    [  --with-pypluckerdir=PATH  specify where the Python parser should go
+                          [PYTHON_LIBDIR/site-packages/PyPlucker]])
+
+if test "X$with_pypluckerdir" != "X"; then
+    MODULE_DIR=$with_pypluckerdir
+else
+    MODULE_DIR="$PYTHON_LIBDIR/site-packages/PyPlucker"
+fi
+AC_SUBST(MODULE_DIR)
+
+AC_ARG_WITH(pluckerdir,
+    [  --with-pluckerdir=PATH  specify where the Plucker data should go
+                          [DATADIR/plucker]])
+
+if test "X$with_pluckerdir" != "X"; then
+    PLUCKERDIR=$with_pluckerdir
+else
+    PLUCKERDIR=$datadir/plucker
+fi
+AC_SUBST(PLUCKERDIR)
+
+AC_ARG_WITH(comicsdir,
+    [  --with-comicsdir=PATH   specify where pluck-comics should put the downloaded
+                          comics [/var/spool/netcomics]])
+
+if test "X$with_comicsdir" != "X"; then
+    COMICS_DIR=$with_comicsdir
+else
+    COMICS_DIR=/var/spool/netcomics
+fi
+COMICSLIST_DIR=$PLUCKERDIR/comics
+AC_SUBST(COMICS_DIR)
+AC_SUBST(COMICSLIST_DIR)
+
+AC_ARG_WITH(docdir,
+    [  --with-docdir=PATH      specify where the Plucker documentation should go
+                          [PLUCKERDIR/doc]])
+
+if test "X$DOCDIR" = "X"; then
+    if test "X$with_docdir" != "X"; then
+        DOCDIR=$with_docdir
+    else
+        DOCDIR=$PLUCKERDIR/doc
+    fi
+fi
+AC_SUBST(DOCDIR)
+
+AC_ARG_WITH(nlsdir,
+    [  --with-nlsdir=PATH      specify where the locale stuff should go
+                          [DATADIR/locale]])
+
+if test "X$NLSDIR" = "X"; then
+    if test "X$with_nlsdir" != "X"; then
+        NLSDIR=$with_nlsdir
+    else
+        NLSDIR=$datadir/locale
+    fi
+fi
+AC_SUBST(NLSDIR)
+
+dnl ===============================================
+dnl Check for tools required to build the documents
+dnl ===============================================
+
+AC_ARG_ENABLE(docbuild, [  --disable-docbuild      don't build the documentation ], BUILD_MANUAL=no)
+
+if test "$BUILD_MANUAL" = "yes"; then
+    AC_PATH_PROGS(SED, gsed sed)
+    [$SED --version 2>&1 < /dev/null | grep GNU >/dev/null 2>&1]
+    if test "$?" != "0" ; then
+    	AC_MSG_WARN("Version of sed on path must be GNU sed to build manual")
+    	BUILD_MANUAL=no
+    fi
+    AC_PATH_PROG(LATEX, latex)
+    if test "X$LATEX" = "X"; then
+    	AC_MSG_WARN("Unable to find latex")
+    	BUILD_MANUAL=no
+    fi
+    AC_PATH_PROG(L2H, latex2html)
+    if test "X$L2H" = "X"; then
+    	AC_MSG_WARN("Unable to find latex2html")
+    	BUILD_MANUAL=no
+    fi
+    AC_PATH_PROG(GIFTOPNM, giftopnm)
+    if test "X$GIFTOPNM" = "X"; then
+    	AC_MSG_WARN("Unable to find giftopnm from netpbm")
+    	BUILD_MANUAL=no
+    fi
+    AC_PATH_PROG(PNMTOPS, pnmtops)
+    if test "X$PNMTOPS" = "X"; then
+    	AC_MSG_WARN("Unable to find pnmtops from netpbm")
+    	BUILD_MANUAL=no
+    fi
+fi
+AC_SUBST(BUILD_MANUAL)
+
+dnl ==============================================
+dnl              Viewer Section
+dnl ==============================================
+
+AC_ARG_ENABLE(palmosbuild, [  --disable-palmosbuild   don't build the viewer application ], BUILD_PRC=no, BUILD_PRC=yes)
+if test "$BUILD_PRC" = "yes"; then
+    AC_CONFIG_SUBDIRS(viewer)
+fi
+AC_SUBST(BUILD_PRC)
+
+AC_ARG_WITH(lang, [  --with-lang=LANG        build viewers translated to the given languages ])
+AC_ARG_ENABLE(category, [  --enable-category=CATEGORY
+                          set the default launcher category])
+AC_ARG_ENABLE(armlets, [  --enable-armlets        to enable arm-specific code])
+AC_ARG_ENABLE(wait_icon, [  --enable-wait-icon=ICON set the wait indicator to ICON (thought-bubble or hourglass)])
+AC_ARG_ENABLE(errorchecklevel, [  --enable-errorchecklevel=LEVEL
+                          set the ERROR_CHECK_LEVEL to LEVEL (none, partial,
+                          or full)])
+AC_ARG_ENABLE(gesture_debug, [  --enable-gesture-debug  include Graffiti indicator to debug the gestures
+                          feature ])
+AC_ARG_ENABLE(debug_log, [  --enable-debug-log      include macros writing debug info to log file when
+                          running viewer in POSE and to memo when running it
+                          on a real device ])
+AC_ARG_ENABLE(debug_labels, [  --enable-debug-labels   include each function's name into the text section
+                          to get the function names included in POSE's
+                          profiling output ])
+AC_ARG_ENABLE(imode, [  --enable-imode          to enable i-mode support (also requires the
+                          imodeicons.pdb database)])
+AC_ARG_ENABLE(scroll_to_bottom, [  --disable-scroll-to-bottom
+                          always scroll even pages instead of stopping when
+                          the end of the page is reached (will add some extra
+                          whitespace at the bottom of the page) ])
+AC_ARG_ENABLE(hires, [  --disable-hires         to disable hires-specific code])
+AC_ARG_ENABLE(rotate, [  --disable-rotate        to disable display rotation])
+AC_ARG_ENABLE(palm_dia, [  --disable-palm-dia      to disable Palm DIA support])
+AC_ARG_ENABLE(anti_alias, [  --disable-anti-alias    to disable anti-aliased font code])
+AC_ARG_ENABLE(vfs_fonts, [  --disable-vfs-fonts     to disable user fonts on VFS code])
+AC_ARG_ENABLE(word_lookup, [  --enable-word-lookup    to enable word lookup support])
+AC_ARG_ENABLE(transliteration, [  --disable-transliteration   to disable search transliteration])
+AC_ARG_ENABLE(skins, [  --enable-skins          to enable skins support])
+AC_ARG_ENABLE(returntoapp, [  --enable-returntoapp    to enable return to previous app on exit])
+AC_ARG_ENABLE(rtl, [  --enable-rtl            to enable right-to-left rendering support (must
+                          still be activated in the font & layout settings)])
+AC_ARG_ENABLE(rot13, [  --enable-rot13          to enable Rot13 support])
+AC_ARG_WITH(handera, [  --with-handera=DIR      use the Handera SDK in DIR])
+AC_ARG_WITH(handspring, [  --with-handspring=DIR   use the Handspring SDK in DIR])
+AC_ARG_WITH(sony, [  --with-sony=DIR         use the Sony SDK in DIR])
+AC_ARG_WITH(sonysilk, [  --with-sonysilk=DIR     path to Sony Silkscreen SDK (specifically, SonySlkw.h)])
+AC_ARG_WITH(fiveway, [  --with-fiveway=DIR      path to FiveWay SDK (specifically, PalmChars.h)])
+AC_ARG_WITH(axxpac, [  --with-axxpac=DIR       use the axxPac.h header file in DIR])
+AC_ARG_WITH(palmcunit, [  --with-palmcunit=DIR    path to PalmCUnit ])
+
+dnl ==============================================
+dnl           Plucker Desktop Section
+dnl ==============================================
+AC_ARG_ENABLE(desktopbuild, [  --disable-desktopbuild  don't build the GUI desktop tool ], BUILD_DESKTOP=no)
+
+if test "$BUILD_DESKTOP" = "yes"; then
+    OUTPUT_FILES="$OUTPUT_FILES plucker_desktop/Makefile"
+fi
+AC_SUBST(BUILD_DESKTOP)
+
+
+dnl ==============================================
+dnl       Unpluck & Explode Section
+dnl ==============================================
+AC_ARG_ENABLE(unpluck, [  --disable-unpluck       don't build the unpluck library ], BUILD_UNPLUCK=$enableval, BUILD_UNPLUCK=yes)
+AC_ARG_ENABLE(explode, [  --disable-explode       don't build the explode program ], BUILD_EXPLODE=$enableval, BUILD_EXPLODE=yes)
+
+AC_CHECK_HEADER(zlib.h, has_zlib_header=yes)
+AC_CHECK_HEADER(jpeglib.h, has_jpeg_header=yes)
+AC_CHECK_LIB(z, deflateEnd, [LIBS="$LIBS -lz" ; has_zlib_library=yes], [has_zlib_library=no])
+AC_CHECK_LIB(jpeg, jpeg_start_compress, [LIBS="$LIBS -ljpeg"; has_jpeg_library=yes], [has_jpeg_library=no])
+
+if test "$BUILD_UNPLUCK" != "yes"; then
+  AC_MSG_RESULT([libunpluck will not be built, by request])
+  BUILD_UNPLUCK=no
+elif test "${has_zlib_header:-no}" = "no"; then
+  AC_MSG_RESULT([libunpluck will not be built, because zlib include file is not installed])
+  BUILD_UNPLUCK=no
+elif test "$has_zlib_library" = "no" ; then
+  AC_MSG_RESULT([libunpluck will not be built, because zlib library is not installed])
+  BUILD_UNPLUCK=no
+fi
+
+if test "$BUILD_EXPLODE" = "no" ; then
+   AC_MSG_RESULT([explode will not be built, by request])
+   BUILD_EXPLODE=no
+elif test "$BUILD_UNPLUCK" = "no"; then
+   AC_MSG_RESULT([explode will not be built, because libunpluck was not built])
+   BUILD_EXPLODE=no
+elif test "${has_jpeg_header:-no}" = "no"; then
+   AC_MSG_RESULT([explode will not be built, because the libjpeg header file is not installed])
+   BUILD_EXPLODE=no
+elif test "$has_jpeg_library" = "no" ; then
+   AC_MSG_RESULT([explode will not be built, because the libjpeg library is not installed])
+   BUILD_EXPLODE=no
+fi
+
+if test "$BUILD_UNPLUCK" = "yes"; then
+    OUTPUT_FILES="$OUTPUT_FILES tools/unpluck/Makefile"
+fi
+
+if test "$BUILD_EXPLODE" = "yes"; then
+    OUTPUT_FILES="$OUTPUT_FILES tools/explode/Makefile tools/explode/netscape4-plucker-helper"
+fi
+
+AC_PATH_PROG(AT_PROG, at, at)
+AC_PATH_PROG(RM_PROG, rm, rm)
+AC_PATH_PROG(NETSCAPE_PROG, netscape, netscape)
+
+AC_SUBST(BUILD_UNPLUCK)
+AC_SUBST(BUILD_EXPLODE)
+
+dnl ===============================
+dnl     GTK+2 Viewer section
+dnl ===============================
+
+AC_SUBST(BUILD_GTKVIEWER)
+
+AC_ARG_ENABLE(gtkviewer, [  --disable-gtkviewer     don't build the GTK+2 viewer ], BUILD_GTKVIEWER=$enableval, BUILD_GTKVIEWER=yes)
+
+AC_SUBST(GTK2INCLUDES)
+AC_SUBST(GTK2LIBS)
+GTK2INCLUDES=
+GTK2LIBS=
+
+if test "$BUILD_UNPLUCK" = "no" ; then
+  AC_MSG_RESULT([GTK+ viewer will not be built, because libunpluck is not being built])
+  BUILD_GTKVIEWER=no
+elif test "$BUILD_GTKVIEWER" = yes ; then
+  AC_PATH_PROG(PKG_CONFIG, pkg-config,)
+  if test x$PKG_CONFIG != x; then
+    AC_MSG_CHECKING(for GTK+ version 2)
+    GTK2INCLUDES="`$PKG_CONFIG --cflags gtk+-2.0`"
+    GTK2LIBS="`$PKG_CONFIG --libs gtk+-2.0`"
+    if test "x$GTK2INCLUDES" = x -o "x$GTK2LIBS" = x ; then
+      AC_MSG_RESULT(no)
+      AC_MSG_RESULT([GTK+ viewer will not be built, because GTK+ 2.x is missing or badly installed])
+      BUILD_GTKVIEWER=no
+    else
+      AC_MSG_RESULT(yes)
+    fi
+  else
+    AC_MSG_RESULT([GTK+ viewer will not be built, because pkg-config is not installed])
+    BUILD_GTKVIEWER=no
+  fi
+else
+  AC_MSG_RESULT([GTK+ viewer will not be built, by request])
+fi
+
+
+dnl ==============================================
+dnl       Cplucker Section
+dnl ==============================================
+AC_ARG_ENABLE(cplucker, [  --disable-cplucker      don't build the cplucker program ], BUILD_CPLUCKER=$enableval, BUILD_CPLUCKER=yes)
+
+AC_CHECK_HEADER(zlib.h, has_zlib_header=yes)
+AC_CHECK_LIB(z, deflateEnd, [LIBS="$LIBS -lz" ; has_zlib_library=yes], [has_zlib_library=no])
+
+if test "$BUILD_CPLUCKER" != "yes"; then
+  AC_MSG_RESULT([cplucker will not be built, by request])
+  BUILD_CPLUCKER=no
+elif test "${has_zlib_header:-no}" = "no"; then
+  AC_MSG_RESULT([cplucker will not be built, because zlib include file is not installed])
+  BUILD_CPLUCKER=no
+elif test "$has_zlib_library" = "no" ; then
+  AC_MSG_RESULT([cplucker will not be built, because zlib library is not installed])
+  BUILD_CPLUCKER=no
+fi
+
+if test "$BUILD_CPLUCKER" = "yes"; then
+    OUTPUT_FILES="$OUTPUT_FILES parser/c++/Makefile"
+fi
+
+AC_PATH_PROG(AT_PROG, at, at)
+AC_PATH_PROG(RM_PROG, rm, rm)
+
+AC_SUBST(BUILD_CPLUCKER)
+
+
+dnl ==========================
+dnl Spit out the configuration
+dnl ==========================
+
+AC_OUTPUT($OUTPUT_FILES)
+
+echo 
+echo "Installation path prefix: $prefix"
+echo "Installation path prefix for binaries: $bindir"
+echo "Installation path prefix for libraries: $libdir"
+echo "Installation path prefix for documentation: $DOCDIR"
+echo "Installation path prefix for Plucker data: $PLUCKERDIR"
+echo "Installation path prefix for Python parser: $MODULE_DIR"
+echo
+
+if test "X$IMAGEHACKING" = "X" ; then
+  AC_MSG_RESULT([** WARNING * WARNING * WARNING * WARNING * WARNING * WARNING **])
+  AC_MSG_RESULT([     There seem to be no appropriate image tools available.])
+  AC_MSG_RESULT([   See the REQUIREMENTS file for information on what's needed.])
+  AC_MSG_RESULT([** WARNING * WARNING * WARNING * WARNING * WARNING * WARNING **])
+  AC_MSG_RESULT("")
+fi
+

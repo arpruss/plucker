@@ -1,0 +1,233 @@
+//----------------------------------------------------------------------------------------
+// Name:        CODING_GUIDELINES.txt
+// Purpose:     Coding guidelines for Plucker Desktop.
+// Author:      Robert O'Connor
+// Modified by:
+// Created:     2001/10/20
+// Copyright:   (c) Robert O'Connor ( rob@medicalmnemonics.com )
+// Licence:     GPL
+// RCS-ID:      $Id: CODING_GUIDELINES.txt,v 1.2 2004/01/04 03:12:25 robertoconnor Exp $
+//----------------------------------------------------------------------------------------
+
+Plucker is distributed under and protected by the GNU GENERAL PUBLIC LICENSE (the full 
+copy of which is found in ../COPYING). We make the source code available so that others can
+alter it for their own needs. All we ask in return is that you submit your changes back 
+to us so that we can merge them into the main version of the product. Changes can be 
+submitted to plucker-dev@rubberchicken.org
+
+These guidelines are only meant to give the source code for Plucker Desktop a similar
+format. Try to follow the programming conventions you already find in the source code.
+
+//----------------------------------------------------------------------------------------
+// Source code naming conventions
+//----------------------------------------------------------------------------------------
+
+All functions, variables, classes are named in full english words, so people who don't 
+speak English natively, can always look up in a proper dictionary what a name means.
+    
+Case is gtk/unix-like. Everything is in lower case, separated by underscores.
+    
+m_ prefix (a standard C++ convention) means the variable/object is a 'm'ember of
+the class.
+ms_prefix (also a standard C++ convention) is like a m_ variable, but the 's' indicates
+that the variable is static.
+
+If there is a single instance of a class throughout the program, it is named with the 
+prefix the_ For example the single instance of help_controller is called 
+the_help_controller.
+For an instance that is transient for just a function, it is named with the prefix a_
+For example, popping up an exclusion list is named a_exclusion_list, then called as
+a_exclusion_list.ShowModal();
+        
+For the .ini file, wxWindows calls the things "Entries", which are organized into 
+"Groups". Plucker refers to these as: "Keys" are organized into "Sections". For example:
+[DEFAULT]       <--- The section name is "DEFAULT"
+bpp=1           <--- The key is "bpp", which carries a value of 1
+
+
+//----------------------------------------------------------------------------------------
+// Source code formatting
+//----------------------------------------------------------------------------------------
+
+Indentation is 4 characters deep (use spaces instead of tabs). The only exception is the
+POSIX makefiles which are hardware tabs (of 8).
+
+Comments are C++like, with a '//' prefix, and not /* */ so that the /* */ can be used to
+comment out swatches of code.
+
+Doxygen commenting is availabe to seen what the format is. One liners start with //!
+and details are inside a /*! */, like this: Note that the longer description has to 
+go before any other commands (otherwise won't know that it isn't a continuation fo
+the previous). They are documented before the item, in the header.
+//! A function for keeping things readable
+/*!
+    This helps maintain a codebase that can be picked up and worked on by somebody
+    else easily.
+    \param always_read TRUE if should always read coding docs.
+    \return TRUE if the person read the docs.
+ */
+bool read_coding_guidelines( bool always = TRUE );
+
+Page width is longer than 80, since the XML macro namings make the lines hard to read
+at just 80 characters.
+
+All if else sections have braces around them, even if they are only a single line long,
+inside the braces.
+
+if/else/switch braces go like this:
+        if (...) 
+        {
+            ...
+        } 
+        else
+        {
+            ...
+        }
+However functions have the opening brace at the beginning of the line.
+
+Double space between functions.
+
+Class definitions go like this:
+class my_class : public baseclass
+{
+
+public:
+
+    my_class();
+    ~my_class();
+    my_public_function();
+    ....
+
+private:
+
+    my_private_function();
+    sometype m_my_private_member;
+    ....
+}
+
+Round brackets of function calls have a single space padding their arguments from 
+their round brackets, for example:
+        file_dialog.SetStyle( wxMULTIPLE );
+        
+Casts don't have any space padding however, for example in the cast to (int) below:
+        SetValue( (int)the_configuration->Read( "home_maxdepth", 2L ) ); 
+
+One class per file is preferred.
+
+Uppercase "L" used on the types in the overloaded wxConfig::Read, since a lowercase l,
+looks too much like a 1. So use an uppercase L, for example:
+        the_configuration->Read( "/PLUCKER_DESKTOP/show_splashscreen", 1L );
+
+No new extra overloaded functions(makes conversions to other languages like Python 
+                                  more difficult, plus harder to read).
+                                  
+No inline functions, even if under three lines long.
+No ? : operators.
+Every class has a destructor, even if empty.
+As few globals as possible.
+
+No templates (very not portable).
+
+No nested classes (not portable).
+
+No external RTTI mechanisms -- please use DECLARE_DYNAMIC_CLASS / IMPLEMENT_DYNAMIC_CLASS 
+(and ABSTRACT equivalents instead)--these make things more portable.
+
+Every thing must be cast, even signed/unsigned integers if compared.
+Preferably NULL pointers should be cast too, like this: m_hilightPen = (wxPen *)NULL;
+as it is slightly more portable.
+
+Declaration of new datatypes is easier to read if suffixed with "_type" especially
+in array declaration macros.
+
+Plucker defines should be prefixed with "plkr" to make for easier reading of whose define 
+is whose, and to prevent collisions with OS/compiler defines, etc. Format similar to wx 
+prefix: plkrSOME_DEFINE for plucker, and wx has its wxSOME_DEFINE, and compiler has its own.
+A setup option define is prefixed with setup, such as setupUSE_DRAG_AND_DROP.
+
+//----------------------------------------------------------------------------------------
+// XML resources
+//----------------------------------------------------------------------------------------
+
+A single .xrc resource file contains a single parent dialog and any relevant children 
+(eg exclusion.xrc has the exclusion dialog and its blocked dialog popup).
+This may move to one top level node per file, period (better management, plus the free
+xrcedit program will read them easier).
+
+Control names have the name of the dialog first, then a name, then the type of control 
+that it is (minus the wx prefix), all in lowercase, separated by underscore. 
+For example an 'Add' wxButton on main_frame would be called 'main_frame_add_button'
+
+Some buttons (OK, Cancel, Help, etc) have special names wxID_OK, wxID_CANCEL. These 
+get special ID numbers by wxWindows, so that can automatically execute appropriate code,
+like closing a modal dialog, etc.
+
+//----------------------------------------------------------------------------------------
+// Internationalization strings in C++ source code
+//----------------------------------------------------------------------------------------
+
+There are two string macros to help internationalization: wxT() and _() :
+
+wxT() automatically converts to ascii if ascii-compiled, UNICODE if compiled with UNICODE.
+wxT( "the_string" )
+wxT( 'the_char')
+
+_() marks string as one that needs to be translated using gettext/po files.
+_() also includes the wxT() action of ascii/unicode switching, so if already enclosed
+    the string inside a _(), don't need to enclose it in wxT() also.
+_() is just a shortcut macro for wxString's ::wxGetTranslation function.
+During runtime, this looks up the string in the current wxLocale. We set the wxLocale when
+starting the application.
+_( "the string" )
+_( 'the_char' )
+
+Therefore, bottom line is a string you want to translate, it goes into _(). All other 
+strings go into a wxT(). Here are some example uses:
+
+Printf type functions:
+----------------------
+wxString mystring;
+mystring.Printf( _( "Language: %s\n"
+                    "System locale name: %s\n"
+                    "Canonical locale name: %s\n"
+                  ),
+                    m_locale.GetLocale(),
+                    m_locale.GetSysName().c_str(),
+                    m_locale.GetCanonicalName().c_str() 
+               );
+
+As showing a message box (note the wxString declaration)
+--------------------------------------------------------
+  wxMessageDialog( this, wxString( _( "I18n sample\n"
+                                      "(c) 1998, 1999 Vadim Zeitlin and Julian Smart"
+                                    )
+                                 ) 
+                         + wxT( "\n\n" )
+                         + _( "About Internat" ), 
+                   wxOK | wxICON_INFORMATION
+                 ).ShowModal();
+                 
+                 
+Note 1: Attempting to convert an empty string eg _( "" ) will cause program to hang.
+Note 2: The macro _T() isn't used anywhere in plucker-desktop code. This is just a marker
+        for a string that you don't want translated. [see wx/include/intl.h]
+
+//----------------------------------------------------------------------------------------
+// Internationalization strings in XML resources (not C++ code)
+//----------------------------------------------------------------------------------------
+
+Strings inside the .xrc files are handled a bit different than strings inside the 
+C++ source code. In the XRC files, all user-visible strings are automatically marked
+for translation, without having to be inside a _() .
+(This makes sense: strings in a resource by nature are always translated, so no sense
+messing up the XML).
+
+So just have to have normal text inside a string-holding tags for example:
+<label>Click Me</label>
+At runtime, if wxLocale is running, will automatically look in the current catalog for 
+the string "Click Me" and return its translation if it is found, otherwise uses the 
+original string.
+
+Note that if wxLocale is turned on in the application, and strings are not found in the
+current catalog, there will be some wxLogDebug messages sent out, and these can be 
+monitored to see if missed any.

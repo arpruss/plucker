@@ -1,0 +1,20 @@
+When distributing, make sure the version is correct in the CVS spec file.
+The "Release" is what will be after the version number. For example if release is 5,
+then filename will be plucker-desktop-1.4.0.0-5.i386.rpm.
+
+Add a changelog entry to the specfile.
+
+Make a folder of the *entire* plucker source tree. Perhaps not entire, ask can strip out stuff not needed for a mkinstalldirs, configure,etc
+The top level folder of tree needs to be renamed plucker-desktop-1.4.0.0 (replacing 1.4.0.0 with version).
+Use commandline or a GUI archiver to make a plucker-desktop-1.4.0.0.tar.gz (replacing 1.4.0.0 with version).
+Check inside the archive to be sure that everything is inside a root level plucker-desktop.1.4.0.0 directory
+
+Login as superuser and copy that tar.gz file into /usr/src/redhat/SOURCES
+Still in superuser, cd to the plucker/plucker_desktop/installer/unix/ directory 
+from your source code somewhere. There should be a plucker-desktop.spec file in this dir.
+Then type: rpmbuild -ba plucker-desktop.spec
+
+Should now have an RPM appear in 
+/usr/src/redhat/RPMS
+and a source RPM appear in
+/usr/src/redhat/SRPMS

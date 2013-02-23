@@ -1,0 +1,1022 @@
+/* $Id: tr.rcp,v 1.77 2006/11/12 16:23:45 prussar Exp $ */
+
+/******************************************************
+ * Turkish resources - Tufan Oruk <toruk@usa.net>     *
+ ******************************************************/
+
+TRANSLATION "tr" 
+BEGIN
+
+
+"$$LANG"                    =   "tr"
+
+
+/*************************************************************
+ *                      MENU OPTIONS                         *
+ *************************************************************/
+
+"$$ABOUT PLUCKER"           =   "Plucker Hakkýnda"
+"$$ADD BOOKMARK..."         =   "Yer imi ekle..."
+"$$AUTOSCROLL FASTER"       =   "Hýzlý kaydýr"
+"$$AUTOSCROLL SLOWER"       =   "Yavaþ kaydýr"
+"$$BACK"                    =   "Geri"
+"$$BOOKMARKS..."            =   "Yer imleri..."
+"$$BOTTOM"                  =   "Sayfa sonu"
+"$$CONTACT DEVELOPERS"      =   "Programcýlara ilet"
+"$$DELETE ALL..."           =   "Tümünü sil..."
+/*************************************************************/
+"$$DELETE READ..."          =   "Delete read documents..."
+/*************************************************************/
+"$$DELETE DOC..."           =   "Dokümaný sil..."
+"$$DETAILS..."              =   "Detaylar..."
+"$$FIND AGAIN"              =   "Yeniden bul"
+"$$FIND..."                 =   "Bul..."
+"$$FORWARD"                 =   "Ýleri"
+"$$GO"                      =   "Git"
+"$$HOME"                    =   "Ana sayfa"
+"$$LIBRARY..."              =   "Dokümanlar..."
+"$$OPTIONS"                 =   "Seçenekler"
+"$$PREFERENCES..."          =   "Tercihler..."
+"$$START AUTOSCROLL"        =   "Kaydýrmayý baþlat"
+"$$STOP AUTOSCROLL"         =   "Kaydýrmayý bitir"
+"$$TOP"                     =   "Sayfa baþý"
+"$$VIEW"                    =   "Görünüm"
+"$$SYNC LIST"               =   "Listeyi güncelle"
+"$$COPY TO MEMO"            =   "Memo'ya Ýhraç Et"
+"$$SHOWHIDE"                =   "Göster/Gizle"
+"$$TYPE"                    =   "Tip"
+"$$DATE"                    =   "Tarih"
+"$$SIZE"                    =   "Boyut"
+/****************************************************************************/
+"$$SELECT FONT..."          =   "Font and layout..."
+"$$TOGGLE FULLSCREEN"       =   "Toggle fullscreen"
+"$$LOOKUP WORD"             =   "Lookup word"
+"$$SET KEYBOARD/GRAFFITI..."   =   "Set keyboard/graffiti..."
+"$$SORT"                    =   "Sort"
+"$$NAME"                    =   "Name"
+"$$CATEGORY"                =   "Category"
+/****************************************************************************/
+
+
+/*************************************************************
+ *                        SHORTCUTS                          *
+ *************************************************************/
+
+"$$SC ADD BOOKMARK"         =   "+"
+"$$SC FIND AGAIN"           =   "A"
+"$$SC BACK"                 =   "B"
+"$$SC COPY TO MEMO"         =   "C"
+"$$SC DELETE ALL"           =   "D"
+"$$SC DELETE DOC"           =   "D"
+"$$SC BOOKMARKS"            =   "E"
+"$$SC FIND"                 =   "F"
+"$$SC HOME"                 =   "H"
+"$$SC DETAILS"              =   "I"
+"$$SC START AUTOSCROLL"     =   "J"
+"$$SC STOP AUTOSCROLL"      =   "K"
+"$$SC LIBRARY"              =   "L"
+"$$SC AUTOSCROLL FASTER"    =   "M"
+"$$SC AUTOSCROLL SLOWER"    =   "N"
+"$$SC SELECT FONT"          =   "O"
+"$$SC PREFERENCES"          =   "P"
+"$$SC LOOKUP WORD"          =   "Q"
+"$$SC SET KEYBOARD/GRAFFITI"   =   "S"
+"$$SC TOGGLE FULLSCREEN"    =   "U"
+"$$SC SYNC LIST"            =   "V"
+"$$SC FORWARD"              =   "W"
+"$$SC BOTTOM"               =   "Y"
+"$$SC TOP"                  =   "Z"
+/*************************************************************/
+
+
+/*************************************************************
+ *                         FORMS                             *
+ *************************************************************/
+
+/*** MAIN ***/
+
+"$$MAIN: ADD BOOKMARK"              =   "Yer imi ekle"
+"$$MAIN: BOTTOM"                    =   "Alt"
+"$$MAIN: FOLLOW LINK"               =   "Baðlantýyý takip et"
+"$$MAIN: OPEN IMAGE"                =   "Resmi Aç"
+"$$MAIN: TOP"                       =   "Üst"
+"$$MAIN: VIEW BOOKMARKS"            =   "Yer imlerini göster"
+"$$MAIN: 10%"                       =   "%10"
+"$$MAIN: 20%"                       =   "%20"
+"$$MAIN: 30%"                       =   "%30"
+"$$MAIN: 40%"                       =   "%40"
+"$$MAIN: 50%"                       =   "%50"
+"$$MAIN: 60%"                       =   "%60"
+"$$MAIN: 70%"                       =   "%70"
+"$$MAIN: 80%"                       =   "%80"
+"$$MAIN: 90%"                       =   "%90"
+/************************************************************/
+"$$MAIN: ADD ANNOTATION"            =   "Add annotation"
+/************************************************************/
+
+/*** ABOUT ***/
+
+"$$ABOUT: BODY1"                    =   "Plucker, PalmOS tabanlý cihazlar için" 
+"$$ABOUT: BODY2"                    =   "çevrimdýþý að tarayýcý programýdýr."
+"$$ABOUT: BODY3"                    =   "Mobilgi tarafýndan Türkçe'"
+"$$ABOUT: BODY4"                    =   "leþtirilmiþtir. GNU Lisans þartlarýna"
+"$$ABOUT: BODY5"                    =   "göre ücretsiz olarak daðýtýmý"
+"$$ABOUT: BODY6"                    =   "yapýlmaktadýr."
+"$$ABOUT: WEBSITE"                  =   "www.plkr.org"
+"$$ABOUT: OK"                       =   "Tamam"
+"$$ABOUT: TITLE"                    =   "Plucker hakkýnda"
+
+
+/*** DOCUMENT LIBRARY ***/
+
+"$$LIBRARY: BEAM"                   =   "Iþýnla"
+"$$LIBRARY: CATEGORIZE"             =   "Kategorilendir"
+"$$LIBRARY: CATEGORY"               =   "Kategori"
+"$$LIBRARY: DATE"                   =   "Tarih"
+"$$LIBRARY: DELETE"                 =   "Sil"
+"$$LIBRARY: NAME"                   =   "Ýsim"
+"$$LIBRARY: NO DOCUMENTS"           =   "Doküman bulunamadý"
+"$$LIBRARY: OPEN"                   =   "Aç"
+"$$LIBRARY: RENAME"                 =   "Ýsim deðiþtir"
+"$$LIBRARY: SHOW:"                  =   "Göster:"
+"$$LIBRARY: SIZE"                   =   "Boyut"
+"$$LIBRARY: TITLE"                  =   "Dokümanlar"
+/*************************************************************/
+"$$LIBRARY: UNREAD"                 =   "Unread"
+/*************************************************************/
+"$$LIBRARY: HELP"                   =
+    "• Görüntülemek istediðiniz Plucker dokümanlarýnýzý buradan seçerek "\
+    "yönetebilirsiniz."\
+    "\n\n"\
+    "• Bir dokümanýn önündeki doküman ikonuna týkladýðýnýzda dokümanla ilgili "\
+    "yapabileceðiniz iþlemler (Aç, Kategorilendir, Sil, Ýsim deðiþtir ve Iþýnla) "\
+    "listelenir."\
+    "\n\n"\
+    "• Dokümanlarý isim, tarih veya boyutuna göre küçükten büyüðe "\
+    "ya da büyükten küçüðe sýralayabilirsiniz."
+
+/*** RENAME DOCUMENT ***/
+
+"$$RENAME: CANCEL"                  =   "Ýptal"
+"$$RENAME: NAME:"                   =   "Yeni Ýsim:"
+"$$RENAME: RENAME"                  =   "Ýsmi deðiþtir"
+"$$RENAME: TITLE"                   =   "Ýsim Deðiþtir"
+
+
+/*** PREFERENCES ***/
+
+"$$PREFS: TITLE"                    =   "Tercihler"
+"$$PREFS: OK"                       =   "Tamam"
+"$$PREFS: CANCEL"                   =   "Ýptal"
+"$$PREFS: LIBRARY"                  =   "Dokümanlar"
+"$$PREFS: AUTOSCROLL"               =   "Kaydýr"
+"$$PREFS: BUTTON"                   =   "Düðme"
+"$$PREFS: CONTROL"                  =   "Týklama"
+"$$PREFS: GESTURE"                  =   "Ýþaret"
+"$$PREFS: GENERAL"                  =   "Genel"
+"$$PREFS: LAYOUT"                   =   "Tarama"
+"$$PREFS: HARDCOPY"                 =   "Ýhraç"
+"$$PREFS: JOGDIAL"                  =   "JogDial"
+"$$PREFS: LOOKUP"                   =   "Lookup"
+/*************************************************************/
+"$$PREFS: COLOR"                    =   "Color"
+"$$PREFS: FONT"                     =   "Font"
+/*************************************************************/
+
+
+/*** GENERAL PREFERENCES ***/
+
+"$$PREFSGENERAL: ADD BOOKMARK..."          =   "Yer imi ekle..."
+"$$PREFSGENERAL: BOTTOM"                   =   "Alt"
+"$$PREFSGENERAL: BOTTOM TOOLBAR"           =   "Alt"
+"$$PREFSGENERAL: BUTTON ACTION..."         =   "Düðme davranýþý..."
+"$$PREFSGENERAL: DETAILS..."               =   "Detaylar..."
+"$$PREFSGENERAL: COMMAND BUTTON:"          =   "Komut düðmesi:"
+"$$PREFSGENERAL: NO TOOLBAR"               =   "Yok"
+"$$PREFSGENERAL: NONE"                     =   "Yok"
+"$$PREFSGENERAL: PREFERENCES..."           =   "Tercihler..."
+"$$PREFSGENERAL: TAP ACTION..."            =   "Týklama davranýþý..."
+"$$PREFSGENERAL: TOOLBAR:"                 =   "Araç Çubuðu:"
+"$$PREFSGENERAL: TOP"                      =   "Üst"
+"$$PREFSGENERAL: TOP TOOLBAR"              =   "Üst"
+"$$PREFSGENERAL: LEFT"                     =   "Sol"
+"$$PREFSGENERAL: NONE"                     =   "Yok"
+"$$PREFSGENERAL: RIGHT"                    =   "Sað"
+"$$PREFSGENERAL: SCREEN DEPTH:"            =   "Ekran derinliði:"
+"$$PREFSGENERAL: SCROLLBAR:"               =   "Kaydýrma çubuðu:"
+"$$PREFSGENERAL: COPY TO MEMO"             =   "Memo'ya Ýhraç Et"
+"$$PREFSGENERAL: DELETE DOC..."            =   "Dokümaný sil..."
+"$$PREFSGENERAL: SILK TOOLBAR"             =   "In silk"
+/****************************************************************/
+"$$PREFSGENERAL: ALWAYS DELETE ANNOTATIONS"    = "Delete notes/marks with doc"
+"$$PREFSGENERAL: ANNOTATIONS IN BOOKMARK LIST" = "List annotations with bookmarks"
+/****************************************************************/
+"$$PREFSGENERAL: HELP"                     =
+    "• PalmOS 3.5 ya da üzeri iþletim sistemi çalýþtýran cihazlarda düðmelerden  "\
+    "birini komut çubuðunu açmak için ayarlayabilirsiniz. Daha eski PalmOS çalýþtýran "\
+    "cihazlarda bu ayarýn bir etkisi yoktur."\
+    "\n\n"\
+    "• Cihazýn çalýþacaðý varsayýlan ekran derinliðini ayarlayabilirsiniz."\
+    "\n\n"\
+    "• Araç çubuðunu ekranýn üstünde veya altýnda olacak ya da hiç görünmeyecek "\
+    "þekilde ayarlayabilirsiniz."\
+    "\n\n"\
+    "• Kaydýrma çubuðunu sola ya da saða koyabilirsiniz ya da tamamen kaldýrabilirsiniz."
+
+
+/*** LAYOUT PREFERENCES ***/
+
+"$$PREFSLAYOUT: UNDERLINE"               =   "Altý çizgiliyi geçerli kýl"
+/****************************************************************************/
+"$$PREFSLAYOUT: ENABLE SOFT-HYPHENS"     =   "Enable soft-hyphens"
+"$$PREFSLAYOUT: ENABLE MARGINS"          =   "Enable margins"
+"$$PREFSLAYOUT: ALIGNMENT:"              =   "Alignment"
+"$$PREFSLAYOUT: AS IN DOC"               =   "As in document"
+"$$PREFSLAYOUT: FORCE LEFT"              =   "Force left"
+"$$PREFSLAYOUT: FORCE RIGHT"             =   "Force right"
+"$$PREFSLAYOUT: FORCE CENTER"            =   "Force center"
+"$$PREFSLAYOUT: FORCE JUSTIFY"           =   "Force justify"
+"$$PREFSLAYOUT: CONNECT PARTS WITH PAGING"
+                                           =   "Connect parts with paging"
+/****************************************************************************/
+"$$PREFSLAYOUT: HELP"                    =
+    "• Altý çizgili seçeneði etkin kýlýndýðýnda baðlantýlarýn altý noktalý alt çizgi "\
+    "ile, <U> HTML imi ile iþaretli altý çizgili yazý tipli yazýlarýn altý "\
+    "ise düz çizgi ile çizilerek "\
+    "gösterilecektir. Üzeri çizgili seçeneðini etkin kýlarak ziyaret edilmiþ ve "\
+    "ziyaret edilmemiþ baðlantýlarý birbirinden ayýrabilirsiniz."\
+    "\n\n"\
+/****************************************************************************/
+    "• You can connect multipart documents with the paging "\
+    "controls so that using a page-down (or half-page-down) "\
+    "control on the last screen of a page will take you to "\
+    "the last displayed link, and similarly for using a page-up or "\
+    "half-page-up control on the first screen."\
+    "\n\n"\
+    "• You can override the document's alignment settings."
+/****************************************************************************/
+
+
+/*** FONT PREFERENCES ***/
+/*************************************************************/
+"$$PREFSFONT: LIBRARY"      =   "Library"
+"$$PREFSFONT: MAIN"         =   "Main"
+/*************************************************************/
+
+
+/*** COLOR PREFERENCES ***/
+
+"$$PREFSCOLOR: STRIKE-THROUGH"          =   "Üstü çizgiliyi geçerli kýl"
+/****************************************************************************/
+"$$PREFSCOLOR: FORCE DEFAULT TEXT COLORS" =  "Force default text colors"
+/****************************************************************************/
+"$$PREFSCOLOR: HELP"                    =
+    "• Eðer bir baðlantýnýn ziyaret edilip edilmediðini "\
+    "anlamakta zorluk çekiyorsanýz, üstü çizgili yazý tipini geçerli kýlmayý "\
+    "deneyebilirsiniz. Bu ziyaret edilen baðlarýn üzerini çizecektir."\
+    "\n\n"\
+/****************************************************************************/
+    "• You can force text to be black and links to be blue."
+/****************************************************************************/
+
+
+/*** LIBRARY PREFERENCES ***/
+
+"$$PREFSLIBRARY: UPDATE DOCLIST"           =   "Listeyi güncelle:"
+"$$PREFSLIBRARY: AUTOMATIC"                =   "Otomatik"
+"$$PREFSLIBRARY: MANUAL"                   =   "El ile"
+"$$PREFSLIBRARY: IGNORE CARD"              =   "Kartý yok say"
+"$$PREFSLIBRARY: ADVANCED"                 =   "Ýleri düzey"
+"$$PREFSLIBRARY: ASCENDING"                =   "Artan"
+"$$PREFSLIBRARY: CATEGORY STYLE:"          =   "Kategori Stili:"
+"$$PREFSLIBRARY: CLASSIC"                  =   "Klasik"
+"$$PREFSLIBRARY: DATE"                     =   "Tarih"
+"$$PREFSLIBRARY: DESCENDING"               =   "Azalan"
+"$$PREFSLIBRARY: NAME"                     =   "Ýsim"
+"$$PREFSLIBRARY: SHOW DATE COLUMN"         =   "Tarih Kolonunu Göster"
+"$$PREFSLIBRARY: SHOW SIZE COLUMN"         =   "Boyut Kolonunu Göster"
+"$$PREFSLIBRARY: SHOW TYPE COLUMN"         =   "Tip Kolonunu Göster"
+"$$PREFSLIBRARY: SIZE"                     =   "Boyut"
+"$$PREFSLIBRARY: SORT BY:"                 =   "Dokümanlarý Sýrala:"
+"$$PREFSLIBRARY: SORT ORDER:"              =   "Sýralama Düzeni:"
+"$$PREFSLIBRARY: TYPE"                     =   "Tip"
+/*************************************************************/
+"$$PREFSLIBRARY: INDICATE OPENED"          =   "Enable Strike-through"
+"$$PREFSLIBRARY: DATE/TIME"                =   "Use date/time for sort by date"
+"$$PREFSLIBRARY: CATEGORY"                 =   "Category"
+/*************************************************************/
+"$$PREFSLIBRARY: HELP"                     =
+    "• Bazý cihazlarda doküman listesini güncellemek yavaþ olabileceðinden "\
+    "hem RAM hem harici kartlardaki listenin otomatik olarak güncellenmesi, "\
+    "sadece RAM'daki listenin otomatik olarak güncelenmesi veya listenin elle "\
+    "güncellenmesi için seçenekler vardýr."\
+    "\n\n"\
+    "• Dokümanlarý isim, tarih veya boyutuna göre küçükten büyüðe "\
+    "ya da büyükten küçüðe sýralayabilirsiniz."\
+    "\n\n"\
+/*************************************************************/
+    "• It is possible to select whether the sort by date should use only the "\
+    "date or if it should use both date and time (faster, but could make the "\
+    "list look 'unsorted')."
+/*************************************************************/
+
+
+/*** AUTOSCROLL PREFERENCES ***/
+
+"$$PREFSAUTOSCROLL: AUTOSCROLL DELAY:"       =   "Gecikme süresi:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL DIRECTION:"   =   "Yönü:"
+"$$PREFSAUTOSCROLL: AUTOSCROLL JUMP:"        =   "Atlama mesafesi:"
+"$$PREFSAUTOSCROLL: DOWN"                    =   "Aþaðý"
+"$$PREFSAUTOSCROLL: MILLISECONDS"            =   "milisaniye"
+"$$PREFSAUTOSCROLL: PAGE(S)"                 =   "Sayfa"
+"$$PREFSAUTOSCROLL: PIXEL(S)"                =   "Piksel"
+"$$PREFSAUTOSCROLL: STAY ON"                 =   "Kaydýrýrken cihaz kapanmasýn"
+"$$PREFSAUTOSCROLL: UP"                      =   "Yukarý"
+"$$PREFSAUTOSCROLL: HELP"                    =
+    "• Bu form otomatik kaydýrma ayarlarý için kullanýlýr."\
+    "\n\n"\
+    "• Dokümaný belirlediðiniz sayfa ya da piksel boyunda otomatik olarak "\
+    "kaydýrabilirsiniz."\
+    "\n\n"\
+    "• Otomatik kayma yönünü yukarý ya da aþaðý olarak ayarlayabilirsiniz."\
+    "\n\n"\
+    "• Her otomatik kaydýrma arasýndaki zaman gecikmesini milisaniye "\
+    "cinsinden ayarlayabilirsiniz."\
+    "\n\n"\
+    "• Otomatik kayma sýrasýnda cihazýn kapanmasýný engelleyebilirsiniz. "\
+    "Cihaz sayfa bitene kadar ya da pil zayýflayana kadar otomatik kaydýrmaya "\
+    "devam eder."\
+    "\n\n"\
+/******************************************************************/
+    "• Note that while autoscrolling is happening, you can control "\
+    "the speed with buttons on the toolbar as well as with all the controls "\
+    "(such as Page Up/Down keys) that normally are used to scroll by "\
+    "a screen or half a screen."
+/******************************************************************/
+
+
+/*** HARDCOPY PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSHARDCOPY: TITLE"            =   "Hardcopy Actions"
+/*************************************************************/
+"$$PREFSHARDCOPY: ACTION:"          =   "Ýþlem:"
+"$$PREFSHARDCOPY: DIALOG"           =   "Diyalog"
+"$$PREFSHARDCOPY: IMMEDIATE"        =   "Hemen"
+"$$PREFSHARDCOPY: RANGE:"           =   "Aralýk:"
+"$$PREFSHARDCOPY: IN VIEW AREA"     =   "Görüntü alaný"
+"$$PREFSHARDCOPY: VISIBLE PARAGRAPHS" = "Görünen paragraflar"
+"$$PREFSHARDCOPY: LINK:"            =   "Bað:"
+"$$PREFSHARDCOPY: BOTTOM"           =   "Altýnda"
+"$$PREFSHARDCOPY: INLINE"           =   "Satýriçi"
+"$$PREFSHARDCOPY: NONE"             =   "Yok"
+"$$PREFSHARDCOPY: HELP"             =
+    "• Bu formda 'Memo'ya ihraç et' özelliðini seçebilirsiniz. "\
+    "Bu özellik bulunduðunuz ekrandaki metni Palm'in standart memopad "\
+    "programýna ihraç etmenizi saðlar."\
+    "\n\n"\
+    "• Kopyalanan metne yazabilir veya hemen memopad'e ihraç edebilirsiniz."\
+    "\n\n"\
+    "• Görünen bölgedeki metin veya görünen paragraflar kopyalanýr."\
+    "\n\n"\
+    "• Satýriçi olarak belirtilen baðlarýn URL'leri sonda listelenir ya da yok sayýlýr."
+
+
+"$$PREFSHARDCOPY: DIALOG"           =   "Dialog"
+"$$PREFSHARDCOPY: IMMEDIATE"        =   "Immediate"
+"$$PREFSHARDCOPY: RANGE:"           =   "Range:"
+"$$PREFSHARDCOPY: IN VIEW AREA"     =   "In view area"
+"$$PREFSHARDCOPY: VISIBLE PARAGRAPHS" = "Visible paragraphs"
+"$$PREFSHARDCOPY: LINK:"            =   "Link:"
+"$$PREFSHARDCOPY: BOTTOM"           =   "Bottom"
+"$$PREFSHARDCOPY: INLINE"           =   "Inline"
+"$$PREFSHARDCOPY: NONE"             =   "None"
+"$$PREFSHARDCOPY: HELP"             =
+    "• You can choose the action of 'export to memo' feature in this form. This feature enables you to clip, edit, and export text in the current view area to Palm's standard memopad."\
+    "\n\n"\
+    "• Clipped text can be edited in dialog, or be copied immediately to memopad."\
+    "\n\n"\
+    "• Text in the current viewarea or in the visible paragraphs is clipped."\
+    "\n\n"\
+    "• URLs of the links are listed at the bottom, indicated inline, or simply ignored."
+
+
+/*** EXTERNALLINK PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSEXTERNALLINK: TITLE"            =   "External Link Handling"
+"$$PREFSEXTERNALLINK: ACTION:"          =   "Action:"
+"$$PREFSEXTERNALLINK: DIALOG"           =   "Dialog"
+"$$PREFSEXTERNALLINK: TO MEMO"          =   "Directly to memopad"
+"$$PREFSEXTERNALLINK: BROWSE"           =   "Browse"
+/*************************************************************/
+
+
+/*** BUTTON PREFERENCES ***/
+
+"$$PREFSBUTTONS: HARD KEYS"              =   "Gezinti düðmeleri"
+"$$PREFSBUTTONS: ARROW KEYS"             =   "Özel ok düðmelerini aktifleþtir"
+"$$PREFSBUTTONS: HELP"                   =
+    "• Gezinti düðmelerini etkin kýlarak cihazýn üzerindeki düðmelere "\
+    "belirlediðiniz iþlemleri atayabilirsiniz."\
+    "\n\n"\
+    "• Her dört cihaz düðmesi için ayrý iþlem seçebilirsiniz."
+
+
+/*** CONTROL PREFERENCES ***/
+
+"$$PREFSTAP: MODE 1"                     =   "Mod 1"
+"$$PREFSTAP: MODE 2"                     =   "Mod 2"
+"$$PREFSTAP: MODE 3"                     =   "Mod 3"
+"$$PREFSTAP: PEN SCROLL MSG1"            =   "Sayfayý kaydýrmak için"
+"$$PREFSTAP: PEN SCROLL MSG2"            =   "ekrana týklayýn ve"
+"$$PREFSTAP: PEN SCROLL MSG3"            =   "kalemi yukarý aþaðý"
+"$$PREFSTAP: PEN SCROLL MSG4"            =   "sürükleyin"
+"$$PREFSTAP: REGION ACTION:"             =   "Bölge davranýþý:"
+"$$PREFSTAP: HELP"                       =
+    "• Týklama davranýþý kalemle ekrana týklandýðýnda "\
+    "neler yapýlacaðýný ayarlamada kullanýlýr. "\
+    "Ekran týklamasý üç farklý modda kullanýlabilir."\
+    "\n\n"\
+    "• Ýlk iki mod ekraný farklý bölgelere ayýrýr. Her bölge için farklý "\
+    "davranýþ belirlenebilir (sayfanýn sonuna gitmek, geri gitmek vs.)."\
+    "\n\n"\
+    "• Üçüncü mod kalemi ekranda sürükleyerek sayfayý kaydýrma iþlemini yapar."
+
+
+/*** GESTURE PREFERENCES ***/
+
+"$$PREFSGESTURES: USE GESTURES"          =   "Gezinti için Graffiti iþaretleri"
+"$$PREFSGESTURES: HELP"                  =
+    "• Ýþaret seçeneðini etkin hale getirerek belirleyeceðiniz iþlemleri "\
+    "yapmak için Graffiti bölgesinde kalem darbelerini kullanabilirsiniz."\
+    "\n\n"\
+    "• Beþ adet iþaret vardýr: saða darbe, sola darbe, yukarý darbe "\
+    "aþaðý darbe ve Graffiti týklamasý."\
+    "\n\n"\
+    "• Her beþ iþaret için farklý iþlem seçebilirsiniz."
+
+
+/*** JOGDIAL PREFERENCES ***/
+
+"$$PREFSJOGDIAL: USE JOGDIALS"  =     "Gezinti için JogDial'ý etkin kýl"
+"$$PREFSJOGDIAL: HELP"  =
+    "• JogDial'ý olan bir Palm cihazýnýz varsa buna Plucker'da çeþitli iþlemler "\
+    "yapacak iþlevsellikler atayabilirsiniz."\
+    "\n\n"\
+    "• Altý iþlevsellik atanabilir: Yukarý kaydýr, aþaðý kaydýr, içeri it, "\
+    "içeri ve yukarý it, içeri aþaðý ve geri it. Cihazýnýza baðlý olarak tüm "\
+    "iþlevsellikler olmayabilir. "\
+    "\n\n"\
+    "• Beþ JogDial iþlevi için farklý iþlemler seçebilirsiniz. "
+
+/*** WORD LOOKUP PREFERENCES ***/
+
+/*************************************************************/
+"$$PREFSLOOKUP: ALWAYS ACTIVE"         = "Word lookup always active"
+"$$PREFSLOOKUP: ACTION:"               = "Action:"
+"$$PREFSLOOKUP: SEARCH FORM"           = "Insert into search form"
+"$$PREFSLOOKUP: PPI"                   = "Look up in PPI"
+"$$PREFSLOOKUP: TO CLIPBOARD"          = "Copy to the clipboard"
+"$$PREFSLOOKUP: ANNOTATE"              = "Annotate"
+"$$PREFSLOOKUP: HELP"                  =
+    "• Plucker has a word-lookup function.  When the function is active, "\
+    "tapping on a word selects that word and performs an action. "\
+    "\n\n"\
+    "• If word lookup is set to be always active, then tapping on a word "\
+    "not inside a link always selects a word."\
+    "\n\n"\
+    "• Otherwise, you can use the 'Lookup word' function in the 'Go' menu "\
+    "to turn on a temporary tap-selection mode for the next tap.  That "\
+    "function can also be assigned to a hard key or any other "\
+    "configurable control."\
+    "\n\n"\
+    "• Hint: To select a word that contains a non-alphanumeric character such "\
+    "as an apostrophe or a dash, tap on that character when selecting and all "\
+    "instances of that character will be treated as letters."
+/*************************************************************/
+
+
+
+/*** FONT SELECT ***/
+
+"$$FONTS: FONT:"                    =   "Font:"
+"$$FONTS: OK"                       =   "Tamam"
+"$$FONTS: CANCEL"                   =   "Ýptal"
+"$$FONTS: LINE SPACING:"            =   "Satýr aralýðý:"
+"$$FONTS: PARAGRAPH SPACING:"       =   "Paragraf aralýðý:"
+/****************************************************************************/
+"$$FONTS: RTL"                      =   "RTL"
+"$$FONTS: SELECT FONT"              =   "Select font and layout"
+"$$FONTS: ROTATE:"                  =   "Rotation: "
+"$$FONTS: NONE"                     =   "None"
+"$$FONTS: COUNTERCLOCKWISE"         =   "Counterclockwise"
+"$$FONTS: CLOCKWISE"                =   "Clockwise"
+"$$FONTS: BUILT-IN FONTS:"          =   "Built-in fonts:"
+"$$FONTS: USER-LOADED FONT:"        =   "User-loaded font:"
+"$$FONTS: VARY WITH DOCUMENT"       =   "Vary with document"
+"$$FONTS: ALSO SET AS DEFAULT"      =   "Also set as default"
+"$$FONTS: HELP"                     =
+    "• You can select one of the standard Palm fonts or one "\
+    "of the built-in Plucker fonts."\
+    "\n\n"\
+    "• If you have a Plucker font package loaded, you can select "\
+    "that, instead, if this is supported on your device."\
+    "\n\n"\
+    "• You can vary line- and paragraph-spacing in the document. "\
+    "Setting the line-spacing to a negative value may cause some "\
+    "minor visual defects such as lines not showing up."\
+    "\n\n"\
+    "• You can rotate the display by 90 degrees.  On OS 3.5, images"\
+    "will be omitted."\
+    "\n\n"\
+    "• You can allow the font settings to vary between documents "\
+    "and if you do that, you will also have the option to make the "\
+    "current settings be the default ones for new documents."
+/****************************************************************************/
+
+/*** KEYBOARD CUSTOMIZATION ***/
+
+/****************************************************************************/
+"$$KEYBOARD: SET KEYBOARD / GRAFFITI"        =   "Set keyboard / graffiti"
+"$$KEYBOARD: KEYBOARD OR GRAFFITI"         =   "Keyboard or graffiti"
+"$$KEYBOARD: SPECIAL KEYS"          =   "Special keys"
+"$$KEYBOARD: OK"                    =   "OK"
+"$$KEYBOARD: CANCEL"                =   "Cancel"
+"$$KEYBOARD: DEFAULT"               =   "Default"
+"$$KEYBOARD: CLEAR"                 =   "Clear"
+"$$KEYBOARD: INTERFERENCE MSG1"     =   "Some settings can be incompatible"
+"$$KEYBOARD: INTERFERENCE MSG2"     =   "with gestures and/or Graffiti 2."
+"$$KEYBOARD: HELP"                  =
+    "• If you have a keyboard, you can control Plucker with it. "\
+    "You can also control Plucker by using Graffiti to write "\
+    "down certain characters."\
+    "\n\n"\
+    "• Printable characters such as 'a' or '$' can be typed in or "\
+    "drawn with Graffiti strokes directly into the customization form "\
+    "and then you can select the appropriate behavior."\
+    "\n\n"\
+    "• Special keys like 'Return' or arrow keys need to be "\
+    "selected from the drop down list, and then you can select the "\
+    "appropriate actions."\
+    "\n\n"\
+    "• Some characters/keys will not work if you have Graffiti "\
+    "gestures activated in the Plucker preferences.  In particular, "\
+    "the i, I, 1, l, L, period and backspace keys/characters and "\
+    "some shifted Graffiti characters "\
+    "will not be available unless you have gestures disabled."\
+    "\n\n"\
+    "• Some characters are incompatible with Graffiti 2 input.  If "\
+    "you wish to control Plucker with Graffiti 2 input through this "\
+    "customization option, do not assign "\
+    "actions to multistroke characters.  Also, entering a Graffiti 2 "\
+    "multistroke character into Plucker while an action is assigned "\
+    "to the l, space, single quote, minus or backspace characters "\
+    "will lead to unexpected results."
+
+
+"$$KEY: RETURN"                     =   "Return"
+"$$KEY: TAB"                        =   "Tab"
+"$$KEY: UP"                         =   "Up"
+"$$KEY: DOWN"                       =   "Down"
+"$$KEY: LEFT"                       =   "Left"
+"$$KEY: RIGHT"                      =   "Right"
+"$$KEY: BACKSPACE"                  =   "Backspace"
+/****************************************************************************/
+
+
+/*** SELECTION ***/
+
+"$$SELECT: ADD BOOKMARK..."        =   "Yer imi ekle..."
+"$$SELECT: AUTOSCROLL FASTER"      =   "Hýzlý kaydýr"
+"$$SELECT: AUTOSCROLL SLOWER"      =   "Yavaþ kaydýr"
+"$$SELECT: BOOKMARKS..."           =   "Yer imleri..."
+"$$SELECT: BUTTON ACTION..."       =   "Düðme davranýþý..."
+"$$SELECT: DELETE DOC..."          =   "Dokümaný sil..."
+"$$SELECT: DETAILS..."             =   "Detaylar..."
+"$$SELECT: FIND AGAIN"             =   "Yeniden bul"
+"$$SELECT: FIND..."                =   "Bul..."
+"$$SELECT: FULL PAGE DOWN"         =   "Sonraki sayfa" 
+"$$SELECT: FULL PAGE UP"           =   "Önceki sayfa" 
+"$$SELECT: GESTURE ACTION..."      =   "Ýþaret davranýþý..."
+"$$SELECT: GO BACK"                =   "Geri git" 
+"$$SELECT: GO FORWARD"             =   "Ýleri git" 
+"$$SELECT: GO HOME"                =   "Ana sayfaya git"
+"$$SELECT: GO TO BOTTOM"           =   "Sayfanýn sonuna git"
+"$$SELECT: GO TO TOP"              =   "Sayfanýn baþýna git"
+"$$SELECT: HALF PAGE DOWN"         =   "Yarým sayfa aþaðý" 
+"$$SELECT: HALF PAGE UP"           =   "Yarým sayfa yukarý" 
+"$$SELECT: LIBRARY..."             =   "Dokümanlar..."
+"$$SELECT: NONE"                   =   "Hiçbiri"
+"$$SELECT: PREFERENCES..."         =   "Tercihler..."
+"$$SELECT: TAP ACTION..."          =   "Týklama davranýþý..."
+"$$SELECT: TOGGLE AUTOSCROLL"      =   "Kaydýrma aç/kapa"
+/****************************************************/
+"$$SELECT: COPY TO MEMO"           =   "Export to Memo"
+"$$SELECT: GO TO LINK"             =   "Go to link"
+"$$SELECT: NEXT ANCHOR"            =   "Next anchor"
+"$$SELECT: PREV ANCHOR"            =   "Prev anchor"
+"$$SELECT: SELECT FONT..."         =   "Font and layout..."
+"$$SELECT: COMMAND STROKE"         =   "Command stroke"
+"$$SELECT: MENU..."                =   "Menu..."
+"$$SELECT: TOGGLE TOOLBAR"         =   "Toggle toolbar"
+"$$SELECT: TOGGLE FULLSCREEN"      =   "Toggle fullscreen"
+"$$SELECT: ONE LINE UP"            =   "One line up"
+"$$SELECT: ONE LINE DOWN"          =   "One line down"
+"$$SELECT: ADJUST BRIGHTNESS"      =   "Brightness..."
+"$$SELECT: ADJUST CONTRAST"        =   "Contrast..."
+"$$SELECT: TOGGLE BACKLIGHT"       =   "Toggle backlight"
+"$$SELECT: ROTATE RIGHT"           =   "Rotate right"
+"$$SELECT: ROTATE LEFT"            =   "Rotate left"
+"$$SELECT: SAVE POSITION"          =   "Save position"
+"$$SELECT: LOOKUP WORD IN PPI"     =   "PPI select word"
+"$$SELECT: LOOKUP TO SEARCH FORM"  =   "Search select word"
+"$$SELECT: LOOKUP TO CLIPBOARD"    =   "Clipboard select word"
+"$$SELECT: LOOKUP TO ANNOTATE"     =   "Annotate select word"
+"$$UNSUPPORTED"                    =   "Unsupported action"
+/****************************************************/
+
+
+/*** DETAILS ***/
+
+"$$DETAILS: CANCEL"                 =   "Ýptal"
+"$$DETAILS: COPY URL"               =   "URL'i kopyala"
+"$$DETAILS: OK"                     =   "Tamam"
+"$$DETAILS: READ"                   =   "Okunmuþ"
+"$$DETAILS: SHOW IMAGES"            =   "Resimleri göster"
+"$$DETAILS: STATUS:"                =   "Durum:"
+"$$DETAILS: TITLE"                  =   "Detaylar"
+"$$DETAILS: UNREAD"                 =   "Okunmamýþ"
+"$$DETAILS: URL:"                   =   "URL:"
+"$$DETAILS: HELP"                   =
+    "• Bir dokümanýn durumunu okunmamýþ olarak deðiþtirebilirsiniz."\
+    "\n\n"\
+    "• Resimleri kapadýðýnýzda tüm resimler sayfadan çýkartýlýr."
+
+
+/*** SEARCH ***/
+
+"$$FIND: CANCEL"                    =   "Ýptal"
+"$$FIND: CASE SENSITIVE"            =   "Büyük/küçük harf duyarlý" 
+"$$FIND: FIND:"                     =   "Bul:"
+"$$FIND: IN ALL PAGES"              =   "Hepsinde"
+"$$FIND: IN PAGE"                   =   "Burada"
+"$$FIND: OK"                        =   "Tamam"
+"$$FIND: TITLE"                     =   "Plucker bul"
+"$$FIND: SUB PAGES"                 =   "Alt sayfalarda"
+/****************************************************/
+"$$FIND: DOWN IN DOC"               =   "Down in doc"
+"$$FIND: PHRASE"                    =   "Phrase"
+"$$FIND: NO TRANSLITERATION"        =   "No transliteration"
+"$$FIND: NON-ASCII TO PERIOD"       =   "Non-ASCII to period"
+"$$FIND: DROP LATIN 1 ACCENTS"      =   "Drop Latin 1 accents"
+"$$FIND: HELP"                      =
+    "• Tapping on the icon to the right of the search field "\
+    "gives you a list of recent search strings to choose from."\
+    "\n\n"\
+    "• You can search the current page, the whole document, the whole "\
+    "document down from the current position, or subpages (breadth-first "\
+    "spidering)."\
+    "\n\n"\
+    "• You can make your search case insensitive if applicable to your language."\
+    "\n\n"\
+    "• In a phrase search you must have an "\
+    "exact match for everything in the search string, including spaces."\
+    "\n\n"\
+    "• If you turn off phrase search, each space-separated string "\
+    "must be found within the same paragraph.  Thus if you "\
+    "put in the search string 'Big bad wolf' (without the quotation marks), "\
+    "then you will find all paragraphs that contain the strings 'Big', 'bad' "\
+    "and 'wolf' somewhere in them, "\
+    "though not necessarily as whole words and not necessarily in this order. "\
+    "\n\n"\
+    "• Only the first term will be highlighted in the text when you view the "\
+    "results."\
+    "\n\n"\
+    "• With phrase search disabled, if you have more than ten search terms, "\
+    "the extra ones will be ignored."\
+    "\n\n"\
+    "• For fastest searching, put the least common term as the first one "\
+    "if phrase search is disabled."\
+    "\n\n"\
+    "• You can choose to transliterate the text and search string before "\
+    "searching.  For instance, you can choose to change all non-ASCII "\
+    "characters (such as 'ü') to periods.  Or you can choose to drop "\
+    "accents on all Latin 1 characters, so that, for instance, a 'u-umlaut' "\
+    "gets changed to a 'u'.  This also changes other non-ASCII characters "\
+    "such as fancy quotation marks to their closest ASCII equivalent.  Since "\
+    "your search string is also transliterated before searching, this is basically "\
+    "an accent-insensitive search."
+/****************************************************/
+
+
+/*** SEARCH RESULT ***/
+
+"$$RESULT: CANCEL"                  =   "Ýptal"
+"$$RESULT: FINDMORE"                =   "Daha bul"
+"$$RESULT: MATCHES"                 =   "Dengi bulundu:"
+"$$RESULT: NOMATCHES"               =   "Dengi bulunamadý:"
+"$$RESULT: SEARCHING..."            =   "Arýyor..."
+"$$RESULT: STOP"                    =   "Dur"
+"$$RESULT: TITLE"                   =   "Plucker bul"
+
+
+/*** EMAIL ***/
+
+"$$EMAIL: CANCEL"                   =   "Ýptal"
+"$$EMAIL: CC:"                      =   "Cc:"
+"$$EMAIL: SEND"                     =   "Gönder"
+"$$EMAIL: SUBJECT:"                 =   "Konu:"
+"$$EMAIL: TITLE"                    =   "Plucker E-posta"
+"$$EMAIL: TO:"                      =   "Kime:"
+
+
+/*** ADD BOOKMARK ***/
+
+"$$ADD BOOKMARK: ADD"               =   "Ekle"
+"$$ADD BOOKMARK: CANCEL"            =   "Ýptal"
+"$$ADD BOOKMARK: NAME:"             =   "Ýsim:"
+"$$ADD BOOKMARK: TITLE"             =   "Yer imi ekle"
+
+
+/*** BOOKMARK ***/
+
+"$$BOOKMARKS: DELETE"               =   "Sil"
+"$$BOOKMARKS: DONE"                 =   "Tamam"
+"$$BOOKMARKS: GO TO"                =   "Git"
+"$$BOOKMARKS: TITLE"                =   "Yer imleri"
+
+
+/*** EXTERNAL LINKS ***/
+
+"$$EXTERN: BACK"                    =   "Geri"
+"$$EXTERN: COPY URL"                =   "URL'i kopyala"
+"$$EXTERN: LABEL1"                  =   "Seçmiþ olduðunuz baðlantý"
+"$$EXTERN: LABEL2"                  =   "cihazýnýzda deðil. Bu baðlantý"
+"$$EXTERN: LABEL3"                  =   "harici bir site olabilir, ya da"
+"$$EXTERN: LABEL4"                  =   "ilgi yapýlan sayfa tarafýndan"
+"$$EXTERN: LABEL5"                  =   "indirilmesi istenen bilgi derinliði izin"
+"$$EXTERN: LABEL6"                  =   "verilen maksimum sýnýrý aþmýþ olabilir."
+"$$EXTERN: NO URL"                  =   "URL Bilgisi Mevcut Deðil."
+"$$EXTERN: TITLE"                   =   "Harici Baðlantý"
+"$$EXTERN: URL:"                    =   "URL:"
+/********************************************************************/
+"$$EXTERN: BROWSE ONLINE"           =   "Go online"
+/********************************************************************/
+
+
+/*** CATEGORY ***/
+
+"$$CATEGORY: ALL"                   =   "Hepsi"
+"$$CATEGORY: AND"                   =   "VE"
+"$$CATEGORY: CANCEL"                =   "Ýptal"
+"$$CATEGORY: DELETE"                =   "Sil"
+"$$CATEGORY: MULTIPLE SELECT"       =   "Çoklu seçim"
+"$$CATEGORY: NONE"                  =   "Hiçbiri"
+"$$CATEGORY: OK"                    =   "Tamam"
+"$$CATEGORY: OR"                    =   "VEYA"
+"$$CATEGORY: RENAME"                =   "Ýsim deðiþtir"
+"$$CATEGORY: TITLE"                 =   "Kategoriler"
+"$$CATEGORY: UNFILED"               =   "Kategorisiz"
+"$$CATEGORY: HELP"                  =
+    "• Kategoriyi saklayýp göstermek için üzerinde ismi yazan düðmeye týklayýn."\
+    "\n\n"\
+    "• Ayný anda birden çok kategoriyi görüntülemek için ÇOKLU SEÇÝM'i iþaretleyin."\
+    "\n\n"\
+    "• Yeni bir kategori eklemek için boþ bir düðmeye týklayýn. Doküman ikonu "\
+    "kategoriyi silmek ya da ismini deðiþtirmek için seçenekler saðlar."\
+    "\n\n"\
+    "• Eðer bir kategori silerseniz onun altýnda dosyalanmýþ olan dokümanlar "\
+    "Kategorisiz doküman olur."\
+    "\n\n"\
+    "• Farklý kategorilerdeki dokümanlarý birleþtirmek için bir kategorinin "\
+    "ismini diðeri olacak þekilde deðiþtirin."
+
+/*** NEW CATEGORY ***/
+
+"$$EDIT CATEGORIES: CANCEL"         =   "Ýptal"
+"$$EDIT CATEGORIES: NAME:"          =   "Yeni kategori ismi girin:"
+"$$EDIT CATEGORIES: OK"             =   "Tamam"
+"$$EDIT CATEGORIES: TITLE"          =   "Kategorilere yaz"
+
+
+/*** INITIALIZING CATEGORY ***/
+
+"$$INITDOC: SYNCHRONIZING"          =   "Dokümanlarý yüklüyor"
+"$$INITDOC: OPEN DOC LIST"          =   "Doküman listesi açýlýyor"
+
+
+/*** SORT DOCUMENTS ***/
+
+"$$SORTDOC: SORTING..."             =   "Sýralýyor..."
+
+
+/*** HARDCOPY ***/
+
+"$$HARDCOPY: TITLE"                 =   "Memo'ya Ihraç Et"
+"$$HARDCOPY: CANCEL"                =   "Ýptal"
+"$$HARDCOPY: EXPORT"                =   "Ýhraç et"
+"$$HARDCOPY: ROT13"                 =   "Rot13"
+
+
+/*** ANNOTATION ***/
+
+/*************************************************************/
+"$$ANNOTATION: TITLE"                 =   "Annotate"
+"$$ANNOTATION: OK"                    =   "OK"
+"$$ANNOTATION: CANCEL"                =   "Cancel"
+"$$ANNOTATION: DELETE"                =   "Delete"
+/*************************************************************/
+
+
+/*** EXPORT LINK TO MEMO ***/
+
+/*************************************************************/
+"$$EXPORT: EXPORTING LINK..."       =   "Exporting link..."
+/*************************************************************/
+
+
+/*************************************************************
+ *                         ALERTS                            *
+ *************************************************************/
+
+/*** COMMON STRINGS ***/
+
+"$$CANCEL"                  =   "Ýptal"
+"$$DELETE"                  =   "Sil"
+"$$EXIT"                    =   "Çýk"
+"$$NO"                      =   "Hayýr"
+"$$OK"                      =   "Tamam"
+"$$YES"                     =   "Evet"
+/*************************************************************/
+"$$LEAVE"                   =   "Leave"
+"$$NEXT"                    =   "Next page"
+"$$RESTART"                 =   "Restart"
+/*************************************************************/
+
+
+/*** INFORMATION ***/
+
+"$$SYSTEM INCOMPATIBLE"     =   "Sistem uyumsuz"
+"$$SYSTEM MSG"              =   "Bu uygulamayý çalýþtýrmak için PalmOS 2.0 "\
+                                "ya da üzeri gereklidir."
+                                
+"$$HIGH BITDEPTH"           =   "Resim görüntülenemiyor"
+"$$HIGH BITDEPTH MSG"       =   "Bit derinliði bu cihaz için çok fazla."
+
+"$$EMPTY PATTERNS"          =   "Önceki arama yok"
+"$$EMPTY PATTERNS MSG"      =   "Daha önce arama yok."
+
+"$$NO BEAM SUPPORT"         =   "Iþýnlama desteði yok"
+"$$NO BEAM SUPPORT MSG"     =   "Bu cihaz ýþýnlamayý desteklemiyor"
+
+"$$COPY PROTECTED"          =   "Iþýnlanamýyor"
+"$$COPY PROTECTED MSG"      =   "Kopya korumalý dokümanlar ýþýnlanamaz."
+
+
+/*** CONFIRMATION ***/
+
+/*******************************************************************************/
+"$$DELETE OLD ANNOTATIONS"  =   "Out of date annotations"
+"$$DELETE OLD ANNOTATIONS MSG" =  "The annotations / bookmarks are older than "\
+                                  "the document.  Do you want to delete them now to "\
+                                  "prevent possible problems?"
+"$$DO NOT ASK"                 =  "Never"
+"$$DELETE ANNOTATIONS"         = "Delete annotations"
+"$$DELETE ANNOTATIONS MSG"     = "Do you want to delete the annotations and bookmarks for ^1?"
+"$$ALWAYS"                     = "Always delete"
+/*******************************************************************************/
+
+"$$CONFIRM DELETE"          =   "Silme iþlemini onayla"
+"$$DELETE MSG"              =   "^1 kalýcý olarak silinsin mi?"
+
+/*************************************************************/
+"$$CONFIRM DELETE METADOC"  =   "Confirm delete metadoc"
+"$$DELETE METADOC MSG"      =   "Delete meta document of ^1 as well?"
+/*************************************************************/
+
+"$$CONFIRM DELETE ALL"      =   "Hepsini silme iþlemini onayla"
+"$$DELETE ALL MSG"          =   "Seçilen kategori(ler)deki dokümanlarý "\
+                                "kalýcý olarak sil"
+                                
+/*************************************************************/
+"$$CONFIRM DELETE READ"     =   "Confirm delete read"
+"$$DELETE READ MSG"         =   "Delete read documents for selected "\
+                                "category/categories?"
+/*************************************************************/
+
+"$$MERGE CATEGORY"          =   "Kategorileri birleþtir"
+"$$MERGE CATEGORY MSG"      =   "Kategoriye, mevcut baþka kategorinin ismini "\
+                                "verdiniz. Bu iþlem iki kategoriyi birleþtirecektir "\
+                                "Devam etmek istiyor musunuz?"
+
+/*************************************************************/
+"$$END OF PAGE MSG"          =  "End of page reached.  Search next page or restart from "\
+                                "beginning of search?"
+
+"$$END OF DOC MSG"          =   "End of document reached.  Restart from beginning of search?"
+/*************************************************************/
+
+
+/*** WARNING ***/
+
+"$$BROKEN DOCUMENT"         =   "Hatalý Plucker dokümaný!"
+"$$BROKEN MSG"              =   "^1 dokümanýnda önemli kayýtlar eksik.\nLütfen "\
+                                "bu dokümaný yeniden yükleyin."
+
+"$$INSUFFICIENT MEMORY"     =   "Yetersiz bellek"
+"$$INSUFFICIENT MSG"        =   "Bu sayfayý açmak için bellek yetersiz. "\
+                                "RAM belleðini boþaltmanýz gerekli."
+
+"$$LOW MEMORY"              =   "Düþük bellek"
+"$$EMAIL MEMORY MSG"        =   "E-postayý oluþturmak için yeterli bellek "\
+                                "olmayabilir. Lütfen RAM belleði boþaltýn "\
+                                "ya da iletinizi çok kýsa tutun."
+"$$IMAGE MEMORY MSG"        =   "Bu resmi gösterecek yeterli dinamik bellek yok."
+
+"$$NO TOADDR"               =   "Kime: alanýnda adres belirtilmemiþ"
+"$$NO TOADDR MSG"           =   "Kime: alanýna adres yazmalýsýnýz."
+
+"$$ZLIB NOT SUPPORTED"      =   "ZLib desteklenmemektedir"
+"$$ZLIB MSG"                =   "Bu cihaz ZLib ile sýkýþtýrýlan belgeleri desteklememektedir."
+
+"$$IMAGE COMPRESSION"       =   "Sýkýþtýrma desteklenmemektedir"
+"$$COMPRESSION MSG"         =   "Bu cihaz PalmOS resim sýkýþtýrma iþlemini desteklememektedir. "\
+                                "Uygulamanýn Resim gösterme seçeneði kapatýlacaktýr."
+                                
+
+"$$AUTOSCROLL STAY ON"     =   "Otomatýk kaydýrma açýk kalsýn"
+
+"$$STAY ON MSG"            =    "Bu seçenek otomatik kaydýrma iþlemi sýrasýnda "\
+                                "cihazýn kapanmasýný önler. Otomatik kapanma, "\
+                                "siz ekrana týklayana, güç düðmesine basana ya da "\
+                                "dokümanýn sonuna eriþene kadar etkin hale gelmez."
+
+"$$INVALID OWNER"           =   "Doküman sahibi geçersiz!"
+
+"$$INVALID OWNER MSG"       =   "Cihazýn kullanýcý ismi '^1' için kayýt ettirilen "\
+                                "kullanýcý ismi ile uyuþmamaktadýr. Doküman bu isim "\
+                                "dýþýnda açýlamaz."
+
+"$$MANUAL SYNC"             =   "Doküman listesi güncelleme"
+"$$MANUAL SYNC MSG"         =   "Bu seçenek doküman listesinin otomatik olarak "\
+                                "güncellenmesini engeller. Doküman listesini "\
+                                "elle güncellemek için 'Listeyi güncelle' "\
+                                "menü adýmýný kullanýnýz."
+
+
+/*** ERROR ***/
+
+"$$NO CATEGORY"             =   "Kategori seçili deðil"
+"$$NO CATEGORY MSG"         =   "En azýndan bir kategori seçmelisiniz"
+
+"$$CATEGORY NAME"           =   "Kategori ismi"
+"$$CATEGORY NAME MSG"       =   "^1 isimli kategori ismi var."\
+                                "Lütfen baþka bir isim seçiniz."
+
+"$$CANNOT DELETE"           =   "Silinemiyor"
+"$$CANNOT DELETE MSG"       =   "Doküman silinemiyor!"
+
+"$$CANNOT DELETE ALL"       =   "Hepsi silinemiyor"
+"$$CANNOT DELETE ALL MSG"   =   "Dokümanlarýn hepsi silinemiyor!"
+
+/*************************************************************/
+"$$CANNOT DELETE READ"      =   "Cannot delete read"
+"$$CANNOT DELETE READ MSG"  =   "Cannot delete read documents!"
+/*************************************************************/
+
+"$$BAD MAILTO"              =   "Giden posta hatasý"
+"$$BAD MAILTO MSG"          =   "Giden posta kaydý hatalý. E-posta "\
+                                "adresi bulunamadý!"\
+                                "\n\n"\
+                                "Lütfen Plucker geliþtirme ekibine bilgi verin."
+
+"$$ALREADY EXISTS"          =   "Daha önceden ^1 isimli bir doküman var"
+
+"$$CANNOT RENAME DOC"       =   "Dokümanýn ismi deðiþtirilemiyor!"
+
+"$$READ ONLY"               =   "Salt-okunur doküman"
+"$$READ ONLY MSG"           =   "Salt-okunur doküman yeniden isimlendirilemez."
+
+"$$UNKNOWN TYPE"            =   "Bilinmeyen tür"
+"$$UNKNOWN TYPE MSG"        =   "Dokümanda bilinmeye tür"
+
+"$$CANNOT FIND DOC"         =   "Doküman bulunamadý"
+"$$CANNOT FIND DOC MSG"     =   "RAM bellekte ve harici kartta doküman bulunamadý"
+
+"$$UNHANDLED EXCEPTION"     =   "Beklenmedik hata"
+"$$UNHANDLED EXCEPTION MSG" =   "Beklenmedik hata, hata kodu = ^1"
+
+"$$CANNOT ADD BOOKMARK"     =   "Yer imi eklenemiyor"
+"$$CANNOT ADD BOOKMARK MSG" =   "'^1' eklenemedi"
+
+"$$CANNOT DELETE BOOKMARK"     =   "Yer imi silinemiyor"
+"$$CANNOT DELETE BOOKMARK MSG" =   "'^1' silinemedi"
+
+/*************************************************************/
+"$$IMAGE ERROR"             =   "Image error"
+"$$IMAGE ERROR MSG"         =   "There is a problem displaying the image. "\
+                                "Perhaps Plucker is running out of memory."
+/*************************************************************/
+END
+

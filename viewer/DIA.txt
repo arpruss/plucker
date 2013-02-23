@@ -1,0 +1,249 @@
+Support for DIA is provided via Alexander Pruss's DIA.c and resize.c code.
+The code in DIA.c does the low-level stuff of communicating with the DIA
+hardware (whether Sony, Palm or--though not in PB+--Handera) as well as
+non-standard screen-size devices, e.g., Dana AlphaSmart.
+
+To support DIA in your application, you need to do a couple of things.
+
+1. To support Sony, compile DIA.c with -DSUPPORT_DIA_SONY.  To support Handera,
+   compile DIA.c with -DSUPPORT_DIA_HANDERA.  Additionally, you must always have
+   -DSUPPORT_DIA if you want any DIA support, or you can put 
+      #define SUPPORT_DIA
+   in a config.h file (which must in any case be available but can be empty).
+   HAVE_SILKSCREEN is a synonym for SUPPORT_DIA.  Also,
+   ensure that you have a sects.h file that correctly sets the code sections
+   for DIA_SECTION and RESIZE_SECTION.  If your application doesn't do
+   sectioning, you can just do:
+      #define DIA_SECTION
+      #define RESIZE_SECTION
+   You also need to ensure that you have defined SafeMemPtrNew() and
+   SafeMemPtrFree() code and you have prototypes for these in util.h.
+   SafeMemPtrFree() should return if fed a NULL pointer, else call
+   MemPtrFree(), and SafeMemPtrNew() should produce a fatal application error
+   if MemPtrNew() fails.  If you don't care about error checking, you can
+   always do something like:
+      #define SafeMemPtrNew MemPtrNew
+      #define SafeMemPtrFree( p ) if ( ( p ) != NULL ) MemPtrFree( ( p ) )
+
+2. In your application initialization (E.g., StartApplication()) code, call
+   InitializeResizeSupport( indexDIADataID ) make sure this happens before the
+   event handlers for your forms are set.  In your application
+   de-initialization, call TerminateResizeSupport().
+
+3. In the place in your application where you handle notifications, before
+   processing any notifications, add a call to:
+       Boolean HandleResizeNotification( UInt32 notificationType )
+   This routine returns true if it has handled a resize notification, in
+   which case you do not need to handle the notification yourself.  Note
+   that the relevant notification is automatically registered for by
+   InitializeResizeSupport() and that the notification type depends on
+   your hardware platform.
+
+4. Before setting the event handler for form formID, call
+   SetResizePolicy( formID ).
+
+5. In each form event handler that you want to support DIA, make sure that 
+   before doing any handling yourself, you call the function:
+       Boolean ResizeHandleEvent( EventType* event ) RESIZE_SECTION;
+   If this function returns true, your event handler should return true;
+   otherwise, you should handle the event yourself.  
+   
+   Earlier versions of PalmResize required calling separate handling functions
+   for different event types.  This is deprecated now and may no longer work
+   in the future.
+
+5. Modify your .rcp file to include information on how to resize forms.  This
+   is done by including a number of WORDLIST (wrdl) resources.  The first
+   and the only non-optional one is an index resource of word pairs.
+     WORDLIST ID indexDIADataID
+     BEGIN
+        fromID1 toID1
+        fromID2 toID2
+        ...
+     END
+   The ID indexDIADataID is the same as the one in the InitializeResizeSupport()
+   call.  The list of word pairs then each contains the ID of a form resource
+   followed by the ID of the WORDLIST resource that contains the DIA resize data
+   for that form.  DIA is disabled for any forms not listed in the index:
+   virtual graffiti is popped up and resize is disabled if possible.  It is
+   perfectly acceptable to have no forms in the index or not all of them.
+   Unless this conflicts with other WORDLIST IDs you might be using, it is
+   easiest to use the same ID for the resize data as for the form, so
+   PalmBible+'s index, for instance, starts:
+       frmMain        frmMain
+       frmVersionInfo frmVersionInfo
+       frmMemoEdit    frmMemoEdit
+
+6. Now include specific information on how to resize the forms in your
+   application.  You should #include "resizeconsts.h" in your .rcp file to define
+   various bitmapped flags.  Each set of information has the following format:
+       WORDLIST ID resizeFormID
+       BEGIN
+          formFlags
+          binNumber
+          preferredState
+          // Object data
+          objectNum1  flags1   0
+          objectNum2  flags2   0
+          ...
+        END
+
+    formFlags is either 0 or a combination of:
+        DIA_FORM_KEEP_LAST
+        DIA_FORM_USE_BIN
+        DIA_FORM_NO_RESIZE
+        DIA_FORM_HANDERA
+    These flags, as all flags, can be added together, e.g.:
+        DIA_FORM_KEEP_LAST + DIA_FORM_USE_BIN
+
+    DIA_FORM_KEEP_LAST:  The form keeps the DIA state that was in force
+        before it was opened, unless the form uses a bin, and the bin
+        has defined data.  If this flag is set, binNumber is ignored
+        (but must still be included--perhaps set to zero).
+    DIA_FORM_USE_BIN:  A given application can include a number of "DIA
+        state bins."  All forms that use the same bin share the same DIA
+        setting, and if a user resizes a form in the bin, all the other
+        forms in the bin are resized.  For instance, modal dialogs might
+        be put all in one bin.  Or, items which do not require graffiti
+        might be put in another bin.  When an application starts up,
+        unless the bin data is loaded from the application's preferences
+        database, each bin entry is undefined.  The DIA_FORM_USE_BIN flag
+        interacts with the DIA_FORM_KEEP_LAST flag as follows: if the bin
+        has not yet been defined, the bin and the form get the DIA state
+        in force when the form was opened.  Without a DIA_FORM_KEEP_LAST
+        flag, the bin starts off being set to preferredState.
+    Without either of these flags, whenever the form is opened, the DIA
+    is set to preferredState.
+    
+    DIA_FORM_HANDERA:  The form is pre-measured for Handera 240x240
+        screens and does not need to be re-adjusted for them.  Otherwise,
+        if DIA support is linked in, the form is re-adjusted from 160x160
+        to 240x240.
+
+    preferredState is one of:
+        DIA_STATE_MAX
+        DIA_STATE_MIN
+        DIA_STATE_NO_STATUS_BAR
+    If DIA_FORM_KEEP_LAST is specified, this is ignored but must still be
+    included.  The MAX and MIN refer to the size of the DIA area.  Thus,
+    with DIA_STATE_MAX, the screen is typically minimized to the standard
+    160x160 (or 320x320) area.  With DIA_STATE_MIN, the DIA is contracted,
+    and the maximum screen size is available.  DIA_STATE_NO_STATUS_BAR is
+    the same as DIA_STATE_MIN except on Sony NR/NX/NZ/UX devices where it
+    opens a full screen mode with no status bar.  Make sure you give the
+    user a way of exiting this!  Sony recommends you do this by letting the
+    user tap on the place where the status bar used to be in order to restore
+    the status bar.
+
+    Finally, you get a list of object resize data.  This is the part of the
+    resize information that will take the most work.  By default, objects do
+    not resize--they stay the same size, and the same position relative to
+    the top left corner of the display.  Any objects which you want to move
+    or resize with DIA changes must be listed here.  The first object (whose
+    objectNum1 is ignored, but must still be included, e.g., set to 0) is 
+    always the form itself, and its resizing is relative to the whole screen.  
+    The other objects resize relative to the form.  At least the form itself
+    must be included.
+    
+    Each object resize line starts with the object ID (ignored for the form
+    itself, and set to the special value GSI_OBJECT_ID (65280) for the graffiti
+    state indicator--make sure this value is not used for anything else in your
+    form), then has a word specifying a combination of flags or 0 if the
+    object does not need to change size or position, followed by a reserved
+    word that should contain 0.  The object flags are a combination of:
+       DIA_X_RATIO DIA_Y_RATIO DIA_W_RATIO DIA_H_RATIO
+
+       DIA_X_RIGHT DIA_Y_BOTTOM
+
+       DIA_X_PLUS_DW DIA_Y_PLUS_DH DIA_W_PLUS_DW DIA_H_PLUS_DH
+
+       DIA_X_PLUS_1_2_DW DIA_Y_PLUS_1_2_DH DIA_W_PLUS_1_2_DW DIA_H_PLUS_1_2_DH
+
+       DIA_X_PLUS_1_3_DW  DIA_Y_PLUS_1_3_DH  DIA_W_PLUS_1_3_DW
+       DIA_H_PLUS_1_3_DH
+
+       DIA_X_PLUS_2_3_DW  DIA_Y_PLUS_2_3_DH  DIA_W_PLUS_2_3_DW
+       DIA_H_PLUS_2_3_DH
+
+       DIA_X_PLUS_1_4_DW DIA_Y_PLUS_1_4_DH DIA_W_PLUS_1_4_DW
+       DIA_H_PLUS_1_4_DH
+
+       DIA_X_PLUS_3_4_DW  DIA_Y_PLUS_3_4_DH  DIA_W_PLUS_3_4_DW
+       DIA_H_PLUS_3_4_DH
+
+    These flags specify how the four relevant positioning values are changed.
+    These values are X (horizontal coordinate), Y (vertical coordinate), W
+    (width), H (height).  You can at most include one DIA_X_* flag, one DIA_Y_*
+    flag, one DIA_W* and one DIA_H* flag.  If you omit a flag for one of the
+    positioning values, the value is unchanged.  The positioning values have
+    the following meanings:
+        *_RATIO : Keep the ration of the value relative to the extent of the
+                  form/display (i.e., for objects other than the form, extent
+                  of the form, and for the form, extent of the display)
+                  constant.  Thus, if the object was originally 37% of the 
+                  height of the form down in the form, then DIA_Y_RATIO will 
+                  try to keep the object at 37% of the height of the resized
+                  form down in the form.  If the object took up half of the
+                  width of the form, it will still do so if you set
+                  DIA_W_RATIO.
+        X_RIGHT : This ensures that the distance from the right edge of the
+                  screen to the right edge of the object does not change with
+                  resizing.  If the form is widened, the object moves right.
+        Y_BOTTOM : This ensures that the distance from the bottom edge of the
+                  screen to the bottom edge of the object does not change with
+                  resizing.  If the form is lengthened, the object moves 
+                  down.
+        *_PLUS_D[WH] : This says that the value should have added to it the
+                  amount of the change in the width (DW) or height (DH) that
+                  the form/display had.
+        *_PLUS_*_D[WH] : This is the same as *_PLUS_D[WH] except only the
+                  specified fraction of the change in the width or height is
+                  added.  The fraction is one of 1_2 (1/2), 1_3 (1/3), 
+                  2_3 (2/3), 1_4 (1/4) or 3_4 (1/4).  Use this when you have
+                  two to four objects horizontally or vertically arranged
+                  which you would like to resize equally.  Make sure that
+                  objects to the right or below them get the right 
+                  *_PLUS_*_D[WH] or X_RIGHT or Y_BOTTOM attributes.  For
+                  instance, if you have two side-by-side list boxes, you might
+                  do:
+                    listbox1 DIA_W_PLUS_1_2_DW+DIA_H_PLUS_DH 0
+                    listbox2 DIA_X_PLUS_1_2_DW+DIA_W_PLUS_1_2_DW+DIA_H_PLUS_DH 0
+                  This way, listbox1 and listbox2 each get the full benefit of
+                  any form lengthening (DIA_H_PLUS_DH), and each get half of the
+                  benefit of the form widening (DIA_W_PLUS_1_2_DW).  Moreover,
+                  we made sure that listbox2 would be placed further to the right
+                  to compensate for listbox1 widening, as needed.
+
+7. Unfortunately, currently (as of pilrc 3.2 beta 1), pilrc does not support
+   arithmetic in WORDLIST resources.  This is a serious problem for adding up
+   flags.  The recommended solution is the following.  Run the .rcp file
+   through cpp, after first changing final \ to @backslash@ with sed (otherwise
+   multiline strings are mangled).  Then run the resulting file through the
+   doaddition.pl perl script which (a) does the arithmetic inside WORDLIST
+   resources and changes each final @backslash@ back to \.  doaddition.pl is
+   not very smart.  Make sure that WORDLIST is all caps and that WORDLIST,
+   BEGIN and END are all flush on the left margin in the .rcp file.
+
+8. If you have the Sony status bar hidden, Sony recommends that you allow the
+   user to restore the area via a tap in that hidden area.  To this end, you
+   can use 
+       void GetHiddenStatusBarArea( RectangleType* area )
+   to get the area covered by the status bar (in current coordinates under OS5,
+   and in standard coordinates otherwise).  If the status bar is showing, an empty 
+   rectangle is returned.
+
+9. Finally, you can call
+       void ResizeRefreshCurrentForm( void );
+   to refresh the current form's DIA settings and redraw the form.  Normally
+   there should be no need to call this if you've followed the above
+   instructions.  A need to call this suggests a bug in resize.c or in your
+   code.  But this may be a temporary work-around until the bug is fixed.
+
+10. For Handera support, your .rcp file should contain:
+    HEX "sKst" ID 1000
+        0x00 0x00 0x00 0x00
+
+11. For Dana AlphaSmart support, your .rcp file should contain:
+    HEX "wTap" ID 1000
+        0x00 0x00 0x00 0x01
+

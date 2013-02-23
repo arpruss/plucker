@@ -1,0 +1,153 @@
+//
+// $Id: cleaner.rcp.in,v 1.2 2003/12/13 03:21:28 prussar Exp $
+//
+
+#include "resourceids.h"
+
+FORM ID frmMain AT ( 0 0 160 160 )
+MENUID menuMain
+USABLE
+BEGIN
+    TITLE "Clean Plucker"
+
+    LABEL "Records" AUTOID AT (95 25) FONT 0
+    LABEL "Size" AUTOID AT (PREVRIGHT+12 PREVTOP) FONT 0
+
+    BUTTON "Clear Preferences" ID frmPrefsButton AT (1 PREVBOTTOM+5 AUTO AUTO)
+    LABEL "Not Found" frmPrefsNotFound AT (105 PREVTOP) NONUSABLE
+    LABEL "Cleared" frmPrefsCleared AT (110 PREVTOP) NONUSABLE
+    FIELD ID frmPrefsRecords AT (95 PREVTOP 30 AUTO)
+        USABLE NONEDITABLE RIGHTALIGN
+    FIELD ID frmPrefsSize AT (PREVRIGHT+7 PREVTOP 25 AUTO)
+        USABLE NONEDITABLE RIGHTALIGN
+
+    BUTTON "Clear Temp. Files" ID frmTempButton AT (1 PREVBOTTOM+5 AUTO AUTO)
+    LABEL "Not Found" frmTempNotFound AT (105 PREVTOP) NONUSABLE
+    LABEL "Cleared" frmTempCleared AT (110 PREVTOP) NONUSABLE
+    FIELD ID frmTempRecords AT (95 PREVTOP 30 AUTO)
+        USABLE NONEDITABLE RIGHTALIGN
+    FIELD ID frmTempSize AT (PREVRIGHT+7 PREVTOP 25 AUTO)
+        USABLE NONEDITABLE RIGHTALIGN
+
+    BUTTON "Clear PlkrDocList" ID frmDocListButton AT (1 PREVBOTTOM+5 AUTO AUTO)
+    LABEL "Not Found" frmDocListNotFound AT (105 PREVTOP) NONUSABLE
+    LABEL "Cleared" frmDocListCleared AT (110 PREVTOP) NONUSABLE
+    FIELD ID frmDocListRecords AT (95 PREVTOP 30 AUTO)
+        USABLE NONEDITABLE RIGHTALIGN
+    FIELD ID frmDocListSize AT (PREVRIGHT+7 PREVTOP 25 AUTO)
+        USABLE NONEDITABLE RIGHTALIGN
+
+    BUTTON "Clear VFS Font Cache" ID frmFontCacheButton AT (1 PREVBOTTOM+5 AUTO AUTO)
+    LABEL "Not Found" frmFontCacheNotFound AT (105 PREVTOP) NONUSABLE
+    LABEL "Cleared" frmFontCacheCleared AT (110 PREVTOP) NONUSABLE
+    FIELD ID frmFontCacheRecords AT (95 PREVTOP 30 AUTO)
+        USABLE NONEDITABLE RIGHTALIGN
+    FIELD ID frmFontCacheSize AT (PREVRIGHT+7 PREVTOP 25 AUTO)
+        USABLE NONEDITABLE RIGHTALIGN
+
+    BUTTON "Done" ID frmDone AT (1 BOTTOM@159 AUTO AUTO)
+    BUTTON "What is this?" ID frmWhatIsThis AT (PREVRIGHT+4 PREVTOP AUTO AUTO)
+END
+
+STRING ID strWhatIsThis "This utility is only useful for people experiencing problems in Plucker's document viewer. It allows you to reset the viewer to a default state, without having to delete all your documents.\n\n" \
+"'Clearing the Preferences' helps to alleviate problems in upgrading from one version of plucker to another.\n\n" \
+"'Clearing the Temporary Files' will free the space Plucker is using to store data such as Bookmarks, and Last Page viewed.\n\n" \
+"'Clearing the PlkrDocList' will help the problem of some documents not always showing up on some devices some of the time.\n\n" \
+"'Clearing the VFS Font Cache' may help some programs having trouble with fonts stored on VFS."
+
+
+FORM ID frmAbout AT (2 52 156 106)
+MODAL
+DEFAULTBTNID frmAboutOK
+BEGIN
+    TITLE "About Clean Plucker"
+
+    LABEL "Clean Plucker is a part of the Plucker" AUTOID AT (3 15) FONT 0
+    LABEL "suite of programs. It's Free Software" AUTOID AT (PREVLEFT PREVBOTTOM-1) FONT 0
+    LABEL "under the conditions of the Free" AUTOID AT (PREVLEFT PREVBOTTOM-1) FONT 0
+    LABEL "Software Foundation's General" AUTOID AT (PREVLEFT PREVBOTTOM-1) FONT 0
+    LABEL "Public License." AUTOID AT (PREVLEFT PREVBOTTOM-1) FONT 0
+
+    LABEL "www.plkr.org" AUTOID AT (CENTER BOTTOM@92) FONT 0
+
+    BUTTON "OK" ID frmAboutOK AT (3 BOTTOM@103 AUTO AUTO)
+    LABEL "v@@VIEWER_VERSION@@" AUTOID AT (RIGHT@153 PREVTOP) FONT 0
+END
+
+
+//
+// Menus
+//
+
+MENU menuMain
+BEGIN
+    PULLDOWN "Help"
+    BEGIN
+        MENUITEM "What is this?" menuHelpWhatIsThis
+        MENUITEM "About"         menuHelpAbout
+    END
+END
+
+
+//
+// Alerts
+//
+
+ALERT ID confirmPrefs
+DEFAULTBUTTON 1
+CONFIRMATION
+BEGIN
+    TITLE "Clearing Preferences"
+    MESSAGE "This will delete all your Plucker preferences. They will be restored to the default state the next time you start the viewer. Continue?"
+    BUTTONS "OK" "Cancel"
+END
+
+ALERT ID confirmTemp
+DEFAULTBUTTON 1
+CONFIRMATION
+BEGIN
+    TITLE "Clearing Temp. Files"
+    MESSAGE "This will delete any of the 'Plkr-*' files on your device. Doing so will permanently delete any bookmarks or last-page data. Continue?"
+    BUTTONS "OK" "Cancel"
+END
+
+ALERT ID confirmDocList
+DEFAULTBUTTON 1
+CONFIRMATION
+BEGIN
+    TITLE "Clearing PlkrDocList"
+    MESSAGE "This will remove the PlkrDocList file used by the document library. It will be regenerated the next time you start the viewer. Continue?"
+    BUTTONS "OK" "Cancel"
+END
+
+ALERT ID confirmFontCache
+DEFAULTBUTTON 1
+CONFIRMATION
+BEGIN
+    TITLE "Clearing VFS Font Cache"
+    MESSAGE "This will remove the PlkrVFSFontCache file used by the VFS font handle. It will be regenerated the next time you start the viewer. Continue?"
+    BUTTONS "OK" "Cancel"
+END
+
+ALERT ID errCannotDelete
+ERROR
+BEGIN
+    TITLE "Oops.."
+    MESSAGE "Couldn't delete data.\nErrorCode: ^1"
+    BUTTONS "OK"
+END
+
+
+//
+// Application icons
+//
+
+ICONFAMILY
+    "cleaner.bmp"
+    ""
+    ""
+    "cleaner-8bpp.bmp"
+    TRANSPARENCY 0 255 0
+
+
+VERSION "@@VIEWER_VERSION@@"

@@ -1,0 +1,1359 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<resource xmlns="http://www.wxwidgets.org/wxxrc" version="2.5.3.0">
+
+<object class="wxDialog" name="channel_dialog">
+    <style>wxCAPTION|wxSYSTEM_MENU|wxRESIZE_BORDER</style>
+    <title>Configure Channel</title>
+    <object class="wxFlexGridSizer">
+        <cols>1</cols>
+        <rows>0</rows>
+        <vgap>0</vgap>
+        <hgap>0</hgap>
+        <growablecols>0</growablecols>
+        <growablerows>1</growablerows>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+            <border>5</border>
+            <object class="wxFlexGridSizer">
+                <cols>2</cols>
+                <rows>0</rows>
+                <vgap>0</vgap>
+                <hgap>0</hgap>
+                <growablecols>0,1</growablecols>
+                <growablerows>0</growablerows>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxStaticText" name="channel_dialog_statictext">
+                        <label>Channel name:</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="channel_dialog_textctrl">
+                        <size>250,-1</size>
+                        <value></value>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+            <border>5</border>
+            <object class="wxNotebook" name="channel_dialog_notebook">
+                <style></style>
+                <usenotebooksizer>1</usenotebooksizer>
+                <object class="notebookpage">
+                    <label>Starting page</label>
+                    <object class="wxPanel" name="channel_dialog_start_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxVERTICAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Start with</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>0</cols>
+                                            <rows>3</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>1</growablecols>
+                                            <growablerows>0,1,2</growablerows>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxRadioButton" name="channel_dialog_start_tab_url_radiobutton">
+                                                    <style>wxRB_GROUP</style>
+                                                    <label>A website URL:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="channel_dialog_start_tab_url_textctrl">
+                                                    <size>240,-1</size>
+                                                    <value>http://</value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxButton" name="channel_dialog_start_tab_url_button">
+                                                    <label>Browse showcase...</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxRadioButton" name="channel_dialog_start_tab_file_radiobutton">
+                                                    <label>A local file:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="channel_dialog_start_tab_file_textctrl">
+                                                    <size>240,-1</size>
+                                                    <value>file://</value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                                <border>5</border>
+                                                <object class="wxBoxSizer">
+                                                    <orient>wxHORIZONTAL</orient>
+                                                    <object class="sizeritem">
+                                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                        <border>5</border>
+                                                        <object class="wxButton" name="channel_dialog_start_tab_file_button">
+                                                            <label>Choose file...</label>
+                                                        </object>
+                                                    </object>
+                                                    <object class="sizeritem">
+                                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                        <border>5</border>
+                                                        <object class="wxButton" name="channel_dialog_start_tab_edit_file_button">
+                                                            <label>Edit file...</label>
+                                                        </object>
+                                                    </object>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxRadioButton" name="channel_dialog_start_tab_links_radiobutton">
+                                                    <label>A list of my links:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxButton" name="channel_dialog_start_tab_links_button">
+                                                    <label>Edit my list of links with HTML editor...</label>
+                                                </object>
+                                            </object>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>5,5</size>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Spidering</label>
+                    <object class="wxPanel" name="channel_dialog_spidering_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Timeout</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxCheckBox" name="channel_dialog_spidering_tab_retrieval_timeout_checkbox">
+                                                    <label>Stop spidering if can't connect to the server within</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxSpinCtrl" name="channel_dialog_spidering_tab_retrieval_timeout_spinctrl">
+                                                    <size>100,-1</size>
+                                                    <min>3</min>
+                                                    <max>360</max>
+                                                    <value>0</value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="channel_dialog_spidering_tab_retrieval_timeout_statictext">
+                                                    <label>seconds</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Retrieval order</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>2</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>1</growablecols>
+                                            <growablerows>0</growablerows>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="channel_dialog_spidering_tab_depth_first_statictext">
+                                                    <label>Retrieve files by following links:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="channel_dialog_spidering_tab_depth_first_choice">
+                                                    <size>300,-1</size>
+                                                    <content>
+                                                        <item>Breadth first</item>
+                                                        <item>Depth first</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Spidering status</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>2</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>1</growablecols>
+                                            <growablerows>0</growablerows>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="channel_dialog_spidering_tab_verbosity_statictext">
+                                                    <label>Progress message detail level:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="channel_dialog_spidering_tab_verbosity_choice">
+                                                    <size>300,-1</size>
+                                                    <content>
+                                                        <item>Minimum (no progress information, only error messages)</item>
+                                                        <item>Medium (page being spidered, pages remaining in queue)</item>
+                                                        <item>Maximum (full information, most useful for debugging)</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>3</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>5</hgap>
+                                            <growablecols>1</growablecols>
+                                            <growablerows>0</growablerows>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                                <border>10</border>
+                                                <object class="wxCheckBox" name="channel_dialog_spidering_tab_status_line_length_checkbox">
+                                                    <label>Truncate URLs displayed in the progress window to:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxSpinCtrl" name="channel_dialog_spidering_tab_status_line_length_spinctrl">
+                                                    <size>100,-1</size>
+                                                    <min>1</min>
+                                                    <max>1000000</max>
+                                                    <value>0</value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxRIGHT|wxTOP|wxBOTTOM</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="channel_dialog_spidering_tab_status_line_length_statictext">
+                                                    <label>letters</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Referrers and browser identification</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>2</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>5</hgap>
+                                            <growablecols>1</growablecols>
+                                            <growablerows>0</growablerows>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                                <border>10</border>
+                                                <object class="wxCheckBox" name="channel_dialog_spidering_tab_referrer_checkbox">
+                                                    <label>Specify a referrer URL:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="channel_dialog_spidering_tab_referrer_textctrl">
+                                                    <size>225,-1</size>
+                                                    <value></value>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="channel_dialog_spidering_tab_user_agent_statictext">
+                                            <label>When retrieving files from this channel's web server, identify as:</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+                                        <border>5</border>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>3</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>5</hgap>
+                                            <growablecols>2</growablecols>
+                                            <growablerows>0,1</growablerows>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE</flag>
+                                                    <size>20,20</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                                                <object class="wxRadioButton" name="channel_dialog_spidering_tab_user_agent_browser_radiobutton">
+                                                    <style>wxRB_GROUP</style>
+                                                    <label>This browser type:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="channel_dialog_spidering_tab_user_agent_browser_choice">
+                                                    <size>100,-1</size>
+                                                    <content>
+                                                        <item>Plucker (recommended)</item>
+                                                        <item>AvantGo</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                    <size>20,20</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <object class="wxRadioButton" name="channel_dialog_spidering_tab_user_agent_custom_radiobutton">
+                                                    <label>This custom user-agent:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxTOP|wxBOTTOM</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="channel_dialog_spidering_tab_user_agent_custom_textctrl">
+                                                    <size>80,-1</size>
+                                                    <value></value>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Limits</label>
+                    <object class="wxPanel" name="channel_dialog_limits_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxVERTICAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxHORIZONTAL</orient>
+                                    <label>Maximum depth</label>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTRE|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="channel_dialog_limits_tab_maxdepth1_statictext">
+                                            <label>Retreive linked pages to a depth of</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTRE|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxSpinCtrl" name="channel_dialog_limits_tab_maxdepth_spinctrl">
+                                            <size>70,-1</size>
+                                            <min>1</min>
+                                            <max>1000000</max>
+                                            <value>2</value>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTRE|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="channel_dialog_limits_tab_maxdepth2_statictext">
+                                            <label>from the starting page (1=retrieve starting page only)</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>'Stay on host' / 'Stay on domain' filters</label>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="channel_dialog_limits_tab_stayonhost_stayondomain_checkbox">
+                                            <label>Ignore links to a server that is different from starting page's server</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxRadioButton" name="channel_dialog_limits_tab_stayonhost_radiobutton">
+                                                    <style>wxRB_GROUP</style>
+                                                    <label>Limit to the exact server only: if started on www.plkr.org, only allow www.plkr.org</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxRadioButton" name="channel_dialog_limits_tab_stayondomain_radiobutton">
+                                                    <label>Only restrict to domain: if started on www.plkr.org, allow www.plkr.org and www2.plkr.org</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>'URL pattern' filter</label>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="channel_dialog_limits_tab_url_pattern_checkbox">
+                                            <label>Only follow URLs that match this regular expression pattern:</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>2</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>1</growablecols>
+                                            <growablerows>0</growablerows>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="channel_dialog_limits_tab_url_pattern_textctrl">
+                                                    <size>300,-1</size>
+                                                    <value></value>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Channel-specific inclusion/exclusion list filter</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="channel_dialog_limits_tab_exclusion_checkbox">
+                                            <label>In addition to the shared inclusion/exclusion list, also follow/ignore links pointing to these file types or servers:</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxButton" name="channel_dialog_limits_tab_exclusion_button">
+                                                    <label>Edit channel-specific inclusion/exclusion list...</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Formatting</label>
+                    <object class="wxPanel" name="channel_dialog_formatting_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxVERTICAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxHORIZONTAL</orient>
+                                    <label>Character set encoding</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="channel_dialog_formatting_tab_charset_checkbox">
+                                            <label>Specify a default character set to use for this channel:</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxComboBox" name="channel_dialog_formatting_tab_charset_combobox">
+                                            <size>140,-1</size>
+                                            <style>wxCB_DROPDOWN</style>
+                                            <content>
+                                                <item>ASCII</item>
+                                                <item>Big5</item>
+                                                <item>EBCDIC-INT</item>
+                                                <item>eucCN</item>
+                                                <item>eucJP</item>
+                                                <item>eucKR</item>
+                                                <item>eucTW</item>
+                                                <item>GB2312</item>
+                                                <item>ISO-2022-CN</item>
+                                                <item>ISO-2022-CN-EXT</item>
+                                                <item>ISO-2022-JP</item>
+                                                <item>ISO-646DK</item>
+                                                <item>ISO-8859-1</item>
+                                                <item>ISO-8859-2</item>
+                                                <item>ISO-8859-3</item>
+                                                <item>ISO-8859-4</item>
+                                                <item>ISO-8859-5</item>
+                                                <item>ISO-8859-6</item>
+                                                <item>ISO-8859-7</item>
+                                                <item>ISO8859-15</item>
+                                                <item>JIS7</item>
+                                                <item>macintosh</item>
+                                                <item>SJIS</item>
+                                                <item>TACTIS</item>
+                                                <item>UTF-8</item>
+                                            </content>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxHORIZONTAL</orient>
+                                    <label>Hyperlinks</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="channel_dialog_formatting_tab_anchor_color_checkbox">
+                                            <label>Specify a default color for hyperlinks:</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTRE|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxTextCtrl" name="channel_dialog_formatting_tab_anchor_color_textctrl">
+                                            <size>140,-1</size>
+                                            <value></value>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                        <border>5</border>
+                                        <object class="wxButton" name="channel_dialog_formatting_tab_anchor_color_button">
+                                            <label>Choose color...</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxHORIZONTAL</orient>
+                                    <label>Paragraph style</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="channel_dialog_formatting_tab_indent_paragraphs_checkbox">
+                                            <label>Indent the first line of each new paragraph</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxHORIZONTAL</orient>
+                                    <label>Tables</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="channel_dialog_formatting_tab_tables_checkbox">
+                                            <label>Use enhanced table support</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Images</label>
+                    <object class="wxPanel" name="channel_dialog_images_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxVERTICAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Basic image handling</label>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="channel_dialog_images_tab_include_images_checkbox">
+                                            <label>Include images</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="channel_dialog_images_tab_depth_statictext">
+                                                    <label>Color depth:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="channel_dialog_images_tab_depth_choice">
+                                                    <size>160,-1</size>
+                                                    <content>
+                                                        <item>Black and white</item>
+                                                        <item>4 shade grayscale</item>
+                                                        <item>16 shade grayscale</item>
+                                                        <item>256 colors</item>
+                                                        <item>Thousands of colors</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="channel_dialog_images_tab_include_alt_text_checkbox">
+                                            <label>Show alternative text tags for images not included in output</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Advanced image handling</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="channel_dialog_images_tab_thumbnail_if_bigger_statictext">
+                                            <label>To fit on handheld screen, use a thumbnail for any image that is larger than:</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxSpinCtrl" name="channel_dialog_images_tab_thumbnail_if_bigger_width_spinctrl">
+                                                    <size>100,-1</size>
+                                                    <min>0</min>
+                                                    <max>999999</max>
+                                                    <value>0</value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="channel_dialog_images_tab_thumbnail_if_bigger_width_statictext">
+                                                    <label>pixels wide by</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxSpinCtrl" name="channel_dialog_images_tab_thumbnail_if_bigger_height_spinctrl">
+                                                    <size>100,-1</size>
+                                                    <min>0</min>
+                                                    <max>999999</max>
+                                                    <value>0</value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="channel_dialog_images_tab_thumbnail_if_bigger_height_statictext">
+                                                    <label>pixels high</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="channel_dialog_images_tab_if_thumbnail_statictext">
+                                            <label>If a thumbnail is used for an image, then:</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxRadioButton" name="channel_dialog_images_tab_always_link_radiobutton">
+                                                    <style>wxRB_GROUP</style>
+                                                    <label>Always link the thumbnail to a second, full-size copy</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxRadioButton" name="channel_dialog_images_tab_only_thumbnail_radiobutton">
+                                                    <label>Only use the thumbnail, don't include a second, larger copy in the channel's output</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxRadioButton" name="channel_dialog_images_tab_only_link_radiobutton">
+                                                    <label>Link the thumbnail to a second, larger copy, but keep the larger copy less than:</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxSpinCtrl" name="channel_dialog_images_tab_only_link_width_spinctrl">
+                                                    <size>100,-1</size>
+                                                    <min>0</min>
+                                                    <max>1000000</max>
+                                                    <value>1024</value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="channel_dialog_images_tab_only_link_width_statictext">
+                                                    <label>pixels wide by</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxSpinCtrl" name="channel_dialog_images_tab_only_link_height_spinctrl">
+                                                    <size>100,-1</size>
+                                                    <min>0</min>
+                                                    <max>1000000</max>
+                                                    <value>1024</value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="channel_dialog_images_tab_only_link_height_statictext">
+                                                    <label>pixels high</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>2</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>1</growablecols>
+                                            <growablerows>0</growablerows>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="channel_dialog_images_tab_try_reduce_statictext">
+                                                    <label>Maximum storage:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="channel_dialog_images_tab_try_reduce_choice">
+                                                    <size>180,-1</size>
+                                                    <content>
+                                                        <item>Allow a converted image to exceed 60kb (recommended)</item>
+                                                        <item>Keep a converted image under 60kb by reducing image dimensions</item>
+                                                        <item>Keep a converted image under 60kb by reducing color depth</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Output options</label>
+                    <object class="wxPanel" name="channel_dialog_output_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxVERTICAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Compression options</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="channel_dialog_output_tab_compression_statictext">
+                                                    <label>To compress the output file, use</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="channel_dialog_output_tab_compression_choice">
+                                                    <size>230,-1</size>
+                                                    <content>
+                                                        <item>DOC compression</item>
+                                                        <item>ZLIB compression (recommended)</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxCheckBox" name="channel_dialog_output_tab_only_compress_checkbox">
+                                                    <label>Only compress images that are larger than</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxSpinCtrl" name="channel_dialog_output_tab_only_compress_spinctrl">
+                                                    <size>100,-1</size>
+                                                    <max>1000000</max>
+                                                    <value>0</value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="channel_dialog_output_tab_only_compress_statictext">
+                                                    <label>bytes</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Advanced output options</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxCheckBox" name="channel_dialog_output_tab_category_checkbox">
+                                                    <label>Specify the category in which to list the channel in the viewer's library:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="channel_dialog_output_tab_category_textctrl">
+                                                    <size>130,-1</size>
+                                                    <value></value>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="channel_dialog_output_tab_include_url_checkbox">
+                                            <label>Include the original URL of each page in the output file</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <object class="wxCheckBox" name="channel_dialog_output_tab_owner_id_checkbox">
+                                                    <label>Specify a security 'owner ID' password needed to open the output file:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="channel_dialog_output_tab_owner_id_textctrl">
+                                                    <size>130,-1</size>
+                                                    <value></value>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="channel_dialog_output_tab_beamable_checkbox">
+                                            <label>Allow the channel output file to be beamed among handhelds</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="channel_dialog_output_tab_backup_checkbox">
+                                            <label>Signal backup bit (marks the file as one to backup to the desktop computer)</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="channel_dialog_output_tab_launchable_checkbox">
+                                            <label>The channel can be started directly from an icon in handheld's main launcher</label>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxRIGHT|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>4</cols>
+                                            <rows>0</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>1,2,3</growablecols>
+                                            <growablerows>1,2,3</growablerows>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxCheckBox" name="channel_dialog_output_tab_custom_large_icon_checkbox">
+                                                    <label>Replace default large icon with a custom icon:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="channel_dialog_output_tab_custom_large_icon_textctrl">
+                                                    <size>150,-1</size>
+                                                    <value></value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxButton" name="channel_dialog_output_tab_custom_large_icon_button">
+                                                    <label>Choose file...</label>
+                                                </object>
+                                            </object>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>10,10</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxCheckBox" name="channel_dialog_output_tab_custom_small_icon_checkbox">
+                                                    <label>Replace default small icon with a custom icon:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="channel_dialog_output_tab_custom_small_icon_textctrl">
+                                                    <size>150,-1</size>
+                                                    <value></value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxButton" name="channel_dialog_output_tab_custom_small_icon_button">
+                                                    <label>Choose file...</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Destination</label>
+                    <object class="wxPanel" name="channel_dialog_destination_tab">
+                        <object class="wxFlexGridSizer">
+                            <cols>1</cols>
+                            <rows>0</rows>
+                            <vgap>0</vgap>
+                            <hgap>0</hgap>
+                            <growablecols>0</growablecols>
+                            <growablerows>1</growablerows>
+                            <object class="spacer">
+                                <flag>wxALIGN_CENTRE</flag>
+                                <border>5</border>
+                                    <size>10,10</size>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="unknown" name="channel_dialog_destination_tab_handheldinstallctrl">
+                                <size>100,100</size>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Scheduling</label>
+                    <object class="wxPanel" name="channel_dialog_scheduling_tab">
+                        <object class="wxBoxSizer">
+                            <orient>wxVERTICAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Enable scheduling</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxRIGHT|wxTOP|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxCheckBox" name="channel_dialog_scheduling_tab_update_enabled_checkbox">
+                                                    <label>Mark this channel as due for updates at a certain interval</label>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <label>Update interval</label>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxBOTTOM</flag>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="channel_dialog_scheduling_tab_update_statictext">
+                                                    <label>This channel is due for an update every:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxSpinCtrl" name="channel_dialog_scheduling_tab_update_frequency_spinctrl">
+                                                    <size>60,-1</size>
+                                                    <min>1</min>
+                                                    <max>1000000</max>
+                                                    <value>1</value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxChoice" name="channel_dialog_scheduling_tab_update_period_choice">
+                                                    <size>110,-1</size>
+                                                    <content>
+                                                        <item>hours</item>
+                                                        <item>days</item>
+                                                        <item>weeks</item>
+                                                        <item>months</item>
+                                                        <item>years</item>
+                                                    </content>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTRE|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxFlexGridSizer">
+                                            <cols>0</cols>
+                                            <rows>2</rows>
+                                            <vgap>0</vgap>
+                                            <hgap>0</hgap>
+                                            <growablecols>1</growablecols>
+                                            <growablerows>0</growablerows>
+                                            <object class="sizeritem">
+                                                <flag>wxLEFT|wxRIGHT</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="channel_dialog_scheduling_tab_start_statictext">
+                                                    <label>Starting on:</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxCalendarCtrl" name="channel_dialog_scheduling_tab_update_base_calendarctrl">
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxButton" name="channel_dialog_scheduling_tab_now_button">
+                                                    <label>Now</label>
+                                                </object>
+                                            </object>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>20,20</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="unknown" name="channel_dialog_scheduling_tab_time_control">
+                                                    <size>150,30</size>
+                                                </object>
+                                            </object>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTRE|wxALL</flag>
+                                                <border>5</border>
+                                                    <size>20,20</size>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+        <object class="sizeritem">
+            <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+            <object class="wxBoxSizer">
+                <orient>wxHORIZONTAL</orient>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_OK">
+                        <label>OK</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_CANCEL">
+                        <label>Cancel</label>
+                    </object>
+                </object>
+                <object class="sizeritem">
+                    <flag>wxALIGN_CENTRE|wxALL</flag>
+                    <border>5</border>
+                    <object class="wxButton" name="wxID_HELP_CONTEXT">
+                        <label>Help</label>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</object>
+
+</resource>

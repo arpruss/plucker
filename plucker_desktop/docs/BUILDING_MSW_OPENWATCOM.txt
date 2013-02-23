@@ -1,0 +1,31 @@
+BUILDING ON OPEN WATCOM: 
+Open Watcom should work, but I don't have a full makefile yet for it (will probably use bakefile instead).
+
+This was done for WindowsXP.
+
+(1) Download and install OpenWatcom. Just leave all the default install options alone.
+
+(2) Download and install wxWidgets. Just leave all the default install options alone. In this example, the install directory was C:\wxWidgets-2.8.4
+
+(3) I did this, so that can just have a WXDIR variable in the Plucker Desktop makefiles:
+-Go to Start > Control Panel > Settings > System > Advanced tab > Environmental Variables button, and added these to the "User Variables' section:
+WXDIR = C:\wxWidgets-2.8.4
+WXWIN = C:\wxWidgets-2.8.4
+
+(4) You need a command prompt. On Windows XP, a less-crippled one is at Start > Accessories > Command Prompt. 
+[ Note: If you instead would have chose to type "Command" at the Start > Run prompt you seem to get some old commandline that is less usable.
+
+(5) Anyways, in the commandprompt, cd to C:\wxWidgets-2.8.4\build\msw
+and type:
+wmake -f makefile.wat
+
+(6) Wait until compiles. All done. 
+
+To test it, go to C:\wxWidgets\samples\minimal and again type
+wmake -f makefile.wat
+The compiled .exe is at:
+C:\wxWidgets\samples\minima\wat_mswd\minimal.exe
+Double click it to start. Nice!
+
+(7) Now just need to throw together a makefile for plucker-desktop. 
+I started one, using the <wxdir>/samples/xrc/makefile.wat as an example, changing the names of the files, and it worked out well.

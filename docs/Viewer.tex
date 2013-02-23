@@ -1,0 +1,543 @@
+%
+% $Id: Viewer.tex,v 1.17 2004/03/21 14:07:00 nordstrom Exp $
+%
+\chapter{Viewer}
+
+Using Plucker's client application (in this chapter refered to as
+the \emph{viewer}) is in many ways just like using a normal web browser
+(except for the fact that you are not connected to the Internet).
+
+
+\section{Basic Operations}
+
+This section describes how to start the viewer and navigate between
+different pages. If you are new to Plucker, read this section to get
+used to its basic operations. Later sections will describe how to customize
+the viewer in many ways, handling of multiple documents, the find function,
+and how to add bookmarks.
+
+\subsection{Starting The Viewer}
+
+Tap on the Plucker icon in the Applications screen to start the viewer. 
+The first time the viewer is started it will open the document library
+and display the available document in RAM and, if the device is
+equipped with external card(s), any documents on the card(s). Subsequent
+launches of the viewer will start where you left off.
+
+If ZLib compression has been used when creating the document (see 
+\~ref{sec:ParserOutput}) then the ZLib shared library must be installed 
+or the records in the document cannot be uncompressed. DOC compressed 
+documents don't require any additional library.
+
+\subsection{The Main Screen}
+
+The viewer will render the pages as close to the original as possible,
+using everything from italic and bold fonts to embedded images. It 
+also support horizontal rules, ordered and unordered lists, headers
+(using different font sizes), left, right, and center text alignment,
+and justified text.
+
+\begin{figure} [!htb]
+\centerline{\epsffile{MainScreen.eps}}
+\caption{\label{fig:MainScreen}The Main Screen.}
+\end{figure}
+
+The toolbar can be moved from the top to the bottom of the screen or
+removed completely using preference settings (see \~ref{sec:Prefs}).
+
+The viewer has a 32 page history, so you can easily move backward and 
+forward through recent visited pages just as you would with your desktop 
+browser.\\
+
+There are several different ways to move within the current page and
+perform different actions. You can move using the scrollbar, the scroll
+buttons and if the tap action (see \~ref{sec:TapAction}), gesture action
+(see \~ref{sec:Gestures}), and button action (see \~ref{sec:HWButtons})
+are activated also by pen taps on the screen, gestures in the graffiti area
+and by pressing the hardware buttons, respectively. The fastest way to
+move within the page is to use the location selector, though. Tap on the
+location (the percentage in the toolbar) and a dropdown menu will appear
+with 11 different values, Top, 10\%, 20\%,\ldots 90\%, and Bottom, 
+so that you can choose the location you want to jump to. Tapping the 
+autoscroll buttons will cause the text to scroll by at the specified
+rate (see \~ref{sec:Autoscroll}.\\
+
+Just like a web browser the viewer underlines links, a solid line for
+not visited pages and a dotted line for already visited pages. Tap on
+an underlined link to open the page it refers to (the link will be
+highlighted when you tap on it). Image links are not underlined but
+it should be obvious when an embedded image is a link and when it
+is not. When in doubt just tap on the image, if it highlights it is
+an image link\ldots\\ 
+
+Embedded images will be scaled down if they are too big to fit within
+the available width of the screen. If the alternative image options
+are activated (see \~ref{sec:Parser}), then the embedded images will 
+be a link to a larger version of itself. Tap on the image and the 
+larger version will be shown. The viewer will try to change the screen 
+depth to the depth required by the Tbmp document and if that depth is 
+not supported it will display an alert. To see all parts of the 
+\emph{larger-than-screen} image, tap on it and drag the pen in all 
+directions.\\
+
+When you tap on an e-mail tag the viewer will open a form so that 
+you can compose and send a message. The form will show as much as 
+possible of the To: Cc: and Subj: lines. If they don't fit on one 
+line a little arrow will appear next to the line to allow you to 
+see the rest of the line. The message will be sent through the 
+built-in Mail application (i.e.\ you have to enable the mail 
+synchronization using the Hotsync options (Windows) or some external 
+tool (other platforms) to send the mail).\\
+
+\begin{figure} [!htb]
+\centerline{\epsffile{Mail.eps}}
+\caption{\label{fig:Mail}Mail form.}
+\end{figure}
+
+Some pages may have external references (i.e.\ links to pages that 
+were not included because they were either filtered out using the 
+\name{exclusionlist.txt} file, excluded by \code{STAYONHOST}/
+\code{STAYBELOW} or was exceeding the maximum link depth).\\ 
+
+\begin{figure} [!htb]
+\centerline{\hspace{1cm}\epsffile{CopyURL.eps}}
+\caption{\label{fig:CopyURL}Copy URL.}
+\end{figure}
+
+When such a link is followed the viewer will display a page with the
+URL for the external reference. You can tap \option{Copy URL} and the 
+URL will be added to a Memo in the Memo database.\\
+
+The Memo will be titled \code{Plucker URLs <date> <time>}. All URLs 
+added during a single Plucker session will be in the same Memo. If 
+you have a \emph{Plucker} category in your Memo database, the Memos 
+will be placed there. Otherwise they will be in the \emph{Unfiled} 
+category.\\
+
+Read section \~ref{sec:Depth} if you want to learn more about link 
+depths and section \~ref{sec:Exclusionlist} for more info about the 
+filtering feature.\\
+
+\begin{latexonly}
+To get the URL for an existing page choose \option{Options\textbar Details} 
+from the menu bar (or use the Graffiti shortcut /D). In the Details dialog 
+you can also choose to not show images in a page and to reset its status 
+(i.e.\ the link to this page will once again be a solid link indicating it
+as unread).
+\end{latexonly}
+\begin{htmlonly}
+To get the URL for an existing page choose \option{Options|Details} from
+the menu bar (or use the Graffiti shortcut /D). In the Details dialog you
+can also choose to not show images in a page and to reset its status (i.e.\
+the link to this page will once again be a solid link indicating it as
+unread).
+\end{htmlonly}
+
+
+\section{Customization}\label{sec:Config}
+
+The viewer allows many different customizations to maximize the utility
+of your reader.
+
+\subsection{Font and layout}\label{sec:Font}
+
+In the \option{Font and Layout} dialog you can set various layout options.
+Depending on your device, you may have up to five built-in font packages, and
+on most devices if you install an appropriate custom font package, you will be
+able to load it in by choosing it from the \option{User-loaded font} drop down
+list.  You can also set line-spacing, paragraph-spacing and rotation options.\\
+
+User loaded Plucker font packages may be placed either in your device's RAM, or
+in VFS storage, if available.  Font packages put in VFS storage must go in one
+of the following directories:\\
+
+\begin{itemize}
+  \item /Palm/Programs/Plucker/Fonts
+  \item /Palm/Ebooks/Fonts
+  \item /Palm/Launcher/
+\end{itemize}
+
+Note that if you are using anti-aliased fonts, only those rotations selected
+when generating the font will be supported.\\
+
+You can download some pre-built Plucker font packages and tools to generate
+your own from
+\textit{\htmladdnormallink{http://palmfontconv.sf.net}
+{http://palmfontconv.sf.net}}.\\
+
+Finally, you can choose whether the font and layout settings are allowed to
+vary between documents.  If you do not choose this, then the choices you make
+will apply to all documents.
+
+\subsection{Keyboard and graffiti}\label{sec:Keyboard}
+
+The \option{Set keyboard/graffiti} dialog lets you assign keyboard actions or
+graffiti entries to various actions such as:\\
+
+\begin{description}
+  \item[None] Do nothing.
+  \item[Full Page Up] Scroll one page up.
+  \item[Full Page Down] Scroll one page down.
+  \item[Half Page Up] Scroll half a page up.
+  \item[Half Page Down] Scroll half a page down.
+  \item[Go Back] Go backward in page history.
+  \item[Go Forward] Go forward in page history.
+  \item[Go Home] Go to home page.
+\end{description}
+
+You can just type in or draw a graffiti entry and then select the action
+from the drop-down list.  There is also a second drop-down list for
+special keys like \code{Tab}.  Note that all the actions assigned work in the
+document view.\\
+
+Only some actions work in the library, and only when assigned to one of the
+``Special keys''.\\
+
+You should turn off \option{Graffiti gestures} (see \~ref{sec:Gestures}) if
+you are using this feature.  If you are using Graffiti~2, actions assigned
+to multi-stroke characters will likely not work.
+
+\subsection{Preferences}\label{sec:Prefs}
+
+\begin{figure} [!htb]
+\centerline{\epsffile{Prefs.eps}}
+\caption{\label{fig:Prefs}The Preferences.}
+\end{figure}
+
+In the Preference dialog you can set several different options to 
+change the way the viewer works.\\
+
+\begin{description}
+  \item[Enable strike-through] By enabling this option an strike-through 
+  will be added to all visited links making it easier to see what links 
+  you have already visited.
+
+  \item[Enable underline tags] By enabling this option all links will
+  be indicated with a dotted line and the solid line will instead be
+  used for the HTML underline tag. 
+
+  \item[Manual update of document list] On some devices it can be a very slow
+  process to update the document list and this option makes it possible to
+  turn off the automatically update of the list and instead you have to update
+  the list manually using a menu option in the Document Library \~ref{sec:DBMgr}.
+
+  \note{} This will give the result that new documents will not turn up in
+  the list and that documents removed using an external tool still will be
+  included in the list. A manual update of the list will fix that, though.
+
+  \item[Command Toolbar Button] On a device running Palm OS 3.5 or later
+  you can set one of the buttons for the command toolbar. Has no effect 
+  for other versions of Palm OS.
+
+  \item[Screen depth] Depending on the Palm model you can set different
+  default screen depths.
+
+  When the screen depth is lower than the bit depth of images in a page 
+  the viewer will display \mbox{\textbf{[img \emph{N}bpp]}}, where \emph{N}
+  is the depth of the image. If the device can support that bit depth, 
+  you can change the screen depth to see the image.
+
+  \hint{} The pages scroll faster when the device is using its default 
+  bit depth, so it is recommended to only use a different bit depth when 
+  necessary.
+
+  \item[Scrollbar] You can have either a left scrollbar, a right scrollbar 
+  or no scrollbar.
+
+  \item[Toolbar] You can have the toolbar at the top or bottom of the page,
+  or no toolbar at all.
+
+\end{description}
+
+\subsection{Tap Actions}\label{sec:TapAction}
+
+\begin{figure} [!htb]
+\centerline{\epsffile{TapAction.eps}}
+\caption{\label{fig:TapAction}Tap Action Configuration.}
+\end{figure}
+
+The Tap Action dialog enables you to define different actions for pen
+taps on the screen. The first two modes divide the screen into 4 sections
+and and each section can be given an action, e.g.\ one of the following,
+
+\begin{description}
+  \item[None] Do nothing.
+  \item[Full Page Up] Scroll one page up.
+  \item[Full Page Down] Scroll one page down.
+  \item[Half Page Up] Scroll half a page up.
+  \item[Half Page Down] Scroll half a page down.
+  \item[Go Back] Go backward in page history.
+  \item[Go Forward] Go forward in page history.
+  \item[Go Home] Go to home page.
+\end{description}
+
+The third mode enables you to tap on the screen and drag the pen up or
+down to scroll the page.
+
+\subsection{Gesture Actions}\label{sec:Gestures}
+
+\begin{figure} [!htb]
+\centerline{\epsffile{Gestures.eps}}
+\caption{\label{fig:Gestures}Gesture Action Configuration.}
+\end{figure}
+
+The Gesture Action dialog enables you to define different actions for
+gestures in the graffiti area. There are five different gestures, stroke
+right, stroke left, stroke up, stroke down, and a graffiti tap. Each
+gesture can be given an action, e.g.\ one of the following,
+
+\begin{description}
+  \item[None] Do nothing.
+  \item[Full Page Up] Scroll one page up.
+  \item[Full Page Down] Scroll one page down.
+  \item[Half Page Up] Scroll half a page up.
+  \item[Half Page Down] Scroll half a page down.
+  \item[Go Back] Go backward in page history.
+  \item[Go Forward] Go forward in page history.
+  \item[Go Home] Go to home page.
+\end{description}
+
+\subsection{Button Actions}\label{sec:HWButtons}
+
+\begin{figure} [!htb]
+\centerline{\epsffile{HWButtons.eps}}
+\caption{\label{fig:HWButtons}Button Action Configuration.}
+\end{figure}
+
+The Button Action dialog enables you to define different actions for the
+four hardware buttons, e.g.\ one of the following,
+
+\begin{description}
+  \item[None] Do nothing.
+  \item[Full Page Up] Scroll one page up.
+  \item[Full Page Down] Scroll one page down.
+  \item[Half Page Up] Scroll half a page up.
+  \item[Half Page Down] Scroll half a page down.
+  \item[Go Back] Go backward in page history.
+  \item[Go Forward] Go forward in page history.
+  \item[Go Home] Go to home page.
+\end{description}
+
+\subsection{Autoscroll Options}\label{sec:Autoscroll}
+
+\begin{figure} [!htb]
+\centerline{\epsffile{Autoscroll.eps}}
+\caption{\label{fig:Autoscroll}Autoscroll and Scroll Options.}
+\end{figure}
+
+The Autoscroll and Scroll Options enables you to define the amount that
+scroll during each jump (in either pixels or pages). Autoscroll direction
+can be specified as either up or down. The delay interval between each
+jump can also be configured. You can prevent the device from automatically
+shutting off during an autoscroll; autoscroll will then continue until the
+end of the page is reached, the screen is tapped, or the power button is
+clicked.
+
+\subsection{Lookup Options}\label{sec:Lookup}
+
+You can set a special word-tap action accessed by tapping on a word.
+\begin{latexonly}
+You can have this feature active all the time, so that whenever you
+tap on a word other than one in a hyperlink the action is activated,
+or you can activate it on demand for the next tap via
+\option{View\textbar Lookup word} or by binding the \option{Lookup word}
+action to a key, graffiti gesture, etc.
+\end{latexonly}
+\begin{htmlonly}
+You can have this feature active all the time, so that whenever you
+tap on a word other than one in a hyperlink the action is activated,
+or you can activate it on demand for the next tap via
+\option{View|Lookup word} or by binding the \option{Lookup word}
+action to a key, graffiti gesture, etc.
+\end{htmlonly}
+
+To use the \option{Lookup in PPI} option, you need to have
+the Plucker Plugin Interface (PPI) and a compatible dictionary
+installed and configured (see \~ref{sec:PPI}).\\
+
+\section{Find Function}\label{sec:Find}
+
+\begin{latexonly}
+The viewer uses its own find function to search through the
+records in a document. Tap on the left lens in the toolbar,
+choose \option{Go\textbar Find\ldots} or use the Graffiti shortcut /F
+to start a new search.
+\end{latexonly}
+\begin{htmlonly}
+The viewer uses its own find function to search through the
+records in a document. Tap on the left lens in the toolbar,
+choose \option{Go|Find\ldots} or use the Graffiti shortcut /F
+to start a new search.
+\end{htmlonly}
+The last search pattern will be shown in the find field and
+by using the search history you can recall any of the last
+10 search patterns.\\
+
+\begin{figure} [!htb]
+\centerline{\epsffile{Find.eps}}
+\caption{\label{fig:Find}The Find Function.}
+\end{figure}
+
+It is possible to make a case-insensitive or case-sensitive search and also to
+choose between only searching in the current record, in all records in the
+document, in all records starting with the present point, or recursively in sub-
+pages, i.e., pages linked from this one and so on.  Moreover, you can choose to 
+search for a phrase (all the characters entered must be in the document as
+entered) or for a number of words in a paragraph in which case each space
+separated sequence of characters in the search string must occur in the same
+paragraph (but need not appear as a complete word).\\
+
+More sophisticated than case-insensitive searches are transliteration
+searches.  These transliterate the text in the document according to a
+a fixed transliteration table before searching.  This can be used to search
+for accented characters without knowing what the accentuation is or to search
+for characters in the document's encoding that are difficult to enter via
+Graffiti or that your Palm localization does not support, but that are
+supported via a custom font.  You can make your own transliteration tables
+via the tools in the source code \code{viewer/xlit} directory.  Each
+transliteration table is a separate \code{.pdb} database.  Here are some
+common ones.\\
+
+\begin{description}
+  \item[\name{Latin1.pdb}] Drop Latin 1 accents before searching.  Also, change
+        Drop Latin 1 accentsall extended characters to ASCII characters.
+        Searching for \code{e} will find \code{\'e}, \code{\`e}, \code{\"e} and
+        \code{\^e}, etc.  If case the search is case insensitive, it will also
+        find \code{\'E}, \code{\`E}, \code{\" E} and \code{\^E}.
+  \item[\name{Latin2.pdb}] Drop Latin 2 accents before searching.  This is the
+        same as \name{Latin1.pdb} but for the \code{ISO-8859-2}
+        (Eastern European) encoding.
+  \item[\name{CP1250.pdb}] Drop CP-1250 accents.  This is the same as
+        \name{Latin2.pdb} but for the Windows Eastern European character
+        encoding.
+  \item[\name{NonASCIIToPeriod.pdb}] Non-ASCII to period.  All characters not
+        in the ASCII printable range 32-126 are transliterated to a period
+        (\code{.}).  Thus, you can search for \code{\`eglise} by entering
+        \code{.glise} and for ``\code{goat}'' \emph{including} the curly quotes
+        by entering \code{.goat.}.
+  \item[\name{PBGreekKeys.pdb}] PB+GreekKeys to ASCII.  This transliterates
+        GreekKeys encoded text (including PalmBible+ extensions) to ASCII
+        using the same Greek transliteration as in the Online Bible and
+        PalmBible+ programs.
+\end{description}
+
+Except for \name{PBGreekKeys.pdb}, all the transliterations are
+\emph{symmetric}, i.e. the transliteration is applied not just to the document
+before searching but also to the entered search text.  So if you use the
+``Drop Latin 1 accents before searching'' option and search for \code{\'ab\^a},
+you will also find \code{\`ab\"a}, \code{aba}, \code{ab\'a}, etc.\\
+
+\begin{figure} [!htb]
+\centerline{\epsffile{Result.eps}}
+\caption{\label{fig:Result}The Result Page.}
+\end{figure}
+
+When searching in the current record the viewer will jump to the
+location of a match and highlight it. If the search is for all
+records in the document a result page will be shown with matches.
+If you tap on one of the matches in the list the viewer will open
+that record and just as when you search in the current record
+it will jump to the location of the match and highlight it.\\
+
+\begin{latexonly}
+The right lens (and \option{Go\textbar Find Again\ldots} or  Graffiti
+shortcut /A) will search for the next occurrence of a found word or
+phrase with a single tap.
+\end{latexonly}
+\begin{htmlonly}
+The right lens (and \option{Go|Find Again\ldots} or  Graffiti shortcut
+/A) will search for the next occurrence of a found word or phrase with
+a single tap.
+\end{htmlonly}
+
+
+\section{Document Library}\label{sec:DBMgr}
+
+To store all data in only one PalmOS database wouldn't be very
+flexible, so the viewer has support for multiple documents. By
+using the viewer's Document Library you can switch between all
+the documents you have loaded on your device. To the right of
+each document are the creation date and the size (can be turned
+off using menu options or preference settings). If there are
+more documents than can fit in the list a scrollbar will appear.\\
+
+\begin{figure} [!htb]
+\centerline{\epsffile{DBMgr.eps}}
+\caption{\label{fig:DBMgr}The Document Library.}
+\end{figure}
+
+When you tap on the document icon in front of each document
+a pop-up list will appear providing you with different
+operations for the selected document:
+
+\begin{itemize}
+  \item Open document
+  \item Categorize document
+  \item Delete document
+  \item Rename document
+  \item Beam document
+\end{itemize}
+
+Also, a tap on a document in the list will open it right away.\\
+
+You can also select documents with jog-dial, five-way navigator,
+or, if the list is sorted by document name, by entering the first couple
+letters of the document name.\\
+
+If the document is in flash (or read-only for some other reason)
+it is not possible to delete or rename it. The viewer will show
+an alert if you still try to perform such an action on the document.\\
+
+The documents can be compressed either using the DOC method or
+ZLib. Support for the DOC method is included by default in the
+viewer so documents compressed with that method can always be
+viewed. ZLib compressed documents requires the ZLib shared
+library and if this library is not installed the viewer will
+alert the user about this. Palm OS 2.x devices can only handle
+DOC compressed documents.\\
+
+Each document can be in one or several categories and it is possible
+to filter the list of documents by selecting what categories that
+should be shown.\\
+
+The viewer will check the following directories on external cards
+for Plucker documents,\\
+
+\begin{itemize}
+  \item /Palm/Programs/Plucker/
+  \item /Palm/Ebooks/
+  \item /Palm/Launcher/
+\end{itemize}
+
+On devices that can use more than one card the cards must be given
+unique names.\\
+
+\begin{figure} [!htb]
+\centerline{\epsffile{Category.eps}}
+\caption{\label{fig:Category}The Category Screen.}
+\end{figure}
+
+In the category screen you can add, remove and rename categories.
+Tap on the pushbutton with the category name to toggle between hiding
+and showing the category. Check the box MULTIPLE SELECT to allow more
+than one category to be displayed at a time. To add a new category,
+tap on an empty pushbutton. The document icon next to each category
+provides you with the options to delete and rename a category. If you 
+delete a category name, the documents filed under that name will become 
+unfiled documents. To merge documents in different categories, rename 
+one category to the other category name.
+
+\section{Bookmarks}\label{sec:Bookmark}
+
+Bookmarks are a fast way to move to user-defined positions in the 
+documents.\\
+
+\begin{figure} [!htb]
+\centerline{\epsffile{Bookmarks.eps}}
+\caption{\label{fig:Bookmarks}Bookmarks.}
+\end{figure}
+
+Edit Bookmark will display a list of all defined bookmarks and 
+allow you to delete bookmarks. To use a bookmark, just tap on the 
+Bookmark icon and choose the bookmark you want to jump to.
+

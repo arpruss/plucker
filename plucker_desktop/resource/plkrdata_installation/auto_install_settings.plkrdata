@@ -1,0 +1,6 @@
+# Place settings here that you want placed into plucker.ini/.pluckerrc
+# on every new install/update in which you touch/overwrite this file
+
+[PLUCKER_DESKTOP]
+is_first_execution=1
+

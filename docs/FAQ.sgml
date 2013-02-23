@@ -1,0 +1,1094 @@
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook V4.2//EN" []>
+
+<!-- Last modified: $Date: 2005/02/11 16:07:18 $: by $Author: desrod $ -->
+
+<!-- To convert this with DocBook, use the following syntax: 
+
+     jade -t sgml -i html -d /usr/share/sgml/docbook/stylesheet/dsssl/ldp/ldp.dsl\#html ../FAQ.sgml
+
+     You may substitute 'onehtml' to create one long HTML file instead of
+     chapters, i.e. for Plucking
+-->
+
+<article>
+
+ <articleinfo>
+
+  <title>Frequently Asked Questions about Plucker (Plucker FAQ)</title>
+
+  <author>
+     <firstname>The Plucker</firstname>
+     <surname>Team</surname>
+     <affiliation>
+        <address>
+           <email>plucker-list@rubberchicken.org</email>
+        </address>
+     </affiliation>
+  </author>
+
+   <revhistory>
+      <revision>
+         <revnumber>0.01</revnumber>
+         <date>2002-05-18</date>
+         <authorinitials>dd</authorinitials>
+          <revremark>
+            Converted to DocBook for easier maintenance
+          </revremark>
+      </revision>
+
+      <revision>
+         <revnumber>0.02</revnumber>
+         <date>2002-09-06</date>
+         <authorinitials>dd</authorinitials>
+          <revremark>
+            Cleaned up some typos, match FAQ.sgml to website FAQ, new
+            mailing list info
+          </revremark>
+      </revision>
+
+      <revision>
+         <revnumber>0.03</revnumber>
+         <date>2003-01-07</date>
+         <authorinitials>am</authorinitials>
+          <revremark>
+            Added in entry about documents not showing up on external memory
+          </revremark>
+      </revision>
+
+   </revhistory>
+
+  <abstract>
+
+    <para>
+       If your question is not there, please check the 
+       <ulink url="http://www.plkr.org/">Plucker home page</ulink> 
+       which may have more recent information.
+    </para>
+
+    <para>
+      <ulink url="http://cvs.plkr.org/index.cgi/*checkout*/docs/FAQ.sgml?content-type=text/plain">SGML source</ulink> for this document is
+      available and should be checked for the latest version.
+    </para>
+
+  </abstract>
+
+ </articleinfo>
+
+
+<!-- ############################### -->
+<!-- Section 1: Plucker Introduction -->
+<!-- ############################### -->
+ <sect1 id="intro">
+   <title>Introduction</title>
+
+  <para>
+   This document is available in CVS as well as in the source for Plucker
+   itself under the ./docs directory. You can reach it via <ulink
+   url="http://cvs.plkr.org/">the Plucker cvs tree</ulink>.
+  </para>
+
+ <sect2 id="whatisplucker">
+  <title>What is Plucker?</title>
+
+  <para>
+
+   Plucker is a suite of programs which provide an offline web browser for
+   PalmOS® handheld devices (see the section "Supported Platforms" for
+   device compatibility). It's Free Software under the conditions of the
+   Free Software Foundation's General Public License (GPL), so you can copy,
+   change, or even sell this program without giving anyone any money, as
+   long as you make the source code (and your changes, if any) publicly
+   available to remain compliant with the GPL.
+  </para>
+
+  <para>
+   We would, of course, be interested to see any changes you might make and
+   possibly include them in a future release of Plucker. There's lots of
+   things that could be added and improved!
+  </para>
+
+  <para>
+
+   In many ways, the ideas of Plucker are similar to the proprietary AvantGo
+   software, though we believe that the implementation of Plucker is much
+   different than AvantGo. According to their web page, AvantGo implements
+   an html parser on the Palm device; Plucker implements the majority of the
+   parser on the PC/server/desktop machine. There are probably situations
+   where AvantGo would be far more appropriate than Plucker (online
+   browsing, for example). However, you need an SDK to work with AvantGo,
+   and AvantGo is not free.
+
+ </para>
+</sect2>
+
+  <!-- ################################### -->
+  <!-- Section 1.2: Different from AvantGo -->
+  <!-- ################################### -->
+  <sect2 id="diffavantgo">
+   <title>In what way is Plucker different from AvantGo?</title>
+
+   <para>
+    The programs differ in many ways.
+   </para>
+
+   <para>
+    Most importantly (to us, at least), Plucker is Free Software,
+    distributed under the FSF's General Public License, or GPL. This means
+    that if you are using Plucker, you are entitled to the source code, and
+    you can change it to make it do whatever you want, as long as you make
+    sure to adhere to the requirements of the GPL.
+   </para>
+
+   <para>Other differences that we know of include:</para>
+   <itemizedlist>
+     <listitem>
+      <para>
+       AvantGo parses compressed (i.e. "encrypted") html on the Palm device
+       itself; Plucker parses uncompressed html on the server, and sends an
+       interpreted version to the Palm.
+      </para>
+     </listitem>
+
+     <listitem>
+      <para>
+       Plucker appears to render documents faster (though it hasn't been
+       optimized for speed, really)
+      </para>
+     </listitem>
+
+     <listitem>
+      <para>
+       The "home" Plucker page is a user-defined html document, and is
+       treated just like any other. The "home" AvantGo page does not appear
+       to be html; it's determined by the AvantGo configuration software.
+       So, the history buttons don't work from the Home page in AvantGo.
+      </para>
+     </listitem>
+
+     <listitem>
+      <para>
+       Plucker will support drag-n-drop (DND) html files. As far as we know,
+       AvantGo does not.
+      </para>
+     </listitem>  
+   </itemizedlist>
+
+  </sect2>
+
+  <!-- ############################ -->
+  <!-- Section 1.3: Where can I get -->
+  <!-- ############################ -->
+  <sect2 id="wherecaniget">
+   <title>Where can I get Plucker?</title>
+
+   <para>
+    Visit the Plucker home page at <ulink url="http://www.plkr.org/">http://www.plkr.org/</ulink>
+   </para>
+
+   <para>   
+    The development versions ("the latest snapshot") are usually very stable
+    themselves, so if you want access to all the latest features (and have
+    the proper development environment installed and configured) you can
+    safely go with these versions.  As always, remember to backup any
+    unsaved data before you start playing with the development version.
+   </para>
+
+  </sect2>
+
+  <!-- ########################## -->
+  <!-- Section 1.4: Mailing Lists -->
+  <!-- ########################## -->
+  <sect2 id="mailinglist">
+   <title>Is there a mailing list for Plucker?</title>
+
+   <para>
+    Yes, there are three mailing lists in fact.
+   </para>
+
+   <para>
+    Plucker List is for general Plucker user questions and is a fairly low
+    traffic list, and covers most of the basic setup, configuration, and
+    user questions people may have.
+   </para>
+
+   <para>
+    To join the list or modify your subscription preferences, visit the
+    <ulink url="http://lists.rubberchicken.org/mailman/listinfo/plucker-list">plucker-list</ulink>
+    signup page.
+   </para>
+  
+   <para>
+    To view the archives of this mailing list, simply visit the plucker-list
+    archives <ulink url="http://lists.rubberchicken.org/pipermail/plucker-list/">here</ulink>
+    or <ulink url="http://www.mail-archive.com/plucker-list@rubberchicken.org/">here</ulink>
+    and read any messages you wish.
+   </para>
+
+
+   <para>
+    The Plucker Development list is intended for focused development
+    discussion amongst the core Plucker development team and other
+    contributors. Of course, anyone is welcome to read the list, but don't
+    be surprised if we get deep into code quickly.
+   </para>
+
+   <para>
+    To join the list or modify your subscription preferences, visit the
+    <ulink url="http://lists.rubberchicken.org/mailman/listinfo/plucker-dev">plucker-dev</ulink>
+    signup page.
+   </para>
+
+   <para>
+    To view the archives of this mailing list, simply visit the plucker-dev
+    archives <ulink url="http://lists.rubberchicken.org/pipermail/plucker-dev/">here</ulink>
+    or <ulink url="http://www.mail-archive.com/plucker-dev@rubberchicken.org/">here</ulink>
+    and read any messages you wish.
+   </para>
+
+   <para>
+    The Plucker Announce list is where new releases are announced. If you
+    are only concerned with Plucker releases, this is the list for you.
+   </para>
+
+   <para>
+    To join the list or modify your subscription preferences, visit the
+    <ulink url="http://lists.rubberchicken.org/mailman/listinfo/plucker-announce">plucker-announce</ulink>
+    signup page.
+   </para>
+
+  </sect2>
+
+  <!-- ###################### -->
+  <!-- Section 1.5 cvs server -->
+  <!-- ###################### -->
+  <sect2 id="cvsserver">
+   <title>Is there an anonymous cvs server?</title>
+
+   <para>
+    Yes there is. To check out the code from cvs you first have to login
+    using the normal cvs commands as follows:
+   </para>
+
+   <blockquote>
+    <para>
+     $ export CVSROOT=':pserver:anonymous@cvs.plkr.org:/cvs/plucker'
+    </para>
+
+    <para>
+     $ cvs -z3 login
+    </para>
+
+    <para>
+       Logging in to :pserver:anonymous@cvs.plkr.org:2401/cvs/plucker
+    </para>
+
+   <para>
+       CVS password:
+   </blockquote>
+
+   <para>
+    There is no password for the anonymous user, just hit ENTER at the
+    password prompt. Once you've logged in, you may check out the latest
+    Plucker code with the following cvs command:
+   </para>
+
+   <blockquote>
+    <para>
+     $ cvs -z3 co plucker
+    </para>
+   </blockquote>
+
+   <para>
+    Each command must be typed on one line, even though the command may wrap
+    in your browser window
+   </para>
+
+  </sect2>
+
+  <!-- ############################# -->
+  <!-- Section 1.6 Status of Plucker -->
+  <!-- ############################# -->
+  <sect2 id="statusplucker">
+   <title>What is the status of Plucker?</title>
+   
+   <para>
+    Plucker is in a beta state. While you're more than welcome to take
+    Plucker for a spin, it might not work for you. It works for us, but we
+    don't know what you've got installed on your machines that may be
+    different from that installed on ours. You might lose all the data on
+    your Palm, you might need to reboot your machine, it might never be
+    the same again.
+   </para>
+  
+   <para>
+    You have been warned. 
+   </para>
+
+  </sect2>
+
+  <!-- ####################### -->
+  <!-- Section 1.7 bug reports -->
+  <!-- ####################### -->
+  <sect2 id="bugreports">
+   <title>Where do I send bug reports??</title>
+   
+   <para>There are two ways:</para>
+
+    <itemizedlist>
+     <listitem>
+      <para>
+       Fill out the 
+       <ulink url="http://cvs.plkr.org/index.cgi/*checkout*//BUGREPORT?content-type=text/plain">BUGREPORT</ulink>
+       form in the Plucker distribution and send it to
+       <email>plucker-bugs@rubberchicken.org</email> (<emphasis
+       role="italics">no, really, we're not kidding</emphasis>).
+      </para>
+     </listitem>
+
+
+     <listitem>
+      <para>
+       Or, on the web, fill out the forms located 
+       <ulink url="http://bugs.plkr.org/">here</ulink> 
+       in our online bug tracking system and we'll do our best to fix them
+       as soon as we can!
+      </para>
+     </listitem>
+    </itemizedlist>
+
+   </sect2>
+
+ </sect1>
+<!-- #################################### -->
+<!-- Section 1: Plucker Introduction: END -->
+<!-- #################################### -->
+
+
+<!-- ####################### -->
+<!-- Section 2: Installation -->
+<!-- ####################### -->
+ <sect1 id="supportedplatforms">
+  <title>Supported Platforms</title>
+
+  <sect2 id="whatplatforms">
+   <title>What platforms does Plucker run on?</title> 
+ 
+   <para>
+    The viewer should run on any PalmOS device running version 2.0.4 or
+    higher of PalmOS, while the desktop tools are supported on Linux,
+    Windows, Mac OS X, and OS/2.
+   </para>
+
+   <para>
+    The desktop tools will probably work on any Unix system with Python
+    installed, but your mileage may vary, so don't get angry if they don't
+    work. If you are able to get it running on a system not listed in
+    <ulink url="http://cvs.plkr.org/index.cgi/*checkout*//REQUIREMENTS?content-type=text/plain">REQUIREMENTS</ulink>
+    then please let us know so that it can be added to the list of known
+    working systems.
+   </para>
+
+  </sect2>
+
+</sect1>
+<!-- #################################### -->
+<!-- Section 2: Installation: END -->
+<!-- #################################### -->
+
+
+<!-- ################ -->
+<!-- Section 3: Usage -->
+<!-- ################ -->
+ <sect1 id="usage">
+  <title>Usage</title>
+
+ <!-- ####################### -->
+ <!-- Section 3.1 bug reports -->
+ <!-- ####################### -->
+ <sect2 id="howdoes">
+  <title>How does Plucker work?</title>
+
+  <para>
+   Plucker consists of three parts: the parser, the conduit, and the viewer. 
+   The parser and the conduit have been merged into one complete Python
+   version and eventually there will also be a Perl version of the parser.
+   The standalone conduit is written in Perl and there is also a conduit
+   written in Delphi for the Windows users.
+  </para>
+
+  <para>
+   The parser runs on your main computer (the one with the HotSync cradle or
+   IR port physically attached to it, or on a networked machine which allows
+   you to connect to it via Network Hotsync). It gathers the web pages you
+   specify and follows the links on those pages to a chosen depth
+   (specified by you).  You specify the web pages you want to gather by
+   creating a "home.html" file, which also becomes your home page. The links
+   on "home.html" are followed to a depth specified by the optional
+   "maxdepth" attribute which you can include in the &lt;a href="..."&gt;
+   tag in the home.html file.  The parser finds new links to retrieve and
+   converts the pages to a format that the viewer can read.
+  </para>
+
+  <para>
+   The conduit takes the converted html files from a directory or from your
+   computer's system memory (RAM; using the python parser) and places them
+   in a database on your Palm device, or directs them to a file (which is
+   the same as the database) on your desktop, which you can sync to your
+   emulator or your "real" Palm device at a later time.
+  </para>
+
+  <para>
+   The viewer displays the converted html files on your Palm device's
+   screen.  It allows you to use the stylus to tap on links which will then
+   display the target page. It has a 32-page history, so you can move
+   backwards and forwards through the pages just as you would with your
+   desktop browser.
+  </para>
+
+  <para>
+   Rendering is done in part by the parser (which works out things like
+   which styles to use) and in part by the viewer (which works out line and
+   document lengths, and renders &lt;A&gt;nchor tags).
+  </para>
+
+ </sect2>
+
+ <sect2 id="extmemory">
+  <title>
+   Why aren't the documents on my external card(s) showing up in Plucker's
+   Document Library?
+  </title>
+
+  <para>
+   Plucker can read documents on stored on external card(s) provided that you
+   meet the following criteria.
+  </para>
+
+  <itemizedlist>
+
+   <listitem>
+    <para>
+     You are using a version 1.2 or later of the viewer.
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+     The documents you are trying to view are stored in one of the
+     following directories:
+    </para>
+    <itemizedlist>
+
+     <listitem>
+      <para>
+       /Palm/Programs/Plucker/
+      </para>
+     </listitem>
+
+     <listitem>
+      <para>
+       /Palm/Ebooks/
+      </para>
+     </listitem>
+
+     <listitem>
+      <para>
+       /Palm/Launcher
+      </para>
+     </listitem>
+
+    </itemizedlist>
+
+   </listitem>
+
+  </itemizedlist>
+
+ </sect2>
+
+ <!-- ####################### -->
+ <!-- Section 3.2 bug reports -->
+ <!-- ####################### -->
+ <sect2 id="cantsee">
+  <title>Why can't I see any images on my Palm device?</title>
+
+  <para> 
+   Either you have an old version of Plucker (image support was added in
+   version 0.03) or you haven't installed all necessary tools. The Palm
+   device uses a format called Tbmp (Tiny Bitmap) for its images, and the
+   parser in Plucker needs (among others) a special tool called ppmtoTbmp to
+   be able to convert images to the Palm OS bitmap format (depending on your
+   version of Plucker, you may no longer need to use the ppmtoTbmp tool. It
+   has recently been replaced by the netpbm2 package). Check out the
+   REQUIREMENTS file in the main source archive for a list of necessary
+   tools and where to find them.
+  </para>
+
+ </sect2>
+
+ <!-- ########################### -->
+ <!-- Section 3.3 Necessary Tools -->
+ <!-- ########################### -->      
+ <sect2 id="necsstools">
+  <title>I have all the necessary tools, but I still can't see any images?</title>
+
+   <para>
+    Make sure that you don't set a too high value for the maxwidth
+    configuration option. Anything above 150 pixels (default value) for
+    embedded images will give the result that no images are shown.
+   </para>
+
+ </sect2>
+
+ <!-- ###################### -->      
+ <!-- Section 3.4 [img 4bpp] -->
+ <!-- ###################### -->      
+ <sect2 id="img4bp">
+  <title>Why do pages with images show [img 4bpp] instead of images?</title>
+
+   <para>
+    When you generate 2 or 4 bpp images you have to change the bit depth of
+    the screen to view them. The default depth is 1 (Black/White), so when
+    the viewer finds images of a higher bit depth it will display [img Nbpp]
+    instead (N = bit depth for the image). You change the bit depth in the
+    Preference dialog.
+   </para>
+
+ </sect2>
+
+ <!-- ############################ -->      
+ <!-- Section 3.5 Protocol Missing -->
+ <!-- ############################ -->      
+ <sect2 id="protocolmissing">
+  <title>The protocol is missing when the parser attempts to download a page?</title>
+
+   <para>
+    Even if you don't tell us what OS you are running we would be very
+    surprised if it's not Red Hat 7.0, 7.1, or 7.2.
+   </para>
+
+   <para>  
+    There is a bug in the python version (1.5.2) include with Red Hat 7.0,
+    7.1, and 7.2.
+   </para>
+
+   <para>
+    A solution provided by Joe A. can be found at
+   </para>  
+
+   <blockquote>
+    <para>
+     <ulink url="http://home.earthlink.net/~joefefifo/plucker/fix.html">http://home.earthlink.net/~joefefifo/plucker/fix.html</ulink>
+    </para>
+   </blockquote>
+ 
+   <para>
+    A more detailed discussion of the problem can be found at:
+   </para>
+
+   <blockquote>
+    <para>
+     <ulink url="http://home.earthlink.net/~joefefifo/plucker/fix_detailed.html">http://home.earthlink.net/~joefefifo/plucker/fix_detailed.html</ulink>
+    </para>
+   </blockquote>
+
+  </sect2>
+
+ <!-- ############################### -->      
+ <!-- Section 3.6  Password Protected -->
+ <!-- ############################### -->      
+ <sect2 id="passwordprotected">
+  <title>How do I pluck a password-protected site?</title>
+
+   <para>
+    We suggest using Sitescooper together with Plucker to pluck various
+    hard-to-get-at sites.  Sitescooper has many features for pulling over
+    pages that will be slow to appear in Plucker.
+   </para>
+
+   <para>
+    For more information on Sitescooper, see <ulink
+    url="http://www.sitescooper.org/">http://www.sitescooper.org/</ulink>.
+   </para>
+
+ </sect2>
+
+ <!-- ############################### -->      
+ <!-- Section 3.7  Protect from Theft -->
+ <!-- ############################### -->      
+ <sect2 id="protectfromtheft">
+  <title>
+   I'd like to use Plucker for (books, reports, etc.) which I sell.
+   Is there any way to protect a Plucker document from theft?
+  </title>
+
+   <para>
+    Plucker documents can be built with an 'owner-id', which must correspond
+    to the HotSync ID on a Palm for the document to be opened on that Palm. 
+    This is similar to the document-locking schemes used by many commercial
+    sites.  Use the --owner-id switch on the parser to do this.
+   </para>
+
+ </sect2>
+
+</sect1>
+<!-- ############################# -->
+<!-- Section 3: Usage: END -->
+<!-- ############################# -->
+
+
+<!-- ######################## -->      
+<!-- Section 4: Configuration -->
+<!-- ######################## -->      
+ <sect1 id="configuration">
+  <title>Configuration</title>
+
+  <!-- ######################## -->      
+  <!-- Section 4.1: Create ZLib -->
+  <!-- ######################## -->      
+  <sect2 id="createzlib">
+   <title>How do I configure the parser to create ZLib compressed databases?</title>
+
+   <para>
+    By setting the compression key in the configuration file (.pluckerrc for
+    Unix/Linux, plucker.ini for Windows and OS/2) to zlib the parser will
+    use ZLib instead of DOC compression for the databases. You can always
+    change this behavior at run-time by using the --zlib-compression or the
+    --doc-compression options.
+   </para>
+
+  </sect2>
+
+ </sect1>
+<!-- ############################# -->      
+<!-- Section 4: Configuration: END -->
+<!-- ############################# -->      
+
+
+<!-- ###################### -->
+<!-- Section 5: Development -->
+<!-- ###################### -->
+ <sect1 id="development">
+  <title>Development</title>
+
+  <!-- ############################### -->
+  <!-- Section 5.1: Only builds viewer -->
+  <!-- ############################### -->
+  <sect2 id="onlyviewer">
+   <title>Why does make only build the viewer application but never the ZLib library?</title>
+
+   <para>
+    You didn't read the 
+    <ulink url="http://cvs.plkr.org/index.cgi/*checkout*/viewer/README?content-type=text/plain">README</ulink>
+    in the viewer dir, did you? The zlib package must be downloaded
+    separately and put in the ./viewer/ZLib directory that you see there,
+    <emphasis role="bold">before</emphasis> attempting to configure Plucker.
+   </para>
+
+  </sect2>
+
+  <!-- ########################## -->
+  <!-- Section 5.2: Where is ZLib -->
+  <!-- ########################## -->
+  <sect2 id="wherezlib">
+
+   <title>Where can I get zlib?</title>
+
+   <para>
+    You can download zlib from the zlib project home page at the following
+    site:
+   </para>
+
+   <blockquote>
+    <para>
+     <ulink url="http://www.gzip.org/zlib/">http://www.gzip.org/zlib/</ulink>
+    </para>
+   </blockquote>
+
+   <para>
+    Put the package into the ./viewer/ZLib directory before you run
+    configure.
+   </para>
+
+  </sect2> 
+
+  <!-- ###################### -->
+  <!-- Section 5.3: prc-tools -->
+  <!-- ###################### -->
+  <sect2 id="prctools">
+
+  <title>Where can I get prc-tools?</title>
+
+  <para>
+  prc-tools 2.x can be downloaded at:
+  </para>
+
+  <blockquote>   
+   <para> 
+    <ulink url="http://prc-tools.sourceforge.net/">http://prc-tools.sourceforge.net/</ulink>
+   </para>
+  </blockquote>
+
+  </sect2> 
+
+  <!-- ######################### -->
+  <!-- Section 5.2: Messy Module -->
+  <!-- ######################### -->
+  <sect2 id="modulemessy">
+
+  <title>Why is the &lt;module X&gt; so messy?</title>
+
+  <para>
+   Well, the old legacy parser (a bunch of awk scripts) was only a temporary
+   solution and have been replaced with a Python-based parser. That should
+   make it easier to comprehend what it actually does! We believe that the
+   rendering of documents for the Palm device should be specialized, so we
+   intend to continue to render the documents in the parser/viewer.
+  </para>
+
+  <para>
+   If you haven't looked at the viewer since 0.02 then you would probably be
+   surprised. The single source file of version 0.02 has been split up in   
+   several files and the viewer is approaching being optimal, but there are 
+   some issues, particularly with implied structure coupling, and lack of   
+   documentation, both of which we wish to address.
+  </para>
+
+  <para>
+   The conduit is not clever. It will upload pages to the database even if
+   they already exist and have not changed. This should obviously be fixed so
+   that a full 360 degree synchronization process can be achieved.
+  </para>
+
+  </sect2> 
+
+ </sect1>
+<!-- ########################### -->
+<!-- Section 5: Development: END -->
+<!-- ########################### -->
+ 
+
+<!-- ################################## -->      
+<!-- Section 6: Miscellaneous Questions -->
+<!-- ################################## -->      
+ <sect1 id="miscellaneous">
+  <title>Miscellaneous Questions</title>
+
+  <!-- ########################## -->      
+  <!-- Section 6.1: Suggest Pages -->
+  <!-- ########################## -->
+  <sect2 id="suggestpages">
+   <title>Can you suggest some good web pages for Plucker?</title>
+
+   <para>
+    In the appendix of the User's Guide you'll find a collection of links to
+    some good web pages for Plucker.
+   </para>
+
+  </sect2>
+
+  <!-- ################################ -->
+  <!-- Section 6.2: Features of Plucker -->
+  <!-- ################################ --> 
+  <sect2 id="features">
+   <title>What are some of the features of Plucker?</title>
+
+   <para>
+    Plucker has many, many features which make it very useful for a lot of
+    different purposes and reading habits of a diverse set of users and
+    platforms. Here are just a few:
+   </para>
+
+   <itemizedlist>
+    <listitem>
+     <para>
+      Plucker is designed for off-line browsing on a small screen. It
+      doesn't attempt to make html pages look like they appear on a monitor;
+      instead, it tries to make them readable and useful.
+     </para>
+    </listitem>
+
+    <listitem>   
+     <para>
+      The history buttons always work, even from the home page.
+     </para>
+    </listitem>
+ 
+    <listitem>   
+     <para>
+      You can scroll nicely with the scroll buttons or the pen.
+     </para>
+    </listitem>
+
+    <listitem>   
+     <para>
+      On-screen indication of visited links.
+     </para>
+    </listitem>
+
+    <listitem>   
+     <para>
+      Image support
+     </para>
+    </listitem>
+
+    <listitem>   
+     <para>
+      Named anchors (such as &lt;a href="#here"&gt;)
+     </para>
+    </listitem>
+
+    <listitem>   
+     <para>
+      Very impressive compression of records to save space on the device.
+     </para>
+    </listitem>
+
+    <listitem>   
+     <para>
+      Support for multiple databases and multiple versions of the same
+      content.
+     </para>
+    </listitem>
+
+    <listitem>   
+     <para>
+      Search function for current page and all pages in a database
+     </para>
+    </listitem>
+
+    <listitem>   
+     <para>
+      Bookmarks
+     </para>
+    </listitem>
+
+    <listitem>   
+     <para>
+      Possible to copy URLs to a memo
+     </para>
+    </listitem>
+
+    <listitem>   
+     <para>
+      E-mail support (through the use of mailto links)
+     </para>
+    </listitem>
+   </itemizedlist>
+
+   <para>
+    There are dozens more features not listed here, go ahead and give
+    Plucker a go, and try them all out for yourself.
+   </para>
+
+  </sect2>
+
+  <!-- ##################################### -->
+  <!-- Section 6.2: Features not Implemented -->
+  <!-- ##################################### -->
+  <sect2 id="notimplemented">
+   <title>What features does Plucker not implement?</title>
+
+   <para>
+    The following is a (non-exhaustive) list of unimplemented features.
+    Apart from frames, we intend to include this functionality in the
+    future:
+   </para>
+
+   <itemizedlist>
+    <listitem>
+     <para>
+      Frames (it might be possible to implement this in a links kind of way
+      by rendering and converting the frames to tables, much like the links
+      browser).
+     </para>
+    </listitem>
+
+    <listitem>
+     <para>
+      Document titles are not currently uploaded to the Palm device.
+     </para>
+    </listitem>
+
+    <listitem>
+     <para>
+      Various html tags (e.g. &lt;font&gt;, &lt;sup&gt;, etc) are not fully
+      supported
+     </para>
+    </listitem>
+
+    <listitem>
+     <para>
+      Javascript, DHTML, Java, CSS
+     </para>
+    </listitem>
+   </itemizedlist>
+
+  </sect2>
+
+  <!-- ########################### -->
+  <!-- Section 6.3: Other Features -->
+  <!-- ########################### -->
+  <sect2 id="featuresexpected">
+   <title>What other features can we expect?</title>
+
+   <para>
+    Here is a list of other ideas for Plucker. No promises! A TODO list
+    sorted both by category and by date can be found on the Plucker
+    developer's page.
+   </para>
+
+   <itemizedlist>
+    <listitem>
+     <para>
+      We intend to integrate Plucker with the popular free desktop
+      environments (such as KDE and GNOME). In these environments it would
+      be great if you could Drag-'n'-Drop a URL into the Palm device for
+      off-line viewing.
+     </para>
+    </listitem>
+
+    <listitem>
+     <para>
+      The ability to modify parameters, such as the maximum link depth, from
+      the Palm device, so that the next HotSync will retrieve more/less data.
+     </para>
+    </listitem>
+ 
+    <listitem>
+     <para>
+      The ability to "send" a web page from the Palm device to an internet
+      mail address.
+     </para>
+    </listitem>
+
+    <listitem>   
+     <para>   
+      Cron-based gathering of html pages, prior to a HotSync (to
+      significantly reduce HotSync time).
+     </para>
+    </listitem>
+
+    <listitem>   
+     <para>   
+      Parallel gathering/parsing/conduit (to reduce HotSync time).
+     </para>
+    </listitem>
+
+    <listitem>   
+     <para>   
+      Smart gathering/conduit; only update a document if it's actually
+      changed.  (Reduce HotSync time).
+     </para>
+    </listitem>
+
+    <listitem>   
+     <para>   
+      Compatibility with AvantGo's .subs files, and the .site files that a
+      similar product Sitescooper reads.
+     </para>
+    </listitem>
+   </itemizedlist>
+
+   <para>
+    Of course, if you want to help add or improve these (or other) features,
+    feel free to ask on the plucker-dev mailing list, or just implement them
+    yourself.
+   </para>
+
+  </sect2>
+
+  <sect2 id="findebooks">
+   <title>Where can I find Plucker eBooks?</title>
+
+   <para>
+    Apart from the samples you can find at the Plucker web site, there are
+    other sites that have eBooks as well.
+   </para>
+
+   <para>
+    Memoware has a growing collection of Plucker eBooks submitted by
+    contributors and users of Plucker:
+   </para>
+
+   <blockquote>
+    <para>
+      <ulink url="http://www.memoware.com/">http://www.memoware.com/</ulink>
+    </para>
+   </blockquote>
+
+   <para>
+    You can also find several Plucker eBooks at Byron Collins' site
+   </para>
+
+   <blockquote> 
+    <para>
+     <ulink url="http://home.clarksville.com/~bcollins/PalmDocs.htm">http://home.clarksville.com/~bcollins/PalmDocs.htm</ulink>
+    </para>
+   </blockquote>
+
+   <para>
+    Curt 'n' Dave's Plucker-book Repository
+   </para>
+
+   <blockquote> 
+    <para>
+     <ulink url="http://www.pluckerbooks.com/">http://www.pluckerbooks.com/</ulink>
+    </para>
+   </blockquote>
+
+   <para>
+    Nick Vargish's Bandersnatch Unpress
+   </para>
+
+   <blockquote> 
+    <para>
+     <ulink url="http://unpress.bandersnatch.org/">http://unpress.bandersnatch.org/</ulink>
+    </para>
+   </blockquote>
+
+   <para>
+    The "Linux Documentation Project" (LDP) now releases all its HOWTOs and
+    mini-HOWTOs in Plucker format. They are located under the 'Additional
+    HOWTO-related items at the following url:
+   </para>
+
+   <blockquote>
+    <para>
+     <ulink url="http://www.tldp.org/docs.html#howto">http://www.tldp.org/docs.html#howto</ulink>
+    </para>
+   </blockquote>
+
+    <para>or</para>
+
+   <blockquote>
+    <para>
+     <ulink url="http://ibiblio.org/pub/Linux/docs/LDP/pluckerdb">http://ibiblio.org/pub/Linux/docs/LDP/pluckerdb</ulink>
+    </para>
+   </blockquote>
+
+  </sect2>
+
+ </sect1>
+<!-- ####################################### -->      
+<!-- Section 6: Miscellaneous Questions: END -->
+<!-- ####################################### -->      
+
+</article>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:nil
+sgml-parent-document:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

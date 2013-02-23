@@ -1,0 +1,19 @@
+#
+# This is a diff for the ImageMagick file magic.xml.
+# It allows the magick libraries to identify PALM(tm)
+# images.
+#
+#
+
+--- magic.xml.orig	2005-04-11 10:14:19.000000000 -0500
++++ magic.xml	2005-04-20 17:26:01.000000000 -0500
+@@ -42,6 +42,9 @@
+   <magic name="MNG" offset="0" target="\212MNG\r\n\032\n" />
+   <magic name="MPC" offset="0" target="id=MagickCache" />
+   <magic name="MPEG" offset="0" target="\000\000\001\263" />
++  <magic name="PALM" offset="14" target="\000\000" />
++  <magic name="PALM" offset="14" target="\001\000" />
++  <magic name="PALM" offset="14" target="\377\000" />
+   <magic name="PCD" offset="2048" target="PCD_" />
+   <magic name="PCL" offset="0" target="\033E\033" />
+   <magic name="PCX" offset="0" target="\012\002" />

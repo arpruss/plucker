@@ -1,0 +1,29 @@
+#------------------------------------------------------------------------------
+# Name:        plucker-desktop.kdelink
+# Purpose:     File to provide a link to integrate into KDE.
+# Author:      Robert O'Connor
+# Modified by:
+# Created:     2002/07/07
+# Copyright:   (c) Robert O'Connor ( rob@medicalmnemonics.com )
+# Licence:     GPL
+# RCS-ID:      $Id: plucker-desktop.kdelnk,v 1.1 2002/07/16 20:45:24 robertoconnor Exp $
+#------------------------------------------------------------------------------
+[KDE Desktop Entry]
+# Name to appear as a descriptive name of the application
+Name=Plucker Desktop
+# Description of the application
+Comment=Visual content manager for Plucker
+# Pattern match of the binary, I guess
+BinaryPattern=plucker-desktop;
+# If there is a mime type that can be double-clicked on to start the application
+#MimeType=application/x-pluckerchannel;
+# What command to execute when it is double clicked
+Exec=plucker-desktop %f
+# Parameters if running in a terminal
+TerminalOptions=
+# The icon file for the application. Looks for it in /usr/share/icons. I think the .xpm is optional.
+Icon=poedit.xpm
+# What is the type of this thing (probably Application)
+Type=Application
+# Should it run in a terminal? (probably not)
+Terminal=0

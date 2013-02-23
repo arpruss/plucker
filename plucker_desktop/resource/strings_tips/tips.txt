@@ -1,0 +1,48 @@
+# Tips for Plucker Desktop
+#
+# The preprocessor will filter according to the filters located in 
+# the ini file in the key # "/PLUCKER_DESKTOP/branding_tips_exclusion_filters"
+# The following fiters are defined:
+#       plkrTIP_BASIC (basic tip)
+#       plkrTIP_ADVANCED (advanced tip)
+#       plkrTIP_PLUCKER_SPECIFIC (only relates to plkr.org project)
+#       plkrTIP_LINUX (only relates to linux)
+#
+# The postprocessor will then replace the following defines at runtime:
+#       plkrAPPLICATION_SUITE_NAME
+#       plkrAPPLICATION_DESKTOP_NAME
+#       plkrAPPLICATION_PUBLISHER
+#
+_("<b>plkrAPPLICATION_SUITE_NAME</b> is a software suite that saves websites of your choice on your handheld. <b>plkrAPPLICATION_DESKTOP_NAME</b> is the program that handles the selection of websites that you want sent when you HotSync. You can then use the <b>plkrAPPLICATION_SUITE_NAME Viewer</b> to browse on your handheld.") plkrTIP_BASIC
+_("You can get help in plkrAPPLICATION_DESKTOP_NAME by selecting <b>Help &gt; Help contents...</b> from the menubar. All other dialogs have a <b>Help</b> button in the lower left-corner, which can be clicked to learn about the current options on that dialog. You can also hover over toobar buttons and menuitems in the main dialog, and a short help message will be displayed in the bottom status bar area.") plkrTIP_BASIC
+_("If you missed something during the installation, you can always get it back by clicking the <b>Options</b> menu, then on <b>Rerun setup wizard</b>.") plkrTIP_BASIC
+_("If your handheld doesn't have the plkrAPPLICATION_SUITE_NAME Viewer program installed on it, is missing the manual, or if the plkrAPPLICATION_SUITE_NAME Viewer program stops working, you can reinstall it all by clicking the <b>Options</b> menu, then on <b>Install handheld viewer software</b>.") plkrTIP_BASIC
+_("You can add a website by creating a <b>channel</b>. Channels contain information such as the home page of the website, the number of links that you will be able to click on, and the number of colors shown in pictures.") plkrTIP_BASIC
+_("You can configure a channel by <b>right</b>-clicking on it in your list of channels, then selecting <b>Configure selected channel</b>.") plkrTIP_BASIC
+_("You can change how often a channel is updated by selecting a channel in the list, clicking the <b>Configure selected channel</b> toolbutton or menuitem, and setting the controls on the <b>Scheduling</b> tab.") plkrTIP_BASIC
+_("There is a showcase of ready-to-go plkrAPPLICATION_SUITE_NAME channels.  When adding a channel just click the <b>Browse showcase...</b> button and you can pick one out.") plkrTIP_BASIC
+_("plkrAPPLICATION_DESKTOP_NAME's job is often referred to as <b>spidering</b> a website. That is why when you update a channel it says that it is \"Initializing plkrAPPLICATION_SUITE_NAME spidering engine.\"") plkrTIP_BASIC
+_("Many of the most-commonly used dialogs are resizable.  If you have a high resolution monitor, drag the dialog corner to increase the dialog size. Your new size will be saved automatically.") plkrTIP_BASIC
+_("If you are using a proxy to access to the internet, don't forget to include the <b><tt>http:</tt></b> at the start of the proxy address setting. For example it should be something like <b><tt>http://proxy.aol.com</tt></b>. If you put just <b><tt>proxy.aol.com</tt></b>, it won't work.") plkrTIP_BASIC
+_("You can add a new channel quickly by clicking the <b>Add Channel Wizard</b> button.") plkrTIP_BASIC
+_("A <b>channel name</b> has a maximum length of <b>26</b> characters (a PalmOS restriction).") plkrTIP_ADVANCED
+_("There is a version of the handheld veiwer specially built for high resolution devices.  If you have a high resolution device, you can choose to install the high resolution viewer. To install the high resolution viewer, from the menu select <b>Options &gt; Install Handheld Software</b>, and enter it in the <b>Type of Handheld Device</b>.") plkrTIP_BASIC
+_("Want to download some literature to read in plkrAPPLICATION_SUITE_NAME format? Visit <b><u>www.pluckerbooks.com</u></b> and browse the hundreds of selections by title or author.") plkrTIP_PLUCKER_SPECIFIC
+_("plkrAPPLICATION_SUITE_NAME is available in many translations. At any time, you can switch the language of the plkrAPPLICATION_DESKTOP_NAME program, and also install a different language for the handheld's Viewer.") plkrTIP_ADVANCED
+_("Using exclusion lists can remove unwanted banners ads and unwanted filetypes from being downloaded onto your handheld.") plkrTIP_ADVANCED
+_("Have a special photo you want to view on your handheld? You can use plkrAPPLICATION_SUITE_NAME to convert it to your handheld. plkrAPPLICATION_SUITE_NAME supports images in .jpg, .gif, .bmp and .png formats.") plkrTIP_PLUCKER_SPECIFIC
+_("Need some assistance from fellow plkrAPPLICATION_SUITE_NAME users, or wish to help others out? Read and search our mailing lists at <b><u>http://lists.rubberchicken.org</u></b>. To ask a question to the mailing list, subscribe to the list (when you subscribe you can opt to not have the messages sent to you). Once subscribed, you can ask and answer questions on <b><u>plucker-list@rubberchicken.org</u></b>.") plkrTIP_PLUCKER_SPECIFIC
+_("Under Linux/GTK, the help window is modal. Close the help window to return to your dialog.") plkrTIP_LINUX
+_("You can run plkrAPPLICATION_DESKTOP_NAME with commandline parameters. This allows you to set up a job whereby plkrAPPLICATION_DESKTOP_NAME starts, update channels, and then automatically ends. See the online help for details, or execute the program with a <b>--help</b> for a short usage summary") plkrTIP_ADVANCED
+_("If you are using a url pattern limit or an exclusion of a url that has a <b>?</b> in the URL, then you need to properly escape the <b>?</b> as it is a special character in regular expressions. For example, you need to escape the URL <b>http://mysite.org/index.shtml?login=tjohnston</b> as <b>http://mysite\.org/index\.shtml\?login=tjohnston</b>") plkrTIP_ADVANCED
+_("If you are unfamiliar with using regular expressions (for exclusions), in the online help, there is a short, one page summary of regular expression syntax that is most relevant to plkrAPPLICATION_SUITE_NAME.") plkrTIP_ADVANCED
+_("There is a full built-in HTML editor available which has one-click access to all plkrAPPLICATION_SUITE_NAME-supported HTML tags and parameters. Turn it on in <b>Preferences dialog &gt; HTML editor tab &gt; Toolbar complexity</b>.") plkrTIP_ADVANCED
+_("There is two sets of exclusion lists: an exclusion that applies to all channels <b>Preferences dialog &gt; Spidering tab</b> and the exclusion list specifically for that channel <b>Configure channel dialog &gt; Limits tab</b>.") plkrTIP_ADVANCED
+_("You can switch between displaying channel update progress in a console window or an update dialog. It can be changed in the <b>Preferences dialog &gt; Spidering tab</b>.") plkrTIP_ADVANCED
+_("The <b><tt>plucker://</tt></b> protocol specifies a file location in relation to the home plucker directory.") plkrTIP_PLUCKER_SPECIFIC
+_("There are two ways of securing a document: you can turn off beaming, and you can encode the file with an ID that must match the handheld's owner id, in order to be read.") plkrTIP_ADVANCED
+_("In the HTML editor, if using the advanced toolbar, you can select a portion of text and then hit the desired toolbar button and the tags will be inserted on either side of the selected text.") plkrTIP_ADVANCED
+_("By unchecking the <b>Include original URL of each page in output file</b> checkbox, you can slightly reduce the size of the output file, as well as protect private internet addresses or file paths.") plkrTIP_ADVANCED
+_("Most complex-formatted media articles online have a \"Printable format\" link that you want to use as a starting URL, as an easy way to strip out the unneeded text.") plkrTIP_BASIC
+_("You can make a plkrAPPLICATION_SUITE_NAME channel into multiple categories in the viewer, by entering multiple category names separated by semicolons.") plkrTIP_ADVANCED
+_("You can join the plkrAPPLICATION_SUITE_NAME programming effort! It doesn't matter if you can't code. There are many different ways to help.") plkrTIP_PLUCKER_SPECIFIC

@@ -1,0 +1,53 @@
+
+
+TRANSLATION "da"
+BEGIN
+
+
+"$$LANG"                    =   "da"
+
+
+"$$TITLE"                   = "Plucker-indstik"
+
+"$$LOOKUP"                  = "Slå ord op i"
+"$$NONE"                    = "Ingen"
+"$$CUSTOM"                  = "Angiv"
+"$$NAME"                    = "Navn: "
+"$$CLIPBOARD"               = "Klippebord"
+"$$DESKTOP ACCESSORY"       = "DA"
+"$$COMMAND"                 = "Kommando: CustomBase + "
+"$$SAVE"                    = "Gem"
+"$$CANCEL"                  = "Afbryd"
+"$$TIPS"                    = "Tips"
+
+"$$STRTIPS"                 =
+    "Plucker bruger denne Plucker-indstiksgrænseflade til at kalde "\
+    "eksterne programmer (indstik).\n\n" \
+    "'Slå ord op i' fortæller PPI hvilket indstik, der skal kaldes "\
+    "når Plucker vil slå et ord op. "\
+    "Vælg et indstik fra listen.\n\n" \
+    "Hvis du vælger 'Custom', skal du skrive programmets navn og "\
+    "vælge om ordet skal kopieres til klippebordet, og om det er et "\
+    "'Desk Accessory'. Hvis det ikke er et 'Desk Accessory', skal du  "\
+    "også vælge en startkommando.\n\n" \
+    "Tryk på 'Gem' for at gemme indstillingerne eller 'Afbryd' for "\
+    "at bevare de oprindelige indstillinger."
+
+"$$HELP"                    = "Hjælp"
+"$$ABOUT"                   = "Om"
+
+"$$ABOUTT"  = "Om Pluckers indstiks-adgang"
+
+"$$ABOUT1"  = "PPI er en del af programsamlingen"
+"$$ABOUT2"  = "Plucker. Det er frie programmer, "
+"$$ABOUT3"  = "der er underlagt betingelserne i Free"
+"$$ABOUT4"  = "Software Foundations General Public"
+"$$ABOUT5"  = "License (GPL)."
+
+"$$ABOUTW"  = "www.plkr.org"
+
+"$$OK"      = "O.k."
+
+END
+
+
