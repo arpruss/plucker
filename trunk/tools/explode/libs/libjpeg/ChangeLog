@@ -1,0 +1,29 @@
+2006-02-25  Paul van den Berg  <paulberg@wanadoo.nl>
+
+	* created branch jpeg6b_vollbeding
+
+	* added jpegclub.org/jpegexiforient.c and a modified 
+	version of jpegclub.org/exifautotran.txt as exifautotran.sh
+
+	* applied changes to jpeg6b_original
+
+	* removed changed testimages
+
+	* replaced jaricom.c, jcarith.c, and jdarith.c with dummies 
+	from sylvana.net/jpeg-ari/jpeg-ari-28mar98.tar.gz
+
+	* removed dos-isms, Makefile and jconfig.h
+
+	* Got latest source from jpegclub.org/libjpeg-6c.tar.gz
+	
+
+2006-02-15  Frank Warmerdam  <warmerdam@pobox.com>
+
+	* Introduced ChangeLog file.
+
+	* modified nominal version to be 6.1.0 instead of 6b.
+
+	* Applied all Bob Friesenhahn's autoconf/automake/libtool changes.
+
+	* Committed jpeb6b from the ijg download site as the baseline.  Tagged
+	it as jpeg6b_original.

@@ -1,0 +1,35 @@
+This directory contains an 'exploder' program, which writes a Plucker
+document to a specified directory as a set of HTML files and JPEG
+image files.  The exploder app is included mainly as a test of the
+libunpluck library.
+
+To build this, you will need
+
+ * libunpluck.a, from ../unpluck;
+ * the libjpeg library, version 6b or later, from www.ijg.org;
+ * the zlib library, from www.gzip.org/zlib/, version 1.1.4 or later.
+
+Make sure the include headers for libjpeg and libz are in your
+CPPFLAGS; if they are in non-standard places, you may need to set the
+CPPFLAGS environment variable before configuring Plucker.  Similarly,
+make sure the library directories for -lz and -ljpeg are on the LIBS
+path, if they are in non-standard locations.
+
+"explode" has the following usage:
+
+  explode PLUCKERDOC_FILENAME [DIRECTORY]
+
+which means that the Plucker document in PLUCKERDOC_FILENAME will be
+exploded into DIRECTORY.  If no DIRECTORY is specified, a new one will
+be created in a suitable temporary location.  If a DIRECTORY is
+specified, there should be no output from explode; if not, explode
+will write the name of the temporary directory to stdout.  The root
+file for viewing will be DIRECTORY/default.html.
+
+Once you have the exploder compiled, it's fairly easy to make a helper
+app to show Plucker format docs in a Web browser.  The MIME type is
+
+  application/prs.plucker
+
+the file extension is "plkr", and a helper program for netscape 4 is
+in netscape4-plucker-helper (which does NOT get automatically installed).
