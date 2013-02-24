@@ -1,0 +1,26 @@
+I am building on cygwin with a -mno-cygwin
+
+To build libz, go to lib/zlib-1.2.3, run:
+  ./configure
+Then edit the Makefile's CFLAGS line to say:
+  CFLAGS=-O3 -DUSE_MMAP -mno-cygwin
+And you may need to replace gcc with gcc-3 therein.
+Then run:
+  make
+
+The minigzip make will fail, but libz.a is all we need.
+
+To build libjpeg, go to lib/jpeglib, run:
+  ./configure --build=i686-pc-mingw32
+Then edit the Makefile's CC line to say:
+  CC = gcc -mno-cygwin -std=gnu99
+or maybe
+  CC = gcc-3 -mno-cygwin -std=gnu99
+Then run:
+  make
+Ignore any error building exes.  Run:
+  sh ar.sh
+
+Then go back to the explode directory, and run:
+  sh compile.sh
+    

@@ -1,0 +1,23 @@
+This package is identical to the IJG JPEG 6b release except that it
+uses a modern build system based on the latest autoconf, automake, and
+libtool.  In fact, CVS versions of autoconf and libtool were used to
+create this package.  Later versions of the package are likely to use
+released versions of autoconf and libtool.
+
+The package is produced by Bob Friesenhahn <bfriesen@GraphicsMagick.org>
+so that is where any bug reports pertaining to building this package
+should be sent to.
+
+An example build sequence for the package (should work for Linux, FreeBSD,
+and OSX) is:
+
+  tar -xzvf libjpeg-6b.tar.gz
+  cd libjpeg-6b
+  ./configure --prefix=/place/to/install
+  make
+  make check
+  sudo make install
+
+The package build has been verified to work for Windows MinGW/MSYS,
+Apple's OSX "Panther", and Sun's Solaris 9.
+

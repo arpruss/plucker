@@ -1,0 +1,8 @@
+#!/bin/csh -f
+
+set dir=`@bindir@/explode $1`
+if $status then
+  exit 1
+endif
+@NETSCAPE_PROG@ -remote "openFile(""$dir/default.html"")"
+echo "@RM_PROG@ -rf $dir" | @AT_PROG@ now +1 hour
